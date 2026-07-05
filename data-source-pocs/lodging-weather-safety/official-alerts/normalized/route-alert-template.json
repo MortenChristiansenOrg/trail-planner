@@ -1,0 +1,7 @@
+{
+  "id": "route-alert-template",
+  "source": "manual_official_route_alert_sources",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "fields": ["route_id", "alert_source_name", "source_url", "machine_readable", "alert_status", "summary", "effective_from", "effective_to", "last_checked_at", "confidence", "requires_manual_review"]
+}

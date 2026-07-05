@@ -1,0 +1,14 @@
+{
+  "data": {
+    "trip": {
+      "dateTime": "2026-07-15T08:00:00+02:00",
+      "tripPatterns": [],
+      "routingErrors": [
+        {
+          "code": "locationNotFound",
+          "description": "Destination is unknown.  Can you be a bit more descriptive?"
+        }
+      ]
+    }
+  }
+}

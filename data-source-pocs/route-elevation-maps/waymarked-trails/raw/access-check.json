@@ -1,0 +1,10 @@
+{
+  "source": "waymarked_trails",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://hiking.waymarkedtrails.org/",
+    "https://github.com/waymarkedtrails/waymarkedtrails-api"
+  ],
+  "access": "public_website_and_open_source_api_frontend",
+  "sample_not_fetched_reason": "Use as visual validation/reference in MVP; no scraping dependency created."
+}

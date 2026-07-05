@@ -1,0 +1,7 @@
+{
+  "source": "opensky_network",
+  "verdict": "reject",
+  "mvp_role": "None for itinerary planning.",
+  "reason": "Provides live/historical aircraft movement data, not route schedules, availability, or prices.",
+  "confidence": "high"
+}

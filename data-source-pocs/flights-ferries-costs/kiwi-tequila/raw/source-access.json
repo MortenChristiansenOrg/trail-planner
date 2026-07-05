@@ -1,0 +1,9 @@
+{
+  "source": "kiwi_tequila",
+  "checked_at": "2026-07-05",
+  "docs_url": "https://kiwicom.github.io/margarita/docs/tequila-api",
+  "partner_url": "https://partners.kiwi.com/",
+  "access_model": "partner_or_affiliate_api_key",
+  "public_sample_run": false,
+  "reason_no_script": "Without confirmed partner access, a script would duplicate historical docs and likely fail for MVP evaluation."
+}

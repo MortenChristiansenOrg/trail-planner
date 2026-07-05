@@ -1,0 +1,145 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -5.1109516,
+          56.8178257
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "country": "United Kingdom",
+        "countrycode": "GB",
+        "county": "Highland",
+        "name": "Fort William",
+        "osm_id": 17917137,
+        "osm_key": "place",
+        "osm_type": "N",
+        "osm_value": "town",
+        "postcode": "PH33 6AJ",
+        "state": "Alba / Scotland",
+        "type": "city"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.1053126,
+          56.8205581
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Fort William",
+        "country": "United Kingdom",
+        "countrycode": "GB",
+        "county": "Highland",
+        "district": "An \u00c0ird",
+        "locality": "The Parade",
+        "name": "Fort William",
+        "osm_id": 26530357,
+        "osm_key": "railway",
+        "osm_type": "N",
+        "osm_value": "station",
+        "postcode": "PH33 6TQ",
+        "state": "Alba / Scotland",
+        "street": "Nevis Terrace",
+        "type": "house"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.0900656,
+          56.8247186
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Fort William",
+        "country": "United Kingdom",
+        "countrycode": "GB",
+        "county": "Highland",
+        "district": "Claggan",
+        "name": "Fort William Junction",
+        "osm_id": 5333911030,
+        "osm_key": "railway",
+        "osm_type": "N",
+        "osm_value": "junction",
+        "postcode": "PH33 6SU",
+        "state": "Alba / Scotland",
+        "street": "Nevis Square",
+        "type": "house"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.1153964,
+          56.8154048
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Fort William",
+        "country": "United Kingdom",
+        "countrycode": "GB",
+        "county": "Highland",
+        "district": "Upper Achintore",
+        "extent": [
+          -5.1155963,
+          56.8155064,
+          -5.1151965,
+          56.8153032
+        ],
+        "locality": "The Parade",
+        "name": "Fort William Sheriff Court",
+        "osm_id": 200856063,
+        "osm_key": "amenity",
+        "osm_type": "W",
+        "osm_value": "courthouse",
+        "postcode": "PH33 6EA",
+        "state": "Alba / Scotland",
+        "street": "High Street",
+        "type": "house"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -5.1077401,
+          56.8213459
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Fort William",
+        "country": "United Kingdom",
+        "countrycode": "GB",
+        "county": "Highland",
+        "district": "An \u00c0ird",
+        "extent": [
+          -5.1083253,
+          56.8218362,
+          -5.1071329,
+          56.8208779
+        ],
+        "locality": "Camusnagaul",
+        "name": "Fort William Old Fort",
+        "osm_id": 39363945,
+        "osm_key": "landuse",
+        "osm_type": "W",
+        "osm_value": "grass",
+        "state": "Alba / Scotland",
+        "type": "other"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

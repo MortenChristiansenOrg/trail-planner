@@ -1,0 +1,896 @@
+{
+  "confidence": "sample",
+  "freshness": "2026-07-05T09:56:29Z",
+  "id": "besseggen-osm-overpass",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "name": "Besseggen",
+  "query": {
+    "bbox": [
+      61.47,
+      8.63,
+      61.57,
+      8.83
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter"
+  },
+  "retrieved_at": "2026-07-05T09:57:54+00:00",
+  "route_relations": [
+    {
+      "id": 1417687,
+      "member_count": 22,
+      "name": "Gjendesheim-Besseggen-Memurubu",
+      "tags": {
+        "colour": "#7FC3D8",
+        "name": "Gjendesheim-Besseggen-Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "osmc:symbol": "red:white:::T:red",
+        "ref": "jot2",
+        "roundtrip": "no",
+        "route": "hiking",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "https://ut.no/rute/gjendesheim-memurubu,-over-besseggen"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 2294709,
+      "member_count": 26,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT6",
+        "route": "hiking",
+        "to": "Gjendebu",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Bukkel\u00e6geret",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot6"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 2294710,
+      "member_count": 26,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT6A",
+        "route": "hiking",
+        "to": "Gjendebu",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Memurudalen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot6"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 2294711,
+      "member_count": 29,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "osmc:symbol": "red:white:::T:red",
+        "ref": "JOT7",
+        "route": "hiking",
+        "to": "Gjendebu",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Stor\u00e5dalen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot7"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 2294719,
+      "member_count": 35,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT2",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot2"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 2294720,
+      "member_count": 23,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT1",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "langs Gjende",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot1"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 3213281,
+      "member_count": 24,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Glitterheim",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT21",
+        "route": "hiking",
+        "to": "Memurubu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot21"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 3213284,
+      "member_count": 26,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Glitterheim",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "osmc:symbol": "red:white:::T:red",
+        "ref": "JOT3",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot3"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 3213336,
+      "member_count": 13,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "ref": "Memurubu-Surtningsui",
+        "route": "hiking",
+        "to": "Surtningsui",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5453550,
+      "member_count": 24,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Glitterheim",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT4",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Tj\u00f8nnholet",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot4"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5453551,
+      "member_count": 31,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Gjendesheim",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT5",
+        "route": "hiking",
+        "to": "Bessh\u00f8e",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot5"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5457564,
+      "member_count": 18,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT9",
+        "route": "hiking",
+        "to": "Surtningssue",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Memurudalen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot98"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5457576,
+      "member_count": 18,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT10",
+        "route": "hiking",
+        "to": "Surtningssue",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Raudhamran",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot10"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461224,
+      "member_count": 22,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Valdresflya",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT67",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot67"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461281,
+      "member_count": 27,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Bessheim",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT82",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot82"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461332,
+      "member_count": 31,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Memurubu",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT88",
+        "route": "hiking",
+        "to": "Bessheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot88"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461333,
+      "member_count": 22,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Glitterheim",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT89",
+        "route": "hiking",
+        "to": "Bessheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot89"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461334,
+      "member_count": 20,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Glitterheim",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT90",
+        "route": "hiking",
+        "to": "Bessheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "via": "Besseggen",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot90"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5461370,
+      "member_count": 11,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Vargebakkan",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "JOT97",
+        "route": "hiking",
+        "to": "Knutsh\u00f8e",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=jot97"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5504230,
+      "member_count": 34,
+      "name": "Signatur Omveien (Dag 9)",
+      "tags": {
+        "foot": "yes",
+        "from": "Sikkilsdalsseter",
+        "length": "17 km",
+        "name": "Signatur Omveien (Dag 9)",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HUL31",
+        "route": "hiking",
+        "to": "Gjendesheim",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=hul31"
+      },
+      "type": "relation"
+    }
+  ],
+  "sample_geometry": {
+    "coordinates": [
+      [
+        8.8141401,
+        61.4964719
+      ],
+      [
+        8.8141613,
+        61.4965918
+      ],
+      [
+        8.814121,
+        61.4966455
+      ],
+      [
+        8.8140862,
+        61.4967038
+      ],
+      [
+        8.8140929,
+        61.4967633
+      ],
+      [
+        8.8140694,
+        61.4968299
+      ],
+      [
+        8.8140956,
+        61.4968887
+      ],
+      [
+        8.8141438,
+        61.4969706
+      ],
+      [
+        8.8141751,
+        61.4971038
+      ],
+      [
+        8.8141821,
+        61.4971336
+      ],
+      [
+        8.8141774,
+        61.4972305
+      ],
+      [
+        8.8141398,
+        61.4973233
+      ],
+      [
+        8.8141023,
+        61.4973649
+      ],
+      [
+        8.814113,
+        61.4974225
+      ],
+      [
+        8.814088,
+        61.4975276
+      ],
+      [
+        8.8140325,
+        61.4975927
+      ],
+      [
+        8.8139883,
+        61.4976842
+      ],
+      [
+        8.8139682,
+        61.4977956
+      ],
+      [
+        8.813923,
+        61.4978557
+      ],
+      [
+        8.8139185,
+        61.4979069
+      ],
+      [
+        8.8139286,
+        61.4979587
+      ],
+      [
+        8.8139247,
+        61.4979909
+      ],
+      [
+        8.8139373,
+        61.4980157
+      ],
+      [
+        8.8139561,
+        61.4980599
+      ],
+      [
+        8.8139991,
+        61.4981296
+      ],
+      [
+        8.8139842,
+        61.4981559
+      ],
+      [
+        8.8139869,
+        61.4981904
+      ],
+      [
+        8.8140094,
+        61.498247
+      ],
+      [
+        8.8139614,
+        61.4982762
+      ],
+      [
+        8.813893,
+        61.4983139
+      ],
+      [
+        8.8139051,
+        61.4983357
+      ],
+      [
+        8.8139373,
+        61.4983619
+      ],
+      [
+        8.8138966,
+        61.4984131
+      ],
+      [
+        8.8138716,
+        61.4984547
+      ],
+      [
+        8.8138698,
+        61.4985187
+      ],
+      [
+        8.8138877,
+        61.4986249
+      ],
+      [
+        8.8139083,
+        61.4987256
+      ],
+      [
+        8.813944,
+        61.4987619
+      ],
+      [
+        8.8139509,
+        61.4987976
+      ],
+      [
+        8.8140446,
+        61.4988496
+      ],
+      [
+        8.8141492,
+        61.4989507
+      ],
+      [
+        8.8142109,
+        61.499078
+      ],
+      [
+        8.8142967,
+        61.4991938
+      ],
+      [
+        8.8143636,
+        61.4993112
+      ],
+      [
+        8.8143598,
+        61.4993564
+      ],
+      [
+        8.814369,
+        61.4994025
+      ],
+      [
+        8.8143758,
+        61.4994364
+      ],
+      [
+        8.8143986,
+        61.4995209
+      ],
+      [
+        8.8144284,
+        61.4996167
+      ],
+      [
+        8.8144362,
+        61.4996764
+      ],
+      [
+        8.8144268,
+        61.4996943
+      ],
+      [
+        8.8144272,
+        61.4997352
+      ],
+      [
+        8.8144456,
+        61.4997775
+      ],
+      [
+        8.8144469,
+        61.4998293
+      ],
+      [
+        8.8144189,
+        61.4999147
+      ],
+      [
+        8.8143812,
+        61.4999867
+      ],
+      [
+        8.8143718,
+        61.5000558
+      ],
+      [
+        8.8143638,
+        61.5001384
+      ],
+      [
+        8.8143732,
+        61.5001685
+      ],
+      [
+        8.8144061,
+        61.5002069
+      ],
+      [
+        8.8144979,
+        61.5002638
+      ],
+      [
+        8.8145408,
+        61.5002875
+      ],
+      [
+        8.814577,
+        61.5003272
+      ],
+      [
+        8.8146293,
+        61.5003687
+      ],
+      [
+        8.8146728,
+        61.5004204
+      ],
+      [
+        8.8146602,
+        61.5004731
+      ],
+      [
+        8.8146387,
+        61.5005242
+      ],
+      [
+        8.8146575,
+        61.5005665
+      ],
+      [
+        8.8146266,
+        61.5006222
+      ],
+      [
+        8.8145797,
+        61.5006887
+      ],
+      [
+        8.8145319,
+        61.500766
+      ],
+      [
+        8.8145059,
+        61.5008141
+      ],
+      [
+        8.8145073,
+        61.5008596
+      ],
+      [
+        8.8145046,
+        61.5009056
+      ],
+      [
+        8.8145086,
+        61.500944
+      ],
+      [
+        8.814569,
+        61.5009843
+      ],
+      [
+        8.8145529,
+        61.5010374
+      ],
+      [
+        8.8145609,
+        61.5010733
+      ],
+      [
+        8.814581,
+        61.5011014
+      ],
+      [
+        8.8145899,
+        61.5011513
+      ],
+      [
+        8.814569,
+        61.5011814
+      ],
+      [
+        8.8145623,
+        61.5012166
+      ],
+      [
+        8.814514,
+        61.5012825
+      ],
+      [
+        8.8143973,
+        61.5013484
+      ],
+      [
+        8.8143705,
+        61.5013625
+      ],
+      [
+        8.8143906,
+        61.501399
+      ],
+      [
+        8.8143812,
+        61.5014201
+      ],
+      [
+        8.814381,
+        61.5014531
+      ],
+      [
+        8.8143785,
+        61.5015404
+      ],
+      [
+        8.8143919,
+        61.5016409
+      ],
+      [
+        8.8143633,
+        61.5016695
+      ],
+      [
+        8.8143222,
+        61.5017106
+      ],
+      [
+        8.8143074,
+        61.5017765
+      ],
+      [
+        8.8143276,
+        61.5018335
+      ],
+      [
+        8.8143156,
+        61.5018594
+      ],
+      [
+        8.8142323,
+        61.5019179
+      ],
+      [
+        8.8141664,
+        61.5019593
+      ],
+      [
+        8.8141232,
+        61.5019865
+      ],
+      [
+        8.81405,
+        61.5020075
+      ],
+      [
+        8.8140044,
+        61.5020504
+      ],
+      [
+        8.8139226,
+        61.5021489
+      ],
+      [
+        8.81383,
+        61.5022187
+      ],
+      [
+        8.8137697,
+        61.5022532
+      ],
+      [
+        8.8137269,
+        61.5022592
+      ],
+      [
+        8.8136849,
+        61.502265
+      ],
+      [
+        8.8136342,
+        61.5022788
+      ],
+      [
+        8.8136309,
+        61.5023113
+      ],
+      [
+        8.8136905,
+        61.5023524
+      ],
+      [
+        8.8137174,
+        61.5024036
+      ],
+      [
+        8.8137315,
+        61.5024955
+      ],
+      [
+        8.8136986,
+        61.502561
+      ],
+      [
+        8.8136594,
+        61.5026085
+      ],
+      [
+        8.8134988,
+        61.5027114
+      ],
+      [
+        8.813429,
+        61.502769
+      ],
+      [
+        8.8133746,
+        61.5028369
+      ],
+      [
+        8.8133714,
+        61.5028944
+      ],
+      [
+        8.8134313,
+        61.5029635
+      ],
+      [
+        8.8134505,
+        61.5029859
+      ],
+      [
+        8.8135369,
+        61.5031354
+      ],
+      [
+        8.8134578,
+        61.503186
+      ]
+    ],
+    "type": "LineString"
+  },
+  "sample_path_tags": {
+    "highway": "path",
+    "marked_trail": "red",
+    "operator": "Den Norske Turistforening",
+    "sac_scale": "mountain_hiking",
+    "trail_visibility": "excellent",
+    "trailblazed": "yes"
+  },
+  "source": "openstreetmap_overpass",
+  "summary": {
+    "path_way_count": 283,
+    "poi_count": 6,
+    "route_relation_count": 25
+  }
+}

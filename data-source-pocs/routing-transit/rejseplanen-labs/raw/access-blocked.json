@@ -1,0 +1,9 @@
+{
+  "source": "rejseplanen_labs",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "status": "not_queried",
+  "reason": "Labs registration/account endpoint required.",
+  "docs": [
+    "https://help.rejseplanen.dk/hc/da/articles/115001346669-Rejseplanen-Labs-API-GTFS-mm"
+  ]
+}

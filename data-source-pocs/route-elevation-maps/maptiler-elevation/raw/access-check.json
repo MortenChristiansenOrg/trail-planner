@@ -1,0 +1,11 @@
+{
+  "source": "maptiler_elevation",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://docs.maptiler.com/cloud/api/elevation/",
+    "https://docs.maptiler.com/client-js/",
+    "https://www.maptiler.com/terms/cloud/"
+  ],
+  "access": "api_key_required",
+  "sample_not_fetched_reason": "No MapTiler API key is available in the repository or environment."
+}

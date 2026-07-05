@@ -1,0 +1,4282 @@
+{
+  "_trail_planner_query": {
+    "case": "ben-nevis-cmd",
+    "case_name": "Ben Nevis CMD / North Face car park",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:30];\n(\n  nwr(around:4500,56.8499,-5.0444)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,56.8499,-5.0444)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,56.8499,-5.0444)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,56.8499,-5.0444)[\"public_transport\"];\n  nwr(around:4500,56.8499,-5.0444)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "retrieved_at": "2026-07-05T09:59:46Z"
+  },
+  "elements": [
+    {
+      "changeset": 177737918,
+      "id": 26530416,
+      "lat": 56.8438445,
+      "lon": -5.0958983,
+      "tags": {
+        "name": "Banavie",
+        "name:gd": "Banbhaidh",
+        "naptan:AtcoCode": "9100BANAVIE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bnv/",
+        "network:wikidata": "Q26334",
+        "operator": "ScotRail",
+        "operator:website": "https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/bnv",
+        "operator:wikidata": "Q18356161",
+        "postal_code": "PH33 7JF",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BNV",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q1839037",
+        "wikipedia": "en:Banavie railway station"
+      },
+      "timestamp": "2026-01-26T20:42:28Z",
+      "type": "node",
+      "uid": 16951803,
+      "user": "Vas111",
+      "version": 20
+    },
+    {
+      "changeset": 120881734,
+      "id": 260621086,
+      "lat": 56.8714594,
+      "lon": -4.9928846,
+      "tags": {
+        "amenity": "parking",
+        "created_by": "JOSM",
+        "parking": "street_side"
+      },
+      "timestamp": "2022-05-12T10:43:57Z",
+      "type": "node",
+      "uid": 2929766,
+      "user": "Bart R\u00f6mgens",
+      "version": 2
+    },
+    {
+      "changeset": 185097837,
+      "id": 562711792,
+      "lat": 56.8380651,
+      "lon": -5.0813519,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camagael Road",
+        "naptan:AtcoCode": "670010002",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Blarmhore (Camagael Road)",
+        "naptan:Indicator": "opp Junc for Camaghael Rd (West)",
+        "naptan:Landmark": "Road Junction",
+        "naptan:NaptanCode": "45323836",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2026-07-04T15:46:54Z",
+      "type": "node",
+      "uid": 24152921,
+      "user": "Meteorname",
+      "version": 6
+    },
+    {
+      "changeset": 133602313,
+      "id": 562711797,
+      "lat": 56.8318502,
+      "lon": -5.0774186,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "long_name": "Lochybridge, before Tail Race",
+        "name": "Lochy Bridge (Tail race)",
+        "naptan:AtcoCode": "670010003",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Bus Stop Southbound",
+        "naptan:Landmark": "Lochy Bridge",
+        "naptan:NaptanCode": "45323835",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-03-12T21:45:30Z",
+      "type": "node",
+      "uid": 90943,
+      "user": "chris_debian",
+      "version": 3
+    },
+    {
+      "changeset": 182121148,
+      "id": 562711801,
+      "lat": 56.832105,
+      "lon": -5.077292,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochy Bridge",
+        "naptan:AtcoCode": "670010004",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Lochy Bridge (Northbound)",
+        "naptan:Landmark": "Lochy Bridge",
+        "naptan:NaptanCode": "45323834",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2026-05-02T14:53:36Z",
+      "type": "node",
+      "uid": 16160902,
+      "user": "TextEditUser",
+      "version": 3
+    },
+    {
+      "changeset": 169300145,
+      "id": 562711804,
+      "lat": 56.8285485,
+      "lon": -5.0831568,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2025-07-20",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Lochybridge, at British Aluminium",
+        "name": "Lochy Bridge (BA)",
+        "naptan:AtcoCode": "670010005",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "at BA Road End",
+        "naptan:Landmark": "BA Road End",
+        "naptan:NaptanCode": "45323832",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "yes"
+      },
+      "timestamp": "2025-07-22T15:33:50Z",
+      "type": "node",
+      "uid": 10072222,
+      "user": "Tuiui",
+      "version": 9
+    },
+    {
+      "changeset": 169300145,
+      "id": 562711808,
+      "lat": 56.8288804,
+      "lon": -5.0829417,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "North Road Retail Park",
+        "naptan:AtcoCode": "670010006",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "opp BA Road End (Northbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45323829",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-22T15:33:50Z",
+      "type": "node",
+      "uid": 10072222,
+      "user": "Tuiui",
+      "version": 11
+    },
+    {
+      "changeset": 165733162,
+      "id": 562711812,
+      "lat": 56.8254509,
+      "lon": -5.0872054,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Ben Nevis Ind Est",
+        "naptan:AtcoCode": "670010007",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Ben Nevis Ind Est",
+        "naptan:Indicator": "opp Ben Nevis Ind Est",
+        "naptan:Landmark": "Ben Nevis Ind Est",
+        "naptan:NaptanCode": "45323878",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-05-02T18:59:08Z",
+      "type": "node",
+      "uid": 12828422,
+      "user": "euroPathfinder",
+      "version": 7
+    },
+    {
+      "changeset": 169300145,
+      "id": 562711816,
+      "lat": 56.8244932,
+      "lon": -5.0881266,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2025-07-20",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Fort William, at Ben Nevis Ind Est",
+        "name": "Ben Nevis Ind Est",
+        "naptan:AtcoCode": "670010008",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Ben Nevis Ind Est",
+        "naptan:Indicator": "at Ben Nevis Ind Est",
+        "naptan:Landmark": "Ben Nevis Ind Est",
+        "naptan:NaptanCode": "45323843",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-22T15:33:48Z",
+      "type": "node",
+      "uid": 10072222,
+      "user": "Tuiui",
+      "version": 7
+    },
+    {
+      "changeset": 169022897,
+      "id": 562711820,
+      "lat": 56.8215666,
+      "lon": -5.0955902,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "check_date": "2025-07-16",
+        "departures_board": "timetable",
+        "direction": "W",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Fort William, at Nevis Bank Lane",
+        "name": "Belford Road",
+        "naptan:AtcoCode": "670010011",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Belford Road",
+        "naptan:Indicator": "o/s Nevis Bank Hotel",
+        "naptan:Landmark": "By Hotel",
+        "naptan:NaptanCode": "45323925",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Belford Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "ref": "670010011",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-07-16T16:30:58Z",
+      "type": "node",
+      "uid": 48243,
+      "user": "safado",
+      "version": 5
+    },
+    {
+      "changeset": 169022897,
+      "id": 562711824,
+      "lat": 56.821741,
+      "lon": -5.0959146,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "check_date": "2025-07-16",
+        "highway": "bus_stop",
+        "level": "0",
+        "lit": "yes",
+        "name": "Nevis Bank Lane",
+        "naptan:AtcoCode": "670010012",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Belford Road",
+        "naptan:Indicator": "opp Croft Road",
+        "naptan:Landmark": "Croft Road",
+        "naptan:NaptanCode": "45323924",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Belford Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-07-16T16:30:58Z",
+      "type": "node",
+      "uid": 48243,
+      "user": "safado",
+      "version": 6
+    },
+    {
+      "changeset": 171534838,
+      "id": 562711920,
+      "lat": 56.8447865,
+      "lon": -5.1096301,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School",
+        "naptan:AtcoCode": "670010202",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "opp Primary School Road End",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45326965",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-09-06T10:16:51Z",
+      "type": "node",
+      "uid": 2021117,
+      "user": "ButzmannDD",
+      "version": 4
+    },
+    {
+      "changeset": 171532642,
+      "id": 562711924,
+      "lat": 56.8444803,
+      "lon": -5.1108521,
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School Road End",
+        "naptan:AtcoCode": "670010203",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "at Primary School Road End",
+        "naptan:Landmark": "Banavie Primary School",
+        "naptan:NaptanCode": "45326967",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-09-06T10:16:58Z",
+      "type": "node",
+      "uid": 2021117,
+      "user": "ButzmannDD",
+      "version": 6
+    },
+    {
+      "changeset": 170900870,
+      "id": 562711928,
+      "lat": 56.8452875,
+      "lon": -5.0993408,
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Caledonian Canal",
+        "naptan:AtcoCode": "670010204",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Caledonian Canal",
+        "naptan:Indicator": "at B8004",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45326968",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "note": "This is obviously in the wrong place - middle of the canal",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-08-23T21:34:55Z",
+      "type": "node",
+      "uid": 10891833,
+      "user": "Va\u00efnamo\u00efnen",
+      "version": 10
+    },
+    {
+      "changeset": 170900865,
+      "id": 562711933,
+      "lat": 56.8450944,
+      "lon": -5.099505,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "B8004 Junction",
+        "naptan:AtcoCode": "670010205",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Caledonian Canal",
+        "naptan:Indicator": "opp B8004",
+        "naptan:Landmark": "B8004",
+        "naptan:NaptanCode": "45326969",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-08-23T21:35:02Z",
+      "type": "node",
+      "uid": 10891833,
+      "user": "Va\u00efnamo\u00efnen",
+      "version": 9
+    },
+    {
+      "changeset": 165845533,
+      "id": 562712186,
+      "lat": 56.8627341,
+      "lon": -5.0152665,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "long_name": "Nevis Range, at Road End",
+        "name": "Nevis Range Road End",
+        "naptan:AtcoCode": "670020002",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Nevis Range Road End",
+        "naptan:Indicator": "at Junction",
+        "naptan:Landmark": "Junction",
+        "naptan:NaptanCode": "45323739",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-05-05T13:09:45Z",
+      "type": "node",
+      "uid": 19999,
+      "user": "WestFin",
+      "version": 6
+    },
+    {
+      "changeset": 7231076,
+      "id": 562712189,
+      "lat": 56.8629792,
+      "lon": -5.0152999,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nevis Range Road End",
+        "naptan:AtcoCode": "670020002A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Nevis Range Road End",
+        "naptan:Indicator": "opp Junction",
+        "naptan:Landmark": "Junction",
+        "naptan:NaptanCode": "45329297",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2011-02-08T21:30:13Z",
+      "type": "node",
+      "uid": 10475,
+      "user": "riad",
+      "version": 2
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714477,
+      "lat": 56.8427029,
+      "lon": -5.1106382,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School",
+        "naptan:AtcoCode": "6700711053",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "o/s Primary School",
+        "naptan:Landmark": "Banavie Primary School",
+        "naptan:NaptanCode": "45327538",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Primary School Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714478,
+      "lat": 56.8462294,
+      "lon": -5.0953475,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moorings Hotel",
+        "naptan:AtcoCode": "6700711424",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Moorings Hotel",
+        "naptan:Indicator": "at Moorings Hotel",
+        "naptan:Landmark": "Moorings Hotel",
+        "naptan:NaptanCode": "45327539",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714502,
+      "lat": 56.8344508,
+      "lon": -5.0874875,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside School",
+        "naptan:AtcoCode": "6700711960",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Lochyside School",
+        "naptan:Indicator": "outside Lochyside School",
+        "naptan:Landmark": "Lochyside School",
+        "naptan:NaptanCode": "45327573",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 136629666,
+      "id": 562714542,
+      "lat": 56.8340097,
+      "lon": -5.0762349,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochy Bridge",
+        "naptan:AtcoCode": "6700711989",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Opp Glenmhor Terrace",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327625",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-05-27T15:46:57Z",
+      "type": "node",
+      "uid": 12507004,
+      "user": "Linfindel",
+      "version": 7
+    },
+    {
+      "changeset": 169340367,
+      "id": 562714543,
+      "lat": 56.8341446,
+      "lon": -5.0758688,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "direction": "S",
+        "highway": "bus_stop",
+        "long_name": "Lochybridge, at Glenmhor Terrace",
+        "name": "Lochy Bridge (Glenmhor terrace)",
+        "naptan:AtcoCode": "6700711989A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "at Glenmhor terrace",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329365",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "website": "https://nextbuses.mobi/WebView/BusStopSearch/BusStopSearchResults?id=6700711989A"
+      },
+      "timestamp": "2025-07-23T12:04:28Z",
+      "type": "node",
+      "uid": 10072222,
+      "user": "Tuiui",
+      "version": 9
+    },
+    {
+      "changeset": 136629666,
+      "id": 562714544,
+      "lat": 56.83594,
+      "lon": -5.0792467,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Farm Foods",
+        "naptan:AtcoCode": "6700711990",
+        "naptan:Bearing": "NW",
+        "naptan:CommonName": "Farm Foods",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327626",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-05-27T15:46:57Z",
+      "type": "node",
+      "uid": 12507004,
+      "user": "Linfindel",
+      "version": 2
+    },
+    {
+      "changeset": 136629666,
+      "id": 562714545,
+      "lat": 56.8350391,
+      "lon": -5.0785988,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Farm Foods",
+        "naptan:AtcoCode": "6700711990A",
+        "naptan:Bearing": "SE",
+        "naptan:CommonName": "Farm Foods",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329367",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-05-27T15:46:57Z",
+      "type": "node",
+      "uid": 12507004,
+      "user": "Linfindel",
+      "version": 2
+    },
+    {
+      "changeset": 127419454,
+      "id": 562714546,
+      "lat": 56.8343485,
+      "lon": -5.0877282,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside RC Primary School",
+        "naptan:AtcoCode": "6700711991",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Lochyside RC Primary School",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327627",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2022-10-12T14:27:12Z",
+      "type": "node",
+      "uid": 3432400,
+      "user": "GinaroZ",
+      "version": 3
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714548,
+      "lat": 56.8344402,
+      "lon": -5.0871915,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside RC Primary School",
+        "naptan:AtcoCode": "6700711991A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Lochyside RC Primary School",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329368",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714549,
+      "lat": 56.8360881,
+      "lon": -5.0983146,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Glenmallie Rd",
+        "naptan:AtcoCode": "6700711993",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Glenmallie Rd",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Glenmallie Rd",
+        "naptan:NaptanCode": "45327628",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714550,
+      "lat": 56.836139,
+      "lon": -5.0980728,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Glenmallie Rd",
+        "naptan:AtcoCode": "6700711993A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Glenmallie Rd",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329369",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 168932590,
+      "id": 562714551,
+      "lat": 56.8396732,
+      "lon": -5.1039344,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Health Centre",
+        "naptan:AtcoCode": "6700711995",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Health Centre",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327629",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-14T19:19:17Z",
+      "type": "node",
+      "uid": 22962173,
+      "user": "Mercata",
+      "version": 4
+    },
+    {
+      "changeset": 168932590,
+      "id": 562714552,
+      "lat": 56.8395555,
+      "lon": -5.103833,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Health Centre",
+        "naptan:AtcoCode": "6700711995A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Health Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329372",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-14T19:19:16Z",
+      "type": "node",
+      "uid": 22962173,
+      "user": "Mercata",
+      "version": 3
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714554,
+      "lat": 56.8417797,
+      "lon": -5.1022295,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rosscott House",
+        "naptan:AtcoCode": "6700711996",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Rosscott Ho",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Rosscott Ho",
+        "naptan:NaptanCode": "45327632",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 3
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714555,
+      "lat": 56.8416835,
+      "lon": -5.1021231,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rosscott House",
+        "naptan:AtcoCode": "6700711996A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Rosscott Ho",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329373",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 3
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714559,
+      "lat": 56.8428747,
+      "lon": -5.0994006,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "No 238",
+        "naptan:AtcoCode": "6700711997",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "No 238",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "No 238",
+        "naptan:NaptanCode": "45327634",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113048366,
+      "id": 562714561,
+      "lat": 56.842739,
+      "lon": -5.0994385,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "No 236",
+        "naptan:AtcoCode": "6700711997A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "No 236",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329374",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714562,
+      "lat": 56.8218995,
+      "lon": -5.085782,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700712004",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "Bus Shelter",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327635",
+        "naptan:Street": "Carn Dearg Rd",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714563,
+      "lat": 56.8222327,
+      "lon": -5.0886618,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700712005",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "By Fire Station",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327636",
+        "naptan:Street": "Ardnevis Rd",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 169190097,
+      "id": 562714564,
+      "lat": 56.8230972,
+      "lon": -5.0918641,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Inverlochy Junction",
+        "naptan:AtcoCode": "6700712006",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "A82 (North Road)",
+        "naptan:Indicator": "at Inverlochy Junction",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327637",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "North Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-07-20T11:26:59Z",
+      "type": "node",
+      "uid": 10090920,
+      "user": "Infinatum",
+      "version": 6
+    },
+    {
+      "changeset": 169190097,
+      "id": 562714566,
+      "lat": 56.8228611,
+      "lon": -5.09197,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "long_name": "Fort William, opposite Inverlochy Junction",
+        "name": "A82 (North Road)",
+        "naptan:AtcoCode": "6700712006A",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "A82 (North Road)",
+        "naptan:Indicator": "at Claggan Road",
+        "naptan:Landmark": "Opp Oil Depot",
+        "naptan:NaptanCode": "45329375",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "North Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-20T11:27:14Z",
+      "type": "node",
+      "uid": 10090920,
+      "user": "Infinatum",
+      "version": 6
+    },
+    {
+      "changeset": 113049252,
+      "id": 562714973,
+      "lat": 56.8463368,
+      "lon": -5.0955337,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moorings Hotel",
+        "naptan:AtcoCode": "6700712424A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Moorings Hotel",
+        "naptan:Indicator": "opp Moorings Hotel",
+        "naptan:Landmark": "Moorings Hotel",
+        "naptan:NaptanCode": "45329383",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 3
+    },
+    {
+      "changeset": 73793141,
+      "id": 562715151,
+      "lat": 56.842773,
+      "lon": -5.0966202,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bus Depot",
+        "naptan:AtcoCode": "6700712485",
+        "naptan:Bearing": "NW",
+        "naptan:CommonName": "Bus Depot",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Depot",
+        "naptan:NaptanCode": "45327854",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Ardgour Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2019-08-27T11:38:28Z",
+      "type": "node",
+      "uid": 1832129,
+      "user": "Herman56",
+      "version": 2
+    },
+    {
+      "changeset": 168932590,
+      "id": 562715152,
+      "lat": 56.8375137,
+      "lon": -5.10063,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Co-op",
+        "naptan:AtcoCode": "6700712486",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Co-op",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327856",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-14T19:19:15Z",
+      "type": "node",
+      "uid": 22962173,
+      "user": "Mercata",
+      "version": 3
+    },
+    {
+      "changeset": 168932590,
+      "id": 562715154,
+      "lat": 56.8374595,
+      "lon": -5.1010027,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Co-op",
+        "naptan:AtcoCode": "6700712486A",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Co-op",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329392",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-14T19:19:15Z",
+      "type": "node",
+      "uid": 22962173,
+      "user": "Mercata",
+      "version": 3
+    },
+    {
+      "changeset": 73793141,
+      "id": 562715155,
+      "lat": 56.8425849,
+      "lon": -5.0955057,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Bus Depot",
+        "naptan:AtcoCode": "6700712487",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Bus Depot",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Bus Depot",
+        "naptan:NaptanCode": "45327857",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Ardgour Road",
+        "naptan:verified": "no",
+        "network": "Shiel Buses",
+        "public_transport": "platform",
+        "source": "naptan_import;survey"
+      },
+      "timestamp": "2019-08-27T11:38:28Z",
+      "type": "node",
+      "uid": 1832129,
+      "user": "Herman56",
+      "version": 2
+    },
+    {
+      "changeset": 168758771,
+      "id": 562715435,
+      "lat": 56.83814,
+      "lon": -5.0768378,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "High School",
+        "naptan:AtcoCode": "6700712680",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochaber High School",
+        "naptan:Indicator": "o/s Lochaber High School",
+        "naptan:Landmark": "Lochaber High School",
+        "naptan:NaptanCode": "45327989",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "School Car Park",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-10T19:36:11Z",
+      "type": "node",
+      "uid": 146393,
+      "user": "Sint E7",
+      "version": 3
+    },
+    {
+      "changeset": 123532182,
+      "id": 562715561,
+      "lat": 56.8256243,
+      "lon": -5.0939906,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Inverlochy",
+        "naptan:AtcoCode": "6700712794",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Inverlochy",
+        "naptan:Indicator": "Bus Shelter",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45328292",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Lundy Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2022-07-12T18:28:35Z",
+      "type": "node",
+      "uid": 1784239,
+      "user": "SvenTX",
+      "version": 3
+    },
+    {
+      "changeset": 7231076,
+      "id": 562715869,
+      "lat": 56.8682024,
+      "lon": -5.0674143,
+      "tags": {
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Telephone Box",
+        "naptan:AtcoCode": "6700712996",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Telephone Box",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Telephone Box",
+        "naptan:NaptanCode": "45328452",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2011-02-08T21:30:14Z",
+      "type": "node",
+      "uid": 10475,
+      "user": "riad",
+      "version": 2
+    },
+    {
+      "changeset": 7231076,
+      "id": 562715873,
+      "lat": 56.8681237,
+      "lon": -5.0673258,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Telephone Box",
+        "naptan:AtcoCode": "6700712996A",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Telephone Box",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Telephone Box",
+        "naptan:NaptanCode": "45329487",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2011-02-08T21:30:14Z",
+      "type": "node",
+      "uid": 10475,
+      "user": "riad",
+      "version": 2
+    },
+    {
+      "changeset": 7474162,
+      "id": 562715957,
+      "lat": 56.8521702,
+      "lon": -5.0000731,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Visitor Centre",
+        "naptan:AtcoCode": "6700713020",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Visitor Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Visitor Centre",
+        "naptan:NaptanCode": "45328463",
+        "naptan:Street": "Nevis Range Road",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2011-03-06T15:18:30Z",
+      "type": "node",
+      "uid": 4663,
+      "user": "G3YAC",
+      "version": 2
+    },
+    {
+      "changeset": 142677545,
+      "id": 562716550,
+      "lat": 56.8225486,
+      "lon": -5.0976712,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camanachd Crescent",
+        "naptan:AtcoCode": "6700713422",
+        "naptan:Bearing": "SE",
+        "naptan:CommonName": "Camanachd Cresent",
+        "naptan:Indicator": "By Nos 50-61",
+        "naptan:Landmark": "Camanachd Cresent",
+        "naptan:NaptanCode": "45328723",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Camanachd Cresent",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-10-16T17:49:53Z",
+      "type": "node",
+      "uid": 1410,
+      "user": "SuborbitalPigeon",
+      "version": 3
+    },
+    {
+      "changeset": 113049252,
+      "id": 562716594,
+      "lat": 56.8229443,
+      "lon": -5.0889663,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700713452",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "at Ardnevis Road",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45328736",
+        "naptan:Street": "Melantee",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 113049252,
+      "id": 562716595,
+      "lat": 56.8228737,
+      "lon": -5.0863703,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700713452A",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "at The Corries",
+        "naptan:Landmark": "o/s No 39",
+        "naptan:NaptanCode": "45329632",
+        "naptan:Street": "Melantee",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:41:28Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 168664634,
+      "id": 562716767,
+      "lat": 56.8443225,
+      "lon": -5.116282,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hillview Drive",
+        "naptan:AtcoCode": "6700713972",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Hillview Drive",
+        "naptan:Indicator": "at Hillview Drive",
+        "naptan:Landmark": "Hillview Drive",
+        "naptan:NaptanCode": "45329247",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2025-07-08T19:15:33Z",
+      "type": "node",
+      "uid": 146393,
+      "user": "Sint E7",
+      "version": 6
+    },
+    {
+      "changeset": 108188195,
+      "id": 562716768,
+      "lat": 56.8443573,
+      "lon": -5.117107,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hillview Drive",
+        "naptan:AtcoCode": "6700713972A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Hillview Drive",
+        "naptan:Indicator": "opp Hillview Drive",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329694",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-07-18T11:05:20Z",
+      "type": "node",
+      "uid": 12539476,
+      "user": "experimental existential mallard",
+      "version": 2
+    },
+    {
+      "changeset": 113048366,
+      "id": 562716770,
+      "lat": 56.8450398,
+      "lon": -5.1063213,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Banavie",
+        "naptan:AtcoCode": "6700713975",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Banavie",
+        "naptan:Indicator": "Bus Shelter (Eastbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329248",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-10-27T17:20:38Z",
+      "type": "node",
+      "uid": 13408898,
+      "user": "Westpfeil",
+      "version": 2
+    },
+    {
+      "changeset": 168664634,
+      "id": 562716771,
+      "lat": 56.8448927,
+      "lon": -5.1069143,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilson Way",
+        "naptan:AtcoCode": "6700713975A",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Banavie",
+        "naptan:Indicator": "Bus Shelter (Westbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329696",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2025-07-08T19:15:33Z",
+      "type": "node",
+      "uid": 146393,
+      "user": "Sint E7",
+      "version": 3
+    },
+    {
+      "changeset": 136629666,
+      "id": 562716788,
+      "lat": 56.8387961,
+      "lon": -5.0780938,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Medical Centre",
+        "naptan:AtcoCode": "6700713985",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Medical Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Medical Centre",
+        "naptan:NaptanCode": "45342357",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      },
+      "timestamp": "2023-05-27T15:46:57Z",
+      "type": "node",
+      "uid": 12507004,
+      "user": "Linfindel",
+      "version": 3
+    },
+    {
+      "changeset": 111731521,
+      "id": 562717120,
+      "lat": 56.8471064,
+      "lon": -5.0465696,
+      "tags": {
+        "direction": "S",
+        "highway": "bus_stop",
+        "long_name": "Torlundy, at Bus Shelter",
+        "name": "Torlundy",
+        "naptan:AtcoCode": "670084756",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Torlundy",
+        "naptan:Indicator": "at Bus Shelter",
+        "naptan:Landmark": "Letterbox",
+        "naptan:NaptanCode": "45327478",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "yes",
+        "source": "naptan_import"
+      },
+      "timestamp": "2021-09-26T16:53:17Z",
+      "type": "node",
+      "uid": 53626,
+      "user": "jambamkin",
+      "version": 3
+    },
+    {
+      "changeset": 120881662,
+      "id": 562717121,
+      "lat": 56.8471108,
+      "lon": -5.0466582,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Torlundy",
+        "naptan:AtcoCode": "670084756A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Torlundy",
+        "naptan:Indicator": "opp Bus Shelter",
+        "naptan:Landmark": "River Lundy",
+        "naptan:NaptanCode": "45329748",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "no",
+        "source": "naptan_import"
+      },
+      "timestamp": "2022-05-12T10:40:12Z",
+      "type": "node",
+      "uid": 2929766,
+      "user": "Bart R\u00f6mgens",
+      "version": 3
+    },
+    {
+      "changeset": 169340367,
+      "id": 1095368888,
+      "lat": 56.8346651,
+      "lon": -5.0743505,
+      "tags": {
+        "addr:floor": "0",
+        "amenity": "cafe",
+        "check_date": "2025-07-22",
+        "level": "0",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes"
+      },
+      "timestamp": "2025-07-23T12:04:28Z",
+      "type": "node",
+      "uid": 10072222,
+      "user": "Tuiui",
+      "version": 2
+    },
+    {
+      "changeset": 73856736,
+      "id": 1835526557,
+      "lat": 56.8196209,
+      "lon": -5.0927501,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2019-08-28T20:25:32Z",
+      "type": "node",
+      "uid": 117953,
+      "user": "joe_d5",
+      "version": 3
+    },
+    {
+      "changeset": 119724132,
+      "id": 2263380652,
+      "lat": 56.8338467,
+      "lon": -4.9882008,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2022-04-14T18:10:13Z",
+      "type": "node",
+      "uid": 2800603,
+      "user": "skifans",
+      "version": 2
+    },
+    {
+      "changeset": 32638310,
+      "id": 2266189099,
+      "lat": 56.8588682,
+      "lon": -5.01853,
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      },
+      "timestamp": "2015-07-14T20:56:43Z",
+      "type": "node",
+      "uid": 91225,
+      "user": "tms13",
+      "version": 2
+    },
+    {
+      "changeset": 120881734,
+      "id": 2344621544,
+      "lat": 56.8723281,
+      "lon": -4.9906523,
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      },
+      "timestamp": "2022-05-12T10:44:04Z",
+      "type": "node",
+      "uid": 2929766,
+      "user": "Bart R\u00f6mgens",
+      "version": 2
+    },
+    {
+      "changeset": 16552697,
+      "id": 2344624411,
+      "lat": 56.8683718,
+      "lon": -5.0005499,
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2013-06-14T16:59:23Z",
+      "type": "node",
+      "uid": 311866,
+      "user": "papesz",
+      "version": 1
+    },
+    {
+      "changeset": 120881734,
+      "id": 2344632745,
+      "lat": 56.860323,
+      "lon": -5.0205037,
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      },
+      "timestamp": "2022-05-12T10:42:05Z",
+      "type": "node",
+      "uid": 2929766,
+      "user": "Bart R\u00f6mgens",
+      "version": 2
+    },
+    {
+      "changeset": 138260695,
+      "id": 2344636537,
+      "lat": 56.8389372,
+      "lon": -5.0649488,
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      },
+      "timestamp": "2023-07-08T12:42:16Z",
+      "type": "node",
+      "uid": 7400464,
+      "user": "Moohan",
+      "version": 2
+    },
+    {
+      "changeset": 40940078,
+      "id": 2504847285,
+      "lat": 56.8355384,
+      "lon": -5.0780908,
+      "tags": {
+        "amenity": "cafe",
+        "name": "J J's Cafe'"
+      },
+      "timestamp": "2016-07-22T02:23:14Z",
+      "type": "node",
+      "uid": 4299554,
+      "user": "Rmcintire",
+      "version": 2
+    },
+    {
+      "changeset": 182121148,
+      "id": 2515512628,
+      "lat": 56.8331398,
+      "lon": -5.076573,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Glenmhor Terrace",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "timestamp": "2026-05-02T14:53:36Z",
+      "type": "node",
+      "uid": 16160902,
+      "user": "TextEditUser",
+      "version": 10
+    },
+    {
+      "changeset": 22939273,
+      "id": 2917056593,
+      "lat": 56.8882313,
+      "lon": -5.0399617,
+      "tags": {
+        "information": "board",
+        "tourism": "information"
+      },
+      "timestamp": "2014-06-15T08:33:03Z",
+      "type": "node",
+      "uid": 1089198,
+      "user": "lanzelot72",
+      "version": 1
+    },
+    {
+      "changeset": 32638310,
+      "id": 3651307654,
+      "lat": 56.8532121,
+      "lon": -5.0139187,
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      },
+      "timestamp": "2015-07-14T20:56:43Z",
+      "type": "node",
+      "uid": 91225,
+      "user": "tms13",
+      "version": 1
+    },
+    {
+      "changeset": 32638310,
+      "id": 3651307656,
+      "lat": 56.8523071,
+      "lon": -5.0128333,
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      },
+      "timestamp": "2015-07-14T20:56:44Z",
+      "type": "node",
+      "uid": 91225,
+      "user": "tms13",
+      "version": 1
+    },
+    {
+      "changeset": 32638310,
+      "id": 3651307660,
+      "lat": 56.8594696,
+      "lon": -5.0185027,
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      },
+      "timestamp": "2015-07-14T20:56:44Z",
+      "type": "node",
+      "uid": 91225,
+      "user": "tms13",
+      "version": 1
+    },
+    {
+      "changeset": 76897468,
+      "id": 6965929655,
+      "lat": 56.8522998,
+      "lon": -4.9988236,
+      "tags": {
+        "amenity": "toilets"
+      },
+      "timestamp": "2019-11-11T09:32:05Z",
+      "type": "node",
+      "uid": 483075,
+      "user": "lyctkel",
+      "version": 1
+    },
+    {
+      "changeset": 181540936,
+      "id": 9676545801,
+      "lat": 56.8214994,
+      "lon": -5.0956284,
+      "tags": {
+        "addr:postcode": "PH33 6PF",
+        "amenity": "restaurant",
+        "contact:phone": "+44 1397 705721",
+        "name": "Brown's Restaurant",
+        "not:brand:wikidata": "Q4976672",
+        "operator": "Nevis Bank Hotel Ltd",
+        "outdoor_seating": "no",
+        "payment:american_express": "yes",
+        "toilets:access": "customers",
+        "website": "https://nevisbankinn.co.uk/"
+      },
+      "timestamp": "2026-04-19T14:20:24Z",
+      "type": "node",
+      "uid": 9088405,
+      "user": "TheUKHighStreet",
+      "version": 4
+    },
+    {
+      "changeset": 123531074,
+      "id": 9883644924,
+      "lat": 56.8290018,
+      "lon": -5.0847681,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2022-07-12T17:53:52Z",
+      "type": "node",
+      "uid": 1784239,
+      "user": "SvenTX",
+      "version": 1
+    },
+    {
+      "changeset": 160848955,
+      "id": 9883659370,
+      "lat": 56.8289764,
+      "lon": -5.0847417,
+      "tags": {
+        "board_type": "history",
+        "information": "board",
+        "name": "Battle of Inverlochy",
+        "subject:wikidata": "Q4087424",
+        "subject:wikipedia": "en:Battle of Inverlochy (1645)",
+        "tourism": "information"
+      },
+      "timestamp": "2024-12-31T21:54:59Z",
+      "type": "node",
+      "uid": 13666626,
+      "user": "RedAuburn",
+      "version": 4
+    },
+    {
+      "changeset": 124223159,
+      "id": 9918864379,
+      "lat": 56.8523802,
+      "lon": -4.9969768,
+      "tags": {
+        "amenity": "drinking_water"
+      },
+      "timestamp": "2022-07-29T10:04:59Z",
+      "type": "node",
+      "uid": 16564514,
+      "user": "Trailpapst",
+      "version": 1
+    },
+    {
+      "changeset": 136258170,
+      "id": 10908437736,
+      "lat": 56.8340479,
+      "lon": -5.0760308,
+      "tags": {
+        "bus": "yes",
+        "public_transport": "stop_position"
+      },
+      "timestamp": "2023-05-18T14:24:07Z",
+      "type": "node",
+      "uid": 66915,
+      "user": "Locator",
+      "version": 1
+    },
+    {
+      "changeset": 152339513,
+      "id": 11961099039,
+      "lat": 56.8374999,
+      "lon": -5.1058598,
+      "tags": {
+        "amenity": "cafe",
+        "check_date": "2024-06-06",
+        "name": "LAD Community Caf\u00e9"
+      },
+      "timestamp": "2024-06-06T16:05:05Z",
+      "type": "node",
+      "uid": 38617,
+      "user": "Bernd_BDP",
+      "version": 1
+    },
+    {
+      "changeset": 179291829,
+      "id": 11961099041,
+      "lat": 56.8375924,
+      "lon": -5.1057095,
+      "tags": {
+        "addr:city": "Fort William",
+        "addr:housename": "Caol Shopping Centre",
+        "addr:postcode": "PH33 7DR",
+        "addr:village": "Caol",
+        "amenity": "cafe",
+        "check_date": "2024-06-06",
+        "fhrs:id": "1110125",
+        "name": "Bake \u201an\u2018 Roll",
+        "source:addr": "FHRS Open Data"
+      },
+      "timestamp": "2026-03-03T09:30:44Z",
+      "type": "node",
+      "uid": 6871,
+      "user": "smsm1",
+      "version": 2
+    },
+    {
+      "changeset": 169160550,
+      "id": 13011907101,
+      "lat": 56.8607333,
+      "lon": -5.0164623,
+      "tags": {
+        "name": "fits 2 ps tent",
+        "tourism": "camp_site"
+      },
+      "timestamp": "2025-07-19T16:26:50Z",
+      "type": "node",
+      "uid": 19825679,
+      "user": "cvanelteren",
+      "version": 1
+    },
+    {
+      "changeset": 170165895,
+      "id": 13058344679,
+      "lat": 56.8285923,
+      "lon": -5.0819869,
+      "tags": {
+        "amenity": "toilets",
+        "fee": "no",
+        "opening_hours": "Mo-Sa 08:00-20:00; Su 09:00-18:00"
+      },
+      "timestamp": "2025-08-08T16:47:01Z",
+      "type": "node",
+      "uid": 7229435,
+      "user": "Yohann Trouslard",
+      "version": 1
+    },
+    {
+      "changeset": 172728167,
+      "id": 13186894074,
+      "lat": 56.8524381,
+      "lon": -4.9989617,
+      "tags": {
+        "amenity": "toilets"
+      },
+      "timestamp": "2025-10-02T00:18:21Z",
+      "type": "node",
+      "uid": 8823508,
+      "user": "fiadh eile",
+      "version": 1
+    },
+    {
+      "changeset": 172728167,
+      "id": 13186894075,
+      "lat": 56.8523091,
+      "lon": -4.9992842,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Bombay Bicycle Club"
+      },
+      "timestamp": "2025-10-02T00:18:21Z",
+      "type": "node",
+      "uid": 8823508,
+      "user": "fiadh eile",
+      "version": 1
+    },
+    {
+      "changeset": 177737918,
+      "id": 13502506691,
+      "lat": 56.8438007,
+      "lon": -5.0958832,
+      "tags": {
+        "name": "Banavie",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "train": "yes"
+      },
+      "timestamp": "2026-01-26T20:42:28Z",
+      "type": "node",
+      "uid": 16951803,
+      "user": "Vas111",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8419866,
+        "lon": -5.0430756
+      },
+      "changeset": 165758718,
+      "id": 31727542,
+      "nodes": [
+        354974837,
+        2266211345,
+        354974840,
+        354974843,
+        2266211329,
+        2266211341,
+        2266211331,
+        2266211346,
+        354974844,
+        480352009,
+        443126954,
+        354974845,
+        354974846,
+        354974837
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "yes",
+        "name": "North Face Car Park",
+        "parking": "surface",
+        "source": "survey",
+        "surface": "gravel"
+      },
+      "timestamp": "2025-05-03T13:13:27Z",
+      "type": "way",
+      "uid": 4291429,
+      "user": "Ruimtepuin",
+      "version": 6
+    },
+    {
+      "center": {
+        "lat": 56.8515991,
+        "lon": -5.0007538
+      },
+      "changeset": 172728167,
+      "id": 37732671,
+      "nodes": [
+        442583984,
+        443120380,
+        2095416948,
+        2095416988,
+        2095416997,
+        442583985,
+        442583986,
+        2095417116,
+        2095417146,
+        2095417149,
+        2095417152,
+        13186894077,
+        2095417121,
+        2095417117,
+        2095417059,
+        442583988,
+        1311102535,
+        1311139793,
+        1311105395,
+        442583984
+      ],
+      "tags": {
+        "amenity": "parking",
+        "fee": "yes",
+        "name": "Nevis Range Car Park",
+        "source": "memory"
+      },
+      "timestamp": "2025-10-02T00:18:21Z",
+      "type": "way",
+      "uid": 8823508,
+      "user": "fiadh eile",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.8455503,
+        "lon": -5.0969326
+      },
+      "changeset": 136514829,
+      "id": 39934476,
+      "nodes": [
+        2178425045,
+        2178425053,
+        2178425082,
+        479504832,
+        479504833,
+        479504834,
+        479504835,
+        479504836,
+        479504837,
+        479504838,
+        479504841,
+        479504842,
+        479504843,
+        479504844,
+        479504845,
+        479504846,
+        479504848,
+        479504849,
+        479504850,
+        479504851,
+        479504852,
+        479504853,
+        493814921,
+        479504855,
+        479504856,
+        2178425008,
+        2178425062,
+        2178425086,
+        2178425045
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "fixme": "Shape may be wrong, unsurveyed and overlapped surveyed road",
+        "name": "Neptune's Staircase",
+        "name:fr": "Escalier de Neptune",
+        "parking": "surface"
+      },
+      "timestamp": "2023-05-24T19:26:45Z",
+      "type": "way",
+      "uid": 769836,
+      "user": "jenskroener",
+      "version": 7
+    },
+    {
+      "center": {
+        "lat": 56.8519814,
+        "lon": -4.9991224
+      },
+      "changeset": 172728167,
+      "id": 199546069,
+      "nodes": [
+        2095417055,
+        1095373385,
+        11737031114,
+        2095417048,
+        2095417039,
+        2095417052,
+        2095417055
+      ],
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "The Trail's End Cafe Bar",
+        "old_name": "Pinemarten Coffee Shop",
+        "old_name:gd": "B\u00f9th Chofaidh an Taghain"
+      },
+      "timestamp": "2025-10-02T00:18:21Z",
+      "type": "way",
+      "uid": 8823508,
+      "user": "fiadh eile",
+      "version": 3
+    },
+    {
+      "center": {
+        "lat": 56.8525833,
+        "lon": -4.9969646
+      },
+      "changeset": 125439703,
+      "id": 199546128,
+      "nodes": [
+        1311083848,
+        1311297113,
+        1311298981,
+        1311144448,
+        1320496091,
+        1311293473,
+        1311111635,
+        1311291730,
+        1311070471,
+        1311291854,
+        1311110915,
+        1311145667,
+        1311298912,
+        1311114218,
+        1311126714,
+        1311090234,
+        1311101156,
+        1311063044,
+        1311063149,
+        1311134712,
+        1311297031,
+        1311142014,
+        1311092983,
+        1311144961,
+        1311105596,
+        1311289127,
+        1311083679,
+        1311075550,
+        1311297083,
+        1311293864,
+        1311100321,
+        1311093234,
+        1311120381,
+        1311101183,
+        1311296702,
+        1311095710,
+        1311291231,
+        1311115218,
+        1311096800,
+        1311089113,
+        1311299208,
+        1311131523,
+        1311110273,
+        1311104749,
+        1311077594,
+        1311082328,
+        1311144814,
+        1311125737,
+        1311118702,
+        1311100333,
+        1311296435,
+        1311140809,
+        1311135682,
+        1311113487,
+        1311074034,
+        1311293144,
+        1311289240,
+        1311129007,
+        1311093689,
+        1311066423,
+        1311298144,
+        1311143528,
+        1311107273,
+        1311086808,
+        1311079613,
+        1311295213,
+        1311123507,
+        1311103183,
+        1311098097,
+        1311070667,
+        1311138733,
+        1311116253,
+        1311111754,
+        1311090426,
+        1311291951,
+        1311133128,
+        1311126816,
+        1311105719,
+        1311063291,
+        1311145829,
+        1311142149,
+        1311120698,
+        1311083848
+      ],
+      "tags": {
+        "amenity": "parking",
+        "operator": "Forestry Commission Scotland",
+        "parking": "surface"
+      },
+      "timestamp": "2022-08-27T11:48:43Z",
+      "type": "way",
+      "uid": 449257,
+      "user": "Bierphysik",
+      "version": 3
+    },
+    {
+      "center": {
+        "lat": 56.8284962,
+        "lon": -5.0771317
+      },
+      "changeset": 14621702,
+      "id": 200738705,
+      "nodes": [
+        2107025094,
+        2107025141,
+        2107025075,
+        2107025132,
+        2107025094
+      ],
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2013-01-12T13:32:03Z",
+      "type": "way",
+      "uid": 51722,
+      "user": "Chris Parker",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8282673,
+        "lon": -5.0758447
+      },
+      "changeset": 14621702,
+      "id": 200738707,
+      "nodes": [
+        2107025097,
+        2107025068,
+        2107025189,
+        2107025128,
+        2107025107,
+        2107025164,
+        2107025162,
+        2107025123,
+        2107025085,
+        2107025148,
+        2107025072,
+        2107025125,
+        2107025134,
+        2107025159,
+        2107025104,
+        2107025087,
+        2107025153,
+        2107025097
+      ],
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2013-01-12T13:32:03Z",
+      "type": "way",
+      "uid": 51722,
+      "user": "Chris Parker",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8246431,
+        "lon": -5.081625
+      },
+      "changeset": 156733741,
+      "id": 202400717,
+      "nodes": [
+        2123720497,
+        2123720481,
+        2123720436,
+        2123720438,
+        2123720442,
+        2123720385,
+        2123720497
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8246859,
+        "lon": -5.0831928
+      },
+      "changeset": 156733741,
+      "id": 202400725,
+      "nodes": [
+        2123720503,
+        2123720323,
+        2123720358,
+        2123720375,
+        2123720503
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8250805,
+        "lon": -5.0825472
+      },
+      "changeset": 156733741,
+      "id": 202400728,
+      "nodes": [
+        2123720421,
+        2123720490,
+        2123720441,
+        2123720514,
+        2123720421
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8438306,
+        "lon": -5.0959116
+      },
+      "changeset": 169069874,
+      "id": 239118644,
+      "nodes": [
+        2469227901,
+        9448633307,
+        9448633306,
+        9448633305,
+        9448633304,
+        2469227904,
+        2469227903,
+        9448633311,
+        9448633310,
+        9448633309,
+        2469227902,
+        9448633308,
+        2469227901
+      ],
+      "tags": {
+        "area": "yes",
+        "bench": "yes",
+        "bin": "yes",
+        "covered": "no",
+        "indoor": "no",
+        "lit": "yes",
+        "public_transport": "platform",
+        "railway": "platform",
+        "ref": "1",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      },
+      "timestamp": "2025-07-17T16:25:43Z",
+      "type": "way",
+      "uid": 48243,
+      "user": "safado",
+      "version": 9
+    },
+    {
+      "center": {
+        "lat": 56.8386736,
+        "lon": -5.0789669
+      },
+      "changeset": 156733741,
+      "id": 244210859,
+      "nodes": [
+        2515511423,
+        2515511425,
+        2515511427,
+        2515511429,
+        2515511431,
+        2515511433,
+        2515511435,
+        2515511437,
+        9947727289,
+        2515511439,
+        2515511441,
+        2515511423
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 4
+    },
+    {
+      "center": {
+        "lat": 56.8323163,
+        "lon": -5.0805547
+      },
+      "changeset": 156733741,
+      "id": 270328019,
+      "nodes": [
+        2753674367,
+        12058603028,
+        10993195847,
+        1095372606,
+        2753674363,
+        1095368217,
+        12058603029,
+        4263714430,
+        4263714429,
+        4455675318,
+        4263714428,
+        2753674367
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.8220846,
+        "lon": -5.0834233
+      },
+      "changeset": 31973093,
+      "id": 353727101,
+      "nodes": [
+        3595424835,
+        3595424836,
+        461633407,
+        3595424837,
+        3595424838,
+        3595424839,
+        3595424835
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2015-06-14T23:59:25Z",
+      "type": "way",
+      "uid": 2614045,
+      "user": "amilne",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8378407,
+        "lon": -5.1010011
+      },
+      "changeset": 34336428,
+      "id": 372888470,
+      "nodes": [
+        3764508557,
+        3764508866,
+        3764503347,
+        3764508869,
+        3764503317,
+        3764503332,
+        3764508729,
+        3764508557
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2015-09-29T22:01:56Z",
+      "type": "way",
+      "uid": 481116,
+      "user": "bigalxyz123",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8210848,
+        "lon": -5.0939137
+      },
+      "changeset": 156733741,
+      "id": 438284332,
+      "nodes": [
+        1305307078,
+        4360186117,
+        4360186116,
+        1305326980,
+        1305320194,
+        1305317772,
+        1305310387,
+        1305331420,
+        1305324948,
+        1305323240,
+        1305316081,
+        1305336875,
+        1305329743,
+        1305327975,
+        1305321265,
+        1305308774,
+        1305335014,
+        1305333037,
+        1305326041,
+        1305314091,
+        1305307078
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8393066,
+        "lon": -5.1095398
+      },
+      "changeset": 43128894,
+      "id": 449239736,
+      "nodes": [
+        4462107478,
+        4462107394,
+        4462107481,
+        4462107636,
+        4462107666,
+        4462106878,
+        4462107423,
+        4462107614,
+        4462107478
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2016-10-24T16:20:00Z",
+      "type": "way",
+      "uid": 481116,
+      "user": "bigalxyz123",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8257922,
+        "lon": -5.0943531
+      },
+      "changeset": 178231753,
+      "id": 469903832,
+      "nodes": [
+        4641642444,
+        13532143784,
+        13532143783,
+        13532143785,
+        4641642443,
+        4641642442,
+        13532143786,
+        4641642441,
+        13532143779,
+        13532143765,
+        4641642444
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      },
+      "timestamp": "2026-02-07T15:05:04Z",
+      "type": "way",
+      "uid": 493595,
+      "user": "Yorvik Prestigitator",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.8458727,
+        "lon": -5.0962188
+      },
+      "changeset": 136514827,
+      "id": 469903846,
+      "nodes": [
+        4641642562,
+        4641642561,
+        4641642560,
+        4641642559,
+        4641642558,
+        4641642557,
+        4641642562
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2023-05-24T19:26:49Z",
+      "type": "way",
+      "uid": 769836,
+      "user": "jenskroener",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.8481712,
+        "lon": -5.0914827
+      },
+      "changeset": 170900561,
+      "id": 504457264,
+      "nodes": [
+        4946179956,
+        4946179957,
+        4946179958,
+        4946179959,
+        4946179956
+      ],
+      "tags": {
+        "access": "watermate_key",
+        "amenity": "toilets",
+        "building": "yes",
+        "operator": "Scottish Waterways",
+        "unisex": "yes"
+      },
+      "timestamp": "2025-08-23T21:23:40Z",
+      "type": "way",
+      "uid": 10891833,
+      "user": "Va\u00efnamo\u00efnen",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.839411,
+        "lon": -5.1060662
+      },
+      "changeset": 54095253,
+      "id": 542920054,
+      "nodes": [
+        5248703843,
+        5248703794,
+        5248703799,
+        5248703782,
+        5248703806,
+        5248703820,
+        5248703843
+      ],
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2017-11-26T13:31:43Z",
+      "type": "way",
+      "uid": 84263,
+      "user": "Robert Whittaker",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8385861,
+        "lon": -5.1084698
+      },
+      "changeset": 91685022,
+      "id": 542920063,
+      "nodes": [
+        5248703846,
+        5248703819,
+        5248703847,
+        5248703796,
+        5248703778,
+        5248703842,
+        5248703846
+      ],
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      },
+      "timestamp": "2020-09-29T06:57:59Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8379424,
+        "lon": -5.1059782
+      },
+      "changeset": 153982340,
+      "id": 645025870,
+      "nodes": [
+        471787268,
+        12055671426,
+        6064447672,
+        6064447673,
+        6064447674,
+        471787268
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2024-07-15T17:14:14Z",
+      "type": "way",
+      "uid": 36934,
+      "user": "phoo",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8381129,
+        "lon": -5.1059629
+      },
+      "changeset": 168927270,
+      "id": 645025872,
+      "nodes": [
+        6064447676,
+        6064447677,
+        6064447678,
+        6064447679,
+        6064447676
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "check_date": "2025-07-14",
+        "check_date:opening_hours": "2025-07-14",
+        "check_date:wheelchair": "2025-07-14",
+        "fee": "no",
+        "opening_hours": "Mo-Sa 08:00-17:00; Su 08:00-16:00",
+        "wheelchair": "yes"
+      },
+      "timestamp": "2025-07-14T16:55:02Z",
+      "type": "way",
+      "uid": 22962173,
+      "user": "Mercata",
+      "version": 5
+    },
+    {
+      "center": {
+        "lat": 56.8161366,
+        "lon": -5.0792767
+      },
+      "changeset": 171079042,
+      "id": 684904190,
+      "nodes": [
+        6417297980,
+        6417297981,
+        6417297982,
+        6417297983,
+        6417297984,
+        6417298385,
+        6417298386,
+        6417298387,
+        6417298388,
+        6417298389,
+        6417298390,
+        6417298391,
+        6417298392,
+        6417298393,
+        6417298394,
+        6417298395,
+        6417298396,
+        6417298397,
+        6417298398,
+        6417297980
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "description": "\u00a33/day",
+        "fee": "yes",
+        "name": "Braveheart Car Park",
+        "operator": "Forestry Commision Scotland",
+        "operator:type": "government",
+        "parking": "surface"
+      },
+      "timestamp": "2025-08-27T12:45:38Z",
+      "type": "way",
+      "uid": 2640898,
+      "user": "tkeats",
+      "version": 6
+    },
+    {
+      "center": {
+        "lat": 56.8239684,
+        "lon": -5.090514
+      },
+      "changeset": 179291829,
+      "id": 753114225,
+      "nodes": [
+        6651920141,
+        7036925004,
+        7036925005,
+        7036925006,
+        6651920141
+      ],
+      "tags": {
+        "addr:city": "Fort William",
+        "addr:postcode": "PH33 6SU",
+        "addr:street": "North Road",
+        "amenity": "cafe",
+        "brand": "Costa",
+        "brand:wikidata": "Q608845",
+        "brand:wikipedia": "en:Costa Coffee",
+        "building": "retail",
+        "cuisine": "coffee_shop",
+        "drive_through": "yes",
+        "fhrs:id": "1035965",
+        "name": "Costa",
+        "source:addr": "FHRS Open Data",
+        "takeaway": "yes"
+      },
+      "timestamp": "2026-03-03T09:30:44Z",
+      "type": "way",
+      "uid": 6871,
+      "user": "smsm1",
+      "version": 3
+    },
+    {
+      "center": {
+        "lat": 56.8223128,
+        "lon": -5.0946583
+      },
+      "changeset": 156733741,
+      "id": 833781361,
+      "nodes": [
+        7783338500,
+        7783338501,
+        7783338502,
+        7783338503,
+        7783338500
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "capacity": "20",
+        "parking": "surface"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8219857,
+        "lon": -5.0945877
+      },
+      "changeset": 156733741,
+      "id": 833781362,
+      "nodes": [
+        7783338504,
+        7783338505,
+        7783338506,
+        7783338507,
+        7783338504
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "capacity": "6"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.843037,
+        "lon": -5.0978549
+      },
+      "changeset": 156733741,
+      "id": 833820900,
+      "nodes": [
+        7783707756,
+        7783707757,
+        7783707758,
+        7783707759,
+        7783707756
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8429901,
+        "lon": -5.0981874
+      },
+      "changeset": 156733741,
+      "id": 833820901,
+      "nodes": [
+        7783707760,
+        7783707761,
+        7783707762,
+        7783707763,
+        7783707764,
+        7783707765,
+        7783707766,
+        7783707767,
+        7783707768,
+        7783707769,
+        7783707760
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8412392,
+        "lon": -5.0953627
+      },
+      "changeset": 156733741,
+      "id": 833820905,
+      "nodes": [
+        7783707782,
+        7783707783,
+        7783707784,
+        7783707785,
+        7783707786,
+        7783707782
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8375823,
+        "lon": -5.0940094
+      },
+      "changeset": 89568586,
+      "id": 838168126,
+      "nodes": [
+        7822755753,
+        7822755754,
+        7822755755,
+        7822755756,
+        3765021740,
+        7822755753
+      ],
+      "tags": {
+        "amenity": "parking",
+        "capacity": "3",
+        "parking": "surface"
+      },
+      "timestamp": "2020-08-18T10:33:43Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8375161,
+        "lon": -5.0941183
+      },
+      "changeset": 89568586,
+      "id": 838168127,
+      "nodes": [
+        7822755757,
+        7822755758,
+        7822755759,
+        7822755760,
+        7822755757
+      ],
+      "tags": {
+        "amenity": "parking",
+        "capacity": "3",
+        "parking": "surface"
+      },
+      "timestamp": "2020-08-18T10:33:43Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8373965,
+        "lon": -5.0942079
+      },
+      "changeset": 156733741,
+      "id": 838168128,
+      "nodes": [
+        7822755761,
+        7822755762,
+        7822755763,
+        7822755764,
+        7822755765,
+        7822755766,
+        7822755767,
+        7822755768,
+        7822755769,
+        7822755770,
+        7822755771,
+        7822755772,
+        7822755773,
+        7822755774,
+        7822755775,
+        7822755776,
+        7822755777,
+        7822755778,
+        7822755761
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8372748,
+        "lon": -5.0945443
+      },
+      "changeset": 156733741,
+      "id": 838168129,
+      "nodes": [
+        7822755779,
+        7822790799,
+        7822790800,
+        7822755780,
+        7822755781,
+        7822755782,
+        7822755783,
+        7822755784,
+        7822790785,
+        7822790786,
+        7822790787,
+        7822790788,
+        7822790797,
+        7822790789,
+        7822790798,
+        7822790790,
+        7822790791,
+        7822790792,
+        7822790793,
+        7822790794,
+        7822790795,
+        7822790796,
+        7822790801,
+        7822755779
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8377227,
+        "lon": -5.0968876
+      },
+      "changeset": 89618608,
+      "id": 838470629,
+      "nodes": [
+        7825356344,
+        7825356345,
+        7825356346,
+        7825356347,
+        7825356344
+      ],
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2020-08-19T08:18:13Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8382639,
+        "lon": -5.0988713
+      },
+      "changeset": 89618608,
+      "id": 838470649,
+      "nodes": [
+        7825356570,
+        7825356571,
+        7825356572,
+        7825356573,
+        7825356570
+      ],
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2020-08-19T08:18:13Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8387611,
+        "lon": -5.1021002
+      },
+      "changeset": 156733741,
+      "id": 850416855,
+      "nodes": [
+        7933861555,
+        7933861556,
+        7933861557,
+        7933861558,
+        7933861555
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8388265,
+        "lon": -5.1025419
+      },
+      "changeset": 156733741,
+      "id": 850416856,
+      "nodes": [
+        7933861559,
+        7933861560,
+        7933861561,
+        7933861562,
+        7933861559
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8393063,
+        "lon": -5.1026314
+      },
+      "changeset": 91351392,
+      "id": 850416866,
+      "nodes": [
+        7933870023,
+        7933870024,
+        7933870025,
+        7933870026,
+        7933870023
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T08:52:45Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8398373,
+        "lon": -5.10293
+      },
+      "changeset": 91351392,
+      "id": 850416867,
+      "nodes": [
+        7933870027,
+        7933870028,
+        7933870029,
+        7933870030,
+        7933870031,
+        7933870032,
+        7933870033,
+        7933870034,
+        7933870027
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T08:52:45Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8402471,
+        "lon": -5.1015557
+      },
+      "changeset": 91352175,
+      "id": 850419623,
+      "nodes": [
+        7933872045,
+        7933872046,
+        7933872047,
+        7933872048,
+        7933872045
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T09:02:24Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8397825,
+        "lon": -5.100647
+      },
+      "changeset": 91352175,
+      "id": 850419624,
+      "nodes": [
+        7933872049,
+        7933872050,
+        7933872051,
+        7933872052,
+        7933872049
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T09:02:24Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8392614,
+        "lon": -5.1000943
+      },
+      "changeset": 156733741,
+      "id": 850419625,
+      "nodes": [
+        7933872053,
+        7933872054,
+        7933872055,
+        7933872056,
+        7933872053
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8389318,
+        "lon": -5.1011077
+      },
+      "changeset": 156733741,
+      "id": 850419626,
+      "nodes": [
+        7933872057,
+        7933872058,
+        7933872059,
+        7933872060,
+        7933872057
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8390847,
+        "lon": -5.1010782
+      },
+      "changeset": 156733741,
+      "id": 850419627,
+      "nodes": [
+        7933872061,
+        7933872062,
+        7933872063,
+        7933872064,
+        7933872065,
+        7933872066,
+        7933872067,
+        7933872068,
+        7933872061
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8404948,
+        "lon": -5.1020828
+      },
+      "changeset": 156733741,
+      "id": 850419628,
+      "nodes": [
+        7933872069,
+        7933872070,
+        7933872071,
+        7933872072,
+        7933872069
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8406271,
+        "lon": -5.1014486
+      },
+      "changeset": 156733741,
+      "id": 850419631,
+      "nodes": [
+        7933894789,
+        7933894790,
+        10023761734,
+        7933894791,
+        7933894792,
+        7933894789
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 3
+    },
+    {
+      "center": {
+        "lat": 56.8410549,
+        "lon": -5.1010671
+      },
+      "changeset": 91352175,
+      "id": 850419632,
+      "nodes": [
+        7933894793,
+        7933894794,
+        7933894795,
+        7933894796,
+        7933894793
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T09:02:24Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.840575,
+        "lon": -5.1001729
+      },
+      "changeset": 156733741,
+      "id": 850419633,
+      "nodes": [
+        7933894797,
+        7933894798,
+        7933894799,
+        7933894800,
+        7933894797
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8409063,
+        "lon": -5.0992734
+      },
+      "changeset": 156733741,
+      "id": 850419634,
+      "nodes": [
+        7933894801,
+        7933894802,
+        7933894803,
+        7933894804,
+        7933894801
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8412935,
+        "lon": -5.1030516
+      },
+      "changeset": 91352175,
+      "id": 850419644,
+      "nodes": [
+        7933894853,
+        7933894854,
+        7933894855,
+        7933894856,
+        7933894853
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-23T09:02:24Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8408161,
+        "lon": -5.1044478
+      },
+      "changeset": 146562421,
+      "id": 850744242,
+      "nodes": [
+        7936557662,
+        7936557663,
+        7936557667,
+        7936557664,
+        7936557665,
+        7936557662
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2024-01-22T17:09:19Z",
+      "type": "way",
+      "uid": 705850,
+      "user": "Cebderby",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8377808,
+        "lon": -5.1031012
+      },
+      "changeset": 156733741,
+      "id": 850746801,
+      "nodes": [
+        7936581388,
+        7936581389,
+        7936581390,
+        7936581391,
+        7936581392,
+        7936581393,
+        7936581394,
+        7936581388
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8380285,
+        "lon": -5.1035172
+      },
+      "changeset": 156733741,
+      "id": 850746802,
+      "nodes": [
+        7936581395,
+        7936581396,
+        7936581397,
+        7936581398,
+        7936581399,
+        7936581400,
+        7936581401,
+        7936581402,
+        7936581395
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8369637,
+        "lon": -5.1015498
+      },
+      "changeset": 91409440,
+      "id": 850746803,
+      "nodes": [
+        7936581403,
+        7936581404,
+        7936581405,
+        7936581406,
+        7936581407,
+        7936581408,
+        7936581409,
+        7936581410,
+        7936581403
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-24T06:33:27Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8367083,
+        "lon": -5.1010938
+      },
+      "changeset": 91409440,
+      "id": 850746804,
+      "nodes": [
+        7936581411,
+        7936581412,
+        7936581413,
+        7936581414,
+        7936581415,
+        7936581416,
+        7936581417,
+        7936581411
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-24T06:33:27Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.843642,
+        "lon": -5.0965476
+      },
+      "changeset": 91685899,
+      "id": 852621618,
+      "nodes": [
+        7953581393,
+        7953581394,
+        7953581395,
+        7953581396,
+        7953581397,
+        7953581398,
+        7953581399,
+        7953581400,
+        7953581401,
+        7953581402,
+        7953581403,
+        7953581404,
+        7953581405,
+        7953581406,
+        7953581407,
+        7953581408,
+        7953581409,
+        7953581410,
+        7953581411,
+        7953581412,
+        7953581393
+      ],
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-29T07:09:33Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8405992,
+        "lon": -5.0751181
+      },
+      "changeset": 100543571,
+      "id": 852630741,
+      "nodes": [
+        7953661347,
+        7953661348,
+        7953661349,
+        7953661350,
+        7953661347
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2021-03-06T16:25:45Z",
+      "type": "way",
+      "uid": 1983103,
+      "user": "Jorisbo",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8404788,
+        "lon": -5.0742836
+      },
+      "changeset": 100543564,
+      "id": 852630742,
+      "nodes": [
+        7953661351,
+        7953661352,
+        7953661353,
+        7953661354,
+        7953661351
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2021-03-06T16:25:37Z",
+      "type": "way",
+      "uid": 1983103,
+      "user": "Jorisbo",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8406678,
+        "lon": -5.0726448
+      },
+      "changeset": 91688662,
+      "id": 852630758,
+      "nodes": [
+        7953679948,
+        7953679949,
+        7953679950,
+        7953679951,
+        7953679952,
+        7953679948
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-29T07:49:39Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8397547,
+        "lon": -5.0726949
+      },
+      "changeset": 91688662,
+      "id": 852630759,
+      "nodes": [
+        7953679953,
+        7953679954,
+        7953679955,
+        7953679956,
+        7953679953
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-29T07:49:39Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8397335,
+        "lon": -5.0784639
+      },
+      "changeset": 156733741,
+      "id": 852634409,
+      "nodes": [
+        7953713299,
+        7953713300,
+        7953713301,
+        7953713302,
+        9947727272,
+        7953713304,
+        7953713305,
+        7953713306,
+        7953713307,
+        7953713308,
+        7953713299
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 3
+    },
+    {
+      "center": {
+        "lat": 56.8384349,
+        "lon": -5.0774153
+      },
+      "changeset": 156733741,
+      "id": 852634410,
+      "nodes": [
+        7953713309,
+        7953713310,
+        7953713314,
+        7953713311,
+        7953713312,
+        7953713313,
+        7953713309
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8359112,
+        "lon": -5.0784306
+      },
+      "changeset": 91691080,
+      "id": 852640622,
+      "nodes": [
+        7953785564,
+        7953785565,
+        7953785566,
+        7953785567,
+        7953785568,
+        7953785569,
+        7953785570,
+        7953785571,
+        7953785572,
+        7953785573,
+        7953785575,
+        7953785576,
+        7953785577,
+        7953785578,
+        7953785579,
+        7953785580,
+        7953785581,
+        7953785582,
+        7953785564
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-29T08:28:57Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8463481,
+        "lon": -5.0947824
+      },
+      "changeset": 91750709,
+      "id": 853206406,
+      "nodes": [
+        7958753414,
+        7958753415,
+        7958753416,
+        7958753417,
+        7958753418,
+        7958753419,
+        7958753420,
+        7958753414
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-30T07:35:21Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8465385,
+        "lon": -5.0980976
+      },
+      "changeset": 156733741,
+      "id": 853215715,
+      "nodes": [
+        7958818665,
+        7958818666,
+        7958818667,
+        7958818668,
+        7958818669,
+        7958818670,
+        7958818665
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8460523,
+        "lon": -5.0955319
+      },
+      "changeset": 91753451,
+      "id": 853219152,
+      "nodes": [
+        7958885011,
+        7958885012,
+        7958885013,
+        7958885014,
+        7958885015,
+        7958885016,
+        7958885017,
+        7958885011
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2020-09-30T08:19:22Z",
+      "type": "way",
+      "uid": 3401262,
+      "user": "Zathikatzer",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8423833,
+        "lon": -5.1090995
+      },
+      "changeset": 156733741,
+      "id": 870729277,
+      "nodes": [
+        8111189486,
+        5456468316,
+        8111189487,
+        8111189488,
+        8111189489,
+        8111189486
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8428559,
+        "lon": -5.1111835
+      },
+      "changeset": 156733741,
+      "id": 870729289,
+      "nodes": [
+        8111199135,
+        8111199136,
+        8111199137,
+        8111199138,
+        8111199139,
+        8111199135
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      },
+      "timestamp": "2024-09-17T14:58:09Z",
+      "type": "way",
+      "uid": 4864754,
+      "user": "mapbear66",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8439979,
+        "lon": -5.1175934
+      },
+      "changeset": 112847871,
+      "id": 995624559,
+      "nodes": [
+        9193643810,
+        9193643809,
+        9193643804,
+        9193643808,
+        9193643812,
+        9193712923,
+        9193643807,
+        9193643805,
+        9193643810
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "operator": "Mansefield House"
+      },
+      "timestamp": "2021-10-22T17:01:51Z",
+      "type": "way",
+      "uid": 521541,
+      "user": "domob",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.832017,
+        "lon": -5.0817157
+      },
+      "changeset": 141823626,
+      "id": 1153897817,
+      "nodes": [
+        10731538922,
+        10731538923,
+        10731538924,
+        10731538925,
+        10731538926,
+        10731538927,
+        10731538922
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "covered": "no",
+        "fee": "no",
+        "park_ride": "no",
+        "parking": "lane",
+        "supervised": "no",
+        "surface": "asphalt"
+      },
+      "timestamp": "2023-09-27T14:46:50Z",
+      "type": "way",
+      "uid": 873469,
+      "user": "R3gi",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 56.8366628,
+        "lon": -5.1038527
+      },
+      "changeset": 153990253,
+      "id": 1301624431,
+      "nodes": [
+        12056179589,
+        12056179586,
+        12056179587,
+        12056179588,
+        12056179589
+      ],
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2024-07-15T21:25:41Z",
+      "type": "way",
+      "uid": 36934,
+      "user": "phoo",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8241934,
+        "lon": -5.0872247
+      },
+      "changeset": 154862706,
+      "id": 1305790058,
+      "nodes": [
+        12093911831,
+        12093911832,
+        12093911833,
+        12093911834,
+        12093911831
+      ],
+      "tags": {
+        "amenity": "parking"
+      },
+      "timestamp": "2024-08-05T18:03:02Z",
+      "type": "way",
+      "uid": 16721418,
+      "user": "SmithyScotland",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 56.8438306,
+        "lon": -5.0959116
+      },
+      "changeset": 116605506,
+      "id": 13722082,
+      "members": [
+        {
+          "ref": 26530416,
+          "role": "label",
+          "type": "node"
+        },
+        {
+          "ref": 239118644,
+          "role": "",
+          "type": "way"
+        }
+      ],
+      "tags": {
+        "name": "Banavie",
+        "name:gd": "Banbhaidh",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      },
+      "timestamp": "2022-01-26T00:00:34Z",
+      "type": "relation",
+      "uid": 3970216,
+      "user": "Railwayfan2005",
+      "version": 1
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-07-05T09:58:36Z"
+  },
+  "version": 0.6
+}

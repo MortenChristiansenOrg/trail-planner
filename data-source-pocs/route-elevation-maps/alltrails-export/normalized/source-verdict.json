@@ -1,0 +1,7 @@
+{
+  "source": "alltrails_export",
+  "verdict": "manual_only",
+  "mvp_role": "User-supplied GPX/KML/FIT/TCX evidence and route URL only.",
+  "confidence": "medium",
+  "next_step": "Document manual import flow and required provenance fields."
+}

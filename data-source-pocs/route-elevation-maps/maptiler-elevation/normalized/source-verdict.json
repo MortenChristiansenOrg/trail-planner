@@ -1,0 +1,7 @@
+{
+  "source": "maptiler_elevation",
+  "verdict": "blocked",
+  "mvp_role": "Hosted elevation if MapTiler is selected for maps.",
+  "confidence": "medium",
+  "next_step": "Run key-gated point and LineString elevation samples after account/plan approval."
+}

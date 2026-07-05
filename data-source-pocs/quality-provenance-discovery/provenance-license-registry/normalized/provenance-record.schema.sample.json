@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "record": {
+    "evidence_id": "string",
+    "entity_id": "string",
+    "entity_type": "route|poi|media|quality_signal|transport_segment|lodging|alert",
+    "source_id": "string",
+    "source_record_id": "string|null",
+    "source_url": "string",
+    "terms_url": "string",
+    "license_id": "string|null",
+    "retrieved_at": "date-time",
+    "source_last_modified_at": "date-time|null",
+    "query": {},
+    "fields_used": ["string"],
+    "transformation": "raw|normalized|derived|manual_curation",
+    "confidence": "high|medium|low|sample",
+    "attribution_text": "string",
+    "attribution_url": "string|null",
+    "display_required": true,
+    "refresh_policy": "live|daily|weekly|seasonal|manual_review",
+    "notes": "string"
+  }
+}

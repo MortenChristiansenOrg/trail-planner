@@ -1,0 +1,1143 @@
+{
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "case": "besseggen",
+  "confidence": "sample",
+  "feature_count": 64,
+  "features": [
+    {
+      "category": "alpine_hut",
+      "coordinates": [
+        8.8529721,
+        61.5146226
+      ],
+      "id": "osm-node-844080404",
+      "last_osm_timestamp": "2022-05-20T03:32:59Z",
+      "name": "Bessheim Fjellstue",
+      "osm_id": 844080404,
+      "osm_type": "node",
+      "tags": {
+        "capacity": "150",
+        "dnt:classification": "betjent",
+        "dnt:discount": "yes",
+        "dnt:iid": "1117",
+        "ele": "965",
+        "name": "Bessheim Fjellstue",
+        "network": "Den Norske Turistforening",
+        "service": "full",
+        "source:date": "2011-06-18 16:11:58",
+        "tourism": "alpine_hut",
+        "website": "https://ut.no/hytte/bessheim-fjellstue-og-hytter"
+      }
+    },
+    {
+      "category": "alpine_hut",
+      "coordinates": [
+        8.8126376,
+        61.4943459
+      ],
+      "id": "osm-node-791106132",
+      "last_osm_timestamp": "2025-08-20T17:28:19Z",
+      "name": "Gjendesheim",
+      "osm_id": 791106132,
+      "osm_type": "node",
+      "tags": {
+        "capacity": "185",
+        "dnt:classification": "betjent",
+        "dnt:iid": "37",
+        "dnt:lock": "yes",
+        "ele": "994",
+        "name": "Gjendesheim",
+        "network": "Den Norske Turistforening",
+        "operator": "DNT Oslo og Omegn",
+        "power_supply": "yes",
+        "ref:kartverket:hytte": "1070",
+        "service": "full",
+        "shower": "yes",
+        "source:date": "2011-06-18 16:13:34",
+        "supervisor": "DNT Oslo og Omegn",
+        "tourism": "alpine_hut",
+        "website": "https://ut.no/hytte/gjendesheim",
+        "wikidata": "Q1528912",
+        "wikipedia": "en:Gjendesheim"
+      }
+    },
+    {
+      "category": "alpine_hut",
+      "coordinates": [
+        8.8435187,
+        61.4888347
+      ],
+      "id": "osm-node-1356458541",
+      "last_osm_timestamp": "2021-07-08T20:33:34Z",
+      "name": "Maurvangen camping",
+      "osm_id": 1356458541,
+      "osm_type": "node",
+      "tags": {
+        "camp_site": "reception",
+        "dnt:classification": "betjent",
+        "dnt:iid": "1243",
+        "name": "Maurvangen camping",
+        "network": "Den Norske Turistforening",
+        "service": "full",
+        "source": "Den Norske Turistforening",
+        "source:date": "2011-06-07 15:28:16",
+        "tourism": "alpine_hut",
+        "website": "https://www.maurvangen.no/de/camping/"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        8.8092408,
+        61.4953887
+      ],
+      "id": "osm-node-12190044751",
+      "last_osm_timestamp": "2025-08-20T13:02:58Z",
+      "name": "Cafe Gjendeosen",
+      "osm_id": 12190044751,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "cafe",
+        "indoor_seating": "yes",
+        "name": "Cafe Gjendeosen",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "category": "camp_site",
+      "coordinates": [
+        8.8455658,
+        61.4889256
+      ],
+      "id": "osm-way-199805838",
+      "last_osm_timestamp": "2026-05-20T06:36:37Z",
+      "name": "Besseggen Fjellpark AS",
+      "osm_id": 199805838,
+      "osm_type": "way",
+      "tags": {
+        "area": "yes",
+        "email": "post@maurvangen.no",
+        "fax": "+47 61 23 89 58",
+        "name": "Besseggen Fjellpark AS",
+        "phone": "+47 61 23 89 22",
+        "tourism": "camp_site",
+        "website": "https://www.maurvangen.no/"
+      }
+    },
+    {
+      "category": "camp_site",
+      "coordinates": [
+        8.853029,
+        61.514363
+      ],
+      "id": "osm-node-3663314269",
+      "last_osm_timestamp": "2024-03-09T18:03:50Z",
+      "name": "Bessheim Fjellstue og Hytter",
+      "osm_id": 3663314269,
+      "osm_type": "node",
+      "tags": {
+        "name": "Bessheim Fjellstue og Hytter",
+        "phone": "+47 61 23 89 13",
+        "tourism": "camp_site",
+        "website": "https://bessheim.no/"
+      }
+    },
+    {
+      "category": "ferry_terminal",
+      "coordinates": [
+        8.8090267,
+        61.4949733
+      ],
+      "id": "osm-node-285939270",
+      "last_osm_timestamp": "2013-01-06T15:03:18Z",
+      "name": "Gjendesheim",
+      "osm_id": 285939270,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "ferry_terminal",
+        "name": "Gjendesheim"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8443905,
+        61.4899223
+      ],
+      "id": "osm-node-2098037594",
+      "last_osm_timestamp": "2013-01-06T14:12:37Z",
+      "name": null,
+      "osm_id": 2098037594,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7691786,
+        61.5068373
+      ],
+      "id": "osm-node-285929378",
+      "last_osm_timestamp": "2022-01-04T21:51:37Z",
+      "name": null,
+      "osm_id": 285929378,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8274578,
+        61.4929736
+      ],
+      "id": "osm-node-4081401537",
+      "last_osm_timestamp": "2016-03-27T16:21:58Z",
+      "name": null,
+      "osm_id": 4081401537,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8151235,
+        61.4933646
+      ],
+      "id": "osm-node-4081401538",
+      "last_osm_timestamp": "2016-03-27T16:21:58Z",
+      "name": null,
+      "osm_id": 4081401538,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8260595,
+        61.498493
+      ],
+      "id": "osm-node-4081401542",
+      "last_osm_timestamp": "2016-03-27T16:21:58Z",
+      "name": null,
+      "osm_id": 4081401542,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8244207,
+        61.5156223
+      ],
+      "id": "osm-node-4081401550",
+      "last_osm_timestamp": "2016-03-27T16:21:59Z",
+      "name": null,
+      "osm_id": 4081401550,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7816714,
+        61.466594
+      ],
+      "id": "osm-node-811367821",
+      "last_osm_timestamp": "2010-07-11T13:00:50Z",
+      "name": null,
+      "osm_id": 811367821,
+      "osm_type": "node",
+      "tags": {
+        "ele": "1098",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7693597,
+        61.5068601
+      ],
+      "id": "osm-node-811369179",
+      "last_osm_timestamp": "2022-01-04T21:51:37Z",
+      "name": null,
+      "osm_id": 811369179,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7937142,
+        61.4651558
+      ],
+      "id": "osm-node-811369311",
+      "last_osm_timestamp": "2010-08-03T14:41:48Z",
+      "name": null,
+      "osm_id": 811369311,
+      "osm_type": "node",
+      "tags": {
+        "ele": "1112",
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8022399,
+        61.4647926
+      ],
+      "id": "osm-node-811369427",
+      "last_osm_timestamp": "2010-07-11T13:01:22Z",
+      "name": null,
+      "osm_id": 811369427,
+      "osm_type": "node",
+      "tags": {
+        "ele": "1083",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8149646,
+        61.4791203
+      ],
+      "id": "osm-node-811369749",
+      "last_osm_timestamp": "2018-04-21T16:34:07Z",
+      "name": null,
+      "osm_id": 811369749,
+      "osm_type": "node",
+      "tags": {
+        "ele": "988",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8207429,
+        61.4957766
+      ],
+      "id": "osm-node-811370122",
+      "last_osm_timestamp": "2010-07-11T13:01:35Z",
+      "name": null,
+      "osm_id": 811370122,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8141815,
+        61.4964532
+      ],
+      "id": "osm-node-811370130",
+      "last_osm_timestamp": "2022-01-04T21:51:37Z",
+      "name": null,
+      "osm_id": 811370130,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8220208,
+        61.4961509
+      ],
+      "id": "osm-node-811370148",
+      "last_osm_timestamp": "2010-07-11T13:01:36Z",
+      "name": null,
+      "osm_id": 811370148,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8101264,
+        61.5220537
+      ],
+      "id": "osm-node-811370358",
+      "last_osm_timestamp": "2011-08-11T23:25:33Z",
+      "name": null,
+      "osm_id": 811370358,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8134578,
+        61.503186
+      ],
+      "id": "osm-node-811370396",
+      "last_osm_timestamp": "2022-01-04T21:51:37Z",
+      "name": null,
+      "osm_id": 811370396,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8465298,
+        61.4895039
+      ],
+      "id": "osm-node-811370646",
+      "last_osm_timestamp": "2018-04-21T16:34:07Z",
+      "name": null,
+      "osm_id": 811370646,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8516341,
+        61.5149172
+      ],
+      "id": "osm-node-844079871",
+      "last_osm_timestamp": "2010-08-02T20:25:17Z",
+      "name": null,
+      "osm_id": 844079871,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8527207,
+        61.5143318
+      ],
+      "id": "osm-node-844080105",
+      "last_osm_timestamp": "2010-08-02T20:25:25Z",
+      "name": null,
+      "osm_id": 844080105,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8215665,
+        61.5256134
+      ],
+      "id": "osm-node-844080171",
+      "last_osm_timestamp": "2010-10-28T22:54:53Z",
+      "name": null,
+      "osm_id": 844080171,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8102174,
+        61.5251517
+      ],
+      "id": "osm-node-844080329",
+      "last_osm_timestamp": "2011-08-11T23:25:35Z",
+      "name": null,
+      "osm_id": 844080329,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.83287,
+        61.4867166
+      ],
+      "id": "osm-node-844102764",
+      "last_osm_timestamp": "2013-01-06T15:03:21Z",
+      "name": null,
+      "osm_id": 844102764,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8123133,
+        61.4946008
+      ],
+      "id": "osm-node-844102836",
+      "last_osm_timestamp": "2010-08-02T20:49:46Z",
+      "name": null,
+      "osm_id": 844102836,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8024158,
+        61.4648494
+      ],
+      "id": "osm-node-844887774",
+      "last_osm_timestamp": "2010-08-03T14:41:03Z",
+      "name": null,
+      "osm_id": 844887774,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7920148,
+        61.4660661
+      ],
+      "id": "osm-node-845143218",
+      "last_osm_timestamp": "2010-08-03T18:36:14Z",
+      "name": null,
+      "osm_id": 845143218,
+      "osm_type": "node",
+      "tags": {
+        "board_type": "notice",
+        "information": "board",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.8172298,
+        61.5324054
+      ],
+      "id": "osm-node-876957979",
+      "last_osm_timestamp": "2011-08-11T23:25:43Z",
+      "name": null,
+      "osm_id": 876957979,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.7741575,
+        61.4977552
+      ],
+      "id": "osm-node-8828141047",
+      "last_osm_timestamp": "2021-06-12T20:30:17Z",
+      "name": null,
+      "osm_id": 8828141047,
+      "osm_type": "node",
+      "tags": {
+        "hiking": "yes",
+        "information": "board",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        8.832126,
+        61.4865663
+      ],
+      "id": "osm-node-8828211046",
+      "last_osm_timestamp": "2021-06-12T20:14:26Z",
+      "name": null,
+      "osm_id": 8828211046,
+      "osm_type": "node",
+      "tags": {
+        "information": "board",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8429078,
+        61.4926803
+      ],
+      "id": "osm-node-2098140876",
+      "last_osm_timestamp": "2013-01-06T15:02:49Z",
+      "name": null,
+      "osm_id": 2098140876,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8263055,
+        61.4886472
+      ],
+      "id": "osm-node-9801917312",
+      "last_osm_timestamp": "2022-06-07T15:08:16Z",
+      "name": null,
+      "osm_id": 9801917312,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes",
+        "parking": "surface",
+        "ski": "yes"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8059285,
+        61.4552084
+      ],
+      "id": "osm-node-9801917313",
+      "last_osm_timestamp": "2022-06-07T15:08:16Z",
+      "name": null,
+      "osm_id": 9801917313,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8137668,
+        61.4934394
+      ],
+      "id": "osm-way-38080642",
+      "last_osm_timestamp": "2022-06-07T15:08:16Z",
+      "name": null,
+      "osm_id": 38080642,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "fee": "yes",
+        "hiking": "yes",
+        "parking": "surface",
+        "ski": "yes"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8535061,
+        61.5146101
+      ],
+      "id": "osm-way-443857989",
+      "last_osm_timestamp": "2016-09-22T20:42:06Z",
+      "name": null,
+      "osm_id": 443857989,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8342661,
+        61.4877856
+      ],
+      "id": "osm-way-26303903",
+      "last_osm_timestamp": "2023-08-16T18:51:04Z",
+      "name": "Gjendesheim long-term parking",
+      "osm_id": 26303903,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "capacity": "550",
+        "fee": "yes",
+        "hiking": "yes",
+        "name": "Gjendesheim long-term parking",
+        "parking": "surface",
+        "ski": "yes",
+        "surface": "unpaved"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.810258,
+        61.4948955
+      ],
+      "id": "osm-way-199818237",
+      "last_osm_timestamp": "2024-09-21T15:06:12Z",
+      "name": "Gjendesheim short-term parking",
+      "osm_id": 199818237,
+      "osm_type": "way",
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking",
+        "fee": "yes",
+        "fee:conditional": "no @ stay < 2 hours",
+        "hiking": "yes",
+        "name": "Gjendesheim short-term parking",
+        "parking": "surface",
+        "ski": "yes"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        8.8084809,
+        61.4644883
+      ],
+      "id": "osm-way-70868742",
+      "last_osm_timestamp": "2022-06-07T15:08:16Z",
+      "name": "Vargebakken",
+      "osm_id": 70868742,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "capacity": "20",
+        "capacity:disabled": "no",
+        "capacity:parent": "no",
+        "capacity:women": "no",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Vargebakken",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "shelter",
+      "coordinates": [
+        8.8538844,
+        61.5140061
+      ],
+      "id": "osm-node-844080255",
+      "last_osm_timestamp": "2010-08-02T20:25:30Z",
+      "name": null,
+      "osm_id": 844080255,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "shelter",
+        "fireplace": "yes"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        8.8540021,
+        61.5148495
+      ],
+      "id": "osm-node-11048426287",
+      "last_osm_timestamp": "2023-07-15T18:41:10Z",
+      "name": null,
+      "osm_id": 11048426287,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "toilets"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        8.85306,
+        61.5146349
+      ],
+      "id": "osm-node-5139407242",
+      "last_osm_timestamp": "2023-07-15T18:41:10Z",
+      "name": null,
+      "osm_id": 5139407242,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "toilets"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        8.8326484,
+        61.486404
+      ],
+      "id": "osm-node-8828211045",
+      "last_osm_timestamp": "2021-06-12T20:14:26Z",
+      "name": null,
+      "osm_id": 8828211045,
+      "osm_type": "node",
+      "tags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "fee": "no",
+        "female": "yes",
+        "male": "yes",
+        "unisex": "yes"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        8.8088817,
+        61.5260668
+      ],
+      "id": "osm-way-931695615",
+      "last_osm_timestamp": "2021-04-17T09:18:30Z",
+      "name": null,
+      "osm_id": 931695615,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "toilets",
+        "building": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.8093688,
+        61.4953118
+      ],
+      "id": "osm-node-2098140974",
+      "last_osm_timestamp": "2013-01-06T15:02:50Z",
+      "name": null,
+      "osm_id": 2098140974,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.8324688,
+        61.4864305
+      ],
+      "id": "osm-way-953826528",
+      "last_osm_timestamp": "2021-06-12T20:14:26Z",
+      "name": null,
+      "osm_id": 953826528,
+      "osm_type": "way",
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.854176,
+        61.514703
+      ],
+      "id": "osm-node-10605493297",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Bessheim",
+      "osm_id": 10605493297,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bessheim",
+        "ref:nsrq": "21000"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.854581,
+        61.514761
+      ],
+      "id": "osm-node-10677659892",
+      "last_osm_timestamp": "2023-02-19T06:42:15Z",
+      "name": "Bessheim",
+      "osm_id": 10677659892,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bessheim",
+        "ref:nsrq": "20998"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.811883,
+        61.494645
+      ],
+      "id": "osm-node-10605493296",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Gjendesheim",
+      "osm_id": 10605493296,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheim",
+        "ref:nsrq": "20991"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.838434,
+        61.489404
+      ],
+      "id": "osm-node-10605493298",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Gjendesheimkrysset",
+      "osm_id": 10605493298,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheimkrysset",
+        "ref:nsrq": "21007"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.838581,
+        61.489356
+      ],
+      "id": "osm-node-10605493299",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Gjendesheimkrysset",
+      "osm_id": 10605493299,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheimkrysset",
+        "ref:nsrq": "21006"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.838911,
+        61.487705
+      ],
+      "id": "osm-node-10605493300",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Maurvangen",
+      "osm_id": 10605493300,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Maurvangen",
+        "ref:nsrq": "99994"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.839134,
+        61.487817
+      ],
+      "id": "osm-node-10605493301",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Maurvangen",
+      "osm_id": 10605493301,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Maurvangen",
+        "ref:nsrq": "21011"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.832852,
+        61.48623
+      ],
+      "id": "osm-node-10605499548",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Reinsvangen",
+      "osm_id": 10605499548,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Reinsvangen",
+        "ref:nsrq": "99938"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.83263,
+        61.486161
+      ],
+      "id": "osm-node-10605499549",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Reinsvangen",
+      "osm_id": 10605499549,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Reinsvangen",
+        "ref:nsrq": "99937"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.808691,
+        61.464439
+      ],
+      "id": "osm-node-10605499567",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Vargebakkan",
+      "osm_id": 10605499567,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vargebakkan",
+        "ref:nsrq": "99995"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        8.808503,
+        61.464422
+      ],
+      "id": "osm-node-10605499568",
+      "last_osm_timestamp": "2023-02-04T05:53:44Z",
+      "name": "Vargebakkan",
+      "osm_id": 10605499568,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vargebakkan",
+        "ref:nsrq": "99996"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        8.808209,
+        61.4646001
+      ],
+      "id": "osm-node-844887782",
+      "last_osm_timestamp": "2010-08-03T14:41:03Z",
+      "name": null,
+      "osm_id": 844887782,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        8.7769512,
+        61.5069415
+      ],
+      "id": "osm-node-8827423484",
+      "last_osm_timestamp": "2021-06-12T19:27:37Z",
+      "name": null,
+      "osm_id": 8827423484,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        8.7295466,
+        61.5035885
+      ],
+      "id": "osm-node-8831384027",
+      "last_osm_timestamp": "2021-06-14T08:47:26Z",
+      "name": "Besseggen",
+      "osm_id": 8831384027,
+      "osm_type": "node",
+      "tags": {
+        "direction": "240",
+        "name": "Besseggen",
+        "tourism": "viewpoint"
+      }
+    }
+  ],
+  "freshness": "osm_element_timestamp_when_available",
+  "id": "besseggen-osm-poi-amenities",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "query": {
+    "center": [
+      8.8105,
+      61.4947
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "overpass_ql": "[out:json][timeout:30];\n(\n  nwr(around:4500,61.4947,8.8105)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,61.4947,8.8105)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,61.4947,8.8105)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,61.4947,8.8105)[\"public_transport\"];\n  nwr(around:4500,61.4947,8.8105)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "radius_m": 4500
+  },
+  "retrieved_at": "2026-07-05T09:59:23Z",
+  "source": "openstreetmap_overpass"
+}

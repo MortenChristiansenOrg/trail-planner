@@ -1,0 +1,22 @@
+{
+  "source": "ferry_operator_websites",
+  "checked_at": "2026-07-05",
+  "sources": [
+    {
+      "operator": "Fjord Line",
+      "url": "https://fjordline.com/en/p/our-ferry-routes/hirtshals-kristiansand",
+      "observed": "Public route page states Hirtshals-Kristiansand service, seasonal vessel choices, approximate duration, and peak-season frequency."
+    },
+    {
+      "operator": "Color Line",
+      "url": "https://www.colorline.com/timetable",
+      "observed": "Public timetable/deviation page covers Denmark-Norway routes."
+    },
+    {
+      "operator": "Color Line",
+      "url": "https://www.colorline.com/denmark-norway/ferry-hirtshals-larvik",
+      "observed": "Public route page for Hirtshals-Larvik."
+    }
+  ],
+  "public_api_found": false
+}

@@ -1,0 +1,558 @@
+{
+  "_trail_planner_categorymembers": {
+    "_trail_planner_query": {
+      "endpoint": "https://commons.wikimedia.org/w/api.php",
+      "params": {
+        "action": "query",
+        "cmlimit": "5",
+        "cmtitle": "Category:Trolltunga",
+        "cmtype": "file",
+        "format": "json",
+        "formatversion": "2",
+        "list": "categorymembers"
+      },
+      "retrieved_at": "2026-07-05T10:00:04Z",
+      "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&list=categorymembers&cmtitle=Category%3ATrolltunga&cmtype=file&cmlimit=5"
+    },
+    "batchcomplete": true,
+    "continue": {
+      "cmcontinue": "file|54484520414c47455249414e20464c414720494e2054524f4c4c54554e47412e2e2e204e4f525741592e4a5047|82606179",
+      "continue": "-||"
+    },
+    "query": {
+      "categorymembers": [
+        {
+          "ns": 6,
+          "pageid": 66010966,
+          "title": "File:275. Hardanger, Tyssestrengene - NB bldsa AL0275 (cropped).jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 32657910,
+          "title": "File:275. Hardanger, Tyssestrengene - NB bldsa AL0275.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 73619416,
+          "title": "File:End Of The Day (165707503).jpeg"
+        },
+        {
+          "ns": 6,
+          "pageid": 29007849,
+          "title": "File:Oj her var det h\u00f8yt ned.JPG"
+        },
+        {
+          "ns": 6,
+          "pageid": 70909113,
+          "title": "File:Signs warning tourists about the risk associated with going out to Trolltunga.jpg"
+        }
+      ]
+    }
+  },
+  "_trail_planner_query": {
+    "endpoint": "https://commons.wikimedia.org/w/api.php",
+    "params": {
+      "action": "query",
+      "format": "json",
+      "formatversion": "2",
+      "iiprop": "url|user|dimensions|extmetadata",
+      "iiurlwidth": "400",
+      "prop": "imageinfo",
+      "titles": "File:275. Hardanger, Tyssestrengene - NB bldsa AL0275 (cropped).jpg|File:275. Hardanger, Tyssestrengene - NB bldsa AL0275.jpg|File:End Of The Day (165707503).jpeg|File:Oj her var det h\u00f8yt ned.JPG|File:Signs warning tourists about the risk associated with going out to Trolltunga.jpg"
+    },
+    "retrieved_at": "2026-07-05T10:00:05Z",
+    "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&prop=imageinfo&titles=File%3A275.+Hardanger%2C+Tyssestrengene+-+NB+bldsa+AL0275+%28cropped%29.jpg%7CFile%3A275.+Hardanger%2C+Tyssestrengene+-+NB+bldsa+AL0275.jpg%7CFile%3AEnd+Of+The+Day+%28165707503%29.jpeg%7CFile%3AOj+her+var+det+h%C3%B8yt+ned.JPG%7CFile%3ASigns+warning+tourists+about+the+risk+associated+with+going+out+to+Trolltunga.jpg&iiprop=url%7Cuser%7Cdimensions%7Cextmetadata&iiurlwidth=400"
+  },
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=29007849",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Oj_her_var_det_h%C3%B8yt_ned.JPG",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Knuand\" title=\"User:Knuand\">Knuand</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Taken with Olympus E-3|Ringedalsvatnet|Trolltunga|Self-published work"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2013-10-14 21:02:49"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "1899-11-30"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "On 'Trolltunga', this was airy"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/3.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "Oj her var det h\u00f8yt ned"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 3.0"
+              }
+            },
+            "height": 2736,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Oj_her_var_det_h%C3%B8yt_ned.JPG/960px-Oj_her_var_det_h%C3%B8yt_ned.JPG"
+            },
+            "size": 5369657,
+            "thumbheight": 300,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Oj_her_var_det_h%C3%B8yt_ned.JPG/500px-Oj_her_var_det_h%C3%B8yt_ned.JPG",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Oj_her_var_det_h%C3%B8yt_ned.JPG",
+            "user": "Knuand",
+            "width": 3648
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 29007849,
+        "title": "File:Oj her var det h\u00f8yt ned.JPG"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=32657910",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:275._Hardanger,_Tyssestrengene_-_NB_bldsa_AL0275.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Axel_Lindahl_(photographer)\" class=\"extiw\" title=\"w:en:Axel Lindahl (photographer)\"><span title=\"Swedish photographer (1841-1906)\">Axel Lindahl</span></a></bdi>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "false"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "PD Norway|Trolltunga|Tyssestrengene|Images with extracted images|Images from Nasjonalbiblioteket|Files uploaded by Nasjonalbiblioteket-bot|The Axel Lindahl Collection (Nasjonalbiblioteket)"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "False"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:National_Library_of_Norway\" class=\"extiw\" title=\"w:en:National Library of Norway\"><span title=\"Norwegian national library\">National Library of Norway</span></a>\n</bdi>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2014-05-16 18:42:48"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "between 1880 and 1890<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/7,P1319,+1880-00-00T00:00:00Z/9,P1326,+1890-00-00T00:00:00Z/9</div>"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "*Sted: Tysso\n<ul><li>Kommune: Odda</li>\n<li>Fylke: Hordaland</li></ul>\n<p>Tagger:\n</p>\n<ul><li>Fotografert fra Ringedalsvatnet.</li></ul>\n<p>fosser\n</p>\nlandskapsfotografi"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "pd"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "Public domain"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "275. Hardanger, Tyssestrengene - NB bldsa AL0275"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Public domain"
+              }
+            },
+            "height": 5052,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275.jpg/960px-275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275.jpg"
+            },
+            "size": 3224086,
+            "thumbheight": 294,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275.jpg/500px-275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275.jpg",
+            "user": "Anne-Sophie Ofrim",
+            "width": 6884
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 32657910,
+        "title": "File:275. Hardanger, Tyssestrengene - NB bldsa AL0275.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=66010966",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:275._Hardanger,_Tyssestrengene_-_NB_bldsa_AL0275_(cropped).jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Axel_Lindahl_(photographer)\" class=\"extiw\" title=\"w:en:Axel Lindahl (photographer)\"><span title=\"Swedish photographer (1841-1906)\">Axel Lindahl</span></a></bdi>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "false"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "PD Norway|Trolltunga|Tyssestrengene|Extracted images|Images from Nasjonalbiblioteket|Nasjonalbiblioteket-bot derivative files|The Axel Lindahl Collection (Nasjonalbiblioteket)"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "False"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:National_Library_of_Norway\" class=\"extiw\" title=\"w:en:National Library of Norway\"><span title=\"Norwegian national library\">National Library of Norway</span></a>\n</bdi>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2018-01-31 18:53:09"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "between 1880 and 1890<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/7,P1319,+1880-00-00T00:00:00Z/9,P1326,+1890-00-00T00:00:00Z/9</div>"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "*Sted: Tysso\n<ul><li>Kommune: Odda</li>\n<li>Fylke: Hordaland</li></ul>\n<p>Tagger:\n</p>\n<ul><li>Fotografert fra Ringedalsvatnet.</li></ul>\n<p>fosser\n</p>\nlandskapsfotografi"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "pd"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "Public domain"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "275. Hardanger, Tyssestrengene - NB bldsa AL0275 (cropped)"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Public domain"
+              }
+            },
+            "height": 4735,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275_%28cropped%29.jpg/960px-275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275_%28cropped%29.jpg"
+            },
+            "size": 2652128,
+            "thumbheight": 301,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275_%28cropped%29.jpg/500px-275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275_%28cropped%29.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/275._Hardanger%2C_Tyssestrengene_-_NB_bldsa_AL0275_%28cropped%29.jpg",
+            "user": "Erik den yngre",
+            "width": 6290
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 66010966,
+        "title": "File:275. Hardanger, Tyssestrengene - NB bldsa AL0275 (cropped).jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=70909113",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Frankemann\" title=\"User:Frankemann\">Frankemann</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "quality"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Trolltunga|Self-published work|Signs in Norway|Queues in Norway"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2018-07-16 18:07:28"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2018-07-14 12:30:32"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Trolltunga (Troll tongue) is a rock formation situated about 1,100 metres above sea level in the municipality of Odda in Hordaland county, Norway. On a nice summer day, the queue will be more than 100m. On 5 September 2015, a 24-year-old Australian woman fell to her death off Trolltunga."
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-4.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "Signs warning tourists about the risk associated with going out to Trolltunga"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            },
+            "height": 3264,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg/960px-Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg"
+            },
+            "size": 10067103,
+            "thumbheight": 267,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg/500px-Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Signs_warning_tourists_about_the_risk_associated_with_going_out_to_Trolltunga.jpg",
+            "user": "Frankemann",
+            "width": 4896
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 70909113,
+        "title": "File:Signs warning tourists about the risk associated with going out to Trolltunga.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=73619416",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:End_Of_The_Day_(165707503).jpeg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<div class=\"fn value\">\n<a rel=\"nofollow\" class=\"external text\" href=\"https://500px.com/robinkasan\">Robin Stumm</a></div>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ringedalsvatnet|Trolltunga|Photos imported with import-500px|Sunsets of Vestland"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "Imported from <a rel=\"nofollow\" class=\"external text\" href=\"https://500px.com/photo/165707503/end-of-the-day-by-robin-stumm\">500px</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/201807id_/https://drscdn.500px.org/photo/165707503/m%3D2048/v2?webp=true&amp;sig=c927e1044aec4c0f7084a6518d00aa507dcf621752e17ddf652d71e0e696e3c0\">archived version</a>) by <a rel=\"nofollow\" class=\"external text\" href=\"https://www.archiveteam.org/index.php?title=500px\">the Archive Team</a>. (<a href=\"https://iw.toolforge.org/import-500px/photo/165707503\" class=\"extiw\" title=\"toolforge:import-500px/photo/165707503\">detail page</a>)"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2018-10-15 04:27:00"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "21 July 2016, 01:46:36 (UTC)"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "<div class=\"description\">\n500px provided description: End Of The Day [#sunset ,#north ,#norway ,#norge ,#trolltunga ,#Hardanger]</div>"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by/3.0"
+              },
+              "ObjectName": {
+                "source": "commons-desc-page",
+                "value": "<div class=\"fn\">\nEnd Of The Day</div>"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png\" decoding=\"async\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png\" decoding=\"async\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/3.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/3.0/deed.en\">Attribution 3.0 Unported</a> license.</div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> \u2013 to copy, distribute and transmit the work</li>\n<li><b>to remix</b> \u2013 to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> \u2013 You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/3.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 3.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 3.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution 3.0"
+              }
+            },
+            "height": 1366,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/End_Of_The_Day_%28165707503%29.jpeg/960px-End_Of_The_Day_%28165707503%29.jpeg"
+            },
+            "size": 872747,
+            "thumbheight": 267,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/End_Of_The_Day_%28165707503%29.jpeg/500px-End_Of_The_Day_%28165707503%29.jpeg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/End_Of_The_Day_%28165707503%29.jpeg",
+            "user": "Rodrigo.Argenton",
+            "width": 2048
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 73619416,
+        "title": "File:End Of The Day (165707503).jpeg"
+      }
+    ]
+  }
+}

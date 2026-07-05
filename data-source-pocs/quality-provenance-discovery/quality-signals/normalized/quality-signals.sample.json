@@ -1,0 +1,55 @@
+{
+  "id": "quality-signals-sample-2026-07-05",
+  "source": "derived_manual_and_open_data_signals",
+  "retrieved_at": "2026-07-05T09:56:02Z",
+  "license_or_terms_url": "derived from OSM, Wikimedia Commons metadata, and manual seed source links",
+  "freshness": "manual_review_required",
+  "confidence": "sample",
+  "signals": [
+    {
+      "route_id": "besseggen",
+      "signal_set": {
+        "visual_evidence_available": true,
+        "osm_viewpoints_or_tourism_pois_nearby": true,
+        "named_iconic_feature": true,
+        "ridge_or_arete": true,
+        "water_or_lake_contrast": true,
+        "hut_or_transport_dependency": true,
+        "crowding_or_capacity_risk": "medium"
+      },
+      "subjective_quality_score_0_100": 88,
+      "score_basis": ["manual_quality_tags", "commons_category_sample", "osm_poi_sample"],
+      "explainability": "Strong ridge/lake identity, known official route page, Commons category evidence, and boat/hut logistics that make a dossier useful."
+    },
+    {
+      "route_id": "trolltunga",
+      "signal_set": {
+        "visual_evidence_available": true,
+        "osm_viewpoints_or_tourism_pois_nearby": true,
+        "named_iconic_feature": true,
+        "ridge_or_arete": false,
+        "water_or_lake_contrast": true,
+        "hut_or_transport_dependency": true,
+        "crowding_or_capacity_risk": "high"
+      },
+      "subjective_quality_score_0_100": 84,
+      "score_basis": ["manual_quality_tags", "commons_category_sample", "official_route_page"],
+      "explainability": "Very strong landmark/photo signal and complex logistics; ranking should penalize crowding and parking friction when user preferences require solitude."
+    },
+    {
+      "route_id": "ben-nevis-cmd",
+      "signal_set": {
+        "visual_evidence_available": true,
+        "osm_viewpoints_or_tourism_pois_nearby": true,
+        "named_iconic_feature": true,
+        "ridge_or_arete": true,
+        "water_or_lake_contrast": false,
+        "hut_or_transport_dependency": false,
+        "crowding_or_capacity_risk": "medium"
+      },
+      "subjective_quality_score_0_100": 86,
+      "score_basis": ["manual_quality_tags", "commons_category_sample", "route_specialist_source"],
+      "explainability": "High mountain/arete quality and non-Norway coverage, but safety/weather constraints are more important than amenity density."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "geofabrik",
+  "verdict": "viable_with_limits",
+  "mvp_role": "Batch OSM extract source after Overpass proves tags and route matching.",
+  "confidence": "medium",
+  "next_step": "Download a Norway or smaller regional PBF and extract hiking relations with osmium or pyosmium."
+}

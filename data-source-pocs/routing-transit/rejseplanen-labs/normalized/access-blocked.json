@@ -1,0 +1,13 @@
+{
+  "id": "rejseplanen-labs-access-check",
+  "source": "rejseplanen_labs",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {
+    "required_access": "Rejseplanen Labs registration"
+  },
+  "license_or_terms_url": "https://help.rejseplanen.dk/hc/da/articles/115001346669-Rejseplanen-Labs-API-GTFS-mm",
+  "freshness": "not_queried",
+  "confidence": "access_blocked",
+  "verdict": "blocked",
+  "reason": "Labs account/endpoint details are required before a journey-planning POC can run."
+}

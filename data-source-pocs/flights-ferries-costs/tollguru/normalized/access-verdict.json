@@ -1,0 +1,13 @@
+{
+  "source": "tollguru",
+  "verdict": "viable_with_limits",
+  "mvp_role": "Optional toll/fuel-cost comparison after paid access.",
+  "auth_required": true,
+  "sample_query": {
+    "from": "Aalborg, Denmark",
+    "to": "Gjendesheim, Norway",
+    "vehicle": "2AxlesAuto",
+    "fuel_assumption": "15 DKK/liter and 6-7 l/100km"
+  },
+  "confidence": "medium_until_europe_route_coverage_is_tested"
+}

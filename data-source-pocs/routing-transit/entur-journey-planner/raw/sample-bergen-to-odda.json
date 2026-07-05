@@ -1,0 +1,196 @@
+{
+  "data": {
+    "trip": {
+      "dateTime": "2026-07-15T09:00:00+02:00",
+      "tripPatterns": [
+        {
+          "duration": 13945,
+          "walkDistance": 614.4100000000001,
+          "startTime": "2026-07-15T09:20:20+02:00",
+          "endTime": "2026-07-15T13:12:45+02:00",
+          "legs": [
+            {
+              "mode": "foot",
+              "distance": 160.8,
+              "duration": 160,
+              "expectedStartTime": "2026-07-15T09:20:20+02:00",
+              "expectedEndTime": "2026-07-15T09:23:00+02:00",
+              "fromPlace": {
+                "name": "Bergen busstasjon",
+                "latitude": 60.3894,
+                "longitude": 5.3336
+              },
+              "toPlace": {
+                "name": "Bergen stasjon",
+                "latitude": 60.390124,
+                "longitude": 5.333626
+              },
+              "line": null,
+              "situations": []
+            },
+            {
+              "mode": "rail",
+              "distance": 80772.0,
+              "duration": 5040,
+              "expectedStartTime": "2026-07-15T09:23:00+02:00",
+              "expectedEndTime": "2026-07-15T10:47:00+02:00",
+              "fromPlace": {
+                "name": "Bergen stasjon",
+                "latitude": 60.390124,
+                "longitude": 5.333626
+              },
+              "toPlace": {
+                "name": "Voss stasjon",
+                "latitude": 60.629082,
+                "longitude": 6.409817
+              },
+              "line": {
+                "id": "VYG:Line:R40",
+                "publicCode": "R40",
+                "name": "Bergen-Voss-Myrdal-Ål",
+                "transportMode": "rail",
+                "transportSubmode": "unknown"
+              },
+              "situations": []
+            },
+            {
+              "mode": "foot",
+              "distance": 184.02,
+              "duration": 213,
+              "expectedStartTime": "2026-07-15T10:47:00+02:00",
+              "expectedEndTime": "2026-07-15T10:50:33+02:00",
+              "fromPlace": {
+                "name": "Voss stasjon",
+                "latitude": 60.629082,
+                "longitude": 6.409817
+              },
+              "toPlace": {
+                "name": "Voss stasjon",
+                "latitude": 60.628899,
+                "longitude": 6.411992
+              },
+              "line": null,
+              "situations": []
+            },
+            {
+              "mode": "bus",
+              "distance": 94444.0,
+              "duration": 7140,
+              "expectedStartTime": "2026-07-15T11:10:00+02:00",
+              "expectedEndTime": "2026-07-15T13:09:00+02:00",
+              "fromPlace": {
+                "name": "Voss stasjon",
+                "latitude": 60.628899,
+                "longitude": 6.411992
+              },
+              "toPlace": {
+                "name": "Røldalsvegen Odda rådhus",
+                "latitude": 60.066975,
+                "longitude": 6.546275
+              },
+              "line": {
+                "id": "SKY:Line:990",
+                "publicCode": "990",
+                "name": "Odda-Kinsarvik-Bu-Granvin-Voss",
+                "transportMode": "bus",
+                "transportSubmode": "localBus"
+              },
+              "situations": []
+            },
+            {
+              "mode": "foot",
+              "distance": 269.59,
+              "duration": 225,
+              "expectedStartTime": "2026-07-15T13:09:00+02:00",
+              "expectedEndTime": "2026-07-15T13:12:45+02:00",
+              "fromPlace": {
+                "name": "Røldalsvegen Odda rådhus",
+                "latitude": 60.066975,
+                "longitude": 6.546275
+              },
+              "toPlace": {
+                "name": "Odda busstasjon",
+                "latitude": 60.0691,
+                "longitude": 6.5456
+              },
+              "line": null,
+              "situations": []
+            }
+          ]
+        },
+        {
+          "duration": 11023,
+          "walkDistance": 712.54,
+          "startTime": "2026-07-15T11:18:31+02:00",
+          "endTime": "2026-07-15T14:22:14+02:00",
+          "legs": [
+            {
+              "mode": "foot",
+              "distance": 368.29,
+              "duration": 389,
+              "expectedStartTime": "2026-07-15T11:18:31+02:00",
+              "expectedEndTime": "2026-07-15T11:25:00+02:00",
+              "fromPlace": {
+                "name": "Bergen busstasjon",
+                "latitude": 60.3894,
+                "longitude": 5.3336
+              },
+              "toPlace": {
+                "name": "Bergen busstasjon",
+                "latitude": 60.3873,
+                "longitude": 5.334883
+              },
+              "line": null,
+              "situations": []
+            },
+            {
+              "mode": "bus",
+              "distance": 134164.0,
+              "duration": 10320,
+              "expectedStartTime": "2026-07-15T11:25:00+02:00",
+              "expectedEndTime": "2026-07-15T14:17:00+02:00",
+              "fromPlace": {
+                "name": "Bergen busstasjon",
+                "latitude": 60.3873,
+                "longitude": 5.334883
+              },
+              "toPlace": {
+                "name": "Sørfjordsenteret",
+                "latitude": 60.06996,
+                "longitude": 6.541206
+              },
+              "line": {
+                "id": "SKY:Line:930",
+                "publicCode": "930",
+                "name": "Bergen-Norheimsund-Jondal-Odda-Røldal",
+                "transportMode": "bus",
+                "transportSubmode": "localBus"
+              },
+              "situations": []
+            },
+            {
+              "mode": "foot",
+              "distance": 344.25,
+              "duration": 314,
+              "expectedStartTime": "2026-07-15T14:17:00+02:00",
+              "expectedEndTime": "2026-07-15T14:22:14+02:00",
+              "fromPlace": {
+                "name": "Sørfjordsenteret",
+                "latitude": 60.06996,
+                "longitude": 6.541206
+              },
+              "toPlace": {
+                "name": "Odda busstasjon",
+                "latitude": 60.0691,
+                "longitude": 6.5456
+              },
+              "line": null,
+              "situations": []
+            }
+          ]
+        }
+      ],
+      "routingErrors": []
+    }
+  }
+}

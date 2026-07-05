@@ -1,0 +1,193 @@
+{
+  "case": {
+    "id": "besseggen",
+    "lat": 61.506,
+    "lon": 8.798,
+    "name": "Besseggen / Jotunheimen",
+    "radius_m": 10000
+  },
+  "confidence": "sample",
+  "freshness": "user_observations_search",
+  "http_status_code": 200,
+  "id": "besseggen-regobs-search",
+  "license_or_terms_url": "https://www.varsom.no/en/about/regobs/regobs-about-data-terms-of-service-and-privacy-policy/",
+  "limitations": [
+    "User observations are fresh but may contain errors, omissions, or later edits/deletions.",
+    "Absence of observations is not evidence of safe conditions.",
+    "Trail Planner must show attribution to Regobs/Varsom and observer/photographer where relevant."
+  ],
+  "observations": [
+    {
+      "attachments_count": 2,
+      "changed_at": null,
+      "first_attachment_url": "https://api.regobs.no/Attachments/Thumbnail/9d3c32ea-7a81-4d70-b411-ff8d1c1249ed.jpg",
+      "geo_hazard_name": null,
+      "geo_hazard_tid": 10,
+      "has_attachments": true,
+      "location": {
+        "forecast_region": null,
+        "height_m": null,
+        "latitude": 61.4197761943435,
+        "longitude": 8.799002536106856,
+        "municipality": null,
+        "name": "Jotunheimen / \u00d8ystre Slidre",
+        "uncertainty_m": null
+      },
+      "observed_at": "2026-04-23T13:52:57+02:00",
+      "observer": {
+        "competence_level": null,
+        "competence_level_tid": 120,
+        "nickname": "Liss@nve"
+      },
+      "reg_id": 461946,
+      "registered_at": null,
+      "source_name": null,
+      "summary_types": [
+        "Snow Cover"
+      ]
+    },
+    {
+      "attachments_count": 17,
+      "changed_at": null,
+      "first_attachment_url": "https://api.regobs.no/Attachments/Thumbnail/3ad67df9-13f8-41f2-8a2d-fadc607fdbb6.jpg",
+      "geo_hazard_name": null,
+      "geo_hazard_tid": 10,
+      "has_attachments": true,
+      "location": {
+        "forecast_region": null,
+        "height_m": null,
+        "latitude": 61.451186980949146,
+        "longitude": 8.732270831242204,
+        "municipality": null,
+        "name": "Jotunheimen / V\u00e5g\u00e5",
+        "uncertainty_m": null
+      },
+      "observed_at": "2026-04-22T12:20:02+02:00",
+      "observer": {
+        "competence_level": null,
+        "competence_level_tid": 120,
+        "nickname": "Sveinung@obskorps"
+      },
+      "reg_id": 461817,
+      "registered_at": null,
+      "source_name": null,
+      "summary_types": [
+        "Notes",
+        "Danger Sign",
+        "Weather",
+        "Snow Cover",
+        "Tests",
+        "Avalanche Danger Assessment",
+        "Avalanche Problems",
+        "Avalanche Activity",
+        "Snow Profile"
+      ]
+    },
+    {
+      "attachments_count": 1,
+      "changed_at": null,
+      "first_attachment_url": "https://api.regobs.no/Attachments/Thumbnail/40122b7b-0cda-4f05-b94f-b61e6bec4214.jpg",
+      "geo_hazard_name": null,
+      "geo_hazard_tid": 10,
+      "has_attachments": true,
+      "location": {
+        "forecast_region": null,
+        "height_m": null,
+        "latitude": 61.46669973266341,
+        "longitude": 8.741275928914549,
+        "municipality": null,
+        "name": "Jotunheimen / V\u00e5g\u00e5",
+        "uncertainty_m": null
+      },
+      "observed_at": "2026-04-22T11:54:32+02:00",
+      "observer": {
+        "competence_level": null,
+        "competence_level_tid": 120,
+        "nickname": "Sveinung@obskorps"
+      },
+      "reg_id": 461805,
+      "registered_at": null,
+      "source_name": null,
+      "summary_types": [
+        "Avalanche Activity"
+      ]
+    },
+    {
+      "attachments_count": 1,
+      "changed_at": null,
+      "first_attachment_url": "https://api.regobs.no/Attachments/Thumbnail/1450a967-aca5-4c42-b682-6fab6626fe1d.jpg",
+      "geo_hazard_name": null,
+      "geo_hazard_tid": 10,
+      "has_attachments": true,
+      "location": {
+        "forecast_region": null,
+        "height_m": null,
+        "latitude": 61.516552365038365,
+        "longitude": 8.705595496416093,
+        "municipality": null,
+        "name": "Jotunheimen / V\u00e5g\u00e5",
+        "uncertainty_m": null
+      },
+      "observed_at": "2026-04-22T11:48:41+02:00",
+      "observer": {
+        "competence_level": null,
+        "competence_level_tid": 120,
+        "nickname": "Sveinung@obskorps"
+      },
+      "reg_id": 461804,
+      "registered_at": null,
+      "source_name": null,
+      "summary_types": [
+        "Danger Sign",
+        "Avalanche Activity"
+      ]
+    },
+    {
+      "attachments_count": 1,
+      "changed_at": null,
+      "first_attachment_url": "https://api.regobs.no/Attachments/Thumbnail/60305947-b5a4-4612-9354-8db7e43149bc.jpg",
+      "geo_hazard_name": null,
+      "geo_hazard_tid": 10,
+      "has_attachments": true,
+      "location": {
+        "forecast_region": null,
+        "height_m": null,
+        "latitude": 61.51209031393177,
+        "longitude": 8.819577153772116,
+        "municipality": null,
+        "name": "Jotunheimen / V\u00e5g\u00e5",
+        "uncertainty_m": null
+      },
+      "observed_at": "2026-04-22T09:03:18+02:00",
+      "observer": {
+        "competence_level": null,
+        "competence_level_tid": 120,
+        "nickname": "Sveinung@obskorps"
+      },
+      "reg_id": 461790,
+      "registered_at": null,
+      "source_name": null,
+      "summary_types": [
+        "Avalanche Activity"
+      ]
+    }
+  ],
+  "query": {
+    "AscendingOrder": false,
+    "LangKey": 2,
+    "NumberOfRecords": 5,
+    "OrderBy": "DtObsTime",
+    "Radius": {
+      "Position": {
+        "Latitude": 61.506,
+        "Longitude": 8.798
+      },
+      "Radius": 10000
+    },
+    "SelectedGeoHazards": [
+      10
+    ]
+  },
+  "retrieved_at": "2026-07-05T10:04:33+00:00",
+  "source": "nve_regobs"
+}

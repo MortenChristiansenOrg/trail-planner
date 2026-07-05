@@ -1,0 +1,86 @@
+{
+  "response": {
+    "daily": {
+      "precipitation_sum": [
+        5.4,
+        1.6,
+        1.4,
+        7.2,
+        12.1,
+        2.6,
+        10.8
+      ],
+      "rain_sum": [
+        5.4,
+        1.6,
+        1.4,
+        6.5,
+        12.1,
+        2.6,
+        10.8
+      ],
+      "snowfall_sum": [
+        0.0,
+        0.0,
+        0.0,
+        0.49,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "temperature_2m_max": [
+        11.1,
+        13.1,
+        7.2,
+        8.8,
+        9.3,
+        10.5,
+        12.9
+      ],
+      "temperature_2m_mean": [
+        10.2,
+        10.0,
+        5.8,
+        5.4,
+        7.4,
+        8.3,
+        9.7
+      ],
+      "temperature_2m_min": [
+        9.2,
+        7.8,
+        4.1,
+        1.8,
+        4.8,
+        6.8,
+        6.0
+      ],
+      "time": [
+        "2025-07-01",
+        "2025-07-02",
+        "2025-07-03",
+        "2025-07-04",
+        "2025-07-05",
+        "2025-07-06",
+        "2025-07-07"
+      ]
+    },
+    "daily_units": {
+      "precipitation_sum": "mm",
+      "rain_sum": "mm",
+      "snowfall_sum": "cm",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_mean": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "time": "iso8601"
+    },
+    "elevation": 1100.0,
+    "generationtime_ms": 7.623553276062012,
+    "latitude": 60.140594,
+    "longitude": 6.713287,
+    "timezone": "Europe/Oslo",
+    "timezone_abbreviation": "GMT+2",
+    "utc_offset_seconds": 7200
+  },
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=60.124&longitude=6.74&elevation=1100&timezone=Europe%2FOslo&start_date=2025-07-01&end_date=2025-07-07&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Crain_sum%2Csnowfall_sum"
+}

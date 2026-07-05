@@ -1,0 +1,9 @@
+{
+  "source": "amadeus_flight_offers_search",
+  "checked_at": "2026-07-05",
+  "docs_url": "https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search",
+  "pricing_url": "https://developers.amadeus.com/pricing",
+  "access_model": "self-service account with OAuth client credentials",
+  "public_sample_run": false,
+  "reason_no_raw_offer_sample": "Requires API credentials; no credentials were available in the workspace."
+}

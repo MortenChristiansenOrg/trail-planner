@@ -1,0 +1,74 @@
+{
+  "case": {
+    "id": "ben-nevis-cmd",
+    "lat": 56.797,
+    "lon": -5.003,
+    "name": "Ben Nevis CMD arete",
+    "tzid": "Europe/London"
+  },
+  "confidence": "sample",
+  "days": [
+    {
+      "api_status": "OK",
+      "civil_twilight_begin": "2026-05-15T04:10:06+01:00",
+      "civil_twilight_end": "2026-05-15T22:22:38+01:00",
+      "date": "2026-05-15",
+      "day_length_seconds": 59591,
+      "http_status_code": 200,
+      "sunrise": "2026-05-15T04:59:47+01:00",
+      "sunset": "2026-05-15T21:32:58+01:00",
+      "tzid": "Europe/London"
+    },
+    {
+      "api_status": "OK",
+      "civil_twilight_begin": "2026-06-21T03:19:49+01:00",
+      "civil_twilight_end": "2026-06-21T23:23:51+01:00",
+      "date": "2026-06-21",
+      "day_length_seconds": 64540,
+      "http_status_code": 200,
+      "sunrise": "2026-06-21T04:24:00+01:00",
+      "sunset": "2026-06-21T22:19:40+01:00",
+      "tzid": "Europe/London"
+    },
+    {
+      "api_status": "OK",
+      "civil_twilight_begin": "2026-09-15T06:12:53+01:00",
+      "civil_twilight_end": "2026-09-15T20:17:32+01:00",
+      "date": "2026-09-15",
+      "day_length_seconds": 46301,
+      "http_status_code": 200,
+      "sunrise": "2026-09-15T06:49:22+01:00",
+      "sunset": "2026-09-15T19:41:03+01:00",
+      "tzid": "Europe/London"
+    },
+    {
+      "api_status": "OK",
+      "civil_twilight_begin": "2026-10-15T07:14:40+01:00",
+      "civil_twilight_end": "2026-10-15T18:56:52+01:00",
+      "date": "2026-10-15",
+      "day_length_seconds": 37763,
+      "http_status_code": 200,
+      "sunrise": "2026-10-15T07:51:05+01:00",
+      "sunset": "2026-10-15T18:20:28+01:00",
+      "tzid": "Europe/London"
+    }
+  ],
+  "freshness": "astronomical_calculation",
+  "id": "ben-nevis-cmd-sunrise-sunset",
+  "license_or_terms_url": "https://sunrise-sunset.org/api",
+  "limitations": [
+    "Does not model ridge shape, terrain shadows, cloud, or snow travel speed."
+  ],
+  "query": {
+    "dates": [
+      "2026-05-15",
+      "2026-06-21",
+      "2026-09-15",
+      "2026-10-15"
+    ],
+    "formatted": 0,
+    "tzid": "Europe/London"
+  },
+  "retrieved_at": "2026-07-05T10:01:02+00:00",
+  "source": "sunrise_sunset_api"
+}

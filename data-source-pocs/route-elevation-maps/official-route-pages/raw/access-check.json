@@ -1,0 +1,6 @@
+{
+  "source": "official_route_pages",
+  "checked_at": "2026-07-05",
+  "access": "manual_per_site_review",
+  "sample_not_fetched_reason": "No single official source was selected for this pass; avoid scraping without per-site terms."
+}

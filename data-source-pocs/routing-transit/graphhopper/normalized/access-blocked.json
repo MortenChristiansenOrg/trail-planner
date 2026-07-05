@@ -1,0 +1,14 @@
+{
+  "id": "graphhopper-access-check",
+  "source": "graphhopper",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {
+    "script": "poc.py",
+    "required_env": "GRAPHHOPPER_API_KEY"
+  },
+  "license_or_terms_url": "https://www.graphhopper.com/terms/",
+  "freshness": "not_queried",
+  "confidence": "access_blocked",
+  "verdict": "blocked",
+  "reason": "API key/account required; free package is non-commercial per current pricing notes."
+}

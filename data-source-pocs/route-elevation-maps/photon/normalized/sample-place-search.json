@@ -1,0 +1,240 @@
+{
+  "confidence": "sample",
+  "freshness": "live_osm_geocoder",
+  "id": "trailhead-place-search-photon",
+  "license_or_terms_url": "https://github.com/komoot/photon",
+  "query": {
+    "cases": [
+      {
+        "case": "besseggen",
+        "id": "gjendesheim",
+        "lat": 61.4947,
+        "lon": 8.8124,
+        "query": "Gjendesheim"
+      },
+      {
+        "case": "trolltunga",
+        "id": "skjeggedal",
+        "lat": 60.1308,
+        "lon": 6.625,
+        "query": "Skjeggedal"
+      },
+      {
+        "case": "ben-nevis-cmd",
+        "id": "fort-william",
+        "lat": 56.8198,
+        "lon": -5.1052,
+        "query": "Fort William"
+      }
+    ],
+    "endpoint": "https://photon.komoot.io/api/"
+  },
+  "results": [
+    {
+      "case": "besseggen",
+      "query": "Gjendesheim",
+      "raw_sample": "raw/sample-gjendesheim.json",
+      "result_count": 5,
+      "top_results": [
+        {
+          "city": "V\u00e5g\u00e5",
+          "coordinates": [
+            8.809562,
+            61.4954126
+          ],
+          "country": "Norge",
+          "name": "Gjendesheim",
+          "osm_id": 281688769,
+          "osm_type": "N",
+          "state": null
+        },
+        {
+          "city": "V\u00e5g\u00e5",
+          "coordinates": [
+            8.8090267,
+            61.4949733
+          ],
+          "country": "Norge",
+          "name": "Gjendesheim",
+          "osm_id": 285939270,
+          "osm_type": "N",
+          "state": null
+        },
+        {
+          "city": "V\u00e5g\u00e5",
+          "coordinates": [
+            8.811883,
+            61.494645
+          ],
+          "country": "Norge",
+          "name": "Gjendesheim",
+          "osm_id": 10605493296,
+          "osm_type": "N",
+          "state": null
+        },
+        {
+          "city": "\u00d8ystre Slidre",
+          "coordinates": [
+            8.8616409,
+            61.4355543
+          ],
+          "country": "Norge",
+          "name": "Gjendesheim",
+          "osm_id": 364555702,
+          "osm_type": "W",
+          "state": null
+        },
+        {
+          "city": "V\u00e5g\u00e5",
+          "coordinates": [
+            8.8126376,
+            61.4943459
+          ],
+          "country": "Norge",
+          "name": "Gjendesheim",
+          "osm_id": 791106132,
+          "osm_type": "N",
+          "state": null
+        }
+      ]
+    },
+    {
+      "case": "trolltunga",
+      "query": "Skjeggedal",
+      "raw_sample": "raw/sample-skjeggedal.json",
+      "result_count": 5,
+      "top_results": [
+        {
+          "city": "Ullensvang",
+          "coordinates": [
+            6.6122046,
+            60.1337586
+          ],
+          "country": "Norge",
+          "name": "Skjeggedal",
+          "osm_id": 3761955234,
+          "osm_type": "N",
+          "state": null
+        },
+        {
+          "city": "Ullensvang",
+          "coordinates": [
+            6.6247919,
+            60.132396
+          ],
+          "country": "Norge",
+          "name": "Skjeggedal",
+          "osm_id": 458563941,
+          "osm_type": "W",
+          "state": null
+        },
+        {
+          "city": "Ullensvang",
+          "coordinates": [
+            6.626813,
+            60.1328873
+          ],
+          "country": "Norge",
+          "name": "Skjeggedal",
+          "osm_id": 782797438,
+          "osm_type": "W",
+          "state": null
+        },
+        {
+          "city": "Ullensvang",
+          "coordinates": [
+            6.6340974,
+            60.1316515
+          ],
+          "country": "Norge",
+          "name": "Skjeggedal",
+          "osm_id": 518529792,
+          "osm_type": "W",
+          "state": null
+        },
+        {
+          "city": "Tyssedal",
+          "coordinates": [
+            6.5695428,
+            60.1173373
+          ],
+          "country": "Norge",
+          "name": "Skjeggedalsvegen",
+          "osm_id": 782797040,
+          "osm_type": "W",
+          "state": null
+        }
+      ]
+    },
+    {
+      "case": "ben-nevis-cmd",
+      "query": "Fort William",
+      "raw_sample": "raw/sample-fort-william.json",
+      "result_count": 5,
+      "top_results": [
+        {
+          "city": null,
+          "coordinates": [
+            -5.1109516,
+            56.8178257
+          ],
+          "country": "United Kingdom",
+          "name": "Fort William",
+          "osm_id": 17917137,
+          "osm_type": "N",
+          "state": "Alba / Scotland"
+        },
+        {
+          "city": "Fort William",
+          "coordinates": [
+            -5.1053126,
+            56.8205581
+          ],
+          "country": "United Kingdom",
+          "name": "Fort William",
+          "osm_id": 26530357,
+          "osm_type": "N",
+          "state": "Alba / Scotland"
+        },
+        {
+          "city": "Fort William",
+          "coordinates": [
+            -5.0900656,
+            56.8247186
+          ],
+          "country": "United Kingdom",
+          "name": "Fort William Junction",
+          "osm_id": 5333911030,
+          "osm_type": "N",
+          "state": "Alba / Scotland"
+        },
+        {
+          "city": "Fort William",
+          "coordinates": [
+            -5.1153964,
+            56.8154048
+          ],
+          "country": "United Kingdom",
+          "name": "Fort William Sheriff Court",
+          "osm_id": 200856063,
+          "osm_type": "W",
+          "state": "Alba / Scotland"
+        },
+        {
+          "city": "Fort William",
+          "coordinates": [
+            -5.1077401,
+            56.8213459
+          ],
+          "country": "United Kingdom",
+          "name": "Fort William Old Fort",
+          "osm_id": 39363945,
+          "osm_type": "W",
+          "state": "Alba / Scotland"
+        }
+      ]
+    }
+  ],
+  "retrieved_at": "2026-07-05T09:57:46+00:00",
+  "source": "photon_public_demo_komoot"
+}

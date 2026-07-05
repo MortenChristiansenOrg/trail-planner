@@ -1,0 +1,10 @@
+{
+  "source": "transitland",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "status": "not_queried",
+  "reason": "Transitland REST API key required.",
+  "docs": [
+    "https://www.transit.land/documentation/rest-api/",
+    "https://www.transit.land/documentation/rest-api/feeds"
+  ]
+}

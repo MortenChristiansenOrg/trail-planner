@@ -1,0 +1,455 @@
+{
+  "case": {
+    "id": "trolltunga",
+    "lat": 60.124,
+    "lon": 6.74,
+    "name": "Trolltunga / Skjeggedal",
+    "radius_m": 15000
+  },
+  "confidence": "sample",
+  "features": [
+    {
+      "capacity": "9",
+      "coordinates": {
+        "lat": 60.0550149,
+        "lon": 6.670112
+      },
+      "email": null,
+      "fee": null,
+      "name": "Kvanntj\u00f8rnsbu",
+      "operator": "Bergen Turlag",
+      "osm_id": 1356402118,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "capacity": "9",
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "458",
+        "dnt:lock": "yes",
+        "ele": "1260",
+        "name": "Kvanntj\u00f8rnsbu",
+        "network": "Den Norske Turistforening",
+        "operator": "Bergen Turlag",
+        "provisions": "yes",
+        "source:date": "2010-09-29 16:21:47",
+        "tourism": "wilderness_hut",
+        "website": "https://ut.no/hytte/kvanntjoernsbu"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": "https://ut.no/hytte/kvanntjoernsbu"
+    },
+    {
+      "capacity": "8",
+      "coordinates": {
+        "lat": 60.1052211,
+        "lon": 6.6382714
+      },
+      "email": null,
+      "fee": null,
+      "name": "Mosdalsbu",
+      "operator": "Bergen Turlag",
+      "osm_id": 1356402308,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "capacity": "8",
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "149",
+        "dnt:lock": "yes",
+        "ele": "1010",
+        "name": "Mosdalsbu",
+        "network": "Den Norske Turistforening",
+        "operator": "Bergen Turlag",
+        "provisions": "yes",
+        "service": "self",
+        "source:date": "2010-08-16 16:19:11",
+        "tourism": "wilderness_hut",
+        "website": "https://ut.no/hytte/mosdalsbu"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": "https://ut.no/hytte/mosdalsbu"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.053834,
+        "lon": 6.556091
+      },
+      "email": null,
+      "fee": null,
+      "name": "Trolltunga Hotel",
+      "operator": null,
+      "osm_id": 3025303182,
+      "osm_type": "node",
+      "phone": "+47 400 04 486",
+      "raw_tags": {
+        "ele": "107.08167299999999",
+        "name": "Trolltunga Hotel",
+        "phone": "+47 400 04 486",
+        "source": "survey",
+        "tourism": "hotel",
+        "website": "http://www.vasstun.no"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "hotel",
+      "website": "http://www.vasstun.no"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.054663,
+        "lon": 6.549775
+      },
+      "email": null,
+      "fee": null,
+      "name": "Odda Hytte & Gjesteg\u00e5rd",
+      "operator": null,
+      "osm_id": 3025303183,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "ele": "100.93190800000001",
+        "name": "Odda Hytte & Gjesteg\u00e5rd",
+        "source": "survey",
+        "tourism": "guest_house",
+        "website": "http://www.oddahytte.com"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "guest_house",
+      "website": "http://www.oddahytte.com"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.072517,
+        "lon": 6.552437
+      },
+      "email": null,
+      "fee": null,
+      "name": "Trolltunga Studios",
+      "operator": null,
+      "osm_id": 3119029358,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Trolltunga Studios",
+        "smoking": "outside",
+        "tourism": "hostel"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "hostel",
+      "website": null
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.069005,
+        "lon": 6.544729
+      },
+      "email": null,
+      "fee": null,
+      "name": "Hardanger Hotel",
+      "operator": null,
+      "osm_id": 3119036944,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hardanger Hotel",
+        "stars": "3",
+        "tourism": "hotel"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "hotel",
+      "website": null
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.183157,
+        "lon": 6.551877
+      },
+      "email": null,
+      "fee": null,
+      "name": "Eikhamrane Camping",
+      "operator": null,
+      "osm_id": 3663314583,
+      "osm_type": "node",
+      "phone": "+47 948 23 231",
+      "raw_tags": {
+        "name": "Eikhamrane Camping",
+        "phone": "+47 948 23 231",
+        "tourism": "camp_site",
+        "website": "http://eikhamranecamping.123hjemmeside.no/"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "camp_site",
+      "website": "http://eikhamranecamping.123hjemmeside.no/"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.053505,
+        "lon": 6.544177
+      },
+      "email": "post@trolltungacamping.no",
+      "fee": null,
+      "name": "Trolltunga Camping",
+      "operator": null,
+      "osm_id": 3663316023,
+      "osm_type": "node",
+      "phone": "+47 941 41 279",
+      "raw_tags": {
+        "caravans": "yes",
+        "contact:email": "post@trolltungacamping.no",
+        "drinking_water": "yes",
+        "name": "Trolltunga Camping",
+        "name:en": "Trolltunga Camping",
+        "phone": "+47 941 41 279",
+        "power_supply": "yes",
+        "shower": "yes",
+        "tents": "yes",
+        "tourism": "camp_site",
+        "website": "https://trolltungacamping.no/"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "camp_site",
+      "website": "https://trolltungacamping.no/"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.117296,
+        "lon": 6.564285
+      },
+      "email": null,
+      "fee": null,
+      "name": "Trolltunga Guesthouse",
+      "operator": null,
+      "osm_id": 4334961627,
+      "osm_type": "node",
+      "phone": "+47 96914570",
+      "raw_tags": {
+        "name": "Trolltunga Guesthouse",
+        "phone": "+47 96914570",
+        "tourism": "hotel",
+        "website": "https://m.facebook.com/trolltungaguesthouse/?fref=ts"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "hotel",
+      "website": "https://m.facebook.com/trolltungaguesthouse/?fref=ts"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.0714839,
+        "lon": 6.5484782
+      },
+      "email": null,
+      "fee": null,
+      "name": "Camp Lothepus Bobilcamp",
+      "operator": null,
+      "osm_id": 4747404783,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "name": "Camp Lothepus Bobilcamp",
+        "power_supply": "yes",
+        "sanitary_dump_station": "yes",
+        "tourism": "caravan_site"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "caravan_site",
+      "website": null
+    },
+    {
+      "capacity": "12",
+      "coordinates": {
+        "lat": 60.1561425,
+        "lon": 6.8418495
+      },
+      "email": null,
+      "fee": null,
+      "name": "Tyssevassbu",
+      "operator": "DNT Oslo og Omegn",
+      "osm_id": 9112739913,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "capacity": "12",
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "124",
+        "dnt:lock": "yes",
+        "ele": "1319",
+        "name": "Tyssevassbu",
+        "network": "Den Norske Turistforening",
+        "operator": "DNT Oslo og Omegn",
+        "provisions": "yes",
+        "ref:kartverket:hytte": "1143",
+        "service": "self",
+        "tourism": "wilderness_hut",
+        "website": "https://ut.no/hytte/tyssevassbu"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": "https://ut.no/hytte/tyssevassbu"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.1301761,
+        "lon": 6.7562665
+      },
+      "email": null,
+      "fee": null,
+      "name": "Reinaskorsbu",
+      "operator": "Bergen Turlag",
+      "osm_id": 9112799590,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "457",
+        "dnt:lock": "yes",
+        "ele": "1185",
+        "name": "Reinaskorsbu",
+        "network": "Den Norske Turistforening",
+        "operator": "Bergen Turlag",
+        "ruins:tourism": "wilderness_hut",
+        "tourism": "wilderness_hut"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": null
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.0895584,
+        "lon": 6.7585067
+      },
+      "email": null,
+      "fee": null,
+      "name": "Langavassbui Emergency Shelter",
+      "operator": null,
+      "osm_id": 9668454807,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "historic": "shieling",
+        "name": "Langavassbui Emergency Shelter",
+        "ssr:stedsnr": "125395",
+        "tourism": "wilderness_hut"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": null
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.068062,
+        "lon": 6.5599312
+      },
+      "email": null,
+      "fee": "no",
+      "name": "Ragdebu Dagsturhytte",
+      "operator": null,
+      "osm_id": 13690642802,
+      "osm_type": "node",
+      "phone": null,
+      "raw_tags": {
+        "camping": "no",
+        "fee": "no",
+        "name": "Ragdebu Dagsturhytte",
+        "tourism": "wilderness_hut",
+        "website": "https://www.vestlandfylke.no/idrett-og-friluftsliv/dagsturhytta/ullensvang-kommune---ragdebu/"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "wilderness_hut",
+      "website": "https://www.vestlandfylke.no/idrett-og-friluftsliv/dagsturhytta/ullensvang-kommune---ragdebu/"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.1161107,
+        "lon": 6.5565919
+      },
+      "email": null,
+      "fee": null,
+      "name": "Tyssedal Hotel",
+      "operator": null,
+      "osm_id": 297267479,
+      "osm_type": "way",
+      "phone": null,
+      "raw_tags": {
+        "beds": "69",
+        "building": "hotel",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Tyssedal Hotel",
+        "ref:bygningsnr": "15747226",
+        "rooms": "26",
+        "tourism": "hotel",
+        "website": "https://www.tyssedalhotel.no/"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "hotel",
+      "website": "https://www.tyssedalhotel.no/"
+    },
+    {
+      "capacity": null,
+      "coordinates": {
+        "lat": 60.0650734,
+        "lon": 6.5526098
+      },
+      "email": null,
+      "fee": null,
+      "name": "Lothepus camping",
+      "operator": null,
+      "osm_id": 5286241,
+      "osm_type": "relation",
+      "phone": null,
+      "raw_tags": {
+        "name": "Lothepus camping",
+        "tourism": "caravan_site",
+        "type": "multipolygon"
+      },
+      "reservation": null,
+      "seasonal": null,
+      "tourism": "caravan_site",
+      "website": null
+    }
+  ],
+  "freshness": "osm_snapshot_via_overpass",
+  "http_status_code": 200,
+  "id": "trolltunga-osm-lodging",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "limitations": [
+    "Good for finding mapped lodging/campsite candidates.",
+    "Not a live source for price, legal tenting rules, opening status, or availability."
+  ],
+  "query": "[out:json][timeout:60];\n(\n  node(around:15000,60.124,6.74)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  way(around:15000,60.124,6.74)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  relation(around:15000,60.124,6.74)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n);\nout center tags;",
+  "retrieved_at": "2026-07-05T10:01:02+00:00",
+  "source": "openstreetmap_overpass"
+}

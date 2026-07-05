@@ -1,0 +1,11 @@
+{
+  "provider": "example",
+  "source_url": "https://example.com/",
+  "terms_url": "https://example.com/terms",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {},
+  "data_freshness": "unknown",
+  "cache_policy": "to_be_confirmed",
+  "attribution": "to_be_confirmed",
+  "confidence": "sample"
+}

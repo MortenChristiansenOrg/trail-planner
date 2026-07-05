@@ -1,0 +1,653 @@
+{
+  "_trail_planner_categorymembers": {
+    "_trail_planner_query": {
+      "endpoint": "https://commons.wikimedia.org/w/api.php",
+      "params": {
+        "action": "query",
+        "cmlimit": "5",
+        "cmtitle": "Category:Besseggen",
+        "cmtype": "file",
+        "format": "json",
+        "formatversion": "2",
+        "list": "categorymembers"
+      },
+      "retrieved_at": "2026-07-05T10:00:02Z",
+      "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&list=categorymembers&cmtitle=Category%3ABesseggen&cmtype=file&cmlimit=5"
+    },
+    "batchcomplete": true,
+    "continue": {
+      "cmcontinue": "file|42455353454747454e2028313830313730393135292e4a504547|71713439",
+      "continue": "-||"
+    },
+    "query": {
+      "categorymembers": [
+        {
+          "ns": 6,
+          "pageid": 116380644,
+          "title": "File:002 Jotunheimein reindeer - tourist on Besseggen trail in Jotunheimen National Park, Norway.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 41816340,
+          "title": "File:12060. Jotunheimen - Veslefjeld med Beseggen, Gjende og Besvand (17065240501).jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 37238485,
+          "title": "File:A small waterfall under Bessegen - panoramio.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 56672524,
+          "title": "File:Bandet - panoramio (1).jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 56672522,
+          "title": "File:Bandet - panoramio.jpg"
+        }
+      ]
+    }
+  },
+  "_trail_planner_query": {
+    "endpoint": "https://commons.wikimedia.org/w/api.php",
+    "params": {
+      "action": "query",
+      "format": "json",
+      "formatversion": "2",
+      "iiprop": "url|user|dimensions|extmetadata",
+      "iiurlwidth": "400",
+      "prop": "imageinfo",
+      "titles": "File:002 Jotunheimein reindeer - tourist on Besseggen trail in Jotunheimen National Park, Norway.jpg|File:12060. Jotunheimen - Veslefjeld med Beseggen, Gjende og Besvand (17065240501).jpg|File:A small waterfall under Bessegen - panoramio.jpg|File:Bandet - panoramio (1).jpg|File:Bandet - panoramio.jpg"
+    },
+    "retrieved_at": "2026-07-05T10:00:03Z",
+    "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&prop=imageinfo&titles=File%3A002+Jotunheimein+reindeer+-+tourist+on+Besseggen+trail+in+Jotunheimen+National+Park%2C+Norway.jpg%7CFile%3A12060.+Jotunheimen+-+Veslefjeld+med+Beseggen%2C+Gjende+og+Besvand+%2817065240501%29.jpg%7CFile%3AA+small+waterfall+under+Bessegen+-+panoramio.jpg%7CFile%3ABandet+-+panoramio+%281%29.jpg%7CFile%3ABandet+-+panoramio.jpg&iiprop=url%7Cuser%7Cdimensions%7Cextmetadata&iiurlwidth=400"
+  },
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=37238485",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_small_waterfall_under_Bessegen_-_panoramio.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161010073911/http://www.panoramio.com/user/70560?with_photo_id=1274884\">Honza and Ivana Ebr</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "Attribution": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "Honza and Ivana Ebr"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Besseggen|Waterfalls in Innlandet|Panoramio files uploaded by Panoramio upload bot|Panoramio images reviewed by trusted users|Photos from Panoramio|Files with coordinates missing SDC location of creation|Bodies of water in V\u00e5g\u00e5"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20161010073905/http://www.panoramio.com/photo/1274884\">https://web.archive.org/web/20161010073905/http://www.panoramio.com/photo/1274884</a>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2014-12-11 02:14:40"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "11 March 2007 (original upload date)"
+              },
+              "GPSLatitude": {
+                "source": "commons-desc-page",
+                "value": "61.499441"
+              },
+              "GPSLongitude": {
+                "source": "commons-desc-page",
+                "value": "8.751984"
+              },
+              "GPSMapDatum": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "WGS-84"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "A small waterfall under Bessegen"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by/3.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "A small waterfall under Bessegen - panoramio"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png\" decoding=\"async\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png\" decoding=\"async\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/3.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/3.0/deed.en\">Attribution 3.0 Unported</a> license.</div><div class=\"rlicense-attr\" style=\"font-weight: bold;\">Attribution: <div style=\"display:inline;font-size:larger;\" class=\"licensetpl_attr\">Honza and Ivana Ebr</div></div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> \u2013 to copy, distribute and transmit the work</li>\n<li><b>to remix</b> \u2013 to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> \u2013 You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/3.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 3.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 3.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>\n<style data-mw-deduplicate=\"TemplateStyles:r901585720\">.mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);color:inherit}.mw-parser-output .panoramioreview-failed{background-color:var(--background-color-error-subtle,#fcc);color:inherit}.mw-parser-output .panoramioreview-passed{background-color:var(--background-color-success-subtle,#efe);color:inherit}</style>\n<table class=\"panoramioreview panoramioreview-passed\" lang=\"en\" dir=\"ltr\">\n\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/60px-Checked_copyright_icon.svg.png\" decoding=\"async\" width=\"50\" height=\"48\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/120px-Checked_copyright_icon.svg.png 2x\" data-file-width=\"160\" data-file-height=\"153\"></span></span>\n</td>\n<td>This image, which was originally posted to <b><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Panoramio\" class=\"extiw\" title=\"en:Panoramio\">Panoramio</a></span></b>, was automatically reviewed on 11 December 2014 by <b><a href=\"//commons.wikimedia.org/wiki/User:Panoramio_upload_bot\" title=\"User:Panoramio upload bot\">Panoramio upload bot</a></b>, who confirmed that it was available on Panoramio under the above license on that date.\n</td>\n<td><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Star_and_ring.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/60px-Star_and_ring.svg.png\" decoding=\"async\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/120px-Star_and_ring.svg.png 2x\" data-file-width=\"75\" data-file-height=\"75\"></a></span>\n</td></tr></tbody></table>"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution 3.0"
+              }
+            },
+            "height": 1740,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/A_small_waterfall_under_Bessegen_-_panoramio.jpg/960px-A_small_waterfall_under_Bessegen_-_panoramio.jpg"
+            },
+            "size": 751682,
+            "thumbheight": 604,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/A_small_waterfall_under_Bessegen_-_panoramio.jpg/500px-A_small_waterfall_under_Bessegen_-_panoramio.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/A_small_waterfall_under_Bessegen_-_panoramio.jpg",
+            "user": "Panoramio upload bot",
+            "width": 1153
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 37238485,
+        "title": "File:A small waterfall under Bessegen - panoramio.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=41816340",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:12060._Jotunheimen_-_Veslefjeld_med_Beseggen,_Gjende_og_Besvand_(17065240501).jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/48220291@N04\">National Library of Norway</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "false"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Besseggen|Bessvatnet|Photos uploaded from Flickr by F\u00e6 using a script|Flickr images reviewed by FlickreviewR|Files from Flickr's 'The Commons'|Images from Nasjonalbiblioteket|Files with coordinates missing SDC location of creation|The Wilse Collection (Nasjonalbiblioteket)"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/national_library_of_norway/17065240501/\">https://www.flickr.com/photos/national_library_of_norway/17065240501/</a>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2015-07-24 10:37:55"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2015-04-07 13:04:49"
+              },
+              "GPSLatitude": {
+                "source": "commons-desc-page",
+                "value": "61.508122"
+              },
+              "GPSLongitude": {
+                "source": "commons-desc-page",
+                "value": "8.744773"
+              },
+              "GPSMapDatum": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "WGS-84"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "<b>Dato / Date:</b> ukjent / unknown<br>\n<p><b>Sted / Place:</b> Oppland, V\u00e5g\u00e5<br>\n<b>Fotograf / Photographer:</b> Anders Beer Wilse (1865-1949)<br>\n<b>Digital kopi av original  / Digital copy of original:</b> s/h papirpositiv<br>\n<b>Eier / Owner Institution:</b> Nasjonalbiblioteket / National Library of Norway<br>\n<b>Lenke / Link:</b> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.nb.no\">www.nb.no</a><br>\n</p>\n<b>Bildesignatur / Image Number:</b> blds_07448"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "No restrictions"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://www.flickr.com/commons/usage/"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "12060. Jotunheimen - Veslefjeld med Beseggen, Gjende og Besvand (17065240501)"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "At the time of upload, the image license was automatically confirmed using the Flickr <a href=\"https://en.wikipedia.org/wiki/API\" class=\"extiw\" title=\"en:API\">API</a>. For more information see <a href=\"//commons.wikimedia.org/wiki/User:F%C3%A6/Flickr_API_detail\" title=\"User:F\u00e6/Flickr API detail\">Flickr API detail</a>."
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "No known copyright restrictions"
+              }
+            },
+            "height": 3506,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/12060._Jotunheimen_-_Veslefjeld_med_Beseggen%2C_Gjende_og_Besvand_%2817065240501%29.jpg/960px-12060._Jotunheimen_-_Veslefjeld_med_Beseggen%2C_Gjende_og_Besvand_%2817065240501%29.jpg"
+            },
+            "size": 10401278,
+            "thumbheight": 312,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/12060._Jotunheimen_-_Veslefjeld_med_Beseggen%2C_Gjende_og_Besvand_%2817065240501%29.jpg/500px-12060._Jotunheimen_-_Veslefjeld_med_Beseggen%2C_Gjende_og_Besvand_%2817065240501%29.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/12060._Jotunheimen_-_Veslefjeld_med_Beseggen%2C_Gjende_og_Besvand_%2817065240501%29.jpg",
+            "user": "F\u00e6",
+            "width": 4500
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 41816340,
+        "title": "File:12060. Jotunheimen - Veslefjeld med Beseggen, Gjende og Besvand (17065240501).jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=56672522",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bandet_-_panoramio.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161102184000/http://www.panoramio.com/user/3773936?with_photo_id=93501650\">TomasEE</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "Attribution": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "TomasEE"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Besseggen|Panoramio files uploaded by Panoramio upload bot|Panoramio images reviewed by trusted users|Photos from Panoramio|Files with coordinates missing SDC location of creation|Norway photographs taken on 2013-07-19|Bandet|Photos from Panoramio ID 3773936"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20161102183958/http://www.panoramio.com/photo/93501650\">https://web.archive.org/web/20161102183958/http://www.panoramio.com/photo/93501650</a>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2017-02-28 00:48:30"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "Taken on\u00a019 July 2013"
+              },
+              "GPSLatitude": {
+                "source": "commons-desc-page",
+                "value": "61.500096"
+              },
+              "GPSLongitude": {
+                "source": "commons-desc-page",
+                "value": "8.657098"
+              },
+              "GPSMapDatum": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "WGS-84"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Bandet"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by/3.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "Bandet - panoramio"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png\" decoding=\"async\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png\" decoding=\"async\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/3.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/3.0/deed.en\">Attribution 3.0 Unported</a> license.</div><div class=\"rlicense-attr\" style=\"font-weight: bold;\">Attribution: <div style=\"display:inline;font-size:larger;\" class=\"licensetpl_attr\">TomasEE</div></div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> \u2013 to copy, distribute and transmit the work</li>\n<li><b>to remix</b> \u2013 to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> \u2013 You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/3.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 3.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 3.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>\n<style data-mw-deduplicate=\"TemplateStyles:r901585720\">.mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);color:inherit}.mw-parser-output .panoramioreview-failed{background-color:var(--background-color-error-subtle,#fcc);color:inherit}.mw-parser-output .panoramioreview-passed{background-color:var(--background-color-success-subtle,#efe);color:inherit}</style>\n<table class=\"panoramioreview panoramioreview-passed\" lang=\"en\" dir=\"ltr\">\n\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/60px-Checked_copyright_icon.svg.png\" decoding=\"async\" width=\"50\" height=\"48\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/120px-Checked_copyright_icon.svg.png 2x\" data-file-width=\"160\" data-file-height=\"153\"></span></span>\n</td>\n<td>This image, which was originally posted to <b><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Panoramio\" class=\"extiw\" title=\"en:Panoramio\">Panoramio</a></span></b>, was automatically reviewed on 28 February 2017 by <b><a href=\"//commons.wikimedia.org/wiki/User:Panoramio_upload_bot\" title=\"User:Panoramio upload bot\">Panoramio upload bot</a></b>, who confirmed that it was available on Panoramio under the above license on that date.\n</td>\n<td><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Star_and_ring.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/60px-Star_and_ring.svg.png\" decoding=\"async\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/120px-Star_and_ring.svg.png 2x\" data-file-width=\"75\" data-file-height=\"75\"></a></span>\n</td></tr></tbody></table>"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution 3.0"
+              }
+            },
+            "height": 3444,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bandet_-_panoramio.jpg/960px-Bandet_-_panoramio.jpg"
+            },
+            "size": 18883982,
+            "thumbheight": 265,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bandet_-_panoramio.jpg/500px-Bandet_-_panoramio.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bandet_-_panoramio.jpg",
+            "user": "Panoramio upload bot",
+            "width": 5198
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 56672522,
+        "title": "File:Bandet - panoramio.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=56672524",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bandet_-_panoramio_(1).jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161028144913/http://www.panoramio.com/user/3773936?with_photo_id=93501690\">TomasEE</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "Attribution": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "TomasEE"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Besseggen|V\u00e5g\u00e5|Geography of Nord-Aurdal|Valdresflya|Panoramio files uploaded by Panoramio upload bot|Mountains of Lom, Norway|Panoramio images reviewed by trusted users|Photos from Panoramio|Files with coordinates missing SDC location of creation|Norway photographs taken on 2013-07-19|Bandet|Photos from Panoramio ID 3773936"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20161028144910/http://www.panoramio.com/photo/93501690\">https://web.archive.org/web/20161028144910/http://www.panoramio.com/photo/93501690</a>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2017-02-28 00:48:47"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "Taken on\u00a019 July 2013"
+              },
+              "GPSLatitude": {
+                "source": "commons-desc-page",
+                "value": "61.501120"
+              },
+              "GPSLongitude": {
+                "source": "commons-desc-page",
+                "value": "8.663622"
+              },
+              "GPSMapDatum": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "WGS-84"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Bandet"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by/3.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "Bandet - panoramio (1)"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png\" decoding=\"async\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png\" decoding=\"async\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/3.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/3.0/deed.en\">Attribution 3.0 Unported</a> license.</div><div class=\"rlicense-attr\" style=\"font-weight: bold;\">Attribution: <div style=\"display:inline;font-size:larger;\" class=\"licensetpl_attr\">TomasEE</div></div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> \u2013 to copy, distribute and transmit the work</li>\n<li><b>to remix</b> \u2013 to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> \u2013 You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/3.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 3.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 3.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>\n<style data-mw-deduplicate=\"TemplateStyles:r901585720\">.mw-parser-output .panoramioreview{width:100%;margin:0.5em 0;background-color:var(--background-color-warning-subtle,#fffff0);padding:5px;border:1px solid var(--border-color-warning,#aa8);color:inherit}.mw-parser-output .panoramioreview-failed{background-color:var(--background-color-error-subtle,#fcc);color:inherit}.mw-parser-output .panoramioreview-passed{background-color:var(--background-color-success-subtle,#efe);color:inherit}</style>\n<table class=\"panoramioreview panoramioreview-passed\" lang=\"en\" dir=\"ltr\">\n\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/60px-Checked_copyright_icon.svg.png\" decoding=\"async\" width=\"50\" height=\"48\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Checked_copyright_icon.svg/120px-Checked_copyright_icon.svg.png 2x\" data-file-width=\"160\" data-file-height=\"153\"></span></span>\n</td>\n<td>This image, which was originally posted to <b><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Panoramio\" class=\"extiw\" title=\"en:Panoramio\">Panoramio</a></span></b>, was automatically reviewed on 28 February 2017 by <b><a href=\"//commons.wikimedia.org/wiki/User:Panoramio_upload_bot\" title=\"User:Panoramio upload bot\">Panoramio upload bot</a></b>, who confirmed that it was available on Panoramio under the above license on that date.\n</td>\n<td><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Star_and_ring.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/60px-Star_and_ring.svg.png\" decoding=\"async\" width=\"50\" height=\"50\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Star_and_ring.svg/120px-Star_and_ring.svg.png 2x\" data-file-width=\"75\" data-file-height=\"75\"></a></span>\n</td></tr></tbody></table>"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution 3.0"
+              }
+            },
+            "height": 3447,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandet_-_panoramio_%281%29.jpg/960px-Bandet_-_panoramio_%281%29.jpg"
+            },
+            "size": 17940739,
+            "thumbheight": 267,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandet_-_panoramio_%281%29.jpg/500px-Bandet_-_panoramio_%281%29.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bandet_-_panoramio_%281%29.jpg",
+            "user": "Panoramio upload bot",
+            "width": 5172
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 56672524,
+        "title": "File:Bandet - panoramio (1).jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=116380644",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park,_Norway.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "Marek \u015alusarczyk (<a href=\"//commons.wikimedia.org/wiki/User:Tupungato\" title=\"User:Tupungato\">Tupungato</a>) <a rel=\"nofollow\" class=\"external text\" href=\"https://www.pond5.com/artist/citylife#1/2176\">Photo portfolio</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "Attribution": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tupungato\" title=\"User:Tupungato\">Marek Slusarczyk</a>"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Besseggen|Self-published work|Images by Tupungato|Snow in Innlandet|Rangifer tarandus in Norway|Hikers in Norway|Backpacks in Norway"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2022-03-24 13:21:47"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2015-08-01"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Woman tourist admires reindeer on the snow next to Besseggen mountain trail in Jotunheimen National Park, Norway. Hiking in Norway. Snow in August in Innlandet county."
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-3.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY 3.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by/3.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "002 Jotunheimein reindeer - tourist on Besseggen trail in Jotunheimen National Park, Norway"
+              },
+              "Permission": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "Outside Wikipedia projects you <b>must</b> attribute the work to the author: <b>Marek \u015alusarczyk</b> or <a rel=\"nofollow\" class=\"external text\" href=\"http://www.microstock.pl\"><b>www.microstock.pl</b></a>. In case of any doubts feel free to e-mail me: <i>marek (at) microstock pl</i>."
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution 3.0"
+              }
+            },
+            "height": 2680,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park%2C_Norway.jpg/960px-002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park%2C_Norway.jpg"
+            },
+            "size": 5588800,
+            "thumbheight": 267,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park%2C_Norway.jpg/500px-002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park%2C_Norway.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/002_Jotunheimein_reindeer_-_tourist_on_Besseggen_trail_in_Jotunheimen_National_Park%2C_Norway.jpg",
+            "user": "Tupungato",
+            "width": 4020
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 116380644,
+        "title": "File:002 Jotunheimein reindeer - tourist on Besseggen trail in Jotunheimen National Park, Norway.jpg"
+      }
+    ]
+  }
+}

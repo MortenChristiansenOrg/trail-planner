@@ -1,0 +1,3429 @@
+{
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "case": "ben-nevis-cmd",
+  "confidence": "sample",
+  "feature_count": 160,
+  "features": [
+    {
+      "category": "cafe",
+      "coordinates": [
+        -5.0743505,
+        56.8346651
+      ],
+      "id": "osm-node-1095368888",
+      "last_osm_timestamp": "2025-07-23T12:04:28Z",
+      "name": null,
+      "osm_id": 1095368888,
+      "osm_type": "node",
+      "tags": {
+        "addr:floor": "0",
+        "amenity": "cafe",
+        "check_date": "2025-07-22",
+        "level": "0",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        -5.1057095,
+        56.8375924
+      ],
+      "id": "osm-node-11961099041",
+      "last_osm_timestamp": "2026-03-03T09:30:44Z",
+      "name": "Bake \u201an\u2018 Roll",
+      "osm_id": 11961099041,
+      "osm_type": "node",
+      "tags": {
+        "addr:city": "Fort William",
+        "addr:housename": "Caol Shopping Centre",
+        "addr:postcode": "PH33 7DR",
+        "addr:village": "Caol",
+        "amenity": "cafe",
+        "check_date": "2024-06-06",
+        "fhrs:id": "1110125",
+        "name": "Bake \u201an\u2018 Roll",
+        "source:addr": "FHRS Open Data"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        -5.090514,
+        56.8239684
+      ],
+      "id": "osm-way-753114225",
+      "last_osm_timestamp": "2026-03-03T09:30:44Z",
+      "name": "Costa",
+      "osm_id": 753114225,
+      "osm_type": "way",
+      "tags": {
+        "addr:city": "Fort William",
+        "addr:postcode": "PH33 6SU",
+        "addr:street": "North Road",
+        "amenity": "cafe",
+        "brand": "Costa",
+        "brand:wikidata": "Q608845",
+        "brand:wikipedia": "en:Costa Coffee",
+        "building": "retail",
+        "cuisine": "coffee_shop",
+        "drive_through": "yes",
+        "fhrs:id": "1035965",
+        "name": "Costa",
+        "source:addr": "FHRS Open Data",
+        "takeaway": "yes"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        -5.0780908,
+        56.8355384
+      ],
+      "id": "osm-node-2504847285",
+      "last_osm_timestamp": "2016-07-22T02:23:14Z",
+      "name": "J J's Cafe'",
+      "osm_id": 2504847285,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "cafe",
+        "name": "J J's Cafe'"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        -5.1058598,
+        56.8374999
+      ],
+      "id": "osm-node-11961099039",
+      "last_osm_timestamp": "2024-06-06T16:05:05Z",
+      "name": "LAD Community Caf\u00e9",
+      "osm_id": 11961099039,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "cafe",
+        "check_date": "2024-06-06",
+        "name": "LAD Community Caf\u00e9"
+      }
+    },
+    {
+      "category": "cafe",
+      "coordinates": [
+        -4.9991224,
+        56.8519814
+      ],
+      "id": "osm-way-199546069",
+      "last_osm_timestamp": "2025-10-02T00:18:21Z",
+      "name": "The Trail's End Cafe Bar",
+      "osm_id": 199546069,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "The Trail's End Cafe Bar",
+        "old_name": "Pinemarten Coffee Shop",
+        "old_name:gd": "B\u00f9th Chofaidh an Taghain"
+      }
+    },
+    {
+      "category": "camp_site",
+      "coordinates": [
+        -5.0164623,
+        56.8607333
+      ],
+      "id": "osm-node-13011907101",
+      "last_osm_timestamp": "2025-07-19T16:26:50Z",
+      "name": "fits 2 ps tent",
+      "osm_id": 13011907101,
+      "osm_type": "node",
+      "tags": {
+        "name": "fits 2 ps tent",
+        "tourism": "camp_site"
+      }
+    },
+    {
+      "category": "drinking_water",
+      "coordinates": [
+        -4.9969768,
+        56.8523802
+      ],
+      "id": "osm-node-9918864379",
+      "last_osm_timestamp": "2022-07-29T10:04:59Z",
+      "name": null,
+      "osm_id": 9918864379,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "drinking_water"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        -5.0399617,
+        56.8882313
+      ],
+      "id": "osm-node-2917056593",
+      "last_osm_timestamp": "2014-06-15T08:33:03Z",
+      "name": null,
+      "osm_id": 2917056593,
+      "osm_type": "node",
+      "tags": {
+        "information": "board",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        -5.0847417,
+        56.8289764
+      ],
+      "id": "osm-node-9883659370",
+      "last_osm_timestamp": "2024-12-31T21:54:59Z",
+      "name": "Battle of Inverlochy",
+      "osm_id": 9883659370,
+      "osm_type": "node",
+      "tags": {
+        "board_type": "history",
+        "information": "board",
+        "name": "Battle of Inverlochy",
+        "subject:wikidata": "Q4087424",
+        "subject:wikipedia": "en:Battle of Inverlochy (1645)",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.01853,
+        56.8588682
+      ],
+      "id": "osm-node-2266189099",
+      "last_osm_timestamp": "2015-07-14T20:56:43Z",
+      "name": null,
+      "osm_id": 2266189099,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -4.9906523,
+        56.8723281
+      ],
+      "id": "osm-node-2344621544",
+      "last_osm_timestamp": "2022-05-12T10:44:04Z",
+      "name": null,
+      "osm_id": 2344621544,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0005499,
+        56.8683718
+      ],
+      "id": "osm-node-2344624411",
+      "last_osm_timestamp": "2013-06-14T16:59:23Z",
+      "name": null,
+      "osm_id": 2344624411,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0205037,
+        56.860323
+      ],
+      "id": "osm-node-2344632745",
+      "last_osm_timestamp": "2022-05-12T10:42:05Z",
+      "name": null,
+      "osm_id": 2344632745,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0649488,
+        56.8389372
+      ],
+      "id": "osm-node-2344636537",
+      "last_osm_timestamp": "2023-07-08T12:42:16Z",
+      "name": null,
+      "osm_id": 2344636537,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "parking": "street_side"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -4.9928846,
+        56.8714594
+      ],
+      "id": "osm-node-260621086",
+      "last_osm_timestamp": "2022-05-12T10:43:57Z",
+      "name": null,
+      "osm_id": 260621086,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "created_by": "JOSM",
+        "parking": "street_side"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0139187,
+        56.8532121
+      ],
+      "id": "osm-node-3651307654",
+      "last_osm_timestamp": "2015-07-14T20:56:43Z",
+      "name": null,
+      "osm_id": 3651307654,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0128333,
+        56.8523071
+      ],
+      "id": "osm-node-3651307656",
+      "last_osm_timestamp": "2015-07-14T20:56:44Z",
+      "name": null,
+      "osm_id": 3651307656,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0185027,
+        56.8594696
+      ],
+      "id": "osm-node-3651307660",
+      "last_osm_timestamp": "2015-07-14T20:56:44Z",
+      "name": null,
+      "osm_id": 3651307660,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "parking",
+        "source": "survey"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0817157,
+        56.832017
+      ],
+      "id": "osm-way-1153897817",
+      "last_osm_timestamp": "2023-09-27T14:46:50Z",
+      "name": null,
+      "osm_id": 1153897817,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "covered": "no",
+        "fee": "no",
+        "park_ride": "no",
+        "parking": "lane",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1038527,
+        56.8366628
+      ],
+      "id": "osm-way-1301624431",
+      "last_osm_timestamp": "2024-07-15T21:25:41Z",
+      "name": null,
+      "osm_id": 1301624431,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0872247,
+        56.8241934
+      ],
+      "id": "osm-way-1305790058",
+      "last_osm_timestamp": "2024-08-05T18:03:02Z",
+      "name": null,
+      "osm_id": 1305790058,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -4.9969646,
+        56.8525833
+      ],
+      "id": "osm-way-199546128",
+      "last_osm_timestamp": "2022-08-27T11:48:43Z",
+      "name": null,
+      "osm_id": 199546128,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "operator": "Forestry Commission Scotland",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0771317,
+        56.8284962
+      ],
+      "id": "osm-way-200738705",
+      "last_osm_timestamp": "2013-01-12T13:32:03Z",
+      "name": null,
+      "osm_id": 200738705,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0758447,
+        56.8282673
+      ],
+      "id": "osm-way-200738707",
+      "last_osm_timestamp": "2013-01-12T13:32:03Z",
+      "name": null,
+      "osm_id": 200738707,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.081625,
+        56.8246431
+      ],
+      "id": "osm-way-202400717",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 202400717,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0831928,
+        56.8246859
+      ],
+      "id": "osm-way-202400725",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 202400725,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0825472,
+        56.8250805
+      ],
+      "id": "osm-way-202400728",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 202400728,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0789669,
+        56.8386736
+      ],
+      "id": "osm-way-244210859",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 244210859,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0805547,
+        56.8323163
+      ],
+      "id": "osm-way-270328019",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 270328019,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0834233,
+        56.8220846
+      ],
+      "id": "osm-way-353727101",
+      "last_osm_timestamp": "2015-06-14T23:59:25Z",
+      "name": null,
+      "osm_id": 353727101,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1010011,
+        56.8378407
+      ],
+      "id": "osm-way-372888470",
+      "last_osm_timestamp": "2015-09-29T22:01:56Z",
+      "name": null,
+      "osm_id": 372888470,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0939137,
+        56.8210848
+      ],
+      "id": "osm-way-438284332",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 438284332,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1095398,
+        56.8393066
+      ],
+      "id": "osm-way-449239736",
+      "last_osm_timestamp": "2016-10-24T16:20:00Z",
+      "name": null,
+      "osm_id": 449239736,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0943531,
+        56.8257922
+      ],
+      "id": "osm-way-469903832",
+      "last_osm_timestamp": "2026-02-07T15:05:04Z",
+      "name": null,
+      "osm_id": 469903832,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0962188,
+        56.8458727
+      ],
+      "id": "osm-way-469903846",
+      "last_osm_timestamp": "2023-05-24T19:26:49Z",
+      "name": null,
+      "osm_id": 469903846,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1060662,
+        56.839411
+      ],
+      "id": "osm-way-542920054",
+      "last_osm_timestamp": "2017-11-26T13:31:43Z",
+      "name": null,
+      "osm_id": 542920054,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1084698,
+        56.8385861
+      ],
+      "id": "osm-way-542920063",
+      "last_osm_timestamp": "2020-09-29T06:57:59Z",
+      "name": null,
+      "osm_id": 542920063,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "source": "Bing"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1059782,
+        56.8379424
+      ],
+      "id": "osm-way-645025870",
+      "last_osm_timestamp": "2024-07-15T17:14:14Z",
+      "name": null,
+      "osm_id": 645025870,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0946583,
+        56.8223128
+      ],
+      "id": "osm-way-833781361",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 833781361,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "capacity": "20",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0945877,
+        56.8219857
+      ],
+      "id": "osm-way-833781362",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 833781362,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "capacity": "6"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0978549,
+        56.843037
+      ],
+      "id": "osm-way-833820900",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 833820900,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0981874,
+        56.8429901
+      ],
+      "id": "osm-way-833820901",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 833820901,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0953627,
+        56.8412392
+      ],
+      "id": "osm-way-833820905",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 833820905,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0940094,
+        56.8375823
+      ],
+      "id": "osm-way-838168126",
+      "last_osm_timestamp": "2020-08-18T10:33:43Z",
+      "name": null,
+      "osm_id": 838168126,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "capacity": "3",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0941183,
+        56.8375161
+      ],
+      "id": "osm-way-838168127",
+      "last_osm_timestamp": "2020-08-18T10:33:43Z",
+      "name": null,
+      "osm_id": 838168127,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "capacity": "3",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0942079,
+        56.8373965
+      ],
+      "id": "osm-way-838168128",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 838168128,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0945443,
+        56.8372748
+      ],
+      "id": "osm-way-838168129",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 838168129,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0968876,
+        56.8377227
+      ],
+      "id": "osm-way-838470629",
+      "last_osm_timestamp": "2020-08-19T08:18:13Z",
+      "name": null,
+      "osm_id": 838470629,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0988713,
+        56.8382639
+      ],
+      "id": "osm-way-838470649",
+      "last_osm_timestamp": "2020-08-19T08:18:13Z",
+      "name": null,
+      "osm_id": 838470649,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1021002,
+        56.8387611
+      ],
+      "id": "osm-way-850416855",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850416855,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1025419,
+        56.8388265
+      ],
+      "id": "osm-way-850416856",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850416856,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1026314,
+        56.8393063
+      ],
+      "id": "osm-way-850416866",
+      "last_osm_timestamp": "2020-09-23T08:52:45Z",
+      "name": null,
+      "osm_id": 850416866,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.10293,
+        56.8398373
+      ],
+      "id": "osm-way-850416867",
+      "last_osm_timestamp": "2020-09-23T08:52:45Z",
+      "name": null,
+      "osm_id": 850416867,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1015557,
+        56.8402471
+      ],
+      "id": "osm-way-850419623",
+      "last_osm_timestamp": "2020-09-23T09:02:24Z",
+      "name": null,
+      "osm_id": 850419623,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.100647,
+        56.8397825
+      ],
+      "id": "osm-way-850419624",
+      "last_osm_timestamp": "2020-09-23T09:02:24Z",
+      "name": null,
+      "osm_id": 850419624,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1000943,
+        56.8392614
+      ],
+      "id": "osm-way-850419625",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419625,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1011077,
+        56.8389318
+      ],
+      "id": "osm-way-850419626",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419626,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1010782,
+        56.8390847
+      ],
+      "id": "osm-way-850419627",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419627,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1020828,
+        56.8404948
+      ],
+      "id": "osm-way-850419628",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419628,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1014486,
+        56.8406271
+      ],
+      "id": "osm-way-850419631",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419631,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1010671,
+        56.8410549
+      ],
+      "id": "osm-way-850419632",
+      "last_osm_timestamp": "2020-09-23T09:02:24Z",
+      "name": null,
+      "osm_id": 850419632,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1001729,
+        56.840575
+      ],
+      "id": "osm-way-850419633",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419633,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0992734,
+        56.8409063
+      ],
+      "id": "osm-way-850419634",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850419634,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1030516,
+        56.8412935
+      ],
+      "id": "osm-way-850419644",
+      "last_osm_timestamp": "2020-09-23T09:02:24Z",
+      "name": null,
+      "osm_id": 850419644,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1044478,
+        56.8408161
+      ],
+      "id": "osm-way-850744242",
+      "last_osm_timestamp": "2024-01-22T17:09:19Z",
+      "name": null,
+      "osm_id": 850744242,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1031012,
+        56.8377808
+      ],
+      "id": "osm-way-850746801",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850746801,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1035172,
+        56.8380285
+      ],
+      "id": "osm-way-850746802",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 850746802,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1015498,
+        56.8369637
+      ],
+      "id": "osm-way-850746803",
+      "last_osm_timestamp": "2020-09-24T06:33:27Z",
+      "name": null,
+      "osm_id": 850746803,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1010938,
+        56.8367083
+      ],
+      "id": "osm-way-850746804",
+      "last_osm_timestamp": "2020-09-24T06:33:27Z",
+      "name": null,
+      "osm_id": 850746804,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0965476,
+        56.843642
+      ],
+      "id": "osm-way-852621618",
+      "last_osm_timestamp": "2020-09-29T07:09:33Z",
+      "name": null,
+      "osm_id": 852621618,
+      "osm_type": "way",
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0751181,
+        56.8405992
+      ],
+      "id": "osm-way-852630741",
+      "last_osm_timestamp": "2021-03-06T16:25:45Z",
+      "name": null,
+      "osm_id": 852630741,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0742836,
+        56.8404788
+      ],
+      "id": "osm-way-852630742",
+      "last_osm_timestamp": "2021-03-06T16:25:37Z",
+      "name": null,
+      "osm_id": 852630742,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0726448,
+        56.8406678
+      ],
+      "id": "osm-way-852630758",
+      "last_osm_timestamp": "2020-09-29T07:49:39Z",
+      "name": null,
+      "osm_id": 852630758,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0726949,
+        56.8397547
+      ],
+      "id": "osm-way-852630759",
+      "last_osm_timestamp": "2020-09-29T07:49:39Z",
+      "name": null,
+      "osm_id": 852630759,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0784639,
+        56.8397335
+      ],
+      "id": "osm-way-852634409",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 852634409,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0774153,
+        56.8384349
+      ],
+      "id": "osm-way-852634410",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 852634410,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0784306,
+        56.8359112
+      ],
+      "id": "osm-way-852640622",
+      "last_osm_timestamp": "2020-09-29T08:28:57Z",
+      "name": null,
+      "osm_id": 852640622,
+      "osm_type": "way",
+      "tags": {
+        "access": "customers",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0947824,
+        56.8463481
+      ],
+      "id": "osm-way-853206406",
+      "last_osm_timestamp": "2020-09-30T07:35:21Z",
+      "name": null,
+      "osm_id": 853206406,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0980976,
+        56.8465385
+      ],
+      "id": "osm-way-853215715",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 853215715,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0955319,
+        56.8460523
+      ],
+      "id": "osm-way-853219152",
+      "last_osm_timestamp": "2020-09-30T08:19:22Z",
+      "name": null,
+      "osm_id": 853219152,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1090995,
+        56.8423833
+      ],
+      "id": "osm-way-870729277",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 870729277,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1111835,
+        56.8428559
+      ],
+      "id": "osm-way-870729289",
+      "last_osm_timestamp": "2024-09-17T14:58:09Z",
+      "name": null,
+      "osm_id": 870729289,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.1175934,
+        56.8439979
+      ],
+      "id": "osm-way-995624559",
+      "last_osm_timestamp": "2021-10-22T17:01:51Z",
+      "name": null,
+      "osm_id": 995624559,
+      "osm_type": "way",
+      "tags": {
+        "access": "private",
+        "amenity": "parking",
+        "operator": "Mansefield House"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0792767,
+        56.8161366
+      ],
+      "id": "osm-way-684904190",
+      "last_osm_timestamp": "2025-08-27T12:45:38Z",
+      "name": "Braveheart Car Park",
+      "osm_id": 684904190,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "description": "\u00a33/day",
+        "fee": "yes",
+        "name": "Braveheart Car Park",
+        "operator": "Forestry Commision Scotland",
+        "operator:type": "government",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0969326,
+        56.8455503
+      ],
+      "id": "osm-way-39934476",
+      "last_osm_timestamp": "2023-05-24T19:26:45Z",
+      "name": "Neptune's Staircase",
+      "osm_id": 39934476,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "fixme": "Shape may be wrong, unsurveyed and overlapped surveyed road",
+        "name": "Neptune's Staircase",
+        "name:fr": "Escalier de Neptune",
+        "parking": "surface"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0007538,
+        56.8515991
+      ],
+      "id": "osm-way-37732671",
+      "last_osm_timestamp": "2025-10-02T00:18:21Z",
+      "name": "Nevis Range Car Park",
+      "osm_id": 37732671,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "parking",
+        "fee": "yes",
+        "name": "Nevis Range Car Park",
+        "source": "memory"
+      }
+    },
+    {
+      "category": "parking",
+      "coordinates": [
+        -5.0430756,
+        56.8419866
+      ],
+      "id": "osm-way-31727542",
+      "last_osm_timestamp": "2025-05-03T13:13:27Z",
+      "name": "North Face Car Park",
+      "osm_id": 31727542,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "yes",
+        "name": "North Face Car Park",
+        "parking": "surface",
+        "source": "survey",
+        "surface": "gravel"
+      }
+    },
+    {
+      "category": "restaurant",
+      "coordinates": [
+        -4.9992842,
+        56.8523091
+      ],
+      "id": "osm-node-13186894075",
+      "last_osm_timestamp": "2025-10-02T00:18:21Z",
+      "name": "Bombay Bicycle Club",
+      "osm_id": 13186894075,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Bombay Bicycle Club"
+      }
+    },
+    {
+      "category": "restaurant",
+      "coordinates": [
+        -5.0956284,
+        56.8214994
+      ],
+      "id": "osm-node-9676545801",
+      "last_osm_timestamp": "2026-04-19T14:20:24Z",
+      "name": "Brown's Restaurant",
+      "osm_id": 9676545801,
+      "osm_type": "node",
+      "tags": {
+        "addr:postcode": "PH33 6PF",
+        "amenity": "restaurant",
+        "contact:phone": "+44 1397 705721",
+        "name": "Brown's Restaurant",
+        "not:brand:wikidata": "Q4976672",
+        "operator": "Nevis Bank Hotel Ltd",
+        "outdoor_seating": "no",
+        "payment:american_express": "yes",
+        "toilets:access": "customers",
+        "website": "https://nevisbankinn.co.uk/"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        -5.0819869,
+        56.8285923
+      ],
+      "id": "osm-node-13058344679",
+      "last_osm_timestamp": "2025-08-08T16:47:01Z",
+      "name": null,
+      "osm_id": 13058344679,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "toilets",
+        "fee": "no",
+        "opening_hours": "Mo-Sa 08:00-20:00; Su 09:00-18:00"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        -4.9989617,
+        56.8524381
+      ],
+      "id": "osm-node-13186894074",
+      "last_osm_timestamp": "2025-10-02T00:18:21Z",
+      "name": null,
+      "osm_id": 13186894074,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "toilets"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        -4.9988236,
+        56.8522998
+      ],
+      "id": "osm-node-6965929655",
+      "last_osm_timestamp": "2019-11-11T09:32:05Z",
+      "name": null,
+      "osm_id": 6965929655,
+      "osm_type": "node",
+      "tags": {
+        "amenity": "toilets"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        -5.0914827,
+        56.8481712
+      ],
+      "id": "osm-way-504457264",
+      "last_osm_timestamp": "2025-08-23T21:23:40Z",
+      "name": null,
+      "osm_id": 504457264,
+      "osm_type": "way",
+      "tags": {
+        "access": "watermate_key",
+        "amenity": "toilets",
+        "building": "yes",
+        "operator": "Scottish Waterways",
+        "unisex": "yes"
+      }
+    },
+    {
+      "category": "toilets",
+      "coordinates": [
+        -5.1059629,
+        56.8381129
+      ],
+      "id": "osm-way-645025872",
+      "last_osm_timestamp": "2025-07-14T16:55:02Z",
+      "name": null,
+      "osm_id": 645025872,
+      "osm_type": "way",
+      "tags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "building": "yes",
+        "check_date": "2025-07-14",
+        "check_date:opening_hours": "2025-07-14",
+        "check_date:wheelchair": "2025-07-14",
+        "fee": "no",
+        "opening_hours": "Mo-Sa 08:00-17:00; Su 08:00-16:00",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0760308,
+        56.8340479
+      ],
+      "id": "osm-node-10908437736",
+      "last_osm_timestamp": "2023-05-18T14:24:07Z",
+      "name": null,
+      "osm_id": 10908437736,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0959116,
+        56.8438306
+      ],
+      "id": "osm-way-239118644",
+      "last_osm_timestamp": "2025-07-17T16:25:43Z",
+      "name": null,
+      "osm_id": 239118644,
+      "osm_type": "way",
+      "tags": {
+        "area": "yes",
+        "bench": "yes",
+        "bin": "yes",
+        "covered": "no",
+        "indoor": "no",
+        "lit": "yes",
+        "public_transport": "platform",
+        "railway": "platform",
+        "ref": "1",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.09197,
+        56.8228611
+      ],
+      "id": "osm-node-562714566",
+      "last_osm_timestamp": "2025-07-20T11:27:14Z",
+      "name": "A82 (North Road)",
+      "osm_id": 562714566,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "long_name": "Fort William, opposite Inverlochy Junction",
+        "name": "A82 (North Road)",
+        "naptan:AtcoCode": "6700712006A",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "A82 (North Road)",
+        "naptan:Indicator": "at Claggan Road",
+        "naptan:Landmark": "Opp Oil Depot",
+        "naptan:NaptanCode": "45329375",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "North Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.099505,
+        56.8450944
+      ],
+      "id": "osm-node-562711933",
+      "last_osm_timestamp": "2025-08-23T21:35:02Z",
+      "name": "B8004 Junction",
+      "osm_id": 562711933,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "B8004 Junction",
+        "naptan:AtcoCode": "670010205",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Caledonian Canal",
+        "naptan:Indicator": "opp B8004",
+        "naptan:Landmark": "B8004",
+        "naptan:NaptanCode": "45326969",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0958832,
+        56.8438007
+      ],
+      "id": "osm-node-13502506691",
+      "last_osm_timestamp": "2026-01-26T20:42:28Z",
+      "name": "Banavie",
+      "osm_id": 13502506691,
+      "osm_type": "node",
+      "tags": {
+        "name": "Banavie",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "train": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0958983,
+        56.8438445
+      ],
+      "id": "osm-node-26530416",
+      "last_osm_timestamp": "2026-01-26T20:42:28Z",
+      "name": "Banavie",
+      "osm_id": 26530416,
+      "osm_type": "node",
+      "tags": {
+        "name": "Banavie",
+        "name:gd": "Banbhaidh",
+        "naptan:AtcoCode": "9100BANAVIE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bnv/",
+        "network:wikidata": "Q26334",
+        "operator": "ScotRail",
+        "operator:website": "https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/bnv",
+        "operator:wikidata": "Q18356161",
+        "postal_code": "PH33 7JF",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BNV",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q1839037",
+        "wikipedia": "en:Banavie railway station"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1063213,
+        56.8450398
+      ],
+      "id": "osm-node-562716770",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Banavie",
+      "osm_id": 562716770,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Banavie",
+        "naptan:AtcoCode": "6700713975",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Banavie",
+        "naptan:Indicator": "Bus Shelter (Eastbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329248",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0959116,
+        56.8438306
+      ],
+      "id": "osm-relation-13722082",
+      "last_osm_timestamp": "2022-01-26T00:00:34Z",
+      "name": "Banavie",
+      "osm_id": 13722082,
+      "osm_type": "relation",
+      "tags": {
+        "name": "Banavie",
+        "name:gd": "Banbhaidh",
+        "public_transport": "stop_area",
+        "type": "public_transport"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0955902,
+        56.8215666
+      ],
+      "id": "osm-node-562711820",
+      "last_osm_timestamp": "2025-07-16T16:30:58Z",
+      "name": "Belford Road",
+      "osm_id": 562711820,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "check_date": "2025-07-16",
+        "departures_board": "timetable",
+        "direction": "W",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Fort William, at Nevis Bank Lane",
+        "name": "Belford Road",
+        "naptan:AtcoCode": "670010011",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Belford Road",
+        "naptan:Indicator": "o/s Nevis Bank Hotel",
+        "naptan:Landmark": "By Hotel",
+        "naptan:NaptanCode": "45323925",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Belford Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "ref": "670010011",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0872054,
+        56.8254509
+      ],
+      "id": "osm-node-562711812",
+      "last_osm_timestamp": "2025-05-02T18:59:08Z",
+      "name": "Ben Nevis Ind Est",
+      "osm_id": 562711812,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Ben Nevis Ind Est",
+        "naptan:AtcoCode": "670010007",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Ben Nevis Ind Est",
+        "naptan:Indicator": "opp Ben Nevis Ind Est",
+        "naptan:Landmark": "Ben Nevis Ind Est",
+        "naptan:NaptanCode": "45323878",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0881266,
+        56.8244932
+      ],
+      "id": "osm-node-562711816",
+      "last_osm_timestamp": "2025-07-22T15:33:48Z",
+      "name": "Ben Nevis Ind Est",
+      "osm_id": 562711816,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2025-07-20",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Fort William, at Ben Nevis Ind Est",
+        "name": "Ben Nevis Ind Est",
+        "naptan:AtcoCode": "670010008",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Ben Nevis Ind Est",
+        "naptan:Indicator": "at Ben Nevis Ind Est",
+        "naptan:Landmark": "Ben Nevis Ind Est",
+        "naptan:NaptanCode": "45323843",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0966202,
+        56.842773
+      ],
+      "id": "osm-node-562715151",
+      "last_osm_timestamp": "2019-08-27T11:38:28Z",
+      "name": "Bus Depot",
+      "osm_id": 562715151,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bus Depot",
+        "naptan:AtcoCode": "6700712485",
+        "naptan:Bearing": "NW",
+        "naptan:CommonName": "Bus Depot",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Depot",
+        "naptan:NaptanCode": "45327854",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Ardgour Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0955057,
+        56.8425849
+      ],
+      "id": "osm-node-562715155",
+      "last_osm_timestamp": "2019-08-27T11:38:28Z",
+      "name": "Bus Depot",
+      "osm_id": 562715155,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Bus Depot",
+        "naptan:AtcoCode": "6700712487",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Bus Depot",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Bus Depot",
+        "naptan:NaptanCode": "45327857",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Ardgour Road",
+        "naptan:verified": "no",
+        "network": "Shiel Buses",
+        "public_transport": "platform",
+        "source": "naptan_import;survey"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0993408,
+        56.8452875
+      ],
+      "id": "osm-node-562711928",
+      "last_osm_timestamp": "2025-08-23T21:34:55Z",
+      "name": "Caledonian Canal",
+      "osm_id": 562711928,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Caledonian Canal",
+        "naptan:AtcoCode": "670010204",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Caledonian Canal",
+        "naptan:Indicator": "at B8004",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45326968",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "note": "This is obviously in the wrong place - middle of the canal",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0813519,
+        56.8380651
+      ],
+      "id": "osm-node-562711792",
+      "last_osm_timestamp": "2026-07-04T15:46:54Z",
+      "name": "Camagael Road",
+      "osm_id": 562711792,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camagael Road",
+        "naptan:AtcoCode": "670010002",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Blarmhore (Camagael Road)",
+        "naptan:Indicator": "opp Junc for Camaghael Rd (West)",
+        "naptan:Landmark": "Road Junction",
+        "naptan:NaptanCode": "45323836",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0976712,
+        56.8225486
+      ],
+      "id": "osm-node-562716550",
+      "last_osm_timestamp": "2023-10-16T17:49:53Z",
+      "name": "Camanachd Crescent",
+      "osm_id": 562716550,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camanachd Crescent",
+        "naptan:AtcoCode": "6700713422",
+        "naptan:Bearing": "SE",
+        "naptan:CommonName": "Camanachd Cresent",
+        "naptan:Indicator": "By Nos 50-61",
+        "naptan:Landmark": "Camanachd Cresent",
+        "naptan:NaptanCode": "45328723",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Camanachd Cresent",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.085782,
+        56.8218995
+      ],
+      "id": "osm-node-562714562",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Claggan",
+      "osm_id": 562714562,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700712004",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "Bus Shelter",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327635",
+        "naptan:Street": "Carn Dearg Rd",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0886618,
+        56.8222327
+      ],
+      "id": "osm-node-562714563",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Claggan",
+      "osm_id": 562714563,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700712005",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "By Fire Station",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327636",
+        "naptan:Street": "Ardnevis Rd",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0889663,
+        56.8229443
+      ],
+      "id": "osm-node-562716594",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Claggan",
+      "osm_id": 562716594,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700713452",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "at Ardnevis Road",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45328736",
+        "naptan:Street": "Melantee",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0863703,
+        56.8228737
+      ],
+      "id": "osm-node-562716595",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Claggan",
+      "osm_id": 562716595,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Claggan",
+        "naptan:AtcoCode": "6700713452A",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Claggan",
+        "naptan:Indicator": "at The Corries",
+        "naptan:Landmark": "o/s No 39",
+        "naptan:NaptanCode": "45329632",
+        "naptan:Street": "Melantee",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.10063,
+        56.8375137
+      ],
+      "id": "osm-node-562715152",
+      "last_osm_timestamp": "2025-07-14T19:19:15Z",
+      "name": "Co-op",
+      "osm_id": 562715152,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Co-op",
+        "naptan:AtcoCode": "6700712486",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Co-op",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327856",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1010027,
+        56.8374595
+      ],
+      "id": "osm-node-562715154",
+      "last_osm_timestamp": "2025-07-14T19:19:15Z",
+      "name": "Co-op",
+      "osm_id": 562715154,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Co-op",
+        "naptan:AtcoCode": "6700712486A",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Co-op",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329392",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0792467,
+        56.83594
+      ],
+      "id": "osm-node-562714544",
+      "last_osm_timestamp": "2023-05-27T15:46:57Z",
+      "name": "Farm Foods",
+      "osm_id": 562714544,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Farm Foods",
+        "naptan:AtcoCode": "6700711990",
+        "naptan:Bearing": "NW",
+        "naptan:CommonName": "Farm Foods",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327626",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0785988,
+        56.8350391
+      ],
+      "id": "osm-node-562714545",
+      "last_osm_timestamp": "2023-05-27T15:46:57Z",
+      "name": "Farm Foods",
+      "osm_id": 562714545,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Farm Foods",
+        "naptan:AtcoCode": "6700711990A",
+        "naptan:Bearing": "SE",
+        "naptan:CommonName": "Farm Foods",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329367",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0983146,
+        56.8360881
+      ],
+      "id": "osm-node-562714549",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Glenmallie Rd",
+      "osm_id": 562714549,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Glenmallie Rd",
+        "naptan:AtcoCode": "6700711993",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Glenmallie Rd",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Glenmallie Rd",
+        "naptan:NaptanCode": "45327628",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0980728,
+        56.836139
+      ],
+      "id": "osm-node-562714550",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Glenmallie Rd",
+      "osm_id": 562714550,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Glenmallie Rd",
+        "naptan:AtcoCode": "6700711993A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Glenmallie Rd",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329369",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.076573,
+        56.8331398
+      ],
+      "id": "osm-node-2515512628",
+      "last_osm_timestamp": "2026-05-02T14:53:36Z",
+      "name": "Glenmhor Terrace",
+      "osm_id": 2515512628,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Glenmhor Terrace",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1039344,
+        56.8396732
+      ],
+      "id": "osm-node-562714551",
+      "last_osm_timestamp": "2025-07-14T19:19:17Z",
+      "name": "Health Centre",
+      "osm_id": 562714551,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Health Centre",
+        "naptan:AtcoCode": "6700711995",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Health Centre",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327629",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.103833,
+        56.8395555
+      ],
+      "id": "osm-node-562714552",
+      "last_osm_timestamp": "2025-07-14T19:19:16Z",
+      "name": "Health Centre",
+      "osm_id": 562714552,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Health Centre",
+        "naptan:AtcoCode": "6700711995A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Health Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329372",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0768378,
+        56.83814
+      ],
+      "id": "osm-node-562715435",
+      "last_osm_timestamp": "2025-07-10T19:36:11Z",
+      "name": "High School",
+      "osm_id": 562715435,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "High School",
+        "naptan:AtcoCode": "6700712680",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochaber High School",
+        "naptan:Indicator": "o/s Lochaber High School",
+        "naptan:Landmark": "Lochaber High School",
+        "naptan:NaptanCode": "45327989",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "School Car Park",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.116282,
+        56.8443225
+      ],
+      "id": "osm-node-562716767",
+      "last_osm_timestamp": "2025-07-08T19:15:33Z",
+      "name": "Hillview Drive",
+      "osm_id": 562716767,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hillview Drive",
+        "naptan:AtcoCode": "6700713972",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Hillview Drive",
+        "naptan:Indicator": "at Hillview Drive",
+        "naptan:Landmark": "Hillview Drive",
+        "naptan:NaptanCode": "45329247",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.117107,
+        56.8443573
+      ],
+      "id": "osm-node-562716768",
+      "last_osm_timestamp": "2021-07-18T11:05:20Z",
+      "name": "Hillview Drive",
+      "osm_id": 562716768,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Hillview Drive",
+        "naptan:AtcoCode": "6700713972A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Hillview Drive",
+        "naptan:Indicator": "opp Hillview Drive",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329694",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0939906,
+        56.8256243
+      ],
+      "id": "osm-node-562715561",
+      "last_osm_timestamp": "2022-07-12T18:28:35Z",
+      "name": "Inverlochy",
+      "osm_id": 562715561,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Inverlochy",
+        "naptan:AtcoCode": "6700712794",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Inverlochy",
+        "naptan:Indicator": "Bus Shelter",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45328292",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Lundy Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0918641,
+        56.8230972
+      ],
+      "id": "osm-node-562714564",
+      "last_osm_timestamp": "2025-07-20T11:26:59Z",
+      "name": "Inverlochy Junction",
+      "osm_id": 562714564,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Inverlochy Junction",
+        "naptan:AtcoCode": "6700712006",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "A82 (North Road)",
+        "naptan:Indicator": "at Inverlochy Junction",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327637",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "North Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.077292,
+        56.832105
+      ],
+      "id": "osm-node-562711801",
+      "last_osm_timestamp": "2026-05-02T14:53:36Z",
+      "name": "Lochy Bridge",
+      "osm_id": 562711801,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochy Bridge",
+        "naptan:AtcoCode": "670010004",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Lochy Bridge (Northbound)",
+        "naptan:Landmark": "Lochy Bridge",
+        "naptan:NaptanCode": "45323834",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0762349,
+        56.8340097
+      ],
+      "id": "osm-node-562714542",
+      "last_osm_timestamp": "2023-05-27T15:46:57Z",
+      "name": "Lochy Bridge",
+      "osm_id": 562714542,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochy Bridge",
+        "naptan:AtcoCode": "6700711989",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Opp Glenmhor Terrace",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327625",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0831568,
+        56.8285485
+      ],
+      "id": "osm-node-562711804",
+      "last_osm_timestamp": "2025-07-22T15:33:50Z",
+      "name": "Lochy Bridge (BA)",
+      "osm_id": 562711804,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2025-07-20",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "long_name": "Lochybridge, at British Aluminium",
+        "name": "Lochy Bridge (BA)",
+        "naptan:AtcoCode": "670010005",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "at BA Road End",
+        "naptan:Landmark": "BA Road End",
+        "naptan:NaptanCode": "45323832",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0758688,
+        56.8341446
+      ],
+      "id": "osm-node-562714543",
+      "last_osm_timestamp": "2025-07-23T12:04:28Z",
+      "name": "Lochy Bridge (Glenmhor terrace)",
+      "osm_id": 562714543,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "direction": "S",
+        "highway": "bus_stop",
+        "long_name": "Lochybridge, at Glenmhor Terrace",
+        "name": "Lochy Bridge (Glenmhor terrace)",
+        "naptan:AtcoCode": "6700711989A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "at Glenmhor terrace",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329365",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "website": "https://nextbuses.mobi/WebView/BusStopSearch/BusStopSearchResults?id=6700711989A"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0774186,
+        56.8318502
+      ],
+      "id": "osm-node-562711797",
+      "last_osm_timestamp": "2023-03-12T21:45:30Z",
+      "name": "Lochy Bridge (Tail race)",
+      "osm_id": 562711797,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "long_name": "Lochybridge, before Tail Race",
+        "name": "Lochy Bridge (Tail race)",
+        "naptan:AtcoCode": "670010003",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "Bus Stop Southbound",
+        "naptan:Landmark": "Lochy Bridge",
+        "naptan:NaptanCode": "45323835",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0877282,
+        56.8343485
+      ],
+      "id": "osm-node-562714546",
+      "last_osm_timestamp": "2022-10-12T14:27:12Z",
+      "name": "Lochyside RC Primary School",
+      "osm_id": 562714546,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside RC Primary School",
+        "naptan:AtcoCode": "6700711991",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Lochyside RC Primary School",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45327627",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0871915,
+        56.8344402
+      ],
+      "id": "osm-node-562714548",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Lochyside RC Primary School",
+      "osm_id": 562714548,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside RC Primary School",
+        "naptan:AtcoCode": "6700711991A",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Lochyside RC Primary School",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329368",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0874875,
+        56.8344508
+      ],
+      "id": "osm-node-562714502",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Lochyside School",
+      "osm_id": 562714502,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lochyside School",
+        "naptan:AtcoCode": "6700711960",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Lochyside School",
+        "naptan:Indicator": "outside Lochyside School",
+        "naptan:Landmark": "Lochyside School",
+        "naptan:NaptanCode": "45327573",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8006",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0780938,
+        56.8387961
+      ],
+      "id": "osm-node-562716788",
+      "last_osm_timestamp": "2023-05-27T15:46:57Z",
+      "name": "Medical Centre",
+      "osm_id": 562716788,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Medical Centre",
+        "naptan:AtcoCode": "6700713985",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Medical Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Medical Centre",
+        "naptan:NaptanCode": "45342357",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0953475,
+        56.8462294
+      ],
+      "id": "osm-node-562714478",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Moorings Hotel",
+      "osm_id": 562714478,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moorings Hotel",
+        "naptan:AtcoCode": "6700711424",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Moorings Hotel",
+        "naptan:Indicator": "at Moorings Hotel",
+        "naptan:Landmark": "Moorings Hotel",
+        "naptan:NaptanCode": "45327539",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0955337,
+        56.8463368
+      ],
+      "id": "osm-node-562714973",
+      "last_osm_timestamp": "2021-10-27T17:41:28Z",
+      "name": "Moorings Hotel",
+      "osm_id": 562714973,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moorings Hotel",
+        "naptan:AtcoCode": "6700712424A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Moorings Hotel",
+        "naptan:Indicator": "opp Moorings Hotel",
+        "naptan:Landmark": "Moorings Hotel",
+        "naptan:NaptanCode": "45329383",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0959146,
+        56.821741
+      ],
+      "id": "osm-node-562711824",
+      "last_osm_timestamp": "2025-07-16T16:30:58Z",
+      "name": "Nevis Bank Lane",
+      "osm_id": 562711824,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "check_date": "2025-07-16",
+        "highway": "bus_stop",
+        "level": "0",
+        "lit": "yes",
+        "name": "Nevis Bank Lane",
+        "naptan:AtcoCode": "670010012",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Belford Road",
+        "naptan:Indicator": "opp Croft Road",
+        "naptan:Landmark": "Croft Road",
+        "naptan:NaptanCode": "45323924",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Belford Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0152665,
+        56.8627341
+      ],
+      "id": "osm-node-562712186",
+      "last_osm_timestamp": "2025-05-05T13:09:45Z",
+      "name": "Nevis Range Road End",
+      "osm_id": 562712186,
+      "osm_type": "node",
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "direction": "SW",
+        "highway": "bus_stop",
+        "long_name": "Nevis Range, at Road End",
+        "name": "Nevis Range Road End",
+        "naptan:AtcoCode": "670020002",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Nevis Range Road End",
+        "naptan:Indicator": "at Junction",
+        "naptan:Landmark": "Junction",
+        "naptan:NaptanCode": "45323739",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "no",
+        "source": "naptan_import",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0152999,
+        56.8629792
+      ],
+      "id": "osm-node-562712189",
+      "last_osm_timestamp": "2011-02-08T21:30:13Z",
+      "name": "Nevis Range Road End",
+      "osm_id": 562712189,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Nevis Range Road End",
+        "naptan:AtcoCode": "670020002A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Nevis Range Road End",
+        "naptan:Indicator": "opp Junction",
+        "naptan:Landmark": "Junction",
+        "naptan:NaptanCode": "45329297",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0994385,
+        56.842739
+      ],
+      "id": "osm-node-562714561",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "No 236",
+      "osm_id": 562714561,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "No 236",
+        "naptan:AtcoCode": "6700711997A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "No 236",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329374",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0994006,
+        56.8428747
+      ],
+      "id": "osm-node-562714559",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "No 238",
+      "osm_id": 562714559,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "No 238",
+        "naptan:AtcoCode": "6700711997",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "No 238",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "No 238",
+        "naptan:NaptanCode": "45327634",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0829417,
+        56.8288804
+      ],
+      "id": "osm-node-562711808",
+      "last_osm_timestamp": "2025-07-22T15:33:50Z",
+      "name": "North Road Retail Park",
+      "osm_id": 562711808,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "North Road Retail Park",
+        "naptan:AtcoCode": "670010006",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Lochy Bridge",
+        "naptan:Indicator": "opp BA Road End (Northbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45323829",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1096301,
+        56.8447865
+      ],
+      "id": "osm-node-562711920",
+      "last_osm_timestamp": "2025-09-06T10:16:51Z",
+      "name": "Primary School",
+      "osm_id": 562711920,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School",
+        "naptan:AtcoCode": "670010202",
+        "naptan:Bearing": "E",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "opp Primary School Road End",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45326965",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1106382,
+        56.8427029
+      ],
+      "id": "osm-node-562714477",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Primary School",
+      "osm_id": 562714477,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School",
+        "naptan:AtcoCode": "6700711053",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "o/s Primary School",
+        "naptan:Landmark": "Banavie Primary School",
+        "naptan:NaptanCode": "45327538",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Primary School Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1108521,
+        56.8444803
+      ],
+      "id": "osm-node-562711924",
+      "last_osm_timestamp": "2025-09-06T10:16:58Z",
+      "name": "Primary School Road End",
+      "osm_id": 562711924,
+      "osm_type": "node",
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Primary School Road End",
+        "naptan:AtcoCode": "670010203",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Primary School",
+        "naptan:Indicator": "at Primary School Road End",
+        "naptan:Landmark": "Banavie Primary School",
+        "naptan:NaptanCode": "45326967",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1022295,
+        56.8417797
+      ],
+      "id": "osm-node-562714554",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Rosscott House",
+      "osm_id": 562714554,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rosscott House",
+        "naptan:AtcoCode": "6700711996",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Rosscott Ho",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Rosscott Ho",
+        "naptan:NaptanCode": "45327632",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1021231,
+        56.8416835
+      ],
+      "id": "osm-node-562714555",
+      "last_osm_timestamp": "2021-10-27T17:20:38Z",
+      "name": "Rosscott House",
+      "osm_id": 562714555,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rosscott House",
+        "naptan:AtcoCode": "6700711996A",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Rosscott Ho",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329373",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "Kilmallie Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0674143,
+        56.8682024
+      ],
+      "id": "osm-node-562715869",
+      "last_osm_timestamp": "2011-02-08T21:30:14Z",
+      "name": "Telephone Box",
+      "osm_id": 562715869,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "local_ref": "AT",
+        "name": "Telephone Box",
+        "naptan:AtcoCode": "6700712996",
+        "naptan:Bearing": "NE",
+        "naptan:CommonName": "Telephone Box",
+        "naptan:Indicator": "at",
+        "naptan:Landmark": "Telephone Box",
+        "naptan:NaptanCode": "45328452",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0673258,
+        56.8681237
+      ],
+      "id": "osm-node-562715873",
+      "last_osm_timestamp": "2011-02-08T21:30:14Z",
+      "name": "Telephone Box",
+      "osm_id": 562715873,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Telephone Box",
+        "naptan:AtcoCode": "6700712996A",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Telephone Box",
+        "naptan:Indicator": "opp",
+        "naptan:Landmark": "Telephone Box",
+        "naptan:NaptanCode": "45329487",
+        "naptan:Street": "B8004",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0465696,
+        56.8471064
+      ],
+      "id": "osm-node-562717120",
+      "last_osm_timestamp": "2021-09-26T16:53:17Z",
+      "name": "Torlundy",
+      "osm_id": 562717120,
+      "osm_type": "node",
+      "tags": {
+        "direction": "S",
+        "highway": "bus_stop",
+        "long_name": "Torlundy, at Bus Shelter",
+        "name": "Torlundy",
+        "naptan:AtcoCode": "670084756",
+        "naptan:Bearing": "S",
+        "naptan:CommonName": "Torlundy",
+        "naptan:Indicator": "at Bus Shelter",
+        "naptan:Landmark": "Letterbox",
+        "naptan:NaptanCode": "45327478",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "yes",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0466582,
+        56.8471108
+      ],
+      "id": "osm-node-562717121",
+      "last_osm_timestamp": "2022-05-12T10:40:12Z",
+      "name": "Torlundy",
+      "osm_id": 562717121,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Torlundy",
+        "naptan:AtcoCode": "670084756A",
+        "naptan:Bearing": "N",
+        "naptan:CommonName": "Torlundy",
+        "naptan:Indicator": "opp Bus Shelter",
+        "naptan:Landmark": "River Lundy",
+        "naptan:NaptanCode": "45329748",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A82",
+        "naptan:verified": "no",
+        "shelter": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.0000731,
+        56.8521702
+      ],
+      "id": "osm-node-562715957",
+      "last_osm_timestamp": "2011-03-06T15:18:30Z",
+      "name": "Visitor Centre",
+      "osm_id": 562715957,
+      "osm_type": "node",
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Visitor Centre",
+        "naptan:AtcoCode": "6700713020",
+        "naptan:Bearing": "SW",
+        "naptan:CommonName": "Visitor Centre",
+        "naptan:Indicator": "o/s",
+        "naptan:Landmark": "Visitor Centre",
+        "naptan:NaptanCode": "45328463",
+        "naptan:Street": "Nevis Range Road",
+        "naptan:verified": "no",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "transit_stop",
+      "coordinates": [
+        -5.1069143,
+        56.8448927
+      ],
+      "id": "osm-node-562716771",
+      "last_osm_timestamp": "2025-07-08T19:15:33Z",
+      "name": "Wilson Way",
+      "osm_id": 562716771,
+      "osm_type": "node",
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilson Way",
+        "naptan:AtcoCode": "6700713975A",
+        "naptan:Bearing": "W",
+        "naptan:CommonName": "Banavie",
+        "naptan:Indicator": "Bus Shelter (Westbound)",
+        "naptan:Landmark": "Bus Shelter",
+        "naptan:NaptanCode": "45329696",
+        "naptan:PlusbusZoneRef": "FRTWLM",
+        "naptan:Street": "A830",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        -5.0927501,
+        56.8196209
+      ],
+      "id": "osm-node-1835526557",
+      "last_osm_timestamp": "2019-08-28T20:25:32Z",
+      "name": null,
+      "osm_id": 1835526557,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        -4.9882008,
+        56.8338467
+      ],
+      "id": "osm-node-2263380652",
+      "last_osm_timestamp": "2022-04-14T18:10:13Z",
+      "name": null,
+      "osm_id": 2263380652,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        -5.0847681,
+        56.8290018
+      ],
+      "id": "osm-node-9883644924",
+      "last_osm_timestamp": "2022-07-12T17:53:52Z",
+      "name": null,
+      "osm_id": 9883644924,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    }
+  ],
+  "freshness": "osm_element_timestamp_when_available",
+  "id": "ben-nevis-cmd-osm-poi-amenities",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "query": {
+    "center": [
+      -5.0444,
+      56.8499
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "overpass_ql": "[out:json][timeout:30];\n(\n  nwr(around:4500,56.8499,-5.0444)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,56.8499,-5.0444)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,56.8499,-5.0444)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,56.8499,-5.0444)[\"public_transport\"];\n  nwr(around:4500,56.8499,-5.0444)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "radius_m": 4500
+  },
+  "retrieved_at": "2026-07-05T09:59:46Z",
+  "source": "openstreetmap_overpass"
+}

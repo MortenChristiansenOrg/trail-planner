@@ -1,0 +1,33 @@
+{
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "sources": [
+    {
+      "case": "besseggen",
+      "provider": "Gjendebatene",
+      "source_url": "https://gjende.no/en/time-tables/",
+      "observed_public_information": [
+        "2026 season departures from June 6 to September 19",
+        "Daily departures from June 6 through September 13",
+        "Gjendesheim to Memurubu is the common Besseggen boat leg"
+      ]
+    },
+    {
+      "case": "trolltunga",
+      "provider": "Trolltunga official transport pages",
+      "source_url": "https://www.trolltunga.com/en/parking-and-transport/shuttle-busses",
+      "observed_public_information": [
+        "Shuttle buses run Odda - P1 Tyssedal - P2 Skjeggedal",
+        "Second bus runs P2 Skjeggedal - P3 Magelitopp"
+      ]
+    },
+    {
+      "case": "romsdalseggen",
+      "provider": "NOR-WAY Bussekspress",
+      "source_url": "https://www.nor-way.no/en/routes/romsdalseggenbussen/",
+      "observed_public_information": [
+        "Romsdalseggen bus shuttle operates from mid June to mid October",
+        "Online booking is required/recommended through NOR-WAY"
+      ]
+    }
+  ]
+}

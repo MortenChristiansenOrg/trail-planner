@@ -1,0 +1,10 @@
+{
+  "source": "openrouteservice",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "status": "not_queried",
+  "reason": "API key required; see ../.env.example.",
+  "docs": [
+    "https://openrouteservice.org/",
+    "https://openrouteservice.org/restrictions/"
+  ]
+}

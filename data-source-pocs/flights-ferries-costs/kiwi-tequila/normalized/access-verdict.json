@@ -1,0 +1,8 @@
+{
+  "source": "kiwi_tequila",
+  "verdict": "blocked",
+  "mvp_role": "Do not depend on for MVP.",
+  "auth_required": true,
+  "reason": "Partner/affiliate access must be confirmed before meaningful testing.",
+  "confidence": "medium"
+}

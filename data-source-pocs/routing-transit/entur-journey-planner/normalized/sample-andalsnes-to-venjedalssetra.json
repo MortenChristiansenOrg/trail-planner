@@ -1,0 +1,66 @@
+{
+  "id": "andalsnes-to-venjedalssetra-entur",
+  "source": "entur_journey_planner",
+  "retrieved_at": "2026-07-05T09:57:40Z",
+  "query": {
+    "endpoint": "https://api.entur.io/journey-planner/v3/graphql",
+    "case": "andalsnes-to-venjedalssetra",
+    "origin": {
+      "name": "Andalsnes stasjon",
+      "coordinates": {
+        "latitude": 62.567,
+        "longitude": 7.6871
+      }
+    },
+    "destination": {
+      "name": "Venjedalssetra",
+      "coordinates": {
+        "latitude": 62.5351,
+        "longitude": 7.8283
+      }
+    },
+    "dateTime": "2026-07-15T08:00:00+02:00"
+  },
+  "license_or_terms_url": "https://developer.entur.org/pages-journeyplanner-journeyplanner/",
+  "freshness": "scheduled_with_realtime_when_available",
+  "confidence": "live_api_sample",
+  "origin": "Andalsnes stasjon",
+  "destination": "Venjedalssetra",
+  "mode": "public_transport",
+  "patterns": [
+    {
+      "rank": 1,
+      "duration_minutes": 183.8,
+      "walk_distance_km": 11.47,
+      "start": "2026-07-15T08:00:00+02:00",
+      "end": "2026-07-15T11:03:48+02:00",
+      "segments": [
+        {
+          "mode": "foot",
+          "line": null,
+          "from": {
+            "name": "Andalsnes stasjon",
+            "latitude": 62.567,
+            "longitude": 7.6871
+          },
+          "to": {
+            "name": "Venjedalssetra",
+            "latitude": 62.5351,
+            "longitude": 7.8283
+          },
+          "start": "2026-07-15T08:00:00+02:00",
+          "end": "2026-07-15T11:03:48+02:00",
+          "duration_minutes": 183.8,
+          "distance_km": 11.47,
+          "situations": []
+        }
+      ]
+    }
+  ],
+  "routing_errors": [
+    {
+      "code": "noTransitConnection",
+      "description": "No trip found. There may be no transit service within the maximum specified distance or at the specified time, or your start or end point might not be safely accessible."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source": "direct_ferries_connect",
+  "checked_at": "2026-07-05",
+  "source_url": "https://www.directferriesconnect.com/connect",
+  "access_model": "B2B partner/commercial API",
+  "public_sample_run": false,
+  "claimed_coverage": "Direct Ferries Connect advertises REST API access to thousands of ferry routes and hundreds of operators.",
+  "reason_no_script": "Requires partner approval and API credentials."
+}

@@ -1,0 +1,66 @@
+{
+  "source": "manual_local_shuttle_sources",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "license_or_terms_url": "per-source",
+  "freshness": "operator_page_observed",
+  "confidence": "manual_source_link",
+  "segments": [
+    {
+      "id": "besseggen-gjendesheim-memurubu-boat",
+      "case": "Besseggen",
+      "provider": "Gjendebatene",
+      "mode": "boat",
+      "origin": "Gjendesheim",
+      "destination": "Memurubu",
+      "season_window": {
+        "start": "2026-06-06",
+        "end": "2026-09-19",
+        "confidence": "operator_page"
+      },
+      "booking_required": true,
+      "source_url": "https://gjende.no/en/time-tables/",
+      "api_presence": {
+        "entur_sample": "not_found",
+        "notes": "Entur coordinate query returned no usable boat itinerary for 2026-07-15."
+      }
+    },
+    {
+      "id": "trolltunga-odda-skjeggedal-shuttle",
+      "case": "Trolltunga",
+      "provider": "Trolltunga shuttle/operators",
+      "mode": "shuttle_bus",
+      "origin": "Odda",
+      "destination": "P2 Skjeggedal / P3 Magelitopp",
+      "season_window": {
+        "start": null,
+        "end": null,
+        "confidence": "needs_operator_timetable_capture"
+      },
+      "booking_required": true,
+      "source_url": "https://www.trolltunga.com/en/parking-and-transport/shuttle-busses",
+      "api_presence": {
+        "entur_sample": "not_found",
+        "notes": "Entur returned walk-only Odda to Skjeggedal with no transit connection."
+      }
+    },
+    {
+      "id": "romsdalseggen-andalsnes-venjedalssetra-bus",
+      "case": "Romsdalseggen",
+      "provider": "NOR-WAY Bussekspress",
+      "mode": "shuttle_bus",
+      "origin": "Andalsnes",
+      "destination": "Venjedalssetra",
+      "season_window": {
+        "start": "mid June",
+        "end": "mid October",
+        "confidence": "operator_page"
+      },
+      "booking_required": true,
+      "source_url": "https://www.nor-way.no/en/routes/romsdalseggenbussen/",
+      "api_presence": {
+        "entur_sample": "not_found",
+        "notes": "Entur returned walk-only Andalsnes to Venjedalssetra with no transit connection."
+      }
+    }
+  ]
+}

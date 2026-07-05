@@ -1,0 +1,301 @@
+{
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "case": "trolltunga",
+  "confidence": "sample",
+  "feature_count": 16,
+  "features": [
+    {
+      "category": "information",
+      "coordinates": [
+        6.7559308,
+        60.133739
+      ],
+      "id": "osm-node-13040814301",
+      "last_osm_timestamp": "2025-08-01T08:03:17Z",
+      "name": null,
+      "osm_id": 13040814301,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        6.7532554,
+        60.1380989
+      ],
+      "id": "osm-node-13040843315",
+      "last_osm_timestamp": "2025-08-01T08:19:11Z",
+      "name": null,
+      "osm_id": 13040843315,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "information",
+      "coordinates": [
+        6.7576043,
+        60.1339603
+      ],
+      "id": "osm-node-1826999288",
+      "last_osm_timestamp": "2012-07-15T21:43:04Z",
+      "name": "Trolltunga",
+      "osm_id": 1826999288,
+      "osm_type": "node",
+      "tags": {
+        "information": "guidepost",
+        "name": "Trolltunga",
+        "tourism": "information"
+      }
+    },
+    {
+      "category": "shelter",
+      "coordinates": [
+        6.6978883,
+        60.1409055
+      ],
+      "id": "osm-way-1068976560",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 1068976560,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "shelter",
+        "building": "cabin",
+        "ref:kartverket:hytte": "9999",
+        "shelter_type": "basic_hut"
+      }
+    },
+    {
+      "category": "shelter",
+      "coordinates": [
+        6.7282963,
+        60.140223
+      ],
+      "id": "osm-way-1068976561",
+      "last_osm_timestamp": "2023-08-13T09:04:34Z",
+      "name": null,
+      "osm_id": 1068976561,
+      "osm_type": "way",
+      "tags": {
+        "amenity": "shelter",
+        "building": "cabin",
+        "ref:kartverket:hytte": "9999",
+        "shelter_type": "basic_hut"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7006468,
+        60.1391031
+      ],
+      "id": "osm-node-11111276106",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 11111276106,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.722828,
+        60.137717
+      ],
+      "id": "osm-node-11111276388",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 11111276388,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7212541,
+        60.1376056
+      ],
+      "id": "osm-node-11111276389",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 11111276389,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7261431,
+        60.1380325
+      ],
+      "id": "osm-node-11111322893",
+      "last_osm_timestamp": "2023-08-13T09:04:34Z",
+      "name": null,
+      "osm_id": 11111322893,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7490922,
+        60.1252028
+      ],
+      "id": "osm-node-11339585831",
+      "last_osm_timestamp": "2023-11-10T22:24:07Z",
+      "name": null,
+      "osm_id": 11339585831,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7003141,
+        60.1376378
+      ],
+      "id": "osm-node-4958830725",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 4958830725,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7185612,
+        60.1381097
+      ],
+      "id": "osm-node-6742312385",
+      "last_osm_timestamp": "2023-08-13T08:16:35Z",
+      "name": null,
+      "osm_id": 6742312385,
+      "osm_type": "node",
+      "tags": {
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7551592,
+        60.1217823
+      ],
+      "id": "osm-node-2017128864",
+      "last_osm_timestamp": "2023-08-21T19:51:41Z",
+      "name": "Preikestolen",
+      "osm_id": 2017128864,
+      "osm_type": "node",
+      "tags": {
+        "description:en": "A twenty minute walk from Trolltunga, this cliff shares its name with the more known one east of Stavanger",
+        "ele": "1200",
+        "name": "Preikestolen",
+        "name:ru": "\u042f\u0437\u044b\u043a \u0442\u0440\u043e\u043b\u043b\u044f",
+        "note": "This is not the same cliff as the more known one near Stavanger. It just shares the same name.",
+        "tourism": "viewpoint"
+      }
+    },
+    {
+      "category": "viewpoint",
+      "coordinates": [
+        6.7539979,
+        60.1329576
+      ],
+      "id": "osm-node-1377795111",
+      "last_osm_timestamp": "2024-07-14T08:20:21Z",
+      "name": "Trolltunga",
+      "osm_id": 1377795111,
+      "osm_type": "node",
+      "tags": {
+        "alt_name:ko": "\ud2b8\ub864\ud241\uac00",
+        "description": "This is a very challenging hike, at least 10 hours on rough terrain. There are no shelters on the hike route and no places to buy supplies.",
+        "image": "https://photos.app.goo.gl/29oGuMHoEHisKg9y8",
+        "name": "Trolltunga",
+        "name:de": "Trollzunge",
+        "name:en": "Troll tongue",
+        "name:ko": "\uc545\ub9c8\uc758\ud600",
+        "name:zh": "\u60e1\u9b54\u4e4b\u820c",
+        "natural": "cliff",
+        "tourism": "viewpoint",
+        "url": "https://www.youtube.com/@trolltunga1104",
+        "viewpoint:direction": "170-350",
+        "wikidata": "Q1512593",
+        "wikipedia": "no:Trolltunga"
+      }
+    },
+    {
+      "category": "wilderness_hut",
+      "coordinates": [
+        6.7585067,
+        60.0895584
+      ],
+      "id": "osm-node-9668454807",
+      "last_osm_timestamp": "2024-08-15T22:12:55Z",
+      "name": "Langavassbui Emergency Shelter",
+      "osm_id": 9668454807,
+      "osm_type": "node",
+      "tags": {
+        "historic": "shieling",
+        "name": "Langavassbui Emergency Shelter",
+        "ssr:stedsnr": "125395",
+        "tourism": "wilderness_hut"
+      }
+    },
+    {
+      "category": "wilderness_hut",
+      "coordinates": [
+        6.7562665,
+        60.1301761
+      ],
+      "id": "osm-node-9112799590",
+      "last_osm_timestamp": "2025-05-02T18:35:02Z",
+      "name": "Reinaskorsbu",
+      "osm_id": 9112799590,
+      "osm_type": "node",
+      "tags": {
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "457",
+        "dnt:lock": "yes",
+        "ele": "1185",
+        "name": "Reinaskorsbu",
+        "network": "Den Norske Turistforening",
+        "operator": "Bergen Turlag",
+        "ruins:tourism": "wilderness_hut",
+        "tourism": "wilderness_hut"
+      }
+    }
+  ],
+  "freshness": "osm_element_timestamp_when_available",
+  "id": "trolltunga-osm-poi-amenities",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "query": {
+    "center": [
+      6.7394,
+      60.1241
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "overpass_ql": "[out:json][timeout:30];\n(\n  nwr(around:4500,60.1241,6.7394)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,60.1241,6.7394)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,60.1241,6.7394)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,60.1241,6.7394)[\"public_transport\"];\n  nwr(around:4500,60.1241,6.7394)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "radius_m": 4500
+  },
+  "retrieved_at": "2026-07-05T09:59:30Z",
+  "source": "openstreetmap_overpass"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "dnt-cabins-manual-fallback",
+  "source": "dnt",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "source_urls": [
+    "https://www.dnt.no/om-dnt/english/about-the-dnt-cabins/",
+    "https://www.dnt.no/om-dnt/english/routes-and-cabins/"
+  ],
+  "fields": ["cabin_name", "cabin_type", "area", "official_url", "booking_url", "opening_period", "price_assumption", "availability_checked_at", "confidence"]
+}

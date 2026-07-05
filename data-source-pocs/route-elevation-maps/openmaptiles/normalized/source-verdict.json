@@ -1,0 +1,7 @@
+{
+  "source": "openmaptiles",
+  "verdict": "viable_with_limits",
+  "mvp_role": "Self-hosted vector tile fallback if hosted map costs/privacy become blockers.",
+  "confidence": "medium",
+  "next_step": "Generate a small Norway/DK extract tile set only if MapTiler Cloud is rejected."
+}

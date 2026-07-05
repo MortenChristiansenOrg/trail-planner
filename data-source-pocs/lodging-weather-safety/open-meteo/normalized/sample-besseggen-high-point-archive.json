@@ -1,0 +1,90 @@
+{
+  "case": {
+    "elevation_m": 1743,
+    "id": "besseggen-high-point",
+    "lat": 61.506,
+    "lon": 8.798,
+    "name": "Besseggen high point",
+    "timezone": "Europe/Oslo"
+  },
+  "confidence": "sample",
+  "days": [
+    {
+      "date": "2025-07-01",
+      "precipitation_sum_mm": 1.7,
+      "rain_sum_mm": 1.7,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 10.5,
+      "temperature_2m_mean_c": 7.4,
+      "temperature_2m_min_c": 4.4
+    },
+    {
+      "date": "2025-07-02",
+      "precipitation_sum_mm": 1.9,
+      "rain_sum_mm": 1.9,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 10.4,
+      "temperature_2m_mean_c": 7.1,
+      "temperature_2m_min_c": 3.7
+    },
+    {
+      "date": "2025-07-03",
+      "precipitation_sum_mm": 0.8,
+      "rain_sum_mm": 0.8,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 5.6,
+      "temperature_2m_mean_c": 3.7,
+      "temperature_2m_min_c": 0.9
+    },
+    {
+      "date": "2025-07-04",
+      "precipitation_sum_mm": 3.6,
+      "rain_sum_mm": 3.3,
+      "snowfall_sum_cm": 0.21,
+      "temperature_2m_max_c": 6.4,
+      "temperature_2m_mean_c": 2.6,
+      "temperature_2m_min_c": -1.7
+    },
+    {
+      "date": "2025-07-05",
+      "precipitation_sum_mm": 21.3,
+      "rain_sum_mm": 21.3,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 3.6,
+      "temperature_2m_mean_c": 2.0,
+      "temperature_2m_min_c": 0.0
+    },
+    {
+      "date": "2025-07-06",
+      "precipitation_sum_mm": 2.5,
+      "rain_sum_mm": 2.5,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 10.3,
+      "temperature_2m_mean_c": 6.4,
+      "temperature_2m_min_c": 2.9
+    },
+    {
+      "date": "2025-07-07",
+      "precipitation_sum_mm": 4.7,
+      "rain_sum_mm": 4.7,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 8.0,
+      "temperature_2m_mean_c": 5.2,
+      "temperature_2m_min_c": 2.3
+    }
+  ],
+  "freshness": "historical_reanalysis_sample",
+  "id": "besseggen-high-point-open-meteo-archive",
+  "license_or_terms_url": "https://open-meteo.com/en/terms",
+  "query": {
+    "daily": "temperature_2m_mean,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum",
+    "elevation": 1743,
+    "end_date": "2025-07-07",
+    "latitude": 61.506,
+    "longitude": 8.798,
+    "start_date": "2025-07-01",
+    "timezone": "Europe/Oslo"
+  },
+  "retrieved_at": "2026-07-05T09:59:28+00:00",
+  "source": "open_meteo_historical_weather"
+}

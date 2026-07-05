@@ -1,0 +1,7 @@
+{
+  "source": "official_route_pages",
+  "verdict": "manual_only",
+  "mvp_role": "Curated seed route list, warnings, season notes, and evidence URLs.",
+  "confidence": "high",
+  "next_step": "Create seed-route schema and collect 25 official source links."
+}

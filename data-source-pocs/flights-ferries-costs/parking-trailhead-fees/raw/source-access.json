@@ -1,0 +1,37 @@
+{
+  "source": "parking_trailhead_fees",
+  "checked_at": "2026-07-05",
+  "sources": [
+    {
+      "case": "Trolltunga",
+      "url": "https://www.trolltunga.com/en/parking-and-transport/parking",
+      "observed": "Official page describes required road toll and parking payment at P2 Skjeggedal and vehicle applicability."
+    },
+    {
+      "case": "Besseggen/Gjendesheim",
+      "url": "https://visitgjende.no/en/parking/",
+      "observed": "Visit Gjende provides parking and shuttle information."
+    },
+    {
+      "case": "Besseggen/Gjendesheim",
+      "url": "https://gjende.no/en/parking-shuttle/",
+      "observed": "Gjendebaatene states no long-term parking at Gjendeosen and directs users to Reinsvangen."
+    },
+    {
+      "case": "Romsdalseggen",
+      "url": "https://www.nor-way.no/en/routes/romsdalseggenbussen/",
+      "observed": "NOR-WAY describes seasonal shuttle, weather cancellations, toll included in bus ticket, and limited parking."
+    },
+    {
+      "case": "Romsdalseggen",
+      "url": "https://www.fjordnorway.com/en/attractions/romsdalseggen",
+      "observed": "Fjord Norway recommends parking in Andalsnes near the bus."
+    },
+    {
+      "case": "Ben Nevis CMD",
+      "url": "https://www.highlifehighland.com/attractions/ben-nevis-visitor-centre",
+      "observed": "Official visitor-centre page confirms car park facility, but live tariff detail was not exposed in the search result."
+    }
+  ],
+  "public_api_found": false
+}

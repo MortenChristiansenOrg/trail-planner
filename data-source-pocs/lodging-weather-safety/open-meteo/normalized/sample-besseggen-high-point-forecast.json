@@ -1,0 +1,108 @@
+{
+  "case": {
+    "elevation_m": 1743,
+    "id": "besseggen-high-point",
+    "lat": 61.506,
+    "lon": 8.798,
+    "name": "Besseggen high point",
+    "timezone": "Europe/Oslo"
+  },
+  "confidence": "sample",
+  "days": [
+    {
+      "date": "2026-07-05",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 4.6,
+      "temperature_2m_min_c": -1.3,
+      "weather_code": 3,
+      "wind_speed_10m_max_kmh": 41.8
+    },
+    {
+      "date": "2026-07-06",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 5.1,
+      "temperature_2m_min_c": -3.6,
+      "weather_code": 1,
+      "wind_speed_10m_max_kmh": 45.0
+    },
+    {
+      "date": "2026-07-07",
+      "precipitation_sum_mm": 0.53,
+      "rain_sum_mm": 0.45,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 4.8,
+      "temperature_2m_min_c": -1.8,
+      "weather_code": 51,
+      "wind_speed_10m_max_kmh": 47.5
+    },
+    {
+      "date": "2026-07-08",
+      "precipitation_sum_mm": 0.3,
+      "rain_sum_mm": 0.3,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 9.4,
+      "temperature_2m_min_c": 1.2,
+      "weather_code": 3,
+      "wind_speed_10m_max_kmh": 12.5
+    },
+    {
+      "date": "2026-07-09",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 14.1,
+      "temperature_2m_min_c": -0.1,
+      "weather_code": 45,
+      "wind_speed_10m_max_kmh": 7.3
+    },
+    {
+      "date": "2026-07-10",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 13.3,
+      "temperature_2m_min_c": 3.9,
+      "weather_code": 45,
+      "wind_speed_10m_max_kmh": 10.7
+    },
+    {
+      "date": "2026-07-11",
+      "precipitation_sum_mm": 1.2,
+      "rain_sum_mm": 0.9,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 13.4,
+      "temperature_2m_min_c": 7.0,
+      "weather_code": 51,
+      "wind_speed_10m_max_kmh": 6.5
+    }
+  ],
+  "freshness": "live_forecast",
+  "hourly_fields_present": [
+    "precipitation",
+    "snow_depth",
+    "snowfall",
+    "temperature_2m",
+    "wind_speed_10m"
+  ],
+  "id": "besseggen-high-point-open-meteo-forecast",
+  "license_or_terms_url": "https://open-meteo.com/en/terms",
+  "limitations": [
+    "Point forecast, not route-wide or terrain-shadow aware.",
+    "Mountain microclimates and ridge winds require conservative UI confidence."
+  ],
+  "query": {
+    "daily": "weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum,wind_speed_10m_max",
+    "elevation": 1743,
+    "forecast_days": 7,
+    "hourly": "temperature_2m,precipitation,wind_speed_10m,snowfall,snow_depth",
+    "latitude": 61.506,
+    "longitude": 8.798,
+    "timezone": "Europe/Oslo"
+  },
+  "retrieved_at": "2026-07-05T09:59:28+00:00",
+  "source": "open_meteo_forecast"
+}

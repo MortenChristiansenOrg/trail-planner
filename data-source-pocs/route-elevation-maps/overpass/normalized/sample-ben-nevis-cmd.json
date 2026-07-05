@@ -1,0 +1,181 @@
+{
+  "confidence": "sample",
+  "freshness": "2026-07-05T09:56:29Z",
+  "id": "ben-nevis-cmd-osm-overpass",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "name": "Ben Nevis CMD",
+  "query": {
+    "bbox": [
+      56.76,
+      -5.05,
+      56.84,
+      -4.9
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter"
+  },
+  "retrieved_at": "2026-07-05T09:58:00+00:00",
+  "route_relations": [
+    {
+      "id": 4004227,
+      "member_count": 4,
+      "name": "North Face Path",
+      "tags": {
+        "name": "North Face Path",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 4004228,
+      "member_count": 6,
+      "name": "Carn Mor Dearg arete",
+      "tags": {
+        "name": "Carn Mor Dearg arete",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 4004229,
+      "member_count": 15,
+      "name": "Ben Nevis Mountain Path",
+      "tags": {
+        "name": "Ben Nevis Mountain Path",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 9686036,
+      "member_count": 269,
+      "name": "East Highland Way",
+      "tags": {
+        "from": "Fort William",
+        "name": "East Highland Way",
+        "network": "rwn",
+        "note": "check section FW-Spean Bridge",
+        "osmc:symbol": "red:red: :EHW:black",
+        "route": "hiking",
+        "status": "incomplete",
+        "to": "Aviemore",
+        "type": "route",
+        "via": "Newtonmore;Kingussie",
+        "website": "https://www.ldwa.org.uk/ldp/members/show_path.php?path_name=East+Highland+Way",
+        "wikidata": "Q5328603",
+        "wikipedia": "en:East Highland Way"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 14447625,
+      "member_count": 13,
+      "name": "Stob Ban (white peak) and Mullach nan Coirean (Summit of the Corries)",
+      "tags": {
+        "from": "Achriabhach",
+        "name": "Stob Ban (white peak) and Mullach nan Coirean (Summit of the Corries)",
+        "network": "lwn",
+        "ref": "SBMC",
+        "route": "hiking",
+        "to": "Achriabhach",
+        "type": "route",
+        "via": "Stob Ban (white peak);Mullach nan Coirean (Summit of the Corries)"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 16127403,
+      "member_count": 43,
+      "name": "Mamores Trail",
+      "tags": {
+        "name": "Mamores Trail",
+        "network": "lwn",
+        "network:type": "lwn",
+        "ref": "RW 16",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 16127475,
+      "member_count": 19,
+      "name": "Ben Nevis Trail",
+      "tags": {
+        "name": "Ben Nevis Trail",
+        "network": "lwn",
+        "network:type": "lwn",
+        "ref": "RW 17",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 18051755,
+      "member_count": 2,
+      "name": "Steal Falls",
+      "tags": {
+        "name": "Steal Falls",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    }
+  ],
+  "sample_geometry": {
+    "coordinates": [
+      [
+        -5.003526,
+        56.7968582
+      ],
+      [
+        -5.0035285,
+        56.7968731
+      ],
+      [
+        -5.0035499,
+        56.7968707
+      ],
+      [
+        -5.0035766,
+        56.7968655
+      ],
+      [
+        -5.003598,
+        56.7968585
+      ],
+      [
+        -5.003659,
+        56.7967909
+      ],
+      [
+        -5.0036693,
+        56.7967061
+      ]
+    ],
+    "type": "LineString"
+  },
+  "sample_path_tags": {
+    "foot": "yes",
+    "highway": "path",
+    "lit": "no",
+    "name": "Ben Nevis Mountain Path",
+    "sac_scale": "mountain_hiking",
+    "source": "survey",
+    "surface": "gravel",
+    "trail_visibility": "excellent"
+  },
+  "source": "openstreetmap_overpass",
+  "summary": {
+    "path_way_count": 219,
+    "poi_count": 6,
+    "route_relation_count": 8
+  }
+}

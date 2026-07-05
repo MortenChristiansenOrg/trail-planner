@@ -1,0 +1,7 @@
+{
+  "id": "alpine-hut-systems-manual-fallback",
+  "source": "club_arc_alpin_and_regional_hut_systems",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "fields": ["route_id", "stage", "hut_name", "association", "official_url", "reservation_url", "opening_period", "availability_status", "availability_checked_at", "confidence"]
+}

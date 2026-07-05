@@ -1,0 +1,7 @@
+{
+  "source": "user_gpx_uploads",
+  "verdict": "viable",
+  "mvp_role": "Primary clean route geometry import path when users provide files.",
+  "confidence": "high",
+  "next_step": "Add a small GPX parser POC once user-owned sample files are available."
+}

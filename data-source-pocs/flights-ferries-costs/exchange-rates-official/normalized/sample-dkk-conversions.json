@@ -1,0 +1,64 @@
+{
+  "confidence": "high_for_reference_conversion_not_transaction_price",
+  "freshness": "daily_on_business_days",
+  "license_or_terms_url": "https://www.nationalbanken.dk/en/news-and-knowledge/data-and-statistics/exchange-rates",
+  "notes": [
+    "Nationalbanken quotes Danish kroner per 100 units of foreign currency.",
+    "ECB reference rates are euro-based and are included only as an official cross-check.",
+    "Both providers publish indicative reference rates, not guaranteed transaction rates."
+  ],
+  "query": {
+    "ecb_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "nationalbanken_url": "https://www.nationalbanken.dk/api/currencyratesxml?lang=en",
+    "target_currencies": [
+      "EUR",
+      "NOK",
+      "SEK",
+      "GBP",
+      "CHF",
+      "ISK"
+    ]
+  },
+  "rate_date": "2026-07-03",
+  "rates": [
+    {
+      "currency": "EUR",
+      "dkk_per_1_unit": 7.474600000000001,
+      "ecb_cross_check_dkk_per_1_unit": 7.4746,
+      "nationalbanken_dkk_per_100_units": 747.46
+    },
+    {
+      "currency": "NOK",
+      "dkk_per_1_unit": 0.6633,
+      "ecb_cross_check_dkk_per_1_unit": 0.6632886680273316,
+      "nationalbanken_dkk_per_100_units": 66.33
+    },
+    {
+      "currency": "SEK",
+      "dkk_per_1_unit": 0.6776000000000001,
+      "ecb_cross_check_dkk_per_1_unit": 0.6775687803109278,
+      "nationalbanken_dkk_per_100_units": 67.76
+    },
+    {
+      "currency": "GBP",
+      "dkk_per_1_unit": 8.7198,
+      "ecb_cross_check_dkk_per_1_unit": 8.71978534764349,
+      "nationalbanken_dkk_per_100_units": 871.98
+    },
+    {
+      "currency": "CHF",
+      "dkk_per_1_unit": 8.1334,
+      "ecb_cross_check_dkk_per_1_unit": 8.133405875952121,
+      "nationalbanken_dkk_per_100_units": 813.34
+    },
+    {
+      "currency": "ISK",
+      "dkk_per_1_unit": 0.05191,
+      "ecb_cross_check_dkk_per_1_unit": 0.05190694444444444,
+      "nationalbanken_dkk_per_100_units": 5.191
+    }
+  ],
+  "retrieved_at": "2026-07-05T09:58:14+00:00",
+  "secondary_terms_url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+  "source": "danmarks_nationalbank_with_ecb_cross_check"
+}

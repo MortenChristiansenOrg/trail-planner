@@ -1,0 +1,10 @@
+{
+  "source": "alltrails_export",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://support.alltrails.com/hc/en-us/articles/37230403315476-Downloading-files-from-AllTrails",
+    "https://support.alltrails.com/hc/en-us/sections/360006411352-Importing-and-exporting-files"
+  ],
+  "access": "manual_user_export",
+  "sample_not_fetched_reason": "No user account export was provided; automated extraction intentionally not attempted."
+}

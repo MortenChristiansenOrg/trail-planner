@@ -1,0 +1,9 @@
+{
+  "source": "tollguru",
+  "checked_at": "2026-07-05",
+  "docs_url": "https://tollguru.com/toll-api-docs",
+  "pricing_url": "https://tollguru.com/toll-api-pricing-plans",
+  "access_model": "paid SaaS API key",
+  "public_sample_run": false,
+  "reason_no_raw_cost_sample": "Requires API key; no credentials were available in the workspace."
+}

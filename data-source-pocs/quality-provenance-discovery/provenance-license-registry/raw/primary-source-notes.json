@@ -1,0 +1,30 @@
+{
+  "retrieved_at": "2026-07-05T09:56:02Z",
+  "reviewed_sources": [
+    {
+      "id": "osm_attribution_guidelines",
+      "url": "https://osmfoundation.org/wiki/Licence/Attribution_Guidelines",
+      "note": "OSM data requires attribution when publicly used; produced works and databases have different compliance implications."
+    },
+    {
+      "id": "overpass_api_wiki",
+      "url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "note": "Public Overpass is suitable for targeted experiments, not unlimited product backend load."
+    },
+    {
+      "id": "commons_mediawiki_api",
+      "url": "https://commons.wikimedia.org/wiki/Commons:API/MediaWiki",
+      "note": "MediaWiki Action API can retrieve category members and imageinfo metadata for Commons files."
+    },
+    {
+      "id": "wikimedia_user_agent_policy",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_User-Agent_Policy",
+      "note": "Automated requests must use an informative User-Agent."
+    },
+    {
+      "id": "commons_machine_readable_data",
+      "url": "https://commons.wikimedia.org/wiki/Commons:Machine-readable_data",
+      "note": "File metadata can be fetched with imageinfo extmetadata, but metadata quality varies and must be validated."
+    }
+  ]
+}

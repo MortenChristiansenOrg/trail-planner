@@ -1,0 +1,8 @@
+{
+  "source": "opensky_network",
+  "checked_at": "2026-07-05",
+  "docs_url": "https://openskynetwork.github.io/opensky-api/",
+  "access_model": "public/research aircraft state and flight endpoints with rate limits",
+  "public_sample_run": false,
+  "reason_no_script": "The API does not provide bookable schedules or fare offers for Trail Planner itinerary decisions."
+}

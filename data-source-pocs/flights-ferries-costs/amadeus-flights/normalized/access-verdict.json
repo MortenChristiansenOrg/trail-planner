@@ -1,0 +1,16 @@
+{
+  "source": "amadeus_flight_offers_search",
+  "verdict": "viable_with_limits",
+  "mvp_role": "First credentialed source to sample live flight offers and prices.",
+  "auth_required": true,
+  "expected_fields": ["origin", "destination", "departure_date", "segments", "carrier", "duration", "price", "currency"],
+  "sample_query": {
+    "originLocationCode": "AAL",
+    "destinationLocationCode": "BGO",
+    "departureDate": "today_plus_60_days",
+    "adults": 1,
+    "currencyCode": "DKK",
+    "max": 5
+  },
+  "confidence": "medium_until_credentials_and_route_coverage_are_tested"
+}

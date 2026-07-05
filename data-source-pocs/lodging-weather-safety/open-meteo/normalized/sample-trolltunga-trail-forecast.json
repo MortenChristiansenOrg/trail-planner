@@ -1,0 +1,108 @@
+{
+  "case": {
+    "elevation_m": 1100,
+    "id": "trolltunga-trail",
+    "lat": 60.124,
+    "lon": 6.74,
+    "name": "Trolltunga trail",
+    "timezone": "Europe/Oslo"
+  },
+  "confidence": "sample",
+  "days": [
+    {
+      "date": "2026-07-05",
+      "precipitation_sum_mm": 2.6,
+      "rain_sum_mm": 2.6,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 7.1,
+      "temperature_2m_min_c": 3.2,
+      "weather_code": 53,
+      "wind_speed_10m_max_kmh": 27.7
+    },
+    {
+      "date": "2026-07-06",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 9.1,
+      "temperature_2m_min_c": 1.8,
+      "weather_code": 3,
+      "wind_speed_10m_max_kmh": 18.7
+    },
+    {
+      "date": "2026-07-07",
+      "precipitation_sum_mm": 5.3,
+      "rain_sum_mm": 5.13,
+      "snowfall_sum_cm": 0.07,
+      "temperature_2m_max_c": 6.2,
+      "temperature_2m_min_c": 3.8,
+      "weather_code": 61,
+      "wind_speed_10m_max_kmh": 29.2
+    },
+    {
+      "date": "2026-07-08",
+      "precipitation_sum_mm": 0.7,
+      "rain_sum_mm": 0.7,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 10.5,
+      "temperature_2m_min_c": 3.7,
+      "weather_code": 51,
+      "wind_speed_10m_max_kmh": 6.7
+    },
+    {
+      "date": "2026-07-09",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 15.8,
+      "temperature_2m_min_c": 4.6,
+      "weather_code": 1,
+      "wind_speed_10m_max_kmh": 6.9
+    },
+    {
+      "date": "2026-07-10",
+      "precipitation_sum_mm": 0.3,
+      "rain_sum_mm": 0.3,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 16.4,
+      "temperature_2m_min_c": 7.0,
+      "weather_code": 51,
+      "wind_speed_10m_max_kmh": 6.7
+    },
+    {
+      "date": "2026-07-11",
+      "precipitation_sum_mm": 0.0,
+      "rain_sum_mm": 0.0,
+      "snowfall_sum_cm": 0.0,
+      "temperature_2m_max_c": 15.9,
+      "temperature_2m_min_c": 8.9,
+      "weather_code": 45,
+      "wind_speed_10m_max_kmh": 8.2
+    }
+  ],
+  "freshness": "live_forecast",
+  "hourly_fields_present": [
+    "precipitation",
+    "snow_depth",
+    "snowfall",
+    "temperature_2m",
+    "wind_speed_10m"
+  ],
+  "id": "trolltunga-trail-open-meteo-forecast",
+  "license_or_terms_url": "https://open-meteo.com/en/terms",
+  "limitations": [
+    "Point forecast, not route-wide or terrain-shadow aware.",
+    "Mountain microclimates and ridge winds require conservative UI confidence."
+  ],
+  "query": {
+    "daily": "weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum,wind_speed_10m_max",
+    "elevation": 1100,
+    "forecast_days": 7,
+    "hourly": "temperature_2m,precipitation,wind_speed_10m,snowfall,snow_depth",
+    "latitude": 60.124,
+    "longitude": 6.74,
+    "timezone": "Europe/Oslo"
+  },
+  "retrieved_at": "2026-07-05T09:59:28+00:00",
+  "source": "open_meteo_forecast"
+}

@@ -1,0 +1,298 @@
+{
+  "_trail_planner_query": {
+    "case": "trolltunga",
+    "case_name": "Trolltunga / Skjeggedal",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:30];\n(\n  nwr(around:4500,60.1241,6.7394)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,60.1241,6.7394)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,60.1241,6.7394)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,60.1241,6.7394)[\"public_transport\"];\n  nwr(around:4500,60.1241,6.7394)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "retrieved_at": "2026-07-05T09:59:30Z"
+  },
+  "elements": [
+    {
+      "changeset": 153920228,
+      "id": 1377795111,
+      "lat": 60.1329576,
+      "lon": 6.7539979,
+      "tags": {
+        "alt_name:ko": "\ud2b8\ub864\ud241\uac00",
+        "description": "This is a very challenging hike, at least 10 hours on rough terrain. There are no shelters on the hike route and no places to buy supplies.",
+        "image": "https://photos.app.goo.gl/29oGuMHoEHisKg9y8",
+        "name": "Trolltunga",
+        "name:de": "Trollzunge",
+        "name:en": "Troll tongue",
+        "name:ko": "\uc545\ub9c8\uc758\ud600",
+        "name:zh": "\u60e1\u9b54\u4e4b\u820c",
+        "natural": "cliff",
+        "tourism": "viewpoint",
+        "url": "https://www.youtube.com/@trolltunga1104",
+        "viewpoint:direction": "170-350",
+        "wikidata": "Q1512593",
+        "wikipedia": "no:Trolltunga"
+      },
+      "timestamp": "2024-07-14T08:20:21Z",
+      "type": "node",
+      "uid": 616774,
+      "user": "mueschel",
+      "version": 21
+    },
+    {
+      "changeset": 12236557,
+      "id": 1826999288,
+      "lat": 60.1339603,
+      "lon": 6.7576043,
+      "tags": {
+        "information": "guidepost",
+        "name": "Trolltunga",
+        "tourism": "information"
+      },
+      "timestamp": "2012-07-15T21:43:04Z",
+      "type": "node",
+      "uid": 716235,
+      "user": "Fatman00",
+      "version": 1
+    },
+    {
+      "changeset": 140198601,
+      "id": 2017128864,
+      "lat": 60.1217823,
+      "lon": 6.7551592,
+      "tags": {
+        "description:en": "A twenty minute walk from Trolltunga, this cliff shares its name with the more known one east of Stavanger",
+        "ele": "1200",
+        "name": "Preikestolen",
+        "name:ru": "\u042f\u0437\u044b\u043a \u0442\u0440\u043e\u043b\u043b\u044f",
+        "note": "This is not the same cliff as the more known one near Stavanger. It just shares the same name.",
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-21T19:51:41Z",
+      "type": "node",
+      "uid": 3305165,
+      "user": "luisforte",
+      "version": 25
+    },
+    {
+      "changeset": 139813097,
+      "id": 4958830725,
+      "lat": 60.1376378,
+      "lon": 6.7003141,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 2
+    },
+    {
+      "changeset": 139813097,
+      "id": 6742312385,
+      "lat": 60.1381097,
+      "lon": 6.7185612,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 2
+    },
+    {
+      "changeset": 165732553,
+      "id": 9112799590,
+      "lat": 60.1301761,
+      "lon": 6.7562665,
+      "tags": {
+        "dnt:classification": "selvbetjent",
+        "dnt:iid": "457",
+        "dnt:lock": "yes",
+        "ele": "1185",
+        "name": "Reinaskorsbu",
+        "network": "Den Norske Turistforening",
+        "operator": "Bergen Turlag",
+        "ruins:tourism": "wilderness_hut",
+        "tourism": "wilderness_hut"
+      },
+      "timestamp": "2025-05-02T18:35:02Z",
+      "type": "node",
+      "uid": 22486198,
+      "user": "jpolvto",
+      "version": 3
+    },
+    {
+      "changeset": 155303492,
+      "id": 9668454807,
+      "lat": 60.0895584,
+      "lon": 6.7585067,
+      "tags": {
+        "historic": "shieling",
+        "name": "Langavassbui Emergency Shelter",
+        "ssr:stedsnr": "125395",
+        "tourism": "wilderness_hut"
+      },
+      "timestamp": "2024-08-15T22:12:55Z",
+      "type": "node",
+      "uid": 9451805,
+      "user": "adamvalovic",
+      "version": 2
+    },
+    {
+      "changeset": 139813097,
+      "id": 11111276106,
+      "lat": 60.1391031,
+      "lon": 6.7006468,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 1
+    },
+    {
+      "changeset": 139813097,
+      "id": 11111276388,
+      "lat": 60.137717,
+      "lon": 6.722828,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 1
+    },
+    {
+      "changeset": 139813097,
+      "id": 11111276389,
+      "lat": 60.1376056,
+      "lon": 6.7212541,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 1
+    },
+    {
+      "changeset": 139814622,
+      "id": 11111322893,
+      "lat": 60.1380325,
+      "lon": 6.7261431,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-08-13T09:04:34Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 1
+    },
+    {
+      "changeset": 143881491,
+      "id": 11339585831,
+      "lat": 60.1252028,
+      "lon": 6.7490922,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2023-11-10T22:24:07Z",
+      "type": "node",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 1
+    },
+    {
+      "changeset": 169803455,
+      "id": 13040814301,
+      "lat": 60.133739,
+      "lon": 6.7559308,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2025-08-01T08:03:17Z",
+      "type": "node",
+      "uid": 1726102,
+      "user": "AlessioMela",
+      "version": 1
+    },
+    {
+      "changeset": 169803455,
+      "id": 13040843315,
+      "lat": 60.1380989,
+      "lon": 6.7532554,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2025-08-01T08:19:11Z",
+      "type": "node",
+      "uid": 1726102,
+      "user": "AlessioMela",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 60.1409055,
+        "lon": 6.6978883
+      },
+      "changeset": 139813097,
+      "id": 1068976560,
+      "nodes": [
+        4382905698,
+        9812364065,
+        9812364064,
+        9812364063,
+        4382905698
+      ],
+      "tags": {
+        "amenity": "shelter",
+        "building": "cabin",
+        "ref:kartverket:hytte": "9999",
+        "shelter_type": "basic_hut"
+      },
+      "timestamp": "2023-08-13T08:16:35Z",
+      "type": "way",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 60.140223,
+        "lon": 6.7282963
+      },
+      "changeset": 139814622,
+      "id": 1068976561,
+      "nodes": [
+        7840679218,
+        9812364069,
+        9812364068,
+        9812364067,
+        7840679218
+      ],
+      "tags": {
+        "amenity": "shelter",
+        "building": "cabin",
+        "ref:kartverket:hytte": "9999",
+        "shelter_type": "basic_hut"
+      },
+      "timestamp": "2023-08-13T09:04:34Z",
+      "type": "way",
+      "uid": 10233897,
+      "user": "harahu",
+      "version": 2
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-07-05T09:57:30Z"
+  },
+  "version": 0.6
+}

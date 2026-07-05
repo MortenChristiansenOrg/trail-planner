@@ -1,0 +1,15 @@
+{
+  "source": "duffel_offers",
+  "verdict": "viable_with_limits",
+  "mvp_role": "Comparison source for booking-grade flight offers.",
+  "auth_required": true,
+  "expected_fields": ["offer_id", "total_amount", "total_currency", "expires_at", "slices", "segments", "owner"],
+  "sample_query": {
+    "origin": "AAL",
+    "destination": "BGO",
+    "departure_date": "today_plus_60_days",
+    "passengers": [{"type": "adult"}],
+    "cabin_class": "economy"
+  },
+  "confidence": "medium_until_credentials_and_search_to_book_terms_are_confirmed"
+}

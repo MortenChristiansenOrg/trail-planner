@@ -1,0 +1,11 @@
+{
+  "source": "geofabrik",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://www.geofabrik.de/data/download.html",
+    "https://download.geofabrik.de/",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "access": "public_download",
+  "sample_not_fetched_reason": "PBF extracts are larger than needed for this focused pass; no local OSM import pipeline exists yet."
+}

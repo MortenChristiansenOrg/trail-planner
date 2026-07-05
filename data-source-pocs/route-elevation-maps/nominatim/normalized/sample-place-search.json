@@ -1,0 +1,103 @@
+{
+  "confidence": "sample",
+  "freshness": "live_osm_geocoder",
+  "id": "trailhead-place-search-nominatim",
+  "license_or_terms_url": "https://operations.osmfoundation.org/policies/nominatim/",
+  "query": {
+    "cases": [
+      {
+        "case": "besseggen",
+        "id": "gjendesheim",
+        "query": "Gjendesheim, Norway"
+      },
+      {
+        "case": "trolltunga",
+        "id": "skjeggedal",
+        "query": "Skjeggedal, Odda, Norway"
+      },
+      {
+        "case": "ben-nevis-cmd",
+        "id": "fort-william",
+        "query": "Fort William, Scotland"
+      }
+    ],
+    "endpoint": "https://nominatim.openstreetmap.org/search"
+  },
+  "results": [
+    {
+      "case": "besseggen",
+      "query": "Gjendesheim, Norway",
+      "raw_sample": "raw/sample-gjendesheim.json",
+      "result_count": 3,
+      "top_results": [
+        {
+          "class": null,
+          "display_name": "Gjendesheim, V\u00e5g\u00e5, Innlandet, Norge",
+          "importance": 0.13338743953612572,
+          "lat": 61.4954126,
+          "lon": 8.809562,
+          "osm_id": 281688769,
+          "osm_type": "node",
+          "type": "hamlet"
+        },
+        {
+          "class": null,
+          "display_name": "Gjendesheim, \u00d8ystre Slidre, Innlandet, Norge",
+          "importance": 0.04005410620279239,
+          "lat": 61.4355543,
+          "lon": 8.8616409,
+          "osm_id": 364555702,
+          "osm_type": "way",
+          "type": "path"
+        },
+        {
+          "class": null,
+          "display_name": "Gjendesheim, Gjendevegen, Gjendesheim, V\u00e5g\u00e5, Innlandet, Norge",
+          "importance": 5.41062027923555e-05,
+          "lat": 61.4943459,
+          "lon": 8.8126376,
+          "osm_id": 791106132,
+          "osm_type": "node",
+          "type": "alpine_hut"
+        }
+      ]
+    },
+    {
+      "case": "trolltunga",
+      "query": "Skjeggedal, Odda, Norway",
+      "raw_sample": "raw/sample-skjeggedal.json",
+      "result_count": 0,
+      "top_results": []
+    },
+    {
+      "case": "ben-nevis-cmd",
+      "query": "Fort William, Scotland",
+      "raw_sample": "raw/sample-fort-william.json",
+      "result_count": 2,
+      "top_results": [
+        {
+          "class": null,
+          "display_name": "Fort William, Highland, Alba / Scotland, PH33 6AJ, United Kingdom",
+          "importance": 0.5057622755834682,
+          "lat": 56.8178257,
+          "lon": -5.1109516,
+          "osm_id": 17917137,
+          "osm_type": "node",
+          "type": "town"
+        },
+        {
+          "class": null,
+          "display_name": "Fort William, Nevis Terrace, The Parade, An \u00c0ird, Fort William, Highland, Alba / Scotland, PH33 6TQ, United Kingdom",
+          "importance": 0.3966620202275504,
+          "lat": 56.8205581,
+          "lon": -5.1053126,
+          "osm_id": 26530357,
+          "osm_type": "node",
+          "type": "station"
+        }
+      ]
+    }
+  ],
+  "retrieved_at": "2026-07-05T09:57:46+00:00",
+  "source": "nominatim_public_osm"
+}

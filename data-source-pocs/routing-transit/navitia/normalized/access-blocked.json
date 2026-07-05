@@ -1,0 +1,16 @@
+{
+  "id": "navitia-access-check",
+  "source": "navitia",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {
+    "required_env": [
+      "NAVITIA_API_KEY",
+      "NAVITIA_COVERAGE"
+    ]
+  },
+  "license_or_terms_url": "https://doc.navitia.io/",
+  "freshness": "not_queried",
+  "confidence": "access_blocked",
+  "verdict": "blocked",
+  "reason": "Navitia authentication key and coverage selection required."
+}

@@ -1,0 +1,17 @@
+{
+  "retrieved_at": "2026-07-05T09:56:02Z",
+  "purpose": "Prototype explainable ranking inputs without using proprietary review scores.",
+  "criteria": [
+    {"field": "visual_evidence_available", "source": "Wikimedia Commons category/API sample", "weight_hint": 15},
+    {"field": "osm_viewpoints_or_tourism_pois_nearby", "source": "OSM POI route-buffer sample", "weight_hint": 10},
+    {"field": "named_iconic_feature", "source": "manual seed curation from official/route-specialist pages", "weight_hint": 20},
+    {"field": "ridge_or_arete", "source": "manual seed tags plus route naming", "weight_hint": 15},
+    {"field": "water_or_lake_contrast", "source": "manual seed tags; later derive from hydrography/viewshed", "weight_hint": 10},
+    {"field": "hut_or_transport_dependency", "source": "manual logistics notes plus OSM POIs", "weight_hint": 5},
+    {"field": "crowding_or_capacity_risk", "source": "manual source notes; later derive from parking, permits, and popularity proxies", "weight_hint": -10}
+  ],
+  "non_goals": [
+    "Do not ingest proprietary ratings or reviews without explicit permission.",
+    "Do not present sample scores as objective safety or navigation guidance."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "case": {
+    "id": "ben-nevis",
+    "lat": 56.817,
+    "lon": -5.106,
+    "name": "Ben Nevis / Fort William",
+    "radius_m": 12000
+  },
+  "confidence": "sample",
+  "features": [],
+  "freshness": "osm_snapshot_via_overpass",
+  "http_status_code": 429,
+  "id": "ben-nevis-osm-lodging",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "limitations": [
+    "Good for finding mapped lodging/campsite candidates.",
+    "Not a live source for price, legal tenting rules, opening status, or availability."
+  ],
+  "query": "[out:json][timeout:60];\n(\n  node(around:12000,56.817,-5.106)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  way(around:12000,56.817,-5.106)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  relation(around:12000,56.817,-5.106)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n);\nout center tags;",
+  "retrieved_at": "2026-07-05T10:01:02+00:00",
+  "source": "openstreetmap_overpass"
+}

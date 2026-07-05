@@ -1,0 +1,68 @@
+[
+  {
+    "address": {
+      "ISO3166-2-lvl4": "GB-SCT",
+      "ISO3166-2-lvl6": "GB-HLD",
+      "country": "United Kingdom",
+      "country_code": "gb",
+      "county": "Highland",
+      "postcode": "PH33 6AJ",
+      "state": "Alba / Scotland",
+      "town": "Fort William"
+    },
+    "addresstype": "town",
+    "boundingbox": [
+      "56.7778257",
+      "56.8578257",
+      "-5.1509516",
+      "-5.0709516"
+    ],
+    "category": "place",
+    "display_name": "Fort William, Highland, Alba / Scotland, PH33 6AJ, United Kingdom",
+    "importance": 0.5057622755834682,
+    "lat": "56.8178257",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "lon": "-5.1109516",
+    "name": "Fort William",
+    "osm_id": 17917137,
+    "osm_type": "node",
+    "place_id": 271761589,
+    "place_rank": 18,
+    "type": "town"
+  },
+  {
+    "address": {
+      "ISO3166-2-lvl4": "GB-SCT",
+      "ISO3166-2-lvl6": "GB-HLD",
+      "country": "United Kingdom",
+      "country_code": "gb",
+      "county": "Highland",
+      "neighbourhood": "The Parade",
+      "postcode": "PH33 6TQ",
+      "railway": "Fort William",
+      "road": "Nevis Terrace",
+      "state": "Alba / Scotland",
+      "suburb": "An \u00c0ird",
+      "town": "Fort William"
+    },
+    "addresstype": "railway",
+    "boundingbox": [
+      "56.8155581",
+      "56.8255581",
+      "-5.1103126",
+      "-5.1003126"
+    ],
+    "category": "railway",
+    "display_name": "Fort William, Nevis Terrace, The Parade, An \u00c0ird, Fort William, Highland, Alba / Scotland, PH33 6TQ, United Kingdom",
+    "importance": 0.3966620202275504,
+    "lat": "56.8205581",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "lon": "-5.1053126",
+    "name": "Fort William",
+    "osm_id": 26530357,
+    "osm_type": "node",
+    "place_id": 273684229,
+    "place_rank": 30,
+    "type": "station"
+  }
+]

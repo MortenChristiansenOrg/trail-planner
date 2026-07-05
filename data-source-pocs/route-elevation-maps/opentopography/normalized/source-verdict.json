@@ -1,0 +1,7 @@
+{
+  "source": "opentopography",
+  "verdict": "viable_with_limits",
+  "mvp_role": "DEM clipping and benchmark source once API access is configured.",
+  "confidence": "medium",
+  "next_step": "Request/configure API key and fetch a tiny Besseggen bounding-box raster."
+}

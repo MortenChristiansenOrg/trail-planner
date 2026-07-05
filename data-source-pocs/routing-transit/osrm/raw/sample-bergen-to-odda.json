@@ -1,0 +1,40 @@
+{
+  "code": "Ok",
+  "routes": [
+    {
+      "legs": [
+        {
+          "steps": [],
+          "weight": 11949,
+          "summary": "",
+          "duration": 9395,
+          "distance": 132821.7
+        }
+      ],
+      "weight_name": "routability",
+      "weight": 11949,
+      "duration": 9395,
+      "distance": 132821.7
+    }
+  ],
+  "waypoints": [
+    {
+      "hint": "MEsCkTNLApEDAAAAQwAAAAAAAAAaAAAACHbZPx023EEAAAAA3EMuQQMAAABDAAAAAAAAABoAAADbIQEAPGJRACZ4mQNgYlEAGHiZAwAArw0AAAAA",
+      "location": [
+        5.333564,
+        60.389414
+      ],
+      "name": "",
+      "distance": 2.525361778
+    },
+    {
+      "hint": "n2wajf___38DAAAACQAAAAUAAAAAAAAAiuNsQDW-uED6bLBAAAAAAAMAAAAJAAAABQAAAAAAAADbIQEAweBjAOeUlAPA4GMA7JSUAwQAPwUAAAAA",
+      "location": [
+        6.545601,
+        60.069095
+      ],
+      "name": "Eitrheimsvegen",
+      "distance": 0.5598429209
+    }
+  ]
+}

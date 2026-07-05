@@ -1,0 +1,51 @@
+{
+  "id": "license-registry-sample-2026-07-05",
+  "schema_version": 1,
+  "retrieved_at": "2026-07-05T09:56:02Z",
+  "licenses": [
+    {
+      "source_id": "openstreetmap",
+      "display_name": "OpenStreetMap",
+      "data_license": "ODbL 1.0",
+      "terms_url": "https://www.openstreetmap.org/copyright",
+      "attribution": "© OpenStreetMap contributors",
+      "commercial_use": "allowed_with_license_compliance",
+      "cache_policy": "allowed_with_odbl_and_attribution_review",
+      "share_alike_risk": "database_derivatives_may_trigger_odbl_obligations",
+      "review_status": "primary_terms_reviewed"
+    },
+    {
+      "source_id": "overpass_api",
+      "display_name": "Overpass API public instances",
+      "data_license": "OSM data under ODbL 1.0; service operated by third parties",
+      "terms_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "attribution": "© OpenStreetMap contributors",
+      "commercial_use": "data_license_allows; public_endpoint_not_for_heavy_production_use",
+      "cache_policy": "cache_small_samples; production_should_use_extract_or_own_infrastructure",
+      "share_alike_risk": "same_as_osm_data",
+      "review_status": "official_wiki_reviewed"
+    },
+    {
+      "source_id": "wikimedia_commons",
+      "display_name": "Wikimedia Commons",
+      "data_license": "per-file license; structured file data generally CC0; unstructured text CC BY-SA",
+      "terms_url": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "attribution": "per file license, author, title, source URL, and license URL",
+      "commercial_use": "depends_on_file_license",
+      "cache_policy": "metadata cache viable; preserve per-file license and attribution fields",
+      "share_alike_risk": "depends_on_file_license; do not assume all media is permissive",
+      "review_status": "primary_terms_reviewed"
+    },
+    {
+      "source_id": "manual_official_route_pages",
+      "display_name": "Official route and tourism pages",
+      "data_license": "page-specific copyright/terms",
+      "terms_url": "per_source",
+      "attribution": "source URL and publisher retained per fact",
+      "commercial_use": "unknown_until_source_specific_review",
+      "cache_policy": "store minimal factual fields and source links; avoid copying descriptions/photos",
+      "share_alike_risk": "source_specific",
+      "review_status": "needs_per_source_review"
+    }
+  ]
+}

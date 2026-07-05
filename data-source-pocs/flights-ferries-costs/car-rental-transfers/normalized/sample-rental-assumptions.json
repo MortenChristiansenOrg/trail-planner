@@ -1,0 +1,22 @@
+{
+  "source": "manual_car_rental_transfer_assumptions",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "freshness": "manual_assumption_until_partner_api_access",
+  "confidence": "low_for_price_medium_for_need_classification",
+  "assumptions": [
+    {
+      "case": "Ben Nevis CMD via EDI/GLA/INV",
+      "model": "Compare public transport first; rental car as optional daily-rate assumption with parking/fuel added."
+    },
+    {
+      "case": "Dolomites via VCE/VRN/BGY/MXP/INN",
+      "model": "Rental car likely useful for trailhead flexibility; one-way constraints and mountain parking must be modeled manually."
+    },
+    {
+      "case": "Pyrenees via TLS/BCN",
+      "model": "Rental car may be needed for last-mile trailheads; use public transport where schedules are reliable."
+    }
+  ],
+  "recommended_fields": ["airport_iata", "region", "days", "daily_cost_band", "one_way_possible", "deposit_risk", "source_url", "checked_at", "confidence"]
+}

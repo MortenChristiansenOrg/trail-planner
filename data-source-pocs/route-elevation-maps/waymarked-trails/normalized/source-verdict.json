@@ -1,0 +1,7 @@
+{
+  "source": "waymarked_trails",
+  "verdict": "manual_only",
+  "mvp_role": "Visual validation that OSM hiking-route extraction matches a known renderer.",
+  "confidence": "medium",
+  "next_step": "Compare screenshots/visible routes against Overpass extraction for target routes."
+}

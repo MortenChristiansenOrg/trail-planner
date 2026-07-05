@@ -1,0 +1,27 @@
+{
+  "source": "ferry_operator_manual_sources",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "license_or_terms_url": "operator pages linked per segment",
+  "freshness": "manual_check_required_per_trip_window",
+  "confidence": "medium_for_route_existence_low_for_price_until_checked",
+  "segments": [
+    {
+      "route": "Hirtshals-Kristiansand",
+      "operators": ["Fjord Line", "Color Line"],
+      "source_urls": [
+        "https://fjordline.com/en/p/our-ferry-routes/hirtshals-kristiansand",
+        "https://www.colorline.com/timetable"
+      ],
+      "known_duration": "about 2h25 to 3h55 depending on vessel/operator",
+      "price_model": "manual_sample_by_date_vehicle_passengers"
+    },
+    {
+      "route": "Hirtshals-Larvik",
+      "operators": ["Color Line"],
+      "source_urls": ["https://www.colorline.com/denmark-norway/ferry-hirtshals-larvik"],
+      "known_duration": "about 3h15 to 3h45 depending on displayed page/timetable",
+      "price_model": "manual_sample_by_date_vehicle_passengers"
+    }
+  ]
+}

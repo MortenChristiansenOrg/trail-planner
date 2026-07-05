@@ -1,0 +1,274 @@
+{
+  "confidence": "sample",
+  "freshness": "2026-07-05T09:56:29Z",
+  "id": "trolltunga-osm-overpass",
+  "license_or_terms_url": "https://www.openstreetmap.org/copyright",
+  "name": "Trolltunga",
+  "query": {
+    "bbox": [
+      60.08,
+      6.55,
+      60.18,
+      6.82
+    ],
+    "endpoint": "https://overpass-api.de/api/interpreter"
+  },
+  "retrieved_at": "2026-07-05T09:57:57+00:00",
+  "route_relations": [
+    {
+      "id": 4270209,
+      "member_count": 91,
+      "name": "Trolltunga",
+      "tags": {
+        "name": "Trolltunga",
+        "network": "lwn",
+        "osmc:symbol": "red:white: :T:red",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 4272237,
+      "member_count": 71,
+      "name": null,
+      "tags": {
+        "network": "rwn",
+        "osmc:symbol": "red:white: :T:red",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 4272296,
+      "member_count": 4,
+      "name": null,
+      "tags": {
+        "network": "rwn",
+        "osmc:symbol": "red:white: :T:red",
+        "route": "hiking",
+        "type": "route"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5540400,
+      "member_count": 14,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Skjeggedal",
+        "length": "21 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR64",
+        "route": "hiking",
+        "to": "Tyssevassbu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har64"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541018,
+      "member_count": 15,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Skjeggedal",
+        "length": "4.5 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR90",
+        "route": "hiking",
+        "to": "Mosdalsbu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har90"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541040,
+      "member_count": 12,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Torehytten",
+        "length": "8 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR91",
+        "route": "hiking",
+        "to": "Trolltunga",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har91"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541041,
+      "member_count": 96,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Skjeggedal",
+        "length": "13 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR92",
+        "route": "hiking",
+        "to": "Trolltunga",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har92"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541042,
+      "member_count": 68,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Mosdalsbu",
+        "length": "19 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR93",
+        "route": "hiking",
+        "to": "Trolltunga",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har93"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541043,
+      "member_count": 18,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Mosdalsbu",
+        "length": "10 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR94",
+        "route": "hiking",
+        "to": "Odda",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har94"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541044,
+      "member_count": 8,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Mosdalsbu",
+        "length": "9 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR95",
+        "route": "hiking",
+        "to": "Kvanntj\u00f8rnsbu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har95"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5541045,
+      "member_count": 47,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Trolltunga",
+        "length": "20 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR96",
+        "route": "hiking",
+        "to": "Kvanntj\u00f8rnsbu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har96"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 5543671,
+      "member_count": 7,
+      "name": null,
+      "tags": {
+        "foot": "yes",
+        "from": "Espe",
+        "length": "23 km",
+        "marked_trail": "T_beacon",
+        "network": "rwn",
+        "operator": "Den Norske Turistforening",
+        "ref": "HAR103",
+        "route": "hiking",
+        "to": "Tyssevassbu",
+        "trailblazed": "yes",
+        "type": "route",
+        "website": "http://www2.turistforeningen.no/trail.php?tr_code=har103"
+      },
+      "type": "relation"
+    },
+    {
+      "id": 17666502,
+      "member_count": 3,
+      "name": "Via Ferrata Trolltunga",
+      "tags": {
+        "name": "Via Ferrata Trolltunga",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route",
+        "via_ferrata_scale": "3"
+      },
+      "type": "relation"
+    }
+  ],
+  "sample_geometry": {
+    "coordinates": [
+      [
+        6.641521,
+        60.1041384
+      ],
+      [
+        6.6412612,
+        60.1042099
+      ]
+    ],
+    "type": "LineString"
+  },
+  "sample_path_tags": {
+    "bridge": "yes",
+    "foot": "yes",
+    "highway": "path",
+    "layer": "1"
+  },
+  "source": "openstreetmap_overpass",
+  "summary": {
+    "path_way_count": 738,
+    "poi_count": 14,
+    "route_relation_count": 13
+  }
+}

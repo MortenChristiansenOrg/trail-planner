@@ -1,0 +1,69 @@
+{
+  "confidence": "sample",
+  "elevation_samples": [
+    {
+      "case": "besseggen",
+      "elevation_m": 1706.85,
+      "id": "besseggen-ridge",
+      "lat": 61.5076,
+      "lon": 8.7556,
+      "name": "Besseggen ridge sample",
+      "raw_sample": "raw/sample-besseggen-ridge.png",
+      "tile": {
+        "pixel_x": 158,
+        "pixel_y": 92,
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/2147/1154.png",
+        "x": 2147,
+        "y": 1154,
+        "z": 12
+      },
+      "tile_size": [
+        256,
+        256
+      ],
+      "zoom": 12
+    },
+    {
+      "case": "ben-nevis-cmd",
+      "elevation_m": 1316.05,
+      "id": "ben-nevis-summit",
+      "lat": 56.7969,
+      "lon": -5.0036,
+      "name": "Ben Nevis summit",
+      "raw_sample": "raw/sample-ben-nevis-summit.png",
+      "tile": {
+        "pixel_x": 17,
+        "pixel_y": 21,
+        "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/1991/1259.png",
+        "x": 1991,
+        "y": 1259,
+        "z": 12
+      },
+      "tile_size": [
+        256,
+        256
+      ],
+      "zoom": 12
+    }
+  ],
+  "freshness": "static_tile_dataset_updated_from_community_feedback",
+  "id": "route-point-elevation-aws-terrain-tiles",
+  "license_or_terms_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "query": {
+    "docs": "https://registry.opendata.aws/terrain-tiles/",
+    "samples": [
+      {
+        "lat": 61.5076,
+        "lon": 8.7556,
+        "zoom": 12
+      },
+      {
+        "lat": 56.7969,
+        "lon": -5.0036,
+        "zoom": 12
+      }
+    ]
+  },
+  "retrieved_at": "2026-07-05T09:57:46+00:00",
+  "source": "aws_terrain_tiles_terrarium"
+}

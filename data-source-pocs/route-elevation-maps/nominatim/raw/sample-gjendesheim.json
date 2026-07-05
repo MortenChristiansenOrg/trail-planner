@@ -1,0 +1,91 @@
+[
+  {
+    "address": {
+      "ISO3166-2-lvl4": "NO-34",
+      "country": "Norge",
+      "country_code": "no",
+      "county": "Innlandet",
+      "hamlet": "Gjendesheim",
+      "municipality": "V\u00e5g\u00e5"
+    },
+    "addresstype": "hamlet",
+    "boundingbox": [
+      "61.4754126",
+      "61.5154126",
+      "8.7895620",
+      "8.8295620"
+    ],
+    "category": "place",
+    "display_name": "Gjendesheim, V\u00e5g\u00e5, Innlandet, Norge",
+    "importance": 0.13338743953612572,
+    "lat": "61.4954126",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "lon": "8.8095620",
+    "name": "Gjendesheim",
+    "osm_id": 281688769,
+    "osm_type": "node",
+    "place_id": 161194372,
+    "place_rank": 20,
+    "type": "hamlet"
+  },
+  {
+    "address": {
+      "ISO3166-2-lvl4": "NO-34",
+      "country": "Norge",
+      "country_code": "no",
+      "county": "Innlandet",
+      "municipality": "\u00d8ystre Slidre",
+      "road": "Gjendesheim"
+    },
+    "addresstype": "road",
+    "boundingbox": [
+      "61.4354934",
+      "61.4356151",
+      "8.8616073",
+      "8.8616745"
+    ],
+    "category": "highway",
+    "display_name": "Gjendesheim, \u00d8ystre Slidre, Innlandet, Norge",
+    "importance": 0.04005410620279239,
+    "lat": "61.4355543",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "lon": "8.8616409",
+    "name": "Gjendesheim",
+    "osm_id": 364555702,
+    "osm_type": "way",
+    "place_id": 161333237,
+    "place_rank": 27,
+    "type": "path"
+  },
+  {
+    "address": {
+      "ISO3166-2-lvl4": "NO-34",
+      "country": "Norge",
+      "country_code": "no",
+      "county": "Innlandet",
+      "hamlet": "Gjendesheim",
+      "municipality": "V\u00e5g\u00e5",
+      "road": "Gjendevegen",
+      "tourism": "Gjendesheim"
+    },
+    "addresstype": "tourism",
+    "boundingbox": [
+      "61.4942959",
+      "61.4943959",
+      "8.8125876",
+      "8.8126876"
+    ],
+    "category": "tourism",
+    "display_name": "Gjendesheim, Gjendevegen, Gjendesheim, V\u00e5g\u00e5, Innlandet, Norge",
+    "importance": 5.41062027923555e-05,
+    "lat": "61.4943459",
+    "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "lon": "8.8126376",
+    "name": "Gjendesheim",
+    "osm_id": 791106132,
+    "osm_type": "node",
+    "place_id": 161536050,
+    "place_rank": 30,
+    "type": "alpine_hut"
+  }
+]

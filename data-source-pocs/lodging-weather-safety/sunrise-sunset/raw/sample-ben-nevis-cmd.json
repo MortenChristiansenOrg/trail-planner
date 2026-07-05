@@ -1,0 +1,122 @@
+[
+  {
+    "query": {
+      "date": "2026-05-15",
+      "formatted": 0,
+      "lat": 56.797,
+      "lng": -5.003,
+      "tzid": "Europe/London"
+    },
+    "response": {
+      "body": {
+        "results": {
+          "astronomical_twilight_begin": "1970-01-01T01:00:01+01:00",
+          "astronomical_twilight_end": "1970-01-01T01:00:01+01:00",
+          "civil_twilight_begin": "2026-05-15T04:10:06+01:00",
+          "civil_twilight_end": "2026-05-15T22:22:38+01:00",
+          "day_length": 59591,
+          "nautical_twilight_begin": "2026-05-15T02:45:14+01:00",
+          "nautical_twilight_end": "2026-05-15T23:47:31+01:00",
+          "solar_noon": "2026-05-15T13:16:22+01:00",
+          "sunrise": "2026-05-15T04:59:47+01:00",
+          "sunset": "2026-05-15T21:32:58+01:00"
+        },
+        "status": "OK",
+        "tzid": "Europe/London"
+      },
+      "ok": true,
+      "status_code": 200
+    },
+    "url": "https://api.sunrise-sunset.org/json?lat=56.797&lng=-5.003&date=2026-05-15&formatted=0&tzid=Europe%2FLondon"
+  },
+  {
+    "query": {
+      "date": "2026-06-21",
+      "formatted": 0,
+      "lat": 56.797,
+      "lng": -5.003,
+      "tzid": "Europe/London"
+    },
+    "response": {
+      "body": {
+        "results": {
+          "astronomical_twilight_begin": "1970-01-01T01:00:01+01:00",
+          "astronomical_twilight_end": "1970-01-01T01:00:01+01:00",
+          "civil_twilight_begin": "2026-06-21T03:19:49+01:00",
+          "civil_twilight_end": "2026-06-21T23:23:51+01:00",
+          "day_length": 64540,
+          "nautical_twilight_begin": "1970-01-01T01:00:01+01:00",
+          "nautical_twilight_end": "1970-01-01T01:00:01+01:00",
+          "solar_noon": "2026-06-21T13:21:50+01:00",
+          "sunrise": "2026-06-21T04:24:00+01:00",
+          "sunset": "2026-06-21T22:19:40+01:00"
+        },
+        "status": "OK",
+        "tzid": "Europe/London"
+      },
+      "ok": true,
+      "status_code": 200
+    },
+    "url": "https://api.sunrise-sunset.org/json?lat=56.797&lng=-5.003&date=2026-06-21&formatted=0&tzid=Europe%2FLondon"
+  },
+  {
+    "query": {
+      "date": "2026-09-15",
+      "formatted": 0,
+      "lat": 56.797,
+      "lng": -5.003,
+      "tzid": "Europe/London"
+    },
+    "response": {
+      "body": {
+        "results": {
+          "astronomical_twilight_begin": "2026-09-15T04:35:17+01:00",
+          "astronomical_twilight_end": "2026-09-15T21:55:07+01:00",
+          "civil_twilight_begin": "2026-09-15T06:12:53+01:00",
+          "civil_twilight_end": "2026-09-15T20:17:32+01:00",
+          "day_length": 46301,
+          "nautical_twilight_begin": "2026-09-15T05:26:16+01:00",
+          "nautical_twilight_end": "2026-09-15T21:04:08+01:00",
+          "solar_noon": "2026-09-15T13:15:12+01:00",
+          "sunrise": "2026-09-15T06:49:22+01:00",
+          "sunset": "2026-09-15T19:41:03+01:00"
+        },
+        "status": "OK",
+        "tzid": "Europe/London"
+      },
+      "ok": true,
+      "status_code": 200
+    },
+    "url": "https://api.sunrise-sunset.org/json?lat=56.797&lng=-5.003&date=2026-09-15&formatted=0&tzid=Europe%2FLondon"
+  },
+  {
+    "query": {
+      "date": "2026-10-15",
+      "formatted": 0,
+      "lat": 56.797,
+      "lng": -5.003,
+      "tzid": "Europe/London"
+    },
+    "response": {
+      "body": {
+        "results": {
+          "astronomical_twilight_begin": "2026-10-15T05:46:33+01:00",
+          "astronomical_twilight_end": "2026-10-15T20:25:00+01:00",
+          "civil_twilight_begin": "2026-10-15T07:14:40+01:00",
+          "civil_twilight_end": "2026-10-15T18:56:52+01:00",
+          "day_length": 37763,
+          "nautical_twilight_begin": "2026-10-15T06:30:46+01:00",
+          "nautical_twilight_end": "2026-10-15T19:40:46+01:00",
+          "solar_noon": "2026-10-15T13:05:46+01:00",
+          "sunrise": "2026-10-15T07:51:05+01:00",
+          "sunset": "2026-10-15T18:20:28+01:00"
+        },
+        "status": "OK",
+        "tzid": "Europe/London"
+      },
+      "ok": true,
+      "status_code": 200
+    },
+    "url": "https://api.sunrise-sunset.org/json?lat=56.797&lng=-5.003&date=2026-10-15&formatted=0&tzid=Europe%2FLondon"
+  }
+]

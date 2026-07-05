@@ -1,0 +1,579 @@
+{
+  "_trail_planner_categorymembers": {
+    "_trail_planner_query": {
+      "endpoint": "https://commons.wikimedia.org/w/api.php",
+      "params": {
+        "action": "query",
+        "cmlimit": "5",
+        "cmtitle": "Category:Ben Nevis",
+        "cmtype": "file",
+        "format": "json",
+        "formatversion": "2",
+        "list": "categorymembers"
+      },
+      "retrieved_at": "2026-07-05T10:00:06Z",
+      "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&list=categorymembers&cmtitle=Category%3ABen+Nevis&cmtype=file&cmlimit=5"
+    },
+    "batchcomplete": true,
+    "continue": {
+      "cmcontinue": "file|4120434c494d4245522041542054484520544f50204f46204e4f352047554c4c59202d2047454f47524150482e4f52472e554b202d20313130343534352e4a5047|13808496",
+      "continue": "-||"
+    },
+    "query": {
+      "categorymembers": [
+        {
+          "ns": 6,
+          "pageid": 13566208,
+          "title": "File:\"Topping out\" Aonach Mor as the sun sets over Ben Nevis - geograph.org.uk - 887163.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 171130572,
+          "title": "File:20250715 Ben Nevis 1.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 171130575,
+          "title": "File:20250715 Ben Nevis 2.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 171130579,
+          "title": "File:20250715 Ben Nevis 3.jpg"
+        },
+        {
+          "ns": 6,
+          "pageid": 171130581,
+          "title": "File:20250715 Ben Nevis 4.jpg"
+        }
+      ]
+    }
+  },
+  "_trail_planner_query": {
+    "endpoint": "https://commons.wikimedia.org/w/api.php",
+    "params": {
+      "action": "query",
+      "format": "json",
+      "formatversion": "2",
+      "iiprop": "url|user|dimensions|extmetadata",
+      "iiurlwidth": "400",
+      "prop": "imageinfo",
+      "titles": "File:\"Topping out\" Aonach Mor as the sun sets over Ben Nevis - geograph.org.uk - 887163.jpg|File:20250715 Ben Nevis 1.jpg|File:20250715 Ben Nevis 2.jpg|File:20250715 Ben Nevis 3.jpg|File:20250715 Ben Nevis 4.jpg"
+    },
+    "retrieved_at": "2026-07-05T10:00:06Z",
+    "url": "https://commons.wikimedia.org/w/api.php?format=json&formatversion=2&action=query&prop=imageinfo&titles=File%3A%22Topping+out%22+Aonach+Mor+as+the+sun+sets+over+Ben+Nevis+-+geograph.org.uk+-+887163.jpg%7CFile%3A20250715+Ben+Nevis+1.jpg%7CFile%3A20250715+Ben+Nevis+2.jpg%7CFile%3A20250715+Ben+Nevis+3.jpg%7CFile%3A20250715+Ben+Nevis+4.jpg&iiprop=url%7Cuser%7Cdimensions%7Cextmetadata&iiurlwidth=400"
+  },
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=13566208",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:%22Topping_out%22_Aonach_Mor_as_the_sun_sets_over_Ben_Nevis_-_geograph.org.uk_-_887163.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/profile/24143\">Iain Lees</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "Attribution": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "Iain Lees"
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ben Nevis|Aonach M\u00f2r|Images from Geograph Britain and Ireland|Information field template with formatting|United Kingdom photographs taken on 1991-02-10|Images by Iain Lees|Torlundy"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "From <a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/photo/887163\">geograph.org.uk</a>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2011-02-21 11:35:21"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "1991-02-10"
+              },
+              "GPSLatitude": {
+                "source": "commons-desc-page",
+                "value": "56.814380"
+              },
+              "GPSLongitude": {
+                "source": "commons-desc-page",
+                "value": "-4.959700"
+              },
+              "GPSMapDatum": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "WGS-84"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "\"Topping out\" Aonach Mor as the sun sets over Ben Nevis Winter is the Best time in the Hills"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-2.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 2.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/2.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "\"Topping out\" Aonach Mor as the sun sets over Ben Nevis - geograph.org.uk - 887163"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 2.0"
+              }
+            },
+            "height": 451,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/6/65/%22Topping_out%22_Aonach_Mor_as_the_sun_sets_over_Ben_Nevis_-_geograph.org.uk_-_887163.jpg"
+            },
+            "size": 38209,
+            "thumbheight": 282,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/%22Topping_out%22_Aonach_Mor_as_the_sun_sets_over_Ben_Nevis_-_geograph.org.uk_-_887163.jpg/500px-%22Topping_out%22_Aonach_Mor_as_the_sun_sets_over_Ben_Nevis_-_geograph.org.uk_-_887163.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/%22Topping_out%22_Aonach_Mor_as_the_sun_sets_over_Ben_Nevis_-_geograph.org.uk_-_887163.jpg",
+            "user": "GeographBot",
+            "width": 640
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 13566208,
+        "title": "File:\"Topping out\" Aonach Mor as the sun sets over Ben Nevis - geograph.org.uk - 887163.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=171130572",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_1.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:HikingisKing&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:HikingisKing (page does not exist)\">HikingisKing</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ben Nevis|Protected areas of Scotland|Self-published work|Images from Wiki Loves Earth missing SDC depicts|Images from Wiki Loves Earth missing SDC location of creation|Images from Wiki Loves Earth 2025|Images from Wiki Loves Earth 2025 in the United Kingdom|Images from Wiki Loves Earth 2025 in England|Uploaded via Campaign:wle-gb-eng"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2025-07-31 10:17:37"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2025-07-15 13:57:04"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Stream falling away from Ben Nevis to Fort William below"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-4.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "20250715 Ben Nevis 1"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            },
+            "height": 3060,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/20250715_Ben_Nevis_1.jpg/960px-20250715_Ben_Nevis_1.jpg"
+            },
+            "size": 4464542,
+            "thumbheight": 300,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/20250715_Ben_Nevis_1.jpg/500px-20250715_Ben_Nevis_1.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/20250715_Ben_Nevis_1.jpg",
+            "user": "HikingisKing",
+            "width": 4080
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 171130572,
+        "title": "File:20250715 Ben Nevis 1.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=171130575",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_2.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:HikingisKing&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:HikingisKing (page does not exist)\">HikingisKing</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ben Nevis|Protected areas of Scotland|Self-published work|Images from Wiki Loves Earth missing SDC location of creation|Images from Wiki Loves Earth 2025|Images from Wiki Loves Earth 2025 in the United Kingdom|Images from Wiki Loves Earth 2025 in England|Uploaded via Campaign:wle-gb-eng"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2025-07-31 10:17:40"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2025-07-15 13:43:44"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Iconic ridgeline of C\u00e0rn M\u00f2r Dearg Ar\u00eate"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-4.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "20250715 Ben Nevis 2"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            },
+            "height": 3060,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20250715_Ben_Nevis_2.jpg/960px-20250715_Ben_Nevis_2.jpg"
+            },
+            "size": 4575066,
+            "thumbheight": 300,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/20250715_Ben_Nevis_2.jpg/500px-20250715_Ben_Nevis_2.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/20250715_Ben_Nevis_2.jpg",
+            "user": "HikingisKing",
+            "width": 4080
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 171130575,
+        "title": "File:20250715 Ben Nevis 2.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=171130579",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_3.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:HikingisKing&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:HikingisKing (page does not exist)\">HikingisKing</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ben Nevis|Protected areas of Scotland|Self-published work|Images from Wiki Loves Earth missing SDC depicts|Images from Wiki Loves Earth missing SDC location of creation|Images from Wiki Loves Earth 2025|Images from Wiki Loves Earth 2025 in the United Kingdom|Images from Wiki Loves Earth 2025 in England|Uploaded via Campaign:wle-gb-eng"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2025-07-31 10:17:40"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2025-07-15 12:36:52"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Rugged topography surrounding Ben Nevis peak"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-4.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "20250715 Ben Nevis 3"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            },
+            "height": 3060,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20250715_Ben_Nevis_3.jpg/960px-20250715_Ben_Nevis_3.jpg"
+            },
+            "size": 4301110,
+            "thumbheight": 300,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/20250715_Ben_Nevis_3.jpg/500px-20250715_Ben_Nevis_3.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/20250715_Ben_Nevis_3.jpg",
+            "user": "HikingisKing",
+            "width": 4080
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 171130579,
+        "title": "File:20250715 Ben Nevis 3.jpg"
+      },
+      {
+        "imageinfo": [
+          {
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=171130581",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_4.jpg",
+            "extmetadata": {
+              "Artist": {
+                "source": "commons-desc-page",
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:HikingisKing&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:HikingisKing (page does not exist)\">HikingisKing</a>"
+              },
+              "Assessments": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": ""
+              },
+              "AttributionRequired": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "true"
+              },
+              "Categories": {
+                "hidden": "",
+                "source": "commons-categories",
+                "value": "Ben Nevis|Protected areas of Scotland|Self-published work|Images from Wiki Loves Earth missing SDC location of creation|Images from Wiki Loves Earth 2025|Images from Wiki Loves Earth 2025 in the United Kingdom|Images from Wiki Loves Earth 2025 in England|Uploaded via Campaign:wle-gb-eng"
+              },
+              "CommonsMetadataExtension": {
+                "hidden": "",
+                "source": "extension",
+                "value": 1.2
+              },
+              "Copyrighted": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "True"
+              },
+              "Credit": {
+                "source": "commons-desc-page",
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>"
+              },
+              "DateTime": {
+                "hidden": "",
+                "source": "mediawiki-metadata",
+                "value": "2025-07-31 10:17:41"
+              },
+              "DateTimeOriginal": {
+                "source": "commons-desc-page",
+                "value": "2025-07-15 10:55:52"
+              },
+              "ImageDescription": {
+                "source": "commons-desc-page",
+                "value": "Ben Nevis and adjacent C\u00e0rn M\u00f2r Dearg illuminated by the morning sun"
+              },
+              "License": {
+                "hidden": "",
+                "source": "commons-templates",
+                "value": "cc-by-sa-4.0"
+              },
+              "LicenseShortName": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "source": "commons-desc-page",
+                "value": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "ObjectName": {
+                "source": "mediawiki-metadata",
+                "value": "20250715 Ben Nevis 4"
+              },
+              "Restrictions": {
+                "hidden": "",
+                "source": "commons-desc-page",
+                "value": ""
+              },
+              "UsageTerms": {
+                "source": "commons-desc-page",
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            },
+            "height": 2250,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/20250715_Ben_Nevis_4.jpg/960px-20250715_Ben_Nevis_4.jpg"
+            },
+            "size": 4357670,
+            "thumbheight": 225,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/20250715_Ben_Nevis_4.jpg/500px-20250715_Ben_Nevis_4.jpg",
+            "thumbwidth": 400,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/20250715_Ben_Nevis_4.jpg",
+            "user": "HikingisKing",
+            "width": 4000
+          }
+        ],
+        "imagerepository": "local",
+        "ns": 6,
+        "pageid": 171130581,
+        "title": "File:20250715 Ben Nevis 4.jpg"
+      }
+    ]
+  }
+}

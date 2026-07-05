@@ -1,0 +1,1223 @@
+{
+  "_trail_planner_query": {
+    "case": "besseggen",
+    "case_name": "Besseggen / Gjendesheim",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "query": "[out:json][timeout:30];\n(\n  nwr(around:4500,61.4947,8.8105)[\"amenity\"~\"^(parking|toilets|drinking_water|shelter|restaurant|cafe|ferry_terminal)$\"];\n  nwr(around:4500,61.4947,8.8105)[\"tourism\"~\"^(alpine_hut|wilderness_hut|camp_site|viewpoint|information)$\"];\n  nwr(around:4500,61.4947,8.8105)[\"highway\"=\"bus_stop\"];\n  nwr(around:4500,61.4947,8.8105)[\"public_transport\"];\n  nwr(around:4500,61.4947,8.8105)[\"waterway\"=\"water_point\"];\n);\nout center tags meta;",
+    "retrieved_at": "2026-07-05T09:59:23Z"
+  },
+  "elements": [
+    {
+      "changeset": 115773270,
+      "id": 285929378,
+      "lat": 61.5068373,
+      "lon": 8.7691786,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2022-01-04T21:51:37Z",
+      "type": "node",
+      "uid": 1488697,
+      "user": "Feed5",
+      "version": 3
+    },
+    {
+      "changeset": 14550278,
+      "id": 285939270,
+      "lat": 61.4949733,
+      "lon": 8.8090267,
+      "tags": {
+        "amenity": "ferry_terminal",
+        "name": "Gjendesheim"
+      },
+      "timestamp": "2013-01-06T15:03:18Z",
+      "type": "node",
+      "uid": 32112,
+      "user": "SverigeFan",
+      "version": 4
+    },
+    {
+      "changeset": 170739505,
+      "id": 791106132,
+      "lat": 61.4943459,
+      "lon": 8.8126376,
+      "tags": {
+        "capacity": "185",
+        "dnt:classification": "betjent",
+        "dnt:iid": "37",
+        "dnt:lock": "yes",
+        "ele": "994",
+        "name": "Gjendesheim",
+        "network": "Den Norske Turistforening",
+        "operator": "DNT Oslo og Omegn",
+        "power_supply": "yes",
+        "ref:kartverket:hytte": "1070",
+        "service": "full",
+        "shower": "yes",
+        "source:date": "2011-06-18 16:13:34",
+        "supervisor": "DNT Oslo og Omegn",
+        "tourism": "alpine_hut",
+        "website": "https://ut.no/hytte/gjendesheim",
+        "wikidata": "Q1528912",
+        "wikipedia": "en:Gjendesheim"
+      },
+      "timestamp": "2025-08-20T17:28:19Z",
+      "type": "node",
+      "uid": 9450227,
+      "user": "Frosch42",
+      "version": 11
+    },
+    {
+      "changeset": 5190179,
+      "id": 811367821,
+      "lat": 61.466594,
+      "lon": 8.7816714,
+      "tags": {
+        "ele": "1098",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-07-11T13:00:50Z",
+      "type": "node",
+      "uid": 91279,
+      "user": "kirchkamp",
+      "version": 1
+    },
+    {
+      "changeset": 115773270,
+      "id": 811369179,
+      "lat": 61.5068601,
+      "lon": 8.7693597,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2022-01-04T21:51:37Z",
+      "type": "node",
+      "uid": 1488697,
+      "user": "Feed5",
+      "version": 2
+    },
+    {
+      "changeset": 5390536,
+      "id": 811369311,
+      "lat": 61.4651558,
+      "lon": 8.7937142,
+      "tags": {
+        "ele": "1112",
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-03T14:41:48Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 2
+    },
+    {
+      "changeset": 5190179,
+      "id": 811369427,
+      "lat": 61.4647926,
+      "lon": 8.8022399,
+      "tags": {
+        "ele": "1083",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-07-11T13:01:22Z",
+      "type": "node",
+      "uid": 91279,
+      "user": "kirchkamp",
+      "version": 1
+    },
+    {
+      "changeset": 58294106,
+      "id": 811369749,
+      "lat": 61.4791203,
+      "lon": 8.8149646,
+      "tags": {
+        "ele": "988",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2018-04-21T16:34:07Z",
+      "type": "node",
+      "uid": 7392967,
+      "user": "FredrikEdler",
+      "version": 3
+    },
+    {
+      "changeset": 5190179,
+      "id": 811370122,
+      "lat": 61.4957766,
+      "lon": 8.8207429,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-07-11T13:01:35Z",
+      "type": "node",
+      "uid": 91279,
+      "user": "kirchkamp",
+      "version": 1
+    },
+    {
+      "changeset": 115773270,
+      "id": 811370130,
+      "lat": 61.4964532,
+      "lon": 8.8141815,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2022-01-04T21:51:37Z",
+      "type": "node",
+      "uid": 1488697,
+      "user": "Feed5",
+      "version": 2
+    },
+    {
+      "changeset": 5190179,
+      "id": 811370148,
+      "lat": 61.4961509,
+      "lon": 8.8220208,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-07-11T13:01:36Z",
+      "type": "node",
+      "uid": 91279,
+      "user": "kirchkamp",
+      "version": 1
+    },
+    {
+      "changeset": 8990883,
+      "id": 811370358,
+      "lat": 61.5220537,
+      "lon": 8.8101264,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2011-08-11T23:25:33Z",
+      "type": "node",
+      "uid": 71555,
+      "user": "JochenB",
+      "version": 2
+    },
+    {
+      "changeset": 115773270,
+      "id": 811370396,
+      "lat": 61.503186,
+      "lon": 8.8134578,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2022-01-04T21:51:37Z",
+      "type": "node",
+      "uid": 1488697,
+      "user": "Feed5",
+      "version": 4
+    },
+    {
+      "changeset": 58294106,
+      "id": 811370646,
+      "lat": 61.4895039,
+      "lon": 8.8465298,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2018-04-21T16:34:07Z",
+      "type": "node",
+      "uid": 7392967,
+      "user": "FredrikEdler",
+      "version": 2
+    },
+    {
+      "changeset": 5384587,
+      "id": 844079871,
+      "lat": 61.5149172,
+      "lon": 8.8516341,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-02T20:25:17Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 5384587,
+      "id": 844080105,
+      "lat": 61.5143318,
+      "lon": 8.8527207,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-02T20:25:25Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 6211194,
+      "id": 844080171,
+      "lat": 61.5256134,
+      "lon": 8.8215665,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-10-28T22:54:53Z",
+      "type": "node",
+      "uid": 3516,
+      "user": "BiIbo",
+      "version": 2
+    },
+    {
+      "changeset": 5384587,
+      "id": 844080255,
+      "lat": 61.5140061,
+      "lon": 8.8538844,
+      "tags": {
+        "amenity": "shelter",
+        "fireplace": "yes"
+      },
+      "timestamp": "2010-08-02T20:25:30Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 8990883,
+      "id": 844080329,
+      "lat": 61.5251517,
+      "lon": 8.8102174,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2011-08-11T23:25:35Z",
+      "type": "node",
+      "uid": 71555,
+      "user": "JochenB",
+      "version": 2
+    },
+    {
+      "changeset": 121220826,
+      "id": 844080404,
+      "lat": 61.5146226,
+      "lon": 8.8529721,
+      "tags": {
+        "capacity": "150",
+        "dnt:classification": "betjent",
+        "dnt:discount": "yes",
+        "dnt:iid": "1117",
+        "ele": "965",
+        "name": "Bessheim Fjellstue",
+        "network": "Den Norske Turistforening",
+        "service": "full",
+        "source:date": "2011-06-18 16:11:58",
+        "tourism": "alpine_hut",
+        "website": "https://ut.no/hytte/bessheim-fjellstue-og-hytter"
+      },
+      "timestamp": "2022-05-20T03:32:59Z",
+      "type": "node",
+      "uid": 9451067,
+      "user": "b-jazz-bot",
+      "version": 8
+    },
+    {
+      "changeset": 14550278,
+      "id": 844102764,
+      "lat": 61.4867166,
+      "lon": 8.83287,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2013-01-06T15:03:21Z",
+      "type": "node",
+      "uid": 32112,
+      "user": "SverigeFan",
+      "version": 2
+    },
+    {
+      "changeset": 5384870,
+      "id": 844102836,
+      "lat": 61.4946008,
+      "lon": 8.8123133,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-02T20:49:46Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 5390536,
+      "id": 844887774,
+      "lat": 61.4648494,
+      "lon": 8.8024158,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-03T14:41:03Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 5390536,
+      "id": 844887782,
+      "lat": 61.4646001,
+      "lon": 8.808209,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2010-08-03T14:41:03Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 5392660,
+      "id": 845143218,
+      "lat": 61.4660661,
+      "lon": 8.7920148,
+      "tags": {
+        "board_type": "notice",
+        "information": "board",
+        "tourism": "information"
+      },
+      "timestamp": "2010-08-03T18:36:14Z",
+      "type": "node",
+      "uid": 11992,
+      "user": "vibrog",
+      "version": 1
+    },
+    {
+      "changeset": 8990883,
+      "id": 876957979,
+      "lat": 61.5324054,
+      "lon": 8.8172298,
+      "tags": {
+        "hiking": "yes",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2011-08-11T23:25:43Z",
+      "type": "node",
+      "uid": 71555,
+      "user": "JochenB",
+      "version": 2
+    },
+    {
+      "changeset": 107659728,
+      "id": 1356458541,
+      "lat": 61.4888347,
+      "lon": 8.8435187,
+      "tags": {
+        "camp_site": "reception",
+        "dnt:classification": "betjent",
+        "dnt:iid": "1243",
+        "name": "Maurvangen camping",
+        "network": "Den Norske Turistforening",
+        "service": "full",
+        "source": "Den Norske Turistforening",
+        "source:date": "2011-06-07 15:28:16",
+        "tourism": "alpine_hut",
+        "website": "https://www.maurvangen.no/de/camping/"
+      },
+      "timestamp": "2021-07-08T20:33:34Z",
+      "type": "node",
+      "uid": 6762362,
+      "user": "don_camembert",
+      "version": 4
+    },
+    {
+      "changeset": 14549529,
+      "id": 2098037594,
+      "lat": 61.4899223,
+      "lon": 8.8443905,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2013-01-06T14:12:37Z",
+      "type": "node",
+      "uid": 32112,
+      "user": "SverigeFan",
+      "version": 1
+    },
+    {
+      "changeset": 14550278,
+      "id": 2098140876,
+      "lat": 61.4926803,
+      "lon": 8.8429078,
+      "tags": {
+        "amenity": "parking",
+        "parking": "surface"
+      },
+      "timestamp": "2013-01-06T15:02:49Z",
+      "type": "node",
+      "uid": 32112,
+      "user": "SverigeFan",
+      "version": 1
+    },
+    {
+      "changeset": 14550278,
+      "id": 2098140974,
+      "lat": 61.4953118,
+      "lon": 8.8093688,
+      "tags": {
+        "bus": "yes",
+        "public_transport": "stop_position"
+      },
+      "timestamp": "2013-01-06T15:02:50Z",
+      "type": "node",
+      "uid": 32112,
+      "user": "SverigeFan",
+      "version": 1
+    },
+    {
+      "changeset": 148434195,
+      "id": 3663314269,
+      "lat": 61.514363,
+      "lon": 8.853029,
+      "tags": {
+        "name": "Bessheim Fjellstue og Hytter",
+        "phone": "+47 61 23 89 13",
+        "tourism": "camp_site",
+        "website": "https://bessheim.no/"
+      },
+      "timestamp": "2024-03-09T18:03:50Z",
+      "type": "node",
+      "uid": 2040010,
+      "user": "eisa01",
+      "version": 5
+    },
+    {
+      "changeset": 38102646,
+      "id": 4081401537,
+      "lat": 61.4929736,
+      "lon": 8.8274578,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2016-03-27T16:21:58Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 38102646,
+      "id": 4081401538,
+      "lat": 61.4933646,
+      "lon": 8.8151235,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2016-03-27T16:21:58Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 38102646,
+      "id": 4081401542,
+      "lat": 61.498493,
+      "lon": 8.8260595,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2016-03-27T16:21:58Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 38102646,
+      "id": 4081401550,
+      "lat": 61.5156223,
+      "lon": 8.8244207,
+      "tags": {
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "timestamp": "2016-03-27T16:21:59Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 138555639,
+      "id": 5139407242,
+      "lat": 61.5146349,
+      "lon": 8.85306,
+      "tags": {
+        "amenity": "toilets"
+      },
+      "timestamp": "2023-07-15T18:41:10Z",
+      "type": "node",
+      "uid": 185205,
+      "user": "magnunor",
+      "version": 2
+    },
+    {
+      "changeset": 106263836,
+      "id": 8827423484,
+      "lat": 61.5069415,
+      "lon": 8.7769512,
+      "tags": {
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2021-06-12T19:27:37Z",
+      "type": "node",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 2
+    },
+    {
+      "changeset": 106265424,
+      "id": 8828141047,
+      "lat": 61.4977552,
+      "lon": 8.7741575,
+      "tags": {
+        "hiking": "yes",
+        "information": "board",
+        "tourism": "information"
+      },
+      "timestamp": "2021-06-12T20:30:17Z",
+      "type": "node",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 2
+    },
+    {
+      "changeset": 106265068,
+      "id": 8828211045,
+      "lat": 61.486404,
+      "lon": 8.8326484,
+      "tags": {
+        "access": "yes",
+        "amenity": "toilets",
+        "fee": "no",
+        "female": "yes",
+        "male": "yes",
+        "unisex": "yes"
+      },
+      "timestamp": "2021-06-12T20:14:26Z",
+      "type": "node",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 1
+    },
+    {
+      "changeset": 106265068,
+      "id": 8828211046,
+      "lat": 61.4865663,
+      "lon": 8.832126,
+      "tags": {
+        "information": "board",
+        "tourism": "information"
+      },
+      "timestamp": "2021-06-12T20:14:26Z",
+      "type": "node",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 1
+    },
+    {
+      "changeset": 106321407,
+      "id": 8831384027,
+      "lat": 61.5035885,
+      "lon": 8.7295466,
+      "tags": {
+        "direction": "240",
+        "name": "Besseggen",
+        "tourism": "viewpoint"
+      },
+      "timestamp": "2021-06-14T08:47:26Z",
+      "type": "node",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 2
+    },
+    {
+      "changeset": 122077217,
+      "id": 9801917312,
+      "lat": 61.4886472,
+      "lon": 8.8263055,
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes",
+        "parking": "surface",
+        "ski": "yes"
+      },
+      "timestamp": "2022-06-07T15:08:16Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 122077217,
+      "id": 9801917313,
+      "lat": 61.4552084,
+      "lon": 8.8059285,
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes",
+        "parking": "surface"
+      },
+      "timestamp": "2022-06-07T15:08:16Z",
+      "type": "node",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493296,
+      "lat": 61.494645,
+      "lon": 8.811883,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheim",
+        "ref:nsrq": "20991"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493297,
+      "lat": 61.514703,
+      "lon": 8.854176,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bessheim",
+        "ref:nsrq": "21000"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493298,
+      "lat": 61.489404,
+      "lon": 8.838434,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheimkrysset",
+        "ref:nsrq": "21007"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493299,
+      "lat": 61.489356,
+      "lon": 8.838581,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Gjendesheimkrysset",
+        "ref:nsrq": "21006"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493300,
+      "lat": 61.487705,
+      "lon": 8.838911,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Maurvangen",
+        "ref:nsrq": "99994"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605493301,
+      "lat": 61.487817,
+      "lon": 8.839134,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Maurvangen",
+        "ref:nsrq": "21011"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605499548,
+      "lat": 61.48623,
+      "lon": 8.832852,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Reinsvangen",
+        "ref:nsrq": "99938"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605499549,
+      "lat": 61.486161,
+      "lon": 8.83263,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Reinsvangen",
+        "ref:nsrq": "99937"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605499567,
+      "lat": 61.464439,
+      "lon": 8.808691,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vargebakkan",
+        "ref:nsrq": "99995"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132065020,
+      "id": 10605499568,
+      "lat": 61.464422,
+      "lon": 8.808503,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Vargebakkan",
+        "ref:nsrq": "99996"
+      },
+      "timestamp": "2023-02-04T05:53:44Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 132736976,
+      "id": 10677659892,
+      "lat": 61.514761,
+      "lon": 8.854581,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Bessheim",
+        "ref:nsrq": "20998"
+      },
+      "timestamp": "2023-02-19T06:42:15Z",
+      "type": "node",
+      "uid": 9493865,
+      "user": "nsr2osm",
+      "version": 1
+    },
+    {
+      "changeset": 138555639,
+      "id": 11048426287,
+      "lat": 61.5148495,
+      "lon": 8.8540021,
+      "tags": {
+        "amenity": "toilets"
+      },
+      "timestamp": "2023-07-15T18:41:10Z",
+      "type": "node",
+      "uid": 185205,
+      "user": "magnunor",
+      "version": 1
+    },
+    {
+      "changeset": 170725621,
+      "id": 12190044751,
+      "lat": 61.4953887,
+      "lon": 8.8092408,
+      "tags": {
+        "amenity": "cafe",
+        "indoor_seating": "yes",
+        "name": "Cafe Gjendeosen",
+        "outdoor_seating": "yes"
+      },
+      "timestamp": "2025-08-20T13:02:58Z",
+      "type": "node",
+      "uid": 10301161,
+      "user": "EvaUnterwegs",
+      "version": 4
+    },
+    {
+      "center": {
+        "lat": 61.4877856,
+        "lon": 8.8342661
+      },
+      "changeset": 139978701,
+      "id": 26303903,
+      "nodes": [
+        288156100,
+        288156096,
+        8831427791,
+        8831427792,
+        8831427790,
+        8831427793,
+        8831427796,
+        8831427795,
+        8831427794,
+        8831427788,
+        8831427798,
+        8831427797,
+        8831427799,
+        8831427800,
+        8831427801,
+        288156097,
+        8831427787,
+        2098140813,
+        2098140812,
+        8828211050,
+        2098140811,
+        288156100
+      ],
+      "tags": {
+        "amenity": "parking",
+        "capacity": "550",
+        "fee": "yes",
+        "hiking": "yes",
+        "name": "Gjendesheim long-term parking",
+        "parking": "surface",
+        "ski": "yes",
+        "surface": "unpaved"
+      },
+      "timestamp": "2023-08-16T18:51:04Z",
+      "type": "way",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 10
+    },
+    {
+      "center": {
+        "lat": 61.4934394,
+        "lon": 8.8137668
+      },
+      "changeset": 122077217,
+      "id": 38080642,
+      "nodes": [
+        447884535,
+        2098037712,
+        2098037701,
+        2098037697,
+        2098037684,
+        447884536,
+        2098037675,
+        447884537,
+        2098037678,
+        2098037686,
+        2098037710,
+        447884538,
+        447884543,
+        447884535
+      ],
+      "tags": {
+        "amenity": "parking",
+        "fee": "yes",
+        "hiking": "yes",
+        "parking": "surface",
+        "ski": "yes"
+      },
+      "timestamp": "2022-06-07T15:08:16Z",
+      "type": "way",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 4
+    },
+    {
+      "center": {
+        "lat": 61.4644883,
+        "lon": 8.8084809
+      },
+      "changeset": 122077217,
+      "id": 70868742,
+      "nodes": [
+        844887921,
+        844887475,
+        844888241,
+        844888345,
+        844887876,
+        844887525,
+        844888162,
+        844887751,
+        844887414,
+        844887608,
+        844888272,
+        844887455,
+        844888057,
+        844887921
+      ],
+      "tags": {
+        "amenity": "parking",
+        "capacity": "20",
+        "capacity:disabled": "no",
+        "capacity:parent": "no",
+        "capacity:women": "no",
+        "fee": "no",
+        "hiking": "yes",
+        "name": "Vargebakken",
+        "parking": "surface"
+      },
+      "timestamp": "2022-06-07T15:08:16Z",
+      "type": "way",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 2
+    },
+    {
+      "center": {
+        "lat": 61.4889256,
+        "lon": 8.8455658
+      },
+      "changeset": 182910921,
+      "id": 199805838,
+      "nodes": [
+        2098037511,
+        2098037538,
+        2098037564,
+        2098037573,
+        2098037589,
+        2098037601,
+        2098037605,
+        2098037614,
+        2098037599,
+        2098037603,
+        2098037609,
+        2098037617,
+        2098037618,
+        2098037625,
+        2098037627,
+        2098037610,
+        2098037600,
+        2098037602,
+        2098037606,
+        2098037580,
+        2098037506,
+        2098037501,
+        2098037466,
+        2098037472,
+        2098037481,
+        2098037480,
+        2098037489,
+        2098037496,
+        2098037500,
+        2098037504,
+        2098037511
+      ],
+      "tags": {
+        "area": "yes",
+        "email": "post@maurvangen.no",
+        "fax": "+47 61 23 89 58",
+        "name": "Besseggen Fjellpark AS",
+        "phone": "+47 61 23 89 22",
+        "tourism": "camp_site",
+        "website": "https://www.maurvangen.no/"
+      },
+      "timestamp": "2026-05-20T06:36:37Z",
+      "type": "way",
+      "uid": 23492813,
+      "user": "confusedbuffalo-bot",
+      "version": 7
+    },
+    {
+      "center": {
+        "lat": 61.4948955,
+        "lon": 8.810258
+      },
+      "changeset": 156916247,
+      "id": 199818237,
+      "nodes": [
+        2098140903,
+        2098140905,
+        2098140930,
+        2098140931,
+        2098140943,
+        2098140958,
+        2098140963,
+        2098140954,
+        2098140951,
+        2098140921,
+        2098140908,
+        844102878,
+        2098140903
+      ],
+      "tags": {
+        "access": "permissive",
+        "amenity": "parking",
+        "fee": "yes",
+        "fee:conditional": "no @ stay < 2 hours",
+        "hiking": "yes",
+        "name": "Gjendesheim short-term parking",
+        "parking": "surface",
+        "ski": "yes"
+      },
+      "timestamp": "2024-09-21T15:06:12Z",
+      "type": "way",
+      "uid": 10121078,
+      "user": "klnkengi",
+      "version": 6
+    },
+    {
+      "center": {
+        "lat": 61.5146101,
+        "lon": 8.8535061
+      },
+      "changeset": 42359632,
+      "id": 443857989,
+      "nodes": [
+        4413914200,
+        4413914199,
+        4413914196,
+        4413914198,
+        4413914200
+      ],
+      "tags": {
+        "amenity": "parking",
+        "hiking": "yes"
+      },
+      "timestamp": "2016-09-22T20:42:06Z",
+      "type": "way",
+      "uid": 3497659,
+      "user": "NKA",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 61.5260668,
+        "lon": 8.8088817
+      },
+      "changeset": 103094228,
+      "id": 931695615,
+      "nodes": [
+        8637513315,
+        8637513316,
+        8637542517,
+        8637542518,
+        8637513315
+      ],
+      "tags": {
+        "amenity": "toilets",
+        "building": "yes"
+      },
+      "timestamp": "2021-04-17T09:18:30Z",
+      "type": "way",
+      "uid": 237638,
+      "user": "Visaman",
+      "version": 1
+    },
+    {
+      "center": {
+        "lat": 61.4864305,
+        "lon": 8.8324688
+      },
+      "changeset": 106265068,
+      "id": 953826528,
+      "nodes": [
+        8828211026,
+        8828211025,
+        8828211018,
+        8828211024,
+        8828211017,
+        8828211023,
+        8828211035,
+        8828211034,
+        8828211022,
+        8828211021,
+        8588726722,
+        8588726723,
+        8828211026
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "timestamp": "2021-06-12T20:14:26Z",
+      "type": "way",
+      "uid": 422573,
+      "user": "larsalonian",
+      "version": 1
+    }
+  ],
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "timestamp_osm_base": "2026-07-05T09:57:30Z"
+  },
+  "version": 0.6
+}

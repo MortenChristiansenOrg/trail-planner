@@ -1,0 +1,10 @@
+{
+  "source": "opentripplanner",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "status": "not_queried",
+  "reason": "Local OSM plus GTFS/NeTEx graph build required before trip sample.",
+  "docs": [
+    "https://docs.opentripplanner.org/",
+    "https://docs.opentripplanner.org/en/latest/Configuration/"
+  ]
+}

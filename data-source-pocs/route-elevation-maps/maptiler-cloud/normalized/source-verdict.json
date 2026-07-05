@@ -1,0 +1,7 @@
+{
+  "source": "maptiler_cloud",
+  "verdict": "blocked",
+  "mvp_role": "Hosted outdoor vector tiles, geocoding, and static map candidate.",
+  "confidence": "medium",
+  "next_step": "Run Besseggen MapLibre style/static-map/geocoding samples after account approval."
+}

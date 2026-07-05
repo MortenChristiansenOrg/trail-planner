@@ -1,0 +1,347 @@
+{
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:60];\n(\n  node(around:15000,61.494,8.812)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  way(around:15000,61.494,8.812)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n  relation(around:15000,61.494,8.812)[tourism~\"^(alpine_hut|wilderness_hut|camp_site|caravan_site|hostel|hotel|guest_house|chalet)$\"];\n);\nout center tags;",
+  "response": {
+    "body": {
+      "elements": [
+        {
+          "id": 285932712,
+          "lat": 61.4892934,
+          "lon": 8.6326088,
+          "tags": {
+            "caravans": "no",
+            "drinking_water": "yes",
+            "name": "Memurubu",
+            "operator": "Memurubu Turisthytte AS",
+            "power_supply": "no",
+            "shower": "yes",
+            "tents": "yes",
+            "toilets": "yes",
+            "tourism": "camp_site"
+          },
+          "type": "node"
+        },
+        {
+          "id": 773330358,
+          "lat": 61.4907726,
+          "lon": 8.6297991,
+          "tags": {
+            "capacity": "150",
+            "dnt:classification": "betjent",
+            "dnt:iid": "515",
+            "ele": "1008",
+            "name": "Memurubu",
+            "network": "Den Norske Turistforening",
+            "operator": "Memurubu Turisthytte AS",
+            "ref:kartverket:hytte": "5051",
+            "service": "full",
+            "shower": "yes",
+            "source:date": "2011-06-07 15:26:47",
+            "tourism": "alpine_hut",
+            "website": "https://ut.no/hytte/memurubu-turisthytte",
+            "wikidata": "Q1535521",
+            "wikipedia": "en:Memurubu"
+          },
+          "type": "node"
+        },
+        {
+          "id": 791106132,
+          "lat": 61.4943459,
+          "lon": 8.8126376,
+          "tags": {
+            "capacity": "185",
+            "dnt:classification": "betjent",
+            "dnt:iid": "37",
+            "dnt:lock": "yes",
+            "ele": "994",
+            "name": "Gjendesheim",
+            "network": "Den Norske Turistforening",
+            "operator": "DNT Oslo og Omegn",
+            "power_supply": "yes",
+            "ref:kartverket:hytte": "1070",
+            "service": "full",
+            "shower": "yes",
+            "source:date": "2011-06-18 16:13:34",
+            "supervisor": "DNT Oslo og Omegn",
+            "tourism": "alpine_hut",
+            "website": "https://ut.no/hytte/gjendesheim",
+            "wikidata": "Q1528912",
+            "wikipedia": "en:Gjendesheim"
+          },
+          "type": "node"
+        },
+        {
+          "id": 844080404,
+          "lat": 61.5146226,
+          "lon": 8.8529721,
+          "tags": {
+            "capacity": "150",
+            "dnt:classification": "betjent",
+            "dnt:discount": "yes",
+            "dnt:iid": "1117",
+            "ele": "965",
+            "name": "Bessheim Fjellstue",
+            "network": "Den Norske Turistforening",
+            "service": "full",
+            "source:date": "2011-06-18 16:11:58",
+            "tourism": "alpine_hut",
+            "website": "https://ut.no/hytte/bessheim-fjellstue-og-hytter"
+          },
+          "type": "node"
+        },
+        {
+          "id": 844491665,
+          "lat": 61.5136594,
+          "lon": 8.8522768,
+          "tags": {
+            "tourism": "caravan_site"
+          },
+          "type": "node"
+        },
+        {
+          "id": 845233214,
+          "lat": 61.4868892,
+          "lon": 9.0360931,
+          "tags": {
+            "name": "Sikkilsdalsseter",
+            "tourism": "guest_house"
+          },
+          "type": "node"
+        },
+        {
+          "id": 1356458541,
+          "lat": 61.4888347,
+          "lon": 8.8435187,
+          "tags": {
+            "camp_site": "reception",
+            "dnt:classification": "betjent",
+            "dnt:iid": "1243",
+            "name": "Maurvangen camping",
+            "network": "Den Norske Turistforening",
+            "service": "full",
+            "source": "Den Norske Turistforening",
+            "source:date": "2011-06-07 15:28:16",
+            "tourism": "alpine_hut",
+            "website": "https://www.maurvangen.no/de/camping/"
+          },
+          "type": "node"
+        },
+        {
+          "id": 1356458879,
+          "lat": 61.4868858,
+          "lon": 9.0360924,
+          "tags": {
+            "capacity": "78",
+            "dnt:classification": "betjent",
+            "dnt:iid": "1287",
+            "ele": "1006",
+            "name": "Sikkilsdalsseter",
+            "network": "Den Norske Turistforening",
+            "service": "full",
+            "source": "Den Norske Turistforening",
+            "source:date": "2011-06-18 16:10:11",
+            "tourism": "alpine_hut",
+            "website": "https://ut.no/hytte/sikkilsdalsseter"
+          },
+          "type": "node"
+        },
+        {
+          "id": 1418920607,
+          "lat": 61.5568925,
+          "lon": 8.7941999,
+          "tags": {
+            "impromptu": "yes",
+            "maxtents": "4",
+            "tourism": "camp_site"
+          },
+          "type": "node"
+        },
+        {
+          "id": 3663314269,
+          "lat": 61.514363,
+          "lon": 8.853029,
+          "tags": {
+            "name": "Bessheim Fjellstue og Hytter",
+            "phone": "+47 61 23 89 13",
+            "tourism": "camp_site",
+            "website": "https://bessheim.no/"
+          },
+          "type": "node"
+        },
+        {
+          "id": 3663315295,
+          "lat": 61.562518,
+          "lon": 8.917934,
+          "tags": {
+            "contact:email": "post@jotunheimencc.no",
+            "contact:facebook": "https://www.facebook.com/jotunheimencaravancamp/",
+            "contact:phone": "+47 97 00 88 77",
+            "name": "Jotunheimen Caravan Camp",
+            "tourism": "camp_site",
+            "website": "https://www.jotunheimencc.no/"
+          },
+          "type": "node"
+        },
+        {
+          "id": 3663316170,
+          "lat": 61.549714,
+          "lon": 8.922553,
+          "tags": {
+            "name": "Postfuru camping",
+            "phone": "+47 992 23 779",
+            "tourism": "camp_site",
+            "website": "http://jotunheimencaravancamp.no"
+          },
+          "type": "node"
+        },
+        {
+          "id": 3708619564,
+          "lat": 61.4908142,
+          "lon": 8.6261968,
+          "tags": {
+            "alt_name": "Memurubua",
+            "capacity": "2",
+            "name": "Steinbua ved Memurubu",
+            "operator": "Lom fjellstyre",
+            "ref:kartverket:hytte": "4170",
+            "tourism": "chalet",
+            "website": "https://www.lom-fjellstyre.no/project/steinbua-memuru/"
+          },
+          "type": "node"
+        },
+        {
+          "id": 4082473834,
+          "lat": 61.480144,
+          "lon": 8.8111217,
+          "tags": {
+            "alt_name": "Leirungsbua",
+            "capacity": "4",
+            "name": "Gjetarhytta",
+            "operator": "V\u00e5g\u00e5 fjellstyre",
+            "ref:kartverket:hytte": "4156",
+            "tourism": "chalet",
+            "website": "https://www.inatur.no/hytte/5540a98ee4b014557d9e3be6"
+          },
+          "type": "node"
+        },
+        {
+          "id": 4959128100,
+          "lat": 61.5524391,
+          "lon": 8.9644957,
+          "tags": {
+            "access": "customers",
+            "capacity": "8",
+            "operator": "Per Ove R\u00f8e",
+            "smoking": "no",
+            "tourism": "chalet",
+            "url": "https://www.inatur.no/hytte/59301e85e4b0983b8977ca61/koselig-hytte-i-sjodalen-vaga-unikt-utgangpunkt-for-turer-i-jotunheimen"
+          },
+          "type": "node"
+        },
+        {
+          "id": 6050121385,
+          "lat": 61.5500854,
+          "lon": 8.9901402,
+          "tags": {
+            "access": "customers",
+            "name": "Kampen",
+            "smoking": "no",
+            "source": "https://www.inatur.no/hytte/5b91281058fd8300036542b7/kampen-1050-moh-ei-uberort-perle-nar-besseggen-to-hytter-pa-setra-jakt-fiske-frilustliv",
+            "tourism": "chalet"
+          },
+          "type": "node"
+        },
+        {
+          "center": {
+            "lat": 61.4889256,
+            "lon": 8.8455658
+          },
+          "id": 199805838,
+          "tags": {
+            "area": "yes",
+            "email": "post@maurvangen.no",
+            "fax": "+47 61 23 89 58",
+            "name": "Besseggen Fjellpark AS",
+            "phone": "+47 61 23 89 22",
+            "tourism": "camp_site",
+            "website": "https://www.maurvangen.no/"
+          },
+          "type": "way"
+        },
+        {
+          "center": {
+            "lat": 61.430049,
+            "lon": 8.8059245
+          },
+          "id": 364555708,
+          "tags": {
+            "access": "customers",
+            "building": "cabin",
+            "name": "Telegrafbue",
+            "operator": "\u00d8ystre Slidre fjellstyre",
+            "ref:bygningsnr": "158275759",
+            "smoking": "no",
+            "tourism": "chalet",
+            "website": "https://www.inatur.no/hytte/6151a85083eb8c0003c4f6eb/telegrafbue-ved-valdresflye-i-oystre-slidre"
+          },
+          "type": "way"
+        },
+        {
+          "center": {
+            "lat": 61.4932992,
+            "lon": 8.8569445
+          },
+          "id": 688067539,
+          "tags": {
+            "operator": "Reidun \u00d8vre \u00d8ygard og Rune \u00d8ygard",
+            "source": "https://www.inatur.no/hytte/57f20509e4b07d536b5ed448/hyttetun-ved-foten-av-besseggen",
+            "tourism": "chalet"
+          },
+          "type": "way"
+        },
+        {
+          "center": {
+            "lat": 61.4639745,
+            "lon": 8.791666
+          },
+          "id": 925441021,
+          "tags": {
+            "building": "cabin",
+            "capacity": "3",
+            "name": "Vargebue",
+            "operator": "V\u00e5g\u00e5 fjellstyre",
+            "ref:bygningsnr": "156100978",
+            "ref:kartverket:hytte": "4206",
+            "tourism": "chalet",
+            "website": "https://www.vaga-fjellstyre.no/hytter-friluftsliv"
+          },
+          "type": "way"
+        },
+        {
+          "center": {
+            "lat": 61.5258625,
+            "lon": 8.8091057
+          },
+          "id": 925441235,
+          "tags": {
+            "access": "customers",
+            "building": "cabin",
+            "name": "Bessvassbue",
+            "operator": "V\u00e5g\u00e5 Fjellstyre",
+            "ref:bygningsnr": "156101400",
+            "tourism": "chalet"
+          },
+          "type": "way"
+        }
+      ],
+      "generator": "Overpass API 0.7.62.11 87bfad18",
+      "osm3s": {
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+        "timestamp_osm_base": "2026-07-05T09:59:41Z"
+      },
+      "version": 0.6
+    },
+    "ok": true,
+    "status_code": 200
+  }
+}

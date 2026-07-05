@@ -1,0 +1,7 @@
+{
+  "id": "wild-camping-legal-assumption-template",
+  "source": "manual_official_sources",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "fields": ["country", "region", "protected_area", "wild_camping_allowed", "designated_campsites_only", "fire_rules", "seasonal_restrictions", "source_url", "reviewed_at", "confidence"]
+}

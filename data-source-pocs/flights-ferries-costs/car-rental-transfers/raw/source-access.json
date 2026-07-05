@@ -1,0 +1,18 @@
+{
+  "source": "car_rental_and_airport_transfers",
+  "checked_at": "2026-07-05",
+  "sources": [
+    {
+      "name": "Amadeus Cars and Transfers",
+      "url": "https://developers.amadeus.com/self-service/category/cars-and-transfers",
+      "access_model": "self-service or account-gated APIs for transfer search/booking"
+    },
+    {
+      "name": "Booking.com Demand API Cars",
+      "url": "https://developers.booking.com/demand/docs/open-api/3.2-beta/demand-api/cars",
+      "access_model": "partner/API access"
+    }
+  ],
+  "public_sample_run": false,
+  "reason_no_script": "Live rental pricing is commercial and assumption-heavy; no credentials were available."
+}

@@ -1,0 +1,127 @@
+{
+  "criteria": {
+    "AscendingOrder": false,
+    "LangKey": 2,
+    "NumberOfRecords": 5,
+    "OrderBy": "DtObsTime",
+    "Radius": {
+      "Position": {
+        "Latitude": 61.506,
+        "Longitude": 8.798
+      },
+      "Radius": 10000
+    },
+    "SelectedGeoHazards": [
+      10
+    ]
+  },
+  "response": {
+    "body": [
+      {
+        "AttachmentsCount": 2,
+        "CompetenceLevelTID": 120,
+        "DtObsTime": "2026-04-23T13:52:57+02:00",
+        "FirstAttachmentId": 525938,
+        "FirstAttachmentUrl": "https://api.regobs.no/Attachments/Thumbnail/9d3c32ea-7a81-4d70-b411-ff8d1c1249ed.jpg",
+        "FormNames": [
+          "Snow Cover"
+        ],
+        "GeoHazardTID": 10,
+        "Latitude": 61.4197761943435,
+        "Longitude": 8.799002536106856,
+        "NickName": "Liss@nve",
+        "RegId": 461946,
+        "Title": "Jotunheimen / \u00d8ystre Slidre",
+        "UtmEast": 169399,
+        "UtmNorth": 6825277
+      },
+      {
+        "AttachmentsCount": 17,
+        "CompetenceLevelTID": 120,
+        "DtObsTime": "2026-04-22T12:20:02+02:00",
+        "FirstAttachmentId": 525724,
+        "FirstAttachmentUrl": "https://api.regobs.no/Attachments/Thumbnail/3ad67df9-13f8-41f2-8a2d-fadc607fdbb6.jpg",
+        "FormNames": [
+          "Notes",
+          "Danger Sign",
+          "Weather",
+          "Snow Cover",
+          "Tests",
+          "Avalanche Danger Assessment",
+          "Avalanche Problems",
+          "Avalanche Activity",
+          "Snow Profile"
+        ],
+        "GeoHazardTID": 10,
+        "Latitude": 61.451186980949146,
+        "Longitude": 8.732270831242204,
+        "NickName": "Sveinung@obskorps",
+        "RegId": 461817,
+        "Title": "Jotunheimen / V\u00e5g\u00e5",
+        "UtmEast": 166186,
+        "UtmNorth": 6829105
+      },
+      {
+        "AttachmentsCount": 1,
+        "CompetenceLevelTID": 120,
+        "DtObsTime": "2026-04-22T11:54:32+02:00",
+        "FirstAttachmentId": 525719,
+        "FirstAttachmentUrl": "https://api.regobs.no/Attachments/Thumbnail/40122b7b-0cda-4f05-b94f-b61e6bec4214.jpg",
+        "FormNames": [
+          "Avalanche Activity"
+        ],
+        "GeoHazardTID": 10,
+        "Latitude": 61.46669973266341,
+        "Longitude": 8.741275928914549,
+        "NickName": "Sveinung@obskorps",
+        "RegId": 461805,
+        "Title": "Jotunheimen / V\u00e5g\u00e5",
+        "UtmEast": 166830,
+        "UtmNorth": 6830782
+      },
+      {
+        "AttachmentsCount": 1,
+        "CompetenceLevelTID": 120,
+        "DtObsTime": "2026-04-22T11:48:41+02:00",
+        "FirstAttachmentId": 525718,
+        "FirstAttachmentUrl": "https://api.regobs.no/Attachments/Thumbnail/1450a967-aca5-4c42-b682-6fab6626fe1d.jpg",
+        "FormNames": [
+          "Danger Sign",
+          "Avalanche Activity"
+        ],
+        "GeoHazardTID": 10,
+        "Latitude": 61.516552365038365,
+        "Longitude": 8.705595496416093,
+        "NickName": "Sveinung@obskorps",
+        "RegId": 461804,
+        "Title": "Jotunheimen / V\u00e5g\u00e5",
+        "UtmEast": 165472,
+        "UtmNorth": 6836500
+      },
+      {
+        "AttachmentsCount": 1,
+        "CompetenceLevelTID": 120,
+        "DtObsTime": "2026-04-22T09:03:18+02:00",
+        "FirstAttachmentId": 525685,
+        "FirstAttachmentUrl": "https://api.regobs.no/Attachments/Thumbnail/60305947-b5a4-4612-9354-8db7e43149bc.jpg",
+        "FormNames": [
+          "Avalanche Activity"
+        ],
+        "GeoHazardTID": 10,
+        "Latitude": 61.51209031393177,
+        "Longitude": 8.819577153772116,
+        "NickName": "Sveinung@obskorps",
+        "RegId": 461790,
+        "Title": "Jotunheimen / V\u00e5g\u00e5",
+        "UtmEast": 171469,
+        "UtmNorth": 6835424
+      }
+    ],
+    "curl_returncode": 0,
+    "headers": {},
+    "ok": true,
+    "status_code": 200,
+    "stderr": ""
+  },
+  "url": "https://api.regobs.no/v5/Search/AtAGlance"
+}

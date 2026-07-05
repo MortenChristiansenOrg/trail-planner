@@ -1,0 +1,34 @@
+{
+  "id": "bergen-to-odda-osrm",
+  "source": "osrm_public_demo",
+  "retrieved_at": "2026-07-05T09:58:17Z",
+  "query": {
+    "endpoint": "https://router.project-osrm.org/route/v1/driving/5.3336,60.3894;6.5456,60.0691?overview=false&alternatives=false&steps=false",
+    "case": "bergen-to-odda",
+    "origin": {
+      "name": "Bergen",
+      "coordinates": [
+        5.3336,
+        60.3894
+      ]
+    },
+    "destination": {
+      "name": "Odda",
+      "coordinates": [
+        6.5456,
+        60.0691
+      ]
+    }
+  },
+  "license_or_terms_url": "https://project-osrm.org/",
+  "freshness": "osm_based_demo_route",
+  "confidence": "public_demo_sample",
+  "origin": "Bergen",
+  "destination": "Odda",
+  "mode": "car",
+  "duration_minutes": 156.6,
+  "distance_km": 132.82,
+  "segments": [],
+  "cost": null,
+  "status": "Ok"
+}

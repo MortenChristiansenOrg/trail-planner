@@ -1,0 +1,212 @@
+{
+  "confidence": "medium_until_column_mapping_is_hardened",
+  "country_prices": [
+    {
+      "country": "Denmark",
+      "prices": [
+        {
+          "eur_per_liter": 2.338617967757041,
+          "eur_per_unit": 2338.617967757041,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 2.0068231988761793,
+          "eur_per_unit": 2006.8231988761793,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 2.007090775302696,
+          "eur_per_unit": 2007.090775302696,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": null,
+          "eur_per_unit": 1541.400762592816,
+          "product": " Fuel oil - Schweres Heiz\u00f6l (III) Soufre ",
+          "unit": "t"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "prices": [
+        {
+          "eur_per_liter": 1.93526,
+          "eur_per_unit": 1935.26,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.86907,
+          "eur_per_unit": 1869.07,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.40078,
+          "eur_per_unit": 1400.78,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.02618,
+          "eur_per_unit": 1026.18,
+          "product": "GPL pour moteur LPG motor fuel",
+          "unit": "1000 l"
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "prices": [
+        {
+          "eur_per_liter": 1.9,
+          "eur_per_unit": 1900.0,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.763,
+          "eur_per_unit": 1763.0,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.1352,
+          "eur_per_unit": 1135.2,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.1065,
+          "eur_per_unit": 1106.5,
+          "product": "GPL pour moteur LPG motor fuel",
+          "unit": "1000 l"
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "prices": [
+        {
+          "eur_per_liter": 1.81185,
+          "eur_per_unit": 1811.85,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.89702,
+          "eur_per_unit": 1897.02,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.59985,
+          "eur_per_unit": 1599.85,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": null,
+          "eur_per_unit": 600.0,
+          "product": " Fuel oil - Schweres Heiz\u00f6l (III) Soufre ",
+          "unit": "t"
+        },
+        {
+          "eur_per_liter": 0.77135,
+          "eur_per_unit": 771.35,
+          "product": "GPL pour moteur LPG motor fuel",
+          "unit": "1000 l"
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "prices": [
+        {
+          "eur_per_liter": 1.437863854,
+          "eur_per_unit": 1437.863854,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.5035030839999999,
+          "eur_per_unit": 1503.503084,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 0.954363,
+          "eur_per_unit": 954.3629999999999,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": null,
+          "eur_per_unit": 672.168,
+          "product": " Fuel oil - Schweres Heiz\u00f6l (III) Soufre ",
+          "unit": "t"
+        },
+        {
+          "eur_per_liter": 1.00285225,
+          "eur_per_unit": 1002.8522499999999,
+          "product": "GPL pour moteur LPG motor fuel",
+          "unit": "1000 l"
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "prices": [
+        {
+          "eur_per_liter": 1.5417850538943763,
+          "eur_per_unit": 1541.7850538943762,
+          "product": "Euro-super 95  (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.683939926938168,
+          "eur_per_unit": 1683.9399269381681,
+          "product": "Gas oil automobile Automotive gas oil Dieselkraftstoff (I)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": 1.354440084787805,
+          "eur_per_unit": 1354.440084787805,
+          "product": " Gas oil de chauffage Heating gas oil Heiz\u00f6l (II)",
+          "unit": "1000 l"
+        },
+        {
+          "eur_per_liter": null,
+          "eur_per_unit": 919.5868849501646,
+          "product": " Fuel oil - Schweres Heiz\u00f6l (III) Soufre ",
+          "unit": "t"
+        }
+      ]
+    }
+  ],
+  "freshness": "weekly",
+  "license_or_terms_url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en",
+  "notes": [
+    "The bulletin publishes EU country-average consumer prices for petroleum products.",
+    "This POC saves the official XLSX and extracts matching country rows only; production should harden sheet and column mapping.",
+    "Norway, Iceland, Switzerland, and the UK are outside this EU source and need separate defaults."
+  ],
+  "query": {
+    "countries": [
+      "Denmark",
+      "France",
+      "Germany",
+      "Italy",
+      "Spain",
+      "Sweden"
+    ],
+    "page_url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en",
+    "xlsx_url": "https://energy.ec.europa.eu/document/download/264c2d0f-f161-4ea3-a777-78faae59bea0_en?filename=Weekly%20Oil%20Bulletin%20Weekly%20prices%20with%20Taxes%20-%202024-02-19.xlsx"
+  },
+  "retrieved_at": "2026-07-05T09:59:36+00:00",
+  "source": "european_commission_weekly_oil_bulletin"
+}

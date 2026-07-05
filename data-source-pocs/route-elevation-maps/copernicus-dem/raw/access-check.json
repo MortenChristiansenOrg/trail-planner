@@ -1,0 +1,10 @@
+{
+  "source": "copernicus_dem",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+    "https://registry.opendata.aws/copernicus-dem/"
+  ],
+  "access": "open_dataset_via_platforms",
+  "sample_not_fetched_reason": "This pass used API/tile services for samples; direct DEM ingestion is a larger batch-data POC."
+}

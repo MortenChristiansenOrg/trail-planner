@@ -1,0 +1,8 @@
+{
+  "source": "direct_ferries_connect",
+  "verdict": "blocked",
+  "mvp_role": "Potential future live ferry inventory source, not an MVP dependency.",
+  "auth_required": true,
+  "target_routes": ["Hirtshals-Kristiansand", "Hirtshals-Larvik", "Hirtshals-Stavanger/Bergen"],
+  "confidence": "medium"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "maplibre_gl_js",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://maplibre.org/maplibre-gl-js/docs/",
+    "https://github.com/maplibre/maplibre-gl-js"
+  ],
+  "access": "open_source_library",
+  "sample_not_fetched_reason": "Renderer POC needs frontend app context and tile/style source; no data fetch required."
+}

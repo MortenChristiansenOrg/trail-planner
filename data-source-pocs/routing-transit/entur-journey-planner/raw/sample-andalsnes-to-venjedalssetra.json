@@ -1,0 +1,42 @@
+{
+  "data": {
+    "trip": {
+      "dateTime": "2026-07-15T08:00:00+02:00",
+      "tripPatterns": [
+        {
+          "duration": 11028,
+          "walkDistance": 11467.92,
+          "startTime": "2026-07-15T08:00:00+02:00",
+          "endTime": "2026-07-15T11:03:48+02:00",
+          "legs": [
+            {
+              "mode": "foot",
+              "distance": 11467.92,
+              "duration": 11028,
+              "expectedStartTime": "2026-07-15T08:00:00+02:00",
+              "expectedEndTime": "2026-07-15T11:03:48+02:00",
+              "fromPlace": {
+                "name": "Andalsnes stasjon",
+                "latitude": 62.567,
+                "longitude": 7.6871
+              },
+              "toPlace": {
+                "name": "Venjedalssetra",
+                "latitude": 62.5351,
+                "longitude": 7.8283
+              },
+              "line": null,
+              "situations": []
+            }
+          ]
+        }
+      ],
+      "routingErrors": [
+        {
+          "code": "noTransitConnection",
+          "description": "No trip found. There may be no transit service within the maximum specified distance or at the specified time, or your start or end point might not be safely accessible."
+        }
+      ]
+    }
+  }
+}

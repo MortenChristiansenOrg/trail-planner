@@ -1,0 +1,45 @@
+{
+  "source": "open-meteo",
+  "source_url": "https://open-meteo.com/en/docs",
+  "retrieved_at": "2026-07-05T10:02:50Z",
+  "query": {
+    "latitude": 61.494,
+    "longitude": 8.811,
+    "forecast_days": 3,
+    "timezone": "Europe/Oslo"
+  },
+  "location": {
+    "latitude": 61.5,
+    "longitude": 8.75,
+    "elevation_m": 983.0,
+    "timezone": "Europe/Oslo"
+  },
+  "daily": {
+    "time": [
+      "2026-07-05",
+      "2026-07-06",
+      "2026-07-07"
+    ],
+    "temperature_2m_max": [
+      11.7,
+      12.8,
+      12.5
+    ],
+    "temperature_2m_min": [
+      5.7,
+      2.7,
+      4.3
+    ],
+    "precipitation_sum": [
+      0.10,
+      0.00,
+      0.10
+    ],
+    "wind_speed_10m_max": [
+      19.4,
+      30.2,
+      27.7
+    ]
+  },
+  "confidence": "forecast_sample"
+}

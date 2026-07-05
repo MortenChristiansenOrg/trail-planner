@@ -1,0 +1,18 @@
+{
+  "id": "opentripplanner-self-host-followup",
+  "source": "opentripplanner",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {
+    "script": "poc.sh",
+    "required_inputs": [
+      "OSM extract",
+      "GTFS or NeTEx schedule feeds",
+      "optional realtime feeds"
+    ]
+  },
+  "license_or_terms_url": "https://docs.opentripplanner.org/",
+  "freshness": "not_queried",
+  "confidence": "self_host_required",
+  "verdict": "viable_with_limits",
+  "reason": "Technically viable, but requires graph build and feed maintenance before sample trips can be saved."
+}

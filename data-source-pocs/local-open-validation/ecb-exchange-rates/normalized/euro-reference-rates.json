@@ -1,0 +1,17 @@
+{
+  "source": "ecb_eurofxref",
+  "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+  "retrieved_at": "2026-07-05T10:02:50Z",
+  "rate_date": "2026-07-03",
+  "base": "EUR",
+  "rates": {
+    "DKK": 7.4746,
+    "GBP": 0.8572,
+    "SEK": 11.0315,
+    "CHF": 0.919,
+    "ISK": 144.0,
+    "NOK": 11.269
+  },
+  "note": "ECB publishes euro reference rates. DKK conversion can be derived through EUR base.",
+  "confidence": "official_daily_reference"
+}

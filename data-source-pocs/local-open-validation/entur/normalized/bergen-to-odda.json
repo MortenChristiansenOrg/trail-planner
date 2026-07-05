@@ -1,0 +1,425 @@
+{
+  "source": "entur_journey_planner",
+  "source_url": "https://developer.entur.org/pages-journeyplanner-journeyplanner/",
+  "retrieved_at": "2026-07-05T10:02:50Z",
+  "query": {
+    "from": "Bergen coordinates",
+    "to": "Odda coordinates",
+    "numTripPatterns": 3
+  },
+  "trip_patterns": [
+    {
+      "duration_seconds": 22162,
+      "legs": [
+        {
+          "mode": "foot",
+          "distance_m": 598.54,
+          "line": null,
+          "from": {
+            "name": "Origin",
+            "latitude": 60.3913,
+            "longitude": 5.3221
+          },
+          "to": {
+            "name": "Strandkaiterminalen båtkai",
+            "latitude": 60.395131,
+            "longitude": 5.322455
+          },
+          "aimed_start_time": "2026-07-05T12:36:45+02:00",
+          "aimed_end_time": "2026-07-05T12:45:00+02:00"
+        },
+        {
+          "mode": "water",
+          "distance_m": 73561.0,
+          "line": {
+            "publicCode": "2080",
+            "name": "Sunnhordland - Austevoll - Bergen",
+            "transportMode": "water"
+          },
+          "from": {
+            "name": "Strandkaiterminalen båtkai",
+            "latitude": 60.395131,
+            "longitude": 5.322455
+          },
+          "to": {
+            "name": "Leirvik båtkai",
+            "latitude": 59.780375,
+            "longitude": 5.501953
+          },
+          "aimed_start_time": "2026-07-05T12:45:00+02:00",
+          "aimed_end_time": "2026-07-05T14:25:00+02:00"
+        },
+        {
+          "mode": "water",
+          "distance_m": 28923.0,
+          "line": {
+            "publicCode": "2080",
+            "name": "Sunnhordland - Austevoll - Bergen",
+            "transportMode": "water"
+          },
+          "from": {
+            "name": "Leirvik båtkai",
+            "latitude": 59.780375,
+            "longitude": 5.501953
+          },
+          "to": {
+            "name": "Ølen hurtigbåtkai",
+            "latitude": 59.606274,
+            "longitude": 5.806942
+          },
+          "aimed_start_time": "2026-07-05T14:25:00+02:00",
+          "aimed_end_time": "2026-07-05T15:05:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 143.11,
+          "line": null,
+          "from": {
+            "name": "Ølen hurtigbåtkai",
+            "latitude": 59.606274,
+            "longitude": 5.806942
+          },
+          "to": {
+            "name": "Ølen bussterminal",
+            "latitude": 59.605954,
+            "longitude": 5.805682
+          },
+          "aimed_start_time": "2026-07-05T15:05:00+02:00",
+          "aimed_end_time": "2026-07-05T15:07:03+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 83822.0,
+          "line": {
+            "publicCode": "640",
+            "name": "Ølen - Etne - Odda",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Ølen bussterminal",
+            "latitude": 59.605954,
+            "longitude": 5.805682
+          },
+          "to": {
+            "name": "Nedre Nyland",
+            "latitude": 60.064404,
+            "longitude": 6.547839
+          },
+          "aimed_start_time": "2026-07-05T17:15:00+02:00",
+          "aimed_end_time": "2026-07-05T18:39:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 565.04,
+          "line": null,
+          "from": {
+            "name": "Nedre Nyland",
+            "latitude": 60.064404,
+            "longitude": 6.547839
+          },
+          "to": {
+            "name": "Destination",
+            "latitude": 60.0691,
+            "longitude": 6.5456
+          },
+          "aimed_start_time": "2026-07-05T18:39:00+02:00",
+          "aimed_end_time": "2026-07-05T18:46:07+02:00"
+        }
+      ]
+    },
+    {
+      "duration_seconds": 22070,
+      "legs": [
+        {
+          "mode": "foot",
+          "distance_m": 258.57,
+          "line": null,
+          "from": {
+            "name": "Origin",
+            "latitude": 60.3913,
+            "longitude": 5.3221
+          },
+          "to": {
+            "name": "Festplassen",
+            "latitude": 60.391043,
+            "longitude": 5.325373
+          },
+          "aimed_start_time": "2026-07-05T13:07:00+02:00",
+          "aimed_end_time": "2026-07-05T13:10:31+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 4970.0,
+          "line": {
+            "publicCode": "4",
+            "name": "Flaktveit - Hesjaholtet",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Festplassen",
+            "latitude": 60.391043,
+            "longitude": 5.325373
+          },
+          "to": {
+            "name": "Handelshøyskolen",
+            "latitude": 60.42516,
+            "longitude": 5.304508
+          },
+          "aimed_start_time": "2026-07-05T13:10:00+02:00",
+          "aimed_end_time": "2026-07-05T13:21:00+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 111385.0,
+          "line": {
+            "publicCode": "925",
+            "name": "Bergen-Norheimsund-Kvanndal-Voss",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Handelshøyskolen",
+            "latitude": 60.42516,
+            "longitude": 5.304508
+          },
+          "to": {
+            "name": "Kvanndal kai",
+            "latitude": 60.47151,
+            "longitude": 6.612075
+          },
+          "aimed_start_time": "2026-07-05T13:25:00+02:00",
+          "aimed_end_time": "2026-07-05T15:50:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 39.1,
+          "line": null,
+          "from": {
+            "name": "Kvanndal kai",
+            "latitude": 60.47151,
+            "longitude": 6.612075
+          },
+          "to": {
+            "name": "Kvanndal ferjekai",
+            "latitude": 60.47176,
+            "longitude": 6.612219
+          },
+          "aimed_start_time": "2026-07-05T15:50:00+02:00",
+          "aimed_end_time": "2026-07-05T15:50:36+02:00"
+        },
+        {
+          "mode": "water",
+          "distance_m": 5672.0,
+          "line": {
+            "publicCode": "1024",
+            "name": "Utne - Kvanndal",
+            "transportMode": "water"
+          },
+          "from": {
+            "name": "Kvanndal ferjekai",
+            "latitude": 60.47176,
+            "longitude": 6.612219
+          },
+          "to": {
+            "name": "Utne ferjekai",
+            "latitude": 60.424075,
+            "longitude": 6.621765
+          },
+          "aimed_start_time": "2026-07-05T16:00:00+02:00",
+          "aimed_end_time": "2026-07-05T16:20:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 121.76,
+          "line": null,
+          "from": {
+            "name": "Utne ferjekai",
+            "latitude": 60.424075,
+            "longitude": 6.621765
+          },
+          "to": {
+            "name": "Utne kai",
+            "latitude": 60.424268,
+            "longitude": 6.62144
+          },
+          "aimed_start_time": "2026-07-05T16:20:00+02:00",
+          "aimed_end_time": "2026-07-05T16:21:43+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 44368.0,
+          "line": {
+            "publicCode": "980",
+            "name": "Jondal - Utne - Odda",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Utne kai",
+            "latitude": 60.424268,
+            "longitude": 6.62144
+          },
+          "to": {
+            "name": "Sørfjordsenteret",
+            "latitude": 60.06996,
+            "longitude": 6.541206
+          },
+          "aimed_start_time": "2026-07-05T18:22:00+02:00",
+          "aimed_end_time": "2026-07-05T19:10:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 344.25,
+          "line": null,
+          "from": {
+            "name": "Sørfjordsenteret",
+            "latitude": 60.06996,
+            "longitude": 6.541206
+          },
+          "to": {
+            "name": "Destination",
+            "latitude": 60.0691,
+            "longitude": 6.5456
+          },
+          "aimed_start_time": "2026-07-05T19:10:00+02:00",
+          "aimed_end_time": "2026-07-05T19:14:50+02:00"
+        }
+      ]
+    },
+    {
+      "duration_seconds": 22162,
+      "legs": [
+        {
+          "mode": "foot",
+          "distance_m": 1038.17,
+          "line": null,
+          "from": {
+            "name": "Origin",
+            "latitude": 60.3913,
+            "longitude": 5.3221
+          },
+          "to": {
+            "name": "Bergen busstasjon",
+            "latitude": 60.3873,
+            "longitude": 5.334883
+          },
+          "aimed_start_time": "2026-07-05T13:05:28+02:00",
+          "aimed_end_time": "2026-07-05T13:20:00+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 117549.0,
+          "line": {
+            "publicCode": "925",
+            "name": "Bergen-Norheimsund-Kvanndal-Voss",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Bergen busstasjon",
+            "latitude": 60.3873,
+            "longitude": 5.334883
+          },
+          "to": {
+            "name": "Kvanndal kai",
+            "latitude": 60.47151,
+            "longitude": 6.612075
+          },
+          "aimed_start_time": "2026-07-05T13:20:00+02:00",
+          "aimed_end_time": "2026-07-05T15:50:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 39.1,
+          "line": null,
+          "from": {
+            "name": "Kvanndal kai",
+            "latitude": 60.47151,
+            "longitude": 6.612075
+          },
+          "to": {
+            "name": "Kvanndal ferjekai",
+            "latitude": 60.47176,
+            "longitude": 6.612219
+          },
+          "aimed_start_time": "2026-07-05T15:50:00+02:00",
+          "aimed_end_time": "2026-07-05T15:50:36+02:00"
+        },
+        {
+          "mode": "water",
+          "distance_m": 5672.0,
+          "line": {
+            "publicCode": "1024",
+            "name": "Utne - Kvanndal",
+            "transportMode": "water"
+          },
+          "from": {
+            "name": "Kvanndal ferjekai",
+            "latitude": 60.47176,
+            "longitude": 6.612219
+          },
+          "to": {
+            "name": "Utne ferjekai",
+            "latitude": 60.424075,
+            "longitude": 6.621765
+          },
+          "aimed_start_time": "2026-07-05T16:00:00+02:00",
+          "aimed_end_time": "2026-07-05T16:20:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 121.76,
+          "line": null,
+          "from": {
+            "name": "Utne ferjekai",
+            "latitude": 60.424075,
+            "longitude": 6.621765
+          },
+          "to": {
+            "name": "Utne kai",
+            "latitude": 60.424268,
+            "longitude": 6.62144
+          },
+          "aimed_start_time": "2026-07-05T16:20:00+02:00",
+          "aimed_end_time": "2026-07-05T16:21:43+02:00"
+        },
+        {
+          "mode": "bus",
+          "distance_m": 44368.0,
+          "line": {
+            "publicCode": "980",
+            "name": "Jondal - Utne - Odda",
+            "transportMode": "bus"
+          },
+          "from": {
+            "name": "Utne kai",
+            "latitude": 60.424268,
+            "longitude": 6.62144
+          },
+          "to": {
+            "name": "Sørfjordsenteret",
+            "latitude": 60.06996,
+            "longitude": 6.541206
+          },
+          "aimed_start_time": "2026-07-05T18:22:00+02:00",
+          "aimed_end_time": "2026-07-05T19:10:00+02:00"
+        },
+        {
+          "mode": "foot",
+          "distance_m": 344.25,
+          "line": null,
+          "from": {
+            "name": "Sørfjordsenteret",
+            "latitude": 60.06996,
+            "longitude": 6.541206
+          },
+          "to": {
+            "name": "Destination",
+            "latitude": 60.0691,
+            "longitude": 6.5456
+          },
+          "aimed_start_time": "2026-07-05T19:10:00+02:00",
+          "aimed_end_time": "2026-07-05T19:14:50+02:00"
+        }
+      ]
+    }
+  ],
+  "confidence": "live_query_sample"
+}

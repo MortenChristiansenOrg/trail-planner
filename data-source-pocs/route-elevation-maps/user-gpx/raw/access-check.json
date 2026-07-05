@@ -1,0 +1,6 @@
+{
+  "source": "user_gpx_uploads",
+  "checked_at": "2026-07-05",
+  "access": "user_supplied_files",
+  "sample_not_fetched_reason": "No user-owned GPX files were provided in the repository."
+}

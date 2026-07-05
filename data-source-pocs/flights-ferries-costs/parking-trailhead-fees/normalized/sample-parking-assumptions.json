@@ -1,0 +1,33 @@
+{
+  "source": "official_trailhead_parking_pages",
+  "verdict": "manual_only",
+  "retrieved_at": "2026-07-05",
+  "freshness": "manual_check_required_per_season",
+  "confidence": "medium_for_rules_low_for_prices_without_recent_manual_booking_check",
+  "assumptions": [
+    {
+      "case": "Trolltunga",
+      "parking_model": "P1/P2/P3 and road toll assumptions must be checked against official page for trip date.",
+      "source_url": "https://www.trolltunga.com/en/parking-and-transport/parking",
+      "machine_readable": false
+    },
+    {
+      "case": "Besseggen",
+      "parking_model": "Long-term parking at Reinsvangen plus shuttle to Gjendeosen/Gjendesheim; no long-term parking at Gjendeosen.",
+      "source_urls": ["https://visitgjende.no/en/parking/", "https://gjende.no/en/parking-shuttle/"],
+      "machine_readable": false
+    },
+    {
+      "case": "Romsdalseggen",
+      "parking_model": "Park in Andalsnes and use Romsdalseggen bus; weather and trail conditions affect service.",
+      "source_urls": ["https://www.nor-way.no/en/routes/romsdalseggenbussen/", "https://www.fjordnorway.com/en/attractions/romsdalseggen"],
+      "machine_readable": false
+    },
+    {
+      "case": "Ben Nevis CMD",
+      "parking_model": "Visitor Centre car park is official starting-point parking candidate; current tariff should be checked manually.",
+      "source_url": "https://www.highlifehighland.com/attractions/ben-nevis-visitor-centre",
+      "machine_readable": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "transitland-access-check",
+  "source": "transitland",
+  "retrieved_at": "2026-07-05T00:00:00Z",
+  "query": {
+    "required_env": "TRANSITLAND_API_KEY"
+  },
+  "license_or_terms_url": "https://www.transit.land/documentation/rest-api/",
+  "freshness": "not_queried",
+  "confidence": "access_blocked",
+  "verdict": "blocked",
+  "reason": "Transitland REST API key required."
+}

@@ -1,0 +1,7 @@
+{
+  "source": "copernicus_dem",
+  "verdict": "viable_with_limits",
+  "mvp_role": "Reference DEM source for production terrain cache.",
+  "confidence": "medium",
+  "next_step": "Compare Copernicus GLO-30/GLO-90 against AWS Terrain Tiles on one route profile."
+}

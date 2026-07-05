@@ -1,0 +1,143 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          6.6122046,
+          60.1337586
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Ullensvang",
+        "country": "Norge",
+        "countrycode": "NO",
+        "county": "Vestland",
+        "name": "Skjeggedal",
+        "osm_id": 3761955234,
+        "osm_key": "place",
+        "osm_type": "N",
+        "osm_value": "locality",
+        "postcode": "5770",
+        "type": "locality"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.6247919,
+          60.132396
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Ullensvang",
+        "country": "Norge",
+        "countrycode": "NO",
+        "county": "Vestland",
+        "extent": [
+          6.6036874,
+          60.1331214,
+          6.6448862,
+          60.1255124
+        ],
+        "name": "Skjeggedal",
+        "osm_id": 458563941,
+        "osm_key": "natural",
+        "osm_type": "W",
+        "osm_value": "valley",
+        "type": "other"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.626813,
+          60.1328873
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Ullensvang",
+        "country": "Norge",
+        "countrycode": "NO",
+        "county": "Vestland",
+        "extent": [
+          6.6267997,
+          60.132964,
+          6.6268238,
+          60.132811
+        ],
+        "name": "Skjeggedal",
+        "osm_id": 782797438,
+        "osm_key": "highway",
+        "osm_type": "W",
+        "osm_value": "service",
+        "postcode": "5770",
+        "type": "street"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.6340974,
+          60.1316515
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Ullensvang",
+        "country": "Norge",
+        "countrycode": "NO",
+        "county": "Vestland",
+        "extent": [
+          6.624923,
+          60.132897,
+          6.6426377,
+          60.1283727
+        ],
+        "name": "Skjeggedal",
+        "osm_id": 518529792,
+        "osm_key": "highway",
+        "osm_type": "W",
+        "osm_value": "unclassified",
+        "postcode": "5770",
+        "type": "street"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          6.5695428,
+          60.1173373
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "city": "Tyssedal",
+        "country": "Norge",
+        "countrycode": "NO",
+        "county": "Vestland",
+        "extent": [
+          6.5693331,
+          60.1174992,
+          6.5697125,
+          60.1171033
+        ],
+        "name": "Skjeggedalsvegen",
+        "osm_id": 782797040,
+        "osm_key": "highway",
+        "osm_type": "W",
+        "osm_value": "residential",
+        "postcode": "5770",
+        "type": "street"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

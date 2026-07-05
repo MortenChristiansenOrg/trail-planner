@@ -1,0 +1,10 @@
+{
+  "source": "openmaptiles",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://openmaptiles.org/docs/",
+    "https://openmaptiles.org/"
+  ],
+  "access": "open_source_schema_self_hosting",
+  "sample_not_fetched_reason": "Generating tiles is operationally larger than this focused public-data POC pass."
+}

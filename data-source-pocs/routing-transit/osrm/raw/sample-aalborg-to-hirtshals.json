@@ -1,0 +1,40 @@
+{
+  "code": "Ok",
+  "routes": [
+    {
+      "legs": [
+        {
+          "steps": [],
+          "weight": 2902.6,
+          "summary": "",
+          "duration": 2902.6,
+          "distance": 68202.5
+        }
+      ],
+      "weight_name": "routability",
+      "weight": 2902.6,
+      "duration": 2902.6,
+      "distance": 68202.5
+    }
+  ],
+  "waypoints": [
+    {
+      "hint": "pN9BgP___38TAAAAFwAAAAIAAABOAAAAq9FOQQITIkCNrag_k7xQQhMAAAAXAAAAAgAAAE4AAADbIQEArGSXAN5-ZgOkZJcA4H5mAwIAnwwAAAAA",
+      "location": [
+        9.921708,
+        57.048798
+      ],
+      "name": "\u00d8ster\u00e5gade",
+      "distance": 0.53446805
+    },
+    {
+      "hint": "1hyugNscroACAAAAJgAAABAAAACNAAAAWaoXQOVXJkKreIpBtpj_QgIAAAAmAAAAEAAAAI0AAADbIQEAqvWXAG7IbgNY9pcAMMduAwIA3w8AAAAA",
+      "location": [
+        9.958826,
+        57.591918
+      ],
+      "name": "Havnegade",
+      "distance": 36.91416233
+    }
+  ]
+}

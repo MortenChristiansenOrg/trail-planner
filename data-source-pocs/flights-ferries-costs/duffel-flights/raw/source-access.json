@@ -1,0 +1,9 @@
+{
+  "source": "duffel_offers",
+  "checked_at": "2026-07-05",
+  "docs_url": "https://duffel.com/docs/api/v2/offers",
+  "pricing_url": "https://duffel.com/pricing",
+  "access_model": "API account with bearer token",
+  "public_sample_run": false,
+  "reason_no_raw_offer_sample": "Requires Duffel access token; no credentials were available in the workspace."
+}

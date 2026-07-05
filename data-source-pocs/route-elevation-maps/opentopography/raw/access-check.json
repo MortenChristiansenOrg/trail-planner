@@ -1,0 +1,11 @@
+{
+  "source": "opentopography",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://portal.opentopography.org/apidocs/",
+    "https://opentopography.org/developers",
+    "https://opentopography.org/usageterms"
+  ],
+  "access": "public_api_with_dataset_specific_keys",
+  "sample_not_fetched_reason": "No API key configured; public keyless elevation needs were covered by Open-Meteo and AWS Terrain Tiles in this pass."
+}

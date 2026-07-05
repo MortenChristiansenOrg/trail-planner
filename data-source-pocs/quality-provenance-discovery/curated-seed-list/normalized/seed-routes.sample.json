@@ -1,0 +1,94 @@
+{
+  "id": "curated-seed-routes-sample-2026-07-05",
+  "source": "manual_curated_seed_list",
+  "retrieved_at": "2026-07-05T09:56:02Z",
+  "license_or_terms_url": "per_source_page_terms; store facts and source links only",
+  "freshness": "manual_review_required",
+  "confidence": "sample",
+  "routes": [
+    {
+      "id": "besseggen",
+      "name": "Besseggen Ridge",
+      "country": "NO",
+      "region": "Jotunheimen",
+      "route_type": "point_to_point_with_boat_return",
+      "trailhead": {"name": "Gjendesheim", "lat": 61.4947, "lon": 8.8105},
+      "primary_source_url": "https://jotunheimen.com/activities/summer/hiking/besseggen-ridge-memurubu-gjendesheim/",
+      "candidate_reason": ["iconic_ridge", "lake_view", "public_transport_or_boat_dependency"],
+      "manual_quality_tags": ["ridge", "viewpoint", "classic", "exposed_sections"],
+      "known_logistics_gaps": ["Gjende boat schedule and season must be modeled separately"]
+    },
+    {
+      "id": "trolltunga",
+      "name": "Trolltunga",
+      "country": "NO",
+      "region": "Hardanger",
+      "route_type": "out_and_back",
+      "trailhead": {"name": "Skjeggedal", "lat": 60.1241, "lon": 6.7394},
+      "primary_source_url": "https://www.trolltunga.com/en",
+      "candidate_reason": ["landmark_viewpoint", "high_demand", "parking_and_shuttle_complexity"],
+      "manual_quality_tags": ["viewpoint", "photogenic", "long_day"],
+      "known_logistics_gaps": ["P2/P3 parking, shuttle, and guided-season requirements are date-sensitive"]
+    },
+    {
+      "id": "romsdalseggen",
+      "name": "Romsdalseggen Ridge",
+      "country": "NO",
+      "region": "Romsdalen",
+      "route_type": "point_to_point_with_bus_return",
+      "trailhead": {"name": "Vengedalen / Venjesdalssetra", "lat": 62.539, "lon": 7.861},
+      "primary_source_url": "https://www.visitnorway.com/listings/hiking-the-romsdalseggen-ridge/234338/",
+      "candidate_reason": ["ridge", "fjord_and_peak_views", "local_shuttle_dependency"],
+      "manual_quality_tags": ["ridge", "panorama", "scrambling_optional"],
+      "known_logistics_gaps": ["Romsdalseggen bus season and start-point variants need official schedule source"]
+    },
+    {
+      "id": "laugavegur",
+      "name": "Laugavegur Trail",
+      "country": "IS",
+      "region": "Iceland Highlands",
+      "route_type": "multi_day_point_to_point",
+      "trailhead": {"name": "Landmannalaugar", "lat": 63.991, "lon": -19.061},
+      "primary_source_url": "https://www.fi.is/en/hiking-trails/trails/view/laugavegur",
+      "candidate_reason": ["multi_day", "hut_network", "remote_highland_access"],
+      "manual_quality_tags": ["volcanic_landscape", "hot_springs", "hut_to_hut"],
+      "known_logistics_gaps": ["Highland bus access, hut availability, and weather windows are separate sources"]
+    },
+    {
+      "id": "ben-nevis-cmd",
+      "name": "Ben Nevis via Carn Mor Dearg Arete",
+      "country": "GB",
+      "region": "Scottish Highlands",
+      "route_type": "loop_or_lollipop",
+      "trailhead": {"name": "North Face car park", "lat": 56.8499, "lon": -5.0444},
+      "primary_source_url": "https://www.walkhighlands.co.uk/fortwilliam/carnmordeargarete.shtml",
+      "candidate_reason": ["scrambling_ridge", "highest_uk_summit", "non_norway_regional_gap_test"],
+      "manual_quality_tags": ["arete", "summit", "exposure", "weather_sensitive"],
+      "known_logistics_gaps": ["Mountain forecast and winter-condition warnings are critical"]
+    },
+    {
+      "id": "tre-cime-loop",
+      "name": "Tre Cime di Lavaredo Loop",
+      "country": "IT",
+      "region": "Dolomites",
+      "route_type": "loop",
+      "trailhead": {"name": "Rifugio Auronzo", "lat": 46.612, "lon": 12.295},
+      "primary_source_url": "https://www.dreizinnen.com/en/region/highlights/three-peaks",
+      "candidate_reason": ["dolomites_sample", "hut_density", "seasonal_road_and_bus_access"],
+      "manual_quality_tags": ["iconic_peaks", "rifugios", "photogenic", "crowded"],
+      "known_logistics_gaps": ["Toll road, parking reservation, and shuttle season must be treated as live/manual data"]
+    },
+    {
+      "id": "kungsleden-abisko-nikkaluokta",
+      "name": "Kungsleden: Abisko to Nikkaluokta sample",
+      "country": "SE",
+      "region": "Swedish Lapland",
+      "route_type": "multi_day_point_to_point",
+      "trailhead": {"name": "Abisko Turiststation", "lat": 68.358, "lon": 18.783},
+      "primary_source_url": "https://www.swedishtouristassociation.com/trails/kungsleden/",
+      "candidate_reason": ["sweden_coverage", "hut_network", "rail_access"],
+      "manual_quality_tags": ["long_distance", "arctic", "hut_to_hut"],
+      "known_logistics_gaps": ["Boat stages and hut booking need separate structured sources"]
+    }
+  ]
+}

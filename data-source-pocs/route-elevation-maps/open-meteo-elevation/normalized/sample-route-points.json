@@ -1,0 +1,48 @@
+{
+  "confidence": "sample",
+  "elevation_samples": [
+    {
+      "case": "besseggen",
+      "elevation_m": 997.0,
+      "id": "besseggen-gjendesheim",
+      "lat": 61.4947,
+      "lon": 8.8124,
+      "name": "Gjendesheim trailhead"
+    },
+    {
+      "case": "besseggen",
+      "elevation_m": 1698.0,
+      "id": "besseggen-ridge",
+      "lat": 61.5076,
+      "lon": 8.7556,
+      "name": "Besseggen ridge sample"
+    },
+    {
+      "case": "trolltunga",
+      "elevation_m": 414.0,
+      "id": "trolltunga-trailhead",
+      "lat": 60.1308,
+      "lon": 6.625,
+      "name": "Skjeggedal trailhead"
+    },
+    {
+      "case": "ben-nevis-cmd",
+      "elevation_m": 1286.0,
+      "id": "ben-nevis-summit",
+      "lat": 56.7969,
+      "lon": -5.0036,
+      "name": "Ben Nevis summit"
+    }
+  ],
+  "freshness": "static_dem_service",
+  "id": "route-point-elevation-open-meteo",
+  "license_or_terms_url": "https://open-meteo.com/en/terms",
+  "notes": "Point elevations only. Route ascent/descent requires dense sampling and smoothing.",
+  "query": {
+    "endpoint": "https://api.open-meteo.com/v1/elevation",
+    "latitude": "61.4947,61.5076,60.1308,56.7969",
+    "longitude": "8.8124,8.7556,6.625,-5.0036"
+  },
+  "retrieved_at": "2026-07-05T09:57:46+00:00",
+  "source": "open_meteo_elevation"
+}

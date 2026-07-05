@@ -1,0 +1,37 @@
+{
+  "id": "gjendesheim-to-memurubu-entur",
+  "source": "entur_journey_planner",
+  "retrieved_at": "2026-07-05T09:57:40Z",
+  "query": {
+    "endpoint": "https://api.entur.io/journey-planner/v3/graphql",
+    "case": "gjendesheim-to-memurubu",
+    "origin": {
+      "name": "Gjendesheim",
+      "coordinates": {
+        "latitude": 61.4944,
+        "longitude": 8.8125
+      }
+    },
+    "destination": {
+      "name": "Memurubu",
+      "coordinates": {
+        "latitude": 61.4826,
+        "longitude": 8.6729
+      }
+    },
+    "dateTime": "2026-07-15T08:00:00+02:00"
+  },
+  "license_or_terms_url": "https://developer.entur.org/pages-journeyplanner-journeyplanner/",
+  "freshness": "scheduled_with_realtime_when_available",
+  "confidence": "live_api_sample",
+  "origin": "Gjendesheim",
+  "destination": "Memurubu",
+  "mode": "public_transport",
+  "patterns": [],
+  "routing_errors": [
+    {
+      "code": "locationNotFound",
+      "description": "Destination is unknown.  Can you be a bit more descriptive?"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "data": {
+    "trip": {
+      "dateTime": "2026-07-15T09:00:00+02:00",
+      "tripPatterns": [
+        {
+          "duration": 12551,
+          "walkDistance": 12170.46,
+          "startTime": "2026-07-15T09:00:00+02:00",
+          "endTime": "2026-07-15T12:29:11+02:00",
+          "legs": [
+            {
+              "mode": "foot",
+              "distance": 12170.46,
+              "duration": 12551,
+              "expectedStartTime": "2026-07-15T09:00:00+02:00",
+              "expectedEndTime": "2026-07-15T12:29:11+02:00",
+              "fromPlace": {
+                "name": "Odda busstasjon",
+                "latitude": 60.0691,
+                "longitude": 6.5456
+              },
+              "toPlace": {
+                "name": "Skjeggedal",
+                "latitude": 60.1327,
+                "longitude": 6.627
+              },
+              "line": null,
+              "situations": []
+            }
+          ]
+        }
+      ],
+      "routingErrors": [
+        {
+          "code": "noTransitConnection",
+          "description": "No trip found. There may be no transit service within the maximum specified distance or at the specified time, or your start or end point might not be safely accessible."
+        }
+      ]
+    }
+  }
+}

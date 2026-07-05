@@ -1,0 +1,12 @@
+{
+  "source": "maptiler_cloud",
+  "checked_at": "2026-07-05",
+  "official_urls": [
+    "https://docs.maptiler.com/cloud/api/",
+    "https://www.maptiler.com/cloud/pricing/",
+    "https://www.maptiler.com/terms/cloud/",
+    "https://www.maptiler.com/copyright/"
+  ],
+  "access": "api_key_required",
+  "sample_not_fetched_reason": "No MapTiler API key is available in the repository or environment."
+}
