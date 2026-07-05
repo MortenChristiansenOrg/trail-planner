@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore - Ranked Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">TP</span>Ranked matrix</div>
+        <nav class="nav">
+          <a href="index.html">Index</a>
+          <a class="active" href="explore-ranked.html">Ranked</a>
+          <a href="explore-map.html">Map</a>
+          <a href="explore-timing.html">Timing</a>
+        </nav>
+      </header>
+
+      <main class="page stack">
+        <section class="panel stack">
+          <h1>Find the best rough-terrain trip under 4,500 DKK</h1>
+          <div class="chips">
+            <span class="pill active">From Aalborg</span>
+            <span class="pill">3-5 days</span>
+            <span class="pill">mountain / rugged</span>
+            <span class="pill">car + flight allowed</span>
+            <span class="pill">public transport for last mile</span>
+          </div>
+        </section>
+
+        <section class="grid two">
+          <div class="panel stack">
+            <h2>Ranked Candidates</h2>
+            <div class="trip-card card">
+              <div class="trip-head"><div><h3>Besseggen Ridge, Norway</h3><p class="muted">Loop-style day hike with ferry logistics</p></div><span class="score">82</span></div>
+              <div class="summary">
+                <div class="metric"><b>3 nights</b><span>trip length</span></div>
+                <div class="metric"><b>3,900</b><span>DKK estimate</span></div>
+                <div class="metric"><b>17h</b><span>to trail</span></div>
+                <div class="metric"><b>Hard</b><span>difficulty</span></div>
+              </div>
+              <div class="chips"><span class="tag">best hiking value</span><span class="tag">drive + ferry</span><span class="tag">medium confidence</span></div>
+            </div>
+
+            <div class="trip-card card">
+              <div class="trip-head"><div><h3>Romsdalseggen, Norway</h3><p class="muted">Point-to-point ridge with bus return</p></div><span class="score">78</span></div>
+              <div class="summary">
+                <div class="metric"><b>4 nights</b><span>trip length</span></div>
+                <div class="metric"><b>4,400</b><span>DKK estimate</span></div>
+                <div class="metric"><b>18h</b><span>to trail</span></div>
+                <div class="metric"><b>Hard</b><span>difficulty</span></div>
+              </div>
+              <div class="chips"><span class="tag">high reward</span><span class="tag">needs weather window</span><span class="tag">bus schedule check</span></div>
+            </div>
+
+            <div class="trip-card card">
+              <div class="trip-head"><div><h3>Ben Nevis via CMD Arete, Scotland</h3><p class="muted">Fly-in long weekend, exposed ridge</p></div><span class="score">71</span></div>
+              <div class="summary">
+                <div class="metric"><b>4 nights</b><span>trip length</span></div>
+                <div class="metric"><b>4,800</b><span>DKK estimate</span></div>
+                <div class="metric"><b>13h</b><span>to trail</span></div>
+                <div class="metric"><b>Hard</b><span>difficulty</span></div>
+              </div>
+              <div class="chips"><span class="tag">fastest fly-in</span><span class="tag">above budget</span><span class="tag">weather risk</span></div>
+            </div>
+          </div>
+
+          <div class="panel stack">
+            <h2>Comparison Matrix</h2>
+            <div class="compare-row compare-head"><div>Trip</div><div>Hiking Quality</div><div>Cost Fit</div><div>Time Fit</div><div>Confidence</div></div>
+            <div class="compare-row"><div>Besseggen</div><div class="ok">Very high</div><div class="ok">Under budget</div><div class="warn">Long travel</div><div>Medium</div></div>
+            <div class="compare-row"><div>Romsdalseggen</div><div class="ok">Very high</div><div class="ok">Near limit</div><div class="warn">4 nights</div><div>Medium</div></div>
+            <div class="compare-row"><div>Ben Nevis CMD</div><div class="ok">High</div><div class="bad">Over budget</div><div class="ok">Fast</div><div>Medium</div></div>
+            <div class="compare-row"><div>Preikestolen + Kjerag</div><div>Medium-high</div><div class="ok">Under budget</div><div>Medium</div><div>High</div></div>
+            <div class="compare-row"><div>Dolomites day hike</div><div class="ok">Very high</div><div class="bad">Over budget</div><div>Medium</div><div>Low lodging</div></div>
+            <p class="footer-note">This concept makes scanning and tradeoff comparison the main journey. It works well when the user is exploring many possible trips.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

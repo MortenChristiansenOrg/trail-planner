@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore - Map First</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">TP</span>Map-first discovery</div>
+        <nav class="nav">
+          <a href="index.html">Index</a>
+          <a href="explore-ranked.html">Ranked</a>
+          <a class="active" href="explore-map.html">Map</a>
+          <a href="explore-timing.html">Timing</a>
+        </nav>
+      </header>
+
+      <main class="page grid three">
+        <aside class="panel stack">
+          <h1>Reachable From Aalborg</h1>
+          <p class="muted">Budget 5,000 DKK, 4 days, rough terrain only.</p>
+          <div class="source"><span>Drive radius</span><span class="confidence">16h</span></div>
+          <div class="source"><span>Fly-in radius</span><span class="confidence">1 stop</span></div>
+          <div class="source"><span>Minimum elevation</span><span class="confidence">800 m</span></div>
+          <div class="source"><span>Exclude mostly roads</span><span class="confidence">On</span></div>
+          <div class="risk"><b>Reality constraint:</b> map pins are candidate regions, not guaranteed bookable trips until opened.</div>
+        </aside>
+
+        <section class="panel stack">
+          <h2>Candidate Regions</h2>
+          <div class="map">
+            <svg viewBox="0 0 600 420" aria-hidden="true">
+              <ellipse cx="190" cy="270" rx="130" ry="82" fill="rgba(31,92,75,0.14)" stroke="#1f5c4b"/>
+              <ellipse cx="390" cy="175" rx="160" ry="95" fill="rgba(51,92,153,0.13)" stroke="#335c99"/>
+              <path d="M150 300 C210 240 260 210 330 180 S465 140 530 95" fill="none" stroke="#335c99" stroke-width="4" stroke-dasharray="8 7"/>
+              <circle cx="150" cy="300" r="8" fill="#1f5c4b"/>
+              <circle cx="338" cy="172" r="10" fill="#c25f36"/>
+              <circle cx="438" cy="130" r="10" fill="#c25f36"/>
+              <circle cx="260" cy="226" r="10" fill="#c25f36"/>
+              <circle cx="502" cy="92" r="10" fill="#c25f36"/>
+            </svg>
+            <span class="map-label" style="left: 118px; bottom: 95px;">Aalborg</span>
+            <span class="map-label" style="left: 305px; top: 150px;">Norway</span>
+            <span class="map-label" style="right: 78px; top: 108px;">Scotland</span>
+            <span class="map-label" style="left: 226px; top: 216px;">Sweden</span>
+            <span class="map-label" style="right: 38px; top: 70px;">Alps</span>
+          </div>
+          <p class="footer-note">This concept starts with geography and reachability. The user sees where their constraints create clusters before comparing individual routes.</p>
+        </section>
+
+        <aside class="panel stack">
+          <h2>Selected Region: Norway</h2>
+          <div class="trip-card card">
+            <div class="trip-head"><h3>Besseggen</h3><span class="score">82</span></div>
+            <p class="muted">Best match: high quality, under budget, car/ferry practical.</p>
+            <div class="chips"><span class="tag">3 nights</span><span class="tag">3,900 DKK</span><span class="tag">hard</span></div>
+          </div>
+          <div class="trip-card card">
+            <div class="trip-head"><h3>Romsdalseggen</h3><span class="score">78</span></div>
+            <p class="muted">Great hike, but return bus and weather window matter.</p>
+            <div class="chips"><span class="tag">4 nights</span><span class="tag">4,400 DKK</span><span class="tag">hard</span></div>
+          </div>
+          <div class="trip-card card">
+            <div class="trip-head"><h3>Gaustatoppen</h3><span class="score">66</span></div>
+            <p class="muted">Easier logistics, less rough-terrain value.</p>
+            <div class="chips"><span class="tag">2 nights</span><span class="tag">2,900 DKK</span><span class="tag">medium</span></div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

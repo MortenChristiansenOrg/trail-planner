@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluate Hike - Trip Dossier</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">TP</span>Trip dossier</div>
+        <nav class="nav">
+          <a href="index.html">Index</a>
+          <a class="active" href="evaluate-dossier.html">Dossier</a>
+          <a href="evaluate-mode-compare.html">Mode compare</a>
+          <a href="evaluate-confidence.html">Evidence</a>
+        </nav>
+      </header>
+
+      <main class="page stack">
+        <section class="panel stack">
+          <div class="trip-head">
+            <div class="stack">
+              <h1>Besseggen Ridge, Jotunheimen</h1>
+              <p class="muted">Known hike evaluation from Aalborg. Route imported from GPX, logistics estimated from live and cached travel data.</p>
+            </div>
+            <span class="score">82</span>
+          </div>
+          <div class="summary">
+            <div class="metric"><b>17h 40m</b><span>home to trail start</span></div>
+            <div class="metric"><b>3 nights</b><span>recommended trip length</span></div>
+            <div class="metric"><b>3,900 DKK</b><span>transport + lodging estimate</span></div>
+            <div class="metric"><b>Hard</b><span>14 km, 1,100 m gain</span></div>
+          </div>
+        </section>
+
+        <section class="grid three">
+          <div class="panel stack">
+            <h2>Recommended Plan</h2>
+            <div class="timeline">
+              <div class="leg"><div class="time">Fri 07:10</div><div><span class="mode">Drive</span><br>Aalborg to Hirtshals ferry terminal</div><div>50m</div></div>
+              <div class="leg"><div class="time">Fri 09:30</div><div><span class="mode">Ferry</span><br>Hirtshals to Larvik, cabin not needed</div><div>3h 45m</div></div>
+              <div class="leg"><div class="time">Fri 14:00</div><div><span class="mode">Drive</span><br>Larvik to Gjendesheim area</div><div>5h 45m</div></div>
+              <div class="leg"><div class="time">Fri night</div><div><span class="mode">Lodge</span><br>Budget cabin or hostel near Gjendesheim</div><div>850 DKK</div></div>
+              <div class="leg"><div class="time">Sat 08:00</div><div><span class="mode">Hike</span><br>Boat to Memurubu, hike Besseggen back</div><div>7h</div></div>
+              <div class="leg"><div class="time">Sun-Mon</div><div><span class="mode">Return</span><br>Drive + ferry + drive home</div><div>12h 30m</div></div>
+            </div>
+          </div>
+
+          <div class="panel stack">
+            <h2>Route And Travel Map</h2>
+            <div class="map">
+              <svg viewBox="0 0 600 420" aria-hidden="true">
+                <path d="M70 330 C160 260 160 180 260 170 S420 140 520 80" fill="none" stroke="#335c99" stroke-width="5" stroke-dasharray="10 8"/>
+                <path d="M290 210 C330 170 360 165 390 125 C420 90 455 92 480 70" fill="none" stroke="#c25f36" stroke-width="6"/>
+                <circle cx="70" cy="330" r="8" fill="#1f5c4b"/>
+                <circle cx="480" cy="70" r="8" fill="#c25f36"/>
+              </svg>
+              <span class="map-label" style="left: 46px; bottom: 70px;">Aalborg</span>
+              <span class="map-label" style="right: 60px; top: 52px;">Besseggen</span>
+              <span class="map-label" style="left: 270px; top: 164px;">ferry + drive</span>
+            </div>
+          </div>
+
+          <div class="panel stack">
+            <h2>Decision Notes</h2>
+            <div class="risk"><b>Fragile part:</b> late arrival near Gjendesheim if ferry or E18 traffic slips by more than 90 minutes.</div>
+            <div class="bars">
+              <div class="bar"><span>Hiking quality</span><span class="bar-track"><span class="bar-fill" style="width: 92%"></span></span><span>High</span></div>
+              <div class="bar"><span>Travel friction</span><span class="bar-track"><span class="bar-fill" style="width: 62%"></span></span><span>Med</span></div>
+              <div class="bar"><span>Cost confidence</span><span class="bar-track"><span class="bar-fill" style="width: 55%"></span></span><span>Med</span></div>
+              <div class="bar"><span>Season fit</span><span class="bar-track"><span class="bar-fill" style="width: 83%"></span></span><span>Good</span></div>
+            </div>
+            <div class="source"><span>Route geometry</span><span class="confidence">GPX</span></div>
+            <div class="source"><span>Weather forecast</span><span class="confidence">Open-Meteo</span></div>
+            <div class="source"><span>Lodging cost</span><span class="confidence low">Estimate</span></div>
+            <p class="footer-note">This concept treats the result as a printable/shareable dossier: the user sees one recommended answer with assumptions alongside it.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

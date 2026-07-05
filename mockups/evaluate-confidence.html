@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluate Hike - Evidence Review</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">TP</span>Evidence review</div>
+        <nav class="nav">
+          <a href="index.html">Index</a>
+          <a href="evaluate-dossier.html">Dossier</a>
+          <a href="evaluate-mode-compare.html">Mode compare</a>
+          <a class="active" href="evaluate-confidence.html">Evidence</a>
+        </nav>
+      </header>
+
+      <main class="page stack">
+        <section class="panel stack">
+          <h1>Laugavegur Trail: what do we actually know?</h1>
+          <p class="muted">This mockup prioritizes confidence, gaps, and source quality before presenting a final answer.</p>
+          <div class="summary">
+            <div class="metric"><b>54 km</b><span>route length from GPX</span></div>
+            <div class="metric"><b>4 days</b><span>typical hiking plan</span></div>
+            <div class="metric"><b>6,800 DKK</b><span>low-confidence estimate</span></div>
+            <div class="metric"><b>Mixed</b><span>data completeness</span></div>
+          </div>
+        </section>
+
+        <section class="grid three">
+          <div class="panel stack">
+            <h2>Evidence</h2>
+            <div class="source"><span>Route GPX</span><span class="confidence">High</span></div>
+            <div class="source"><span>Elevation profile</span><span class="confidence">High</span></div>
+            <div class="source"><span>Flight estimate AAL-KEF</span><span class="confidence">Medium</span></div>
+            <div class="source"><span>Highland bus schedule</span><span class="confidence low">Low</span></div>
+            <div class="source"><span>Hut availability</span><span class="confidence low">Manual</span></div>
+            <div class="source"><span>Weather history</span><span class="confidence">High</span></div>
+          </div>
+
+          <div class="panel stack">
+            <h2>Plan Skeleton</h2>
+            <div class="timeline">
+              <div class="leg"><div class="time">Day 0</div><div><span class="mode">Fly</span><br>Aalborg or Copenhagen to Keflavik. Flight price can be sampled.</div><div>Known</div></div>
+              <div class="leg"><div class="time">Day 1</div><div><span class="mode">Transfer</span><br>Reykjavik to Landmannalaugar. Seasonal bus data needs confirmation.</div><div>Weak</div></div>
+              <div class="leg"><div class="time">Days 1-4</div><div><span class="mode">Hike</span><br>Landmannalaugar to Thorsmork. Hut or tent plan changes weight and cost.</div><div>Known</div></div>
+              <div class="leg"><div class="time">Day 4</div><div><span class="mode">Transfer</span><br>Thorsmork to Reykjavik. Off-season service uncertain.</div><div>Weak</div></div>
+              <div class="leg"><div class="time">Day 5</div><div><span class="mode">Return</span><br>Fly home. Overnight near airport may be needed.</div><div>Known</div></div>
+            </div>
+          </div>
+
+          <div class="panel stack">
+            <h2>Decision Gate</h2>
+            <div class="risk"><b>Do not finalize yet:</b> transport into and out of the highlands is the key uncertainty, and it is seasonal.</div>
+            <div class="split">
+              <div class="metric"><b>Best case</b><span>5 days, 5,900 DKK</span></div>
+              <div class="metric"><b>Likely case</b><span>6 days, 6,800 DKK</span></div>
+            </div>
+            <div class="metric"><b>Manual checks needed</b><span>hut availability, bus season, river crossing warnings, luggage storage</span></div>
+            <div class="chips">
+              <span class="tag">share as draft</span>
+              <span class="tag">watch bus schedule</span>
+              <span class="tag">compare tent vs huts</span>
+            </div>
+            <p class="footer-note">This journey is useful for ambitious trips where pretending to know everything would be misleading.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

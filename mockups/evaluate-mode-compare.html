@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluate Hike - Mode Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">TP</span>Mode comparison</div>
+        <nav class="nav">
+          <a href="index.html">Index</a>
+          <a href="evaluate-dossier.html">Dossier</a>
+          <a class="active" href="evaluate-mode-compare.html">Mode compare</a>
+          <a href="evaluate-confidence.html">Evidence</a>
+        </nav>
+      </header>
+
+      <main class="page stack">
+        <section class="panel stack">
+          <h1>Trolltunga: choose the least painful way there</h1>
+          <p class="muted">This mockup puts alternatives first. It is useful when the hike is fixed but the travel logistics are unclear.</p>
+          <div class="summary">
+            <div class="metric"><b>28 km</b><span>hike distance</span></div>
+            <div class="metric"><b>1,200 m</b><span>elevation gain</span></div>
+            <div class="metric"><b>10-12h</b><span>hiking time</span></div>
+            <div class="metric"><b>Jun-Sep</b><span>normal season</span></div>
+          </div>
+        </section>
+
+        <section class="grid two">
+          <div class="panel stack">
+            <h2>Travel Options</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Total Time</th>
+                  <th>Estimate</th>
+                  <th>Complexity</th>
+                  <th>Verdict</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected">
+                  <td><b>Fly + public transport</b><br><span class="muted">Aalborg-Oslo-Bergen, train/bus to Odda</span></td>
+                  <td>18h to start<br>4 days total</td>
+                  <td>4,700 DKK</td>
+                  <td>High</td>
+                  <td><span class="ok">Fastest practical</span></td>
+                </tr>
+                <tr>
+                  <td><b>Drive + ferry</b><br><span class="muted">Hirtshals-Larvik, long drive to Odda</span></td>
+                  <td>19h to start<br>5 days total</td>
+                  <td>4,200 DKK</td>
+                  <td>Medium</td>
+                  <td><span class="warn">Cheaper, tiring</span></td>
+                </tr>
+                <tr>
+                  <td><b>Public transport only</b><br><span class="muted">Train/bus/ferry chain via Norway</span></td>
+                  <td>31h to start<br>6 days total</td>
+                  <td>3,600 DKK</td>
+                  <td>Very high</td>
+                  <td><span class="bad">Too slow</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel stack">
+            <h2>Selected Option: Fly + Public Transport</h2>
+            <div class="timeline">
+              <div class="leg"><div class="time">Thu 06:20</div><div><span class="mode">Flight</span><br>AAL to Bergen via Oslo. Price sampled from flight search.</div><div>1,850 DKK</div></div>
+              <div class="leg"><div class="time">Thu 12:50</div><div><span class="mode">Train + bus</span><br>Bergen to Odda. Public transport schedule confidence medium.</div><div>5h 10m</div></div>
+              <div class="leg"><div class="time">Thu night</div><div><span class="mode">Lodging</span><br>Odda budget hotel or hostel estimate.</div><div>900 DKK</div></div>
+              <div class="leg"><div class="time">Fri 06:30</div><div><span class="mode">Shuttle</span><br>Odda to Skjeggedal / P3 parking area.</div><div>45m</div></div>
+              <div class="leg"><div class="time">Fri 07:30</div><div><span class="mode">Hike</span><br>Start early; long day with exposed weather window.</div><div>10-12h</div></div>
+            </div>
+            <div class="risk"><b>Need manual check:</b> shuttle times and late-season service can change. Confirm before treating this as bookable.</div>
+          </div>
+        </section>
+
+        <section class="panel stack">
+          <h2>Why This Concept Exists</h2>
+          <p class="muted">The user journey is centered on a decision: pick the travel mode. It reduces map detail and emphasizes comparable travel plans, since that is the hard part once the hike is known.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
