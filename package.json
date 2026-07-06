@@ -1,0 +1,27 @@
+{
+  "name": "trail-planner-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "scripts": {
+    "dev": "convex dev --start 'pnpm --filter @trail-planner/web dev'",
+    "dev:web": "pnpm --filter @trail-planner/web dev",
+    "convex:dev": "convex dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.61.1",
+    "@types/node": "26.1.0",
+    "convex": "1.42.1",
+    "eslint": "10.0.1",
+    "globals": "17.7.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.62.1",
+    "vitest": "4.1.9"
+  }
+}
