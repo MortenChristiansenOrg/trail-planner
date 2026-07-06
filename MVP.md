@@ -25,19 +25,32 @@ transitions, responsive layout, etc.
 - Shadcn
 - MapLibre GL JS
 - Convex
-- Convex Auth
+- Clerk
 - pnpm
 - Vercel
 
 ### Auth
 
-The user must log in with a Google account.
+The user must log in with a Google account. Use Clerk for hosted authentication, user management, session handling,
+and auth UI. Convex should validate Clerk-issued tokens with the Clerk/Convex integration and continue to own all
+application authorization decisions and application data.
+
+The first auth implementation should be intentionally narrow:
+
+- Configure Clerk with Google sign-in as the required sign-in method.
+- Add the Clerk Convex integration and `convex/auth.config.ts` so Convex can validate Clerk tokens.
+- Wrap the React app with `ClerkProvider` and `ConvexProviderWithClerk`.
+- Use Convex auth readiness for protected Convex-backed UI, not raw Clerk client state alone.
+- In every private Convex query or mutation, derive identity server-side with Convex auth and check ownership there.
+  Do not trust client-provided user IDs.
+- Store only app-level user/profile fields in Convex. Clerk owns auth accounts, sessions, and provider identity data.
+  Convex stores references needed to connect Clerk users to trips, uploads, share links, and user preferences.
 
 ### Deployment
 
-The default deployment target is Vercel for the web app and Convex for the backend, database, auth, scheduled
-jobs, server functions, and file storage. This keeps the MVP inside the services already planned and avoids adding
-another paid data store before the product needs it.
+The default deployment target is Vercel for the web app, Clerk for authentication, and Convex for the backend,
+database, scheduled jobs, server functions, and file storage. This keeps the MVP inside the services already planned
+and avoids adding another paid data store before the product needs it.
 
 Railway is not needed for the MVP. It is a good future option if the app needs long-running services that do not
 fit naturally in Convex actions, such as a self-hosted routing engine, tile server, OSM extract processor, or large
@@ -69,7 +82,8 @@ Recommended initial skills:
 
 | Skill | Source | Official status | Popularity signal | MVP role |
 | --- | --- | --- | --- | --- |
-| `convex`, `convex-quickstart`, `convex-setup-auth`, `convex-create-component`, `convex-migration-helper`, `convex-performance-audit` | `get-convex/agent-skills` | Official Convex | About 332k total installs reported for the Convex skills repo; individual core skills are roughly 58k installs in third-party mirrors, with `convex-migration-helper` showing 78k on `skills.sh` | Core backend, auth, migrations, components, and performance work |
+| `convex`, `convex-quickstart`, `convex-setup-auth`, `convex-create-component`, `convex-migration-helper`, `convex-performance-audit` | `get-convex/agent-skills` | Official Convex | About 332k total installs reported for the Convex skills repo; individual core skills are roughly 58k installs in third-party mirrors, with `convex-migration-helper` showing 78k on `skills.sh` | Core backend, Clerk auth integration, future schema changes, components, and performance work |
+| `clerk`, `clerk-setup`, `clerk-react-patterns`, `clerk-testing`, `clerk-webhooks` | `clerk/skills` | Official Clerk | `skills.sh` reports about 20k installs for `clerk-setup`, 18k for `clerk-webhooks`, 17k for `clerk-testing`, and 8k for `clerk-react-patterns` | Clerk auth setup, React/Vite auth patterns, E2E auth testing, and optional user/profile sync via webhooks |
 | `shadcn` | `shadcn/ui` | Official shadcn/ui | About 219k installs and 118k GitHub stars | Component installation, registry usage, and consistent shadcn patterns |
 | `vercel-react-best-practices` | `vercel-labs/agent-skills` | Official Vercel, not Meta/React | About 525k installs and 29k repository stars | React 19 performance and frontend implementation guidance |
 | `vercel-composition-patterns` | `vercel-labs/agent-skills` | Official Vercel | About 236k installs | Component architecture as the Explore and Trip pages grow |
@@ -115,8 +129,10 @@ has become complex enough to need it.
 ### Product Shape
 
 Trail Planner should be built as an interactive planning application, not as a collection of disconnected data
-source demos. The POC work should feed the MVP through typed import and provider modules, but UI code should only
-talk to product-level queries and mutations.
+source demos. The existing POC code should be treated as throwaway implementation code: useful for inspiration,
+interaction patterns, sample data, and source research, but not something the MVP needs to migrate in place. The MVP
+can start from a clean implementation that imports proven ideas through typed domain, import, and provider modules.
+UI code should only talk to product-level queries and mutations.
 
 The most important architectural boundary is between product data and source data:
 
@@ -132,7 +148,7 @@ provider responses as its main model.
 
 Convex owns the MVP application data:
 
-- Users and Google auth identity.
+- App user/profile records and Clerk identity references.
 - Destination and hike records that are ready to show in the product.
 - Travel estimate snapshots and their confidence/provenance metadata.
 - Planned trips, itinerary days, lodging nights, custom cost items, and selected travel modes.
@@ -144,6 +160,10 @@ Convex should not be treated as the permanent home for very large geospatial ass
 graphs, DEM/tile caches, and bulk raw provider archives should be deferred until they are needed. If those become
 necessary, the likely future choices are object storage for large files and Railway or another compute host for
 long-running processors.
+
+No data migrations are planned for the MVP because the first real implementation is greenfield. After production user
+data or curated provider data exists, breaking schema changes should be handled deliberately instead of by destructive
+rewrites, but that is a post-MVP operational concern.
 
 ### Integration Style
 
@@ -164,6 +184,36 @@ Every provider-derived or manually curated claim that affects user decisions sho
 This is especially important for travel time, ticket prices, ferry/shuttle availability, parking fees, lodging
 options, recommended season, closures, and safety warnings.
 
+Provider ingestion and refresh should use clear Convex boundaries:
+
+- External API calls, large file parsing, and CPU-heavy normalization belong in actions or external scripts, not in
+  Convex queries or mutations.
+- Mutations should write normalized product/source records in small, idempotent batches.
+- Scheduled refreshes should track source, status, last success, last failure, next refresh, and whether output is
+  safe to publish.
+- User-facing queries should read product-ready records and provenance summaries, not raw provider responses.
+- Manual seed and manual correction flows should produce the same normalized claim/provenance shape as automated
+  providers.
+
+### Query and Read Models
+
+The Explore page should be backed by bounded read models, not broad scans over full destination, hike, and source
+documents. Start with small destination and travel-estimate projection shapes that answer the list view, then fetch
+destination details, map geometry, and full provenance only when the user opens a destination.
+
+The initial schema should include indexes shaped around the real product queries, especially:
+
+- destination country/region and product visibility.
+- recommended month or season fit.
+- travel estimate lookup by destination, origin assumptions, month, and transport mode.
+- planned trips by owner and planned month.
+- itinerary records by trip and day order.
+- share links by token and status.
+
+Convex reactivity is useful for saved trips and edits, but low-churn catalog/explore data does not need every small
+source refresh to invalidate the whole UI. Keep reactive queries narrow, return only the fields the current view
+needs, and split list digests from details when records become large.
+
 ### Frontend Architecture
 
 The frontend should be organized by product feature rather than by technical type. Shared UI primitives belong in
@@ -175,6 +225,26 @@ snapshot of the explore options that created them so the user can return to the 
 
 React Compiler should be enabled early, with code written in a compiler-friendly style: pure rendering, stable
 data flow, minimal manual memoization, and no hidden side effects during render.
+
+Frontend performance should be designed into the main flows from the start:
+
+- Lazy-load MapLibre and map-heavy panels so they do not dominate the initial landing or Explore bundle.
+- Keep Explore filters URL-backed, but treat expensive result and map updates as non-urgent UI work where appropriate.
+- Fetch detail drawer data separately from the results list.
+- Defer future analytics and error-reporting SDKs until after hydration.
+- Keep the trip editor state behind feature-level providers and domain commands rather than one monolithic page
+  component with many boolean modes.
+
+### Trip and Share Semantics
+
+Saving a planned trip should create a durable snapshot of the decision context: explore filters, participant count,
+budget, trip length, destination, selected month, visible travel estimates, and the provenance/confidence behind the
+selected estimates. Catalog and provider refreshes can improve future Explore results, but they should not silently
+rewrite an existing planned trip's budget or travel assumptions. Give the user an explicit refresh/recalculate action
+later if live updates become useful.
+
+Share links should expose a sanitized read-only projection of the trip snapshot. They should not expose private owner
+data, editable mutation paths, raw provider responses, or unpublished/manual research notes.
 
 ### File Layout
 
@@ -215,7 +285,7 @@ trail-planner/
 
   convex/
     schema.ts
-    auth.ts
+    auth.config.ts
     crons.ts
     http.ts
     users.ts
@@ -229,6 +299,7 @@ trail-planner/
       provenance.ts
       costModel.ts
       geo.ts
+      readModels.ts
     providers/
       amadeus.ts
       entur.ts
@@ -254,6 +325,7 @@ trail-planner/
         budget.ts
         provenance.ts
         geo.ts
+        readModels.ts
     data-tools/
       src/
         normalize/
@@ -289,8 +361,10 @@ The first implementation should define these domain areas before the UI grows to
 - Destination/hub catalog.
 - Hike catalog.
 - Travel estimates by mode.
+- Explore read models and ranking.
 - Recommended season and month fit.
 - Provenance and license registry.
+- Clerk identity mapping and app user profiles.
 - Planned trips.
 - Itinerary days and nights.
 - Lodging choices.
@@ -308,6 +382,9 @@ The early tests should focus on logic that can quietly mislead the user:
 - Trip-day allocation when adding multi-day hikes.
 - Share-link access rules.
 - Provider normalization and provenance requirements.
+- Clerk-to-Convex authenticated state and protected backend ownership checks.
+- Explore URL search parameter parsing.
+- Provider refresh idempotency and publish status.
 
 Use unit tests for domain logic and provider normalization. Add Playwright tests for the core user flow: landing
 choices, explore results, destination details, save trip, edit itinerary, update budget, and open read-only share
