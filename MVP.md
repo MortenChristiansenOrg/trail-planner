@@ -58,6 +58,36 @@ Sentry and PostHog are good fits, but they are not required at the start. The MV
 point for them so they can be added without touching feature code. The first version can rely on Vercel logs,
 Convex logs, and explicit user-facing error states.
 
+### Agent Skills
+
+Agent skills should be treated as part of the repository supply chain. Prefer skills published by the relevant
+vendor and available through `skills.sh` so they are easy to inspect and update. Review the installed `SKILL.md`
+files before committing them, especially skills that contain shell command directives.
+
+Recommended initial skills:
+
+| Skill | Source | Official status | Popularity signal | MVP role |
+| --- | --- | --- | --- | --- |
+| `convex`, `convex-quickstart`, `convex-setup-auth`, `convex-create-component`, `convex-migration-helper`, `convex-performance-audit` | `get-convex/agent-skills` | Official Convex | About 332k total installs reported for the Convex skills repo; individual core skills are roughly 58k installs in third-party mirrors, with `convex-migration-helper` showing 78k on `skills.sh` | Core backend, auth, migrations, components, and performance work |
+| `shadcn` | `shadcn/ui` | Official shadcn/ui | About 219k installs and 118k GitHub stars | Component installation, registry usage, and consistent shadcn patterns |
+| `vercel-react-best-practices` | `vercel-labs/agent-skills` | Official Vercel, not Meta/React | About 525k installs and 29k repository stars | React 19 performance and frontend implementation guidance |
+| `vercel-composition-patterns` | `vercel-labs/agent-skills` | Official Vercel | About 236k installs | Component architecture as the Explore and Trip pages grow |
+| `deploy-to-vercel` | `vercel-labs/agent-skills` | Official Vercel | About 85k installs | Preview deployment and Vercel project setup |
+| `webapp-testing` | `anthropics/skills` | Official Anthropic, not Playwright vendor | About 109k installs and 158k repository stars | Local web-app testing workflow and Playwright-style verification |
+
+Optional later skills:
+
+| Skill | Source | Official status | Popularity signal | Notes |
+| --- | --- | --- | --- | --- |
+| `web-design-guidelines` | `vercel-labs/agent-skills` | Official Vercel | About 437k installs | Useful for UI review; inspect first because the `skills.sh` security result includes a warning |
+| `frontend-design` | `anthropics/skills` | Official Anthropic | About 624k installs | Useful for product polish, but broader than the chosen stack |
+| `playwright-cli` | `microsoft/playwright-cli` | Official Microsoft | About 76k installs | Useful browser automation, but inspect first because the `skills.sh` security result includes a Snyk failure |
+| `typescript-advanced-types` | `wshobson/agents` | Community | About 51k installs | Useful for complex domain modeling; not an official Microsoft TypeScript skill |
+| `tailwind-design-system` | `wshobson/agents` | Community | About 52k installs | Useful if the Tailwind design system becomes complex; not an official Tailwind Labs skill |
+
+No strong `skills.sh` candidates were found for Vite, React Compiler, MapLibre, pnpm, Sentry, or PostHog at this
+stage. Revisit this before adding major new integrations.
+
 ## Architecture
 
 ### Product Shape
