@@ -20,6 +20,7 @@ transitions, responsive layout, etc.
 - React Compiler
 - Vite
 - TypeScript 7
+- TanStack Router
 - Tailwind 4
 - Shadcn
 - MapLibre GL JS
@@ -88,6 +89,27 @@ Optional later skills:
 No strong `skills.sh` candidates were found for Vite, React Compiler, MapLibre, pnpm, Sentry, or PostHog at this
 stage. Revisit this before adding major new integrations.
 
+### Related Libraries
+
+TanStack Router should be part of the MVP stack. The Explore page has URL-backed state that should stay type-safe:
+month, participants, budget, days, countries, transport modes, selected destination, and detail drawer state. A
+typed router is a better fit for this than ad hoc search parameter handling.
+
+TanStack Form is a likely later addition for Planned Trip Details. The trip editor will eventually have nested
+editable state for days, hikes, duration overrides, nights, lodging, dates, custom costs, and validation rules. Add
+it when that page becomes complex enough to need a dedicated typed form system.
+
+Do not add TanStack Query as the default data layer for Convex data. Convex already provides reactive queries and
+mutations. TanStack Query can be added later for non-Convex server state or external APIs if that need appears.
+
+Do not switch to TanStack Start for the MVP. Vite, Convex, and Vercel are simpler for the first product version.
+Revisit TanStack Start if server rendering, streaming, or a more framework-like app shell becomes important.
+
+Effect is not part of the MVP application stack. It may become useful in the future data ingestion and provider
+layer, where typed errors, retries, concurrency, rate limits, streams, partial failures, and service composition
+can justify the extra model. Do not introduce Effect into UI or ordinary domain code unless the integration layer
+has become complex enough to need it.
+
 ## Architecture
 
 ### Product Shape
@@ -147,9 +169,9 @@ options, recommended season, closures, and safety warnings.
 The frontend should be organized by product feature rather than by technical type. Shared UI primitives belong in
 `components/ui`, but feature-specific components, hooks, and helpers should live with the feature they support.
 
-Routing should preserve the user's explore state in the URL where practical, especially month, participants,
-budget, days, travel modes, countries, and selected destination. Saved trips should persist a snapshot of the
-explore options that created them so the user can return to the same decision context later.
+TanStack Router should preserve the user's explore state in the URL where practical, especially month,
+participants, budget, days, travel modes, countries, and selected destination. Saved trips should persist a
+snapshot of the explore options that created them so the user can return to the same decision context later.
 
 React Compiler should be enabled early, with code written in a compiler-friendly style: pure rendering, stable
 data flow, minimal manual memoization, and no hidden side effects during render.
