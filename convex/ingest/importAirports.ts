@@ -1,3 +1,8 @@
-export async function importAirports() {
-  return { imported: 0 };
-}
+import { internalAction } from "../_generated/server";
+
+export const importAirports = internalAction({
+  args: {},
+  handler: async () => {
+    return { imported: 0 };
+  },
+});

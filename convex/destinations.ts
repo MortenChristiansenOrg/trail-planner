@@ -5,8 +5,7 @@ export const listPublished = query({
   handler: async (ctx) => {
     return await ctx.db
       .query("destinations")
-      .withIndex("by_country_visibility")
-      .filter((q) => q.eq(q.field("visibility"), "published"))
+      .withIndex("by_visibility", (q) => q.eq("visibility", "published"))
       .take(50);
   },
 });

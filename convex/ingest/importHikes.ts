@@ -1,3 +1,8 @@
-export async function importHikes() {
-  return { imported: 0 };
-}
+import { internalAction } from "../_generated/server";
+
+export const importHikes = internalAction({
+  args: {},
+  handler: async () => {
+    return { imported: 0 };
+  },
+});

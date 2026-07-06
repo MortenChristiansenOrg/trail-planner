@@ -45,7 +45,8 @@ export default defineSchema({
     provenance: v.array(provenanceClaim),
   })
     .index("by_country_visibility", ["countryCode", "visibility"])
-    .index("by_region_visibility", ["region", "visibility"]),
+    .index("by_region_visibility", ["region", "visibility"])
+    .index("by_visibility", ["visibility"]),
 
   hikes: defineTable({
     destinationId: v.id("destinations"),

@@ -1,3 +1,8 @@
-export async function refreshTravelEstimates() {
-  return { refreshed: 0 };
-}
+import { internalAction } from "../_generated/server";
+
+export const refreshTravelEstimates = internalAction({
+  args: {},
+  handler: async () => {
+    return { refreshed: 0 };
+  },
+});

@@ -7,7 +7,8 @@ import type { ReactNode } from "react";
 const clerkPublishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as
   | string
   | undefined;
-const convexUrl = import.meta.env.VITE_CONVEX_URL as string | undefined;
+const convexUrl = (import.meta.env.VITE_CONVEX_URL ??
+  import.meta.env.CONVEX_URL) as string | undefined;
 
 const convex = convexUrl ? new ConvexReactClient(convexUrl) : null;
 
