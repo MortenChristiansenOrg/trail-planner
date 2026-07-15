@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Contour window concept</title>
+    <link rel="stylesheet" href="landing.css">
+    <style>
+      .contour { background:#f7f4e9; }
+      .contour-main { display:grid; grid-template-rows:1fr auto; min-height:0; gap:18px; padding-top:18px; }
+      .contour-window { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(330px,.55fr); align-items:center; min-height:0; overflow:hidden; border-radius:38px; background:#d9e2d5 url("assets/highland-atlas-map.webp") center / cover no-repeat; box-shadow:var(--shadow); }
+      .contour-window::before { position:absolute; inset:0; background:linear-gradient(90deg,rgba(247,244,233,.92) 0,rgba(247,244,233,.72) 38%,rgba(247,244,233,.06) 70%); content:""; }
+      .window-copy { position:relative; z-index:3; display:grid; gap:18px; padding:clamp(30px,5vw,70px); }
+      .window-copy h1 { max-width:750px; font-size:clamp(45px,6vw,86px); }
+      .window-card { position:relative; z-index:3; align-self:stretch; display:grid; align-content:end; gap:12px; padding:35px; background:linear-gradient(90deg,transparent,rgba(24,55,45,.15)); }
+      .window-card-inner { display:grid; gap:12px; padding:18px; border:1px solid rgba(255,255,255,.65); border-radius:18px; background:rgba(255,253,247,.78); backdrop-filter:blur(14px); }
+      .window-card strong { font-family:Georgia,serif; font-size:22px; font-weight:500; }
+      .window-card p { color:var(--muted); font-size:11px; line-height:1.5; }
+      .contour-main .inline-planner { width:calc(100% - 60px); justify-self:center; transform:translateY(-44px); margin-bottom:-34px; position:relative; z-index:6; }
+      @media(max-width:900px){ .contour-window { grid-template-columns:1fr; } .window-card { display:none; } .window-copy { padding:24px; } .contour-main .inline-planner { width:calc(100% - 24px); transform:translateY(-24px); margin-bottom:-20px; } }
+    </style>
+  </head>
+  <body>
+    <div class="screen contour">
+      <div class="shell">
+        <header class="nav"><a class="brand" href="index.html"><span class="brand-mark">T</span>Trail Planner</a><div class="nav-actions"><a class="nav-link" href="#">Planned trips</a><button class="ghost-button" type="button">Sign in with Google</button></div></header>
+        <main class="contour-main">
+          <section class="contour-window">
+            <div class="window-copy"><p class="eyebrow">A clearer route to the mountains</p><h1>Explore hiking destinations within your limits.</h1><p class="intro">See where you can reach, what the journey takes, and whether the month is right for rough-terrain hiking.</p></div>
+            <aside class="window-card"><div class="window-card-inner"><strong>Destination, not daydream.</strong><p>Results are hiking hubs you can reach directly or with very limited local transport.</p><div class="mini-legend"><span>In season</span><span>Reachable</span></div></div></aside>
+          </section>
+          <form class="inline-planner">
+            <div class="inline-field"><label for="month-09">Month</label><select id="month-09"><option>September</option><option>August</option></select></div>
+            <div class="inline-field"><label for="people-09">Participants</label><select id="people-09"><option>2 people</option><option>1 person</option></select></div>
+            <div class="inline-field"><label for="days-09">Trip length</label><select id="days-09"><option>5 days</option><option>7 days</option></select></div>
+            <div class="inline-field"><label for="budget-09">Journey budget</label><input id="budget-09" value="6,000 DKK"></div>
+            <button class="primary-button" type="button">Explore <span class="arrow">→</span></button>
+          </form>
+        </main>
+      </div>
+      <a class="back-link" href="index.html" aria-label="Back to concepts">×</a>
+    </div>
+  </body>
+</html>

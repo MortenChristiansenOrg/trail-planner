@@ -76,16 +76,19 @@ export default defineSchema({
 
   trips: defineTable({
     ownerId: v.id("users"),
-    destinationId: v.id("destinations"),
+    destinationId: v.optional(v.id("destinations")),
+    destinationKey: v.string(),
     plannedMonth: v.string(),
     selectedTravelMode: v.optional(v.string()),
     estimatedTotalCost: money,
     exploreSnapshotJson: v.string(),
+    stateJson: v.string(),
     createdAt: v.number(),
     updatedAt: v.number(),
   })
     .index("by_owner_planned_month", ["ownerId", "plannedMonth"])
-    .index("by_destination", ["destinationId"]),
+    .index("by_destination", ["destinationId"])
+    .index("by_destination_key", ["destinationKey"]),
 
   itineraryDays: defineTable({
     tripId: v.id("trips"),
@@ -93,6 +96,22 @@ export default defineSchema({
     calendarDate: v.optional(v.string()),
     title: v.optional(v.string()),
   }).index("by_trip_day_order", ["tripId", "dayOrder"]),
+
+  itineraryActivities: defineTable({
+    tripId: v.id("trips"),
+    dayOrder: v.number(),
+    groupId: v.string(),
+    kind: v.union(v.literal("catalog-hike"), v.literal("custom-hike")),
+    hikeId: v.optional(v.id("hikes")),
+    catalogHikeKey: v.optional(v.string()),
+    name: v.string(),
+    description: v.string(),
+    letter: v.string(),
+    segment: v.number(),
+    durationDays: v.number(),
+  })
+    .index("by_trip_day", ["tripId", "dayOrder"])
+    .index("by_trip_group", ["tripId", "groupId"]),
 
   lodgingNights: defineTable({
     tripId: v.id("trips"),

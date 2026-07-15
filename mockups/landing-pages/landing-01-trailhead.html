@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Trailhead concept</title>
+    <link rel="stylesheet" href="landing.css">
+    <style>
+      .trailhead { background: linear-gradient(110deg, #fbf7e9 0 62%, #dce7ce 62%); }
+      .trailhead-main { display:grid; grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr); align-items:center; gap:clamp(34px,6vw,90px); }
+      .trailhead-copy { display:grid; gap:23px; align-content:center; }
+      .trailhead-copy h1 em { color:var(--clay); font-weight:inherit; }
+      .trailhead-visual { position:relative; display:grid; align-items:center; min-height:0; height:100%; }
+      .trailhead-visual .map-art { height:min(62vh,590px); }
+      .trailhead-visual .planner { position:absolute; z-index:6; width:min(320px,72%); left:-42px; bottom:5%; }
+      .trail-note { display:flex; align-items:center; gap:9px; color:var(--muted); font-size:11px; font-weight:650; }
+      @media (max-width:900px) {
+        .trailhead { background:#fbf7e9; }
+        .trailhead-main { grid-template-columns:1fr; gap:18px; }
+        .trailhead-copy { gap:14px; padding-top:12px; }
+        .trailhead-copy .intro { max-width:680px; }
+        .trailhead-visual { display:block; }
+        .trailhead-visual .map-art { display:none; }
+        .trailhead-visual .planner { position:relative; width:100%; left:auto; bottom:auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen trailhead">
+      <div class="shell">
+        <header class="nav">
+          <a class="brand" href="index.html"><span class="brand-mark">T</span>Trail Planner</a>
+          <div class="nav-actions"><a class="nav-link" href="#">Planned trips</a><button class="ghost-button" type="button">Sign in with Google</button></div>
+        </header>
+
+        <main class="trailhead-main">
+          <section class="trailhead-copy">
+            <p class="eyebrow">Plan the journey · find the trail</p>
+            <h1>Mountain trips that fit <em>real life.</em></h1>
+            <p class="intro">Set the month, time, people, and travel budget. Trail Planner finds rough-terrain hiking destinations you can realistically reach.</p>
+            <div class="mini-legend"><span>Season fit</span><span>Travel time</span><span>Travel cost</span></div>
+            <p class="trail-note"><span class="number-chip">↗</span> Compare destinations by car, public transport, and plane.</p>
+          </section>
+
+          <section class="trailhead-visual" aria-label="Trip starter">
+            <div class="map-art" aria-hidden="true">
+              <span class="route-line"></span>
+              <span class="map-pin one">Start here<small>Your trip limits</small></span>
+              <span class="map-pin two">Trail country<small>Matched destination</small></span>
+            </div>
+            <form class="planner">
+              <div class="planner-title"><span>Start with a rough plan</span><span class="planner-note">Change it later</span></div>
+              <div class="fields">
+                <div class="field"><label for="month-01">Month</label><select id="month-01"><option>September</option><option>August</option><option>October</option></select></div>
+                <div class="field"><label for="people-01">Participants</label><select id="people-01"><option>2 people</option><option>1 person</option><option>3 people</option></select></div>
+                <div class="field"><label for="days-01">Trip length</label><select id="days-01"><option>5 days</option><option>4 days</option><option>7 days</option></select></div>
+                <div class="field"><label for="budget-01">Journey budget</label><input id="budget-01" value="6,000 DKK"></div>
+              </div>
+              <button class="primary-button" type="button">Explore destinations <span class="arrow">→</span></button>
+            </form>
+          </section>
+        </main>
+      </div>
+      <a class="back-link" href="index.html" aria-label="Back to concepts">×</a>
+    </div>
+  </body>
+</html>
