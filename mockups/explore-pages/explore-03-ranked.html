@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Ranked atlas</title>
+    <link rel="stylesheet" href="explore.css">
+    <style>
+      .ranked-grid { grid-template-columns:minmax(620px,1.45fr) minmax(390px,.8fr); }
+      .ranked-results { display:grid; grid-template-rows:auto 1fr; min-height:0; padding:0 20px 18px clamp(22px,3vw,44px); background:var(--paper); }
+      .ranked-results .results-head { padding-inline:0; }
+      .rank-list { display:grid; align-content:start; gap:8px; min-height:0; overflow:auto; scrollbar-width:none; }
+      .rank-row { display:grid; grid-template-columns:38px minmax(155px,1.2fr) minmax(290px,1.5fr) auto; align-items:center; gap:12px; min-height:82px; padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+      .rank-row.selected { border-color:rgba(46,100,75,.55); box-shadow:inset 3px 0 var(--green); }
+      .rank-number { display:grid; width:30px; height:30px; place-items:center; border-radius:50%; background:var(--paper-deep); font-family:Georgia,serif; font-size:15px; }
+      .selected .rank-number { background:var(--green); color:var(--surface); }
+      .rank-place { display:grid; gap:3px; }
+      .rank-place strong { font-family:Georgia,serif; font-size:17px; font-weight:500; }
+      .rank-place span { color:var(--muted); font-size:8px; }
+      .rank-row .travel-grid { min-width:0; }
+      .rank-row .season-pill { justify-self:end; }
+      .rank-map-detail { position:absolute; z-index:7; width:calc(100% - 30px); left:15px; bottom:15px; }
+      .rank-map-title { position:absolute; z-index:6; top:16px; left:16px; display:grid; gap:3px; padding:10px 12px; border-radius:11px; background:rgba(255,253,247,.86); backdrop-filter:blur(8px); }
+      .rank-map-title strong { font-family:Georgia,serif; font-size:17px; font-weight:500; }
+      .rank-map-title span { color:var(--muted); font-size:8px; }
+      @media(max-width:1050px) and (min-width:901px){ .ranked-grid { grid-template-columns:62% 38%; } .ranked-results { padding-inline:16px; } .rank-row { grid-template-columns:30px 105px minmax(0,1fr) auto; gap:8px; padding-inline:9px; } .rank-row .travel-option { padding-inline:5px; } .rank-row .travel-option strong { font-size:8px; } .rank-row .travel-option span { display:none; } .rank-row .season-pill { padding-inline:6px; } }
+      @media(max-width:900px){ .ranked-grid { grid-template-columns:1fr; } .ranked-grid .map-panel { display:none; } .ranked-results { padding:0 14px 14px; } .rank-row { grid-template-columns:34px 1fr auto; } .rank-row .travel-grid { display:none; } }
+    </style>
+  </head>
+  <body>
+    <div class="explore-screen">
+      <div class="explore-shell">
+        <header class="app-nav"><a class="brand" href="../landing-pages/landing-09b-route-trace.html"><span class="brand-mark">T</span>Trail Planner</a><nav class="nav-center"><span class="nav-tab active">Explore</span><span class="nav-tab">Planned trips</span></nav><div class="nav-actions"><button class="text-button" type="button">Planned trips</button><span class="avatar">MO</span></div></header>
+        <section class="query-bar"><div class="query-context"><a class="back-action" href="../landing-pages/landing-09b-route-trace.html" aria-label="Back to trip setup">←</a><div class="query-copy"><strong>September options for two</strong><span>5 days · 6,000 DKK journey budget</span></div></div><div class="query-options"><span class="query-chip"><b>Season</b> Exact fit</span><span class="mode-chip"><i class="mode-dot"></i> 3 travel modes</span><button class="filter-button" type="button">Refine search <span>3</span></button></div></section>
+        <main class="page-grid ranked-grid">
+          <section class="ranked-results">
+            <header class="results-head"><div><span class="eyebrow">6 destinations fit</span><h1>Best journey matches</h1><p>Mountain access, season, time, and cost—without ranking individual trails.</p></div><button class="sort-button" type="button">Best overall⌄</button></header>
+            <div class="rank-list">
+              <article class="rank-row selected"><span class="rank-number">1</span><div class="rank-place"><strong>Åndalsnes</strong><span>Romsdalen · Norway</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>14h 12m</strong><span>2,180 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>17h 40m</strong><span>1,940 DKK</span></div><div class="travel-option"><small>Plane</small><strong>6h 25m</strong><span>3,480 DKK</span></div></div><span class="season-pill">Jul–Sep</span></article>
+              <article class="rank-row"><span class="rank-number">2</span><div class="rank-place"><strong>Gjendesheim</strong><span>Jotunheimen · Norway</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>11h 30m</strong><span>1,860 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>16h 15m</strong><span>1,720 DKK</span></div><div class="travel-option"><small>Plane</small><strong>7h 10m</strong><span>3,260 DKK</span></div></div><span class="season-pill">Jul–Sep</span></article>
+              <article class="rank-row"><span class="rank-number">3</span><div class="rank-place"><strong>Odda</strong><span>Hardanger · Norway</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>12h 12m</strong><span>2,020 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>15h 50m</strong><span>1,880 DKK</span></div><div class="travel-option"><small>Plane</small><strong>6h 50m</strong><span>3,120 DKK</span></div></div><span class="season-pill">Jun–Sep</span></article>
+              <article class="rank-row"><span class="rank-number">4</span><div class="rank-place"><strong>Fort William</strong><span>Scottish Highlands · UK</span></div><div class="travel-grid"><div class="travel-option unavailable"><small>Car</small><strong>Unavailable</strong><span>Outside limit</span></div><div class="travel-option"><small>Train / bus</small><strong>21h 05m</strong><span>2,420 DKK</span></div><div class="travel-option"><small>Plane</small><strong>7h 35m</strong><span>2,980 DKK</span></div></div><span class="season-pill">May–Sep</span></article>
+              <article class="rank-row"><span class="rank-number">5</span><div class="rank-place"><strong>Abisko</strong><span>Swedish Lapland · Sweden</span></div><div class="travel-grid"><div class="travel-option unavailable"><small>Car</small><strong>Unavailable</strong><span>Outside limit</span></div><div class="travel-option"><small>Train / bus</small><strong>24h 10m</strong><span>2,650 DKK</span></div><div class="travel-option"><small>Plane</small><strong>7h 55m</strong><span>3,740 DKK</span></div></div><span class="season-pill">Jul–Sep</span></article>
+            </div>
+          </section>
+          <section class="map-panel alpine" aria-label="Selected destination map">
+            <div class="rank-map-title"><span class="eyebrow">Selected on map</span><strong>Åndalsnes</strong><span>Romsdalen · Norway</span></div>
+            <svg class="map-route" viewBox="0 0 500 620" preserveAspectRatio="none" aria-hidden="true"><path class="route-halo" d="M42 554 C116 485 155 535 218 431 C268 349 318 402 360 297 C386 232 416 242 444 172"/><path class="route-dash" d="M42 554 C116 485 155 535 218 431 C268 349 318 402 360 297 C386 232 416 242 444 172"/></svg><span class="route-origin"></span>
+            <button class="map-marker marker-c selected" type="button" aria-label="Locate Åndalsnes" aria-pressed="true">1</button><button class="map-marker marker-b" type="button" aria-label="Locate Gjendesheim" aria-pressed="false">2</button><button class="map-marker marker-d" type="button" aria-label="Locate Odda" aria-pressed="false">3</button><button class="map-marker marker-e" type="button" aria-label="Locate Fort William" aria-pressed="false">4</button>
+            <div class="map-controls"><button class="map-control" type="button" aria-label="Zoom in">+</button><button class="map-control" type="button" aria-label="Zoom out">−</button></div>
+            <article class="detail-card rank-map-detail"><div class="detail-head"><div><span class="eyebrow">Why it fits</span><h2>Romsdalen</h2><p>Recommended July–September</p></div><button class="close-button" type="button" aria-label="Close destination details">×</button></div><p class="detail-summary">Strong mountain quality, routes from town, and three viable ways to travel within this search.</p><div class="detail-actions"><button class="secondary-button" type="button">Area details</button><button class="primary-button" type="button">Plan trip →</button></div></article>
+          </section>
+        </main>
+      </div><a class="back-link" href="index.html" aria-label="Back to Explore concepts">×</a>
+    </div>
+  </body>
+</html>

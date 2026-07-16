@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Map-first explorer</title>
+    <link rel="stylesheet" href="explore.css">
+    <style>
+      .map-first-stage { position:relative; min-height:0; overflow:hidden; }
+      .map-first-stage .map-panel { position:absolute; inset:0; }
+      .floating-results { position:absolute; z-index:7; display:grid; grid-template-rows:auto 1fr; width:330px; inset:16px auto 16px 20px; overflow:hidden; border:1px solid rgba(255,255,255,.78); border-radius:20px; background:rgba(246,243,233,.96); box-shadow:var(--shadow); }
+      .floating-results .results-head { padding:17px 17px 12px; }
+      .floating-results .results-head h1 { font-size:25px; }
+      .floating-results .result-list { gap:7px; padding:0 9px 10px; }
+      .floating-results .destination-card { gap:7px; padding:11px; }
+      .floating-results .destination-name h2 { font-size:17px; }
+      .floating-results .travel-grid { grid-template-columns:repeat(3,1fr); }
+      .floating-results .travel-option { padding:5px; }
+      .floating-results .travel-option strong { font-size:9px; }
+      .floating-detail { position:absolute; z-index:7; width:340px; right:18px; bottom:18px; }
+      .map-first-stage .map-key { left:370px; }
+      @media(max-width:900px){ .floating-results { width:calc(100% - 32px); inset:14px 16px auto; max-height:54%; } .floating-detail { display:none; } .map-first-stage .map-key { display:none; } }
+    </style>
+  </head>
+  <body>
+    <div class="explore-screen">
+      <div class="explore-shell">
+        <header class="app-nav"><a class="brand" href="../landing-pages/landing-09b-route-trace.html"><span class="brand-mark">T</span>Trail Planner</a><nav class="nav-center"><span class="nav-tab active">Explore</span><span class="nav-tab">Planned trips</span></nav><div class="nav-actions"><button class="text-button" type="button">Planned trips</button><span class="avatar">MO</span></div></header>
+        <section class="query-bar"><div class="query-context"><a class="back-action" href="../landing-pages/landing-09b-route-trace.html" aria-label="Back to trip setup">←</a><div class="query-copy"><strong>September · 5 days</strong><span>2 people · journey budget 6,000 DKK</span></div></div><div class="query-options"><span class="mode-chip"><i class="mode-dot"></i> Car</span><span class="mode-chip"><i class="mode-dot"></i> Train / bus</span><span class="mode-chip"><i class="mode-dot"></i> Plane</span><button class="filter-button" type="button">All filters <span>3</span></button></div></section>
+        <main class="map-first-stage">
+          <section class="map-panel" aria-label="Destination map">
+            <svg class="map-route" viewBox="0 0 1200 620" preserveAspectRatio="none" aria-hidden="true"><path class="route-halo" d="M88 560 C220 482 276 534 390 440 C498 352 561 418 660 330 C742 258 797 282 882 182"/><path class="route-dash" d="M88 560 C220 482 276 534 390 440 C498 352 561 418 660 330 C742 258 797 282 882 182"/></svg><span class="route-origin"></span>
+            <button class="map-marker marker-a" type="button" aria-label="Locate Åndalsnes" aria-pressed="false">2</button><button class="map-marker marker-b selected" type="button" aria-label="Locate Gjendesheim" aria-pressed="true">1</button><button class="map-marker marker-c" type="button" aria-label="Locate Odda" aria-pressed="false">4</button><button class="map-marker marker-d" type="button" aria-label="Locate Fort William" aria-pressed="false">3</button><button class="map-marker marker-e" type="button" aria-label="Locate Abisko" aria-pressed="false">5</button>
+            <div class="map-controls"><button class="map-control" type="button" aria-label="Zoom in">+</button><button class="map-control" type="button" aria-label="Zoom out">−</button></div><div class="map-key"><span><i></i> Selected</span><span><i></i> Matching hub</span></div>
+          </section>
+          <aside class="floating-results">
+            <header class="results-head"><div><span class="eyebrow">6 matches</span><h1>Hiking hubs</h1><p>Tap a result to locate it</p></div><button class="sort-button" type="button">Fit⌄</button></header>
+            <div class="result-list">
+              <article class="destination-card selected"><div class="destination-top"><div class="destination-name"><h2>Gjendesheim</h2><p>Jotunheimen · Norway</p></div><span class="season-pill">Jul–Sep</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>11h 30m</strong></div><div class="travel-option"><small>Transit</small><strong>16h 15m</strong></div><div class="travel-option"><small>Plane</small><strong>7h 10m</strong></div></div></article>
+              <article class="destination-card"><div class="destination-top"><div class="destination-name"><h2>Åndalsnes</h2><p>Romsdalen · Norway</p></div><span class="season-pill">Jul–Sep</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>14h 12m</strong></div><div class="travel-option"><small>Transit</small><strong>17h 40m</strong></div><div class="travel-option"><small>Plane</small><strong>6h 25m</strong></div></div></article>
+              <article class="destination-card"><div class="destination-top"><div class="destination-name"><h2>Fort William</h2><p>Scottish Highlands · UK</p></div><span class="season-pill">May–Sep</span></div><div class="travel-grid"><div class="travel-option unavailable"><small>Car</small><strong>—</strong></div><div class="travel-option"><small>Transit</small><strong>21h 05m</strong></div><div class="travel-option"><small>Plane</small><strong>7h 35m</strong></div></div></article>
+              <article class="destination-card"><div class="destination-top"><div class="destination-name"><h2>Odda</h2><p>Hardanger · Norway</p></div><span class="season-pill">Jun–Sep</span></div><div class="travel-grid"><div class="travel-option"><small>Car</small><strong>12h 12m</strong></div><div class="travel-option"><small>Transit</small><strong>15h 50m</strong></div><div class="travel-option"><small>Plane</small><strong>6h 50m</strong></div></div></article>
+            </div>
+          </aside>
+          <article class="detail-card floating-detail"><div class="detail-head"><div><span class="eyebrow">Selected destination</span><h2>Gjendesheim</h2><p>Jotunheimen · Norway</p></div><button class="close-button" type="button" aria-label="Close destination details">×</button></div><p class="detail-summary">Classic ridge country with lake access, high mountain day hikes, and a strong July–September season.</p><div class="travel-grid"><div class="travel-option"><small>Best value</small><strong>Train / bus</strong><span>1,720 DKK</span></div><div class="travel-option"><small>Fastest</small><strong>Plane</strong><span>7h 10m</span></div><div class="travel-option"><small>Simplest</small><strong>Car</strong><span>11h 30m</span></div></div><div class="detail-actions"><button class="secondary-button" type="button">Area details</button><button class="primary-button" type="button">Plan trip →</button></div></article>
+        </main>
+      </div><a class="back-link" href="index.html" aria-label="Back to Explore concepts">×</a>
+    </div>
+  </body>
+</html>

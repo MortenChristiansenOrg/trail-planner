@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Balanced explorer</title>
+    <link rel="stylesheet" href="explore.css">
+    <style>
+      .balanced-grid { position:relative; grid-template-columns:minmax(380px,34%) 1fr; }
+      .balanced-grid .results-panel { display:grid; grid-template-rows:auto 1fr; }
+      .selected-preview { position:absolute; z-index:7; width:min(380px,46%); right:18px; bottom:18px; }
+      @media(max-width:900px){ .balanced-grid { grid-template-columns:1fr; } .balanced-grid .map-panel { position:absolute; inset:0; opacity:.22; } .balanced-grid .results-panel { position:relative; z-index:3; border:0; background:rgba(246,243,233,.9); } .selected-preview { display:none; } }
+    </style>
+  </head>
+  <body>
+    <div class="explore-screen">
+      <div class="explore-shell">
+        <header class="app-nav">
+          <a class="brand" href="../landing-pages/landing-09b-route-trace.html"><span class="brand-mark">T</span>Trail Planner</a>
+          <nav class="nav-center" aria-label="Primary"><span class="nav-tab active">Explore</span><span class="nav-tab">Planned trips</span></nav>
+          <div class="nav-actions"><button class="text-button" type="button">Planned trips</button><span class="avatar">MO</span></div>
+        </header>
+        <section class="query-bar">
+          <div class="query-context"><a class="back-action" href="../landing-pages/landing-09b-route-trace.html" aria-label="Back to trip setup">←</a><div class="query-copy"><strong>Your September options</strong><span>Mountain hubs that fit the journey—not individual trail results.</span></div></div>
+          <div class="query-options"><span class="query-chip"><b>People</b> 2</span><span class="query-chip"><b>Days</b> 5</span><span class="query-chip"><b>Budget</b> 6,000 DKK</span><span class="mode-chip"><i class="mode-dot"></i> Car · Train · Plane</span><button class="filter-button" type="button">Filters <span>3</span></button></div>
+        </section>
+        <main class="page-grid balanced-grid">
+          <section class="results-panel">
+            <header class="results-head"><div><span class="eyebrow">6 destinations fit</span><h1>Within reach</h1><p>Sorted by season and journey fit</p></div><button class="sort-button" type="button">Best fit⌄</button></header>
+            <div class="result-list">
+              <article class="destination-card selected">
+                <div class="destination-top"><div class="destination-name"><h2>Åndalsnes</h2><p>Romsdalen · Norway</p></div><span class="season-pill">● Jul–Sep</span></div>
+                <div class="travel-grid"><div class="travel-option"><small>Car</small><strong>14h 12m</strong><span>2,180 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>17h 40m</strong><span>1,940 DKK</span></div><div class="travel-option"><small>Plane</small><strong>6h 25m</strong><span>3,480 DKK</span></div></div>
+              </article>
+              <article class="destination-card">
+                <div class="destination-top"><div class="destination-name"><h2>Gjendesheim</h2><p>Jotunheimen · Norway</p></div><span class="season-pill">● Jul–Sep</span></div>
+                <div class="travel-grid"><div class="travel-option"><small>Car</small><strong>11h 30m</strong><span>1,860 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>16h 15m</strong><span>1,720 DKK</span></div><div class="travel-option"><small>Plane</small><strong>7h 10m</strong><span>3,260 DKK</span></div></div>
+              </article>
+              <article class="destination-card">
+                <div class="destination-top"><div class="destination-name"><h2>Fort William</h2><p>Scottish Highlands · UK</p></div><span class="season-pill">● May–Sep</span></div>
+                <div class="travel-grid"><div class="travel-option unavailable"><small>Car</small><strong>Unavailable</strong><span>Outside limit</span></div><div class="travel-option"><small>Train / bus</small><strong>21h 05m</strong><span>2,420 DKK</span></div><div class="travel-option"><small>Plane</small><strong>7h 35m</strong><span>2,980 DKK</span></div></div>
+              </article>
+              <article class="destination-card">
+                <div class="destination-top"><div class="destination-name"><h2>Odda</h2><p>Hardanger · Norway</p></div><span class="season-pill">● Jun–Sep</span></div>
+                <div class="travel-grid"><div class="travel-option"><small>Car</small><strong>12h 12m</strong><span>2,020 DKK</span></div><div class="travel-option"><small>Train / bus</small><strong>15h 50m</strong><span>1,880 DKK</span></div><div class="travel-option"><small>Plane</small><strong>6h 50m</strong><span>3,120 DKK</span></div></div>
+              </article>
+            </div>
+          </section>
+          <section class="map-panel" aria-label="Destination map">
+            <svg class="map-route" viewBox="0 0 900 620" preserveAspectRatio="none" aria-hidden="true"><path class="route-halo" d="M65 555 C180 480 235 530 330 445 C420 362 470 421 558 337 C635 264 665 301 735 220"/><path class="route-dash" d="M65 555 C180 480 235 530 330 445 C420 362 470 421 558 337 C635 264 665 301 735 220"/></svg>
+            <span class="route-origin" aria-hidden="true"></span>
+            <button class="map-marker marker-a" type="button" aria-label="Locate Gjendesheim" aria-pressed="false">2</button><button class="map-marker marker-b" type="button" aria-label="Locate Odda" aria-pressed="false">4</button><button class="map-marker marker-c selected" type="button" aria-label="Locate Åndalsnes" aria-pressed="true">1</button><button class="map-marker marker-d" type="button" aria-label="Locate Fort William" aria-pressed="false">3</button><button class="map-marker marker-e" type="button" aria-label="Locate Abisko" aria-pressed="false">5</button>
+            <div class="map-controls"><button class="map-control" type="button" aria-label="Zoom in">+</button><button class="map-control" type="button" aria-label="Zoom out">−</button></div>
+            <div class="map-key"><span><i></i> Selected</span><span><i></i> Other matches</span></div>
+            <article class="detail-card selected-preview"><div class="detail-head"><div><span class="eyebrow">Best overall fit</span><h2>Åndalsnes / Romsdalen</h2><p>Ridge hikes from a rail-accessible mountain town</p></div><button class="close-button" type="button" aria-label="Close details">×</button></div><p class="detail-summary">Excellent rough-terrain access with trails from town and a seasonal bus to Romsdalseggen. September is within the recommended period.</p><div class="detail-actions"><button class="secondary-button" type="button">View area details</button><button class="primary-button" type="button">Plan this trip →</button></div></article>
+          </section>
+        </main>
+      </div>
+      <a class="back-link" href="index.html" aria-label="Back to Explore concepts">×</a>
+    </div>
+  </body>
+</html>

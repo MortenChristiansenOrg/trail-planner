@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trail Planner — Map desk concept</title>
+    <link rel="stylesheet" href="landing.css">
+    <style>
+      .map-desk { background:#bad6ca; }
+      .map-canvas { position:absolute; inset:0; overflow:hidden; background:#c4d7d0 url("assets/nordic-fjords-map.webp") center / cover no-repeat; }
+      .map-canvas::before { position:absolute; inset:0; background:linear-gradient(90deg,rgba(223,235,220,.18),transparent 52%,rgba(33,72,55,.08)); content:""; }
+      .map-desk .nav { padding:0 6px; }
+      .map-desk .brand, .map-desk .ghost-button, .map-desk .nav-link { position:relative; z-index:4; }
+      .map-desk-main { display:grid; grid-template-columns:minmax(400px,.72fr) 1fr; align-items:end; gap:32px; padding:42px 6px 10px; }
+      .glass-copy { align-self:start; display:grid; gap:16px; width:min(660px,100%); padding:24px 28px; border:1px solid rgba(255,255,255,.7); border-radius:26px; background:rgba(255,253,247,.78); box-shadow:var(--shadow); backdrop-filter:blur(18px); }
+      .glass-copy h1 { font-size:clamp(44px,5vw,76px); }
+      .map-desk .planner { justify-self:end; width:min(400px,100%); margin-bottom:2vh; }
+      .map-label-large { position:absolute; z-index:2; display:grid; gap:1px; font-family:Georgia,serif; font-size:17px; font-style:italic; }
+      .map-label-large small { font-family:Inter,sans-serif; color:var(--muted); font-size:9px; font-style:normal; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+      .label-a { left:15%; bottom:17%; } .label-b { right:14%; top:21%; }
+      @media (max-width:900px) { .map-desk-main { grid-template-columns:1fr; align-content:center; padding-top:16px; } .glass-copy { padding:18px; } .glass-copy h1 { font-size:clamp(38px,10vw,55px); } .map-desk .planner { width:100%; margin:0; } .map-label-large { display:none; } }
+    </style>
+  </head>
+  <body>
+    <div class="screen map-desk">
+      <div class="map-canvas" aria-hidden="true"><span class="map-label-large label-a">Home<small>Trip constraints</small></span><span class="map-label-large label-b">The mountains<small>Reachable options</small></span></div>
+      <div class="shell">
+        <header class="nav">
+          <a class="brand" href="index.html"><span class="brand-mark">T</span>Trail Planner</a>
+          <div class="nav-actions"><a class="nav-link" href="#">Planned trips</a><button class="ghost-button" type="button">Sign in</button></div>
+        </header>
+        <main class="map-desk-main">
+          <section class="glass-copy">
+            <p class="eyebrow">Start from what is possible</p>
+            <h1>How far can your hiking trip go?</h1>
+            <p class="intro">Tell us the practical limits. We’ll show hiking hubs that suit the season and compare how long and how much the journey takes.</p>
+            <div class="mini-legend"><span>Rough terrain</span><span>Reachable hubs</span><span>Multiple travel modes</span></div>
+          </section>
+          <form class="planner">
+            <div class="planner-title"><span>Set your limits</span><span class="planner-note">Step 1 of 1</span></div>
+            <div class="fields">
+              <div class="field"><label for="month-02">When</label><select id="month-02"><option>September</option><option>August</option></select></div>
+              <div class="field"><label for="people-02">Who</label><select id="people-02"><option>2 participants</option><option>1 participant</option></select></div>
+              <div class="field"><label for="days-02">How long</label><select id="days-02"><option>5 days</option><option>7 days</option></select></div>
+              <div class="field"><label for="budget-02">Travel budget</label><input id="budget-02" value="6,000 DKK"></div>
+            </div>
+            <button class="primary-button" type="button">Open the map <span class="arrow">↗</span></button>
+          </form>
+        </main>
+      </div>
+      <a class="back-link" href="index.html" aria-label="Back to concepts">×</a>
+    </div>
+  </body>
+</html>
