@@ -22,6 +22,13 @@ function makeTrip() {
 }
 
 describe("planned trip model", () => {
+  it("gives catalog hikes distinct planning traces", () => {
+    for (const area of destinations) {
+      const serialized = area.hikes.map((hike) => JSON.stringify(hike.route));
+      expect(new Set(serialized).size).toBe(serialized.length);
+    }
+  });
+
   it("fills consecutive slots for a multi-day hike without replacing activities", () => {
     let trip = makeTrip();
     trip = addActivity(trip, 2, {
@@ -43,6 +50,17 @@ describe("planned trip model", () => {
     expect(trip.days[3].activities[0].segment).toBe(3);
   });
 
+  it("rejects activities outside the trip and invalid durations", () => {
+    const activity = {
+      kind: "custom-hike" as const,
+      name: "Traverse",
+      description: "Personal route",
+      durationDays: 1,
+    };
+    expect(() => addActivity(makeTrip(), 0, activity)).toThrow(/startDay/);
+    expect(() => addActivity(makeTrip(), 2, { ...activity, durationDays: Number.NaN })).toThrow(/durationDays/);
+  });
+
   it("removes every segment of one activity group", () => {
     const withActivity = addActivity(makeTrip(), 2, {
       kind: "custom-hike",
@@ -53,6 +71,32 @@ describe("planned trip model", () => {
     const groupId = withActivity.days[1].activities[0].groupId;
     const removed = removeActivityGroup(withActivity, groupId);
     expect(removed.days.flatMap((day) => day.activities)).toHaveLength(0);
+  });
+
+  it("reuses the first available trail letter after an activity is removed", () => {
+    let trip = addActivity(makeTrip(), 1, {
+      kind: "custom-hike",
+      name: "First",
+      description: "First route",
+      durationDays: 1,
+    });
+    const firstGroupId = trip.days[0].activities[0].groupId;
+    trip = addActivity(trip, 2, {
+      kind: "custom-hike",
+      name: "Second",
+      description: "Second route",
+      durationDays: 1,
+    });
+    trip = removeActivityGroup(trip, firstGroupId);
+    trip = addActivity(trip, 3, {
+      kind: "custom-hike",
+      name: "Replacement",
+      description: "Replacement route",
+      durationDays: 1,
+    });
+
+    expect(trip.days[1].activities[0].letter).toBe("B");
+    expect(trip.days[2].activities[0].letter).toBe("A");
   });
 
   it("updates dates, lodging, travel, and custom costs in the total", () => {
@@ -67,5 +111,14 @@ describe("planned trip model", () => {
     const cost = calculateTripCost(trip);
     expect(cost.total).toBe(destination.travel[0].costPerPersonDkk * trip.participants + 1_500);
     expect(trip.days[1].calendarDate).toBe("2026-07-11");
+  });
+
+  it("rejects invalid cost inputs", () => {
+    expect(() => addCustomCost(makeTrip(), "Refund", -1)).toThrow(/Custom cost/);
+    expect(() => addCustomCost(makeTrip(), "Unknown", Number.NaN)).toThrow(/Custom cost/);
+    expect(() => calculateTripCost({
+      ...makeTrip(),
+      nights: [{ afterDay: 1, kind: "other", name: "Invalid", costDkk: Number.POSITIVE_INFINITY }],
+    })).toThrow(/Lodging cost/);
   });
 });

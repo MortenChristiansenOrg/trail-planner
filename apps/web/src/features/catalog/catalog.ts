@@ -3,7 +3,7 @@ export type TravelMode = "car" | "train" | "plane";
 export type TravelEstimate = {
   mode: TravelMode;
   available: boolean;
-  hours: number;
+  oneWayHours: number;
   costPerPersonDkk: number;
   layovers?: number;
   note: string;
@@ -43,12 +43,24 @@ export type Destination = {
   lodgings: KnownLodging[];
 };
 
-const route = (lng: number, lat: number, scale = 1): [number, number][] => [
-  [lng - 0.035 * scale, lat - 0.018 * scale],
-  [lng - 0.012 * scale, lat + 0.018 * scale],
-  [lng + 0.018 * scale, lat + 0.034 * scale],
-  [lng + 0.042 * scale, lat + 0.004 * scale],
-];
+const route = (id: string, lng: number, lat: number, scale = 1): [number, number][] => {
+  const seed = Array.from(id).reduce((value, character) => value + character.charCodeAt(0), 0);
+  const angle = ((seed % 160) - 80) * (Math.PI / 180);
+  const phase = (seed % 360) * (Math.PI / 180);
+  const curve = ((seed % 11) - 5) * 0.018;
+  const longitudinalScale = 0.075 * scale;
+  const latitudinalScale = 0.045 * scale;
+  const points = Array.from({ length: 7 }, (_, index): [number, number] => {
+    const progress = index / 6 - 0.5;
+    const bend =
+      Math.sin((progress + 0.5) * Math.PI) * curve +
+      Math.sin((progress + 0.5) * Math.PI * 2 + phase) * 0.035;
+    const x = progress * Math.cos(angle) - bend * Math.sin(angle);
+    const y = progress * Math.sin(angle) + bend * Math.cos(angle);
+    return [lng + x * longitudinalScale, lat + y * latitudinalScale];
+  });
+  return points;
+};
 
 const travel = (
   car: [number, number],
@@ -58,24 +70,24 @@ const travel = (
   {
     mode: "car",
     available: true,
-    hours: car[0],
+    oneWayHours: car[0],
     costPerPersonDkk: car[1],
-    note: "Return drive estimate including road charges and crossings where relevant.",
+    note: "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
     confidence: "medium",
   },
   train
     ? {
         mode: "train",
         available: true,
-        hours: train[0],
+        oneWayHours: train[0],
         costPerPersonDkk: train[1],
-        note: "Return rail and bus planning estimate; local reservations may be required.",
+        note: "One-way rail and bus time with estimated return costs; local reservations may be required.",
         confidence: "medium",
       }
     : {
         mode: "train",
         available: false,
-        hours: 0,
+        oneWayHours: 0,
         costPerPersonDkk: 0,
         note: "No practical public-transport chain within the MVP trip window.",
         confidence: "high",
@@ -84,16 +96,16 @@ const travel = (
     ? {
         mode: "plane",
         available: true,
-        hours: plane[0],
+        oneWayHours: plane[0],
         costPerPersonDkk: plane[1],
         layovers: plane[2],
-        note: "Sampled return airfare plus ground transfer; not a live fare.",
+        note: "One-way journey time with sampled return airfare and ground transfers; not a live fare.",
         confidence: "low",
       }
     : {
         mode: "plane",
         available: false,
-        hours: 0,
+        oneWayHours: 0,
         costPerPersonDkk: 0,
         layovers: 0,
         note: "No useful flight connection for this planning model.",
@@ -119,7 +131,7 @@ const hike = (
   ascentM,
   difficulty,
   description,
-  route: route(center[0], center[1], scale),
+  route: route(id, center[0], center[1], scale),
 });
 
 export const destinations: Destination[] = [

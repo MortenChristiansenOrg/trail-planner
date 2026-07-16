@@ -59,6 +59,9 @@ import { useTripStore } from "@/features/trips/TripStore";
 
 export function TripDetailPage({ tripId }: { tripId: string }) {
   const store = useTripStore();
+  const [selectedMapItem, setSelectedMapItem] = useState<string>();
+  const [shareUrl, setShareUrl] = useState<string>();
+  const [shareCopyStatus, setShareCopyStatus] = useState<"copied" | "manual">();
   const trip = store.trips.find((item) => item.id === tripId);
 
   if (!trip) {
@@ -84,9 +87,11 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     { id: destination.id, label: destination.name, coordinates: destination.coordinates },
     ...Array.from(activityGroups.values()).flatMap((activity) => {
       const hike = destination.hikes.find((item) => item.id === activity.hikeId);
-      return hike ? [{ id: activity.groupId, label: activity.name, coordinates: hike.route[0], badge: activity.letter }] : [];
+      return hike ? [{ id: activity.groupId, label: `Trail ${activity.letter}: ${activity.name}`, coordinates: hike.route[0], badge: activity.letter }] : [];
     }),
   ];
+  const selectedId = markers.some((marker) => marker.id === selectedMapItem) ? selectedMapItem : destination.id;
+  const selectedActivity = selectedId ? activityGroups.get(selectedId) : undefined;
 
   const save = (next: PlannedTrip) => store.update(next);
   const selectTravel = (mode: TravelMode) => save({ ...trip, selectedTravelMode: mode });
@@ -95,7 +100,14 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     const token = await store.share(trip.id);
     if (!token) return;
     const url = `${window.location.origin}/share/${token}`;
-    await navigator.clipboard?.writeText(url);
+    setShareUrl(url);
+    try {
+      if (!navigator.clipboard) throw new Error("Clipboard API unavailable");
+      await navigator.clipboard.writeText(url);
+      setShareCopyStatus("copied");
+    } catch {
+      setShareCopyStatus("manual");
+    }
   };
 
   return (
@@ -112,7 +124,12 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
               <span><CircleDollarSign /> limit {formatMoney(trip.maxBudgetDkk)}</span>
             </div>
           </div>
-          <Button onClick={createShare} variant="outline"><Share2 /> {trip.shareToken ? "Copy share link" : "Create share link"}</Button>
+          <div className="trip-share-actions">
+            <Button onClick={createShare} variant="outline"><Share2 /> {shareCopyStatus === "copied" ? "Share link copied" : trip.shareToken ? "Copy share link" : "Create share link"}</Button>
+            {shareCopyStatus === "manual" && shareUrl ? (
+              <p role="status">Copy this link: <a href={shareUrl}>{shareUrl}</a></p>
+            ) : null}
+          </div>
         </header>
 
         <section className="trip-workspace">
@@ -129,7 +146,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                     type="button"
                   >
                     <span className="travel-choice__icon">{modeIcon(estimate.mode)}</span>
-                    <span><small>{modeLabels[estimate.mode]}</small><strong>{estimate.available ? formatHours(estimate.hours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
+                    <span><small>{modeLabels[estimate.mode]}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
                     {trip.selectedTravelMode === estimate.mode ? <Check className="selected-check" /> : null}
                   </button>
                 ))}
@@ -139,7 +156,14 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
             <section className="planning-section itinerary-section">
               <div className="section-heading itinerary-heading">
                 <div><p className="step-label">Step 2</p><h2>Shape the days</h2><p>Hikes can share a day or continue across several days.</p></div>
-                <label className="date-field"><span>Start date</span><input aria-label="Trip start date" min="2026-01-01" onChange={(event) => save(applyStartDate(trip, event.target.value || undefined))} type="date" value={trip.startDate ?? ""} /></label>
+                <label className="date-field">
+                  <span>Start date</span>
+                  <span className="date-input-shell">
+                    <span aria-hidden="true">{trip.startDate ? formatDateInput(trip.startDate) : "dd/mm/yyyy"}</span>
+                    <CalendarDays aria-hidden="true" />
+                    <input aria-label="Trip start date" min="2026-01-01" onChange={(event) => save(applyStartDate(trip, event.target.value || undefined))} type="date" value={trip.startDate ?? ""} />
+                  </span>
+                </label>
               </div>
 
               <div className="day-plan">
@@ -150,9 +174,11 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       <div className="day-card__content">
                         {day.day === 1 ? <TravelDayBlock direction="Journey to the trailhead" travel={selectedTravel} /> : null}
                         {day.activities.map((activity) => (
-                          <div className="activity-row" key={activity.id}>
-                            <span className="trail-letter">{activity.letter}</span>
-                            <div><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></div>
+                          <div className={`activity-row${selectedId === activity.groupId ? " is-selected" : ""}`} key={activity.id}>
+                            <button className="activity-row__select" onClick={() => setSelectedMapItem(activity.groupId)} type="button">
+                              <span className="trail-letter">{activity.letter}</span>
+                              <span><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></span>
+                            </button>
                             <Button aria-label={`Remove ${activity.name}`} onClick={() => save(removeActivityGroup(trip, activity.groupId))} size="icon" variant="ghost"><Trash2 /></Button>
                           </div>
                         ))}
@@ -171,10 +197,10 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
 
           <aside className="trip-side-column">
             <section className="trip-map-card">
-              <TrailMap lines={lines} markers={markers} mode="detail" selectedId={destination.id} />
+              <TrailMap lines={lines} markers={markers} mode="detail" onSelect={setSelectedMapItem} selectedId={selectedId} />
               <div className="map-legend">
-                <strong>Route map</strong>
-                <span>{lines.length ? `${lines.length} planned trail${lines.length === 1 ? "" : "s"}` : "Add a hike to draw its route"}</span>
+                <strong>{selectedActivity ? `${selectedActivity.letter} · ${selectedActivity.name}` : "Route map"}</strong>
+                <span>{selectedActivity ? "Selected trail · approximate catalog trace" : lines.length ? `${lines.length} planned trail${lines.length === 1 ? "" : "s"} · select a letter to focus` : "Add a hike to draw its route"}</span>
               </div>
             </section>
 
@@ -205,7 +231,7 @@ function TravelDayBlock({ direction, travel }: { direction: string; travel?: Pla
   return (
     <div className="travel-day-block">
       <span>{travel ? modeIcon(travel.mode) : <ChevronRight />}</span>
-      <div><strong>{direction}</strong><small>{travel ? `${modeLabels[travel.mode]} · approximately ${formatHours(travel.hours)} each way` : "Choose a travel mode above to fill this slot"}</small></div>
+      <div><strong>{direction}</strong><small>{travel ? `${modeLabels[travel.mode]} · approximately ${formatHours(travel.oneWayHours)} each way` : "Choose a travel mode above to fill this slot"}</small></div>
     </div>
   );
 }
@@ -257,7 +283,7 @@ function NightRow({ destinationId, night, onChange }: { destinationId: string; n
   return (
     <div className="night-row">
       <span className="night-line" /><span className="night-icon">{night.kind.startsWith("tent") ? <TentTree /> : <BedDouble />}</span>
-      <div><small>Night {night.afterDay}</small><strong>{night.name}</strong>{night.costDkk ? <span>{formatMoney(night.costDkk)}</span> : null}</div>
+      <div className="night-copy"><small>Night {night.afterDay}</small><strong>{night.name}</strong>{night.costDkk ? <span>{formatMoney(night.costDkk)}</span> : null}</div>
       <Dialog>
         <DialogTrigger asChild><Button size="sm" variant="ghost"><Pencil /> {night.kind === "none" ? "Choose" : "Edit"}</Button></DialogTrigger>
         <LodgingDialogContent destinationId={destinationId} night={night} onChange={onChange} />
@@ -303,7 +329,7 @@ function LodgingDialogContent({ destinationId, night, onChange }: { destinationI
         {kind === "other" ? <label><span>Name</span><input onChange={(event) => setName(event.target.value)} placeholder="Guesthouse, cabin…" value={name} /></label> : null}
         {kind === "tent-camping" || kind === "other" ? <label><span>Group cost for this night (DKK)</span><input min={0} onChange={(event) => setCost(Number(event.target.value))} type="number" value={cost} /></label> : null}
       </div>
-      <DialogFooter><DialogClose asChild><Button onClick={() => onChange({ afterDay: night.afterDay, kind, name: name || "Other lodging", costDkk: cost, knownLodgingId: kind === "known" ? knownId : undefined })}>Save night</Button></DialogClose></DialogFooter>
+      <DialogFooter><DialogClose asChild><Button disabled={!Number.isFinite(cost) || cost < 0} onClick={() => onChange({ afterDay: night.afterDay, kind, name: name || "Other lodging", costDkk: Math.max(0, cost), knownLodgingId: kind === "known" ? knownId : undefined })}>Save night</Button></DialogClose></DialogFooter>
     </DialogContent>
   );
 }
@@ -333,4 +359,9 @@ function modeIcon(mode: TravelMode) {
 
 function formatDate(value: string) {
   return new Intl.DateTimeFormat("en", { weekday: "short", month: "short", day: "numeric" }).format(new Date(`${value}T12:00:00`));
+}
+
+function formatDateInput(value: string) {
+  const [year, month, day] = value.split("-");
+  return `${day}/${month}/${year}`;
 }

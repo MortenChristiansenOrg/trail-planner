@@ -264,6 +264,14 @@ h1 {
   font-weight: 720;
 }
 
+.field select:focus-visible,
+.field input:focus-visible,
+.inline-field select:focus-visible,
+.inline-field input:focus-visible {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px var(--moss);
+}
+
 .planner .primary-button {
   width: 100%;
 }
@@ -629,5 +637,12 @@ h1 {
 
   .map-art {
     min-height: 300px;
+  }
+}
+
+@media (max-height: 559px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }

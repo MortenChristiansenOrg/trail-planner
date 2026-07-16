@@ -33,6 +33,9 @@ const numberBetween = (value: unknown, fallback: number, min: number, max: numbe
   return Number.isFinite(parsed) ? Math.min(max, Math.max(min, parsed)) : fallback;
 };
 
+const integerBetween = (value: unknown, fallback: number, min: number, max: number) =>
+  Math.round(numberBetween(value, fallback, min, max));
+
 const list = (value: unknown) => {
   if (Array.isArray(value)) return value.map(String).filter(Boolean);
   if (typeof value === "string" && value) return value.split(",").filter(Boolean);
@@ -45,16 +48,16 @@ export function parseExploreSearch(raw: Record<string, unknown>): ExploreSearch 
   );
 
   return {
-    month: numberBetween(raw.month, defaultExploreSearch.month, 1, 12),
-    participants: numberBetween(raw.participants, defaultExploreSearch.participants, 1, 12),
-    days: numberBetween(raw.days, defaultExploreSearch.days, 2, 21),
+    month: integerBetween(raw.month, defaultExploreSearch.month, 1, 12),
+    participants: integerBetween(raw.participants, defaultExploreSearch.participants, 1, 12),
+    days: integerBetween(raw.days, defaultExploreSearch.days, 2, 21),
     budget: numberBetween(raw.budget, defaultExploreSearch.budget, 1_000, 100_000),
     modes: requestedModes.length ? requestedModes : defaultExploreSearch.modes,
-    maxLayovers: numberBetween(raw.maxLayovers, defaultExploreSearch.maxLayovers, 0, 3),
+    maxLayovers: integerBetween(raw.maxLayovers, defaultExploreSearch.maxLayovers, 0, 3),
     maxDriveHours: numberBetween(raw.maxDriveHours, defaultExploreSearch.maxDriveHours, 4, 40),
     maxFlightDkk: numberBetween(raw.maxFlightDkk, defaultExploreSearch.maxFlightDkk, 500, 20_000),
     countries: list(raw.countries),
-    seasonTolerance: numberBetween(raw.seasonTolerance, defaultExploreSearch.seasonTolerance, 0, 3),
+    seasonTolerance: integerBetween(raw.seasonTolerance, defaultExploreSearch.seasonTolerance, 0, 3),
     selected: typeof raw.selected === "string" ? raw.selected : undefined,
     details: raw.details === true || raw.details === "true",
   };
@@ -75,7 +78,7 @@ export function monthDistance(month: number, recommendedMonths: number[]) {
 
 export function estimateFits(estimate: TravelEstimate, search: ExploreSearch) {
   if (!estimate.available || !search.modes.includes(estimate.mode)) return false;
-  if (estimate.mode === "car" && estimate.hours > search.maxDriveHours) return false;
+  if (estimate.mode === "car" && estimate.oneWayHours > search.maxDriveHours) return false;
   if (
     estimate.mode === "plane" &&
     ((estimate.layovers ?? 0) > search.maxLayovers || estimate.costPerPersonDkk > search.maxFlightDkk)
@@ -83,7 +86,7 @@ export function estimateFits(estimate: TravelEstimate, search: ExploreSearch) {
     return false;
   }
 
-  const travelDays = Math.max(2, Math.ceil((estimate.hours * 2) / 12));
+  const travelDays = Math.max(2, Math.ceil((estimate.oneWayHours * 2) / 12));
   const totalTransport = estimate.costPerPersonDkk * search.participants;
   return travelDays < search.days && totalTransport <= search.budget;
 }
@@ -112,14 +115,14 @@ export function rankDestinations(destinations: Destination[], search: ExploreSea
     if (!viable.length) continue;
 
     const best = viable.reduce((current, candidate) => {
-      const currentScore = current.costPerPersonDkk / 100 + current.hours * 2;
-      const candidateScore = candidate.costPerPersonDkk / 100 + candidate.hours * 2;
+      const currentScore = current.costPerPersonDkk / 100 + current.oneWayHours * 2;
+      const candidateScore = candidate.costPerPersonDkk / 100 + candidate.oneWayHours * 2;
       return candidateScore < currentScore ? candidate : current;
     });
     const score =
       100 -
       seasonDistance * 18 -
-      best.hours * 0.9 -
+      best.oneWayHours * 0.9 -
       (best.costPerPersonDkk * search.participants * 25) / search.budget;
 
     results.push({ destination, viable, best, seasonDistance, score });

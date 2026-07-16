@@ -45,9 +45,8 @@ import {
   type ExploreSearch,
 } from "@/features/explore/search";
 import { TrailMap } from "@/features/maps/TrailMap";
+import { useDrivingRoute } from "@/features/maps/useDrivingRoute";
 import { useTripStore } from "@/features/trips/TripStore";
-
-const origin: [number, number] = [9.922, 57.048];
 
 export function ExplorePage({
   search,
@@ -62,6 +61,10 @@ export function ExplorePage({
   const results = rankDestinations(destinations, search);
   const selectedResult =
     results.find((result) => result.destination.id === search.selected) ?? results[0];
+  const drivingRoute = useDrivingRoute(
+    selectedResult?.destination.coordinates,
+    selectedResult?.destination.countryCode !== "NO",
+  );
 
   const selectDestination = (destinationId: string) => {
     onSearchChange({ ...search, selected: destinationId }, true);
@@ -81,31 +84,19 @@ export function ExplorePage({
     void navigate({ to: "/trips/$tripId", params: { tripId: trip.id } });
   };
 
-  const routeLine = selectedResult
-    ? [
-        origin,
-        [origin[0] - 1.4, origin[1] + 1.2] as [number, number],
-        [
-          (origin[0] + selectedResult.destination.coordinates[0]) / 2,
-          (origin[1] + selectedResult.destination.coordinates[1]) / 2 + 1.4,
-        ] as [number, number],
-        selectedResult.destination.coordinates,
-      ]
-    : [];
-
   return (
     <AppShell fullHeight>
       <main className="explore-stage">
         <TrailMap
           className="explore-map"
-          lines={routeLine.length ? [{ id: "journey", coordinates: routeLine }] : []}
+          lines={drivingRoute.length ? [{ id: "journey", kind: "journey", coordinates: drivingRoute, label: "Indicative driving route from Aalborg" }] : []}
           markers={results.map((result, index) => ({
             id: result.destination.id,
             label: `${result.destination.name}, ${result.destination.country}`,
             coordinates: result.destination.coordinates,
             badge: String(index + 1),
           }))}
-          mode={search.details ? "detail" : "explore"}
+          mode="explore"
           onSelect={selectDestination}
           selectedId={selectedResult?.destination.id}
         />
@@ -121,6 +112,7 @@ export function ExplorePage({
             </div>
             <span className="result-sort"><Sparkles /> Best overall</span>
           </div>
+          <p className="rank-explanation">Numbers show overall fit rank; 1 is the strongest match.</p>
           <div className="results-list">
             {results.length ? (
               results.map((result, index) => (
@@ -146,8 +138,8 @@ export function ExplorePage({
         {selectedResult ? (
           <SelectedDestinationCard
             result={selectedResult}
+            drivingRouteVisible={drivingRoute.length > 0}
             search={search}
-            onDetailsChange={(details) => onSearchChange({ ...search, details }, true)}
             onPlan={() => void planTrip(selectedResult)}
           />
         ) : null}
@@ -235,14 +227,14 @@ function FilterSheet({
           </fieldset>
 
           <div className="filter-row">
-            <label>Maximum flight layovers</label>
-            <select value={search.maxLayovers} onChange={(event) => update("maxLayovers", Number(event.target.value))}>
+            <label htmlFor="maximum-flight-layovers">Maximum flight layovers</label>
+            <select id="maximum-flight-layovers" value={search.maxLayovers} onChange={(event) => update("maxLayovers", Number(event.target.value))}>
               {[0, 1, 2, 3].map((value) => <option key={value} value={value}>{value}</option>)}
             </select>
           </div>
           <div className="filter-row">
-            <label>Months outside ideal season</label>
-            <select value={search.seasonTolerance} onChange={(event) => update("seasonTolerance", Number(event.target.value))}>
+            <label htmlFor="season-tolerance">Months outside ideal season</label>
+            <select id="season-tolerance" value={search.seasonTolerance} onChange={(event) => update("seasonTolerance", Number(event.target.value))}>
               {[0, 1, 2, 3].map((value) => <option key={value} value={value}>{value}</option>)}
             </select>
           </div>
@@ -314,8 +306,9 @@ function DestinationCard({
         <span className="season-line">Best {result.destination.recommendedMonths.map((month) => monthNames[month - 1].slice(0, 3)).join("–")}</span>
       </span>
       <span className="destination-best">
+        <span className="destination-best__label">Best match</span>
         {modeIcon(result.best.mode)}
-        <strong>{formatHours(result.best.hours)}</strong>
+        <strong>{formatHours(result.best.oneWayHours)}</strong>
         <small>{formatMoney(result.best.costPerPersonDkk * search.participants)} total</small>
       </span>
     </button>
@@ -324,16 +317,17 @@ function DestinationCard({
 
 function SelectedDestinationCard({
   result,
+  drivingRouteVisible,
   search,
   onPlan,
-  onDetailsChange,
 }: {
   result: ExploreResult;
+  drivingRouteVisible: boolean;
   search: ExploreSearch;
   onPlan: () => void;
-  onDetailsChange: (open: boolean) => void;
 }) {
   const destination = result.destination;
+  const idealSeason = result.seasonDistance === 0;
   return (
     <article className="selected-destination">
       <div className="selected-destination__top">
@@ -342,15 +336,24 @@ function SelectedDestinationCard({
           <h2>{destination.name}</h2>
           <p>{destination.summary}</p>
         </div>
-        <Badge variant="secondary">Ideal in {monthNames[search.month - 1]}</Badge>
+        <div className="season-fit">
+          <Badge
+            title={idealSeason ? "The selected month is within this area's recommended hiking season." : "The selected month is outside this area's recommended hiking season."}
+            variant="secondary"
+          >
+            {idealSeason ? "Ideal in" : "Planning for"} {monthNames[search.month - 1]}
+          </Badge>
+          <span>{idealSeason ? "Selected month is in the area’s recommended hiking season." : "Season tolerance is keeping this destination in the results."}</span>
+        </div>
       </div>
       <div className="travel-strip">
         {destination.travel.map((estimate) => (
           <TravelSummary estimate={estimate} key={estimate.mode} participants={search.participants} viable={result.viable.includes(estimate)} />
         ))}
       </div>
+      {drivingRouteVisible ? <p className="journey-map-key"><Route /> Map line: indicative driving route from Aalborg</p> : null}
       <div className="selected-destination__actions">
-        <DestinationDetails destination={destination} search={search} onDetailsChange={onDetailsChange} onPlan={onPlan} />
+        <DestinationDetails destination={destination} search={search} onPlan={onPlan} />
         <Button onClick={onPlan}>Plan this trip <ArrowRight /></Button>
       </div>
     </article>
@@ -364,16 +367,17 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
       <span>
         <small>{modeLabels[estimate.mode]}</small>
         {estimate.available ? (
-          <><strong>{formatHours(estimate.hours)}</strong><em>{formatMoney(estimate.costPerPersonDkk * participants)}</em></>
+          <><strong>{formatHours(estimate.oneWayHours)}</strong><em>{formatMoney(estimate.costPerPersonDkk * participants)}</em></>
         ) : <strong>Unavailable</strong>}
       </span>
+      <em className="travel-summary__status">{viable ? "Fits your limits" : estimate.available ? "Outside current limits" : "Not available"}</em>
     </div>
   );
 }
 
-function DestinationDetails({ destination, search, onPlan, onDetailsChange }: { destination: Destination; search: ExploreSearch; onPlan: () => void; onDetailsChange: (open: boolean) => void }) {
+function DestinationDetails({ destination, search, onPlan }: { destination: Destination; search: ExploreSearch; onPlan: () => void }) {
   return (
-    <Sheet onOpenChange={onDetailsChange}>
+    <Sheet>
       <SheetTrigger asChild><Button variant="outline">View area details</Button></SheetTrigger>
       <SheetContent className="destination-sheet paper-sheet sm:max-w-xl" side="right">
         <SheetHeader>
@@ -389,7 +393,7 @@ function DestinationDetails({ destination, search, onPlan, onDetailsChange }: { 
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <span>{estimate.available ? `${formatHours(estimate.hours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}` : "Unavailable"}</span>
+                  <span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}` : "Unavailable"}</span>
                 </div>
               ))}
             </div>

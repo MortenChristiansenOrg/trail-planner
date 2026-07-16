@@ -60,7 +60,7 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
         </header>
         <div className="share-grid">
           <section className="share-itinerary">
-            <div className="section-heading"><div><p className="step-label">The plan</p><h2>Day by day</h2></div>{travel ? <Badge variant="outline">{travel.mode === "plane" ? <Plane /> : <CarFront />} {modeLabels[travel.mode]} · {formatHours(travel.hours)}</Badge> : null}</div>
+            <div className="section-heading"><div><p className="step-label">The plan</p><h2>Day by day</h2></div>{travel ? <Badge variant="outline">{travel.mode === "plane" ? <Plane /> : <CarFront />} {modeLabels[travel.mode]} · {formatHours(travel.oneWayHours)}</Badge> : null}</div>
             {trip.days.map((day) => (
               <article className="share-day" key={day.day}>
                 <div><strong>Day {day.day}</strong><small>{day.calendarDate ?? "Date open"}</small></div>

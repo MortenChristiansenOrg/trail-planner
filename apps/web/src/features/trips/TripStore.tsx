@@ -72,8 +72,12 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
   const [trips, setTrips] = useState<PlannedTrip[]>([]);
 
   useEffect(() => {
-    if (stateJsons) setTrips(stateJsons.map((state) => JSON.parse(state) as PlannedTrip));
-  }, [stateJsons]);
+    if (!isAuthenticated || stateJsons === undefined) {
+      setTrips([]);
+      return;
+    }
+    setTrips(stateJsons.map((state) => JSON.parse(state) as PlannedTrip));
+  }, [isAuthenticated, stateJsons]);
 
   const create = async (input: NewTripInput) => {
     const draft = createTrip(input);
@@ -89,18 +93,18 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
 
   const update = async (trip: PlannedTrip) => {
     const next = { ...trip, updatedAt: Date.now() };
-    setTrips((current) => current.map((item) => item.id === next.id ? next : item));
-    await updateState({ tripId: trip.id as never, stateJson: JSON.stringify(next) });
+    const state = await updateState({ tripId: trip.id as never, stateJson: JSON.stringify(next) });
+    const saved = JSON.parse(state) as PlannedTrip;
+    setTrips((current) => current.map((item) => item.id === saved.id ? saved : item));
   };
 
   const remove = async (tripId: string) => {
-    setTrips((current) => current.filter((item) => item.id !== tripId));
     await removeMine({ tripId: tripId as never });
+    setTrips((current) => current.filter((item) => item.id !== tripId));
   };
 
   const share = async (tripId: string) => {
-    const token = createShareToken();
-    const persisted = await createShare({ tripId: tripId as never, token });
+    const persisted = await createShare({ tripId: tripId as never });
     setTrips((current) => current.map((trip) => trip.id === tripId ? { ...trip, shareToken: persisted } : trip));
     return persisted;
   };

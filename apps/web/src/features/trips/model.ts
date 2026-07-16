@@ -63,6 +63,13 @@ export type NewTripInput = {
 const id = (prefix: string) =>
   `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 
+function requireNonNegativeFinite(value: number, label: string) {
+  if (!Number.isFinite(value) || value < 0) {
+    throw new Error(`${label} must be a non-negative finite number`);
+  }
+  return value;
+}
+
 export function createTrip(input: NewTripInput): PlannedTrip {
   const now = Date.now();
   return {
@@ -97,9 +104,17 @@ export function getSelectedTravel(trip: PlannedTrip) {
 
 export function calculateTripCost(trip: PlannedTrip) {
   const travel = getSelectedTravel(trip);
-  const travelCost = travel?.available ? travel.costPerPersonDkk * trip.participants : 0;
-  const lodgingCost = trip.nights.reduce((sum, item) => sum + item.costDkk, 0);
-  const customCost = trip.customCosts.reduce((sum, item) => sum + item.amountDkk, 0);
+  const travelCost = travel?.available
+    ? requireNonNegativeFinite(travel.costPerPersonDkk, "Travel cost") * trip.participants
+    : 0;
+  const lodgingCost = trip.nights.reduce(
+    (sum, item) => sum + requireNonNegativeFinite(item.costDkk, "Lodging cost"),
+    0,
+  );
+  const customCost = trip.customCosts.reduce(
+    (sum, item) => sum + requireNonNegativeFinite(item.amountDkk, "Custom cost"),
+    0,
+  );
   return {
     travelCost,
     lodgingCost,
@@ -117,21 +132,34 @@ export function applyStartDate(trip: PlannedTrip, startDate?: string): PlannedTr
     };
   }
 
-  const start = new Date(`${startDate}T12:00:00`);
+  const [year, month, day] = startDate.split("-").map(Number);
+  const start = new Date(Date.UTC(year, month - 1, day));
+  if (!Number.isFinite(start.valueOf()) || start.toISOString().slice(0, 10) !== startDate) {
+    throw new Error("Invalid start date");
+  }
   return {
     ...trip,
     startDate,
     days: trip.days.map((day, index) => {
       const date = new Date(start);
-      date.setDate(start.getDate() + index);
+      date.setUTCDate(start.getUTCDate() + index);
       return { ...day, calendarDate: date.toISOString().slice(0, 10) };
     }),
   };
 }
 
 export function nextTrailLetter(trip: PlannedTrip) {
-  const groupIds = new Set(trip.days.flatMap((day) => day.activities.map((item) => item.groupId)));
-  return String.fromCharCode(65 + Math.min(groupIds.size, 25));
+  const usedLetters = new Set(trip.days.flatMap((day) => day.activities.map((item) => item.letter)));
+  for (let index = 0; ; index += 1) {
+    let value = index + 1;
+    let candidate = "";
+    while (value > 0) {
+      value -= 1;
+      candidate = String.fromCharCode(65 + (value % 26)) + candidate;
+      value = Math.floor(value / 26);
+    }
+    if (!usedLetters.has(candidate)) return candidate;
+  }
 }
 
 export function addActivity(
@@ -139,6 +167,12 @@ export function addActivity(
   startDay: number,
   activity: Omit<PlannedActivity, "id" | "groupId" | "segment" | "letter">,
 ): PlannedTrip {
+  if (!Number.isInteger(startDay) || startDay < 1 || startDay > trip.tripDays) {
+    throw new Error("startDay must be an integer within the trip");
+  }
+  if (!Number.isInteger(activity.durationDays) || activity.durationDays < 1) {
+    throw new Error("durationDays must be a positive integer");
+  }
   const duration = Math.max(1, Math.min(activity.durationDays, trip.tripDays - startDay + 1));
   const groupId = id("activity");
   const letter = nextTrailLetter(trip);
@@ -177,10 +211,13 @@ export function removeActivityGroup(trip: PlannedTrip, groupId: string): Planned
 export function addCustomCost(trip: PlannedTrip, label: string, amountDkk: number): PlannedTrip {
   return {
     ...trip,
-    customCosts: [...trip.customCosts, { id: id("cost"), label, amountDkk }],
+    customCosts: [
+      ...trip.customCosts,
+      { id: id("cost"), label, amountDkk: requireNonNegativeFinite(amountDkk, "Custom cost") },
+    ],
   };
 }
 
 export function createShareToken() {
-  return `${Math.random().toString(36).slice(2, 8)}${Date.now().toString(36)}`;
+  return globalThis.crypto.randomUUID().replaceAll("-", "");
 }

@@ -134,6 +134,7 @@ export default defineSchema({
     status: v.union(v.literal("active"), v.literal("revoked")),
     createdAt: v.number(),
   })
+    .index("by_token", ["token"])
     .index("by_token_status", ["token", "status"])
     .index("by_trip", ["tripId"]),
 

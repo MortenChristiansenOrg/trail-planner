@@ -11,6 +11,7 @@ export type TrailLine = {
   id: string;
   coordinates: [number, number][];
   label?: string;
+  kind?: "trail" | "journey";
 };
 
 const MapCanvas = lazy(() => import("@/features/maps/MapCanvas"));
@@ -24,7 +25,7 @@ export function TrailMap(props: {
   className?: string;
 }) {
   return (
-    <div className={`map-frame ${props.className ?? ""}`}>
+    <div className={`map-frame ${props.className ?? ""}`} data-line-count={props.lines?.length ?? 0}>
       <Suspense fallback={<MapFallback label="Drawing the map…" />}>
         <MapCanvas {...props} />
       </Suspense>

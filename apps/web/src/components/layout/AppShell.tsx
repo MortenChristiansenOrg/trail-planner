@@ -1,9 +1,10 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Compass, Map, Menu, Route, UserRound } from "lucide-react";
+import { Map, Menu, Route, UserRound } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import { defaultExploreSearch } from "@/features/explore/search";
+import { BrandMark } from "@/components/layout/BrandMark";
 
 export function AppShell({
   children,
@@ -36,10 +38,7 @@ export function AppShell({
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <Link aria-label="Trail Planner home" className="brand" to="/">
-      <span className="brand__mark" aria-hidden="true">
-        <Compass />
-        <span className="brand__route" />
-      </span>
+      <BrandMark />
       {compact ? null : <span>Trail Planner</span>}
     </Link>
   );
@@ -83,8 +82,12 @@ function AppHeader() {
               <SheetDescription>Choose where you want to continue.</SheetDescription>
             </SheetHeader>
             <nav className="mobile-nav" aria-label="Mobile navigation">
-              <Link to="/explore" search={defaultExploreSearch}><Map /> Explore destinations</Link>
-              <Link to="/trips"><Route /> Planned trips</Link>
+              <SheetClose asChild>
+                <Link to="/explore" search={defaultExploreSearch}><Map /> Explore destinations</Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link to="/trips"><Route /> Planned trips</Link>
+              </SheetClose>
             </nav>
           </SheetContent>
         </Sheet>

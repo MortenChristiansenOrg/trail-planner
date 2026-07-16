@@ -6,10 +6,10 @@
     <title>Trail Planner — Balanced explorer</title>
     <link rel="stylesheet" href="explore.css">
     <style>
-      .balanced-grid { grid-template-columns:minmax(380px,34%) 1fr; }
+      .balanced-grid { position:relative; grid-template-columns:minmax(380px,34%) 1fr; }
       .balanced-grid .results-panel { display:grid; grid-template-rows:auto 1fr; }
       .selected-preview { position:absolute; z-index:7; width:min(380px,46%); right:18px; bottom:18px; }
-      @media(max-width:900px){ .balanced-grid { grid-template-columns:1fr; } .balanced-grid .map-panel { position:absolute; inset:136px 0 0; opacity:.22; } .balanced-grid .results-panel { position:relative; z-index:3; border:0; background:rgba(246,243,233,.9); } .selected-preview { display:none; } }
+      @media(max-width:900px){ .balanced-grid { grid-template-columns:1fr; } .balanced-grid .map-panel { position:absolute; inset:0; opacity:.22; } .balanced-grid .results-panel { position:relative; z-index:3; border:0; background:rgba(246,243,233,.9); } .selected-preview { display:none; } }
     </style>
   </head>
   <body>
@@ -49,7 +49,7 @@
           <section class="map-panel" aria-label="Destination map">
             <svg class="map-route" viewBox="0 0 900 620" preserveAspectRatio="none" aria-hidden="true"><path class="route-halo" d="M65 555 C180 480 235 530 330 445 C420 362 470 421 558 337 C635 264 665 301 735 220"/><path class="route-dash" d="M65 555 C180 480 235 530 330 445 C420 362 470 421 558 337 C635 264 665 301 735 220"/></svg>
             <span class="route-origin" aria-hidden="true"></span>
-            <button class="map-marker marker-a" type="button">2</button><button class="map-marker marker-b" type="button">4</button><button class="map-marker marker-c selected" type="button">1</button><button class="map-marker marker-d" type="button">3</button><button class="map-marker marker-e" type="button">5</button>
+            <button class="map-marker marker-a" type="button" aria-label="Locate Gjendesheim" aria-pressed="false">2</button><button class="map-marker marker-b" type="button" aria-label="Locate Odda" aria-pressed="false">4</button><button class="map-marker marker-c selected" type="button" aria-label="Locate Åndalsnes" aria-pressed="true">1</button><button class="map-marker marker-d" type="button" aria-label="Locate Fort William" aria-pressed="false">3</button><button class="map-marker marker-e" type="button" aria-label="Locate Abisko" aria-pressed="false">5</button>
             <div class="map-controls"><button class="map-control" type="button" aria-label="Zoom in">+</button><button class="map-control" type="button" aria-label="Zoom out">−</button></div>
             <div class="map-key"><span><i></i> Selected</span><span><i></i> Other matches</span></div>
             <article class="detail-card selected-preview"><div class="detail-head"><div><span class="eyebrow">Best overall fit</span><h2>Åndalsnes / Romsdalen</h2><p>Ridge hikes from a rail-accessible mountain town</p></div><button class="close-button" type="button" aria-label="Close details">×</button></div><p class="detail-summary">Excellent rough-terrain access with trails from town and a seasonal bus to Romsdalseggen. September is within the recommended period.</p><div class="detail-actions"><button class="secondary-button" type="button">View area details</button><button class="primary-button" type="button">Plan this trip →</button></div></article>

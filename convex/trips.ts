@@ -59,6 +59,9 @@ export const createState = mutation({
     stateJson: v.string(),
   },
   handler: async (ctx, args) => {
+    if (!Number.isInteger(args.plannedMonth) || args.plannedMonth < 1 || args.plannedMonth > 12) {
+      throw new Error("plannedMonth must be an integer from 1 through 12");
+    }
     const user = await ensureCurrentUser(ctx);
     const parsed = JSON.parse(args.stateJson) as Record<string, unknown>;
     if (!Array.isArray(parsed.days) || !Array.isArray(parsed.nights)) {

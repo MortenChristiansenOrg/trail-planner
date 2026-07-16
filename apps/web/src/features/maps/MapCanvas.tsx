@@ -32,13 +32,25 @@ export default function MapCanvas({
       center: [8.5, 54.5],
       zoom: mode === "explore" ? 3.1 : 10.5,
       attributionControl: false,
-      cooperativeGestures: true,
+      cooperativeGestures: false,
+      scrollZoom: true,
     });
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
-    map.addControl(
-      new maplibregl.AttributionControl({ compact: true, customAttribution: "Planning estimates" }),
-      "bottom-right",
-    );
+    const controlPosition = mode === "explore" ? "top-right" : "bottom-right";
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), controlPosition);
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), controlPosition);
+    const collapseAttribution = () => {
+      map.getContainer().querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+    };
+    collapseAttribution();
+    map.on("styledata", collapseAttribution);
+    map.on("sourcedata", collapseAttribution);
+    const stopCollapsingAttribution = () => {
+      collapseAttribution();
+      map.off("styledata", collapseAttribution);
+      map.off("sourcedata", collapseAttribution);
+    };
+    map.once("idle", stopCollapsingAttribution);
+    const attributionTimer = window.setTimeout(collapseAttribution, 500);
     const resizeObserver = new ResizeObserver(() => map.resize());
     resizeObserver.observe(containerRef.current);
     const resizeTimer = window.setTimeout(() => map.resize(), 550);
@@ -51,18 +63,41 @@ export default function MapCanvas({
         id: "trail-lines-shadow",
         type: "line",
         source: "trail-lines",
+        filter: ["!=", ["get", "kind"], "journey"],
         paint: { "line-color": "#fff8e7", "line-width": 5, "line-opacity": 0.72 },
       });
       map.addLayer({
         id: "trail-lines",
         type: "line",
         source: "trail-lines",
+        filter: ["!=", ["get", "kind"], "journey"],
         paint: {
           "line-color": "#b54831",
           "line-width": 2.4,
           "line-dasharray": [1.4, 1.8],
           "line-opacity": 0.88,
         },
+      });
+      map.addLayer({
+        id: "selected-trail-line",
+        type: "line",
+        source: "trail-lines",
+        filter: ["all", ["!=", ["get", "kind"], "journey"], ["==", ["get", "selected"], true]],
+        paint: { "line-color": "#8f2f20", "line-width": 4, "line-opacity": 1 },
+      });
+      map.addLayer({
+        id: "journey-line-shadow",
+        type: "line",
+        source: "trail-lines",
+        filter: ["==", ["get", "kind"], "journey"],
+        paint: { "line-color": "#fff8e7", "line-width": 5, "line-opacity": 0.7 },
+      });
+      map.addLayer({
+        id: "journey-line",
+        type: "line",
+        source: "trail-lines",
+        filter: ["==", ["get", "kind"], "journey"],
+        paint: { "line-color": "#b54831", "line-width": 2.6, "line-opacity": 0.9 },
       });
     });
     mapRef.current = map;
@@ -72,6 +107,10 @@ export default function MapCanvas({
       mapRef.current = null;
       resizeObserver.disconnect();
       window.clearTimeout(resizeTimer);
+      window.clearTimeout(attributionTimer);
+      map.off("styledata", collapseAttribution);
+      map.off("sourcedata", collapseAttribution);
+      map.off("idle", stopCollapsingAttribution);
       map.remove();
     };
   }, [mode]);
@@ -93,8 +132,29 @@ export default function MapCanvas({
     });
 
     if (selectedId) {
+      const selectedLine = lines.find((line) => line.id === selectedId);
+      const journeyLine = lines.find((line) => line.kind === "journey");
       const selected = markers.find((marker) => marker.id === selectedId);
-      if (selected) {
+      if (mode === "explore" && journeyLine?.coordinates.length) {
+        const compact = map.getContainer().clientWidth <= 800;
+        const bounds = journeyLine.coordinates.reduce(
+          (current, coordinates) => current.extend(coordinates),
+          new maplibregl.LngLatBounds(journeyLine.coordinates[0], journeyLine.coordinates[0]),
+        );
+        map.fitBounds(bounds, {
+          padding: compact
+            ? { top: 70, right: 50, bottom: 300, left: 50 }
+            : { top: 90, right: 80, bottom: 190, left: 410 },
+          maxZoom: 5.4,
+          duration: 650,
+        });
+      } else if (selectedLine?.coordinates.length) {
+        const bounds = selectedLine.coordinates.reduce(
+          (current, coordinates) => current.extend(coordinates),
+          new maplibregl.LngLatBounds(selectedLine.coordinates[0], selectedLine.coordinates[0]),
+        );
+        map.fitBounds(bounds, { padding: 52, maxZoom: 12.2, duration: 650 });
+      } else if (selected) {
         map.easeTo({
           center: selected.coordinates,
           zoom: mode === "detail" ? 10.8 : Math.max(map.getZoom(), 4.35),
@@ -111,7 +171,7 @@ export default function MapCanvas({
     } else if (markers.length === 1) {
       map.easeTo({ center: markers[0].coordinates, zoom: mode === "detail" ? 10.8 : 5.1, duration: 500 });
     }
-  }, [markers, mode, selectedId]);
+  }, [lines, markers, mode, selectedId]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -122,14 +182,19 @@ export default function MapCanvas({
         type: "FeatureCollection",
         features: lines.map((line) => ({
           type: "Feature",
-          properties: { id: line.id, label: line.label ?? "" },
+          properties: {
+            id: line.id,
+            kind: line.kind ?? "trail",
+            label: line.label ?? "",
+            selected: line.id === selectedId,
+          },
           geometry: { type: "LineString", coordinates: line.coordinates },
         })),
       });
     };
     if (map.isStyleLoaded()) update();
     else map.once("load", update);
-  }, [lines]);
+  }, [lines, selectedId]);
 
   return <div className="size-full" ref={containerRef} />;
 }

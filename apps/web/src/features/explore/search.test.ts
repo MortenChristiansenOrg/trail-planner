@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { destinations } from "@/features/catalog/catalog";
 import {
   defaultExploreSearch,
+  estimateFits,
   monthDistance,
   parseExploreSearch,
   rankDestinations,
@@ -9,12 +10,24 @@ import {
 
 describe("explore search", () => {
   it("normalizes unsafe URL values", () => {
-    expect(parseExploreSearch({ month: 25, participants: 0, days: "7", modes: "plane,bad" })).toMatchObject({
+    expect(parseExploreSearch({ month: 25, participants: 1.6, days: "7.4", maxLayovers: 1.8, modes: "plane,bad" })).toMatchObject({
       month: 12,
-      participants: 1,
+      participants: 2,
       days: 7,
+      maxLayovers: 2,
       modes: ["plane"],
     });
+  });
+
+  it("counts one-way travel time once in each direction", () => {
+    expect(estimateFits({
+      mode: "car",
+      available: true,
+      oneWayHours: 6,
+      costPerPersonDkk: 500,
+      note: "Test estimate",
+      confidence: "high",
+    }, { ...defaultExploreSearch, days: 3, participants: 1 })).toBe(true);
   });
 
   it("calculates season distance across the year boundary", () => {
