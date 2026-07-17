@@ -82,6 +82,7 @@ svg { flex: none; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
 .account-button { background: rgba(255, 253, 247, 0.7); }
 .account-button svg { width: 15px; }
+.auth-action { min-width: 64px; }
 .mobile-menu { display: none; }
 .mobile-nav { display: grid; gap: 6px; padding: 0 16px; }
 .mobile-nav a { display: flex; gap: 10px; align-items: center; border-radius: 10px; padding: 12px; font-weight: 650; }
@@ -417,6 +418,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
   .desktop-nav, .account-button span { display: none; }
   .mobile-menu { display: inline-flex; }
   .account-button { width: 36px; padding: 0; }
+  .auth-action { min-width: 0; padding-inline: 9px; font-size: 12px; }
   .preview-ribbon { padding: 4px 12px; font-size: 9px; }
   .landing-wash { background: linear-gradient(0deg, rgba(241,235,216,.98) 0%, rgba(241,235,216,.92) 52%, rgba(241,235,216,.2) 100%); }
   .landing-copy { top: 8%; left: 20px; width: calc(100% - 40px); transform: none; }
@@ -459,6 +461,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 }
 
 @media (max-width: 560px) {
+  .app-header:has(.auth-action) .brand span { display: none; }
   .landing-copy .eyebrow { display: none; }
   .landing-copy h1 { font-size: 38px; }
   .landing-copy > p:last-child { display: none; }
