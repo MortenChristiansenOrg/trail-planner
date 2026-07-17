@@ -66,7 +66,8 @@ svg { flex: none; }
 ::selection { background: rgba(181, 72, 49, 0.18); }
 
 .app-shell { min-height: 100dvh; background: var(--background); color: var(--foreground); }
-.app-shell--fixed { display: grid; grid-template-rows: 64px auto minmax(0, 1fr); height: 100dvh; min-height: 0; overflow: hidden; }
+.app-shell--fixed { display: grid; grid-template-rows: 64px minmax(0, 1fr); height: 100dvh; min-height: 0; overflow: hidden; }
+.app-shell--fixed.app-shell--with-ribbon { grid-template-rows: 64px auto minmax(0, 1fr); }
 .app-header { position: relative; z-index: 40; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 28px; border-bottom: 1px solid color-mix(in oklch, var(--border), transparent 25%); background: rgba(251, 248, 238, 0.94); backdrop-filter: blur(15px); }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: Georgia, serif; font-size: 19px; font-weight: 700; color: var(--ink); }
 .brand__mark { width: 34px; height: 34px; filter: drop-shadow(0 2px 3px rgba(32, 60, 49, .14)); }
@@ -82,6 +83,7 @@ svg { flex: none; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
 .account-button { background: rgba(255, 253, 247, 0.7); }
 .account-button svg { width: 15px; }
+.auth-action { min-width: 64px; }
 .mobile-menu { display: none; }
 .mobile-nav { display: grid; gap: 6px; padding: 0 16px; }
 .mobile-nav a { display: flex; gap: 10px; align-items: center; border-radius: 10px; padding: 12px; font-weight: 650; }
@@ -411,12 +413,14 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 
 @media (max-width: 800px) {
   .app-header { height: 58px; padding: 0 14px; }
-  .app-shell--fixed { grid-template-rows: 58px auto minmax(0, 1fr); }
+  .app-shell--fixed { grid-template-rows: 58px minmax(0, 1fr); }
+  .app-shell--fixed.app-shell--with-ribbon { grid-template-rows: 58px auto minmax(0, 1fr); }
   .brand { font-size: 17px; }
   .brand__mark { width: 32px; height: 32px; }
   .desktop-nav, .account-button span { display: none; }
   .mobile-menu { display: inline-flex; }
   .account-button { width: 36px; padding: 0; }
+  .auth-action { min-width: 0; padding-inline: 9px; font-size: 12px; }
   .preview-ribbon { padding: 4px 12px; font-size: 9px; }
   .landing-wash { background: linear-gradient(0deg, rgba(241,235,216,.98) 0%, rgba(241,235,216,.92) 52%, rgba(241,235,216,.2) 100%); }
   .landing-copy { top: 8%; left: 20px; width: calc(100% - 40px); transform: none; }
@@ -459,6 +463,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 }
 
 @media (max-width: 560px) {
+  .app-header:has(.auth-action) .brand span { display: none; }
   .landing-copy .eyebrow { display: none; }
   .landing-copy h1 { font-size: 38px; }
   .landing-copy > p:last-child { display: none; }

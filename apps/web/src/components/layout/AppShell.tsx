@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/react";
 import { Map, Menu, Route, UserRound } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
@@ -22,10 +23,20 @@ export function AppShell({
   children: ReactNode;
   fullHeight?: boolean;
 }) {
+  const showPreviewRibbon =
+    !import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || !import.meta.env.VITE_CONVEX_URL;
+  const shellClassName = [
+    "app-shell",
+    fullHeight ? "app-shell--fixed" : null,
+    fullHeight && showPreviewRibbon ? "app-shell--with-ribbon" : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className={fullHeight ? "app-shell app-shell--fixed" : "app-shell"}>
+    <div className={shellClassName}>
       <AppHeader />
-      {!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || !import.meta.env.VITE_CONVEX_URL ? (
+      {showPreviewRibbon ? (
         <div className="preview-ribbon">
           Local preview · trips are saved in this browser
         </div>
@@ -60,16 +71,7 @@ function AppHeader() {
         </Link>
       </nav>
       <div className="header-actions">
-        <Button
-          aria-label={auth.configured ? "Open account" : "Preview account"}
-          className="account-button"
-          onClick={auth.configured ? (auth.signedIn ? auth.openProfile : auth.signIn) : undefined}
-          size="sm"
-          variant="outline"
-        >
-          <UserRound />
-          <span>{auth.loading ? "Connecting…" : auth.signedIn ? auth.name : "Sign in"}</span>
-        </Button>
+        <AuthControls auth={auth} />
         <Sheet>
           <SheetTrigger asChild>
             <Button aria-label="Open navigation" className="mobile-menu" size="icon" variant="outline">
@@ -93,5 +95,42 @@ function AppHeader() {
         </Sheet>
       </div>
     </header>
+  );
+}
+
+function AuthControls({ auth }: { auth: ReturnType<typeof useAuthSession> }) {
+  if (!auth.configured || auth.loading) {
+    return (
+      <Button
+        aria-label={auth.configured ? "Connecting account" : "Preview account"}
+        className="account-button"
+        disabled={auth.loading}
+        size="sm"
+        variant="outline"
+      >
+        <UserRound />
+        <span>{auth.loading ? "Connecting…" : auth.name}</span>
+      </Button>
+    );
+  }
+
+  return (
+    <>
+      <Show when="signed-out">
+        <SignInButton mode="modal">
+          <Button className="auth-action" size="sm" variant="outline">
+            Sign in
+          </Button>
+        </SignInButton>
+        <SignUpButton mode="modal">
+          <Button className="auth-action" size="sm">
+            Sign up
+          </Button>
+        </SignUpButton>
+      </Show>
+      <Show when="signed-in">
+        <UserButton />
+      </Show>
+    </>
   );
 }
