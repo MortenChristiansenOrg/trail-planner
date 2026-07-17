@@ -59,6 +59,22 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
+test("full-height pages fill the viewport without the optional preview ribbon", async ({ page }) => {
+  await expect(page.getByRole("heading", { name: "Find the mountains that fit the journey." })).toBeVisible();
+
+  await page.locator(".app-shell--fixed").evaluate((shell) => {
+    shell.querySelector(":scope > .preview-ribbon")?.remove();
+    shell.classList.remove("app-shell--with-ribbon");
+  });
+
+  const stage = await page.locator(".landing-stage").boundingBox();
+  const viewport = page.viewportSize();
+  expect(stage).not.toBeNull();
+  expect(viewport).not.toBeNull();
+  expect(stage!.y + stage!.height).toBeGreaterThanOrEqual(viewport!.height - 1);
+  await expect(page.getByRole("heading", { name: "Find the mountains that fit the journey." })).toBeVisible();
+});
+
 test("feedback fixes remain visible and interactive", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed interaction and layout checks run once on desktop.");
 

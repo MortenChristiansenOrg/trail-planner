@@ -66,7 +66,8 @@ svg { flex: none; }
 ::selection { background: rgba(181, 72, 49, 0.18); }
 
 .app-shell { min-height: 100dvh; background: var(--background); color: var(--foreground); }
-.app-shell--fixed { display: grid; grid-template-rows: 64px auto minmax(0, 1fr); height: 100dvh; min-height: 0; overflow: hidden; }
+.app-shell--fixed { display: grid; grid-template-rows: 64px minmax(0, 1fr); height: 100dvh; min-height: 0; overflow: hidden; }
+.app-shell--fixed.app-shell--with-ribbon { grid-template-rows: 64px auto minmax(0, 1fr); }
 .app-header { position: relative; z-index: 40; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 28px; border-bottom: 1px solid color-mix(in oklch, var(--border), transparent 25%); background: rgba(251, 248, 238, 0.94); backdrop-filter: blur(15px); }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-family: Georgia, serif; font-size: 19px; font-weight: 700; color: var(--ink); }
 .brand__mark { width: 34px; height: 34px; filter: drop-shadow(0 2px 3px rgba(32, 60, 49, .14)); }
@@ -412,7 +413,8 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 
 @media (max-width: 800px) {
   .app-header { height: 58px; padding: 0 14px; }
-  .app-shell--fixed { grid-template-rows: 58px auto minmax(0, 1fr); }
+  .app-shell--fixed { grid-template-rows: 58px minmax(0, 1fr); }
+  .app-shell--fixed.app-shell--with-ribbon { grid-template-rows: 58px auto minmax(0, 1fr); }
   .brand { font-size: 17px; }
   .brand__mark { width: 32px; height: 32px; }
   .desktop-nav, .account-button span { display: none; }

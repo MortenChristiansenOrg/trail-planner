@@ -23,10 +23,20 @@ export function AppShell({
   children: ReactNode;
   fullHeight?: boolean;
 }) {
+  const showPreviewRibbon =
+    !import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || !import.meta.env.VITE_CONVEX_URL;
+  const shellClassName = [
+    "app-shell",
+    fullHeight ? "app-shell--fixed" : null,
+    fullHeight && showPreviewRibbon ? "app-shell--with-ribbon" : null,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className={fullHeight ? "app-shell app-shell--fixed" : "app-shell"}>
+    <div className={shellClassName}>
       <AppHeader />
-      {!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || !import.meta.env.VITE_CONVEX_URL ? (
+      {showPreviewRibbon ? (
         <div className="preview-ribbon">
           Local preview · trips are saved in this browser
         </div>
