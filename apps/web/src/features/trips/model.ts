@@ -27,6 +27,8 @@ export type LodgingNight = {
   knownLodgingId?: string;
 };
 
+export type LodgingApplyScope = "single" | "remaining-unplanned" | "all";
+
 export type CustomCost = {
   id: string;
   label: string;
@@ -100,6 +102,38 @@ export function createTrip(input: NewTripInput): PlannedTrip {
 
 export function getSelectedTravel(trip: PlannedTrip) {
   return trip.travelSnapshot.find((item) => item.mode === trip.selectedTravelMode);
+}
+
+export function applyLodgingChoice(
+  trip: PlannedTrip,
+  choice: LodgingNight,
+  scope: LodgingApplyScope = "single",
+): PlannedTrip {
+  if (!trip.nights.some((night) => night.afterDay === choice.afterDay)) {
+    throw new Error("Lodging night must belong to the trip");
+  }
+  requireNonNegativeFinite(choice.costDkk, "Lodging cost");
+
+  const copyChoice = (afterDay: number): LodgingNight => ({
+    ...choice,
+    afterDay,
+  });
+
+  return {
+    ...trip,
+    nights: trip.nights.map((night) => {
+      if (night.afterDay === choice.afterDay) return copyChoice(night.afterDay);
+      if (scope === "all") return copyChoice(night.afterDay);
+      if (
+        scope === "remaining-unplanned" &&
+        night.afterDay > choice.afterDay &&
+        night.kind === "none"
+      ) {
+        return copyChoice(night.afterDay);
+      }
+      return night;
+    }),
+  };
 }
 
 export function calculateTripCost(trip: PlannedTrip) {

@@ -42,6 +42,7 @@ import { useAuthSession } from "@/features/auth/AuthSession";
 import {
   modeLabels,
   rankDestinations,
+  reconcileExploreSelection,
   type ExploreResult,
   type ExploreSearch,
 } from "@/features/explore/search";
@@ -181,7 +182,7 @@ function FilterSheet({
   onChange: (next: ExploreSearch, replace?: boolean) => void;
 }) {
   const update = <Key extends keyof ExploreSearch>(key: Key, value: ExploreSearch[Key]) => {
-    onChange({ ...search, [key]: value }, true);
+    onChange(reconcileExploreSelection(destinations, { ...search, [key]: value }), true);
   };
   const toggleMode = (mode: TravelMode) => {
     const modes = search.modes.includes(mode)
@@ -209,6 +210,8 @@ function FilterSheet({
           <SheetDescription>Only destinations meeting every active limit appear on the map.</SheetDescription>
         </SheetHeader>
         <div className="filter-sheet__body">
+          <FilterRange label="Travel month" value={monthNames[search.month - 1]} min={1} max={12} step={1} current={search.month} onChange={(value) => update("month", value)} />
+          <FilterRange label="Travellers" value={`${search.participants} ${search.participants === 1 ? "person" : "people"}`} min={1} max={12} step={1} current={search.participants} onChange={(value) => update("participants", value)} />
           <FilterRange label="Trip length" value={`${search.days} days`} min={2} max={14} step={1} current={search.days} onChange={(value) => update("days", value)} />
           <FilterRange label="Transport budget" value={formatMoney(search.budget)} min={3_000} max={40_000} step={1_000} current={search.budget} onChange={(value) => update("budget", value)} />
           <FilterRange label="Maximum one-way drive" value={`${search.maxDriveHours} hours`} min={4} max={40} step={1} current={search.maxDriveHours} onChange={(value) => update("maxDriveHours", value)} />

@@ -67,7 +67,11 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
                 <div><strong>Day {day.day}</strong><small>{day.calendarDate ?? "Date open"}</small></div>
                 <div>
                   {day.day === 1 ? <p className="share-travel">Journey to {destination.name}</p> : null}
-                  {day.activities.length ? day.activities.map((activity) => <p className="share-activity" key={activity.id}><span>{activity.letter}</span><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></p>) : day.day !== 1 && day.day !== trip.tripDays ? <p className="share-open">Open day</p> : null}
+                  {day.activities.length ? day.activities.map((activity) => {
+                    const unavailable = activity.kind === "catalog-hike" && !destination.hikes.some((hike) => hike.id === activity.hikeId);
+                    const detail = activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description;
+                    return <p className={unavailable ? "share-activity is-unavailable" : "share-activity"} key={activity.id}><span>{activity.letter}</span><strong>{activity.name}</strong><small>{unavailable ? `${detail} · Saved catalog hike is no longer available` : detail}</small></p>;
+                  }) : day.day !== 1 && day.day !== trip.tripDays ? <p className="share-open">Open day</p> : null}
                   {day.day === trip.tripDays ? <p className="share-travel">Journey home</p> : null}
                 </div>
               </article>

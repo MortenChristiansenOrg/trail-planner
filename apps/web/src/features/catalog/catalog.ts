@@ -270,7 +270,7 @@ const catalogSeeds: DestinationSeed[] = [
         name: "Kungsleden: Abisko to Abiskojaure",
         durationDays: 1,
         distanceKm: 15,
-        ascentM: 0,
+        ascentM: 100,
         difficulty: "Moderate",
         description: "The opening Kungsleden stage from Abisko through Abiskojåkka valley to Abiskojaure.",
         route: [
@@ -283,7 +283,7 @@ const catalogSeeds: DestinationSeed[] = [
           [18.5903962, 68.2860527],
         ],
         geometrySourceUrl: "https://www.openstreetmap.org/relation/6289365",
-        provenance: catalogSource("https://www.openstreetmap.org/relation/6289365", "high"),
+        provenance: catalogSource("https://www.swedishtouristassociation.com/activities/kungsleden-abisko-kebnekaise-with-guide/", "high"),
         media: commonsMedia.kungsleden,
       },
       {
@@ -291,7 +291,7 @@ const catalogSeeds: DestinationSeed[] = [
         name: "Kungsleden: Abiskojaure to Alesjaure",
         durationDays: 1,
         distanceKm: 21,
-        ascentM: 0,
+        ascentM: 300,
         difficulty: "Moderate",
         description: "The second Kungsleden stage, continuing south from Abiskojaure to Alesjaure.",
         route: [
@@ -304,7 +304,7 @@ const catalogSeeds: DestinationSeed[] = [
           [18.4141497, 68.136757],
         ],
         geometrySourceUrl: "https://www.openstreetmap.org/relation/8928539",
-        provenance: catalogSource("https://www.openstreetmap.org/relation/8928539", "high"),
+        provenance: catalogSource("https://www.swedishtouristassociation.com/activities/kungsleden-abisko-kebnekaise-with-guide/", "high"),
       },
     ],
     lodgings: [
@@ -678,10 +678,13 @@ const catalogSeeds: DestinationSeed[] = [
 ];
 
 const supportedLicenses = new Set<MediaLicense>(["CC BY 2.0", "CC BY-SA 3.0", "CC BY-SA 4.0", "CC0", "Public domain"]);
+const confidenceLevels = new Set<CatalogProvenance["confidence"]>(["high", "medium", "low"]);
+const mediaKinds = new Set<CatalogMedia["kind"]>(["terrain", "trail", "access"]);
 const travelModes = new Set<TravelMode>(["car", "train", "plane"]);
 
 function validateSource(provenance: CatalogProvenance, label: string) {
   if (!isHttpsUrl(provenance.sourceUrl) || !isReviewDate(provenance.reviewedAt)) throw new Error(`${label}: missing or invalid provenance`);
+  if (!confidenceLevels.has(provenance.confidence)) throw new Error(`${label}: invalid provenance confidence`);
 }
 
 function isHttpsUrl(value: string) {
@@ -714,6 +717,7 @@ export function validateCatalog(items: Destination[]) {
     const destinationModes = new Set(destination.travel.map((estimate) => estimate.mode));
     if (destination.travel.length !== travelModes.size || destinationModes.size !== travelModes.size || [...travelModes].some((mode) => !destinationModes.has(mode))) throw new Error(`${destination.name}: missing travel nodes`);
     for (const estimate of destination.travel) {
+      if (!confidenceLevels.has(estimate.confidence)) throw new Error(`${destination.name}: invalid travel confidence`);
       if (!estimate.accessNode.trim() || !estimate.note.trim() || typeof estimate.available !== "boolean") throw new Error(`${destination.name}: invalid travel node`);
       if (!Number.isFinite(estimate.oneWayHours) || estimate.oneWayHours < 0 || !Number.isFinite(estimate.costPerPersonDkk) || estimate.costPerPersonDkk < 0) throw new Error(`${destination.name}: invalid travel estimate`);
       if (estimate.layovers !== undefined && (!Number.isInteger(estimate.layovers) || estimate.layovers < 0)) throw new Error(`${destination.name}: invalid layover count`);
@@ -739,6 +743,7 @@ export function validateCatalog(items: Destination[]) {
 }
 
 function validateMedia(media: CatalogMedia, label: string, expectedSubject: CatalogMedia["subject"]) {
+  if (!mediaKinds.has(media.kind)) throw new Error(`${label}: invalid media kind`);
   if (!isHttpsUrl(media.imageUrl) || !media.alt.trim() || !media.creator.trim() || !media.attributionText.trim() || !isHttpsUrl(media.attributionUrl) || !isHttpsUrl(media.sourceUrl) || !isReviewDate(media.reviewedAt)) throw new Error(`${label}: incomplete media provenance`);
   if (!Number.isInteger(media.width) || media.width < 1 || !Number.isInteger(media.height) || media.height < 1) throw new Error(`${label}: invalid media dimensions`);
   if (!supportedLicenses.has(media.license)) throw new Error(`${label}: unsupported media license`);

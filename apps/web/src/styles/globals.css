@@ -261,6 +261,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .trip-share-actions { display: grid; justify-items: end; gap: 7px; max-width: min(100%, 420px); }
 .trip-share-actions p { max-width: 100%; margin: 0; color: var(--ink-soft); font-size: 11px; text-align: right; }
 .trip-share-actions a { display: block; overflow-wrap: anywhere; color: var(--ink); text-decoration: underline; user-select: all; }
+.dialog-error { padding: 10px 12px; border-radius: 8px; background: color-mix(in oklch, var(--destructive), transparent 88%); color: var(--destructive); font-size: 12px; }
 
 /* Trips list */
 .trips-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr); gap: 22px; align-items: start; }
@@ -384,6 +385,10 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .lodging-options button > span:nth-child(2) { display: grid; }
 .lodging-options strong { font-size: 10px; }
 .lodging-options small { color: var(--ink-soft); font-size: 8px; }
+.lodging-dialog-actions { flex-wrap: wrap; }
+.overwrite-confirmation { display: grid; gap: 8px; padding: 12px; border: 1px solid color-mix(in oklch, var(--destructive), transparent 68%); border-radius: 9px; background: color-mix(in oklch, var(--destructive), transparent 93%); }
+.overwrite-confirmation strong { font-size: 13px; }
+.overwrite-confirmation p { color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
 
 /* Share */
 .share-page { max-width: 1180px; }
@@ -409,6 +414,8 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .share-activity { display: grid; grid-template-columns: 25px 1fr; gap: 0 8px; margin-bottom: 5px; padding: 8px; border-radius: 8px; background: #f6eee1; }
 .share-activity > span { grid-row: 1 / 3; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--route-red); color: white; font-family: Georgia, serif; font-size: 11px; }
 .share-activity strong { font-size: 10px; }
+.share-activity.is-unavailable { box-shadow: inset 3px 0 0 var(--destructive); }
+.share-activity.is-unavailable small { color: var(--destructive); }
 .share-side { display: grid; gap: 12px; }
 .share-map { height: 330px; overflow: hidden; border: 1px solid var(--border); border-radius: 15px; box-shadow: var(--shadow-paper); }
 .share-map .map-frame { height: 100%; }
