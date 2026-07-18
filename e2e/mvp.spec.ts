@@ -88,6 +88,8 @@ test("lodging choices can be reused and a trip can be discarded safely", async (
   await expect(page).toHaveURL(/\/explore\?.*month=7/);
   await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]"))).toEqual([]);
+});
+
 test("Explore filters edit month and travellers through shareable search state", async ({ page }) => {
   await page.goto("/explore");
   await page.locator(".destination-row").filter({ hasText: "Fort William" }).click();
