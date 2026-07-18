@@ -131,6 +131,16 @@ export function rankDestinations(destinations: Destination[], search: ExploreSea
   return results.toSorted((a, b) => b.score - a.score);
 }
 
+export function reconcileExploreSelection(
+  destinations: Destination[],
+  search: ExploreSearch,
+): ExploreSearch {
+  const results = rankDestinations(destinations, search);
+  if (!results.length) return { ...search, selected: undefined };
+  if (results.some((result) => result.destination.id === search.selected)) return search;
+  return { ...search, selected: results[0].destination.id };
+}
+
 export const modeLabels: Record<TravelMode, string> = {
   car: "Own car",
   train: "Train + bus",

@@ -35,6 +35,8 @@ export type LodgingNight = {
   knownLodgingId?: string;
 };
 
+export type LodgingApplyScope = "single" | "remaining-unplanned" | "all";
+
 export type CustomCost = {
   id: string;
   label: string;
@@ -226,12 +228,18 @@ export function calculateTripCost(trip: PlannedTrip) {
   const items = getTripCostItems(trip);
   const include = (item: TripCostItem) => !item.travelMode || item.travelMode === trip.selectedTravelMode;
   const tree = calculateCostTree(items, include);
+  const descendantsFor = (parentItemId: string, depth = 1): Array<TripCostItem & { depth: number }> => items
+    .filter((candidate) => candidate.parentItemId === parentItemId && include(candidate))
+    .flatMap((candidate) => [
+      { ...candidate, depth },
+      ...descendantsFor(candidate.id, depth + 1),
+    ]);
   const categories = items
     .filter((item) => !item.parentItemId)
     .map((item) => ({
       item,
       total: tree.rootTotals.get(item.id) ?? 0,
-      children: items.filter((candidate) => candidate.parentItemId === item.id && include(candidate)),
+      children: descendantsFor(item.id),
     }))
     .filter((category) => category.children.length || category.item.overrideCost !== undefined);
   const travelCost = tree.rootTotals.get(categoryIds.travel) ?? 0;
@@ -266,6 +274,28 @@ export function setLodgingNight(trip: PlannedTrip, night: LodgingNight): Planned
     nights: trip.nights.map((item) => item.afterDay === night.afterDay ? night : item),
     costItems,
   };
+}
+
+export function applyLodgingChoice(
+  trip: PlannedTrip,
+  choice: LodgingNight,
+  scope: LodgingApplyScope = "single",
+): PlannedTrip {
+  if (!trip.nights.some((night) => night.afterDay === choice.afterDay)) {
+    throw new Error("Lodging night must belong to the trip");
+  }
+  requireNonNegativeFinite(choice.costDkk, "Lodging cost");
+
+  const targetNights = trip.nights.filter((night) => (
+    night.afterDay === choice.afterDay ||
+    scope === "all" ||
+    (scope === "remaining-unplanned" && night.afterDay > choice.afterDay && night.kind === "none")
+  ));
+
+  return targetNights.reduce(
+    (nextTrip, night) => setLodgingNight(nextTrip, { ...choice, afterDay: night.afterDay }),
+    trip,
+  );
 }
 
 export function setTripCostOverride(

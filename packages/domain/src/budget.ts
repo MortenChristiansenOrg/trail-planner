@@ -88,6 +88,7 @@ export function calculateCostTree(
   const children = new Map<string, CostItem[]>();
   for (const item of items) {
     if (byId.has(item.id)) throw new Error(`Duplicate cost item id: ${item.id}`);
+    requireAmount(item.unitCost.amount, "Unit cost");
     requireAmount(item.quantity, "Quantity");
     requireAmount(item.calculatedCost.amount, "Calculated cost");
     if (item.overrideCost) requireAmount(item.overrideCost.amount, "Override cost");

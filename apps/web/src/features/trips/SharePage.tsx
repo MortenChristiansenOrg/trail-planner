@@ -79,7 +79,7 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
               {costs.categories.map((category) => (
                 <div className="share-budget__category" key={category.item.id}>
                   <p><span>{category.item.label}{category.item.overrideCost !== undefined ? <Badge variant="secondary">Overridden</Badge> : null}</span><strong>{formatMoney(category.total)}</strong></p>
-                  {category.children.map((item) => <p className="share-budget__component" key={item.id}><span>{item.label}{item.overrideCost !== undefined ? <Badge variant="outline">Using override</Badge> : null}</span><strong>{formatMoney(getCostItemAmount(item))}</strong></p>)}
+                  {category.children.map((item) => <p className={category.item.overrideCost !== undefined ? "share-budget__component is-excluded" : "share-budget__component"} key={item.id} style={{ paddingInlineStart: `${item.depth * 12}px` }}><span>{item.label}{category.item.overrideCost !== undefined ? <Badge variant="outline">Excluded from total</Badge> : item.overrideCost !== undefined ? <Badge variant="outline">Using override</Badge> : null}</span><strong>{formatMoney(getCostItemAmount(item))}</strong></p>)}
                 </div>
               ))}
               <p className="share-budget__total"><span>Group total</span><strong>{formatMoney(costs.total)}</strong></p>

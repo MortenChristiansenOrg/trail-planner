@@ -4,6 +4,7 @@ import { defaultExploreSearch } from "@/features/explore/search";
 import {
   addActivity,
   addCustomCost,
+  applyLodgingChoice,
   applyStartDate,
   calculateTripCost,
   createTrip,
@@ -147,6 +148,38 @@ describe("planned trip model", () => {
     expect(overridden.perPerson).toBe(overridden.total / trip.participants);
   });
 
+  it("preserves every descendant in a three-level itemized cost hierarchy", () => {
+    const trip = makeTrip();
+    const customCategory = trip.costItems.find((item) => item.category === "custom" && !item.parentItemId)!;
+    const nestedTrip: PlannedTrip = {
+      ...trip,
+      costItems: [
+        customCategory,
+        {
+          ...customCategory,
+          id: "cost-custom-meals",
+          label: "Meals",
+          parentItemId: customCategory.id,
+        },
+        {
+          ...customCategory,
+          id: "cost-custom-meals-dinner",
+          label: "Dinner",
+          parentItemId: "cost-custom-meals",
+          unitCost: { amount: 600, currency: "DKK" },
+          calculatedCost: { amount: 600, currency: "DKK" },
+        },
+      ],
+    };
+
+    const customCosts = calculateTripCost(nestedTrip).categories.find((category) => category.item.category === "custom")!;
+    expect(customCosts.total).toBe(600);
+    expect(customCosts.children.map(({ id, depth }) => ({ id, depth }))).toEqual([
+      { id: "cost-custom-meals", depth: 1 },
+      { id: "cost-custom-meals-dinner", depth: 2 },
+    ]);
+  });
+
   it("preserves a lodging override when its underlying choice changes", () => {
     let trip = setLodgingNight(makeTrip(), { afterDay: 1, kind: "known", name: "Hut", costDkk: 600 });
     trip = setTripCostOverride(trip, "cost-lodging-1", 525, "Member rate");
@@ -161,5 +194,50 @@ describe("planned trip model", () => {
   it("rejects an invalid participant count", () => {
     const trip = makeTrip();
     expect(() => calculateTripCost({ ...trip, participants: 0 })).toThrow(/positive integer/);
+  });
+
+  it("copies lodging to remaining unplanned nights without replacing planned nights", () => {
+    const trip = makeTrip();
+    const withPlannedNight = {
+      ...trip,
+      nights: trip.nights.map((night) => night.afterDay === 2
+        ? { ...night, kind: "tent-camping" as const, name: "Existing camp", costDkk: 250 }
+        : night),
+    };
+    const applied = applyLodgingChoice(withPlannedNight, {
+      afterDay: 1,
+      kind: "known",
+      name: "Mountain hut",
+      costDkk: 700,
+      knownLodgingId: "hut-1",
+    }, "remaining-unplanned");
+
+    expect(applied.nights.map(({ afterDay, kind, name }) => ({ afterDay, kind, name }))).toEqual([
+      { afterDay: 1, kind: "known", name: "Mountain hut" },
+      { afterDay: 2, kind: "tent-camping", name: "Existing camp" },
+      { afterDay: 3, kind: "known", name: "Mountain hut" },
+      { afterDay: 4, kind: "known", name: "Mountain hut" },
+    ]);
+  });
+
+  it("explicitly overwrites every night while preserving identities and editability", () => {
+    const trip = makeTrip();
+    const applied = applyLodgingChoice(trip, {
+      afterDay: 2,
+      kind: "tent-free",
+      name: "Wild tent",
+      costDkk: 0,
+    }, "all");
+    const edited = applyLodgingChoice(applied, {
+      ...applied.nights[2],
+      kind: "other",
+      name: "One-off cabin",
+      costDkk: 450,
+    });
+
+    expect(applied.nights.map((night) => night.afterDay)).toEqual([1, 2, 3, 4]);
+    expect(new Set(applied.nights).size).toBe(applied.nights.length);
+    expect(edited.nights[2].name).toBe("One-off cabin");
+    expect(edited.nights.filter((night) => night.name === "Wild tent")).toHaveLength(3);
   });
 });

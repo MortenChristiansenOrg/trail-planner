@@ -61,6 +61,15 @@ describe("itemized cost model", () => {
     expect(() => calculateCostTree([item({ id: "orphan", label: "Orphan", parentItemId: "missing" })])).toThrow(/Missing parent/);
   });
 
+  it.each([-1, Number.POSITIVE_INFINITY, Number.NaN])(
+    "rejects an invalid persisted unit cost of %s",
+    (amount) => {
+      expect(() => calculateCostTree([
+        item({ id: "invalid-unit", label: "Invalid unit", unitCost: { amount, currency: "DKK" } }),
+      ])).toThrow(/Unit cost/);
+    },
+  );
+
   it("rejects a rootless hierarchy cycle", () => {
     expect(() => calculateCostTree([
       item({ id: "one", label: "One", parentItemId: "two", overrideCost: { amount: 10, currency: "DKK" } }),

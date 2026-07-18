@@ -235,6 +235,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .trip-share-actions { display: grid; justify-items: end; gap: 7px; max-width: min(100%, 420px); }
 .trip-share-actions p { max-width: 100%; margin: 0; color: var(--ink-soft); font-size: 11px; text-align: right; }
 .trip-share-actions a { display: block; overflow-wrap: anywhere; color: var(--ink); text-decoration: underline; user-select: all; }
+.dialog-error { padding: 10px 12px; border-radius: 8px; background: color-mix(in oklch, var(--destructive), transparent 88%); color: var(--destructive); font-size: 12px; }
 
 /* Trips list */
 .trips-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr); gap: 22px; align-items: start; }
@@ -334,8 +335,10 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .budget-category.is-overridden { border-color: color-mix(in oklch, var(--primary), transparent 55%); }
 .budget-category.is-overridden .budget-components { opacity: .62; }
 .budget-category__header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 10px; background: #e9ecd8; }
-.budget-category__header > div { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
-.budget-category__header > div > strong { font-size: 11px; }
+.budget-category__title { display: grid; gap: 3px; }
+.budget-category__title > span { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.budget-category__title > span > strong { font-size: 11px; }
+.budget-category__title > small { color: var(--primary); font-size: 10px; line-height: 1.4; }
 .budget-category__header > span { display: flex; align-items: center; font-size: 11px; font-weight: 800; }
 .budget-category__header button, .budget-component button { margin-left: 2px; }
 .budget-components { display: grid; }
@@ -343,7 +346,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .budget-component.is-overridden { box-shadow: inset 3px 0 0 var(--primary); }
 .budget-component > div { display: grid; min-width: 0; }
 .budget-component > div > strong { font-size: 10px; }
-.budget-component small, .budget-component em { color: var(--ink-soft); font-size: 8px; font-style: normal; line-height: 1.45; }
+.budget-component small, .budget-component em { color: var(--ink-soft); font-size: 10px; font-style: normal; line-height: 1.45; }
 .budget-component em { color: var(--primary); }
 .budget-component > span { display: flex; align-items: center; gap: 3px; }
 .budget-component > span > strong { font-size: 10px; white-space: nowrap; }
@@ -377,6 +380,10 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .lodging-options button > span:nth-child(2) { display: grid; }
 .lodging-options strong { font-size: 10px; }
 .lodging-options small { color: var(--ink-soft); font-size: 8px; }
+.lodging-dialog-actions { flex-wrap: wrap; }
+.overwrite-confirmation { display: grid; gap: 8px; padding: 12px; border: 1px solid color-mix(in oklch, var(--destructive), transparent 68%); border-radius: 9px; background: color-mix(in oklch, var(--destructive), transparent 93%); }
+.overwrite-confirmation strong { font-size: 13px; }
+.overwrite-confirmation p { color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
 
 /* Share */
 .share-page { max-width: 1180px; }
@@ -410,6 +417,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .share-budget__category > p:first-child span { display: flex; align-items: center; gap: 5px; color: var(--ink); font-weight: 750; }
 .share-budget .share-budget__component { padding-left: 10px; font-size: 9px; }
 .share-budget__component span { display: flex; align-items: center; gap: 5px; }
+.share-budget__component.is-excluded { opacity: .62; }
 .share-budget strong, .share-lodging strong { color: var(--ink); }
 .share-budget .share-budget__total { padding-top: 13px; border-bottom: 0; font-size: 13px; }
 .share-budget .share-budget__per-person { padding-top: 0; border-bottom: 0; font-size: 11px; }
