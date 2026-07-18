@@ -8,6 +8,7 @@ export type TravelEstimate = {
   layovers?: number;
   note: string;
   confidence: "high" | "medium" | "low";
+  optionId?: string;
 };
 
 export type Hike = {
@@ -112,6 +113,13 @@ const travel = (
         confidence: "high",
       },
 ];
+
+const withOptions = (estimates: TravelEstimate[], optionIds: Record<TravelMode, string>) => estimates.map((estimate) => ({
+  ...estimate,
+  optionId: estimate.available ? optionIds[estimate.mode] : undefined,
+}));
+
+const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
 const hike = (
   id: string,
@@ -318,7 +326,7 @@ export const destinations: Destination[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A car-free high-alpine base below the Matterhorn with a dense network of marked routes.",
     character: "Big glaciated scenery, excellent rail access and expensive but efficient mountain infrastructure.",
-    travel: travel([15.7, 2200], [17.6, 2100], [6.8, 1900, 0]),
+    travel: withOption(travel([15.7, 2200], [17.6, 2100], [8.2, 1900, 0]), "plane", "zermatt-flight-direct-sample"),
     hikes: [
       hike("hornli", "Hörnlihütte trail", 1, 12, 1200, "Hard", "A steep approach toward the Matterhorn’s northeast ridge.", [7.68, 45.99], 0.65),
       hike("five-lakes", "Five Lakes walk", 1, 11, 620, "Moderate", "A varied circuit with repeated Matterhorn views.", [7.76, 46.01], 0.55),
@@ -359,7 +367,11 @@ export const destinations: Destination[] = [
     recommendedMonths: [5, 6, 7, 8, 9, 10],
     summary: "An exceptionally connected city base with mountain routes beginning at the edge of town.",
     character: "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
-    travel: travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 0]),
+    travel: withOptions(travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 1]), {
+      car: "innsbruck-car-sample",
+      train: "innsbruck-rail-sample",
+      plane: "innsbruck-flight-sample",
+    }),
     hikes: [
       hike("nordkette", "Nordkette traverse", 1, 13, 950, "Hard", "A high traverse directly above the city.", [11.39, 47.31], 0.6),
       hike("patscherkofel", "Patscherkofel ridge", 1, 16, 760, "Moderate", "A broad and accessible ridge south of Innsbruck.", [11.46, 47.2], 0.7),

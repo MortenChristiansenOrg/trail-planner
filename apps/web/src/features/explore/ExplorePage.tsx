@@ -37,6 +37,7 @@ import {
   type TravelEstimate,
   type TravelMode,
 } from "@/features/catalog/catalog";
+import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import {
   modeLabels,
@@ -367,7 +368,7 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
       <span>
         <small>{modeLabels[estimate.mode]}</small>
         {estimate.available ? (
-          <><strong>{formatHours(estimate.oneWayHours)}</strong><em>{formatMoney(estimate.costPerPersonDkk * participants)}</em></>
+          <><strong>{formatHours(estimate.oneWayHours)}</strong><em>{formatMoney(estimate.costPerPersonDkk * participants)}</em>{estimate.mode === "plane" ? <small className="travel-layovers">{estimate.layovers ?? 0} layover{estimate.layovers === 1 ? "" : "s"}</small> : null}</>
         ) : <strong>Unavailable</strong>}
       </span>
       <em className="travel-summary__status">{viable ? "Fits your limits" : estimate.available ? "Outside current limits" : "Not available"}</em>
@@ -393,7 +394,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}` : "Unavailable"}</span>
+                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
                 </div>
               ))}
             </div>

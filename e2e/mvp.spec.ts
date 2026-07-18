@@ -15,6 +15,7 @@ test("core planning flow remains connected", async ({ page }, testInfo) => {
   await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
   await expect(page).toHaveURL(/month=7/);
 
+  await page.locator(".results-list").getByRole("button", { name: /Innsbruck/ }).click();
   await page.getByRole("button", { name: /Plan this trip/ }).click();
   await expect(page.getByRole("heading", { name: "Choose how to travel" })).toBeVisible();
   await page.getByRole("button", { name: /Airplane/ }).click();
@@ -57,6 +58,52 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
     }));
     expect(dimensions.document).toBeLessThanOrEqual(dimensions.viewport + 1);
   }
+});
+
+test("travel stages show connecting flights, mixed rail, costs, and return differences", async ({ page }) => {
+
+  await page.goto("/explore?month=7&maxLayovers=1");
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+
+  const flightChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Airplane" });
+  await expect(flightChoice).toContainText("1 layover");
+  await flightChoice.getByRole("button", { name: /Airplane/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("innsbruck-flight-sample");
+  await flightChoice.getByRole("button", { name: "Stage details" }).click();
+  const flightDialog = page.getByRole("dialog", { name: "Flights via Copenhagen" });
+  await expect(flightDialog).toContainText("Flight layover");
+  await expect(flightDialog).toContainText("Copenhagen Airport (CPH)");
+  await expect(flightDialog).toContainText("08.00–08.45");
+  await expect(flightDialog.locator('.map-frame[data-line-count="8"]')).toBeVisible({ timeout: 15_000 });
+  await expect(flightDialog).toContainText("Sampled return airfare");
+  await expect(flightDialog).toContainText("Provider total 1.450 kr. · difference 0 kr.");
+  await flightDialog.getByRole("tab", { name: /Return/ }).click();
+  await expect(flightDialog).toContainText("1h 20m");
+  await page.keyboard.press("Escape");
+
+  const railChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Train + bus" });
+  await railChoice.getByRole("button", { name: "Stage details" }).click();
+  const railDialog = page.getByRole("dialog", { name: "Rail via Hamburg and Munich" });
+  await expect(railDialog).toContainText("Aalborg Station");
+  await expect(railDialog).toContainText("ÖBB");
+  await expect(railDialog.getByRole("tab", { name: "Outbound · 15h 20m" })).toBeVisible();
+  await expect(railDialog.getByRole("tab", { name: "Return · 15h 48m" })).toBeVisible();
+  await page.keyboard.press("Escape");
+
+  await page.goto("/explore?month=7&selected=zermatt");
+  await page.getByRole("button", { name: "View area details" }).click();
+  const directFlight = page.locator(".detail-travel-list > div").filter({ hasText: "Airplane" });
+  await directFlight.getByRole("button", { name: "View stages" }).click();
+  const directDialog = page.getByRole("dialog", { name: "Direct flight and rail to Zermatt" });
+  await expect(directDialog.getByLabel("0 flight layovers")).toBeVisible();
+  await expect(directDialog).toContainText("Zermatt is car-free");
+  await page.keyboard.press("Escape");
+
+  await page.goto("/explore?month=7&selected=berchtesgaden");
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
 });
 
 test("full-height pages fill the viewport without the optional preview ribbon", async ({ page }) => {

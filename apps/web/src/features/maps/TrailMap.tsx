@@ -12,6 +12,7 @@ export type TrailLine = {
   coordinates: [number, number][];
   label?: string;
   kind?: "trail" | "journey";
+  styleMode?: "walk" | "car" | "rail" | "bus" | "flight" | "ferry" | "shuttle" | "transfer";
 };
 
 const MapCanvas = lazy(() => import("@/features/maps/MapCanvas"));

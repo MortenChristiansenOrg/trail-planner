@@ -1,3 +1,4 @@
+import type { TravelOptionSnapshot } from "@trail-planner/domain";
 import type { TravelEstimate, TravelMode } from "@/features/catalog/catalog";
 import type { ExploreSearch } from "@/features/explore/search";
 
@@ -44,6 +45,7 @@ export type PlannedTrip = {
   exploreSnapshot: ExploreSearch;
   travelSnapshot: TravelEstimate[];
   selectedTravelMode?: TravelMode;
+  selectedTravelOption?: TravelOptionSnapshot;
   startDate?: string;
   days: TripDay[];
   nights: LodgingNight[];
