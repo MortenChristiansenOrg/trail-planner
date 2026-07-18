@@ -59,6 +59,37 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
+test("lodging choices can be reused and a trip can be discarded safely", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "The complete trip mutation flow is covered once on desktop.");
+
+  await page.goto("/explore?month=7");
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+
+  await page.getByRole("button", { name: "Choose" }).first().click();
+  await page.getByRole("button", { name: /Known lodging/ }).click();
+  await page.getByRole("button", { name: /Apply to remaining unplanned/ }).click();
+  const nights = page.locator(".night-row");
+  await expect(nights).toHaveCount(4);
+  await expect(nights.filter({ hasText: "Pfeishütte" })).toHaveCount(4);
+
+  await nights.nth(1).getByRole("button", { name: "Edit" }).click();
+  await page.getByRole("button", { name: /Tent · free/ }).click();
+  await page.getByRole("button", { name: "Save night" }).click();
+  await expect(nights.nth(1)).toContainText("Wild tent");
+  await expect(nights.filter({ hasText: "Pfeishütte" })).toHaveCount(3);
+
+  await page.getByRole("button", { name: "Discard trip" }).click();
+  await expect(page.getByRole("dialog", { name: /Discard .* in July/ })).toBeVisible();
+  await page.getByRole("button", { name: "Keep trip" }).click();
+  await expect(page.getByRole("heading", { name: /in July/ })).toBeVisible();
+
+  await page.getByRole("button", { name: "Discard trip" }).click();
+  await page.getByRole("dialog", { name: /Discard .* in July/ }).getByRole("button", { name: "Discard trip" }).click();
+  await expect(page).toHaveURL(/\/explore\?.*month=7/);
+  await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]"))).toEqual([]);
+});
+
 test("full-height pages fill the viewport without the optional preview ribbon", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Find the mountains that fit the journey." })).toBeVisible();
 
