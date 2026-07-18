@@ -1,3 +1,11 @@
+import {
+  calculateCostTree,
+  calculateScopedCost,
+  effectiveCost,
+  updateCostOverride,
+  type CostCategory,
+  type CostItem,
+} from "@trail-planner/domain";
 import type { TravelEstimate, TravelMode } from "@/features/catalog/catalog";
 import type { ExploreSearch } from "@/features/explore/search";
 
@@ -33,6 +41,12 @@ export type CustomCost = {
   amountDkk: number;
 };
 
+export type TripCostItem = CostItem & {
+  travelMode?: TravelMode;
+  lodgingAfterDay?: number;
+  customCostId?: string;
+};
+
 export type PlannedTrip = {
   id: string;
   destinationId: string;
@@ -48,6 +62,7 @@ export type PlannedTrip = {
   days: TripDay[];
   nights: LodgingNight[];
   customCosts: CustomCost[];
+  costItems: TripCostItem[];
   shareToken?: string;
   createdAt: number;
   updatedAt: number;
@@ -68,6 +83,60 @@ function requireNonNegativeFinite(value: number, label: string) {
     throw new Error(`${label} must be a non-negative finite number`);
   }
   return value;
+}
+
+const categoryIds: Record<CostCategory, string> = {
+  travel: "cost-category-travel",
+  lodging: "cost-category-lodging",
+  fees: "cost-category-fees",
+  custom: "cost-category-custom",
+};
+
+const travelLabels: Record<TravelMode, string> = {
+  car: "Own car return estimate",
+  train: "Rail and bus return tickets",
+  plane: "Return flights and ground transfer",
+};
+
+function categoryItem(category: CostCategory, label: string): TripCostItem {
+  return {
+    id: categoryIds[category],
+    label,
+    category,
+    unitCost: { amount: 0, currency: "DKK" },
+    chargingScope: "per-group",
+    quantity: 1,
+    calculatedCost: { amount: 0, currency: "DKK" },
+    source: "Trip cost snapshot",
+    confidence: "high",
+    priceType: "estimated",
+  };
+}
+
+function baseCostItems(travel: TravelEstimate[], participants: number): TripCostItem[] {
+  return [
+    categoryItem("travel", "Return travel"),
+    categoryItem("lodging", "Lodging"),
+    categoryItem("fees", "Fees"),
+    categoryItem("custom", "Other costs"),
+    ...travel.filter((estimate) => estimate.available).map((estimate): TripCostItem => {
+      const unitCost = { amount: estimate.costPerPersonDkk, currency: "DKK" as const };
+      return {
+        id: `cost-travel-${estimate.mode}`,
+        label: travelLabels[estimate.mode],
+        category: "travel",
+        parentItemId: categoryIds.travel,
+        unitCost,
+        chargingScope: "per-person",
+        quantity: 1,
+        calculatedCost: calculateScopedCost(unitCost, "per-person", 1, participants),
+        source: estimate.note,
+        confidence: estimate.confidence,
+        priceType: estimate.mode === "plane" ? "sampled" : "estimated",
+        travelMode: estimate.mode,
+      };
+    }),
+  ];
 }
 
 export function createTrip(input: NewTripInput): PlannedTrip {
@@ -93,6 +162,7 @@ export function createTrip(input: NewTripInput): PlannedTrip {
       costDkk: 0,
     })),
     customCosts: [],
+    costItems: baseCostItems(input.travel, input.search.participants),
     createdAt: now,
     updatedAt: now,
   };
@@ -102,25 +172,116 @@ export function getSelectedTravel(trip: PlannedTrip) {
   return trip.travelSnapshot.find((item) => item.mode === trip.selectedTravelMode);
 }
 
-export function calculateTripCost(trip: PlannedTrip) {
-  const travel = getSelectedTravel(trip);
-  const travelCost = travel?.available
-    ? requireNonNegativeFinite(travel.costPerPersonDkk, "Travel cost") * trip.participants
-    : 0;
-  const lodgingCost = trip.nights.reduce(
-    (sum, item) => sum + requireNonNegativeFinite(item.costDkk, "Lodging cost"),
-    0,
-  );
-  const customCost = trip.customCosts.reduce(
-    (sum, item) => sum + requireNonNegativeFinite(item.amountDkk, "Custom cost"),
-    0,
-  );
+export function getTripCostItems(trip: PlannedTrip): TripCostItem[] {
+  if (trip.costItems?.length) return trip.costItems;
+  const items = baseCostItems(trip.travelSnapshot, trip.participants);
+  for (const night of trip.nights) {
+    if (night.kind === "none") continue;
+    items.push(lodgingCostItem(night));
+  }
+  for (const custom of trip.customCosts) items.push(customCostItem(custom));
+  return items;
+}
+
+function lodgingCostItem(night: LodgingNight): TripCostItem {
+  const unitCost = { amount: requireNonNegativeFinite(night.costDkk, "Lodging cost"), currency: "DKK" as const };
   return {
+    id: `cost-lodging-${night.afterDay}`,
+    label: `Night ${night.afterDay}: ${night.name}`,
+    category: "lodging",
+    parentItemId: categoryIds.lodging,
+    unitCost,
+    chargingScope: "per-group",
+    quantity: 1,
+    calculatedCost: calculateScopedCost(unitCost, "per-group", 1, 1),
+    source: night.kind === "known" ? "Saved catalog lodging" : "User-planned lodging",
+    confidence: night.kind === "known" ? "medium" : "high",
+    priceType: night.kind === "known" ? "estimated" : "manual",
+    lodgingAfterDay: night.afterDay,
+  };
+}
+
+function customCostItem(custom: CustomCost): TripCostItem {
+  const unitCost = { amount: requireNonNegativeFinite(custom.amountDkk, "Custom cost"), currency: "DKK" as const };
+  return {
+    id: `cost-custom-${custom.id}`,
+    label: custom.label,
+    category: "custom",
+    parentItemId: categoryIds.custom,
+    unitCost,
+    chargingScope: "per-group",
+    quantity: 1,
+    calculatedCost: calculateScopedCost(unitCost, "per-group", 1, 1),
+    source: "Added by traveller",
+    confidence: "high",
+    priceType: "manual",
+    customCostId: custom.id,
+  };
+}
+
+export function calculateTripCost(trip: PlannedTrip) {
+  if (!Number.isInteger(trip.participants) || trip.participants < 1) {
+    throw new Error("Trip participants must be a positive integer");
+  }
+  const items = getTripCostItems(trip);
+  const include = (item: TripCostItem) => !item.travelMode || item.travelMode === trip.selectedTravelMode;
+  const tree = calculateCostTree(items, include);
+  const categories = items
+    .filter((item) => !item.parentItemId)
+    .map((item) => ({
+      item,
+      total: tree.rootTotals.get(item.id) ?? 0,
+      children: items.filter((candidate) => candidate.parentItemId === item.id && include(candidate)),
+    }))
+    .filter((category) => category.children.length || category.item.overrideCost !== undefined);
+  const travelCost = tree.rootTotals.get(categoryIds.travel) ?? 0;
+  const lodgingCost = tree.rootTotals.get(categoryIds.lodging) ?? 0;
+  const customCost = (tree.rootTotals.get(categoryIds.custom) ?? 0) + (tree.rootTotals.get(categoryIds.fees) ?? 0);
+  return {
+    items,
+    categories,
     travelCost,
     lodgingCost,
     customCost,
-    total: travelCost + lodgingCost + customCost,
+    total: tree.total,
+    perPerson: Math.round(((tree.total / trip.participants) + Number.EPSILON) * 100) / 100,
   };
+}
+
+export function setLodgingNight(trip: PlannedTrip, night: LodgingNight): PlannedTrip {
+  if (!trip.nights.some((item) => item.afterDay === night.afterDay)) throw new Error("Lodging night must belong to the trip");
+  const costItemId = `cost-lodging-${night.afterDay}`;
+  const currentItems = getTripCostItems(trip);
+  const previousItem = currentItems.find((item) => item.id === costItemId);
+  const costItems = currentItems.filter((item) => item.id !== costItemId);
+  if (night.kind !== "none") {
+    costItems.push({
+      ...lodgingCostItem(night),
+      overrideCost: previousItem?.overrideCost,
+      overrideNote: previousItem?.overrideNote,
+    });
+  }
+  return {
+    ...trip,
+    nights: trip.nights.map((item) => item.afterDay === night.afterDay ? night : item),
+    costItems,
+  };
+}
+
+export function setTripCostOverride(
+  trip: PlannedTrip,
+  itemId: string,
+  amount?: number,
+  note?: string,
+): PlannedTrip {
+  return {
+    ...trip,
+    costItems: updateCostOverride(getTripCostItems(trip), itemId, amount, note) as TripCostItem[],
+  };
+}
+
+export function getCostItemAmount(item: TripCostItem) {
+  return effectiveCost(item).amount;
 }
 
 export function applyStartDate(trip: PlannedTrip, startDate?: string): PlannedTrip {
@@ -209,12 +370,19 @@ export function removeActivityGroup(trip: PlannedTrip, groupId: string): Planned
 }
 
 export function addCustomCost(trip: PlannedTrip, label: string, amountDkk: number): PlannedTrip {
+  const custom = { id: id("cost"), label, amountDkk: requireNonNegativeFinite(amountDkk, "Custom cost") };
   return {
     ...trip,
-    customCosts: [
-      ...trip.customCosts,
-      { id: id("cost"), label, amountDkk: requireNonNegativeFinite(amountDkk, "Custom cost") },
-    ],
+    customCosts: [...trip.customCosts, custom],
+    costItems: [...getTripCostItems(trip), customCostItem(custom)],
+  };
+}
+
+export function removeCustomCost(trip: PlannedTrip, customCostId: string): PlannedTrip {
+  return {
+    ...trip,
+    customCosts: trip.customCosts.filter((cost) => cost.id !== customCostId),
+    costItems: getTripCostItems(trip).filter((item) => item.customCostId !== customCostId),
   };
 }
 

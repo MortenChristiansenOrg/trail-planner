@@ -18,6 +18,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "@trail-planner/domain": path.resolve(__dirname, "../../packages/domain/src/index.ts"),
     },
   },
 });
