@@ -23,6 +23,7 @@ describe("explore search", () => {
     expect(estimateFits({
       mode: "car",
       available: true,
+      accessNode: "Test trailhead",
       oneWayHours: 6,
       costPerPersonDkk: 500,
       note: "Test estimate",

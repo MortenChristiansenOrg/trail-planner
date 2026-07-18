@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppShell } from "@/components/layout/AppShell";
+import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import {
   destinationById,
   formatHours,
@@ -81,17 +82,21 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
   );
   const lines: TrailLine[] = Array.from(activityGroups.values()).flatMap((activity) => {
     const hike = destination.hikes.find((item) => item.id === activity.hikeId);
-    return hike ? [{ id: activity.groupId, coordinates: hike.route, label: `${activity.letter} · ${activity.name}` }] : [];
+    return hike?.route.length ? [{ id: activity.groupId, coordinates: hike.route, label: `${activity.letter} · ${activity.name}` }] : [];
   });
   const markers: MapMarker[] = [
     { id: destination.id, label: destination.name, coordinates: destination.coordinates },
     ...Array.from(activityGroups.values()).flatMap((activity) => {
       const hike = destination.hikes.find((item) => item.id === activity.hikeId);
-      return hike ? [{ id: activity.groupId, label: `Trail ${activity.letter}: ${activity.name}`, coordinates: hike.route[0], badge: activity.letter }] : [];
+      return hike?.route.length ? [{ id: activity.groupId, label: `Trail ${activity.letter}: ${activity.name}`, coordinates: hike.route[0], badge: activity.letter }] : [];
     }),
   ];
   const selectedId = markers.some((marker) => marker.id === selectedMapItem) ? selectedMapItem : destination.id;
-  const selectedActivity = selectedId ? activityGroups.get(selectedId) : undefined;
+  const selectedActivity = selectedMapItem ? activityGroups.get(selectedMapItem) : undefined;
+  const selectedHike = selectedActivity ? destination.hikes.find((hike) => hike.id === selectedActivity.hikeId) : undefined;
+  let selectedRouteStatus: string | undefined;
+  if (selectedActivity?.kind === "custom-hike") selectedRouteStatus = "Selected personal hike · no catalog geometry";
+  else if (selectedActivity) selectedRouteStatus = selectedHike?.route.length ? "Selected trail · source-backed route" : "Selected hike · route geometry being curated";
 
   const save = (next: PlannedTrip) => store.update(next);
   const selectTravel = (mode: TravelMode) => save({ ...trip, selectedTravelMode: mode });
@@ -116,6 +121,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
         <header className="trip-detail-heading">
           <div>
             <Link className="back-link" to="/trips"><ArrowLeft /> Planned trips</Link>
+            <CatalogMediaFigure media={destination.media} sizes="180px" variant="thumbnail" />
             <p className="eyebrow"><MapPin /> {destination.region}, {destination.country}</p>
             <h1>{trip.title}</h1>
             <div className="trip-meta">
@@ -174,7 +180,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       <div className="day-card__content">
                         {day.day === 1 ? <TravelDayBlock direction="Journey to the trailhead" travel={selectedTravel} /> : null}
                         {day.activities.map((activity) => (
-                          <div className={`activity-row${selectedId === activity.groupId ? " is-selected" : ""}`} key={activity.id}>
+                          <div className={`activity-row${selectedMapItem === activity.groupId ? " is-selected" : ""}`} key={activity.id}>
                             <button className="activity-row__select" onClick={() => setSelectedMapItem(activity.groupId)} type="button">
                               <span className="trail-letter">{activity.letter}</span>
                               <span><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></span>
@@ -200,7 +206,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
               <TrailMap lines={lines} markers={markers} mode="detail" onSelect={setSelectedMapItem} selectedId={selectedId} />
               <div className="map-legend">
                 <strong>{selectedActivity ? `${selectedActivity.letter} · ${selectedActivity.name}` : "Route map"}</strong>
-                <span>{selectedActivity ? "Selected trail · approximate catalog trace" : lines.length ? `${lines.length} planned trail${lines.length === 1 ? "" : "s"} · select a letter to focus` : "Add a hike to draw its route"}</span>
+                <span>{selectedRouteStatus ?? (lines.length ? `${lines.length} planned trail${lines.length === 1 ? "" : "s"} · select a letter to focus` : "Add a hike to the itinerary; verified routes appear when available")}</span>
               </div>
             </section>
 
@@ -258,12 +264,12 @@ function AddHikeDialog({
     <Dialog>
       <DialogTrigger asChild><Button className="add-day-button" size="sm" variant="ghost"><Plus /> Add hike to day {day}</Button></DialogTrigger>
       <DialogContent className="hike-dialog">
-        <DialogHeader><DialogTitle>Add a hike</DialogTitle><DialogDescription>Choose an area route or add a simple personal route name. Multi-day hikes fill consecutive day slots.</DialogDescription></DialogHeader>
-        <Tabs defaultValue="known">
-          <TabsList className="w-full"><TabsTrigger value="known">Area routes</TabsTrigger><TabsTrigger value="custom">Your own hike</TabsTrigger></TabsList>
+        <DialogHeader><DialogTitle>Add a hike</DialogTitle><DialogDescription>{destinationHikes.length ? "Choose an area route or add a simple personal route name. Multi-day hikes fill consecutive day slots." : "No catalog routes are published for this hub yet. Add a personal route name to continue planning."}</DialogDescription></DialogHeader>
+        <Tabs defaultValue={destinationHikes.length ? "known" : "custom"}>
+          <TabsList className="w-full"><TabsTrigger disabled={!destinationHikes.length} value="known">{destinationHikes.length ? "Area routes" : "Routes being curated"}</TabsTrigger><TabsTrigger value="custom">Your own hike</TabsTrigger></TabsList>
           <TabsContent className="dialog-form" value="known">
             <label><span>Hike</span><select value={hikeId} onChange={(event) => { const next = destinationHikes.find((item) => item.id === event.target.value); setHikeId(event.target.value); setDuration(Math.min(next?.durationDays ?? 1, maxDuration)); }}>{destinationHikes.map((hike) => <option key={hike.id} value={hike.id}>{hike.name}</option>)}</select></label>
-            {selected ? <div className="hike-choice-summary"><Mountain /><div><strong>{selected.distanceKm} km · {selected.ascentM} m ascent · {selected.difficulty}</strong><p>{selected.description}</p></div></div> : null}
+            {selected ? <div className="hike-choice-summary"><Mountain /><div><strong>{selected.distanceKm} km · {selected.ascentM} m ascent · {selected.difficulty}</strong><p>{selected.description}</p>{!selected.route.length ? <small>Route geometry is still being curated; this adds the hike details without drawing an invented map line.</small> : null}</div></div> : null}
             <label><span>Use duration</span><select value={duration} onChange={(event) => setDuration(Number(event.target.value))}>{Array.from({ length: maxDuration }, (_, index) => index + 1).map((value) => <option key={value} value={value}>{value} day{value === 1 ? "" : "s"}</option>)}</select><small>Overrides the catalog duration for this plan.</small></label>
             <DialogFooter><DialogClose asChild><Button disabled={!selected} onClick={() => selected && onAdd({ kind: "catalog-hike", hikeId: selected.id, name: selected.name, description: selected.description, durationDays: duration })}>Add to itinerary</Button></DialogClose></DialogFooter>
           </TabsContent>

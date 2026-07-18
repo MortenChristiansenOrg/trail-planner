@@ -3,6 +3,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../../../../convex/_generated/api";
 import { Badge } from "@/components/ui/badge";
 import { AppShell } from "@/components/layout/AppShell";
+import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import { destinationById, formatHours, formatMoney, monthNames } from "@/features/catalog/catalog";
 import { modeLabels } from "@/features/explore/search";
@@ -44,14 +45,14 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
   const activities = new Map(trip.days.flatMap((day) => day.activities).map((activity) => [activity.groupId, activity]));
   const lines: TrailLine[] = Array.from(activities.values()).flatMap((activity) => {
     const hike = destination.hikes.find((item) => item.id === activity.hikeId);
-    return hike ? [{ id: activity.groupId, coordinates: hike.route }] : [];
+    return hike?.route.length ? [{ id: activity.groupId, coordinates: hike.route }] : [];
   });
 
   return (
     <AppShell>
       <main className="share-page">
         <header className="share-hero">
-          <div><Badge variant="secondary">Read-only plan</Badge><p className="eyebrow"><MapPin /> {destination.region}, {destination.country}</p><h1>{trip.title}</h1><p>{destination.summary}</p></div>
+          <div><CatalogMediaFigure loading="eager" media={destination.media} sizes="(max-width: 800px) 100vw, 570px" /><Badge variant="secondary">Read-only plan</Badge><p className="eyebrow"><MapPin /> {destination.region}, {destination.country}</p><h1>{trip.title}</h1><p>{destination.summary}</p></div>
           <div className="share-summary">
             <span><CalendarDays /><strong>{trip.tripDays} days</strong><small>{trip.startDate ?? monthNames[trip.plannedMonth - 1]}</small></span>
             <span><UsersRound /><strong>{trip.participants}</strong><small>travellers</small></span>

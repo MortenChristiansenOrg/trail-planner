@@ -22,11 +22,17 @@ function makeTrip() {
 }
 
 describe("planned trip model", () => {
-  it("gives catalog hikes distinct planning traces", () => {
+  it("publishes only distinct, source-backed route geometry", () => {
+    let routedHikeCount = 0;
+    const serializedRoutes: string[] = [];
     for (const area of destinations) {
-      const serialized = area.hikes.map((hike) => JSON.stringify(hike.route));
-      expect(new Set(serialized).size).toBe(serialized.length);
+      const routedHikes = area.hikes.filter((hike) => hike.route.length);
+      routedHikeCount += routedHikes.length;
+      expect(routedHikes.every((hike) => Boolean(hike.geometrySourceUrl))).toBe(true);
+      serializedRoutes.push(...routedHikes.map((hike) => JSON.stringify(hike.route)));
     }
+    expect(new Set(serializedRoutes).size).toBe(serializedRoutes.length);
+    expect(routedHikeCount).toBeGreaterThan(0);
   });
 
   it("fills consecutive slots for a multi-day hike without replacing activities", () => {
