@@ -34,7 +34,7 @@ describe("Amadeus travel adapter", () => {
       itineraries: [
         { duration: "PT4H30M", segments: [
           segment("201", "AAL", "CPH", "2026-07-10T07:00:00Z", "2026-07-10T07:45:00Z", "PT45M", 1),
-          segment("202", "ARN", "INN", "2026-07-10T09:00:00Z", "2026-07-10T11:30:00Z", "PT2H30M"),
+          segment("202", "CPH", "INN", "2026-07-10T09:00:00Z", "2026-07-10T11:30:00Z", "PT2H30M"),
         ] },
         { duration: "PT3H45M", segments: [
           segment("203", "INN", "CPH", "2026-07-15T14:00:00Z", "2026-07-15T16:00:00Z", "PT2H"),
@@ -46,9 +46,9 @@ describe("Amadeus travel adapter", () => {
     const mapped = mapAmadeusOffer(offer, "2026-07-01T10:00:00Z");
 
     expect(mapped.outbound.stages.map((stage) => stage.kind)).toEqual(["flight", "transfer", "flight"]);
-    expect(mapped.outbound.stages[1]).toMatchObject({ origin: { name: "CPH" }, destination: { name: "ARN" }, durationMinutes: 75 });
+    expect(mapped.outbound.stages[1]).toMatchObject({ origin: { name: "CPH" }, destination: { name: "CPH" }, durationMinutes: 75 });
     expect(mapped.outbound.stages[0].technicalStops).toEqual(["1 provider-reported technical stop"]);
-    expect(deriveTravelOptionTotals(mapped).layovers).toBe(2);
+    expect(deriveTravelOptionTotals(mapped)).toMatchObject({ layovers: 1, returnLayovers: 1 });
   });
 
   it("rejects blank prices and duration tokens", () => {

@@ -60,50 +60,96 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
-test("travel stages show connecting flights, mixed rail, costs, and return differences", async ({ page }) => {
+test("travel stages use provider-backed road geometry and never invent missing detail", async ({ page }) => {
+  await page.route("https://router.project-osrm.org/**", (route) => route.fulfill({
+    contentType: "application/json",
+    body: JSON.stringify({
+      code: "Ok",
+      routes: [{
+        distance: 1_300_000,
+        duration: 48_600,
+        geometry: { coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]] },
+      }],
+    }),
+  }));
 
   await page.goto("/explore?month=7&maxLayovers=1");
+  await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await page.getByRole("button", { name: "Plan this trip" }).click();
 
-  const flightChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Airplane" });
-  await expect(flightChoice).toContainText("1 layover");
-  await flightChoice.getByRole("button", { name: /Airplane/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("innsbruck-flight-sample");
-  await flightChoice.getByRole("button", { name: "Stage details" }).click();
-  const flightDialog = page.getByRole("dialog", { name: "Flights via Copenhagen" });
-  await expect(flightDialog).toContainText("Flight layover");
-  await expect(flightDialog).toContainText("Copenhagen Airport (CPH)");
-  await expect(flightDialog).toContainText("08.00–08.45");
-  await expect(flightDialog.locator('.map-frame[data-line-count="8"]')).toBeVisible({ timeout: 15_000 });
-  await expect(flightDialog).toContainText("Sampled return airfare");
-  await expect(flightDialog).toContainText("Provider total 1.450 kr. · difference 0 kr.");
-  await flightDialog.getByRole("tab", { name: /Return/ }).click();
-  await expect(flightDialog).toContainText("1h 20m");
+  const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await carChoice.getByRole("button", { name: "Stage details" }).click();
+  const carDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
+  await expect(carDialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
+  await expect(carDialog).toContainText("OSRM");
+  await expect(carDialog).toContainText("Road geometry and drive time come from OSRM");
   await page.keyboard.press("Escape");
 
-  const railChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Train + bus" });
-  await railChoice.getByRole("button", { name: "Stage details" }).click();
-  const railDialog = page.getByRole("dialog", { name: "Rail via Hamburg and Munich" });
-  await expect(railDialog).toContainText("Aalborg Station");
-  await expect(railDialog).toContainText("ÖBB");
-  await expect(railDialog.getByRole("tab", { name: "Outbound · 15h 20m" })).toBeVisible();
-  await expect(railDialog.getByRole("tab", { name: "Return · 15h 48m" })).toBeVisible();
-  await page.keyboard.press("Escape");
+  for (const label of ["Train + bus", "Airplane"]) {
+    const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
+    await choice.getByRole("button", { name: "Stage details" }).click();
+    await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
+    await page.keyboard.press("Escape");
+  }
+});
 
-  await page.goto("/explore?month=7&selected=zermatt");
-  await page.getByRole("button", { name: "View area details" }).click();
-  const directFlight = page.locator(".detail-travel-list > div").filter({ hasText: "Airplane" });
-  await directFlight.getByRole("button", { name: "View stages" }).click();
-  const directDialog = page.getByRole("dialog", { name: "Direct flight and rail to Zermatt" });
-  await expect(directDialog.getByLabel("0 flight layovers")).toBeVisible();
-  await expect(directDialog).toContainText("Zermatt is car-free");
-  await page.keyboard.press("Escape");
+test("lodging choices can be reused and a trip can be discarded safely", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "The complete trip mutation flow is covered once on desktop.");
 
-  await page.goto("/explore?month=7&selected=berchtesgaden");
-  await page.getByRole("button", { name: "View area details" }).click();
-  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
-  await carEstimate.getByRole("button", { name: "View stages" }).click();
-  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
+  await page.goto("/explore?month=7");
+  await page.locator(".results-list").getByRole("button", { name: /Innsbruck/ }).click();
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+
+  await page.getByRole("button", { name: "Choose" }).first().click();
+  await page.getByRole("button", { name: /Known lodging/ }).click();
+  await page.getByRole("button", { name: /Apply to remaining unplanned/ }).click();
+  const nights = page.locator(".night-row");
+  await expect(nights).toHaveCount(4);
+  await expect(nights.filter({ hasText: "Pfeishütte" })).toHaveCount(4);
+
+  await nights.nth(1).getByRole("button", { name: "Edit" }).click();
+  await page.getByRole("button", { name: /Tent · free/ }).click();
+  await page.getByRole("button", { name: "Save night" }).click();
+  await expect(nights.nth(1)).toContainText("Wild tent");
+  await expect(nights.filter({ hasText: "Pfeishütte" })).toHaveCount(3);
+
+  await page.getByRole("button", { name: "Discard trip" }).click();
+  await expect(page.getByRole("dialog", { name: /Discard .* in July/ })).toBeVisible();
+  await page.getByRole("button", { name: "Keep trip" }).click();
+  await expect(page.getByRole("heading", { name: /in July/ })).toBeVisible();
+
+  await page.getByRole("button", { name: "Discard trip" }).click();
+  await page.getByRole("dialog", { name: /Discard .* in July/ }).getByRole("button", { name: "Discard trip" }).click();
+  await expect(page).toHaveURL(/\/explore\?.*month=7/);
+  await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]"))).toEqual([]);
+});
+
+test("Explore filters edit month and travellers through shareable search state", async ({ page }) => {
+  await page.goto("/explore");
+  await page.locator(".destination-row").filter({ hasText: "Fort William" }).click();
+  await expect(page).toHaveURL(/selected=fort-william/);
+
+  await page.getByRole("button", { name: "Filters" }).click();
+  const historyLength = await page.evaluate(() => history.length);
+  const travellers = page.getByRole("slider", { name: "Travellers" });
+  await travellers.press("ArrowRight");
+  await expect(page).toHaveURL(/participants=3/);
+  await expect(page.locator(".filter-range").filter({ hasText: "Travellers" }).getByText("3 people", { exact: true })).toBeVisible();
+
+  const month = page.getByRole("slider", { name: "Travel month" });
+  await month.press("Home");
+  await expect(page).toHaveURL(/month=1/);
+  await expect(page.getByText("No destination fits every limit")).toBeVisible();
+  await expect(page).not.toHaveURL(/selected=/);
+  expect(await page.evaluate(() => history.length)).toBe(historyLength);
+
+  await page.reload();
+  await page.getByRole("button", { name: "Filters" }).click();
+  await expect(page.getByRole("slider", { name: "Travel month" })).toHaveAttribute("aria-valuenow", "1");
+  await expect(page.getByRole("slider", { name: "Travellers" })).toHaveAttribute("aria-valuenow", "3");
 });
 
 test("full-height pages fill the viewport without the optional preview ribbon", async ({ page }) => {
@@ -131,7 +177,7 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await expect(page.getByText("Best match").first()).toBeVisible();
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator(".explore-map .maplibregl-ctrl-attrib")).not.toHaveClass(/maplibregl-compact-show/);
-  await expect(page.getByText("Map line: indicative driving route from Aalborg")).toBeVisible();
+  await expect(page.getByText("Map line: OSRM driving route from Aalborg")).toBeVisible();
 
   await page.waitForTimeout(750);
   const markerA = page.getByRole("button", { name: "Innsbruck, Austria" });

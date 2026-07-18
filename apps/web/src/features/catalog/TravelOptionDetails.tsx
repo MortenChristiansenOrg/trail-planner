@@ -102,7 +102,7 @@ function TravelOptionBody({ option }: { option: TravelOptionSnapshot }) {
       <div className="travel-option-summary">
         <Badge variant="secondary">{option.priceType === "live" ? "Live, date-specific" : `${option.priceType[0].toUpperCase()}${option.priceType.slice(1)} plan`}</Badge>
         <span><Clock3 /><strong>{formatMinutes(totals.durationMinutes)}</strong><small>outbound + return</small></span>
-        <span aria-label={`${totals.layovers} flight layover${totals.layovers === 1 ? "" : "s"}`}><Plane /><strong>{totals.layovers}</strong><small>flight layover{totals.layovers === 1 ? "" : "s"}</small></span>
+        <span aria-label={`${totals.layovers} outbound flight layover${totals.layovers === 1 ? "" : "s"}; ${totals.returnLayovers} return flight layover${totals.returnLayovers === 1 ? "" : "s"}`}><Plane /><strong>{totals.layovers === totals.returnLayovers ? totals.layovers : `${totals.layovers} / ${totals.returnLayovers}`}</strong><small>outbound / return layovers</small></span>
         <span><WalletCards /><strong>{formatTravelMoney(totals.cost)}</strong><small>{option.pricingBasis === "per-person" ? "per traveller" : "per group"}</small></span>
       </div>
       {lines.length ? <div className="travel-option-map"><TrailMap lines={lines} markers={markers} mode="detail" /></div> : null}
@@ -137,7 +137,7 @@ function StageTimeline({ costById, stages }: { costById: Map<string, TravelCostC
       <span className="travel-stage__icon">{kindIcon(stage.kind)}</span>
       <div>
         <span className="travel-stage__heading"><Badge variant="outline">{stage.transferType === "layover" ? "Flight layover" : kindLabels[stage.kind]}</Badge><strong>{formatMinutes(stage.durationMinutes)}</strong></span>
-        <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>
+        {stage.transferType === "layover" ? <p><strong>{stage.origin.name}</strong></p> : <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>}
         <small>{[stage.operator, stage.service, stage.confidence ? `${stage.confidence} confidence` : undefined].filter(Boolean).join(" · ") || "Operator not available"}</small>
         {stage.departureTime && stage.arrivalTime ? <small>{formatTime(stage.departureTime)}–{formatTime(stage.arrivalTime)}</small> : null}
         {stage.costComponentIds.length ? <small>Cost components: {stage.costComponentIds.map((id) => costById.get(id)?.label).filter(Boolean).join(", ")}</small> : null}

@@ -178,10 +178,12 @@ export function deriveTravelOptionTotals(option: TravelOptionSnapshot) {
     if (option.providerTotals.cost.currency !== derivedCurrency) throw new Error("Provider and derived travel costs must use one currency");
   }
   if (!retrievedAtPattern.test(option.retrievedAt) || !hasValidCalendarDate(option.retrievedAt) || !Number.isFinite(Date.parse(option.retrievedAt))) throw new Error("Travel option retrieval time is invalid");
+  const countLayovers = (journey: TravelJourney) => journey.stages.filter((stage) => stage.kind === "transfer" && stage.transferType === "layover").length;
   return {
     durationMinutes: stages.reduce((sum, stage) => sum + stage.durationMinutes, 0),
     cost: { amount: Math.round((cost + Number.EPSILON) * 100) / 100, currency: option.costComponents[0]?.amount.currency ?? "DKK" } as Money,
-    layovers: stages.filter((stage) => stage.kind === "transfer" && stage.transferType === "layover").length,
+    layovers: countLayovers(option.outbound),
+    returnLayovers: countLayovers(option.return),
   };
 }
 
@@ -224,13 +226,16 @@ export function mapAmadeusOffer(offer: AmadeusOffer, retrievedAt: string): Trave
     itinerary.segments.forEach((segment, index) => {
       if (index) {
         const previous = itinerary.segments[index - 1];
+        if (previous.arrival.iataCode !== segment.departure.iataCode) {
+          throw new Error("Connecting flight segments must meet at one airport");
+        }
         const waitMinutes = Math.round((Date.parse(segment.departure.at) - Date.parse(previous.arrival.at)) / 60_000);
         if (!Number.isFinite(waitMinutes) || waitMinutes < 0) throw new Error("Flight segments have invalid connection times");
         stages.push({
           id: `${direction}-layover-${index}`,
           kind: "transfer",
           origin: { name: previous.arrival.iataCode, coordinates: previous.arrival.coordinates },
-          destination: { name: segment.departure.iataCode, coordinates: segment.departure.coordinates },
+          destination: { name: previous.arrival.iataCode, coordinates: previous.arrival.coordinates },
           durationMinutes: waitMinutes,
           departureTime: previous.arrival.at,
           arrivalTime: segment.departure.at,

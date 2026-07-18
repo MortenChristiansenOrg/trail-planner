@@ -6,6 +6,7 @@ import {
   monthDistance,
   parseExploreSearch,
   rankDestinations,
+  reconcileExploreSelection,
 } from "@/features/explore/search";
 
 describe("explore search", () => {
@@ -63,5 +64,74 @@ describe("explore search", () => {
     expect(strict).toHaveLength(0);
     expect(relaxed.length).toBeGreaterThan(0);
     expect(relaxed.every((result) => result.destination.countryCode === "NO")).toBe(true);
+  });
+
+  it("keeps a selected destination only while it still matches", () => {
+    const selected = reconcileExploreSelection(destinations, {
+      ...defaultExploreSearch,
+      selected: "fort-william",
+    });
+    expect(selected.selected).toBe("fort-william");
+
+    const reranked = reconcileExploreSelection(destinations, {
+      ...selected,
+      countries: ["FR"],
+    });
+    expect(reranked.selected).toBe("chamonix");
+
+    const empty = reconcileExploreSelection(destinations, {
+      ...reranked,
+      month: 1,
+      seasonTolerance: 0,
+    });
+    expect(empty.selected).toBeUndefined();
+  });
+
+  it("reranks when participant-dependent transport cost changes", () => {
+    const fastExpensive = {
+      ...destinations[0],
+      id: "fast-expensive",
+      recommendedMonths: [7],
+      travel: [{
+        mode: "car" as const,
+        available: true,
+        oneWayHours: 4,
+        costPerPersonDkk: 2_000,
+        note: "Test estimate",
+        confidence: "high" as const,
+      }],
+    };
+    const cheapSlow = {
+      ...destinations[1],
+      id: "cheap-slow",
+      recommendedMonths: [7],
+      travel: [{
+        mode: "car" as const,
+        available: true,
+        oneWayHours: 10,
+        costPerPersonDkk: 500,
+        note: "Test estimate",
+        confidence: "high" as const,
+      }],
+    };
+    const resultsForOne = rankDestinations([fastExpensive, cheapSlow], {
+      ...defaultExploreSearch,
+      modes: ["car"],
+      participants: 1,
+      budget: 10_000,
+      month: 7,
+      seasonTolerance: 0,
+    });
+    const resultsForFour = rankDestinations([fastExpensive, cheapSlow], {
+      ...defaultExploreSearch,
+      modes: ["car"],
+      participants: 4,
+      budget: 10_000,
+      month: 7,
+      seasonTolerance: 0,
+    });
+
+    expect(resultsForOne.map((result) => result.destination.id)).toEqual(["fast-expensive", "cheap-slow"]);
+    expect(resultsForFour.map((result) => result.destination.id)).toEqual(["cheap-slow", "fast-expensive"]);
   });
 });

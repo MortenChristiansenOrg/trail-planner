@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import type { TravelOptionSnapshot } from "@trail-planner/domain";
 import {
   ArrowLeft,
@@ -51,17 +51,20 @@ import { TrailMap, type MapMarker, type TrailLine } from "@/features/maps/TrailM
 import {
   addActivity,
   addCustomCost,
+  applyLodgingChoice,
   applyStartDate,
   calculateTripCost,
   getSelectedTravel,
   removeActivityGroup,
   type LodgingNight,
+  type LodgingApplyScope,
   type PlannedTrip,
 } from "@/features/trips/model";
 import { useTripStore } from "@/features/trips/TripStore";
 
 export function TripDetailPage({ tripId }: { tripId: string }) {
   const store = useTripStore();
+  const navigate = useNavigate();
   const [selectedMapItem, setSelectedMapItem] = useState<string>();
   const [shareUrl, setShareUrl] = useState<string>();
   const [shareCopyStatus, setShareCopyStatus] = useState<"copied" | "manual">();
@@ -114,7 +117,9 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     const latest = tripRef.current;
     if (latest?.id === selectedTripId) await save({ ...latest, selectedTravelMode: mode, selectedTravelOption: option });
   };
-  const updateNight = (night: LodgingNight) => save({ ...trip, nights: trip.nights.map((item) => item.afterDay === night.afterDay ? night : item) });
+  const updateNight = (night: LodgingNight, scope?: LodgingApplyScope) => save(applyLodgingChoice(trip, night, scope));
+  const discardTrip = () => store.remove(trip.id);
+  const returnToExplore = () => navigate({ to: "/explore", search: trip.exploreSnapshot, replace: true });
   const createShare = async () => {
     const token = await store.share(trip.id);
     if (!token) return;
@@ -145,6 +150,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
           </div>
           <div className="trip-share-actions">
             <Button onClick={createShare} variant="outline"><Share2 /> {shareCopyStatus === "copied" ? "Share link copied" : trip.shareToken ? "Copy share link" : "Create share link"}</Button>
+            <DiscardTripDialog destinationName={destination.name} onDiscard={discardTrip} onReturn={returnToExplore} tripTitle={trip.title} />
             {shareCopyStatus === "manual" && shareUrl ? (
               <p role="status">Copy this link: <a href={shareUrl}>{shareUrl}</a></p>
             ) : null}
@@ -208,7 +214,13 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       </div>
                     </article>
                     {index < trip.nights.length ? (
-                      <NightRow destinationId={destination.id} night={trip.nights[index]} onChange={updateNight} />
+                      <NightRow
+                        destinationId={destination.id}
+                        night={trip.nights[index]}
+                        onChange={updateNight}
+                        plannedOtherNights={trip.nights.filter((night) => night.afterDay !== trip.nights[index].afterDay && night.kind !== "none").length}
+                        remainingUnplannedNights={trip.nights.filter((night) => night.afterDay > trip.nights[index].afterDay && night.kind === "none").length}
+                      />
                     ) : null}
                   </div>
                 ))}
@@ -300,25 +312,66 @@ function AddHikeDialog({
   );
 }
 
-function NightRow({ destinationId, night, onChange }: { destinationId: string; night: LodgingNight; onChange: (night: LodgingNight) => void }) {
+function NightRow({
+  destinationId,
+  night,
+  onChange,
+  plannedOtherNights,
+  remainingUnplannedNights,
+}: {
+  destinationId: string;
+  night: LodgingNight;
+  onChange: (night: LodgingNight, scope?: LodgingApplyScope) => void;
+  plannedOtherNights: number;
+  remainingUnplannedNights: number;
+}) {
   return (
     <div className="night-row">
       <span className="night-line" /><span className="night-icon">{night.kind.startsWith("tent") ? <TentTree /> : <BedDouble />}</span>
       <div className="night-copy"><small>Night {night.afterDay}</small><strong>{night.name}</strong>{night.costDkk ? <span>{formatMoney(night.costDkk)}</span> : null}</div>
       <Dialog>
         <DialogTrigger asChild><Button size="sm" variant="ghost"><Pencil /> {night.kind === "none" ? "Choose" : "Edit"}</Button></DialogTrigger>
-        <LodgingDialogContent destinationId={destinationId} night={night} onChange={onChange} />
+        <LodgingDialogContent
+          destinationId={destinationId}
+          night={night}
+          onChange={onChange}
+          plannedOtherNights={plannedOtherNights}
+          remainingUnplannedNights={remainingUnplannedNights}
+        />
       </Dialog>
     </div>
   );
 }
 
-function LodgingDialogContent({ destinationId, night, onChange }: { destinationId: string; night: LodgingNight; onChange: (night: LodgingNight) => void }) {
+function LodgingDialogContent({
+  destinationId,
+  night,
+  onChange,
+  plannedOtherNights,
+  remainingUnplannedNights,
+}: {
+  destinationId: string;
+  night: LodgingNight;
+  onChange: (night: LodgingNight, scope?: LodgingApplyScope) => void;
+  plannedOtherNights: number;
+  remainingUnplannedNights: number;
+}) {
   const destination = destinationById.get(destinationId)!;
   const [kind, setKind] = useState<LodgingNight["kind"]>(night.kind === "none" ? "tent-free" : night.kind);
   const [name, setName] = useState(night.name === "Not chosen" ? "Wild tent" : night.name);
   const [cost, setCost] = useState(night.costDkk);
   const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination.lodgings[0]?.id ?? "");
+  const [confirmOverwrite, setConfirmOverwrite] = useState(false);
+  const valid = Number.isFinite(cost) && cost >= 0 && (
+    kind !== "known" || destination.lodgings.some((lodging) => lodging.id === knownId)
+  );
+  const choice = (): LodgingNight => ({
+    afterDay: night.afterDay,
+    kind,
+    name: name || "Other lodging",
+    costDkk: Math.max(0, cost),
+    knownLodgingId: kind === "known" ? knownId : undefined,
+  });
   const chooseKind = (next: LodgingNight["kind"]) => {
     setKind(next);
     if (next === "tent-free") { setName("Wild tent"); setCost(0); }
@@ -343,15 +396,80 @@ function LodgingDialogContent({ destinationId, night, onChange }: { destinationI
           ["tent-camping", "Tent · campsite", "Enter the site cost"],
           ["known", "Known lodging", "Cabins and camps in this area"],
           ["other", "Other", "Name and price it yourself"],
-        ] as const).map(([value, label, note]) => <button className={kind === value ? "is-active" : ""} key={value} onClick={() => chooseKind(value)} type="button"><span>{value.startsWith("tent") ? <TentTree /> : <BedDouble />}</span><span><strong>{label}</strong><small>{note}</small></span>{kind === value ? <Check /> : null}</button>)}
+        ] as const).map(([value, label, note]) => <button className={kind === value ? "is-active" : ""} disabled={value === "known" && destination.lodgings.length === 0} key={value} onClick={() => chooseKind(value)} type="button"><span>{value.startsWith("tent") ? <TentTree /> : <BedDouble />}</span><span><strong>{label}</strong><small>{value === "known" && destination.lodgings.length === 0 ? "No catalog lodging available" : note}</small></span>{kind === value ? <Check /> : null}</button>)}
       </div>
       <div className="dialog-form">
         {kind === "known" ? <label><span>Search known lodging</span><select value={knownId} onChange={(event) => selectKnown(event.target.value)}>{destination.lodgings.map((item) => <option key={item.id} value={item.id}>{item.name} · {formatMoney(item.nightlyCostDkk)}</option>)}</select></label> : null}
         {kind === "other" ? <label><span>Name</span><input onChange={(event) => setName(event.target.value)} placeholder="Guesthouse, cabin…" value={name} /></label> : null}
         {kind === "tent-camping" || kind === "other" ? <label><span>Group cost for this night (DKK)</span><input min={0} onChange={(event) => setCost(Number(event.target.value))} type="number" value={cost} /></label> : null}
       </div>
-      <DialogFooter><DialogClose asChild><Button disabled={!Number.isFinite(cost) || cost < 0} onClick={() => onChange({ afterDay: night.afterDay, kind, name: name || "Other lodging", costDkk: Math.max(0, cost), knownLodgingId: kind === "known" ? knownId : undefined })}>Save night</Button></DialogClose></DialogFooter>
+      {confirmOverwrite ? (
+        <div className="overwrite-confirmation" role="alert">
+          <strong>Replace lodging for every night?</strong>
+          <p>{plannedOtherNights ? `${plannedOtherNights} already planned night${plannedOtherNights === 1 ? "" : "s"} will be replaced.` : "The same choice will be used for the complete trip."} You can still edit individual nights afterward.</p>
+          <DialogFooter>
+            <Button onClick={() => setConfirmOverwrite(false)} variant="outline">Keep individual nights</Button>
+            <DialogClose asChild><Button disabled={!valid} onClick={() => onChange(choice(), "all")} variant="destructive">Confirm overwrite</Button></DialogClose>
+          </DialogFooter>
+        </div>
+      ) : (
+        <DialogFooter className="lodging-dialog-actions">
+          <DialogClose asChild><Button disabled={!valid} onClick={() => onChange(choice())} variant="outline">Save night</Button></DialogClose>
+          <DialogClose asChild><Button disabled={!valid || remainingUnplannedNights === 0} onClick={() => onChange(choice(), "remaining-unplanned")}>Apply to remaining unplanned ({remainingUnplannedNights})</Button></DialogClose>
+          <Button disabled={!valid} onClick={() => setConfirmOverwrite(true)} variant="outline">Apply to every night</Button>
+        </DialogFooter>
+      )}
     </DialogContent>
+  );
+}
+
+function DiscardTripDialog({
+  destinationName,
+  onDiscard,
+  onReturn,
+  tripTitle,
+}: {
+  destinationName: string;
+  onDiscard: () => Promise<void>;
+  onReturn: () => Promise<void>;
+  tripTitle: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [discarding, setDiscarding] = useState(false);
+  const [error, setError] = useState<string>();
+  const discard = async () => {
+    if (discarding) return;
+    setDiscarding(true);
+    setError(undefined);
+    try {
+      await onDiscard();
+    } catch {
+      setError("The trip could not be discarded. Nothing was removed; please try again.");
+      setDiscarding(false);
+      return;
+    }
+    try {
+      await onReturn();
+    } catch {
+      window.location.assign("/explore");
+    }
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={(next) => { if (!discarding) { setOpen(next); if (!next) setError(undefined); } }}>
+      <DialogTrigger asChild><Button variant="ghost"><Trash2 data-icon="inline-start" /> Discard trip</Button></DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Discard {tripTitle}?</DialogTitle>
+          <DialogDescription>This permanently removes the {destinationName} plan and its share links. This action cannot be undone.</DialogDescription>
+        </DialogHeader>
+        {error ? <p className="dialog-error" role="alert">{error}</p> : null}
+        <DialogFooter>
+          <DialogClose asChild><Button disabled={discarding} variant="outline">Keep trip</Button></DialogClose>
+          <Button disabled={discarding} onClick={() => void discard()} variant="destructive"><Trash2 data-icon="inline-start" /> {discarding ? "Discarding…" : "Discard trip"}</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
 
