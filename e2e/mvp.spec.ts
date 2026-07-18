@@ -88,6 +88,29 @@ test("lodging choices can be reused and a trip can be discarded safely", async (
   await expect(page).toHaveURL(/\/explore\?.*month=7/);
   await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]"))).toEqual([]);
+test("Explore filters edit month and travellers through shareable search state", async ({ page }) => {
+  await page.goto("/explore");
+  await page.locator(".destination-row").filter({ hasText: "Fort William" }).click();
+  await expect(page).toHaveURL(/selected=fort-william/);
+
+  await page.getByRole("button", { name: "Filters" }).click();
+  const historyLength = await page.evaluate(() => history.length);
+  const travellers = page.getByRole("slider", { name: "Travellers" });
+  await travellers.press("ArrowRight");
+  await expect(page).toHaveURL(/participants=3/);
+  await expect(page.locator(".filter-range").filter({ hasText: "Travellers" }).getByText("3 people", { exact: true })).toBeVisible();
+
+  const month = page.getByRole("slider", { name: "Travel month" });
+  await month.press("Home");
+  await expect(page).toHaveURL(/month=1/);
+  await expect(page.getByText("No destination fits every limit")).toBeVisible();
+  await expect(page).not.toHaveURL(/selected=/);
+  expect(await page.evaluate(() => history.length)).toBe(historyLength);
+
+  await page.reload();
+  await page.getByRole("button", { name: "Filters" }).click();
+  await expect(page.getByRole("slider", { name: "Travel month" })).toHaveAttribute("aria-valuenow", "1");
+  await expect(page.getByRole("slider", { name: "Travellers" })).toHaveAttribute("aria-valuenow", "3");
 });
 
 test("full-height pages fill the viewport without the optional preview ribbon", async ({ page }) => {
