@@ -24,6 +24,7 @@ describe("Amadeus travel adapter", () => {
     const mapped = mapAmadeusOffer(offer, "2026-07-01T10:00:00Z");
 
     expect(mapped.outbound.stages.map((stage) => stage.kind)).toEqual(["flight"]);
+    expect(mapped.outbound.stages[0].geometry).toBeUndefined();
     expect(mapped.pricingBasis).toBe("per-group");
     expect(deriveTravelOptionTotals(mapped)).toMatchObject({ durationMinutes: 250, layovers: 0, cost: { amount: 2900 } });
   });
@@ -62,6 +63,19 @@ describe("Amadeus travel adapter", () => {
     };
     expect(() => mapAmadeusOffer(offer, "2026-07-01T10:00:00Z")).toThrow(/price/);
     expect(() => mapAmadeusOffer({ ...offer, price: { grandTotal: "2900", currency: "DKK" } }, "2026-07-01T10:00:00Z")).toThrow(/duration/);
+  });
+
+  it.each([-1, 1.5, Number.NaN])("rejects an invalid technical-stop count of %s", (numberOfStops) => {
+    const offer: AmadeusOffer = {
+      id: "invalid-stops",
+      itineraries: [
+        { duration: "PT2H", segments: [segment("101", "AAL", "INN", "2026-07-10T08:00:00Z", "2026-07-10T10:00:00Z", "PT2H", numberOfStops)] },
+        { duration: "PT2H", segments: [segment("102", "INN", "AAL", "2026-07-15T16:00:00Z", "2026-07-15T18:00:00Z", "PT2H")] },
+      ],
+      price: { grandTotal: "2900", currency: "DKK" },
+    };
+
+    expect(() => mapAmadeusOffer(offer, "2026-07-01T10:00:00Z")).toThrow(/technical-stop count/);
   });
 });
 

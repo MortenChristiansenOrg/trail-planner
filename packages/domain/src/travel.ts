@@ -244,6 +244,9 @@ export function mapAmadeusOffer(offer: AmadeusOffer, retrievedAt: string): Trave
           transferType: "layover",
         });
       }
+      if (segment.numberOfStops !== undefined && (!Number.isInteger(segment.numberOfStops) || segment.numberOfStops < 0)) {
+        throw new Error("Flight technical-stop count is invalid");
+      }
       stages.push({
         id: `${direction}-flight-${segment.id}`,
         kind: "flight",
@@ -254,7 +257,6 @@ export function mapAmadeusOffer(offer: AmadeusOffer, retrievedAt: string): Trave
         arrivalTime: segment.arrival.at,
         operator: segment.carrierCode,
         service: `${segment.carrierCode}${segment.number}`,
-        geometry: segment.departure.coordinates && segment.arrival.coordinates ? [segment.departure.coordinates, segment.arrival.coordinates] : undefined,
         confidence: "high",
         costComponentIds: [costId],
         technicalStops: segment.numberOfStops ? [`${segment.numberOfStops} provider-reported technical stop${segment.numberOfStops === 1 ? "" : "s"}`] : [],

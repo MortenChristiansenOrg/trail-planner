@@ -61,17 +61,20 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
 });
 
 test("travel stages use provider-backed road geometry and never invent missing detail", async ({ page }) => {
-  await page.route("https://router.project-osrm.org/**", (route) => route.fulfill({
-    contentType: "application/json",
-    body: JSON.stringify({
-      code: "Ok",
-      routes: [{
-        distance: 1_300_000,
-        duration: 48_600,
-        geometry: { coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]] },
-      }],
-    }),
-  }));
+  let routingAvailable = true;
+  await page.route("https://router.project-osrm.org/**", (route) => routingAvailable
+    ? route.fulfill({
+        contentType: "application/json",
+        body: JSON.stringify({
+          code: "Ok",
+          routes: [{
+            distance: 1_300_000,
+            duration: 48_600,
+            geometry: { coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]] },
+          }],
+        }),
+      })
+    : route.abort());
 
   await page.goto("/explore?month=7&maxLayovers=1");
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
@@ -93,6 +96,17 @@ test("travel stages use provider-backed road geometry and never invent missing d
     await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
     await page.keyboard.press("Escape");
   }
+
+  routingAvailable = false;
+  await page.reload();
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+
+  await page.goto("/explore?month=7&selected=innsbruck");
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
 });
 
 test("lodging choices can be reused and a trip can be discarded safely", async ({ page }, testInfo) => {

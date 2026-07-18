@@ -115,7 +115,14 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     }
     if (requestId !== travelRequestRef.current) return;
     const latest = tripRef.current;
-    if (latest?.id === selectedTripId) await save({ ...latest, selectedTravelMode: mode, selectedTravelOption: option });
+    if (latest?.id === selectedTripId) {
+      const selectedTravelOption = option ?? (
+        latest.selectedTravelMode === mode && latest.selectedTravelOption?.id === estimate?.optionId
+          ? latest.selectedTravelOption
+          : undefined
+      );
+      await save({ ...latest, selectedTravelMode: mode, selectedTravelOption });
+    }
   };
   const updateNight = (night: LodgingNight, scope?: LodgingApplyScope) => save(applyLodgingChoice(trip, night, scope));
   const discardTrip = () => store.remove(trip.id);

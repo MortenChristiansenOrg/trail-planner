@@ -62,7 +62,13 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
       <DialogContent className="travel-option-dialog">
         <DialogHeader>
           <DialogTitle>{detail?.label ?? "Travel stage details"}</DialogTitle>
-          <DialogDescription>{detail ? "Complete outbound and return snapshot, including connections, assumptions, and component costs." : optionId ? "Loading the full option behind this Explore digest." : "Detailed stage data has not been loaded for this catalog estimate."}</DialogDescription>
+          <DialogDescription>{detail
+            ? "Complete outbound and return snapshot, including connections, assumptions, and component costs."
+            : loading
+              ? "Loading the full option behind this Explore digest."
+              : loadFailed
+                ? "The detailed travel option could not be loaded."
+                : "Detailed stage data has not been loaded for this catalog estimate."}</DialogDescription>
         </DialogHeader>
         {detail ? <TravelOptionBody option={detail} /> : loading ? <div className="travel-detail-loading" role="status"><Clock3 /> Loading stages…</div> : <div className="travel-detail-unavailable"><CircleAlert /><div><strong>Stage detail not available</strong><p>{loadFailed ? "The detail record could not be loaded. The digest remains available." : "The aggregate duration and price remain visible, but no provider-backed leg sequence is stored. We do not invent intermediate stops."}</p></div></div>}
       </DialogContent>
