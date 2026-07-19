@@ -24,6 +24,7 @@ describe("explore search", () => {
     expect(estimateFits({
       mode: "car",
       available: true,
+      accessNode: "Test trailhead",
       oneWayHours: 6,
       costPerPersonDkk: 500,
       note: "Test estimate",
@@ -95,6 +96,7 @@ describe("explore search", () => {
       travel: [{
         mode: "car" as const,
         available: true,
+        accessNode: "Test origin",
         oneWayHours: 4,
         costPerPersonDkk: 2_000,
         note: "Test estimate",
@@ -108,6 +110,7 @@ describe("explore search", () => {
       travel: [{
         mode: "car" as const,
         available: true,
+        accessNode: "Test origin",
         oneWayHours: 10,
         costPerPersonDkk: 500,
         note: "Test estimate",
