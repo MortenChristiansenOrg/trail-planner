@@ -15,6 +15,7 @@ import {
   Plane,
   Plus,
   Route,
+  RotateCcw,
   Share2,
   TentTree,
   Trash2,
@@ -33,7 +34,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Field, FieldDescription, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
 import { AppShell } from "@/components/layout/AppShell";
 import {
   destinationById,
@@ -51,11 +55,15 @@ import {
   applyLodgingChoice,
   applyStartDate,
   calculateTripCost,
+  getCostItemAmount,
   getSelectedTravel,
   removeActivityGroup,
+  removeCustomCost,
+  setTripCostOverride,
   type LodgingNight,
   type LodgingApplyScope,
   type PlannedTrip,
+  type TripCostItem,
 } from "@/features/trips/model";
 import { useTripStore } from "@/features/trips/TripStore";
 
@@ -217,12 +225,38 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
             </section>
 
             <section className="budget-card">
-              <div className="section-heading"><div><p className="step-label">Running estimate</p><h2>{formatMoney(costs.total)}</h2></div><Badge variant={costs.total > trip.maxBudgetDkk ? "destructive" : "secondary"}>{costs.total > trip.maxBudgetDkk ? "Over limit" : `${formatMoney(trip.maxBudgetDkk - costs.total)} left`}</Badge></div>
-              <div className="budget-lines">
-                <BudgetLine label="Return travel" value={costs.travelCost} note={selectedTravel ? `${modeLabels[selectedTravel.mode]} · ${trip.participants} people` : "Choose a travel mode"} />
-                <BudgetLine label="Lodging" value={costs.lodgingCost} note={`${trip.nights.filter((night) => night.kind !== "none").length} of ${trip.nights.length} nights planned`} />
-                {trip.customCosts.map((item) => (
-                  <div className="budget-line" key={item.id}><div><strong>{item.label}</strong><small>Custom cost</small></div><span>{formatMoney(item.amountDkk)}<Button aria-label={`Remove ${item.label}`} onClick={() => save({ ...trip, customCosts: trip.customCosts.filter((cost) => cost.id !== item.id) })} size="icon" variant="ghost"><Trash2 /></Button></span></div>
+              <div className="section-heading"><div><p className="step-label">Running estimate</p><h2>{formatMoney(costs.total)}</h2><p className="budget-per-person">{formatMoney(costs.perPerson)} per person</p></div><Badge variant={costs.total > trip.maxBudgetDkk ? "destructive" : "secondary"}>{costs.total > trip.maxBudgetDkk ? "Over limit" : `${formatMoney(trip.maxBudgetDkk - costs.total)} left`}</Badge></div>
+              <div className="budget-categories">
+                {costs.categories.map((category) => (
+                  <section className={category.item.overrideCost !== undefined ? "budget-category is-overridden" : "budget-category"} key={category.item.id}>
+                    <div className="budget-category__header">
+                      <div className="budget-category__title">
+                        <span><strong>{category.item.label}</strong>{category.item.overrideCost !== undefined ? <Badge variant="secondary">Overridden total</Badge> : null}</span>
+                        {category.item.overrideNote ? <small>{category.item.overrideNote}</small> : null}
+                      </div>
+                      <span>
+                        {formatMoney(category.total)}
+                        {category.children.length > 1 || category.item.overrideCost !== undefined ? <CostItemEditor calculatedAmount={category.children.reduce((sum, item) => sum + item.calculatedCost.amount, 0)} item={category.item} onChange={(amount, note) => save(setTripCostOverride(trip, category.item.id, amount, note))} suggestedAmount={category.total} /> : null}
+                      </span>
+                    </div>
+                    <div className="budget-components">
+                      {category.children.map((item) => (
+                        <div className={item.overrideCost !== undefined ? "budget-component is-overridden" : "budget-component"} key={item.id} style={{ paddingInlineStart: `${10 + (item.depth - 1) * 14}px` }}>
+                          <div>
+                            <strong>{item.label}</strong>
+                            <small>{scopeLabel(item)} · {item.priceType}{item.overrideCost !== undefined ? ` · estimated ${formatMoney(item.calculatedCost.amount)}` : ""}</small>
+                            {item.overrideNote ? <em>{item.overrideNote}</em> : null}
+                          </div>
+                          <span>
+                            <Badge variant={item.overrideCost !== undefined ? "secondary" : item.priceType === "manual" ? "outline" : "secondary"}>{item.overrideCost !== undefined ? "Overridden" : item.priceType === "manual" ? "Custom" : "Calculated"}</Badge>
+                            <strong>{formatMoney(getCostItemAmount(item))}</strong>
+                            <CostItemEditor calculatedAmount={item.calculatedCost.amount} item={item} onChange={(amount, note) => save(setTripCostOverride(trip, item.id, amount, note))} suggestedAmount={getCostItemAmount(item)} />
+                            {item.customCostId ? <Button aria-label={`Remove ${item.label}`} onClick={() => save(removeCustomCost(trip, item.customCostId!))} size="icon" variant="ghost"><Trash2 /></Button> : null}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </div>
               <AddCostDialog onAdd={(label, amount) => save(addCustomCost(trip, label, amount))} />
@@ -341,7 +375,9 @@ function LodgingDialogContent({
   const [cost, setCost] = useState(night.costDkk);
   const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination.lodgings[0]?.id ?? "");
   const [confirmOverwrite, setConfirmOverwrite] = useState(false);
-  const valid = Number.isFinite(cost) && cost >= 0;
+  const valid = Number.isFinite(cost) && cost >= 0 && (
+    kind !== "known" || destination.lodgings.some((lodging) => lodging.id === knownId)
+  );
   const choice = (): LodgingNight => ({
     afterDay: night.afterDay,
     kind,
@@ -373,7 +409,7 @@ function LodgingDialogContent({
           ["tent-camping", "Tent · campsite", "Enter the site cost"],
           ["known", "Known lodging", "Cabins and camps in this area"],
           ["other", "Other", "Name and price it yourself"],
-        ] as const).map(([value, label, note]) => <button className={kind === value ? "is-active" : ""} key={value} onClick={() => chooseKind(value)} type="button"><span>{value.startsWith("tent") ? <TentTree /> : <BedDouble />}</span><span><strong>{label}</strong><small>{note}</small></span>{kind === value ? <Check /> : null}</button>)}
+        ] as const).map(([value, label, note]) => <button className={kind === value ? "is-active" : ""} disabled={value === "known" && destination.lodgings.length === 0} key={value} onClick={() => chooseKind(value)} type="button"><span>{value.startsWith("tent") ? <TentTree /> : <BedDouble />}</span><span><strong>{label}</strong><small>{value === "known" && destination.lodgings.length === 0 ? "No catalog lodging available" : note}</small></span>{kind === value ? <Check /> : null}</button>)}
       </div>
       <div className="dialog-form">
         {kind === "known" ? <label><span>Search known lodging</span><select value={knownId} onChange={(event) => selectKnown(event.target.value)}>{destination.lodgings.map((item) => <option key={item.id} value={item.id}>{item.name} · {formatMoney(item.nightlyCostDkk)}</option>)}</select></label> : null}
@@ -428,8 +464,7 @@ function DiscardTripDialog({
     try {
       await onReturn();
     } catch {
-      setError("The trip was discarded, but Explore could not be opened. Use the Explore navigation to continue.");
-      setDiscarding(false);
+      window.location.assign("/explore");
     }
   };
 
@@ -466,8 +501,62 @@ function AddCostDialog({ onAdd }: { onAdd: (label: string, amount: number) => vo
   );
 }
 
-function BudgetLine({ label, value, note }: { label: string; value: number; note: string }) {
-  return <div className="budget-line"><div><strong>{label}</strong><small>{note}</small></div><span>{formatMoney(value)}</span></div>;
+function CostItemEditor({
+  calculatedAmount,
+  item,
+  onChange,
+  suggestedAmount,
+}: {
+  calculatedAmount: number;
+  item: TripCostItem;
+  onChange: (amount?: number, note?: string) => void;
+  suggestedAmount: number;
+}) {
+  const [open, setOpen] = useState(false);
+  const [amount, setAmount] = useState(String(item.overrideCost?.amount ?? suggestedAmount));
+  const [note, setNote] = useState(item.overrideNote ?? "");
+  const numericAmount = Number(amount);
+  const valid = amount.trim() !== "" && Number.isFinite(numericAmount) && numericAmount >= 0;
+  const amountId = `${item.id}-override-amount`;
+  const noteId = `${item.id}-override-note`;
+  const changeOpen = (next: boolean) => {
+    setOpen(next);
+    if (next) {
+      setAmount(String(item.overrideCost?.amount ?? suggestedAmount));
+      setNote(item.overrideNote ?? "");
+    }
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={changeOpen}>
+      <DialogTrigger asChild><Button aria-label={`Edit ${item.label}`} size="icon" variant="ghost"><Pencil /></Button></DialogTrigger>
+      <DialogContent>
+        <DialogHeader><DialogTitle>Edit {item.label}</DialogTitle><DialogDescription>Clearing an override returns this row to its current calculated amount or itemized total.</DialogDescription></DialogHeader>
+        <FieldGroup>
+          <Field data-invalid={!valid}>
+            <FieldLabel htmlFor={amountId}>Use amount (DKK)</FieldLabel>
+            <Input aria-invalid={!valid} id={amountId} min={0} onChange={(event) => setAmount(event.target.value)} type="number" value={amount} />
+            <FieldDescription>Calculated value: {formatMoney(calculatedAmount)} · {scopeLabel(item)}</FieldDescription>
+            {!valid ? <FieldError>Enter zero or a positive amount.</FieldError> : null}
+          </Field>
+          <Field>
+            <FieldLabel htmlFor={noteId}>Override note</FieldLabel>
+            <Textarea id={noteId} maxLength={180} onChange={(event) => setNote(event.target.value)} placeholder="Why this amount is more useful" value={note} />
+          </Field>
+        </FieldGroup>
+        <DialogFooter>
+          {item.overrideCost !== undefined ? <Button onClick={() => { onChange(); setOpen(false); }} variant="outline"><RotateCcw data-icon="inline-start" /> Clear override</Button> : null}
+          <Button disabled={!valid} onClick={() => { onChange(numericAmount, note); setOpen(false); }}>Use override</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+function scopeLabel(item: TripCostItem) {
+  if (item.chargingScope === "per-person") return "group total from a per-traveller rate";
+  if (item.chargingScope === "per-vehicle") return `group total for ${item.quantity} vehicle${item.quantity === 1 ? "" : "s"}`;
+  return item.quantity === 1 ? "whole-group cost" : `group total for ${item.quantity} units`;
 }
 
 function modeIcon(mode: TravelMode) {
