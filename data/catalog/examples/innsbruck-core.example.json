@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "run": {
+    "id": "2026-07-19-innsbruck-example",
+    "task": "refresh-data",
+    "createdAt": "2026-07-19T12:00:00.000Z",
+    "tool": "firecrawl-cli"
+  },
+  "destination": {
+    "key": "innsbruck",
+    "action": "refresh",
+    "name": "Innsbruck",
+    "region": "Tyrol",
+    "countryCode": "AT"
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "coordinates",
+      "value": [11.404, 47.269],
+      "status": "draft",
+      "source": {
+        "key": "openstreetmap",
+        "url": "https://www.openstreetmap.org/?mlat=47.269&mlon=11.404#map=12/47.269/11.404",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T12:00:00.000Z",
+      "confidence": "medium",
+      "notes": "Example dossier using the source already recorded by the catalog."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "partial",
+      "reasons": ["Example covers coordinates only"]
+    }
+  ]
+}

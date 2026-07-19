@@ -12,7 +12,8 @@
     "typecheck": "pnpm -r typecheck",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "catalog:validate": "node scripts/catalog-data/validate-dossier.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

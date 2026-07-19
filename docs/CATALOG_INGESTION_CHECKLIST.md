@@ -28,3 +28,5 @@ Complete this checklist before changing a destination or hike from draft to publ
 - [ ] List thumbnails use responsive sources and lazy loading; only the active hero may load eagerly.
 
 Run `pnpm test`, `pnpm typecheck`, and the catalog browser test after ingestion. `validateCatalog` must accept the published collection.
+
+Before proposing ingestion, validate the review dossier with `pnpm catalog:validate -- data/catalog/drafts/<file>.json`. Raw Firecrawl captures belong in `.catalog-work/`, not Git.

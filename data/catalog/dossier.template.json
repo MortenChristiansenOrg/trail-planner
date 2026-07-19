@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "run": {
+    "id": "YYYY-MM-DD-destination-task",
+    "task": "refresh-data",
+    "createdAt": "YYYY-MM-DDTHH:mm:ss.sssZ",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 0,
+    "creditsAfter": 0
+  },
+  "destination": {
+    "key": "destination-key",
+    "action": "refresh",
+    "name": "Destination name",
+    "region": "Region",
+    "countryCode": "DK"
+  },
+  "claims": [
+    {
+      "domain": "seasonality",
+      "subjectKey": "destination-key",
+      "field": "recommendedMonths",
+      "value": [6, 7, 8, 9],
+      "status": "draft",
+      "source": {
+        "key": "official-source-key",
+        "url": "https://example.org/official-page",
+        "kind": "official"
+      },
+      "retrievedAt": "YYYY-MM-DDTHH:mm:ss.sssZ",
+      "observedAt": "YYYY-MM-DDTHH:mm:ss.sssZ",
+      "refreshAfter": "YYYY-MM-DDTHH:mm:ss.sssZ",
+      "confidence": "high",
+      "notes": "Quote-free summary of what the source supports."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    }
+  ]
+}
