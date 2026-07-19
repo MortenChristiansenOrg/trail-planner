@@ -24,6 +24,7 @@ describe("explore search", () => {
     expect(estimateFits({
       mode: "car",
       available: true,
+      accessNode: "Test trailhead",
       oneWayHours: 6,
       costPerPersonDkk: 500,
       note: "Test estimate",
@@ -91,9 +92,11 @@ describe("explore search", () => {
     const fastExpensive = {
       ...destinations[0],
       id: "fast-expensive",
+      recommendedMonths: [7],
       travel: [{
         mode: "car" as const,
         available: true,
+        accessNode: "Test origin",
         oneWayHours: 4,
         costPerPersonDkk: 2_000,
         note: "Test estimate",
@@ -103,9 +106,11 @@ describe("explore search", () => {
     const cheapSlow = {
       ...destinations[1],
       id: "cheap-slow",
+      recommendedMonths: [7],
       travel: [{
         mode: "car" as const,
         available: true,
+        accessNode: "Test origin",
         oneWayHours: 10,
         costPerPersonDkk: 500,
         note: "Test estimate",
@@ -117,12 +122,16 @@ describe("explore search", () => {
       modes: ["car"],
       participants: 1,
       budget: 10_000,
+      month: 7,
+      seasonTolerance: 0,
     });
     const resultsForFour = rankDestinations([fastExpensive, cheapSlow], {
       ...defaultExploreSearch,
       modes: ["car"],
       participants: 4,
       budget: 10_000,
+      month: 7,
+      seasonTolerance: 0,
     });
 
     expect(resultsForOne.map((result) => result.destination.id)).toEqual(["fast-expensive", "cheap-slow"]);

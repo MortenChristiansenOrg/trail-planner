@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sheet";
 import { Slider } from "@/components/ui/slider";
 import { AppShell } from "@/components/layout/AppShell";
+import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import {
   countryOptions,
   destinations,
@@ -303,6 +304,7 @@ function DestinationCard({
   return (
     <button aria-pressed={selected} className={`destination-row${selected ? " is-selected" : ""}`} onClick={onSelect} type="button">
       <span className="destination-rank">{index}</span>
+      <CatalogMediaFigure media={result.destination.media} showAttribution={false} sizes="56px" variant="thumbnail" />
       <span className="destination-copy">
         <strong>{result.destination.name}</strong>
         <small>{result.destination.region} · {result.destination.country}</small>
@@ -334,6 +336,7 @@ function SelectedDestinationCard({
   return (
     <article className="selected-destination">
       <div className="selected-destination__top">
+        <CatalogMediaFigure loading="eager" media={destination.media} sizes="150px" variant="thumbnail" />
         <div>
           <p className="step-label">{destination.country}</p>
           <h2>{destination.name}</h2>
@@ -389,6 +392,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
           <SheetDescription>{destination.character}</SheetDescription>
         </SheetHeader>
         <div className="destination-sheet__body">
+          <CatalogMediaFigure media={destination.media} sizes="(max-width: 640px) 90vw, 540px" />
           <section>
             <h3>Available travel</h3>
             <div className="detail-travel-list">
@@ -402,16 +406,18 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
             </div>
           </section>
           <section>
-            <h3>Routes in the area</h3>
-            <div className="route-preview-list">
+            <h3>Hikes in the area</h3>
+            {destination.hikes.length ? <div className="route-preview-list">
               {destination.hikes.map((hike) => (
-                <article key={hike.id}>
+                <article className={hike.media ? "has-media" : undefined} key={hike.id}>
+                  {hike.media ? <CatalogMediaFigure media={hike.media} sizes="90px" variant="thumbnail" /> : null}
                   <Route />
-                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}</small></div>
+                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry being curated"}</small></div>
                 </article>
               ))}
-            </div>
+            </div> : <div className="routes-curating"><Route /><div><strong>Trails being curated</strong><p>This is a useful access and logistics hub, but no route geometry has passed source review yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
           </section>
+          <p className="catalog-source">Catalog source reviewed {destination.provenance.reviewedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
         </div>
         <SheetFooter><Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button></SheetFooter>
       </SheetContent>
