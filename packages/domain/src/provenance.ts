@@ -1,4 +1,6 @@
-export type ConfidenceLevel = "low" | "medium" | "high";
+export const confidenceLevels = ["low", "medium", "high"] as const;
+
+export type ConfidenceLevel = (typeof confidenceLevels)[number];
 
 export type PriceType = "live" | "sampled" | "estimated" | "manual" | "unavailable";
 

@@ -14,7 +14,7 @@ export default defineConfig({
   webServer: {
     command: "pnpm --filter @trail-planner/web dev --host 127.0.0.1 --port 4173",
     url: "http://127.0.0.1:4173",
-    reuseExistingServer: false,
+    reuseExistingServer: !process.env.CI,
     timeout: 120_000,
     env: {
       ...process.env,

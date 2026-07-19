@@ -1,5 +1,6 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
+import { catalogDataDomain, confidence, coverageStatus } from "./catalogValidators";
 
 const money = v.object({
   amount: v.number(),
@@ -10,7 +11,7 @@ const provenanceClaim = v.object({
   sourceId: v.string(),
   sourceUrl: v.optional(v.string()),
   verifiedAt: v.string(),
-  confidence: v.union(v.literal("low"), v.literal("medium"), v.literal("high")),
+  confidence,
   priceType: v.optional(
     v.union(
       v.literal("live"),
@@ -23,21 +24,6 @@ const provenanceClaim = v.object({
   attribution: v.optional(v.string()),
   refreshPolicy: v.optional(v.string()),
 });
-
-const catalogDataDomain = v.union(
-  v.literal("destination-core"),
-  v.literal("seasonality"),
-  v.literal("access"),
-  v.literal("hikes"),
-  v.literal("hike-geometry"),
-  v.literal("lodging"),
-  v.literal("travel-road"),
-  v.literal("travel-transit"),
-  v.literal("travel-flight"),
-  v.literal("media"),
-);
-
-const confidence = v.union(v.literal("low"), v.literal("medium"), v.literal("high"));
 
 export default defineSchema({
   users: defineTable({
@@ -129,13 +115,7 @@ export default defineSchema({
   dataCoverage: defineTable({
     destinationKey: v.string(),
     domain: catalogDataDomain,
-    status: v.union(
-      v.literal("missing"),
-      v.literal("partial"),
-      v.literal("fresh"),
-      v.literal("stale"),
-      v.literal("unavailable"),
-    ),
+    status: coverageStatus,
     claimCount: v.number(),
     assessedAt: v.number(),
     staleAt: v.optional(v.number()),

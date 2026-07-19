@@ -1,26 +1,6 @@
 import { v } from "convex/values";
 import { internalMutation, query } from "./_generated/server";
-
-const catalogDataDomain = v.union(
-  v.literal("destination-core"),
-  v.literal("seasonality"),
-  v.literal("access"),
-  v.literal("hikes"),
-  v.literal("hike-geometry"),
-  v.literal("lodging"),
-  v.literal("travel-road"),
-  v.literal("travel-transit"),
-  v.literal("travel-flight"),
-  v.literal("media"),
-);
-
-const coverageStatus = v.union(
-  v.literal("missing"),
-  v.literal("partial"),
-  v.literal("fresh"),
-  v.literal("stale"),
-  v.literal("unavailable"),
-);
+import { catalogDataDomain, coverageStatus } from "./catalogValidators";
 
 export const coverageForDestination = query({
   args: { destinationKey: v.string() },

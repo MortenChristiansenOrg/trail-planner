@@ -15,10 +15,13 @@ export const catalogDataDomains = [
 
 export type CatalogDataDomain = (typeof catalogDataDomains)[number];
 
-export type CoverageStatus = "missing" | "partial" | "fresh" | "stale" | "unavailable";
+export const coverageStatuses = ["missing", "partial", "fresh", "stale", "unavailable"] as const;
+export const sourceKinds = ["official", "open-data", "provider", "community", "manual"] as const;
+
+export type CoverageStatus = (typeof coverageStatuses)[number];
 export type EnrichmentTask = "add-destination" | "refresh-data";
 export type EnrichmentStatus = "queued" | "running" | "completed" | "failed";
-export type SourceKind = "official" | "open-data" | "provider" | "community" | "manual";
+export type SourceKind = (typeof sourceKinds)[number];
 
 export type CatalogClaim = {
   destinationKey: string;

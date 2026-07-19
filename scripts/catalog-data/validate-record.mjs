@@ -1,14 +1,13 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { catalogDataDomains, coverageStatuses, sourceKinds } from "../../packages/domain/src/catalogData.ts";
+import { confidenceLevels } from "../../packages/domain/src/provenance.ts";
 
-const domains = new Set([
-  "destination-core", "seasonality", "access", "hikes", "hike-geometry",
-  "lodging", "travel-road", "travel-transit", "travel-flight", "media",
-]);
-const coverageStatuses = new Set(["missing", "partial", "fresh", "stale", "unavailable"]);
-const sourceKinds = new Set(["official", "open-data", "provider", "community", "manual"]);
-const confidenceLevels = new Set(["low", "medium", "high"]);
+const domains = new Set(catalogDataDomains);
+const validCoverageStatuses = new Set(coverageStatuses);
+const validSourceKinds = new Set(sourceKinds);
+const validConfidenceLevels = new Set(confidenceLevels);
 const runTools = new Set(["firecrawl-cli", "provider-api"]);
 
 function validDate(value) {
@@ -65,11 +64,11 @@ export function validateCatalogRecord(record) {
     if (!isObject(claim.source)) errors.push(`${prefix}.source must be an object`);
     if (!isNonEmptyString(claim.source?.key)) errors.push(`${prefix}.source.key is required`);
     if (!validUrl(claim.source?.url)) errors.push(`${prefix}.source.url must be HTTPS`);
-    if (!sourceKinds.has(claim.source?.kind)) errors.push(`${prefix}.source.kind is invalid`);
+    if (!validSourceKinds.has(claim.source?.kind)) errors.push(`${prefix}.source.kind is invalid`);
     if (!validDate(claim.retrievedAt)) errors.push(`${prefix}.retrievedAt must be an ISO date`);
     if (claim.observedAt !== undefined && !validDate(claim.observedAt)) errors.push(`${prefix}.observedAt must be an ISO date`);
     if (!validDate(claim.refreshAfter)) errors.push(`${prefix}.refreshAfter must be an ISO date`);
-    if (!confidenceLevels.has(claim.confidence)) errors.push(`${prefix}.confidence is invalid`);
+    if (!validConfidenceLevels.has(claim.confidence)) errors.push(`${prefix}.confidence is invalid`);
     if (!("value" in claim)) errors.push(`${prefix}.value is required; use null only for an evidenced unavailable claim`);
     if (domains.has(claim.domain) && isNonEmptyString(claim.subjectKey) && isNonEmptyString(claim.field) && validUrl(claim.source?.url)) {
       const key = `${claim.domain}:${claim.subjectKey}:${claim.field}:${claim.source.url}`;
@@ -87,7 +86,7 @@ export function validateCatalogRecord(record) {
       continue;
     }
     if (!domains.has(coverage.domain)) errors.push(`${prefix}.domain is invalid`);
-    if (!coverageStatuses.has(coverage.status)) errors.push(`${prefix}.status is invalid`);
+    if (!validCoverageStatuses.has(coverage.status)) errors.push(`${prefix}.status is invalid`);
     if (!Array.isArray(coverage.reasons)) errors.push(`${prefix}.reasons must be an array`);
     if (domains.has(coverage.domain)) {
       if (coverageDomains.has(coverage.domain)) errors.push(`${prefix}.domain is duplicated`);
