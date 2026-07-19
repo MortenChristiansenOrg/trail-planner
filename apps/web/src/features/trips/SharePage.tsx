@@ -8,7 +8,7 @@ import { useAuthSession } from "@/features/auth/AuthSession";
 import { destinationById, formatHours, formatMoney, monthNames } from "@/features/catalog/catalog";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type TrailLine } from "@/features/maps/TrailMap";
-import { calculateTripCost, getSelectedTravel, type PlannedTrip } from "@/features/trips/model";
+import { calculateTripCost, getCostItemAmount, getSelectedTravel, type PlannedTrip } from "@/features/trips/model";
 import { useTripStore } from "@/features/trips/TripStore";
 
 export function SharePage({ token }: { token: string }) {
@@ -56,7 +56,7 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
           <div className="share-summary">
             <span><CalendarDays /><strong>{trip.tripDays} days</strong><small>{trip.startDate ?? monthNames[trip.plannedMonth - 1]}</small></span>
             <span><UsersRound /><strong>{trip.participants}</strong><small>travellers</small></span>
-            <span><WalletCards /><strong>{formatMoney(costs.total)}</strong><small>planning estimate</small></span>
+            <span><WalletCards /><strong>{formatMoney(costs.total)}</strong><small>{formatMoney(costs.perPerson)} per person</small></span>
           </div>
         </header>
         <div className="share-grid">
@@ -79,7 +79,17 @@ function SharedTripView({ trip }: { trip: PlannedTrip }) {
           </section>
           <aside className="share-side">
             <div className="share-map"><TrailMap lines={lines} markers={[{ id: destination.id, label: destination.name, coordinates: destination.coordinates }]} mode="detail" selectedId={destination.id} /></div>
-            <section className="share-budget"><h2>Estimate</h2><p><span>Travel</span><strong>{formatMoney(costs.travelCost)}</strong></p><p><span>Lodging</span><strong>{formatMoney(costs.lodgingCost)}</strong></p><p><span>Other costs</span><strong>{formatMoney(costs.customCost)}</strong></p><p className="share-budget__total"><span>Total</span><strong>{formatMoney(costs.total)}</strong></p></section>
+            <section className="share-budget">
+              <h2>Estimate</h2>
+              {costs.categories.map((category) => (
+                <div className="share-budget__category" key={category.item.id}>
+                  <p><span>{category.item.label}{category.item.overrideCost !== undefined ? <Badge variant="secondary">Overridden</Badge> : null}</span><strong>{formatMoney(category.total)}</strong></p>
+                  {category.children.map((item) => <p className={category.item.overrideCost !== undefined ? "share-budget__component is-excluded" : "share-budget__component"} key={item.id} style={{ paddingInlineStart: `${item.depth * 12}px` }}><span>{item.label}{category.item.overrideCost !== undefined ? <Badge variant="outline">Excluded from total</Badge> : item.overrideCost !== undefined ? <Badge variant="outline">Using override</Badge> : null}</span><strong>{formatMoney(getCostItemAmount(item))}</strong></p>)}
+                </div>
+              ))}
+              <p className="share-budget__total"><span>Group total</span><strong>{formatMoney(costs.total)}</strong></p>
+              <p className="share-budget__per-person"><span>Per person</span><strong>{formatMoney(costs.perPerson)}</strong></p>
+            </section>
             {trip.nights.some((night) => night.kind !== "none") ? <section className="share-lodging"><h2><BedDouble /> Nights</h2>{trip.nights.filter((night) => night.kind !== "none").map((night) => <p key={night.afterDay}><span>After day {night.afterDay}</span><strong>{night.name}</strong></p>)}</section> : null}
           </aside>
         </div>

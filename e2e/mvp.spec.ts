@@ -45,7 +45,7 @@ test("core planning flow remains connected", async ({ page }, testInfo) => {
   await page.goto(`/share/${token}`);
   await expect(page.getByText("Read-only plan")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Day by day" })).toBeVisible();
-  await expect(page.getByText("Pfeishütte")).toBeVisible();
+  await expect(page.getByText("Pfeishütte", { exact: true })).toBeVisible();
 });
 
 test("primary pages do not overflow horizontally", async ({ page }) => {
@@ -123,6 +123,41 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   await hikeMedia.getByText("Photo credit").click();
   await expect(hikeMedia.getByText("Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0")).toBeVisible();
   await expect(hikeMedia).not.toContainText(/route geometry being curated/i);
+});
+
+test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "The complete budget mutation flow is covered once on desktop.");
+
+  await page.goto("/explore?month=7&participants=2");
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+  await page.getByRole("button", { name: /Airplane/ }).click();
+
+  const budget = page.locator(".budget-card");
+  await budget.getByRole("button", { name: "Edit Return flights and ground transfer" }).click();
+  const editor = page.getByRole("dialog", { name: "Edit Return flights and ground transfer" });
+  await editor.getByRole("spinbutton", { name: "Use amount (DKK)" }).fill("3100");
+  await editor.getByRole("textbox", { name: "Override note" }).fill("Checked fare for this weekend");
+  await editor.getByRole("button", { name: "Use override" }).click();
+  await expect(budget).toContainText("3.100 kr.");
+  await expect(budget).toContainText("1.550 kr. per person");
+  await expect(budget).toContainText("estimated 2.900 kr.");
+  await expect(budget).toContainText("Checked fare for this weekend");
+
+  await budget.getByRole("button", { name: "Edit Return flights and ground transfer" }).click();
+  await page.getByRole("dialog", { name: "Edit Return flights and ground transfer" }).getByRole("button", { name: "Clear override" }).click();
+  await expect(budget).toContainText("2.900 kr.");
+  await expect(budget).toContainText("1.450 kr. per person");
+  await expect(budget).not.toContainText("Checked fare for this weekend");
+
+  await budget.getByRole("button", { name: "Edit Return flights and ground transfer" }).click();
+  await page.getByRole("dialog", { name: "Edit Return flights and ground transfer" }).getByRole("spinbutton", { name: "Use amount (DKK)" }).fill("3100");
+  await page.getByRole("dialog", { name: "Edit Return flights and ground transfer" }).getByRole("button", { name: "Use override" }).click();
+  await page.getByRole("button", { name: "Create share link" }).click();
+  const token = await page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.shareToken as string);
+  await page.goto(`/share/${token}`);
+  await expect(page.locator(".share-budget")).toContainText("Using override");
+  await expect(page.locator(".share-budget")).toContainText("Group total3.100 kr.");
+  await expect(page.locator(".share-budget")).toContainText("Per person1.550 kr.");
 });
 
 test("lodging choices can be reused and a trip can be discarded safely", async ({ page }, testInfo) => {
