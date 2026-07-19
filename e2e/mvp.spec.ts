@@ -15,6 +15,7 @@ test("core planning flow remains connected", async ({ page }, testInfo) => {
   await expect(page.getByRole("heading", { name: /destinations fit/ })).toBeVisible();
   await expect(page).toHaveURL(/month=7/);
 
+  await page.locator(".results-list").getByRole("button", { name: /Innsbruck/ }).click();
   await page.getByRole("button", { name: /Plan this trip/ }).click();
   await expect(page.getByRole("heading", { name: "Choose how to travel" })).toBeVisible();
   await page.getByRole("button", { name: /Airplane/ }).click();
@@ -58,6 +59,55 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
     }));
     expect(dimensions.document).toBeLessThanOrEqual(dimensions.viewport + 1);
   }
+});
+
+test("travel stages use provider-backed road geometry and never invent missing detail", async ({ page }) => {
+  let routingAvailable = true;
+  await page.route("https://router.project-osrm.org/**", (route) => routingAvailable
+    ? route.fulfill({
+        contentType: "application/json",
+        body: JSON.stringify({
+          code: "Ok",
+          routes: [{
+            distance: 1_300_000,
+            duration: 48_600,
+            geometry: { coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]] },
+          }],
+        }),
+      })
+    : route.abort());
+
+  await page.goto("/explore?month=7&maxLayovers=1");
+  await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+
+  const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await carChoice.getByRole("button", { name: "Stage details" }).click();
+  const carDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
+  await expect(carDialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
+  await expect(carDialog).toContainText("OSRM");
+  await expect(carDialog).toContainText("Road geometry and drive time come from OSRM");
+  await page.keyboard.press("Escape");
+
+  for (const label of ["Train + bus", "Airplane"]) {
+    const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
+    await choice.getByRole("button", { name: "Stage details" }).click();
+    await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
+    await page.keyboard.press("Escape");
+  }
+
+  routingAvailable = false;
+  await page.reload();
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+
+  await page.goto("/explore?month=7&selected=innsbruck");
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
 });
 
 test("Nordic hub media, attribution, and route-curation states are inspectable", async ({ page }, testInfo) => {
@@ -242,7 +292,7 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await expect(page.getByText("Best match").first()).toBeVisible();
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator(".explore-map .maplibregl-ctrl-attrib")).not.toHaveClass(/maplibregl-compact-show/);
-  await expect(page.getByText("Map line: indicative driving route from Aalborg")).toBeVisible();
+  await expect(page.getByText("Map line: OSRM driving route from Aalborg")).toBeVisible();
 
   await page.waitForTimeout(750);
   const markerA = page.getByRole("button", { name: "Innsbruck, Austria" });

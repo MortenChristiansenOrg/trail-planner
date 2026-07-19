@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
+import type { TravelOptionSnapshot } from "@trail-planner/domain";
 import {
   ArrowLeft,
   BedDouble,
@@ -21,7 +22,7 @@ import {
   Trash2,
   UsersRound,
 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +41,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
+import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
+import { loadTravelOption } from "@/features/catalog/travelOptionLoader";
 import {
   destinationById,
   formatHours,
@@ -75,6 +78,9 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
   const [shareUrl, setShareUrl] = useState<string>();
   const [shareCopyStatus, setShareCopyStatus] = useState<"copied" | "manual">();
   const trip = store.trips.find((item) => item.id === tripId);
+  const tripRef = useRef(trip);
+  const travelRequestRef = useRef(0);
+  tripRef.current = trip;
 
   if (!trip) {
     return (
@@ -111,7 +117,27 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
   else if (selectedActivity) selectedRouteStatus = selectedHike?.route.length ? "Selected trail · source-backed route" : "Selected hike · route geometry being curated";
 
   const save = (next: PlannedTrip) => store.update(next);
-  const selectTravel = (mode: TravelMode) => save({ ...trip, selectedTravelMode: mode });
+  const selectTravel = async (mode: TravelMode) => {
+    const requestId = ++travelRequestRef.current;
+    const selectedTripId = trip.id;
+    const estimate = trip.travelSnapshot.find((item) => item.mode === mode);
+    let option: TravelOptionSnapshot | undefined;
+    try {
+      option = estimate?.optionId ? await loadTravelOption(estimate.optionId) : undefined;
+    } catch {
+      option = undefined;
+    }
+    if (requestId !== travelRequestRef.current) return;
+    const latest = tripRef.current;
+    if (latest?.id === selectedTripId) {
+      const selectedTravelOption = option ?? (
+        latest.selectedTravelMode === mode && latest.selectedTravelOption?.id === estimate?.optionId
+          ? latest.selectedTravelOption
+          : undefined
+      );
+      await save({ ...latest, selectedTravelMode: mode, selectedTravelOption });
+    }
+  };
   const updateNight = (night: LodgingNight, scope?: LodgingApplyScope) => save(applyLodgingChoice(trip, night, scope));
   const discardTrip = () => store.remove(trip.id);
   const returnToExplore = () => navigate({ to: "/explore", search: trip.exploreSnapshot, replace: true });
@@ -159,17 +185,19 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
               <div className="section-heading"><div><p className="step-label">Step 1</p><h2>Choose how to travel</h2></div>{selectedTravel ? <Badge variant="secondary"><Check /> Included in budget</Badge> : <span className="required-note">Required for total cost</span>}</div>
               <div className="travel-choice-grid">
                 {trip.travelSnapshot.map((estimate) => (
-                  <button
-                    className={`travel-choice${trip.selectedTravelMode === estimate.mode ? " is-selected" : ""}`}
-                    disabled={!estimate.available}
-                    key={estimate.mode}
-                    onClick={() => selectTravel(estimate.mode)}
-                    type="button"
-                  >
-                    <span className="travel-choice__icon">{modeIcon(estimate.mode)}</span>
-                    <span><small>{modeLabels[estimate.mode]}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
-                    {trip.selectedTravelMode === estimate.mode ? <Check className="selected-check" /> : null}
-                  </button>
+                  <div className="travel-choice-wrap" key={estimate.mode}>
+                    <button
+                      className={`travel-choice${trip.selectedTravelMode === estimate.mode ? " is-selected" : ""}`}
+                      disabled={!estimate.available}
+                      onClick={() => void selectTravel(estimate.mode)}
+                      type="button"
+                    >
+                      <span className="travel-choice__icon">{modeIcon(estimate.mode)}</span>
+                      <span><small>{modeLabels[estimate.mode]}{estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
+                      {trip.selectedTravelMode === estimate.mode ? <Check className="selected-check" /> : null}
+                    </button>
+                    {estimate.available ? <TravelOptionDetails label="Stage details" option={trip.selectedTravelMode === estimate.mode ? trip.selectedTravelOption : undefined} optionId={estimate.optionId} /> : null}
+                  </div>
                 ))}
               </div>
             </section>

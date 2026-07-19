@@ -5,6 +5,23 @@ import type { MapMarker, TrailLine } from "@/features/maps/TrailMap";
 
 const styleUrl = "https://tiles.openfreemap.org/styles/liberty";
 
+function lineFeatureCollection(lines: TrailLine[], selectedId?: string) {
+  return {
+    type: "FeatureCollection" as const,
+    features: lines.map((line) => ({
+      type: "Feature" as const,
+      properties: {
+        id: line.id,
+        kind: line.kind ?? "trail",
+        label: line.label ?? "",
+        mode: line.styleMode ?? "car",
+        selected: line.id === selectedId,
+      },
+      geometry: { type: "LineString" as const, coordinates: line.coordinates },
+    })),
+  };
+}
+
 export default function MapCanvas({
   markers,
   selectedId,
@@ -22,7 +39,11 @@ export default function MapCanvas({
   const mapRef = useRef<MapLibreMap | null>(null);
   const markerRefs = useRef<maplibregl.Marker[]>([]);
   const selectRef = useRef(onSelect);
+  const linesRef = useRef(lines);
+  const selectedIdRef = useRef(selectedId);
   selectRef.current = onSelect;
+  linesRef.current = lines;
+  selectedIdRef.current = selectedId;
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -57,7 +78,7 @@ export default function MapCanvas({
     map.on("load", () => {
       map.addSource("trail-lines", {
         type: "geojson",
-        data: { type: "FeatureCollection", features: [] },
+        data: lineFeatureCollection(linesRef.current, selectedIdRef.current),
       });
       map.addLayer({
         id: "trail-lines-shadow",
@@ -90,14 +111,18 @@ export default function MapCanvas({
         type: "line",
         source: "trail-lines",
         filter: ["==", ["get", "kind"], "journey"],
-        paint: { "line-color": "#fff8e7", "line-width": 5, "line-opacity": 0.7 },
+        paint: { "line-color": "#fff8e7", "line-width": 7, "line-opacity": 0.78 },
       });
       map.addLayer({
         id: "journey-line",
         type: "line",
         source: "trail-lines",
         filter: ["==", ["get", "kind"], "journey"],
-        paint: { "line-color": "#b54831", "line-width": 2.6, "line-opacity": 0.9 },
+        paint: {
+          "line-color": ["match", ["get", "mode"], "flight", "#3568a8", "rail", "#69528f", "bus", "#b7791f", "ferry", "#167285", "walk", "#52794b", "shuttle", "#8a5d3c", "transfer", "#7b7468", "#b54831"],
+          "line-width": 4,
+          "line-opacity": 1,
+        },
       });
     });
     mapRef.current = map;
@@ -178,22 +203,13 @@ export default function MapCanvas({
     if (!map) return;
     const update = () => {
       const source = map.getSource("trail-lines") as GeoJSONSource | undefined;
-      source?.setData({
-        type: "FeatureCollection",
-        features: lines.map((line) => ({
-          type: "Feature",
-          properties: {
-            id: line.id,
-            kind: line.kind ?? "trail",
-            label: line.label ?? "",
-            selected: line.id === selectedId,
-          },
-          geometry: { type: "LineString", coordinates: line.coordinates },
-        })),
-      });
+      source?.setData(lineFeatureCollection(lines, selectedId));
     };
-    if (map.isStyleLoaded()) update();
-    else map.once("load", update);
+    update();
+    map.on("load", update);
+    return () => {
+      map.off("load", update);
+    };
   }, [lines, selectedId]);
 
   return <div className="size-full" ref={containerRef} />;

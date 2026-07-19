@@ -9,6 +9,7 @@ export type TravelEstimate = {
   layovers?: number;
   note: string;
   confidence: "high" | "medium" | "low";
+  optionId?: string;
 };
 
 export type CatalogProvenance = {
@@ -167,7 +168,7 @@ const travel = (
         oneWayHours: plane[0],
         costPerPersonDkk: plane[1],
         layovers: plane[2],
-        note: "One-way journey time with sampled return airfare and ground transfers; not a live fare.",
+        note: "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
         confidence: "low",
       }
     : {
@@ -181,6 +182,8 @@ const travel = (
         confidence: "high",
       },
 ];
+
+const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
 const catalogSeeds: DestinationSeed[] = [
   {
@@ -425,7 +428,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [5, 6, 7, 8, 9, 10],
     summary: "An exceptionally connected city base with mountain routes beginning at the edge of town.",
     character: "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
-    travel: travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 0], "Innsbruck"),
+    travel: withOption(travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 0], "Innsbruck"), "car", "osrm-driving-aalborg-innsbruck"),
     hikes: [],
     lodgings: [{ id: "pfeishutte", name: "Pfeishütte", kind: "hut", nightlyCostDkk: 680 }],
   },

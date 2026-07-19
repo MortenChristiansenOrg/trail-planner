@@ -241,6 +241,9 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .detail-travel-list span { display: grid; font-size: 11px; }
 .detail-travel-list small { color: var(--ink-soft); }
 .detail-travel-list > div > span:last-child { color: var(--ink); font-weight: 700; }
+.detail-travel-actions { display: grid; justify-items: end; gap: 3px; color: var(--ink); font-size: 11px; font-weight: 700; }
+.detail-travel-actions button { height: 25px; padding-inline: 6px; font-size: 9px; }
+.detail-travel-actions button svg { width: 12px; }
 .route-preview-list article { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 12px; border-left: 2px solid rgba(181, 72, 49, .45); background: rgba(232, 232, 211, .45); }
 .route-preview-list article.has-media { grid-template-columns: 92px 30px minmax(0, 1fr); }
 .route-preview-list svg { width: 18px; color: var(--route-red); }
@@ -300,6 +303,9 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .section-heading > div > p:last-child { margin-top: 4px; color: var(--ink-soft); font-size: 11px; }
 .required-note { color: var(--route-red); font-size: 10px; font-weight: 750; }
 .travel-choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 16px; }
+.travel-choice-wrap { display: grid; align-content: start; justify-items: stretch; min-width: 0; }
+.travel-choice-wrap > .travel-choice { width: 100%; min-height: 72px; }
+.travel-choice-wrap > button:last-child { justify-self: center; height: 27px; margin-top: 3px; color: var(--ink-soft); font-size: 9px; }
 .travel-choice { position: relative; display: grid; grid-template-columns: 30px 1fr; gap: 8px; align-items: center; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.36); text-align: left; cursor: pointer; }
 .travel-choice:hover:not(:disabled), .travel-choice.is-selected { border-color: rgba(49, 85, 65, .48); background: #edf0dc; }
 .travel-choice:disabled { opacity: .45; cursor: not-allowed; }
@@ -310,6 +316,46 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .travel-choice strong { color: var(--ink); font-size: 12px; }
 .travel-choice em { overflow: hidden; color: var(--ink-soft); font-size: 9px; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
 .selected-check { position: absolute; top: 7px; right: 7px; width: 13px; color: var(--primary); }
+
+/* Complete travel option */
+.travel-option-dialog { width: min(980px, calc(100vw - 28px)); max-width: 980px; max-height: min(880px, calc(100dvh - 28px)); overflow-y: auto; }
+.travel-option-body { display: grid; gap: 15px; min-height: 0; }
+.travel-option-summary { display: grid; grid-template-columns: max-content repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 7px; }
+.travel-option-summary > span:not([data-slot="badge"]) { display: grid; grid-template-columns: 19px minmax(0, 1fr); gap: 0 6px; align-content: center; min-width: 0; min-height: 52px; padding: 8px; border: 1px solid var(--border); border-radius: 9px; background: rgba(255,255,255,.42); }
+.travel-option-summary > span:not([data-slot="badge"]) > svg { grid-row: 1 / 3; width: 15px; color: var(--primary); }
+.travel-option-summary > span:not([data-slot="badge"]) > strong { font-size: 11px; }
+.travel-option-summary > span:not([data-slot="badge"]) > small { color: var(--ink-soft); font-size: 8px; }
+.travel-option-map { height: 245px; overflow: hidden; border: 1px solid var(--border); border-radius: 11px; }
+.travel-option-map .map-frame { height: 100%; }
+.travel-stage-timeline { display: grid; margin-top: 10px; padding: 0; list-style: none; }
+.travel-stage { position: relative; display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 8px 0; }
+.travel-stage:not(:last-child)::after { position: absolute; top: 40px; bottom: -8px; left: 16px; width: 2px; background: rgba(76, 97, 74, .22); content: ""; }
+.travel-stage__icon { position: relative; z-index: 1; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 50%; background: var(--paper-solid); color: var(--primary); }
+.travel-stage__icon svg { width: 16px; }
+.travel-stage > div { display: grid; gap: 3px; min-width: 0; padding: 7px 10px; border-radius: 9px; background: rgba(232,232,211,.38); }
+.travel-stage__heading, .travel-stage > div > p { display: flex; align-items: center; justify-content: space-between; gap: 7px; }
+.travel-stage > div > p { justify-content: flex-start; color: var(--ink); font-size: 10px; }
+.travel-stage > div > p svg { width: 12px; color: var(--ink-soft); }
+.travel-stage > div > small { color: var(--ink-soft); font-size: 8px; }
+.travel-stage .travel-technical-stop { color: #8a562d; font-weight: 700; }
+.travel-stage-links { display: flex; gap: 10px; }
+.travel-stage-links a, .travel-option-notes a { color: var(--primary); font-weight: 750; text-decoration: underline; text-underline-offset: 2px; }
+.travel-cost-detail, .travel-option-notes { padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.3); }
+.travel-cost-detail h3, .travel-option-notes h3 { margin-bottom: 8px; font-size: 17px; }
+.travel-cost-detail > p { display: flex; justify-content: space-between; gap: 15px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 10px; }
+.travel-cost-detail > p > span { display: grid; }
+.travel-cost-detail small, .travel-option-notes { color: var(--ink-soft); font-size: 9px; line-height: 1.5; }
+.travel-cost-detail > small { display: block; margin-top: 5px; }
+.travel-cost-detail .travel-reconciliation { border-bottom: 0; font-size: 12px; }
+.travel-option-notes { display: grid; gap: 6px; }
+.travel-option-notes ul { padding-left: 18px; }
+.travel-warning { display: flex; gap: 6px; color: #87532e; }
+.travel-warning svg { flex: none; width: 14px; }
+.travel-detail-unavailable { display: grid; grid-template-columns: 36px 1fr; gap: 10px; padding: 18px; border: 1px dashed rgba(57,86,66,.35); border-radius: 10px; background: #eef0dc; }
+.travel-detail-unavailable > svg { width: 24px; color: var(--primary); }
+.travel-detail-unavailable p { margin-top: 4px; color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
+.travel-detail-loading { display: flex; justify-content: center; gap: 8px; padding: 28px; color: var(--ink-soft); font-size: 11px; }
+.travel-detail-loading svg { width: 16px; }
 .itinerary-heading { align-items: center; }
 .date-field { display: grid; gap: 4px; color: var(--ink-soft); font-size: 9px; font-weight: 700; }
 .date-input-shell { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 9px; min-width: 122px; min-height: 34px; padding: 5px 8px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,.55); color: var(--ink); font-size: 11px; }
@@ -518,6 +564,9 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
   .travel-choice { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .travel-choice__icon { display: none; }
   .travel-choice em { white-space: normal; }
+  .travel-option-summary { grid-template-columns: 1fr 1fr; }
+  .travel-option-summary > [data-slot="badge"] { align-self: center; justify-self: start; }
+  .travel-option-map { height: 220px; }
   .share-hero { grid-template-columns: 1fr; padding: 24px; }
   .share-summary { width: 100%; }
 }
@@ -549,6 +598,11 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
   .travel-choice { padding: 9px 5px; }
   .travel-choice small { font-size: 8px; }
   .travel-choice strong { font-size: 10px; }
+  .travel-option-dialog { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); padding: 16px; }
+  .travel-option-summary { grid-template-columns: 1fr; }
+  .travel-stage { grid-template-columns: 29px 1fr; gap: 7px; }
+  .travel-stage__icon { width: 29px; height: 29px; }
+  .travel-stage:not(:last-child)::after { top: 35px; left: 14px; }
   .day-card { grid-template-columns: 61px 1fr; }
   .day-card__label { padding: 11px 7px; }
   .night-row { grid-template-columns: 61px minmax(0,1fr) auto; padding-left: 0; }
