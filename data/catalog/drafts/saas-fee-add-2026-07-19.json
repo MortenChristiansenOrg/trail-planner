@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "run": {
+    "id": "2026-07-19-saas-fee-add",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T15:58:10.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1125,
+    "creditsAfter": 1121
+  },
+  "destination": {
+    "key": "saas-fee",
+    "action": "add",
+    "name": "Saas-Fee",
+    "region": "Valais Alps",
+    "countryCode": "CH"
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "saas-fee",
+      "field": "officialTourismAreaName",
+      "value": "Saas-Fee/Saastal",
+      "status": "draft",
+      "source": {
+        "key": "saas-fee-tourism",
+        "url": "https://www.saas-fee.ch/en/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:58:10.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The regional tourism authority presents the destination under this name. Coordinates and administrative boundaries still need an open geographic source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "saas-fee",
+      "field": "mountainRegion",
+      "value": "Valais Alps",
+      "status": "draft",
+      "source": {
+        "key": "saas-fee-tourism",
+        "url": "https://www.saas-fee.ch/en/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:58:10.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The official description locates the hiking network in the Valais Alps."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "saas-fee",
+      "field": "advertisedHikingSeasons",
+      "value": ["summer", "autumn"],
+      "status": "draft",
+      "source": {
+        "key": "saas-fee-tourism-hiking",
+        "url": "https://www.saas-fee.ch/en/summer-activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:58:10.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The page explicitly frames hiking and its visitor-card access as summer/autumn activities, but it does not support exact recommended months."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "saas-fee",
+      "field": "saastalCardIncludedTransport",
+      "value": {
+        "eligibleFromNight": 1,
+        "included": ["Saas Valley mountain railways", "Saas Valley postbuses"],
+        "excluded": ["Metro Alpin"],
+        "seasons": ["summer", "autumn"]
+      },
+      "status": "draft",
+      "source": {
+        "key": "saas-fee-tourism-hiking",
+        "url": "https://www.saas-fee.ch/en/summer-activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:58:10.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "This is a local visitor-card benefit, not a complete origin-to-destination transport itinerary."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "partial",
+      "reasons": ["Official name and mountain region are sourced; coordinates and geographic entity identifier are missing"]
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": ["Summer and autumn are supported, but exact recommended months and closure rules are missing"]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": ["Local included transport is sourced; arrival nodes, parking, and date-specific services are missing"]
+    }
+  ]
+}

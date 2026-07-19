@@ -23,6 +23,7 @@ Record credits before and after the run. Treat reported account limits as author
 - Search: at most 5 results; do not combine `--scrape` with search.
 - Prefer normal scrape. Do not use crawl, Agent, Interact, screenshots, or JSON/LLM extraction by default.
 - Reuse prior source URLs and cache stable pages for 30 days. Cache schedules, closures, and prices for at most 7 days.
+- Reuse an existing `.catalog-work/<run-id>/` capture before repeating a request. In the 2026-07-19 forward test, a five-result search used 2 credits and a scrape used 1 credit despite reporting a cache hit. Treat this only as an observed planning estimate; the credit preflight is authoritative.
 
 ## Commands
 
@@ -58,6 +59,8 @@ firecrawl search "<destination> <missing domain> official" \
 ```
 
 Scrape chosen results separately. Never infer “unavailable” from an empty or failed result.
+
+With CLI 1.19.26, multi-format scrape output has top-level `markdown`, `links`, and `metadata`, while search results are under `data.web`. Inspect the returned structure rather than assuming it remains stable across CLI updates.
 
 ## Escalation
 

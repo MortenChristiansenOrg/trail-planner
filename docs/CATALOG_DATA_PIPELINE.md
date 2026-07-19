@@ -46,6 +46,7 @@ Free-tier limits can change, so every run starts with `firecrawl --status` and `
 
 - Run one request at a time and stop at 20 credits or 20 scraped pages per dossier unless the user approves more.
 - Reuse known official URLs and Firecrawl cache (`--max-age`) before search.
+- Reuse local `.catalog-work/` captures before calling Firecrawl again. The 2026-07-19 trials showed that Firecrawl cache hits still consumed a scrape credit on this account.
 - Search at most five results and prefer authority/operator domains. Do not use broad crawl, autonomous agent, JSON/LLM extraction, screenshots, or Interact by default.
 - Scrape main-content Markdown and links, then extract claims locally. Escalate to a targeted structured scrape only when ordinary output is insufficient and the credit budget is explicit.
 - Keep raw output in `.catalog-work/<run-id>/`; commit only normalized claims and source URLs.
