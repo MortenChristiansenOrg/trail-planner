@@ -7,7 +7,6 @@ const claim = (overrides: Partial<CatalogClaim> = {}): CatalogClaim => ({
   subjectKey: "innsbruck",
   field: "durationHours",
   valueJson: "13.5",
-  status: "accepted",
   sourceKey: "osrm",
   sourceUrl: "https://router.project-osrm.org/",
   retrievedAt: 1_000,
@@ -17,21 +16,21 @@ const claim = (overrides: Partial<CatalogClaim> = {}): CatalogClaim => ({
 });
 
 describe("catalog data coverage", () => {
-  it("marks domains without accepted claims as missing", () => {
-    expect(summarizeCoverage("innsbruck", "travel-road", [claim({ status: "draft" })], 2_000)).toMatchObject({
+  it("marks domains without published claims as missing", () => {
+    expect(summarizeCoverage("innsbruck", "travel-road", [], 2_000)).toMatchObject({
       status: "missing",
       claimCount: 0,
     });
   });
 
-  it("marks a domain stale when an accepted claim has expired", () => {
+  it("marks a domain stale when a published claim has expired", () => {
     expect(summarizeCoverage("innsbruck", "travel-road", [claim({ expiresAt: 1_500 })], 2_000)).toMatchObject({
       status: "stale",
       staleAt: 1_500,
     });
   });
 
-  it("keeps accepted unexpired claims fresh", () => {
+  it("keeps published unexpired claims fresh", () => {
     expect(summarizeCoverage("innsbruck", "travel-road", [claim({ expiresAt: 2_500 })], 2_000)).toMatchObject({
       status: "fresh",
       claimCount: 1,

@@ -21,7 +21,7 @@ export function CatalogMediaFigure({
     return (
       <figure aria-label="Terrain image not yet available" className={`catalog-media catalog-media--${variant} catalog-media--fallback`} role="img">
         <Mountain aria-hidden="true" />
-        <figcaption><strong>Terrain preview</strong><span>Photo being curated</span></figcaption>
+        <figcaption><strong>Terrain image unavailable</strong><span>No verified catalog media yet</span></figcaption>
       </figure>
     );
   }

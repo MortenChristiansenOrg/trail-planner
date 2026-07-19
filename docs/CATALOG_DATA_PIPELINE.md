@@ -1,17 +1,18 @@
 # Catalog data pipeline
 
-Trail Planner separates live provider data from slower, judgment-heavy catalog curation. Runtime providers answer date-specific questions; agent skills create reviewable, source-backed dossiers for destination facts that cannot be obtained reliably from an API.
+Trail Planner separates live provider data from slower, judgment-heavy catalog curation. Runtime providers answer date-specific questions; agent skills research, verify, and publish source-backed destination records for facts that cannot be obtained reliably from an API. Verification is part of the skill run and never a user task.
 
 ## Data flow
 
 1. A coverage audit identifies a missing or stale domain for a stable `destinationKey`.
 2. An enrichment job records the destination, domains, priority, retry budget, and state.
 3. A provider adapter supplies structured live/open data, or an agent skill researches official pages with the Firecrawl CLI.
-4. Every observation is stored as a field-level claim with its source URL, retrieval time, confidence, and expiry. Raw page captures remain temporary.
-5. Coverage is recomputed per domain as `missing`, `partial`, `fresh`, `stale`, or `unavailable`.
-6. Agent output remains `draft` until review. Publication builds a strict destination/travel snapshot from accepted claims; it never fills gaps with plausible values.
+4. The skill cross-checks material observations and discards unsupported ones before they reach the catalog.
+5. Every published field-level claim carries its source URL, retrieval time, confidence, and expiry. Raw page captures remain temporary.
+6. Coverage is recomputed per domain as `missing`, `partial`, `fresh`, `stale`, or `unavailable`.
+7. The validated record atomically replaces `data/catalog/records/<destination-key>.json`; derived snapshots or seeds are updated in the same run. Publication never fills gaps with plausible values.
 
-The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enrichmentJobs`, and `providerCache`. The app can keep serving the current static catalog while ingestion is introduced incrementally.
+The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enrichmentJobs`, and `providerCache`. A claim stored in the catalog is published by definition; unsupported or superseded observations remain outside the current record and are recoverable from Git history.
 
 ## Domain and sourcing matrix
 
@@ -26,17 +27,17 @@ The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enri
 | Road travel | OSRM/openrouteservice/GraphHopper plus cost model | Official ferry/toll caveats only | Route 30 days; costs 7–30 days |
 | Transit travel | Entur, GTFS/NeTEx, national journey APIs | Seasonal/local services absent from feeds | Live/date-specific or 7 days |
 | Flight travel | Amadeus/Duffel and airport datasets | Airport-transfer caveats, not fares or schedules | Query live; cache briefly |
-| Media | Wikimedia Commons API and licensed official media | Relevance/alt-text review and license verification | Refresh on removal/license change |
+| Media | Wikimedia Commons API and licensed official media | Verify relevance, alt text, license, and attribution | Refresh on removal/license change |
 
-“Unavailable” requires evidence that the option is not practical under the stated assumptions. An unsuccessful search is `missing`, not `unavailable`. Partial data is useful: a destination hub may publish without hikes, a hike may publish without geometry only when the UI explicitly says geometry is being curated, and aggregate travel estimates may remain visible without invented stages.
+“Unavailable” requires evidence that the option is not practical under the stated assumptions. An unsuccessful search is `missing`, not `unavailable`. Partial data is useful and is still published data: a destination hub may publish without hikes, a hike may publish without geometry only when the UI explicitly says geometry is missing, and aggregate travel estimates may remain visible without invented stages.
 
 ## Agent skills
 
-`$add-trail-destinations` researches a new hub, establishes the stable key and core provenance, gathers the cheapest useful set of domain claims, assesses coverage, and writes a dossier under `data/catalog/drafts/`. It does not silently publish or invent hikes.
+`$add-trail-destinations` researches a new hub, establishes the stable key and core provenance, verifies useful domain claims, assesses coverage, validates the complete record, and publishes it under `data/catalog/records/`. It does not invent hikes or ask the user to review data.
 
-`$refresh-trail-destination-data` starts from existing coverage, targets only missing/stale domains, compares new claims with accepted values, and creates a refresh dossier. It records conflicts for review instead of overwriting a value just because a newer page differs.
+`$refresh-trail-destination-data` starts from existing coverage, targets only missing/stale domains, compares observations with published values, resolves conflicts from authoritative evidence, and atomically publishes the validated record. An unresolved field is retained or omitted with reduced coverage rather than sent to a review queue.
 
-Both skills use `scripts/catalog-data/validate-dossier.mjs` and the template in `data/catalog/dossier.template.json`. A dossier is a review boundary, not a production record.
+Both skills use `scripts/catalog-data/validate-record.mjs`, `scripts/catalog-data/publish-record.mjs`, `data/catalog/record.template.json`, and `docs/CATALOG_PUBLICATION_CHECKLIST.md`. Temporary candidate records stay under `.catalog-work/`; no repository draft directory exists.
 
 ## Firecrawl operating policy
 
@@ -44,7 +45,7 @@ The CLI is installed from the official `firecrawl-cli` npm package. Authenticate
 
 Free-tier limits can change, so every run starts with `firecrawl --status` and `firecrawl credit-usage --json`. The repository policy is stricter than the advertised ceiling:
 
-- Run one request at a time and stop at 20 credits or 20 scraped pages per dossier unless the user approves more.
+- Run one request at a time and stop at 20 credits or 20 scraped pages per destination record unless the user approves more.
 - Reuse known official URLs and Firecrawl cache (`--max-age`) before search.
 - Reuse local `.catalog-work/` captures before calling Firecrawl again. The 2026-07-19 trials showed that Firecrawl cache hits still consumed a scrape credit on this account.
 - Search at most five results and prefer authority/operator domains. Do not use broad crawl, autonomous agent, JSON/LLM extraction, screenshots, or Interact by default.
@@ -58,4 +59,4 @@ See the official [Firecrawl CLI documentation](https://docs.firecrawl.dev/cli) f
 
 The destination query is paginated, so catalog size is not capped at 50. Enrichment jobs are idempotent by `jobKey` and bounded by priority and retry count. Provider responses have explicit cache keys and expiry times. Free-tier Firecrawl work should be scheduled as small resumable batches—typically one destination or a few domains per run—rather than an all-catalog crawl.
 
-The first production automation should prioritize high-value gaps: destination core and access, then at least one trustworthy hike, then travel modes and lodging. Broad destination expansion is safe because incomplete domains remain visible in coverage instead of forcing every destination to be fully sourced before it can exist as a draft.
+Automation should prioritize high-value gaps: destination core and access, then at least one trustworthy hike, then travel modes and lodging. Broad destination expansion is safe because incomplete domains remain visible in published coverage instead of blocking useful hub records.

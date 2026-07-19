@@ -110,7 +110,7 @@ test("travel stages use provider-backed road geometry and never invent missing d
   await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
 });
 
-test("Nordic hub media, attribution, and route-curation states are inspectable", async ({ page }, testInfo) => {
+test("Nordic hub media, attribution, and missing-route states are inspectable", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed catalog behavior is covered once on desktop.");
 
   await page.route("https://commons.wikimedia.org/**", (route) => route.fulfill({
@@ -125,7 +125,7 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   await expect(photo).toHaveAttribute("srcset", /480w.*960w.*1440w/);
   await page.getByRole("button", { name: "View area details" }).click();
   const details = page.locator(".destination-sheet");
-  await expect(details.getByText("Trails being curated")).toBeVisible();
+  await expect(details.getByText("Trail geometry unavailable")).toBeVisible();
   await details.getByText("Photo credit").click();
   await expect(details.getByText("Landmannalaugar by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
   await details.getByAltText("Rhyolite mountains and the Laugavegur trail at Landmannalaugar").evaluate((image) => {
@@ -142,7 +142,7 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
   await expect(page.getByRole("tab", { name: "Your own hike" })).toHaveAttribute("data-state", "active");
-  await expect(page.getByRole("tab", { name: "Routes being curated" })).toBeDisabled();
+  await expect(page.getByRole("tab", { name: "No catalog routes" })).toBeDisabled();
   await page.keyboard.press("Escape");
 
   await page.evaluate(() => {
@@ -172,7 +172,7 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   const hikeMedia = page.locator(".route-preview-list article.has-media").filter({ hasText: "Kungsleden: Abisko to Abiskojaure" });
   await hikeMedia.getByText("Photo credit").click();
   await expect(hikeMedia.getByText("Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0")).toBeVisible();
-  await expect(hikeMedia).not.toContainText(/route geometry being curated/i);
+  await expect(hikeMedia).not.toContainText(/route geometry unavailable/i);
 });
 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {

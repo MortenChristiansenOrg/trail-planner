@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-19-aalborg-mountain-hubs",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T21:14:20.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1118,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "schladming",
+    "action": "add",
+    "name": "Schladming",
+    "region": "Schladming-Dachstein",
+    "countryCode": "AT",
+    "longitude": 13.6867878,
+    "latitude": 47.3940415
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "schladming",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Schladming",
+        "latitude": 47.3940415,
+        "longitude": 13.6867878,
+        "osmType": "relation",
+        "osmId": 3851162
+      },
+      "source": {
+        "key": "schladming-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/3851162",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The hub identity and coordinates were resolved through Nominatim; the underlying OSM object is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "schladming",
+      "field": "mountainHikingOffer",
+      "value": "Schladming-Dachstein publishes more than 1,500 kilometres of marked trails and six long-distance hiking routes.",
+      "source": {
+        "key": "schladming-official-tourism",
+        "url": "https://www.schladming-dachstein.at/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "schladming",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "summer"
+      ],
+      "source": {
+        "key": "schladming-official-tourism",
+        "url": "https://www.schladming-dachstein.at/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "schladming",
+      "field": "publishedAccessOptions",
+      "value": {
+        "localModes": [
+          "hiking bus",
+          "mountain railway"
+        ],
+        "carFreeTrailheadAccess": "Many regional hiking destinations"
+      },
+      "source": {
+        "key": "schladming-official-tourism",
+        "url": "https://www.schladming-dachstein.at/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports these access nodes or modes, but this is not a date-specific itinerary from Aalborg and no fare or schedule is claimed."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

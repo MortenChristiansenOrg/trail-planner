@@ -9,7 +9,7 @@ const money = v.object({
 const provenanceClaim = v.object({
   sourceId: v.string(),
   sourceUrl: v.optional(v.string()),
-  reviewedAt: v.string(),
+  verifiedAt: v.string(),
   confidence: v.union(v.literal("low"), v.literal("medium"), v.literal("high")),
   priceType: v.optional(
     v.union(
@@ -52,11 +52,7 @@ export default defineSchema({
     countryCode: v.string(),
     region: v.string(),
     recommendedMonths: v.array(v.string()),
-    visibility: v.union(
-      v.literal("draft"),
-      v.literal("published"),
-      v.literal("archived"),
-    ),
+    visibility: v.union(v.literal("published"), v.literal("archived")),
     provenance: v.array(provenanceClaim),
   })
     .index("by_country_visibility", ["countryCode", "visibility"])
@@ -117,12 +113,6 @@ export default defineSchema({
     subjectKey: v.string(),
     field: v.string(),
     valueJson: v.string(),
-    status: v.union(
-      v.literal("draft"),
-      v.literal("accepted"),
-      v.literal("rejected"),
-      v.literal("superseded"),
-    ),
     sourceKey: v.string(),
     sourceUrl: v.string(),
     retrievedAt: v.number(),
@@ -132,7 +122,7 @@ export default defineSchema({
     runId: v.string(),
     notes: v.optional(v.string()),
   })
-    .index("by_destination_domain_status", ["destinationKey", "domain", "status"])
+    .index("by_destination_domain", ["destinationKey", "domain"])
     .index("by_source", ["sourceKey"])
     .index("by_run", ["runId"]),
 
@@ -163,7 +153,6 @@ export default defineSchema({
     status: v.union(
       v.literal("queued"),
       v.literal("running"),
-      v.literal("needs-review"),
       v.literal("completed"),
       v.literal("failed"),
     ),

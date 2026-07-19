@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "run": {
     "id": "YYYY-MM-DD-destination-task",
     "task": "refresh-data",
@@ -13,7 +13,9 @@
     "action": "refresh",
     "name": "Destination name",
     "region": "Region",
-    "countryCode": "DK"
+    "countryCode": "DK",
+    "longitude": 0,
+    "latitude": 0
   },
   "claims": [
     {
@@ -21,7 +23,6 @@
       "subjectKey": "destination-key",
       "field": "recommendedMonths",
       "value": [6, 7, 8, 9],
-      "status": "draft",
       "source": {
         "key": "official-source-key",
         "url": "https://example.org/official-page",

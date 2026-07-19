@@ -1,29 +1,29 @@
 ---
 name: add-trail-destinations
-description: Research and draft new source-backed trail destinations for Trail Planner. Use when adding a destination or region, expanding the catalog, creating a destination dossier, or establishing initial destination, seasonality, access, hike, lodging, travel, or media coverage. Uses the Firecrawl CLI conservatively for official pages and never publishes invented or unreviewed data.
+description: Research, validate, and publish new source-backed Trail Planner destinations. Use when adding a destination or region, expanding the catalog, or establishing initial destination, seasonality, access, hike, lodging, travel, or media coverage. Uses official sources and the Firecrawl CLI conservatively, performs all verification within the skill run, and never creates a user-review queue.
 ---
 
 # Add Trail Destinations
 
-Create a reviewable dossier for a new destination. Optimize for a trustworthy hub with explicit gaps, not superficial completeness.
+Publish a trustworthy destination record with explicit gaps. The skill owns source verification, conflict resolution, validation, and publication; never defer data review to the user.
 
 ## Required context
 
 Read these before researching:
 
 - `docs/CATALOG_DATA_PIPELINE.md`
-- `docs/CATALOG_INGESTION_CHECKLIST.md`
-- `data/catalog/dossier.template.json`
+- `docs/CATALOG_PUBLICATION_CHECKLIST.md`
+- `data/catalog/record.template.json`
 - `references/firecrawl.md`
 
-Inspect the existing catalog and `data/catalog/drafts/` to avoid duplicate keys, destinations, and claims.
+Inspect the existing catalog and `data/catalog/records/` to avoid duplicate keys, destinations, and claims.
 
 ## Workflow
 
 1. Define the candidate.
    - Establish a kebab-case stable key, official/common name, region, country code, and access-hub intent.
    - Reject a duplicate or explain why a separate destination is useful.
-   - Decide which domains are required for this run. Start with `destination-core`, `seasonality`, and `access`; do not require a hike before the hub can be drafted.
+   - Decide which domains are required for this run. Start with `destination-core`, `seasonality`, and `access`; a useful hub may publish with missing hike coverage.
 2. Start a bounded run.
    - Announce skill use and the target domains before network calls.
    - Run the authentication and credit preflight in `references/firecrawl.md`.
@@ -37,17 +37,21 @@ Inspect the existing catalog and `data/catalog/drafts/` to avoid duplicate keys,
    - Record a claim only when the page directly supports that field. Keep paraphrases short; do not copy source prose.
    - Give every claim a source key/URL, retrieval time, confidence, and refresh date.
    - Never infer route geometry, transport stages, availability, prices, or opening dates from plausible context.
-5. Assess every targeted domain.
+5. Verify and assess every targeted domain.
+   - Cross-check identity, high-impact logistics, season restrictions, and safety-sensitive claims before publication.
+   - Exclude unsupported observations. Claims in a published record have no draft/accepted lifecycle status because validation is complete before they are written.
    - Use `fresh` only when the claims cover the intended domain.
    - Use `partial` for useful but incomplete data, `missing` for no adequate evidence, and `unavailable` only when a source supports unavailability.
-   - Record conflicting sources in notes and reduce confidence; do not silently choose the convenient value.
-6. Write the dossier.
-   - Create `data/catalog/drafts/<destination-key>-add-<YYYY-MM-DD>.json` from the template.
-   - Set all claims to `draft`. Do not edit the published catalog unless the user separately asks to ingest the reviewed dossier.
-   - Validate with `pnpm catalog:validate -- <path>` and fix every error.
+   - Resolve conflicts from authoritative evidence. If a material conflict remains, omit the affected field, mark coverage `partial` or `missing`, and keep the conflict in notes; do not ask the user to adjudicate source data.
+6. Validate and publish atomically.
+   - Build the complete record from `data/catalog/record.template.json` in `.catalog-work/<run-id>/<destination-key>.json`.
+   - Name the temporary file `<destination-key>.json`, run `pnpm catalog:publish -- --dry-run <temporary-path>`, and complete `docs/CATALOG_PUBLICATION_CHECKLIST.md`. Fix every failure before publication.
+   - Run `pnpm catalog:publish -- <temporary-path>` to atomically replace `data/catalog/records/<destination-key>.json`. A record in this directory is published catalog data.
+   - Update any checked-in catalog snapshot or seed that consumes the destination in the same run. Never leave a separate ingestion or user-review task.
+   - Never create `data/catalog/drafts/` or a `needs-review` state.
 7. Report the outcome.
    - List sources used, Firecrawl credits before/after, coverage by domain, conflicts, and remaining gaps.
-   - Recommend the smallest next refresh/ingestion task. Do not claim the destination is production-ready merely because the JSON validates.
+   - State what was published and recommend the smallest automated refresh for remaining gaps.
 
 ## Source rules by domain
 
@@ -58,4 +62,4 @@ Inspect the existing catalog and `data/catalog/drafts/` to avoid duplicate keys,
 - Travel: provider APIs for routes/schedules/fares. Firecrawl only fills official local-service and transfer caveats.
 - Media: Wikimedia Commons/API or clearly licensed official media with creator, license, dimensions, attribution, and source page.
 
-Stop and ask for direction if the candidate identity is ambiguous, terms prohibit the intended use, the credit cap would be exceeded, or publication would require accepting a material conflict.
+Stop without publishing if candidate identity remains ambiguous, terms prohibit the intended use, the credit cap would be exceeded, or a required core field remains materially conflicted after checking authoritative sources. Ask the user only for product scope or identity clarification, never to review or approve researched data.

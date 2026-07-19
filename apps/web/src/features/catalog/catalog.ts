@@ -14,7 +14,7 @@ export type TravelEstimate = {
 
 export type CatalogProvenance = {
   sourceUrl: string;
-  reviewedAt: string;
+  verifiedAt: string;
   confidence: "high" | "medium" | "low";
 };
 
@@ -32,7 +32,7 @@ export type CatalogMedia = {
   attributionText: string;
   attributionUrl: string;
   sourceUrl: string;
-  reviewedAt: string;
+  verifiedAt: string;
 };
 
 const commonsMedia = {
@@ -48,7 +48,7 @@ const commonsMedia = {
     attributionText: "Landmannalaugar by Andreas Tille · CC BY-SA 4.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Landmannalaugar.jpeg",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
   kebnekaise: {
     imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kebnekaise.JPEG",
@@ -62,7 +62,7 @@ const commonsMedia = {
     attributionText: "Kebnekaise by Dianou42 · CC BY-SA 4.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Kebnekaise.JPEG",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
   kungsleden: {
     imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kungsleden%20trail.JPG",
@@ -76,7 +76,7 @@ const commonsMedia = {
     attributionText: "Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Kungsleden_trail.JPG",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
 } satisfies Record<string, CatalogMedia>;
 
@@ -122,7 +122,7 @@ type DestinationSeed = Destination;
 
 const catalogSource = (sourceUrl: string, confidence: CatalogProvenance["confidence"] = "low"): CatalogProvenance => ({
   sourceUrl,
-  reviewedAt: "2026-07-18",
+  verifiedAt: "2026-07-18",
   confidence,
 });
 
@@ -558,7 +558,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "landmannalaugar-hut", name: "FÍ Landmannalaugar hut", kind: "hut", nightlyCostDkk: 820 }],
     provenance: {
       sourceUrl: "https://www.fi.is/en/hiking-trails/landmannalaugar",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
     media: commonsMedia.landmannalaugar,
@@ -578,7 +578,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "basar-hut", name: "Básar hut and campsite", kind: "hut", nightlyCostDkk: 760 }],
     provenance: {
       sourceUrl: "https://www.utivist.is/english/basar-hut/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -597,7 +597,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "skaftafell-camping", name: "Skaftafell campground", kind: "camping", nightlyCostDkk: 190 }],
     provenance: {
       sourceUrl: "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
   },
@@ -616,7 +616,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "hamrar-camping", name: "Hamrar campsite", kind: "camping", nightlyCostDkk: 165 }],
     provenance: {
       sourceUrl: "https://www.visitakureyri.is/en/see-and-do/hiking",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -635,7 +635,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "nikkaluokta-sarri", name: "Nikkaluokta Sarri", kind: "hut", nightlyCostDkk: 690 }],
     provenance: {
       sourceUrl: "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
     media: commonsMedia.kebnekaise,
@@ -655,7 +655,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "hemavan-fjallcenter", name: "Hemavan Fjällcenter", kind: "hut", nightlyCostDkk: 620 }],
     provenance: {
       sourceUrl: "https://hemavan.nu/en/see-and-do-summer/hiking/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
   },
@@ -674,7 +674,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "are-camping", name: "Åre camping", kind: "camping", nightlyCostDkk: 235 }],
     provenance: {
       sourceUrl: "https://aresweden.com/en/hiking-in-are/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -686,7 +686,7 @@ const mediaKinds = new Set<CatalogMedia["kind"]>(["terrain", "trail", "access"])
 const travelModes = new Set<TravelMode>(["car", "train", "plane"]);
 
 function validateSource(provenance: CatalogProvenance, label: string) {
-  if (!isHttpsUrl(provenance.sourceUrl) || !isReviewDate(provenance.reviewedAt)) throw new Error(`${label}: missing or invalid provenance`);
+  if (!isHttpsUrl(provenance.sourceUrl) || !isVerificationDate(provenance.verifiedAt)) throw new Error(`${label}: missing or invalid provenance`);
   if (!confidenceLevels.has(provenance.confidence)) throw new Error(`${label}: invalid provenance confidence`);
 }
 
@@ -698,7 +698,7 @@ function isHttpsUrl(value: string) {
   }
 }
 
-function isReviewDate(value: string) {
+function isVerificationDate(value: string) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const parsed = new Date(`${value}T00:00:00Z`);
   return !Number.isNaN(parsed.valueOf()) && parsed.toISOString().slice(0, 10) === value;
@@ -747,7 +747,7 @@ export function validateCatalog(items: Destination[]) {
 
 function validateMedia(media: CatalogMedia, label: string, expectedSubject: CatalogMedia["subject"]) {
   if (!mediaKinds.has(media.kind)) throw new Error(`${label}: invalid media kind`);
-  if (!isHttpsUrl(media.imageUrl) || !media.alt.trim() || !media.creator.trim() || !media.attributionText.trim() || !isHttpsUrl(media.attributionUrl) || !isHttpsUrl(media.sourceUrl) || !isReviewDate(media.reviewedAt)) throw new Error(`${label}: incomplete media provenance`);
+  if (!isHttpsUrl(media.imageUrl) || !media.alt.trim() || !media.creator.trim() || !media.attributionText.trim() || !isHttpsUrl(media.attributionUrl) || !isHttpsUrl(media.sourceUrl) || !isVerificationDate(media.verifiedAt)) throw new Error(`${label}: incomplete media provenance`);
   if (!Number.isInteger(media.width) || media.width < 1 || !Number.isInteger(media.height) || media.height < 1) throw new Error(`${label}: invalid media dimensions`);
   if (!supportedLicenses.has(media.license)) throw new Error(`${label}: unsupported media license`);
   if (media.subject !== expectedSubject) throw new Error(`${label}: media subject must be ${expectedSubject}`);

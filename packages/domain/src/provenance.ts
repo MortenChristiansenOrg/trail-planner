@@ -5,7 +5,7 @@ export type PriceType = "live" | "sampled" | "estimated" | "manual" | "unavailab
 export type ProvenanceClaim = {
   sourceId: string;
   sourceUrl?: string;
-  reviewedAt: string;
+  verifiedAt: string;
   confidence: ConfidenceLevel;
   priceType?: PriceType;
   attribution?: string;

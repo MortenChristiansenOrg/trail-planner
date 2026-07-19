@@ -19,7 +19,7 @@ Record credits before and after the run. Treat reported account limits as author
 ## Budget
 
 - Concurrency: 1.
-- Per dossier: at most 20 credits and 20 scraped pages unless the user approves more.
+- Per destination record: at most 20 credits and 20 scraped pages unless the user approves more.
 - Search: at most 5 results; do not combine `--scrape` with search.
 - Prefer normal scrape. Do not use crawl, Agent, Interact, screenshots, or JSON/LLM extraction by default.
 - Reuse prior source URLs and cache stable pages for 30 days. Cache schedules, closures, and prices for at most 7 days.

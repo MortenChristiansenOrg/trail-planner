@@ -413,12 +413,12 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <article className={hike.media ? "has-media" : undefined} key={hike.id}>
                   {hike.media ? <CatalogMediaFigure media={hike.media} sizes="90px" variant="thumbnail" /> : null}
                   <Route />
-                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry being curated"}</small></div>
+                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry unavailable"}</small></div>
                 </article>
               ))}
-            </div> : <div className="routes-curating"><Route /><div><strong>Trails being curated</strong><p>This is a useful access and logistics hub, but no route geometry has passed source review yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
+            </div> : <div className="routes-curating"><Route /><div><strong>Trail geometry unavailable</strong><p>This is a published access and logistics hub, but no route geometry has passed source verification yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
           </section>
-          <p className="catalog-source">Catalog source reviewed {destination.provenance.reviewedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
+          <p className="catalog-source">Catalog source verified {destination.provenance.verifiedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
         </div>
         <SheetFooter><Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button></SheetFooter>
       </SheetContent>
