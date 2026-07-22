@@ -12,6 +12,10 @@ Trail Planner separates live provider data from slower, judgment-heavy catalog c
 6. Coverage is recomputed per domain as `missing`, `partial`, `fresh`, `stale`, or `unavailable`.
 7. The validated record atomically replaces `data/catalog/records/<destination-key>.json`; derived snapshots or seeds are updated in the same run. Publication never fills gaps with plausible values.
 
+Reusable route stages are normalized separately in `data/catalog/travel-parts.json`. Destination mode matrices in `data/catalog/trip-plans.json` reference those stable part keys in both directions, so a ferry or road leg can be reused without copying operator facts into each trip. Every destination matrix explicitly contains car, train/bus, and airplane states. A mode without a complete provider itinerary is `details-unavailable` with a UI-ready reason instead of an absent or partly invented trip.
+
+All ferry parts include a 60-minute recommended terminal-arrival allowance. `pnpm catalog:validate-travel` resolves every reference, checks stage-to-stage continuity in both directions, enforces the complete mode matrix, and requires one ferry in each Norwegian car plan.
+
 The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enrichmentJobs`, and `providerCache`. A claim stored in the catalog is published by definition; unsupported or superseded observations remain outside the current record and are recoverable from Git history.
 
 ## Domain and sourcing matrix

@@ -128,6 +128,7 @@ describe("provider-independent travel totals", () => {
     expect(() => deriveTravelOptionTotals({ ...base, outbound: { direction: "outbound", stages: [{ ...base.outbound.stages[0], geometry: [[9, 57]] }] } })).toThrow(/geometry/);
     expect(() => deriveTravelOptionTotals({ ...base, providerTotals: { cost: { amount: 500, currency: "EUR" } } })).toThrow(/one currency/);
     expect(() => deriveTravelOptionTotals({ ...base, source: { provider: "test", url: "javascript:alert(1)" } })).toThrow(/HTTPS/);
+    expect(() => deriveTravelOptionTotals({ ...base, outbound: { ...base.outbound, stages: [{ ...base.outbound.stages[0], catalogPartKey: "Test Part" }] } })).toThrow(/catalog part key/);
     expect(() => deriveTravelOptionTotals({ ...base, outbound: { direction: "outbound", stages: [{ ...base.outbound.stages[0], kind: "transfer", transferType: "other" as "wait" }] } })).toThrow(/transfer type/);
     expect(() => deriveTravelOptionTotals({ ...base, costComponents: [{ ...base.costComponents[0], amount: { amount: 500, currency: "USD" as "DKK" } }] })).toThrow(/unsupported/);
     expect(() => deriveTravelOptionTotals({ ...base, warnings: [""] })).toThrow(/warnings/);

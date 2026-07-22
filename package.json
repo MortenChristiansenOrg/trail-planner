@@ -14,6 +14,7 @@
     "test": "pnpm -r test",
     "test:e2e": "playwright test",
     "catalog:validate": "node scripts/catalog-data/validate-record.mjs",
+    "catalog:validate-travel": "node scripts/catalog-data/validate-travel-data.mjs",
     "catalog:publish": "node scripts/catalog-data/publish-record.mjs"
   },
   "devDependencies": {

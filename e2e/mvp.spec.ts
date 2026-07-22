@@ -126,6 +126,9 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
   await page.getByRole("button", { name: "View area details" }).click();
   const details = page.locator(".destination-sheet");
   await expect(details.getByText("Trail geometry unavailable")).toBeVisible();
+  const unavailableTrain = details.locator(".detail-travel-list > div").filter({ hasText: "Train + bus" });
+  await expect(unavailableTrain).toContainText("Unavailable");
+  await expect(unavailableTrain.getByRole("button", { name: "View stages" })).toHaveCount(0);
   await details.getByText("Photo credit").click();
   await expect(details.getByText("Landmannalaugar by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
   await details.getByAltText("Rhyolite mountains and the Laugavegur trail at Landmannalaugar").evaluate((image) => {

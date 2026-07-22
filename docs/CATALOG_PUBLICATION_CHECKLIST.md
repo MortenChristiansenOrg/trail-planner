@@ -34,3 +34,6 @@ The destination skills execute this checklist before publishing a catalog record
 - [ ] Any checked-in catalog snapshot or seed consuming the record is updated in the same run.
 - [ ] `pnpm test`, `pnpm typecheck`, and relevant catalog browser tests pass after publication.
 - [ ] Raw Firecrawl captures remain in `.catalog-work/` and are not committed.
+- [ ] `pnpm catalog:validate-travel` passes when reusable travel parts or destination trip matrices change.
+- [ ] Every destination has explicit car, train/bus, and airplane states; unavailable details have a user-facing reason.
+- [ ] Ferry stages reference a shared travel part and include the 60-minute recommended terminal-arrival allowance.

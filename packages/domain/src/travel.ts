@@ -1,4 +1,5 @@
 import type { Money } from "./budget";
+import { isCatalogTravelKey } from "./catalogTravel";
 import type { DestinationId } from "./destination";
 import type { ProvenanceClaim } from "./provenance";
 import type { Month } from "./readModels";
@@ -32,6 +33,7 @@ export type TravelCostComponent = {
 
 export type TravelStage = {
   id: string;
+  catalogPartKey?: string;
   kind: TravelLegKind;
   origin: TravelPlace;
   destination: TravelPlace;
@@ -125,6 +127,7 @@ export function deriveTravelOptionTotals(option: TravelOptionSnapshot) {
   for (const stage of stages) {
     if (!stage.id.trim() || stageIds.has(stage.id)) throw new Error(`Duplicate or empty travel stage id: ${stage.id}`);
     stageIds.add(stage.id);
+    if (stage.catalogPartKey !== undefined && !isCatalogTravelKey(stage.catalogPartKey)) throw new Error(`Travel stage catalog part key is invalid: ${stage.id}`);
     if (!travelLegKinds.has(stage.kind) || !confidenceLevels.has(stage.confidence)) throw new Error(`Travel stage classification is invalid: ${stage.id}`);
     if (stage.kind === "transfer" && !stage.transferType) throw new Error(`Travel transfer type is required: ${stage.id}`);
     if (stage.transferType && !transferTypes.has(stage.transferType)) throw new Error(`Travel transfer type is invalid: ${stage.id}`);
