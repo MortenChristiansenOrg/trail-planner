@@ -242,6 +242,46 @@
       "source": { "key": "osrm-aalborg-zell-am-see-kaprun", "url": "https://router.project-osrm.org/route/v1/driving/9.922,57.048;12.7963165,47.3239636?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
     },
     {
+      "key": "road-larvik-andalsnes",
+      "kind": "car",
+      "origin": { "key": "larvik", "name": "Larvik ferry terminal", "coordinates": [10.037, 59.039] },
+      "destination": { "key": "andalsnes", "name": "Åndalsnes", "coordinates": [7.687, 62.567] },
+      "durationMinutes": 494,
+      "distanceKm": 574.1,
+      "confidence": "high",
+      "source": { "key": "osrm-larvik-andalsnes", "url": "https://router.project-osrm.org/route/v1/driving/10.037,59.039;7.687,62.567?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
+    },
+    {
+      "key": "road-larvik-gjendesheim",
+      "kind": "car",
+      "origin": { "key": "larvik", "name": "Larvik ferry terminal", "coordinates": [10.037, 59.039] },
+      "destination": { "key": "gjendesheim", "name": "Gjendesheim", "coordinates": [8.997, 61.495] },
+      "durationMinutes": 388,
+      "distanceKm": 421.7,
+      "confidence": "high",
+      "source": { "key": "osrm-larvik-gjendesheim", "url": "https://router.project-osrm.org/route/v1/driving/10.037,59.039;8.997,61.495?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
+    },
+    {
+      "key": "road-kristiansand-odda",
+      "kind": "car",
+      "origin": { "key": "kristiansand", "name": "Kristiansand ferry terminal", "coordinates": [8.005, 58.144] },
+      "destination": { "key": "odda", "name": "Odda", "coordinates": [6.546, 60.069] },
+      "durationMinutes": 334,
+      "distanceKm": 333.7,
+      "confidence": "high",
+      "source": { "key": "osrm-kristiansand-odda", "url": "https://router.project-osrm.org/route/v1/driving/8.005,58.144;6.546,60.069?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
+    },
+    {
+      "key": "road-gothenburg-svolvaer",
+      "kind": "car",
+      "origin": { "key": "gothenburg", "name": "Gothenburg ferry terminal", "coordinates": [11.95, 57.7] },
+      "destination": { "key": "svolvaer", "name": "Svolvær", "coordinates": [14.568, 68.234] },
+      "durationMinutes": 1594,
+      "distanceKm": 1970.3,
+      "confidence": "high",
+      "source": { "key": "osrm-gothenburg-svolvaer", "url": "https://router.project-osrm.org/route/v1/driving/11.95,57.7;14.568,68.234?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
+    },
+    {
       "key": "color-line-hirtshals-kristiansand",
       "kind": "ferry",
       "origin": { "key": "hirtshals", "name": "Hirtshals ferry terminal", "coordinates": [9.966, 57.595] },

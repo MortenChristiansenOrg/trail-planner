@@ -1,3 +1,11 @@
+import {
+  getCatalogCarDurationMinutes,
+  getCatalogCarOptionId,
+  getCatalogCarPlan,
+  getCatalogFerryPart,
+  getCatalogUnavailableReason,
+} from "@/features/catalog/catalogTravelData";
+
 export type TravelMode = "car" | "train" | "plane";
 
 export type TravelEstimate = {
@@ -185,6 +193,38 @@ const travel = (
 
 const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
+const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[]) => {
+  const carPlan = getCatalogCarPlan(destinationId);
+  const durationMinutes = getCatalogCarDurationMinutes(destinationId);
+  const optionId = getCatalogCarOptionId(destinationId);
+  const ferry = getCatalogFerryPart(destinationId);
+  if (!carPlan || durationMinutes === undefined || !optionId || !ferry) return estimates;
+  return estimates.map((estimate) => {
+    if (estimate.mode === "car") {
+      return {
+        ...estimate,
+        available: true,
+        oneWayHours: durationMinutes / 60,
+        optionId,
+        note: `${ferry.service} with ${ferry.operator}; includes the recommended 1h terminal arrival. ${carPlan.selectionNote ?? ""}`.trim(),
+        confidence: "high" as const,
+      };
+    }
+    const catalogMode = estimate.mode === "train" ? "train-bus" : "airplane";
+    const reason = getCatalogUnavailableReason(destinationId, catalogMode);
+    return reason ? {
+      ...estimate,
+      available: false,
+      oneWayHours: 0,
+      costPerPersonDkk: 0,
+      layovers: estimate.mode === "plane" ? 0 : estimate.layovers,
+      note: reason,
+      confidence: "high" as const,
+      optionId: undefined,
+    } : estimate;
+  });
+};
+
 const catalogSeeds: DestinationSeed[] = [
   {
     id: "romsdalen",
@@ -197,7 +237,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A compact fjord-and-ridge base with serious mountain days directly above town.",
     character: "Sharp ridges, deep valleys, exposed viewpoints and unusually easy access from the rail terminus.",
-    travel: travel([12.4, 1700], [18.2, 2050], [7.3, 2550, 1], "Åndalsnes"),
+    travel: withCatalogTripPlan("romsdalen", travel([12.4, 1700], [18.2, 2050], [7.3, 2550, 1], "Åndalsnes")),
     hikes: [],
     lodgings: [
       { id: "andalsnes-camping", name: "Åndalsnes Camping", kind: "camping", nightlyCostDkk: 260 },
@@ -215,7 +255,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [7, 8, 9],
     summary: "A high-mountain gateway for classic ridge walks and hut-to-hut stages.",
     character: "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
-    travel: travel([13.7, 1850], [20.4, 1850], [8.4, 2400, 1], "Gjendesheim"),
+    travel: withCatalogTripPlan("jotunheimen", travel([13.7, 1850], [20.4, 1850], [8.4, 2400, 1], "Gjendesheim")),
     hikes: [],
     lodgings: [
       { id: "gjendesheim-turisthytte", name: "Gjendesheim Turisthytte", kind: "hut", nightlyCostDkk: 930 },
@@ -233,7 +273,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A fjord town with access to long viewpoint hikes, glaciers and plateau terrain.",
     character: "Big vertical relief, waterfalls and long days where weather and shuttle timing matter.",
-    travel: travel([11.8, 1650], [18.8, 1950], [7.8, 2450, 1], "Odda"),
+    travel: withCatalogTripPlan("hardanger", travel([11.8, 1650], [18.8, 1950], [7.8, 2450, 1], "Odda")),
     hikes: [],
     lodgings: [
       { id: "odda-camping", name: "Odda Camping", kind: "camping", nightlyCostDkk: 285 },
@@ -251,7 +291,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A sea-level base for short, steep hikes into dramatic coastal mountains.",
     character: "Granite peaks rising straight from the sea, rapidly changing weather and compact but demanding routes.",
-    travel: travel([24.5, 3100], [31, 2850], [8.2, 3100, 1], "Svolvær"),
+    travel: withCatalogTripPlan("lofoten", travel([24.5, 3100], [31, 2850], [8.2, 3100, 1], "Svolvær")),
     hikes: [],
     lodgings: [{ id: "svolvaer-camping", name: "Svolvær coastal camping", kind: "camping", nightlyCostDkk: 320 }],
   },

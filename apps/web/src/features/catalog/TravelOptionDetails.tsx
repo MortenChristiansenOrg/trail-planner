@@ -142,8 +142,8 @@ function StageTimeline({ costById, stages }: { costById: Map<string, TravelCostC
     <li className={`travel-stage travel-stage--${stage.kind}`} key={stage.id}>
       <span className="travel-stage__icon">{kindIcon(stage.kind)}</span>
       <div>
-        <span className="travel-stage__heading"><Badge variant="outline">{stage.transferType === "layover" ? "Flight layover" : kindLabels[stage.kind]}</Badge><strong>{formatMinutes(stage.durationMinutes)}</strong></span>
-        {stage.transferType === "layover" ? <p><strong>{stage.origin.name}</strong></p> : <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>}
+        <span className="travel-stage__heading"><Badge variant="outline">{stage.transferType === "layover" ? "Flight layover" : stage.transferType === "check-in" ? "Ferry arrival buffer" : kindLabels[stage.kind]}</Badge><strong>{formatMinutes(stage.durationMinutes)}</strong></span>
+        {stage.transferType === "layover" || stage.transferType === "check-in" ? <p><strong>{stage.origin.name}</strong></p> : <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>}
         <small>{[stage.operator, stage.service, stage.confidence ? `${stage.confidence} confidence` : undefined].filter(Boolean).join(" · ") || "Operator not available"}</small>
         {stage.departureTime && stage.arrivalTime ? <small>{formatTime(stage.departureTime)}–{formatTime(stage.arrivalTime)}</small> : null}
         {stage.costComponentIds.length ? <small>Cost components: {stage.costComponentIds.map((id) => costById.get(id)?.label).filter(Boolean).join(", ")}</small> : null}

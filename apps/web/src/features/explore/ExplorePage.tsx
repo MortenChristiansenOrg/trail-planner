@@ -65,6 +65,7 @@ export function ExplorePage({
   const selectedResult =
     results.find((result) => result.destination.id === search.selected) ?? results[0];
   const drivingRoute = useDrivingRoute(
+    selectedResult?.destination.id,
     selectedResult?.destination.coordinates,
     selectedResult?.destination.countryCode !== "NO",
   );
@@ -92,7 +93,7 @@ export function ExplorePage({
       <main className="explore-stage">
         <TrailMap
           className="explore-map"
-          lines={drivingRoute.length ? [{ id: "journey", kind: "journey", coordinates: drivingRoute, label: "OSRM driving route from Aalborg" }] : []}
+          lines={drivingRoute.lines}
           markers={results.map((result, index) => ({
             id: result.destination.id,
             label: `${result.destination.name}, ${result.destination.country}`,
@@ -141,7 +142,7 @@ export function ExplorePage({
         {selectedResult ? (
           <SelectedDestinationCard
             result={selectedResult}
-            drivingRouteVisible={drivingRoute.length > 0}
+            drivingRouteLabel={drivingRoute.lines.length ? drivingRoute.label : undefined}
             search={search}
             onPlan={() => void planTrip(selectedResult)}
           />
@@ -323,12 +324,12 @@ function DestinationCard({
 
 function SelectedDestinationCard({
   result,
-  drivingRouteVisible,
+  drivingRouteLabel,
   search,
   onPlan,
 }: {
   result: ExploreResult;
-  drivingRouteVisible: boolean;
+  drivingRouteLabel?: string;
   search: ExploreSearch;
   onPlan: () => void;
 }) {
@@ -358,7 +359,7 @@ function SelectedDestinationCard({
           <TravelSummary estimate={estimate} key={estimate.mode} participants={search.participants} viable={result.viable.includes(estimate)} />
         ))}
       </div>
-      {drivingRouteVisible ? <p className="journey-map-key"><Route /> Map line: OSRM driving route from Aalborg</p> : null}
+      {drivingRouteLabel ? <p className="journey-map-key"><Route /> Map route: {drivingRouteLabel}</p> : null}
       <div className="selected-destination__actions">
         <DestinationDetails destination={destination} search={search} onPlan={onPlan} />
         <Button onClick={onPlan}>Plan this trip <ArrowRight /></Button>

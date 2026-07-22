@@ -9,8 +9,12 @@ const [partFile, planFile, recordFiles] = await Promise.all([
 const records = await Promise.all(recordFiles.map((file) =>
   readFile(`data/catalog/records/${file}`, "utf8").then(JSON.parse),
 ));
-const destinationKeys = records.map((record) => record.destination.key);
-const countryCodeByDestination = new Map(records.map((record) => [record.destination.key, record.destination.countryCode]));
+const exploreNorwayDestinations = ["andalsnes", "gjendesheim", "odda", "svolvaer"];
+const destinationKeys = [...records.map((record) => record.destination.key), ...exploreNorwayDestinations];
+const countryCodeByDestination = new Map([
+  ...records.map((record) => [record.destination.key, record.destination.countryCode]),
+  ...exploreNorwayDestinations.map((key) => [key, "NO"]),
+]);
 const errors = validateCatalogTravelData(partFile, planFile, destinationKeys, countryCodeByDestination);
 
 const requiredMajorFerryParts = [

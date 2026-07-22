@@ -110,6 +110,43 @@ test("travel stages use provider-backed road geometry and never invent missing d
   await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
 });
 
+test("Norway selections use the catalog ferry route and expose the arrival buffer", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "Detailed ferry-route behavior is covered once on desktop.");
+
+  await page.route("https://router.project-osrm.org/**", async (route) => {
+    const encodedPoints = new URL(route.request().url()).pathname.split("/driving/")[1];
+    const coordinates = encodedPoints.split(";").map((point) => point.split(",").map(Number));
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 420_000,
+          duration: 23_280,
+          geometry: { coordinates },
+        }],
+      }),
+    });
+  });
+
+  await page.goto("/explore?month=7&selected=jotunheimen&maxDriveHours=40");
+  const exploreMap = page.locator('.explore-map[data-line-count="3"][data-line-modes="car,ferry,car"]');
+  await expect(exploreMap).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByText("Map route: SuperSpeed Hirtshals–Larvik · arrive 1h before departure")).toBeVisible();
+  await expect(page.locator(".travel-summary").filter({ hasText: "Train + bus" })).toContainText("Unavailable");
+  await expect(page.locator(".travel-summary").filter({ hasText: "Airplane" })).toContainText("Unavailable");
+
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
+  await expect(carEstimate).toContainText("includes the recommended 1h terminal arrival");
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  const dialog = page.getByRole("dialog", { name: "Drive and ferry from Aalborg to Gjendesheim" });
+  await expect(dialog.locator('.map-frame[data-line-count="6"]')).toBeVisible({ timeout: 15_000 });
+  await expect(dialog.getByText("Ferry arrival buffer")).toBeVisible();
+  await expect(dialog.getByText("1h", { exact: true })).toBeVisible();
+  await expect(dialog).toContainText("Color Line");
+});
+
 test("Nordic hub media, attribution, and missing-route states are inspectable", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed catalog behavior is covered once on desktop.");
 
@@ -295,7 +332,7 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await expect(page.getByText("Best match").first()).toBeVisible();
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator(".explore-map .maplibregl-ctrl-attrib")).not.toHaveClass(/maplibregl-compact-show/);
-  await expect(page.getByText("Map line: OSRM driving route from Aalborg")).toBeVisible();
+  await expect(page.getByText("Map route: OSRM driving route from Aalborg")).toBeVisible();
 
   await page.waitForTimeout(750);
   const markerA = page.getByRole("button", { name: "Innsbruck, Austria" });
