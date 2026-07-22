@@ -15,6 +15,7 @@ export type CatalogTravelSource = {
   kind: "official" | "provider";
   retrievedAt: string;
   refreshAfter: string;
+  endpointSnapMeters?: [origin: number, destination: number];
 };
 
 export type CatalogTravelPart = {
@@ -181,6 +182,7 @@ export function validateCatalogTravelData(
       errors.push(`${label} car part cannot have a ferry arrival recommendation`);
     }
     if (!isCatalogTravelKey(part.source.key) || !sourceKinds.has(part.source.kind) || !validUrl(part.source.url) || !isoDatePattern.test(part.source.retrievedAt) || !isoDatePattern.test(part.source.refreshAfter)) errors.push(`${label} source is invalid`);
+    if (part.source.endpointSnapMeters && (part.source.endpointSnapMeters.some((distance) => !Number.isFinite(distance) || distance < 0 || distance > 1_000))) errors.push(`${label} source snapped too far from a requested access node`);
   }
 
   const expectedDestinations = new Set(destinationKeys);

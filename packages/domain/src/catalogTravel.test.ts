@@ -83,4 +83,13 @@ describe("catalog travel data", () => {
       expect.stringContaining("invalid status"),
     ]));
   });
+
+  it("rejects provider routes that snap too far from a requested access node", () => {
+    const invalidParts = structuredClone(partFile);
+    invalidParts.parts[0].source.endpointSnapMeters = [12, 1_535];
+
+    expect(validateCatalogTravelData(invalidParts, planFile, ["norway"])).toContainEqual(
+      expect.stringContaining("snapped too far"),
+    );
+  });
 });

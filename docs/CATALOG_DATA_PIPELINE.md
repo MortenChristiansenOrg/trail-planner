@@ -16,6 +16,8 @@ Reusable route stages are normalized separately in `data/catalog/travel-parts.js
 
 All ferry parts include a 60-minute recommended terminal-arrival allowance. `pnpm catalog:validate-travel` resolves every reference, checks stage-to-stage continuity in both directions, enforces the complete mode matrix, and requires one ferry in each Norwegian car plan.
 
+Road estimates request provider alternatives and select the lowest modeled duration. When a provider returns geometry and distance without duration, the shortest-distance candidate is selected and converted to an explicit 70 km/h planning estimate. Provider endpoint snaps over 1 km are rejected: a large snap usually means the catalog coordinate is not the intended road-access node and can create a plausible-looking but materially wrong detour.
+
 The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enrichmentJobs`, and `providerCache`. A claim stored in the catalog is published by definition; unsupported or superseded observations remain outside the current record and are recoverable from Git history.
 
 ## Domain and sourcing matrix

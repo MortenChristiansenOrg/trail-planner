@@ -255,11 +255,11 @@
       "key": "road-larvik-gjendesheim",
       "kind": "car",
       "origin": { "key": "larvik", "name": "Larvik ferry terminal", "coordinates": [10.037, 59.039] },
-      "destination": { "key": "gjendesheim", "name": "Gjendesheim", "coordinates": [8.997, 61.495] },
-      "durationMinutes": 388,
-      "distanceKm": 421.7,
+      "destination": { "key": "gjendesheim", "name": "Gjendesheim", "coordinates": [8.809962, 61.495185] },
+      "durationMinutes": 332,
+      "distanceKm": 353.8,
       "confidence": "high",
-      "source": { "key": "osrm-larvik-gjendesheim", "url": "https://router.project-osrm.org/route/v1/driving/10.037,59.039;8.997,61.495?overview=false", "kind": "provider", "retrievedAt": "2026-07-22T14:25:53.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z" }
+      "source": { "key": "osrm-larvik-gjendesheim", "url": "https://router.project-osrm.org/route/v1/driving/10.037,59.039;8.809962,61.495185?overview=false&alternatives=3", "kind": "provider", "retrievedAt": "2026-07-22T15:21:52.000Z", "refreshAfter": "2026-08-21T00:00:00.000Z", "endpointSnapMeters": [252, 0.5] }
     },
     {
       "key": "road-kristiansand-odda",

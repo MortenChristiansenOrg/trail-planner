@@ -16,7 +16,7 @@ describe("Explore catalog trip plans", () => {
       "road-larvik-gjendesheim",
     ]);
     expect(getCatalogFerryPart("jotunheimen")).toMatchObject({ recommendedArrivalMinutes: 60 });
-    expect(getCatalogCarDurationMinutes("jotunheimen")).toBe(721);
+    expect(getCatalogCarDurationMinutes("jotunheimen")).toBe(665);
   });
 
   it("keeps unverified Norway travel modes explicitly unavailable", () => {

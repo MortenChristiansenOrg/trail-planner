@@ -113,7 +113,9 @@ test("travel stages use provider-backed road geometry and never invent missing d
 test("Norway selections use the catalog ferry route and expose the arrival buffer", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed ferry-route behavior is covered once on desktop.");
 
+  const routingRequests: string[] = [];
   await page.route("https://router.project-osrm.org/**", async (route) => {
+    routingRequests.push(route.request().url());
     const encodedPoints = new URL(route.request().url()).pathname.split("/driving/")[1];
     const coordinates = encodedPoints.split(";").map((point) => point.split(",").map(Number));
     await route.fulfill({
@@ -132,6 +134,9 @@ test("Norway selections use the catalog ferry route and expose the arrival buffe
   await page.goto("/explore?month=7&selected=jotunheimen&maxDriveHours=40");
   const exploreMap = page.locator('.explore-map[data-line-count="3"][data-line-modes="car,ferry,car"]');
   await expect(exploreMap).toBeVisible({ timeout: 15_000 });
+  await expect(page.locator(".destination-row").filter({ hasText: "Gjendesheim" })).toContainText("11h 5m");
+  expect(routingRequests.some((url) => url.includes("8.809962,61.495185"))).toBe(true);
+  expect(routingRequests.some((url) => url.includes("8.997,61.495"))).toBe(false);
   await expect(page.getByText("Map route: SuperSpeed Hirtshals–Larvik · arrive 1h before departure")).toBeVisible();
   await expect(page.locator(".travel-summary").filter({ hasText: "Train + bus" })).toContainText("Unavailable");
   await expect(page.locator(".travel-summary").filter({ hasText: "Airplane" })).toContainText("Unavailable");
