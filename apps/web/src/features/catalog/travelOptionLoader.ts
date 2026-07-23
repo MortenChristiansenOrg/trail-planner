@@ -9,14 +9,29 @@ import {
 } from "@/features/catalog/catalogTravelData";
 import { drivingRoutePoints, loadRoadRoute } from "@/features/maps/drivingRoute";
 import { loadCatalogRouteJourney, type LoadedCatalogRoutePart } from "@/features/maps/catalogRoute";
-import { createDrivingOption } from "@/features/catalog/travelOptions";
+import { createDrivingOption, createEstimatedTravelOption } from "@/features/catalog/travelOptions";
 
 export async function loadTravelOption(optionId: string): Promise<TravelOptionSnapshot | undefined> {
   const destinationId = getExploreDestinationIdForOption(optionId);
   if (destinationId) return loadCatalogDrivingOption(destinationId, optionId);
-  const destination = destinations.find(({ travel }) => travel.some((estimate) => estimate.mode === "car" && estimate.optionId === optionId));
-  const carEstimate = destination?.travel.find((estimate) => estimate.mode === "car" && estimate.optionId === optionId);
-  if (!destination || !carEstimate?.available) return undefined;
+  const destination = destinations.find(({ travel }) => travel.some((estimate) => estimate.optionId === optionId));
+  const estimate = destination?.travel.find((candidate) => candidate.optionId === optionId);
+  if (!destination || !estimate?.available) return undefined;
+  if (estimate.mode !== "car") {
+    const option = createEstimatedTravelOption({
+      destinationId: destination.id,
+      destinationName: destination.name,
+      destinationCoordinates: destination.coordinates,
+      mode: estimate.mode,
+      oneWayHours: estimate.oneWayHours,
+      costPerPersonDkk: estimate.costPerPersonDkk,
+      layovers: estimate.layovers,
+      confidence: estimate.confidence,
+    });
+    deriveTravelOptionTotals(option);
+    return option;
+  }
+  const carEstimate = estimate;
   const viaSouthernDenmark = destination.countryCode !== "NO";
   const points = drivingRoutePoints(destination.coordinates, viaSouthernDenmark);
   const [outbound, inbound] = await Promise.all([

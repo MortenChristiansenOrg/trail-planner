@@ -136,6 +136,23 @@ describe("provider-independent travel totals", () => {
     expect(() => deriveTravelOptionTotals({ ...base, retrievedAt: "2026-02-31T10:00:00Z" })).toThrow(/retrieval time/);
     expect(() => deriveTravelOptionTotals({ ...base, costComponents: [...base.costComponents, { id: "unused", label: "Unused", amount: { amount: 1, currency: "DKK" }, source: "test" }] })).toThrow(/not referenced/);
     expect(() => deriveTravelOptionTotals({ ...base, costComponents: [], outbound: { ...base.outbound, stages: base.outbound.stages.map((stage) => ({ ...stage, costComponentIds: [] })) }, return: { ...base.return, stages: base.return.stages.map((stage) => ({ ...stage, costComponentIds: [] })) } })).toThrow(/explicit cost component/);
+    expect(() => deriveTravelOptionTotals({ ...base, reportedLayovers: { outbound: 1.5, return: 0 } })).toThrow(/layovers/);
+  });
+
+  it("uses reported aggregate layovers when individual flight stages are not stored", () => {
+    const option: TravelOptionSnapshot = {
+      id: "aggregate-flight",
+      label: "Aggregate flight",
+      priceType: "estimated",
+      pricingBasis: "per-person",
+      outbound: { direction: "outbound", stages: [{ id: "out", kind: "flight", origin: { name: "A" }, destination: { name: "B" }, durationMinutes: 240, confidence: "low", costComponentIds: ["fare"] }] },
+      return: { direction: "return", stages: [{ id: "home", kind: "flight", origin: { name: "B" }, destination: { name: "A" }, durationMinutes: 240, confidence: "low", costComponentIds: ["fare"] }] },
+      costComponents: [{ id: "fare", label: "Fare", amount: { amount: 500, currency: "DKK" }, source: "estimate" }],
+      reportedLayovers: { outbound: 1, return: 1 },
+      warnings: [], assumptions: [], retrievedAt: "2026-07-01T10:00:00Z", source: { provider: "test" },
+    };
+
+    expect(deriveTravelOptionTotals(option)).toMatchObject({ layovers: 1, returnLayovers: 1 });
   });
 
   it("retains differing provider totals for UI reconciliation", () => {

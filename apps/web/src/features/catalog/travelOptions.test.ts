@@ -4,11 +4,12 @@ import { destinationById } from "./catalog";
 import { createDrivingOption, createInnsbruckDrivingOption, innsbruckDrivingOptionId } from "./travelOptions";
 
 describe("provider-backed catalog travel options", () => {
-  it("gives every available driving estimate a loadable option id", () => {
+  it("gives every available travel estimate a loadable option id", () => {
     for (const destination of destinationById.values()) {
-      const estimate = destination.travel.find((item) => item.mode === "car");
-      expect(estimate, destination.name).toBeDefined();
-      if (estimate?.available) expect(estimate.optionId, destination.name).toBeTruthy();
+      for (const estimate of destination.travel) {
+        if (estimate.available) expect(estimate.optionId, `${destination.name} ${estimate.mode}`).toBeTruthy();
+        else expect(estimate.optionId, `${destination.name} ${estimate.mode}`).toBeUndefined();
+      }
     }
   });
 

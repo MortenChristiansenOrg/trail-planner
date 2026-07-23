@@ -61,7 +61,7 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
-test("travel stages use provider-backed road geometry and only expose loadable detail", async ({ page }) => {
+test("every available travel mode exposes complete stage details", async ({ page }) => {
   let routingAvailable = true;
   await page.route("https://router.project-osrm.org/**", (route) => routingAvailable
     ? route.fulfill({
@@ -91,9 +91,17 @@ test("travel stages use provider-backed road geometry and only expose loadable d
   await expect(carDialog).toContainText("Road geometry and drive time come from OSRM");
   await page.keyboard.press("Escape");
 
-  for (const label of ["Train + bus", "Airplane"]) {
+  for (const [label, dialogName] of [
+    ["Train + bus", "Train + bus from Aalborg to Innsbruck"],
+    ["Airplane", "Flight + ground transfer from Aalborg to Innsbruck"],
+  ] as const) {
     const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
-    await expect(choice.getByRole("button", { name: "Stage details" })).toHaveCount(0);
+    await choice.getByRole("button", { name: "Stage details" }).click();
+    const dialog = page.getByRole("dialog", { name: dialogName });
+    await expect(dialog).toContainText("Complete outbound and return snapshot");
+    await expect(dialog).toContainText("Saved Explore catalog estimate");
+    await expect(dialog).not.toContainText("Stage detail not available");
+    await page.keyboard.press("Escape");
   }
 
   routingAvailable = false;
@@ -110,7 +118,7 @@ test("travel stages use provider-backed road geometry and only expose loadable d
   await expect(fallbackDialog).not.toContainText("Stage detail not available");
 });
 
-test("Berchtesgaden driving details survive a legacy saved-trip snapshot", async ({ page }, testInfo) => {
+test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Legacy trip migration is covered once on desktop.");
 
   await page.route("https://router.project-osrm.org/**", async (route) => {
@@ -134,8 +142,7 @@ test("Berchtesgaden driving details survive a legacy saved-trip snapshot", async
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.evaluate(() => {
     const trips = JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]");
-    const car = trips[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car");
-    if (car) delete car.optionId;
+    for (const estimate of trips[0]?.travelSnapshot ?? []) delete estimate.optionId;
     localStorage.setItem("trail-planner:mvp-trips:v1", JSON.stringify(trips));
   });
   await page.reload();
@@ -149,6 +156,19 @@ test("Berchtesgaden driving details survive a legacy saved-trip snapshot", async
   await expect(dialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
   await expect(dialog).toContainText("Aalborg");
   await expect(dialog).toContainText("Berchtesgaden");
+  await page.keyboard.press("Escape");
+
+  for (const [label, optionId, dialogName] of [
+    ["Train + bus", "catalog-estimate-aalborg-berchtesgaden-train", "Train + bus from Aalborg to Berchtesgaden"],
+    ["Airplane", "catalog-estimate-aalborg-berchtesgaden-plane", "Flight + ground transfer from Aalborg to Berchtesgaden"],
+  ] as const) {
+    const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
+    await choice.getByRole("button", { name: label === "Train + bus" ? /Train \+ bus/ : /Airplane/ }).click();
+    await expect.poll(() => page.evaluate((mode) => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === mode)?.optionId, label === "Train + bus" ? "train" : "plane")).toBe(optionId);
+    await choice.getByRole("button", { name: "Stage details" }).click();
+    await expect(page.getByRole("dialog", { name: dialogName })).toContainText("Saved Explore catalog estimate");
+    await page.keyboard.press("Escape");
+  }
   await expect(page.getByText("Stage detail not available")).toHaveCount(0);
 });
 
@@ -180,8 +200,8 @@ test("Norway selections use the catalog ferry route and expose the arrival buffe
   expect(routingRequests.some((url) => url.includes("8.809962,61.495185"))).toBe(true);
   expect(routingRequests.some((url) => url.includes("8.997,61.495"))).toBe(false);
   await expect(page.getByText("Map route: SuperSpeed Hirtshals–Larvik · arrive 1h before departure")).toBeVisible();
-  await expect(page.locator(".travel-summary").filter({ hasText: "Train + bus" })).toContainText("Unavailable");
-  await expect(page.locator(".travel-summary").filter({ hasText: "Airplane" })).toContainText("Unavailable");
+  await expect(page.locator(".travel-summary").filter({ hasText: "Train + bus" })).not.toContainText("Unavailable");
+  await expect(page.locator(".travel-summary").filter({ hasText: "Airplane" })).not.toContainText("Unavailable");
 
   await page.getByRole("button", { name: "View area details" }).click();
   const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
@@ -192,6 +212,17 @@ test("Norway selections use the catalog ferry route and expose the arrival buffe
   await expect(dialog.getByText("Ferry arrival buffer")).toBeVisible();
   await expect(dialog.getByText("1h", { exact: true })).toBeVisible();
   await expect(dialog).toContainText("Color Line");
+  await page.keyboard.press("Escape");
+
+  for (const [label, dialogName] of [
+    ["Train + bus", "Train + bus from Aalborg to Gjendesheim"],
+    ["Airplane", "Flight + ground transfer from Aalborg to Gjendesheim"],
+  ] as const) {
+    const estimate = page.locator(".detail-travel-list > div").filter({ hasText: label });
+    await estimate.getByRole("button", { name: "View stages" }).click();
+    await expect(page.getByRole("dialog", { name: dialogName })).toContainText("Saved Explore catalog estimate");
+    await page.keyboard.press("Escape");
+  }
 });
 
 test("Nordic hub media, attribution, and missing-route states are inspectable", async ({ page }, testInfo) => {

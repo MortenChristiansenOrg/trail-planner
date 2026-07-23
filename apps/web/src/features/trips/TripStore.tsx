@@ -24,20 +24,25 @@ function loadTrips(): PlannedTrip[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = window.localStorage.getItem(storageKey);
-    return raw ? (JSON.parse(raw) as PlannedTrip[]).map(restoreDrivingOptionId) : [];
+    return raw ? (JSON.parse(raw) as PlannedTrip[]).map(restoreTravelOptionIds) : [];
   } catch {
     return [];
   }
 }
 
-function restoreDrivingOptionId(trip: PlannedTrip): PlannedTrip {
-  const catalogCar = destinationById.get(trip.destinationId)?.travel.find(({ mode }) => mode === "car");
-  if (!catalogCar?.optionId || trip.travelSnapshot.some(({ mode, optionId }) => mode === "car" && optionId)) return trip;
+function restoreTravelOptionIds(trip: PlannedTrip): PlannedTrip {
+  const catalogTravel = destinationById.get(trip.destinationId)?.travel;
+  if (!catalogTravel) return trip;
   return {
     ...trip,
-    travelSnapshot: trip.travelSnapshot.map((estimate) => estimate.mode === "car" && estimate.available
-      ? { ...estimate, optionId: catalogCar.optionId }
-      : estimate),
+    travelSnapshot: trip.travelSnapshot.map((estimate) => {
+      const current = catalogTravel.find(({ mode }) => mode === estimate.mode);
+      if (!current) return estimate;
+      if (!estimate.available && current.available && estimate.note.includes("not been verified")) return current;
+      return estimate.available && current.optionId && !estimate.optionId
+        ? { ...estimate, optionId: current.optionId }
+        : estimate;
+    }),
   };
 }
 
@@ -88,7 +93,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
       setTrips([]);
       return;
     }
-    setTrips(stateJsons.map((state) => restoreDrivingOptionId(JSON.parse(state) as PlannedTrip)));
+    setTrips(stateJsons.map((state) => restoreTravelOptionIds(JSON.parse(state) as PlannedTrip)));
   }, [isAuthenticated, stateJsons]);
 
   const create = async (input: NewTripInput) => {
@@ -98,7 +103,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
       plannedMonth: draft.plannedMonth,
       stateJson: JSON.stringify(draft),
     });
-    const saved = restoreDrivingOptionId(JSON.parse(state) as PlannedTrip);
+    const saved = restoreTravelOptionIds(JSON.parse(state) as PlannedTrip);
     setTrips((current) => [...current, saved]);
     return saved;
   };
@@ -106,7 +111,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
   const update = async (trip: PlannedTrip) => {
     const next = { ...trip, updatedAt: Date.now() };
     const state = await updateState({ tripId: trip.id as never, stateJson: JSON.stringify(next) });
-    const saved = restoreDrivingOptionId(JSON.parse(state) as PlannedTrip);
+    const saved = restoreTravelOptionIds(JSON.parse(state) as PlannedTrip);
     setTrips((current) => current.map((item) => item.id === saved.id ? saved : item));
   };
 

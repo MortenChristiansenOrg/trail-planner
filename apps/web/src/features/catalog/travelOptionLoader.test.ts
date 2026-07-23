@@ -8,6 +8,37 @@ afterEach(() => {
 });
 
 describe("catalog travel option loading", () => {
+  it("loads complete outbound and return details for every available catalog mode", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      throw new Error("routing unavailable");
+    }));
+
+    for (const destination of destinationById.values()) {
+      for (const estimate of destination.travel) {
+        if (!estimate.available) continue;
+        const option = await loadTravelOption(estimate.optionId!);
+        expect(option, `${destination.name} ${estimate.mode}`).toBeDefined();
+        expect(option?.outbound.stages.length, `${destination.name} ${estimate.mode} outbound`).toBeGreaterThan(0);
+        expect(option?.return.stages.length, `${destination.name} ${estimate.mode} return`).toBeGreaterThan(0);
+        expect(deriveTravelOptionTotals(option!).cost.amount, `${destination.name} ${estimate.mode} cost`).toBe(estimate.costPerPersonDkk);
+      }
+    }
+  });
+
+  it("shows Berchtesgaden train/bus and flight estimates with their published totals", async () => {
+    const destination = destinationById.get("berchtesgaden")!;
+    for (const mode of ["train", "plane"] as const) {
+      const estimate = destination.travel.find((candidate) => candidate.mode === mode)!;
+      const option = await loadTravelOption(estimate.optionId!);
+      const totals = deriveTravelOptionTotals(option!);
+
+      expect(option?.label).toContain(mode === "train" ? "Train + bus" : "Flight + ground transfer");
+      expect(totals.durationMinutes).toBe(Math.round(estimate.oneWayHours * 60) * 2);
+      expect(totals.cost.amount).toBe(estimate.costPerPersonDkk);
+      expect(totals.layovers).toBe(mode === "plane" ? estimate.layovers : 0);
+    }
+  });
+
   it("loads Berchtesgaden details from the same road provider used by Explore", async () => {
     vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
       const points = new URL(String(input)).pathname

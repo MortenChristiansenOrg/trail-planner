@@ -3,9 +3,8 @@ import {
   getCatalogCarOptionId,
   getCatalogCarPlan,
   getCatalogFerryPart,
-  getCatalogUnavailableReason,
 } from "@/features/catalog/catalogTravelData";
-import { getRoadDrivingOptionId } from "@/features/catalog/travelOptions";
+import { getEstimatedTravelOptionId, getRoadDrivingOptionId } from "@/features/catalog/travelOptions";
 
 export type TravelMode = "car" | "train" | "plane";
 
@@ -194,11 +193,17 @@ const travel = (
 
 const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
-const withDrivingOption = (destination: DestinationSeed): DestinationSeed => ({
+const withTravelOptions = (destination: DestinationSeed): DestinationSeed => ({
   ...destination,
-  travel: destination.travel.map((estimate) => estimate.mode === "car" && estimate.available && !estimate.optionId
-    ? { ...estimate, optionId: getRoadDrivingOptionId(destination.id) }
-    : estimate),
+  travel: destination.travel.map((estimate) => {
+    if (!estimate.available || estimate.optionId) return estimate;
+    return {
+      ...estimate,
+      optionId: estimate.mode === "car"
+        ? getRoadDrivingOptionId(destination.id)
+        : getEstimatedTravelOptionId(destination.id, estimate.mode),
+    };
+  }),
 });
 
 const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[]) => {
@@ -218,18 +223,7 @@ const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[])
         confidence: "high" as const,
       };
     }
-    const catalogMode = estimate.mode === "train" ? "train-bus" : "airplane";
-    const reason = getCatalogUnavailableReason(destinationId, catalogMode);
-    return reason ? {
-      ...estimate,
-      available: false,
-      oneWayHours: 0,
-      costPerPersonDkk: 0,
-      layovers: estimate.mode === "plane" ? 0 : estimate.layovers,
-      note: reason,
-      confidence: "high" as const,
-      optionId: undefined,
-    } : estimate;
+    return estimate;
   });
 };
 
@@ -774,7 +768,8 @@ export function validateCatalog(items: Destination[]) {
     for (const estimate of destination.travel) {
       if (!confidenceLevels.has(estimate.confidence)) throw new Error(`${destination.name}: invalid travel confidence`);
       if (!estimate.accessNode.trim() || !estimate.note.trim() || typeof estimate.available !== "boolean") throw new Error(`${destination.name}: invalid travel node`);
-      if (estimate.mode === "car" && estimate.available && !estimate.optionId) throw new Error(`${destination.name}: available driving estimate is missing stage details`);
+      if (estimate.available && !estimate.optionId) throw new Error(`${destination.name}: available ${estimate.mode} estimate is missing stage details`);
+      if (!estimate.available && estimate.optionId) throw new Error(`${destination.name}: unavailable ${estimate.mode} estimate exposes stage details`);
       if (!Number.isFinite(estimate.oneWayHours) || estimate.oneWayHours < 0 || !Number.isFinite(estimate.costPerPersonDkk) || estimate.costPerPersonDkk < 0) throw new Error(`${destination.name}: invalid travel estimate`);
       if (estimate.layovers !== undefined && (!Number.isInteger(estimate.layovers) || estimate.layovers < 0)) throw new Error(`${destination.name}: invalid layover count`);
     }
@@ -806,7 +801,7 @@ function validateMedia(media: CatalogMedia, label: string, expectedSubject: Cata
   if (media.subject !== expectedSubject) throw new Error(`${label}: media subject must be ${expectedSubject}`);
 }
 
-export const destinations: Destination[] = validateCatalog(catalogSeeds.map(withDrivingOption));
+export const destinations: Destination[] = validateCatalog(catalogSeeds.map(withTravelOptions));
 
 export const destinationById = new Map(destinations.map((item) => [item.id, item]));
 

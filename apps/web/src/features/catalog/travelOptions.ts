@@ -3,6 +3,7 @@ import type { DrivingRoute } from "@/features/maps/drivingRoute";
 import { aalborgCoordinates } from "@/features/maps/drivingRoute";
 
 export const getRoadDrivingOptionId = (destinationId: string) => `osrm-driving-aalborg-${destinationId}`;
+export const getEstimatedTravelOptionId = (destinationId: string, mode: "train" | "plane") => `catalog-estimate-aalborg-${destinationId}-${mode}`;
 export const innsbruckDrivingOptionId = getRoadDrivingOptionId("innsbruck");
 export const innsbruckCoordinates: [number, number] = [11.404, 47.269];
 
@@ -80,6 +81,71 @@ export function createDrivingOption(
       : availableRouteCount === 1
         ? { provider: "OSRM + saved Explore catalog estimate", url: "https://project-osrm.org/" }
         : { provider: "Saved Explore catalog estimate" },
+  };
+}
+
+export type EstimatedTravelOptionInput = {
+  destinationId: string;
+  destinationName: string;
+  destinationCoordinates: [number, number];
+  mode: "train" | "plane";
+  oneWayHours: number;
+  costPerPersonDkk: number;
+  layovers?: number;
+  confidence: "low" | "medium" | "high";
+};
+
+export function createEstimatedTravelOption(
+  input: EstimatedTravelOptionInput,
+  retrievedAt = new Date().toISOString(),
+): TravelOptionSnapshot {
+  const optionId = getEstimatedTravelOptionId(input.destinationId, input.mode);
+  const costId = `${input.destinationId}-${input.mode}-estimate`;
+  const durationMinutes = Math.round(input.oneWayHours * 60);
+  const isTrain = input.mode === "train";
+  const routeLabel = isTrain ? "Train + bus" : "Flight + ground transfer";
+  const stageKind = isTrain ? "rail" as const : "flight" as const;
+  const layovers = isTrain ? undefined : input.layovers ?? 0;
+  const stage = (direction: "outbound" | "return") => ({
+    id: `${input.destinationId}-${input.mode}-${direction}`,
+    kind: stageKind,
+    origin: direction === "outbound"
+      ? { name: "Aalborg", coordinates: aalborgCoordinates }
+      : { name: input.destinationName, coordinates: input.destinationCoordinates },
+    destination: direction === "outbound"
+      ? { name: input.destinationName, coordinates: input.destinationCoordinates }
+      : { name: "Aalborg", coordinates: aalborgCoordinates },
+    durationMinutes,
+    service: `${routeLabel} planning route`,
+    confidence: input.confidence,
+    costComponentIds: [costId],
+    technicalStops: layovers
+      ? [`Aggregate estimate includes ${layovers} layover${layovers === 1 ? "" : "s"}; connection airports are not specified.`]
+      : [],
+  });
+  return {
+    id: optionId,
+    label: `${routeLabel} from Aalborg to ${input.destinationName}`,
+    priceType: "estimated",
+    pricingBasis: "per-person",
+    outbound: { direction: "outbound", stages: [stage("outbound")] },
+    return: { direction: "return", stages: [stage("return")] },
+    costComponents: [{
+      id: costId,
+      label: `Estimated return ${isTrain ? "train and bus" : "air and ground-transfer"} cost`,
+      amount: { amount: input.costPerPersonDkk, currency: "DKK" },
+      source: "Saved Explore catalog estimate",
+    }],
+    reportedLayovers: layovers === undefined ? undefined : { outbound: layovers, return: layovers },
+    warnings: [
+      `This is an aggregate ${routeLabel.toLowerCase()} estimate, not a date-specific timetable or fare.`,
+      isTrain
+        ? "Intermediate stations, vehicle changes, and wait times are included in the estimate but are not individually specified."
+        : "Airports, individual flight segments, ground-transfer legs, and connection times are included in the estimate but are not individually specified.",
+    ],
+    assumptions: ["The outbound and return journeys use the same published one-way planning duration."],
+    retrievedAt,
+    source: { provider: "Saved Explore catalog estimate" },
   };
 }
 
