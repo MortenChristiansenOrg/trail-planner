@@ -39,6 +39,18 @@ describe("catalog travel option loading", () => {
     }
   });
 
+  it("reports saved road provenance when a ferry route falls back to persisted durations", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      throw new Error("routing unavailable");
+    }));
+    const estimate = destinationById.get("jotunheimen")!.travel.find(({ mode }) => mode === "car")!;
+
+    const option = await loadTravelOption(estimate.optionId!);
+
+    expect(option?.source.provider).toBe("Color Line + saved Explore catalog estimate");
+    expect(option?.assumptions).toContain("Each ferry direction includes the operator-recommended 60-minute terminal arrival as its own stage.");
+  });
+
   it("loads Berchtesgaden details from the same road provider used by Explore", async () => {
     vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
       const points = new URL(String(input)).pathname

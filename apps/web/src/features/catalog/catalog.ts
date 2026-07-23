@@ -219,7 +219,7 @@ const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[])
         available: true,
         oneWayHours: durationMinutes / 60,
         optionId,
-        note: `${ferry.service} with ${ferry.operator}; includes the recommended 1h terminal arrival. ${carPlan.selectionNote ?? ""}`.trim(),
+        note: `${ferry.service} with ${ferry.operator}; includes the recommended ${ferry.recommendedArrivalMinutes}-minute terminal arrival. ${carPlan.selectionNote ?? ""}`.trim(),
         confidence: "high" as const,
       };
     }

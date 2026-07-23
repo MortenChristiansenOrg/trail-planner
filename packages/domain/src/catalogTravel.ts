@@ -89,6 +89,12 @@ function validUrl(value: string) {
   }
 }
 
+function validIsoDate(value: unknown) {
+  if (typeof value !== "string" || !isoDatePattern.test(value)) return false;
+  const parsed = new Date(value);
+  return Number.isFinite(parsed.valueOf()) && parsed.toISOString() === value;
+}
+
 function validCoordinates([longitude, latitude]: [number, number]) {
   return Number.isFinite(longitude) && longitude >= -180 && longitude <= 180 &&
     Number.isFinite(latitude) && latitude >= -90 && latitude <= 90;
@@ -134,6 +140,10 @@ function validateJourney(
   }
   let previousDestination = expectedOrigin;
   for (const [index, reference] of references.entries()) {
+    if (reference.reverse !== undefined && typeof reference.reverse !== "boolean") {
+      errors.push(`${label}[${index}] has an invalid reverse flag`);
+      continue;
+    }
     const part = partByKey.get(reference.partKey);
     if (!part) {
       errors.push(`${label}[${index}] references unknown part ${reference.partKey}`);
@@ -181,7 +191,7 @@ export function validateCatalogTravelData(
     } else if (part.recommendedArrivalMinutes !== undefined) {
       errors.push(`${label} car part cannot have a ferry arrival recommendation`);
     }
-    if (!isCatalogTravelKey(part.source.key) || !sourceKinds.has(part.source.kind) || !validUrl(part.source.url) || !isoDatePattern.test(part.source.retrievedAt) || !isoDatePattern.test(part.source.refreshAfter)) errors.push(`${label} source is invalid`);
+    if (!isCatalogTravelKey(part.source.key) || !sourceKinds.has(part.source.kind) || !validUrl(part.source.url) || !validIsoDate(part.source.retrievedAt) || !validIsoDate(part.source.refreshAfter)) errors.push(`${label} source is invalid`);
     if (part.source.endpointSnapMeters && (part.source.endpointSnapMeters.some((distance) => !Number.isFinite(distance) || distance < 0 || distance > 1_000))) errors.push(`${label} source snapped too far from a requested access node`);
   }
 

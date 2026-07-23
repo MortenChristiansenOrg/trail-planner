@@ -61,6 +61,11 @@ async function loadCatalogDrivingOption(destinationId: string, optionId: string)
     loadCatalogJourneyForDetails(destinationId, "return"),
   ]);
   const fallbackDirectionCount = Number(outboundJourney.usedFallback) + Number(inboundJourney.usedFallback);
+  const roadSourceProvider = fallbackDirectionCount === 0
+    ? "OSRM"
+    : fallbackDirectionCount === 1
+      ? "OSRM + saved Explore catalog estimate"
+      : "saved Explore catalog estimate";
   const costId = `${destinationId}-car-ferry-estimate`;
   const option: TravelOptionSnapshot = {
     id: optionId,
@@ -85,10 +90,10 @@ async function loadCatalogDrivingOption(destinationId: string, optionId: string)
     ],
     assumptions: [
       carPlan.selectionNote ?? "The catalog-selected ferry is used for both directions.",
-      "Each ferry direction includes the operator-recommended 60-minute terminal arrival as its own stage.",
+      `Each ferry direction includes the operator-recommended ${ferry.recommendedArrivalMinutes}-minute terminal arrival as its own stage.`,
     ],
     retrievedAt: new Date().toISOString(),
-    source: { provider: `${ferry.operator ?? "Ferry operator"} + OSRM`, url: ferry.source.url },
+    source: { provider: `${ferry.operator ?? "Ferry operator"} + ${roadSourceProvider}`, url: ferry.source.url },
   };
   deriveTravelOptionTotals(option);
   return option;

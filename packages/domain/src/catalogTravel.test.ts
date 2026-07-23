@@ -84,6 +84,24 @@ describe("catalog travel data", () => {
     ]));
   });
 
+  it("rejects non-boolean reverse flags and impossible source dates", () => {
+    const invalidParts = structuredClone(partFile) as unknown as CatalogTravelPartFile;
+    invalidParts.parts[0].source.retrievedAt = "2026-02-31T00:00:00.000Z";
+    invalidParts.parts[0].source.refreshAfter = "2026-13-01T00:00:00.000Z";
+    const invalidPlans = structuredClone(planFile) as unknown as CatalogTripPlanFile;
+    invalidPlans.plans[0].modes.car = {
+      status: "available",
+      outbound: [{ partKey: "test-ferry" }],
+      return: [{ partKey: "test-ferry", reverse: "false" as unknown as boolean }],
+    };
+
+    const errors = validateCatalogTravelData(invalidParts, invalidPlans, ["norway"]);
+    expect(errors).toEqual(expect.arrayContaining([
+      expect.stringContaining("invalid reverse flag"),
+      expect.stringContaining("source is invalid"),
+    ]));
+  });
+
   it("rejects provider routes that snap too far from a requested access node", () => {
     const invalidParts = structuredClone(partFile);
     invalidParts.parts[0].source.endpointSnapMeters = [12, 1_535];

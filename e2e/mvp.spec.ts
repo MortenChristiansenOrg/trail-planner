@@ -205,7 +205,7 @@ test("Norway selections use the catalog ferry route and expose the arrival buffe
 
   await page.getByRole("button", { name: "View area details" }).click();
   const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
-  await expect(carEstimate).toContainText("includes the recommended 1h terminal arrival");
+  await expect(carEstimate).toContainText("includes the recommended 60-minute terminal arrival");
   await carEstimate.getByRole("button", { name: "View stages" }).click();
   const dialog = page.getByRole("dialog", { name: "Drive and ferry from Aalborg to Gjendesheim" });
   await expect(dialog.locator('.map-frame[data-line-count="6"]')).toBeVisible({ timeout: 15_000 });
