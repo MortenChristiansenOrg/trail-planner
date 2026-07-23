@@ -61,7 +61,7 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
-test("travel stages use provider-backed road geometry and never invent missing detail", async ({ page }) => {
+test("every available travel mode exposes complete stage details", async ({ page }) => {
   let routingAvailable = true;
   await page.route("https://router.project-osrm.org/**", (route) => routingAvailable
     ? route.fulfill({
@@ -91,10 +91,16 @@ test("travel stages use provider-backed road geometry and never invent missing d
   await expect(carDialog).toContainText("Road geometry and drive time come from OSRM");
   await page.keyboard.press("Escape");
 
-  for (const label of ["Train + bus", "Airplane"]) {
+  for (const [label, dialogName] of [
+    ["Train + bus", "Train + bus from Aalborg to Innsbruck"],
+    ["Airplane", "Flight + ground transfer from Aalborg to Innsbruck"],
+  ] as const) {
     const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
     await choice.getByRole("button", { name: "Stage details" }).click();
-    await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
+    const dialog = page.getByRole("dialog", { name: dialogName });
+    await expect(dialog).toContainText("Complete outbound and return snapshot");
+    await expect(dialog).toContainText("Saved Explore catalog estimate");
+    await expect(dialog).not.toContainText("Stage detail not available");
     await page.keyboard.press("Escape");
   }
 
@@ -107,10 +113,119 @@ test("travel stages use provider-backed road geometry and never invent missing d
   await page.getByRole("button", { name: "View area details" }).click();
   const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
   await carEstimate.getByRole("button", { name: "View stages" }).click();
-  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
+  const fallbackDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
+  await expect(fallbackDialog).toContainText("saved Explore duration estimate");
+  await expect(fallbackDialog).not.toContainText("Stage detail not available");
 });
 
-test("Nordic hub media, attribution, and route-curation states are inspectable", async ({ page }, testInfo) => {
+test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "Legacy trip migration is covered once on desktop.");
+
+  await page.route("https://router.project-osrm.org/**", async (route) => {
+    const encodedPoints = new URL(route.request().url()).pathname.split("/driving/")[1];
+    const coordinates = encodedPoints.split(";").map((point) => point.split(",").map(Number));
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 1_200_000,
+          duration: 43_200,
+          geometry: { coordinates },
+        }],
+      }),
+    });
+  });
+
+  await page.goto("/explore?month=7&selected=berchtesgaden&maxDriveHours=40");
+  await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+  await page.evaluate(() => {
+    const trips = JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]");
+    for (const estimate of trips[0]?.travelSnapshot ?? []) delete estimate.optionId;
+    localStorage.setItem("trail-planner:mvp-trips:v1", JSON.stringify(trips));
+  });
+  await page.reload();
+
+  const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-aalborg-berchtesgaden");
+  await carChoice.getByRole("button", { name: "Stage details" }).click();
+
+  const dialog = page.getByRole("dialog", { name: "Drive from Aalborg to Berchtesgaden" });
+  await expect(dialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
+  await expect(dialog).toContainText("Aalborg");
+  await expect(dialog).toContainText("Berchtesgaden");
+  await page.keyboard.press("Escape");
+
+  for (const [label, optionId, dialogName] of [
+    ["Train + bus", "catalog-estimate-aalborg-berchtesgaden-train", "Train + bus from Aalborg to Berchtesgaden"],
+    ["Airplane", "catalog-estimate-aalborg-berchtesgaden-plane", "Flight + ground transfer from Aalborg to Berchtesgaden"],
+  ] as const) {
+    const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
+    await choice.getByRole("button", { name: label === "Train + bus" ? /Train \+ bus/ : /Airplane/ }).click();
+    await expect.poll(() => page.evaluate((mode) => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === mode)?.optionId, label === "Train + bus" ? "train" : "plane")).toBe(optionId);
+    await choice.getByRole("button", { name: "Stage details" }).click();
+    await expect(page.getByRole("dialog", { name: dialogName })).toContainText("Saved Explore catalog estimate");
+    await page.keyboard.press("Escape");
+  }
+  await expect(page.getByText("Stage detail not available")).toHaveCount(0);
+});
+
+test("Norway selections use the catalog ferry route and expose the arrival buffer", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "Detailed ferry-route behavior is covered once on desktop.");
+
+  const routingRequests: string[] = [];
+  await page.route("https://router.project-osrm.org/**", async (route) => {
+    routingRequests.push(route.request().url());
+    const encodedPoints = new URL(route.request().url()).pathname.split("/driving/")[1];
+    const coordinates = encodedPoints.split(";").map((point) => point.split(",").map(Number));
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 420_000,
+          duration: 23_280,
+          geometry: { coordinates },
+        }],
+      }),
+    });
+  });
+
+  await page.goto("/explore?month=7&selected=jotunheimen&maxDriveHours=40");
+  const exploreMap = page.locator('.explore-map[data-line-count="3"][data-line-modes="car,ferry,car"]');
+  await expect(exploreMap).toBeVisible({ timeout: 15_000 });
+  await expect(page.locator(".destination-row").filter({ hasText: "Gjendesheim" })).toContainText("11h 5m");
+  expect(routingRequests.some((url) => url.includes("8.809962,61.495185"))).toBe(true);
+  expect(routingRequests.some((url) => url.includes("8.997,61.495"))).toBe(false);
+  await expect(page.getByText("Map route: SuperSpeed Hirtshals–Larvik · arrive 1h before departure")).toBeVisible();
+  await expect(page.locator(".travel-summary").filter({ hasText: "Train + bus" })).not.toContainText("Unavailable");
+  await expect(page.locator(".travel-summary").filter({ hasText: "Airplane" })).not.toContainText("Unavailable");
+
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
+  await expect(carEstimate).toContainText("includes the recommended 60-minute terminal arrival");
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  const dialog = page.getByRole("dialog", { name: "Drive and ferry from Aalborg to Gjendesheim" });
+  await expect(dialog.locator('.map-frame[data-line-count="6"]')).toBeVisible({ timeout: 15_000 });
+  await expect(dialog.getByText("Ferry arrival buffer")).toBeVisible();
+  await expect(dialog.getByText("1h", { exact: true })).toBeVisible();
+  await expect(dialog).toContainText("Color Line");
+  await page.keyboard.press("Escape");
+
+  for (const [label, dialogName] of [
+    ["Train + bus", "Train + bus from Aalborg to Gjendesheim"],
+    ["Airplane", "Flight + ground transfer from Aalborg to Gjendesheim"],
+  ] as const) {
+    const estimate = page.locator(".detail-travel-list > div").filter({ hasText: label });
+    await estimate.getByRole("button", { name: "View stages" }).click();
+    await expect(page.getByRole("dialog", { name: dialogName })).toContainText("Saved Explore catalog estimate");
+    await page.keyboard.press("Escape");
+  }
+});
+
+test("Nordic hub media, attribution, and missing-route states are inspectable", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed catalog behavior is covered once on desktop.");
 
   await page.route("https://commons.wikimedia.org/**", (route) => route.fulfill({
@@ -125,7 +240,10 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   await expect(photo).toHaveAttribute("srcset", /480w.*960w.*1440w/);
   await page.getByRole("button", { name: "View area details" }).click();
   const details = page.locator(".destination-sheet");
-  await expect(details.getByText("Trails being curated")).toBeVisible();
+  await expect(details.getByText("Trail geometry unavailable")).toBeVisible();
+  const unavailableTrain = details.locator(".detail-travel-list > div").filter({ hasText: "Train + bus" });
+  await expect(unavailableTrain).toContainText("Unavailable");
+  await expect(unavailableTrain.getByRole("button", { name: "View stages" })).toHaveCount(0);
   await details.getByText("Photo credit").click();
   await expect(details.getByText("Landmannalaugar by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
   await details.getByAltText("Rhyolite mountains and the Laugavegur trail at Landmannalaugar").evaluate((image) => {
@@ -142,7 +260,7 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
   await expect(page.getByRole("tab", { name: "Your own hike" })).toHaveAttribute("data-state", "active");
-  await expect(page.getByRole("tab", { name: "Routes being curated" })).toBeDisabled();
+  await expect(page.getByRole("tab", { name: "No catalog routes" })).toBeDisabled();
   await page.keyboard.press("Escape");
 
   await page.evaluate(() => {
@@ -172,7 +290,7 @@ test("Nordic hub media, attribution, and route-curation states are inspectable",
   const hikeMedia = page.locator(".route-preview-list article.has-media").filter({ hasText: "Kungsleden: Abisko to Abiskojaure" });
   await hikeMedia.getByText("Photo credit").click();
   await expect(hikeMedia.getByText("Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0")).toBeVisible();
-  await expect(hikeMedia).not.toContainText(/route geometry being curated/i);
+  await expect(hikeMedia).not.toContainText(/route geometry unavailable/i);
 });
 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
@@ -292,7 +410,7 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await expect(page.getByText("Best match").first()).toBeVisible();
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await expect(page.locator(".explore-map .maplibregl-ctrl-attrib")).not.toHaveClass(/maplibregl-compact-show/);
-  await expect(page.getByText("Map line: OSRM driving route from Aalborg")).toBeVisible();
+  await expect(page.getByText("Map route: OSRM driving route from Aalborg")).toBeVisible();
 
   await page.waitForTimeout(750);
   const markerA = page.getByRole("button", { name: "Innsbruck, Austria" });

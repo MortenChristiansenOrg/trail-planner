@@ -1,4 +1,6 @@
 export * from "./budget";
+export * from "./catalogData";
+export * from "./catalogTravel";
 export * from "./destination";
 export * from "./geo";
 export * from "./hike";

@@ -35,7 +35,7 @@ describe("catalog validation", () => {
       ...destination,
       media: { ...destination.media!, subject: "hike" },
     }])).toThrow(/media subject/);
-    expect(() => validateCatalog([{ ...destination, provenance: { ...destination.provenance, reviewedAt: "2026-02-31" } }])).toThrow(/provenance/);
+    expect(() => validateCatalog([{ ...destination, provenance: { ...destination.provenance, verifiedAt: "2026-02-31" } }])).toThrow(/provenance/);
   });
 
   it("rejects invalid provenance, travel, and media discriminators", () => {

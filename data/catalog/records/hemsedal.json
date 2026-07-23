@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-19-aalborg-mountain-hubs",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T21:14:20.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1118,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "hemsedal",
+    "action": "add",
+    "name": "Hemsedal",
+    "region": "Hallingdal",
+    "countryCode": "NO",
+    "longitude": 8.3834869,
+    "latitude": 60.9282437
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "hemsedal",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Hemsedal",
+        "latitude": 60.9282437,
+        "longitude": 8.3834869,
+        "osmType": "relation",
+        "osmId": 412356
+      },
+      "source": {
+        "key": "hemsedal-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/412356",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The hub identity and coordinates were resolved through Nominatim; the underlying OSM object is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "hemsedal",
+      "field": "mountainHikingOffer",
+      "value": "Hemsedal promotes summer mountain activities and hiking in the landscape it calls the Scandinavian Alps.",
+      "source": {
+        "key": "hemsedal-official-tourism",
+        "url": "https://hemsedal.com/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "hemsedal",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "summer"
+      ],
+      "source": {
+        "key": "hemsedal-official-tourism",
+        "url": "https://hemsedal.com/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "hemsedal",
+      "field": "publishedAccessOptions",
+      "value": {
+        "localMountainAccess": [
+          "SkiStar Hemsedal summer chair lift"
+        ]
+      },
+      "source": {
+        "key": "hemsedal-official-tourism",
+        "url": "https://hemsedal.com/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports these access nodes or modes, but this is not a date-specific itinerary from Aalborg and no fare or schedule is claimed."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

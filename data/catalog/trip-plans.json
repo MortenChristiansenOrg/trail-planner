@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "plans": [
+    {
+      "key": "aalborg-andalsnes",
+      "destinationKey": "andalsnes",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-andalsnes" }],
+          "return": [{ "partKey": "road-larvik-andalsnes", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-bohinj",
+      "destinationKey": "bohinj",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-bohinj" }], "return": [{ "partKey": "road-aalborg-bohinj", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-bovec",
+      "destinationKey": "bovec",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-bovec" }], "return": [{ "partKey": "road-aalborg-bovec", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-engelberg",
+      "destinationKey": "engelberg",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-engelberg" }], "return": [{ "partKey": "road-aalborg-engelberg", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-funasdalen",
+      "destinationKey": "funasdalen",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-frederikshavn" }, { "partKey": "stena-frederikshavn-gothenburg" }, { "partKey": "road-gothenburg-funasdalen" }],
+          "return": [{ "partKey": "road-gothenburg-funasdalen", "reverse": true }, { "partKey": "stena-frederikshavn-gothenburg", "reverse": true }, { "partKey": "road-aalborg-frederikshavn", "reverse": true }],
+          "selectionNote": "The Frederikshavn–Gothenburg ferry minimizes modeled driving time and includes the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-garmisch-partenkirchen",
+      "destinationKey": "garmisch-partenkirchen",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-garmisch-partenkirchen" }], "return": [{ "partKey": "road-aalborg-garmisch-partenkirchen", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-geilo",
+      "destinationKey": "geilo",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-geilo" }],
+          "return": [{ "partKey": "road-larvik-geilo", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified Denmark–Norway ferry alternatives, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-gjendesheim",
+      "destinationKey": "gjendesheim",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-gjendesheim" }],
+          "return": [{ "partKey": "road-larvik-gjendesheim", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-grindelwald",
+      "destinationKey": "grindelwald",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-grindelwald" }], "return": [{ "partKey": "road-aalborg-grindelwald", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-hemsedal",
+      "destinationKey": "hemsedal",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-hemsedal" }],
+          "return": [{ "partKey": "road-larvik-hemsedal", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified Denmark–Norway ferry alternatives, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-innsbruck",
+      "destinationKey": "innsbruck",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-innsbruck" }], "return": [{ "partKey": "road-aalborg-innsbruck", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-jorpeland-lysefjord",
+      "destinationKey": "jorpeland-lysefjord",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "fjord-fstr-hirtshals-kristiansand" }, { "partKey": "road-kristiansand-jorpeland-lysefjord" }],
+          "return": [{ "partKey": "road-kristiansand-jorpeland-lysefjord", "reverse": true }, { "partKey": "fjord-fstr-hirtshals-kristiansand", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "The seasonal Fjord FSTR Hirtshals–Kristiansand sailing has the shortest modeled total time during the hiking season, including the 60-minute terminal arrival recommendation; use a year-round Kristiansand alternative when FSTR is not operating."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-keswick",
+      "destinationKey": "keswick",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-keswick" }], "return": [{ "partKey": "road-aalborg-keswick", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-mayrhofen",
+      "destinationKey": "mayrhofen",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-mayrhofen" }], "return": [{ "partKey": "road-aalborg-mayrhofen", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-oberstdorf",
+      "destinationKey": "oberstdorf",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-oberstdorf" }], "return": [{ "partKey": "road-aalborg-oberstdorf", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-oppdal",
+      "destinationKey": "oppdal",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-oppdal" }],
+          "return": [{ "partKey": "road-larvik-oppdal", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified Denmark–Norway ferry alternatives, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-odda",
+      "destinationKey": "odda",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "fjord-fstr-hirtshals-kristiansand" }, { "partKey": "road-kristiansand-odda" }],
+          "return": [{ "partKey": "road-kristiansand-odda", "reverse": true }, { "partKey": "fjord-fstr-hirtshals-kristiansand", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "The seasonal Fjord FSTR Hirtshals–Kristiansand sailing has the shortest modeled hiking-season total among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation; use a year-round Kristiansand alternative when FSTR is not operating."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-poprad-high-tatras",
+      "destinationKey": "poprad-high-tatras",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-poprad-high-tatras" }], "return": [{ "partKey": "road-aalborg-poprad-high-tatras", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-rjukan",
+      "destinationKey": "rjukan",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-rjukan" }],
+          "return": [{ "partKey": "road-larvik-rjukan", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified Denmark–Norway ferry alternatives, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-saas-fee",
+      "destinationKey": "saas-fee",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-saas-fee" }], "return": [{ "partKey": "road-aalborg-saas-fee", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-schladming",
+      "destinationKey": "schladming",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-schladming" }], "return": [{ "partKey": "road-aalborg-schladming", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-solden",
+      "destinationKey": "solden",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-solden" }], "return": [{ "partKey": "road-aalborg-solden", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-stryn-loen",
+      "destinationKey": "stryn-loen",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "color-line-hirtshals-larvik" }, { "partKey": "road-larvik-stryn-loen" }],
+          "return": [{ "partKey": "road-larvik-stryn-loen", "reverse": true }, { "partKey": "color-line-hirtshals-larvik", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "Hirtshals–Larvik has the shortest modeled total time among the verified Denmark–Norway ferry alternatives, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-svolvaer",
+      "destinationKey": "svolvaer",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-frederikshavn" }, { "partKey": "stena-frederikshavn-gothenburg" }, { "partKey": "road-gothenburg-svolvaer" }],
+          "return": [{ "partKey": "road-gothenburg-svolvaer", "reverse": true }, { "partKey": "stena-frederikshavn-gothenburg", "reverse": true }, { "partKey": "road-aalborg-frederikshavn", "reverse": true }],
+          "selectionNote": "Frederikshavn–Gothenburg has the shortest modeled total among the verified ferry alternatives from Denmark for Svolvær, including the 60-minute terminal arrival recommendation."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-voss",
+      "destinationKey": "voss",
+      "originKey": "aalborg",
+      "modes": {
+        "car": {
+          "status": "available",
+          "outbound": [{ "partKey": "road-aalborg-hirtshals" }, { "partKey": "fjord-fstr-hirtshals-kristiansand" }, { "partKey": "road-kristiansand-voss" }],
+          "return": [{ "partKey": "road-kristiansand-voss", "reverse": true }, { "partKey": "fjord-fstr-hirtshals-kristiansand", "reverse": true }, { "partKey": "road-aalborg-hirtshals", "reverse": true }],
+          "selectionNote": "The seasonal Fjord FSTR Hirtshals–Kristiansand sailing has the shortest modeled total time during the hiking season, including the 60-minute terminal arrival recommendation; use a year-round Kristiansand alternative when FSTR is not operating."
+        },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    },
+    {
+      "key": "aalborg-zell-am-see-kaprun",
+      "destinationKey": "zell-am-see-kaprun",
+      "originKey": "aalborg",
+      "modes": {
+        "car": { "status": "available", "outbound": [{ "partKey": "road-aalborg-zell-am-see-kaprun" }], "return": [{ "partKey": "road-aalborg-zell-am-see-kaprun", "reverse": true }] },
+        "train-bus": { "status": "details-unavailable", "reason": "A complete date-specific trip from Aalborg has not been verified; keep this mode unavailable until the transit provider returns every stage." },
+        "airplane": { "status": "details-unavailable", "reason": "A complete flight plus ground-transfer trip from Aalborg has not been verified; keep this mode unavailable until the flight provider returns every stage." }
+      }
+    }
+  ]
+}

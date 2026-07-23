@@ -1,0 +1,68 @@
+# Catalog data pipeline
+
+Trail Planner separates live provider data from slower, judgment-heavy catalog curation. Runtime providers answer date-specific questions; agent skills research, verify, and publish source-backed destination records for facts that cannot be obtained reliably from an API. Verification is part of the skill run and never a user task.
+
+## Data flow
+
+1. A coverage audit identifies a missing or stale domain for a stable `destinationKey`.
+2. An enrichment job records the destination, domains, priority, retry budget, and state.
+3. A provider adapter supplies structured live/open data, or an agent skill researches official pages with the Firecrawl CLI.
+4. The skill cross-checks material observations and discards unsupported ones before they reach the catalog.
+5. Every published field-level claim carries its source URL, retrieval time, confidence, and expiry. Raw page captures remain temporary.
+6. Coverage is recomputed per domain as `missing`, `partial`, `fresh`, `stale`, or `unavailable`.
+7. The validated record atomically replaces `data/catalog/records/<destination-key>.json`; derived snapshots or seeds are updated in the same run. Publication never fills gaps with plausible values.
+
+Reusable route stages are normalized separately in `data/catalog/travel-parts.json`. Destination mode matrices in `data/catalog/trip-plans.json` reference those stable part keys in both directions, so a ferry or road leg can be reused without copying operator facts into each trip. Every destination matrix explicitly contains car, train/bus, and airplane states. A mode without a complete provider itinerary is `details-unavailable` with a UI-ready reason instead of an absent or partly invented trip.
+
+All ferry parts include a 60-minute recommended terminal-arrival allowance. `pnpm catalog:validate-travel` resolves every reference, checks stage-to-stage continuity in both directions, enforces the complete mode matrix, and requires one ferry in each Norwegian car plan.
+
+Road estimates request provider alternatives and select the lowest modeled duration. When a provider returns geometry and distance without duration, the shortest-distance candidate is selected and converted to an explicit 70 km/h planning estimate. Provider endpoint snaps over 1 km are rejected: a large snap usually means the catalog coordinate is not the intended road-access node and can create a plausible-looking but materially wrong detour.
+
+The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enrichmentJobs`, and `providerCache`. A claim stored in the catalog is published by definition; unsupported or superseded observations remain outside the current record and are recoverable from Git history.
+
+## Domain and sourcing matrix
+
+| Domain | Preferred source | Agent/Firecrawl role | Typical freshness |
+| --- | --- | --- | --- |
+| Destination core | OSM/Wikidata/official authority APIs | Resolve ambiguous hub names and official access nodes | Refresh on correction |
+| Seasonality | Park, trail, mountain authority | Extract published seasons, closures, and caveats | Before each season or 180 days |
+| Access | Routing/transit APIs plus official operators | Fill seasonal shuttle, boat, parking, and booking rules | 30–90 days; faster in season |
+| Hike metadata | OSM relations, official route feeds/GPX | Curate route quality, duration, difficulty, warnings | 180–365 days |
+| Hike geometry | OSM relation or licensed/official GPX | Locate the authoritative download; never infer a line from prose | Refresh when source changes |
+| Lodging | Structured booking/provider data where licensed | Official hut/campsite facilities, dates, indicative prices | 30–90 days |
+| Road travel | OSRM/openrouteservice/GraphHopper plus cost model | Official ferry/toll caveats only | Route 30 days; costs 7–30 days |
+| Transit travel | Entur, GTFS/NeTEx, national journey APIs | Seasonal/local services absent from feeds | Live/date-specific or 7 days |
+| Flight travel | Amadeus/Duffel and airport datasets | Airport-transfer caveats, not fares or schedules | Query live; cache briefly |
+| Media | Wikimedia Commons API and licensed official media | Verify relevance, alt text, license, and attribution | Refresh on removal/license change |
+
+“Unavailable” requires evidence that the option is not practical under the stated assumptions. An unsuccessful search is `missing`, not `unavailable`. Partial data is useful and is still published data: a destination hub may publish without hikes, a hike may publish without geometry only when the UI explicitly says geometry is missing, and aggregate travel estimates may remain visible without invented stages.
+
+## Agent skills
+
+`$add-trail-destinations` researches a new hub, establishes the stable key and core provenance, verifies useful domain claims, assesses coverage, validates the complete record, and publishes it under `data/catalog/records/`. It does not invent hikes or ask the user to review data.
+
+`$refresh-trail-destination-data` starts from existing coverage, targets only missing/stale domains, compares observations with published values, resolves conflicts from authoritative evidence, and atomically publishes the validated record. An unresolved field is retained or omitted with reduced coverage rather than sent to a review queue.
+
+Both skills use `scripts/catalog-data/validate-record.mjs`, `scripts/catalog-data/publish-record.mjs`, `data/catalog/record.template.json`, and `docs/CATALOG_PUBLICATION_CHECKLIST.md`. Temporary candidate records stay under `.catalog-work/`; no repository draft directory exists.
+
+## Firecrawl operating policy
+
+The CLI is installed from the official `firecrawl-cli` npm package. Authenticate with `firecrawl login` or the `FIRECRAWL_API_KEY` environment variable; credentials and `.firecrawl/` output must stay outside Git.
+
+Free-tier limits can change, so every run starts with `firecrawl --status` and `firecrawl credit-usage --json`. The repository policy is stricter than the advertised ceiling:
+
+- Run one request at a time and stop at 20 credits or 20 scraped pages per destination record unless the user approves more.
+- Reuse known official URLs and Firecrawl cache (`--max-age`) before search.
+- Reuse local `.catalog-work/` captures before calling Firecrawl again. The 2026-07-19 trials showed that Firecrawl cache hits still consumed a scrape credit on this account.
+- Search at most five results and prefer authority/operator domains. Do not use broad crawl, autonomous agent, JSON/LLM extraction, screenshots, or Interact by default.
+- Scrape main-content Markdown and links, then extract claims locally. Escalate to a targeted structured scrape only when ordinary output is insufficient and the credit budget is explicit.
+- Keep raw output in `.catalog-work/<run-id>/`; commit only normalized claims and source URLs.
+- Respect robots, site terms, copyright, and access controls. Never bypass login/paywalls or republish source prose.
+
+See the official [Firecrawl CLI documentation](https://docs.firecrawl.dev/cli) for current commands and [scrape API reference](https://docs.firecrawl.dev/api-reference/endpoint/scrape) for behavior.
+
+## Scaling and scheduling
+
+The destination query is paginated, so catalog size is not capped at 50. Enrichment jobs are idempotent by `jobKey` and bounded by priority and retry count. Provider responses have explicit cache keys and expiry times. Free-tier Firecrawl work should be scheduled as small resumable batches—typically one destination or a few domains per run—rather than an all-catalog crawl.
+
+Automation should prioritize high-value gaps: destination core and access, then at least one trustworthy hike, then travel modes and lodging. Broad destination expansion is safe because incomplete domains remain visible in published coverage instead of blocking useful hub records.

@@ -65,6 +65,7 @@ export function ExplorePage({
   const selectedResult =
     results.find((result) => result.destination.id === search.selected) ?? results[0];
   const drivingRoute = useDrivingRoute(
+    selectedResult?.destination.id,
     selectedResult?.destination.coordinates,
     selectedResult?.destination.countryCode !== "NO",
   );
@@ -92,7 +93,7 @@ export function ExplorePage({
       <main className="explore-stage">
         <TrailMap
           className="explore-map"
-          lines={drivingRoute.length ? [{ id: "journey", kind: "journey", coordinates: drivingRoute, label: "OSRM driving route from Aalborg" }] : []}
+          lines={drivingRoute.lines}
           markers={results.map((result, index) => ({
             id: result.destination.id,
             label: `${result.destination.name}, ${result.destination.country}`,
@@ -141,7 +142,7 @@ export function ExplorePage({
         {selectedResult ? (
           <SelectedDestinationCard
             result={selectedResult}
-            drivingRouteVisible={drivingRoute.length > 0}
+            drivingRouteLabel={drivingRoute.lines.length ? drivingRoute.label : undefined}
             search={search}
             onPlan={() => void planTrip(selectedResult)}
           />
@@ -323,12 +324,12 @@ function DestinationCard({
 
 function SelectedDestinationCard({
   result,
-  drivingRouteVisible,
+  drivingRouteLabel,
   search,
   onPlan,
 }: {
   result: ExploreResult;
-  drivingRouteVisible: boolean;
+  drivingRouteLabel?: string;
   search: ExploreSearch;
   onPlan: () => void;
 }) {
@@ -358,7 +359,7 @@ function SelectedDestinationCard({
           <TravelSummary estimate={estimate} key={estimate.mode} participants={search.participants} viable={result.viable.includes(estimate)} />
         ))}
       </div>
-      {drivingRouteVisible ? <p className="journey-map-key"><Route /> Map line: OSRM driving route from Aalborg</p> : null}
+      {drivingRouteLabel ? <p className="journey-map-key"><Route /> Map route: {drivingRouteLabel}</p> : null}
       <div className="selected-destination__actions">
         <DestinationDetails destination={destination} search={search} onPlan={onPlan} />
         <Button onClick={onPlan}>Plan this trip <ArrowRight /></Button>
@@ -401,7 +402,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
+                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
                 </div>
               ))}
             </div>
@@ -413,12 +414,12 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <article className={hike.media ? "has-media" : undefined} key={hike.id}>
                   {hike.media ? <CatalogMediaFigure media={hike.media} sizes="90px" variant="thumbnail" /> : null}
                   <Route />
-                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry being curated"}</small></div>
+                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry unavailable"}</small></div>
                 </article>
               ))}
-            </div> : <div className="routes-curating"><Route /><div><strong>Trails being curated</strong><p>This is a useful access and logistics hub, but no route geometry has passed source review yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
+            </div> : <div className="routes-curating"><Route /><div><strong>Trail geometry unavailable</strong><p>This is a published access and logistics hub, but no route geometry has passed source verification yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
           </section>
-          <p className="catalog-source">Catalog source reviewed {destination.provenance.reviewedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
+          <p className="catalog-source">Catalog source verified {destination.provenance.verifiedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
         </div>
         <SheetFooter><Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button></SheetFooter>
       </SheetContent>

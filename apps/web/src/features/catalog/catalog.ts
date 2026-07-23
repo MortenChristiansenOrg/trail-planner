@@ -1,3 +1,11 @@
+import {
+  getCatalogCarDurationMinutes,
+  getCatalogCarOptionId,
+  getCatalogCarPlan,
+  getCatalogFerryPart,
+} from "@/features/catalog/catalogTravelData";
+import { getEstimatedTravelOptionId, getRoadDrivingOptionId } from "@/features/catalog/travelOptions";
+
 export type TravelMode = "car" | "train" | "plane";
 
 export type TravelEstimate = {
@@ -14,7 +22,7 @@ export type TravelEstimate = {
 
 export type CatalogProvenance = {
   sourceUrl: string;
-  reviewedAt: string;
+  verifiedAt: string;
   confidence: "high" | "medium" | "low";
 };
 
@@ -32,7 +40,7 @@ export type CatalogMedia = {
   attributionText: string;
   attributionUrl: string;
   sourceUrl: string;
-  reviewedAt: string;
+  verifiedAt: string;
 };
 
 const commonsMedia = {
@@ -48,7 +56,7 @@ const commonsMedia = {
     attributionText: "Landmannalaugar by Andreas Tille · CC BY-SA 4.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Landmannalaugar.jpeg",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
   kebnekaise: {
     imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kebnekaise.JPEG",
@@ -62,7 +70,7 @@ const commonsMedia = {
     attributionText: "Kebnekaise by Dianou42 · CC BY-SA 4.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Kebnekaise.JPEG",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
   kungsleden: {
     imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kungsleden%20trail.JPG",
@@ -76,7 +84,7 @@ const commonsMedia = {
     attributionText: "Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0",
     attributionUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Kungsleden_trail.JPG",
-    reviewedAt: "2026-07-18",
+    verifiedAt: "2026-07-18",
   },
 } satisfies Record<string, CatalogMedia>;
 
@@ -122,7 +130,7 @@ type DestinationSeed = Destination;
 
 const catalogSource = (sourceUrl: string, confidence: CatalogProvenance["confidence"] = "low"): CatalogProvenance => ({
   sourceUrl,
-  reviewedAt: "2026-07-18",
+  verifiedAt: "2026-07-18",
   confidence,
 });
 
@@ -185,6 +193,40 @@ const travel = (
 
 const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
+const withTravelOptions = (destination: DestinationSeed): DestinationSeed => ({
+  ...destination,
+  travel: destination.travel.map((estimate) => {
+    if (!estimate.available || estimate.optionId) return estimate;
+    return {
+      ...estimate,
+      optionId: estimate.mode === "car"
+        ? getRoadDrivingOptionId(destination.id)
+        : getEstimatedTravelOptionId(destination.id, estimate.mode),
+    };
+  }),
+});
+
+const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[]) => {
+  const carPlan = getCatalogCarPlan(destinationId);
+  const durationMinutes = getCatalogCarDurationMinutes(destinationId);
+  const optionId = getCatalogCarOptionId(destinationId);
+  const ferry = getCatalogFerryPart(destinationId);
+  if (!carPlan || durationMinutes === undefined || !optionId || !ferry) return estimates;
+  return estimates.map((estimate) => {
+    if (estimate.mode === "car") {
+      return {
+        ...estimate,
+        available: true,
+        oneWayHours: durationMinutes / 60,
+        optionId,
+        note: `${ferry.service} with ${ferry.operator}; includes the recommended ${ferry.recommendedArrivalMinutes}-minute terminal arrival. ${carPlan.selectionNote ?? ""}`.trim(),
+        confidence: "high" as const,
+      };
+    }
+    return estimate;
+  });
+};
+
 const catalogSeeds: DestinationSeed[] = [
   {
     id: "romsdalen",
@@ -197,7 +239,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A compact fjord-and-ridge base with serious mountain days directly above town.",
     character: "Sharp ridges, deep valleys, exposed viewpoints and unusually easy access from the rail terminus.",
-    travel: travel([12.4, 1700], [18.2, 2050], [7.3, 2550, 1], "Åndalsnes"),
+    travel: withCatalogTripPlan("romsdalen", travel([12.4, 1700], [18.2, 2050], [7.3, 2550, 1], "Åndalsnes")),
     hikes: [],
     lodgings: [
       { id: "andalsnes-camping", name: "Åndalsnes Camping", kind: "camping", nightlyCostDkk: 260 },
@@ -210,12 +252,16 @@ const catalogSeeds: DestinationSeed[] = [
     region: "Jotunheimen",
     country: "Norway",
     countryCode: "NO",
-    coordinates: [8.997, 61.495],
-    provenance: catalogSource("https://www.openstreetmap.org/?mlat=61.495&mlon=8.997#map=12/61.495/8.997"),
+    coordinates: [8.809962, 61.495185],
+    provenance: {
+      sourceUrl: "https://www.nasjonaleturistveger.no/en/routes/valdresflye/gjende/",
+      verifiedAt: "2026-07-22",
+      confidence: "high",
+    },
     recommendedMonths: [7, 8, 9],
     summary: "A high-mountain gateway for classic ridge walks and hut-to-hut stages.",
     character: "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
-    travel: travel([13.7, 1850], [20.4, 1850], [8.4, 2400, 1], "Gjendesheim"),
+    travel: withCatalogTripPlan("jotunheimen", travel([13.7, 1850], [20.4, 1850], [8.4, 2400, 1], "Gjendesheim")),
     hikes: [],
     lodgings: [
       { id: "gjendesheim-turisthytte", name: "Gjendesheim Turisthytte", kind: "hut", nightlyCostDkk: 930 },
@@ -233,7 +279,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A fjord town with access to long viewpoint hikes, glaciers and plateau terrain.",
     character: "Big vertical relief, waterfalls and long days where weather and shuttle timing matter.",
-    travel: travel([11.8, 1650], [18.8, 1950], [7.8, 2450, 1], "Odda"),
+    travel: withCatalogTripPlan("hardanger", travel([11.8, 1650], [18.8, 1950], [7.8, 2450, 1], "Odda")),
     hikes: [],
     lodgings: [
       { id: "odda-camping", name: "Odda Camping", kind: "camping", nightlyCostDkk: 285 },
@@ -251,7 +297,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [6, 7, 8, 9],
     summary: "A sea-level base for short, steep hikes into dramatic coastal mountains.",
     character: "Granite peaks rising straight from the sea, rapidly changing weather and compact but demanding routes.",
-    travel: travel([24.5, 3100], [31, 2850], [8.2, 3100, 1], "Svolvær"),
+    travel: withCatalogTripPlan("lofoten", travel([24.5, 3100], [31, 2850], [8.2, 3100, 1], "Svolvær")),
     hikes: [],
     lodgings: [{ id: "svolvaer-camping", name: "Svolvær coastal camping", kind: "camping", nightlyCostDkk: 320 }],
   },
@@ -558,7 +604,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "landmannalaugar-hut", name: "FÍ Landmannalaugar hut", kind: "hut", nightlyCostDkk: 820 }],
     provenance: {
       sourceUrl: "https://www.fi.is/en/hiking-trails/landmannalaugar",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
     media: commonsMedia.landmannalaugar,
@@ -578,7 +624,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "basar-hut", name: "Básar hut and campsite", kind: "hut", nightlyCostDkk: 760 }],
     provenance: {
       sourceUrl: "https://www.utivist.is/english/basar-hut/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -597,7 +643,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "skaftafell-camping", name: "Skaftafell campground", kind: "camping", nightlyCostDkk: 190 }],
     provenance: {
       sourceUrl: "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
   },
@@ -616,7 +662,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "hamrar-camping", name: "Hamrar campsite", kind: "camping", nightlyCostDkk: 165 }],
     provenance: {
       sourceUrl: "https://www.visitakureyri.is/en/see-and-do/hiking",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -635,7 +681,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "nikkaluokta-sarri", name: "Nikkaluokta Sarri", kind: "hut", nightlyCostDkk: 690 }],
     provenance: {
       sourceUrl: "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
     media: commonsMedia.kebnekaise,
@@ -655,7 +701,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "hemavan-fjallcenter", name: "Hemavan Fjällcenter", kind: "hut", nightlyCostDkk: 620 }],
     provenance: {
       sourceUrl: "https://hemavan.nu/en/see-and-do-summer/hiking/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "high",
     },
   },
@@ -674,7 +720,7 @@ const catalogSeeds: DestinationSeed[] = [
     lodgings: [{ id: "are-camping", name: "Åre camping", kind: "camping", nightlyCostDkk: 235 }],
     provenance: {
       sourceUrl: "https://aresweden.com/en/hiking-in-are/",
-      reviewedAt: "2026-07-18",
+      verifiedAt: "2026-07-18",
       confidence: "medium",
     },
   },
@@ -686,7 +732,7 @@ const mediaKinds = new Set<CatalogMedia["kind"]>(["terrain", "trail", "access"])
 const travelModes = new Set<TravelMode>(["car", "train", "plane"]);
 
 function validateSource(provenance: CatalogProvenance, label: string) {
-  if (!isHttpsUrl(provenance.sourceUrl) || !isReviewDate(provenance.reviewedAt)) throw new Error(`${label}: missing or invalid provenance`);
+  if (!isHttpsUrl(provenance.sourceUrl) || !isVerificationDate(provenance.verifiedAt)) throw new Error(`${label}: missing or invalid provenance`);
   if (!confidenceLevels.has(provenance.confidence)) throw new Error(`${label}: invalid provenance confidence`);
 }
 
@@ -698,7 +744,7 @@ function isHttpsUrl(value: string) {
   }
 }
 
-function isReviewDate(value: string) {
+function isVerificationDate(value: string) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const parsed = new Date(`${value}T00:00:00Z`);
   return !Number.isNaN(parsed.valueOf()) && parsed.toISOString().slice(0, 10) === value;
@@ -722,6 +768,8 @@ export function validateCatalog(items: Destination[]) {
     for (const estimate of destination.travel) {
       if (!confidenceLevels.has(estimate.confidence)) throw new Error(`${destination.name}: invalid travel confidence`);
       if (!estimate.accessNode.trim() || !estimate.note.trim() || typeof estimate.available !== "boolean") throw new Error(`${destination.name}: invalid travel node`);
+      if (estimate.available && !estimate.optionId) throw new Error(`${destination.name}: available ${estimate.mode} estimate is missing stage details`);
+      if (!estimate.available && estimate.optionId) throw new Error(`${destination.name}: unavailable ${estimate.mode} estimate exposes stage details`);
       if (!Number.isFinite(estimate.oneWayHours) || estimate.oneWayHours < 0 || !Number.isFinite(estimate.costPerPersonDkk) || estimate.costPerPersonDkk < 0) throw new Error(`${destination.name}: invalid travel estimate`);
       if (estimate.layovers !== undefined && (!Number.isInteger(estimate.layovers) || estimate.layovers < 0)) throw new Error(`${destination.name}: invalid layover count`);
     }
@@ -747,13 +795,13 @@ export function validateCatalog(items: Destination[]) {
 
 function validateMedia(media: CatalogMedia, label: string, expectedSubject: CatalogMedia["subject"]) {
   if (!mediaKinds.has(media.kind)) throw new Error(`${label}: invalid media kind`);
-  if (!isHttpsUrl(media.imageUrl) || !media.alt.trim() || !media.creator.trim() || !media.attributionText.trim() || !isHttpsUrl(media.attributionUrl) || !isHttpsUrl(media.sourceUrl) || !isReviewDate(media.reviewedAt)) throw new Error(`${label}: incomplete media provenance`);
+  if (!isHttpsUrl(media.imageUrl) || !media.alt.trim() || !media.creator.trim() || !media.attributionText.trim() || !isHttpsUrl(media.attributionUrl) || !isHttpsUrl(media.sourceUrl) || !isVerificationDate(media.verifiedAt)) throw new Error(`${label}: incomplete media provenance`);
   if (!Number.isInteger(media.width) || media.width < 1 || !Number.isInteger(media.height) || media.height < 1) throw new Error(`${label}: invalid media dimensions`);
   if (!supportedLicenses.has(media.license)) throw new Error(`${label}: unsupported media license`);
   if (media.subject !== expectedSubject) throw new Error(`${label}: media subject must be ${expectedSubject}`);
 }
 
-export const destinations: Destination[] = validateCatalog(catalogSeeds);
+export const destinations: Destination[] = validateCatalog(catalogSeeds.map(withTravelOptions));
 
 export const destinationById = new Map(destinations.map((item) => [item.id, item]));
 

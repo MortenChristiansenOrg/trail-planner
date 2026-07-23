@@ -1,4 +1,5 @@
 import type { Money } from "./budget";
+import { isCatalogTravelKey } from "./catalogTravel";
 import type { DestinationId } from "./destination";
 import type { ProvenanceClaim } from "./provenance";
 import type { Month } from "./readModels";
@@ -32,6 +33,7 @@ export type TravelCostComponent = {
 
 export type TravelStage = {
   id: string;
+  catalogPartKey?: string;
   kind: TravelLegKind;
   origin: TravelPlace;
   destination: TravelPlace;
@@ -63,6 +65,7 @@ export type TravelOptionSnapshot = {
   return: TravelJourney;
   costComponents: TravelCostComponent[];
   providerTotals?: { durationMinutes?: number; cost?: Money };
+  reportedLayovers?: { outbound: number; return: number };
   warnings: string[];
   assumptions: string[];
   retrievedAt: string;
@@ -125,6 +128,7 @@ export function deriveTravelOptionTotals(option: TravelOptionSnapshot) {
   for (const stage of stages) {
     if (!stage.id.trim() || stageIds.has(stage.id)) throw new Error(`Duplicate or empty travel stage id: ${stage.id}`);
     stageIds.add(stage.id);
+    if (stage.catalogPartKey !== undefined && !isCatalogTravelKey(stage.catalogPartKey)) throw new Error(`Travel stage catalog part key is invalid: ${stage.id}`);
     if (!travelLegKinds.has(stage.kind) || !confidenceLevels.has(stage.confidence)) throw new Error(`Travel stage classification is invalid: ${stage.id}`);
     if (stage.kind === "transfer" && !stage.transferType) throw new Error(`Travel transfer type is required: ${stage.id}`);
     if (stage.transferType && !transferTypes.has(stage.transferType)) throw new Error(`Travel transfer type is invalid: ${stage.id}`);
@@ -177,13 +181,19 @@ export function deriveTravelOptionTotals(option: TravelOptionSnapshot) {
     const derivedCurrency = option.costComponents[0]?.amount.currency;
     if (option.providerTotals.cost.currency !== derivedCurrency) throw new Error("Provider and derived travel costs must use one currency");
   }
+  if (option.reportedLayovers && (
+    !Number.isInteger(option.reportedLayovers.outbound) ||
+    option.reportedLayovers.outbound < 0 ||
+    !Number.isInteger(option.reportedLayovers.return) ||
+    option.reportedLayovers.return < 0
+  )) throw new Error("Reported travel layovers must be non-negative integers");
   if (!retrievedAtPattern.test(option.retrievedAt) || !hasValidCalendarDate(option.retrievedAt) || !Number.isFinite(Date.parse(option.retrievedAt))) throw new Error("Travel option retrieval time is invalid");
   const countLayovers = (journey: TravelJourney) => journey.stages.filter((stage) => stage.kind === "transfer" && stage.transferType === "layover").length;
   return {
     durationMinutes: stages.reduce((sum, stage) => sum + stage.durationMinutes, 0),
     cost: { amount: Math.round((cost + Number.EPSILON) * 100) / 100, currency: option.costComponents[0]?.amount.currency ?? "DKK" } as Money,
-    layovers: countLayovers(option.outbound),
-    returnLayovers: countLayovers(option.return),
+    layovers: option.reportedLayovers?.outbound ?? countLayovers(option.outbound),
+    returnLayovers: option.reportedLayovers?.return ?? countLayovers(option.return),
   };
 }
 

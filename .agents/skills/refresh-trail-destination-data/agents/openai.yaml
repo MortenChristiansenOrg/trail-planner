@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refresh Trail Destination Data"
+  short_description: "Fill or refresh sourced destination data"
+  default_prompt: "Use $refresh-trail-destination-data to fill missing or stale data for a destination."
