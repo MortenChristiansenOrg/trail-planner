@@ -5,6 +5,7 @@ import {
   getCatalogFerryPart,
   getCatalogUnavailableReason,
 } from "@/features/catalog/catalogTravelData";
+import { getRoadDrivingOptionId } from "@/features/catalog/travelOptions";
 
 export type TravelMode = "car" | "train" | "plane";
 
@@ -192,6 +193,13 @@ const travel = (
 ];
 
 const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
+
+const withDrivingOption = (destination: DestinationSeed): DestinationSeed => ({
+  ...destination,
+  travel: destination.travel.map((estimate) => estimate.mode === "car" && estimate.available && !estimate.optionId
+    ? { ...estimate, optionId: getRoadDrivingOptionId(destination.id) }
+    : estimate),
+});
 
 const withCatalogTripPlan = (destinationId: string, estimates: TravelEstimate[]) => {
   const carPlan = getCatalogCarPlan(destinationId);
@@ -766,6 +774,7 @@ export function validateCatalog(items: Destination[]) {
     for (const estimate of destination.travel) {
       if (!confidenceLevels.has(estimate.confidence)) throw new Error(`${destination.name}: invalid travel confidence`);
       if (!estimate.accessNode.trim() || !estimate.note.trim() || typeof estimate.available !== "boolean") throw new Error(`${destination.name}: invalid travel node`);
+      if (estimate.mode === "car" && estimate.available && !estimate.optionId) throw new Error(`${destination.name}: available driving estimate is missing stage details`);
       if (!Number.isFinite(estimate.oneWayHours) || estimate.oneWayHours < 0 || !Number.isFinite(estimate.costPerPersonDkk) || estimate.costPerPersonDkk < 0) throw new Error(`${destination.name}: invalid travel estimate`);
       if (estimate.layovers !== undefined && (!Number.isInteger(estimate.layovers) || estimate.layovers < 0)) throw new Error(`${destination.name}: invalid layover count`);
     }
@@ -797,7 +806,7 @@ function validateMedia(media: CatalogMedia, label: string, expectedSubject: Cata
   if (media.subject !== expectedSubject) throw new Error(`${label}: media subject must be ${expectedSubject}`);
 }
 
-export const destinations: Destination[] = validateCatalog(catalogSeeds);
+export const destinations: Destination[] = validateCatalog(catalogSeeds.map(withDrivingOption));
 
 export const destinationById = new Map(destinations.map((item) => [item.id, item]));
 

@@ -5,18 +5,32 @@ import {
   getCatalogCarPlan,
   getCatalogFerryPart,
   getExploreDestinationIdForOption,
+  resolveCatalogCarJourney,
 } from "@/features/catalog/catalogTravelData";
 import { drivingRoutePoints, loadRoadRoute } from "@/features/maps/drivingRoute";
 import { loadCatalogRouteJourney, type LoadedCatalogRoutePart } from "@/features/maps/catalogRoute";
-import { createInnsbruckDrivingOption, innsbruckCoordinates, innsbruckDrivingOptionId } from "@/features/catalog/travelOptions";
+import { createDrivingOption } from "@/features/catalog/travelOptions";
 
 export async function loadTravelOption(optionId: string): Promise<TravelOptionSnapshot | undefined> {
   const destinationId = getExploreDestinationIdForOption(optionId);
   if (destinationId) return loadCatalogDrivingOption(destinationId, optionId);
-  if (optionId !== innsbruckDrivingOptionId) return undefined;
-  const points = drivingRoutePoints(innsbruckCoordinates, true);
-  const [outbound, inbound] = await Promise.all([loadRoadRoute(points), loadRoadRoute([...points].reverse())]);
-  const option = createInnsbruckDrivingOption(outbound, inbound);
+  const destination = destinations.find(({ travel }) => travel.some((estimate) => estimate.mode === "car" && estimate.optionId === optionId));
+  const carEstimate = destination?.travel.find((estimate) => estimate.mode === "car" && estimate.optionId === optionId);
+  if (!destination || !carEstimate?.available) return undefined;
+  const viaSouthernDenmark = destination.countryCode !== "NO";
+  const points = drivingRoutePoints(destination.coordinates, viaSouthernDenmark);
+  const [outbound, inbound] = await Promise.all([
+    loadRoadRoute(points).catch(() => undefined),
+    loadRoadRoute([...points].reverse()).catch(() => undefined),
+  ]);
+  const option = createDrivingOption({
+    destinationId: destination.id,
+    destinationName: destination.name,
+    destinationCoordinates: destination.coordinates,
+    oneWayHours: carEstimate.oneWayHours,
+    costPerPersonDkk: carEstimate.costPerPersonDkk,
+    viaSouthernDenmark,
+  }, outbound, inbound);
   deriveTravelOptionTotals(option);
   return option;
 }
@@ -27,18 +41,19 @@ async function loadCatalogDrivingOption(destinationId: string, optionId: string)
   const carPlan = getCatalogCarPlan(destinationId);
   const ferry = getCatalogFerryPart(destinationId);
   if (!destination || !carEstimate?.available || !carPlan || !ferry || getCatalogCarOptionId(destinationId) !== optionId) return undefined;
-  const [outbound, inbound] = await Promise.all([
-    loadCatalogRouteJourney(destinationId, "outbound"),
-    loadCatalogRouteJourney(destinationId, "return"),
+  const [outboundJourney, inboundJourney] = await Promise.all([
+    loadCatalogJourneyForDetails(destinationId, "outbound"),
+    loadCatalogJourneyForDetails(destinationId, "return"),
   ]);
+  const fallbackDirectionCount = Number(outboundJourney.usedFallback) + Number(inboundJourney.usedFallback);
   const costId = `${destinationId}-car-ferry-estimate`;
   const option: TravelOptionSnapshot = {
     id: optionId,
     label: `Drive and ferry from Aalborg to ${destination.name}`,
     priceType: "estimated",
     pricingBasis: "per-person",
-    outbound: { direction: "outbound", stages: createCatalogStages(outbound, "outbound", costId) },
-    return: { direction: "return", stages: createCatalogStages(inbound, "return", costId) },
+    outbound: { direction: "outbound", stages: createCatalogStages(outboundJourney.parts, "outbound", costId) },
+    return: { direction: "return", stages: createCatalogStages(inboundJourney.parts, "return", costId) },
     costComponents: [{
       id: costId,
       label: "Estimated return car and ferry cost",
@@ -47,7 +62,11 @@ async function loadCatalogDrivingOption(destinationId: string, optionId: string)
     }],
     warnings: [
       `${ferry.availability ?? "Verify the sailing for the selected date."} Ferry fares and vehicle space are not live.`,
-      "Road geometry and drive time come from OSRM; traffic and rest stops are not included.",
+      fallbackDirectionCount === 0
+        ? "Road geometry and drive time come from OSRM; traffic and rest stops are not included."
+        : fallbackDirectionCount === 1
+          ? "Live road geometry could not be refreshed for one direction, so saved catalog durations are shown for those driving legs."
+          : "Live road geometry could not be refreshed, so saved catalog durations are shown for the driving legs.",
     ],
     assumptions: [
       carPlan.selectionNote ?? "The catalog-selected ferry is used for both directions.",
@@ -60,7 +79,28 @@ async function loadCatalogDrivingOption(destinationId: string, optionId: string)
   return option;
 }
 
-function createCatalogStages(parts: LoadedCatalogRoutePart[], direction: JourneyDirection, costId: string): TravelStage[] {
+type CatalogDetailPart = Omit<LoadedCatalogRoutePart, "coordinates"> & {
+  coordinates?: [number, number][];
+};
+
+async function loadCatalogJourneyForDetails(destinationId: string, direction: JourneyDirection) {
+  try {
+    return { parts: await loadCatalogRouteJourney(destinationId, direction) as CatalogDetailPart[], usedFallback: false };
+  } catch {
+    const parts = resolveCatalogCarJourney(destinationId, direction).map((resolved): CatalogDetailPart => {
+      const durationMinutes = resolved.part.durationMinutes ?? resolved.part.durationRangeMinutes?.[1];
+      if (durationMinutes === undefined) throw new Error(`Catalog duration is unavailable: ${resolved.part.key}`);
+      return {
+        ...resolved,
+        durationMinutes,
+        sourceUrl: resolved.part.source.url,
+      };
+    });
+    return { parts, usedFallback: true };
+  }
+}
+
+function createCatalogStages(parts: CatalogDetailPart[], direction: JourneyDirection, costId: string): TravelStage[] {
   return parts.flatMap(({ part, origin, destination, durationMinutes, coordinates, sourceUrl }, index) => {
     const stageId = `${direction}-${index}-${part.key}`;
     const transportStage: TravelStage = {

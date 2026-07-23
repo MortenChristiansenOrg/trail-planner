@@ -7,6 +7,7 @@ import {
   type NewTripInput,
   type PlannedTrip,
 } from "@/features/trips/model";
+import { destinationById } from "@/features/catalog/catalog";
 
 type TripStoreValue = {
   trips: PlannedTrip[];
@@ -23,10 +24,21 @@ function loadTrips(): PlannedTrip[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = window.localStorage.getItem(storageKey);
-    return raw ? (JSON.parse(raw) as PlannedTrip[]) : [];
+    return raw ? (JSON.parse(raw) as PlannedTrip[]).map(restoreDrivingOptionId) : [];
   } catch {
     return [];
   }
+}
+
+function restoreDrivingOptionId(trip: PlannedTrip): PlannedTrip {
+  const catalogCar = destinationById.get(trip.destinationId)?.travel.find(({ mode }) => mode === "car");
+  if (!catalogCar?.optionId || trip.travelSnapshot.some(({ mode, optionId }) => mode === "car" && optionId)) return trip;
+  return {
+    ...trip,
+    travelSnapshot: trip.travelSnapshot.map((estimate) => estimate.mode === "car" && estimate.available
+      ? { ...estimate, optionId: catalogCar.optionId }
+      : estimate),
+  };
 }
 
 export function TripStoreProvider({ children }: { children: ReactNode }) {
@@ -76,7 +88,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
       setTrips([]);
       return;
     }
-    setTrips(stateJsons.map((state) => JSON.parse(state) as PlannedTrip));
+    setTrips(stateJsons.map((state) => restoreDrivingOptionId(JSON.parse(state) as PlannedTrip)));
   }, [isAuthenticated, stateJsons]);
 
   const create = async (input: NewTripInput) => {
@@ -86,7 +98,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
       plannedMonth: draft.plannedMonth,
       stateJson: JSON.stringify(draft),
     });
-    const saved = JSON.parse(state) as PlannedTrip;
+    const saved = restoreDrivingOptionId(JSON.parse(state) as PlannedTrip);
     setTrips((current) => [...current, saved]);
     return saved;
   };
@@ -94,7 +106,7 @@ export function ConvexTripStoreProvider({ children }: { children: ReactNode }) {
   const update = async (trip: PlannedTrip) => {
     const next = { ...trip, updatedAt: Date.now() };
     const state = await updateState({ tripId: trip.id as never, stateJson: JSON.stringify(next) });
-    const saved = JSON.parse(state) as PlannedTrip;
+    const saved = restoreDrivingOptionId(JSON.parse(state) as PlannedTrip);
     setTrips((current) => current.map((item) => item.id === saved.id ? saved : item));
   };
 

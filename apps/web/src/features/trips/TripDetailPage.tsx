@@ -196,7 +196,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       <span><small>{modeLabels[estimate.mode]}{estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
                       {trip.selectedTravelMode === estimate.mode ? <Check className="selected-check" /> : null}
                     </button>
-                    {estimate.available ? <TravelOptionDetails label="Stage details" option={trip.selectedTravelMode === estimate.mode ? trip.selectedTravelOption : undefined} optionId={estimate.optionId} /> : null}
+                    {estimate.available && (estimate.optionId || (trip.selectedTravelMode === estimate.mode && trip.selectedTravelOption)) ? <TravelOptionDetails label="Stage details" option={trip.selectedTravelMode === estimate.mode ? trip.selectedTravelOption : undefined} optionId={estimate.optionId} /> : null}
                   </div>
                 ))}
               </div>

@@ -61,7 +61,7 @@ test("primary pages do not overflow horizontally", async ({ page }) => {
   }
 });
 
-test("travel stages use provider-backed road geometry and never invent missing detail", async ({ page }) => {
+test("travel stages use provider-backed road geometry and only expose loadable detail", async ({ page }) => {
   let routingAvailable = true;
   await page.route("https://router.project-osrm.org/**", (route) => routingAvailable
     ? route.fulfill({
@@ -93,9 +93,7 @@ test("travel stages use provider-backed road geometry and never invent missing d
 
   for (const label of ["Train + bus", "Airplane"]) {
     const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
-    await choice.getByRole("button", { name: "Stage details" }).click();
-    await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("Stage detail not available");
-    await page.keyboard.press("Escape");
+    await expect(choice.getByRole("button", { name: "Stage details" })).toHaveCount(0);
   }
 
   routingAvailable = false;
@@ -107,7 +105,51 @@ test("travel stages use provider-backed road geometry and never invent missing d
   await page.getByRole("button", { name: "View area details" }).click();
   const carEstimate = page.locator(".detail-travel-list > div").filter({ hasText: "Own car" });
   await carEstimate.getByRole("button", { name: "View stages" }).click();
-  await expect(page.getByRole("dialog", { name: "Travel stage details" })).toContainText("The detailed travel option could not be loaded.");
+  const fallbackDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
+  await expect(fallbackDialog).toContainText("saved Explore duration estimate");
+  await expect(fallbackDialog).not.toContainText("Stage detail not available");
+});
+
+test("Berchtesgaden driving details survive a legacy saved-trip snapshot", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile", "Legacy trip migration is covered once on desktop.");
+
+  await page.route("https://router.project-osrm.org/**", async (route) => {
+    const encodedPoints = new URL(route.request().url()).pathname.split("/driving/")[1];
+    const coordinates = encodedPoints.split(";").map((point) => point.split(",").map(Number));
+    await route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 1_200_000,
+          duration: 43_200,
+          geometry: { coordinates },
+        }],
+      }),
+    });
+  });
+
+  await page.goto("/explore?month=7&selected=berchtesgaden&maxDriveHours=40");
+  await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
+  await page.getByRole("button", { name: "Plan this trip" }).click();
+  await page.evaluate(() => {
+    const trips = JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]");
+    const car = trips[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car");
+    if (car) delete car.optionId;
+    localStorage.setItem("trail-planner:mvp-trips:v1", JSON.stringify(trips));
+  });
+  await page.reload();
+
+  const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
+  await carChoice.getByRole("button", { name: /Own car/ }).click();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-aalborg-berchtesgaden");
+  await carChoice.getByRole("button", { name: "Stage details" }).click();
+
+  const dialog = page.getByRole("dialog", { name: "Drive from Aalborg to Berchtesgaden" });
+  await expect(dialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
+  await expect(dialog).toContainText("Aalborg");
+  await expect(dialog).toContainText("Berchtesgaden");
+  await expect(page.getByText("Stage detail not available")).toHaveCount(0);
 });
 
 test("Norway selections use the catalog ferry route and expose the arrival buffer", async ({ page }, testInfo) => {

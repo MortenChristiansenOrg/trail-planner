@@ -402,7 +402,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
+                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
                 </div>
               ))}
             </div>
