@@ -29,6 +29,7 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
   const loadedOption = loaded && loaded.optionId === optionId ? loaded.option : undefined;
   const loadedValid = isValidTravelOption(loadedOption);
   const detail = optionValid ? option : loadedValid ? loadedOption : undefined;
+  const canShowDetails = optionValid || Boolean(optionId);
   useEffect(() => {
     if (!open || optionValid || loadedValid || !optionId) return;
     const requestedOptionId = optionId;
@@ -56,6 +57,8 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
     requestRef.current += 1;
     setLoading(false);
   };
+  if (!canShowDetails) return null;
+  const waitingForDetail = Boolean(optionId) && !detail && !loadFailed;
   return (
     <Dialog onOpenChange={changeOpen}>
       <DialogTrigger asChild><Button size="sm" variant="ghost"><Waypoints /> {label}</Button></DialogTrigger>
@@ -64,13 +67,13 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
           <DialogTitle>{detail?.label ?? "Travel stage details"}</DialogTitle>
           <DialogDescription>{detail
             ? "Complete outbound and return snapshot, including connections, assumptions, and component costs."
-            : loading
+            : waitingForDetail
               ? "Loading the full option behind this Explore digest."
               : loadFailed
                 ? "The detailed travel option could not be loaded."
-                : "Detailed stage data has not been loaded for this catalog estimate."}</DialogDescription>
+                : "Travel details could not be refreshed."}</DialogDescription>
         </DialogHeader>
-        {detail ? <TravelOptionBody option={detail} /> : loading ? <div className="travel-detail-loading" role="status"><Clock3 /> Loading stages…</div> : <div className="travel-detail-unavailable"><CircleAlert /><div><strong>Stage detail not available</strong><p>{loadFailed ? "The detail record could not be loaded. The digest remains available." : "The aggregate duration and price remain visible, but no provider-backed leg sequence is stored. We do not invent intermediate stops."}</p></div></div>}
+        {detail ? <TravelOptionBody option={detail} /> : waitingForDetail || loading ? <div className="travel-detail-loading" role="status"><Clock3 /> Loading stages…</div> : <div className="travel-detail-unavailable"><CircleAlert /><div><strong>Travel details could not be refreshed</strong><p>The saved estimate remains available. Close this dialog and try again.</p></div></div>}
       </DialogContent>
     </Dialog>
   );
@@ -142,8 +145,8 @@ function StageTimeline({ costById, stages }: { costById: Map<string, TravelCostC
     <li className={`travel-stage travel-stage--${stage.kind}`} key={stage.id}>
       <span className="travel-stage__icon">{kindIcon(stage.kind)}</span>
       <div>
-        <span className="travel-stage__heading"><Badge variant="outline">{stage.transferType === "layover" ? "Flight layover" : kindLabels[stage.kind]}</Badge><strong>{formatMinutes(stage.durationMinutes)}</strong></span>
-        {stage.transferType === "layover" ? <p><strong>{stage.origin.name}</strong></p> : <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>}
+        <span className="travel-stage__heading"><Badge variant="outline">{stage.transferType === "layover" ? "Flight layover" : stage.transferType === "check-in" ? "Ferry arrival buffer" : kindLabels[stage.kind]}</Badge><strong>{formatMinutes(stage.durationMinutes)}</strong></span>
+        {stage.transferType === "layover" || stage.transferType === "check-in" ? <p><strong>{stage.origin.name}</strong></p> : <p><strong>{stage.origin.name}</strong><ArrowRight /><strong>{stage.destination.name}</strong></p>}
         <small>{[stage.operator, stage.service, stage.confidence ? `${stage.confidence} confidence` : undefined].filter(Boolean).join(" · ") || "Operator not available"}</small>
         {stage.departureTime && stage.arrivalTime ? <small>{formatTime(stage.departureTime)}–{formatTime(stage.arrivalTime)}</small> : null}
         {stage.costComponentIds.length ? <small>Cost components: {stage.costComponentIds.map((id) => costById.get(id)?.label).filter(Boolean).join(", ")}</small> : null}

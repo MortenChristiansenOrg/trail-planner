@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-19-aalborg-mountain-hubs",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T21:14:20.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1118,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "solden",
+    "action": "add",
+    "name": "Sölden",
+    "region": "Ötztal Alps",
+    "countryCode": "AT",
+    "longitude": 11.0072845,
+    "latitude": 46.9666319
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "solden",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Sölden",
+        "latitude": 46.9666319,
+        "longitude": 11.0072845,
+        "osmType": "relation",
+        "osmId": 77772
+      },
+      "source": {
+        "key": "solden-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/77772",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The hub identity and coordinates were resolved through Nominatim; the underlying OSM object is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "solden",
+      "field": "mountainHikingOffer",
+      "value": "Sölden advertises 300 kilometres of hiking trails reaching elevations above 3,000 metres.",
+      "source": {
+        "key": "solden-official-tourism",
+        "url": "https://www.oetztal.com/en/activities/summer/hiking-mountaineering/hiking-regions/soelden-region",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "solden",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "summer"
+      ],
+      "source": {
+        "key": "solden-official-tourism",
+        "url": "https://www.oetztal.com/en/activities/summer/hiking-mountaineering/hiking-regions/soelden-region",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "solden",
+      "field": "publishedAccessOptions",
+      "value": {
+        "localModes": [
+          "public bus",
+          "hiking bus",
+          "hut taxi",
+          "shuttle transfer"
+        ],
+        "valleyBusCorridor": "Imst/Haiming to Obergurgl"
+      },
+      "source": {
+        "key": "solden-official-access",
+        "url": "https://www.oetztal.com/en/regions-villages/mobility",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The page supports the transport modes, but its displayed guest-card date ranges are from 2025 and must not be treated as current 2026 benefits."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

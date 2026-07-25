@@ -8,5 +8,5 @@ export type Destination = {
   countryCode: string;
   region: string;
   recommendedMonths: Month[];
-  visibility: "draft" | "published" | "archived";
+  visibility: "published" | "archived";
 };

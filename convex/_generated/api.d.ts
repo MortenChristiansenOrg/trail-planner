@@ -8,6 +8,8 @@
  * @module
  */
 
+import type * as catalogData from "../catalogData.js";
+import type * as catalogValidators from "../catalogValidators.js";
 import type * as crons from "../crons.js";
 import type * as destinations from "../destinations.js";
 import type * as files from "../files.js";
@@ -40,6 +42,8 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  catalogData: typeof catalogData;
+  catalogValidators: typeof catalogValidators;
   crons: typeof crons;
   destinations: typeof destinations;
   files: typeof files;

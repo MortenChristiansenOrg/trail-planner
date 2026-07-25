@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-20-innsbruck-coordinate-correction",
+    "task": "refresh-data",
+    "createdAt": "2026-07-19T22:14:13.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1049,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "innsbruck",
+    "action": "refresh",
+    "name": "Innsbruck",
+    "region": "Tyrol",
+    "countryCode": "AT",
+    "longitude": 11.3927685,
+    "latitude": 47.2654296
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Innsbruck",
+        "latitude": 47.2654296,
+        "longitude": 11.3927685,
+        "osmType": "relation",
+        "osmId": 4835169
+      },
+      "source": {
+        "key": "innsbruck-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/4835169",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T22:14:13.000Z",
+      "observedAt": "2026-07-19T22:14:13.000Z",
+      "refreshAfter": "2027-07-20T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The destination coordinates were resolved through Nominatim; the underlying OSM municipality relation is preserved as the source."
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "name",
+      "value": "Along the Goetheweg trail to the Pfeishütte mountain hut",
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "difficulty",
+      "value": "difficult",
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Source label retained verbatim because mapping it to the catalog difficulty enum requires a separate verified mapping."
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "distanceKm",
+      "value": 5.2,
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "ascentM",
+      "value": 769,
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "descentM",
+      "value": 764,
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "durationMinutes",
+      "value": 300,
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Converted locally from the source's five-hour total walking time."
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "highestPointM",
+      "value": 2290,
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "start",
+      "value": "Hafelekar mountain station",
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "end",
+      "value": "Pfeishütte",
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "goetheweg-hafelekar-pfeishuette",
+      "field": "trailheadArrival",
+      "value": [
+        "Bus line J to the Hungerburgbahn valley station",
+        "Parking at the Hungerburgbahn valley station"
+      ],
+      "source": {
+        "key": "innsbruck-tourism-goetheweg",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T15:59:16.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source names access to the lift valley station; current lift and bus schedules still require date-specific checks."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "partial",
+      "reasons": [
+        "Destination coordinates are verified; other core metadata remains outside this targeted correction"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "partial",
+      "reasons": [
+        "One official route has complete descriptive metrics, but coverage beyond this verified route remains incomplete"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "The source exposes an interactive map link but no authoritative GPX, KML, or OSM relation was found in the scrape"
+      ]
+    }
+  ]
+}

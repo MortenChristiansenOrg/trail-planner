@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-20-oppdal-coordinate-correction",
+    "task": "refresh-data",
+    "createdAt": "2026-07-19T22:14:13.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1049,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "oppdal",
+    "action": "refresh",
+    "name": "Oppdal",
+    "region": "Trollheimen / Dovrefjell",
+    "countryCode": "NO",
+    "longitude": 9.6896436,
+    "latitude": 62.5951546
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "oppdal",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Oppdal",
+        "latitude": 62.5951546,
+        "longitude": 9.6896436,
+        "osmType": "node",
+        "osmId": 2774665133
+      },
+      "source": {
+        "key": "oppdal-openstreetmap",
+        "url": "https://www.openstreetmap.org/node/2774665133",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T22:14:13.000Z",
+      "observedAt": "2026-07-19T22:14:13.000Z",
+      "refreshAfter": "2027-07-20T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The access hub is the Oppdal settlement resolved through Nominatim; the underlying OSM node is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "oppdal",
+      "field": "mountainHikingOffer",
+      "value": "Oppdal offers marked routes ranging from forest walks to demanding mountain summit hikes.",
+      "source": {
+        "key": "oppdal-official-tourism",
+        "url": "https://oppdal.com/en/hiking-in-oppdal-from-easy-trails-to-spectacular-peaks/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "oppdal",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "summer",
+        "autumn"
+      ],
+      "source": {
+        "key": "oppdal-official-season",
+        "url": "https://www.visitnorway.com/places-to-go/trondelag/oppdal/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "oppdal",
+      "field": "publishedAccessOptions",
+      "value": {
+        "accessNode": "Oppdal railway station",
+        "localTrailheadModes": [
+          "parking",
+          "summer gondola"
+        ]
+      },
+      "source": {
+        "key": "oppdal-official-access",
+        "url": "https://www.visitnorway.com/places-to-go/trondelag/oppdal/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports these access nodes or modes, but this is not a date-specific itinerary from Aalborg and no fare or schedule is claimed."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

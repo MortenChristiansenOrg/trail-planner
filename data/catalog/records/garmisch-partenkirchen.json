@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-19-aalborg-mountain-hubs",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T21:14:20.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1118,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "garmisch-partenkirchen",
+    "action": "add",
+    "name": "Garmisch-Partenkirchen",
+    "region": "Bavarian Alps / Wetterstein",
+    "countryCode": "DE",
+    "longitude": 11.0962815,
+    "latitude": 47.4923741
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "garmisch-partenkirchen",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Garmisch-Partenkirchen",
+        "latitude": 47.4923741,
+        "longitude": 11.0962815,
+        "osmType": "relation",
+        "osmId": 939334
+      },
+      "source": {
+        "key": "garmisch-partenkirchen-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/939334",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The hub identity and coordinates were resolved through Nominatim; the underlying OSM object is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "garmisch-partenkirchen",
+      "field": "mountainHikingOffer",
+      "value": "The official destination presents hiking, mountaineering, and open mountain-lift information as core activities.",
+      "source": {
+        "key": "garmisch-partenkirchen-official-tourism",
+        "url": "https://www.gapa-tourismus.de/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "garmisch-partenkirchen",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "autumn"
+      ],
+      "source": {
+        "key": "garmisch-partenkirchen-official-tourism",
+        "url": "https://www.gapa-tourismus.de/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "garmisch-partenkirchen",
+      "field": "publishedAccessOptions",
+      "value": {
+        "localMountainAccess": [
+          "cable cars",
+          "lifts"
+        ],
+        "operatingStatusGuideAvailable": true
+      },
+      "source": {
+        "key": "garmisch-partenkirchen-official-tourism",
+        "url": "https://www.gapa-tourismus.de/en",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports these access nodes or modes, but this is not a date-specific itinerary from Aalborg and no fare or schedule is claimed."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

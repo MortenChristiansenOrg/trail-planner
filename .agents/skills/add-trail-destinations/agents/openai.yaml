@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Trail Destinations"
+  short_description: "Research, verify, and publish trail destinations"
+  default_prompt: "Use $add-trail-destinations to research, verify, and publish a new trail destination."

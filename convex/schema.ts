@@ -1,5 +1,6 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
+import { catalogDataDomain, confidence, coverageStatus } from "./catalogValidators";
 
 const money = v.object({
   amount: v.number(),
@@ -9,8 +10,8 @@ const money = v.object({
 const provenanceClaim = v.object({
   sourceId: v.string(),
   sourceUrl: v.optional(v.string()),
-  reviewedAt: v.string(),
-  confidence: v.union(v.literal("low"), v.literal("medium"), v.literal("high")),
+  verifiedAt: v.string(),
+  confidence,
   priceType: v.optional(
     v.union(
       v.literal("live"),
@@ -37,11 +38,7 @@ export default defineSchema({
     countryCode: v.string(),
     region: v.string(),
     recommendedMonths: v.array(v.string()),
-    visibility: v.union(
-      v.literal("draft"),
-      v.literal("published"),
-      v.literal("archived"),
-    ),
+    visibility: v.union(v.literal("published"), v.literal("archived")),
     provenance: v.array(provenanceClaim),
   })
     .index("by_country_visibility", ["countryCode", "visibility"])
@@ -73,6 +70,98 @@ export default defineSchema({
     "month",
     "mode",
   ]),
+
+  sourceRegistry: defineTable({
+    key: v.string(),
+    name: v.string(),
+    baseUrl: v.string(),
+    kind: v.union(
+      v.literal("official"),
+      v.literal("open-data"),
+      v.literal("provider"),
+      v.literal("community"),
+      v.literal("manual"),
+    ),
+    enabled: v.boolean(),
+    defaultRefreshDays: v.optional(v.number()),
+    termsUrl: v.optional(v.string()),
+    attribution: v.optional(v.string()),
+    notes: v.optional(v.string()),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_key", ["key"])
+    .index("by_enabled_kind", ["enabled", "kind"]),
+
+  dataClaims: defineTable({
+    destinationKey: v.string(),
+    domain: catalogDataDomain,
+    subjectKey: v.string(),
+    field: v.string(),
+    valueJson: v.string(),
+    sourceKey: v.string(),
+    sourceUrl: v.string(),
+    retrievedAt: v.number(),
+    observedAt: v.optional(v.number()),
+    expiresAt: v.optional(v.number()),
+    confidence,
+    runId: v.string(),
+    notes: v.optional(v.string()),
+  })
+    .index("by_destination_domain", ["destinationKey", "domain"])
+    .index("by_source", ["sourceKey"])
+    .index("by_run", ["runId"]),
+
+  dataCoverage: defineTable({
+    destinationKey: v.string(),
+    domain: catalogDataDomain,
+    status: coverageStatus,
+    claimCount: v.number(),
+    assessedAt: v.number(),
+    staleAt: v.optional(v.number()),
+    reasons: v.array(v.string()),
+    runId: v.optional(v.string()),
+  })
+    .index("by_destination_domain", ["destinationKey", "domain"])
+    .index("by_status_stale_at", ["status", "staleAt"]),
+
+  enrichmentJobs: defineTable({
+    jobKey: v.string(),
+    task: v.union(v.literal("add-destination"), v.literal("refresh-data")),
+    destinationKey: v.optional(v.string()),
+    domains: v.array(catalogDataDomain),
+    status: v.union(
+      v.literal("queued"),
+      v.literal("running"),
+      v.literal("completed"),
+      v.literal("failed"),
+    ),
+    priority: v.number(),
+    attempts: v.number(),
+    maxAttempts: v.number(),
+    requestedAt: v.number(),
+    updatedAt: v.number(),
+    startedAt: v.optional(v.number()),
+    completedAt: v.optional(v.number()),
+    cursor: v.optional(v.string()),
+    runId: v.optional(v.string()),
+    lastError: v.optional(v.string()),
+  })
+    .index("by_job_key", ["jobKey"])
+    .index("by_status_priority", ["status", "priority"])
+    .index("by_destination_status", ["destinationKey", "status"]),
+
+  providerCache: defineTable({
+    cacheKey: v.string(),
+    provider: v.string(),
+    sourceUrl: v.string(),
+    responseJson: v.string(),
+    fetchedAt: v.number(),
+    expiresAt: v.number(),
+    creditCost: v.optional(v.number()),
+  })
+    .index("by_cache_key", ["cacheKey"])
+    .index("by_provider_expires_at", ["provider", "expiresAt"]),
 
   trips: defineTable({
     ownerId: v.id("users"),

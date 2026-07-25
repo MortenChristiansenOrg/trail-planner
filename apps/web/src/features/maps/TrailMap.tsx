@@ -26,7 +26,11 @@ export function TrailMap(props: {
   className?: string;
 }) {
   return (
-    <div className={`map-frame ${props.className ?? ""}`} data-line-count={props.lines?.length ?? 0}>
+    <div
+      className={`map-frame ${props.className ?? ""}`}
+      data-line-count={props.lines?.length ?? 0}
+      data-line-modes={props.lines?.map((line) => line.styleMode ?? line.kind ?? "trail").join(",") ?? ""}
+    >
       <Suspense fallback={<MapFallback label="Drawing the map…" />}>
         <MapCanvas {...props} />
       </Suspense>

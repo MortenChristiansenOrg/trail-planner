@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-07-19-aalborg-mountain-hubs",
+    "task": "add-destination",
+    "createdAt": "2026-07-19T21:14:20.000Z",
+    "tool": "firecrawl-cli",
+    "creditsBefore": 1118,
+    "creditsAfter": 1049
+  },
+  "destination": {
+    "key": "zell-am-see-kaprun",
+    "action": "add",
+    "name": "Zell am See–Kaprun",
+    "region": "Salzburg Alps / Hohe Tauern",
+    "countryCode": "AT",
+    "longitude": 12.7963165,
+    "latitude": 47.3239636
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "zell-am-see-kaprun",
+      "field": "accessHubCoordinates",
+      "value": {
+        "accessHub": "Zell am See",
+        "latitude": 47.3239636,
+        "longitude": 12.7963165,
+        "osmType": "relation",
+        "osmId": 945962
+      },
+      "source": {
+        "key": "zell-am-see-kaprun-openstreetmap",
+        "url": "https://www.openstreetmap.org/relation/945962",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "The hub identity and coordinates were resolved through Nominatim; the underlying OSM object is preserved as the source."
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zell-am-see-kaprun",
+      "field": "mountainHikingOffer",
+      "value": "Zell am See–Kaprun publishes more than 400 kilometres of marked routes from family walks to difficult summit tours.",
+      "source": {
+        "key": "zell-am-see-kaprun-official-tourism",
+        "url": "https://www.zellamsee-kaprun.com/en/sport/summer/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-07-19T00:00:00.000Z",
+      "confidence": "high",
+      "notes": "Short summary of the hiking role directly presented by the destination or tourism authority."
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "zell-am-see-kaprun",
+      "field": "advertisedHikingSeasons",
+      "value": [
+        "summer"
+      ],
+      "source": {
+        "key": "zell-am-see-kaprun-official-tourism",
+        "url": "https://www.zellamsee-kaprun.com/en/sport/summer/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports broad advertised seasons only; it does not establish snow-free dates or guarantee trail and lift operation."
+    },
+    {
+      "domain": "access",
+      "subjectKey": "zell-am-see-kaprun",
+      "field": "publishedAccessOptions",
+      "value": {
+        "mountainAccessNodes": [
+          "Schmittenhöhe",
+          "Kitzsteinhorn",
+          "Maiskogel"
+        ],
+        "mobilityProductPublished": "Guest Mobility Ticket"
+      },
+      "source": {
+        "key": "zell-am-see-kaprun-official-tourism",
+        "url": "https://www.zellamsee-kaprun.com/en/sport/summer/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-19T21:14:20.000Z",
+      "observedAt": "2026-07-19T21:14:20.000Z",
+      "refreshAfter": "2026-10-19T00:00:00.000Z",
+      "confidence": "medium",
+      "notes": "The source supports these access nodes or modes, but this is not a date-specific itinerary from Aalborg and no fare or schedule is claimed."
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "partial",
+      "reasons": [
+        "Broad advertised seasons are sourced; exact recommended months, snow conditions, and closure windows remain unverified"
+      ]
+    },
+    {
+      "domain": "access",
+      "status": "partial",
+      "reasons": [
+        "Useful hub or local access is sourced; a live Aalborg-to-destination itinerary, schedules, and fares require provider data"
+      ]
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No individual hike metadata was targeted in this destination-expansion run"
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No OSM relation or licensed official GPX was verified"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Trail Planner Data Source Research
 
-See [CATALOG_INGESTION_CHECKLIST.md](CATALOG_INGESTION_CHECKLIST.md) for the publication gate covering provenance, route geometry, lodging, and licensed media.
+See [CATALOG_PUBLICATION_CHECKLIST.md](CATALOG_PUBLICATION_CHECKLIST.md) for the skill-executed publication gate covering provenance, route geometry, lodging, and licensed media.
+See [CATALOG_DATA_PIPELINE.md](CATALOG_DATA_PIPELINE.md) for the claims, coverage, queue, caching, and agent-skill architecture.
 
 This document lists the external information Trail Planner needs in order to prove the product vision in `VISION.md`. It is written as an experiment reference: for each data type, we should test whether candidate sources provide enough coverage, accuracy, cost visibility, legal clarity, and operational reliability before relying on them in the product.
 

@@ -158,13 +158,13 @@ export default function MapCanvas({
 
     if (selectedId) {
       const selectedLine = lines.find((line) => line.id === selectedId);
-      const journeyLine = lines.find((line) => line.kind === "journey");
+      const journeyCoordinates = lines.filter((line) => line.kind === "journey").flatMap((line) => line.coordinates);
       const selected = markers.find((marker) => marker.id === selectedId);
-      if (mode === "explore" && journeyLine?.coordinates.length) {
+      if (mode === "explore" && journeyCoordinates.length) {
         const compact = map.getContainer().clientWidth <= 800;
-        const bounds = journeyLine.coordinates.reduce(
+        const bounds = journeyCoordinates.reduce(
           (current, coordinates) => current.extend(coordinates),
-          new maplibregl.LngLatBounds(journeyLine.coordinates[0], journeyLine.coordinates[0]),
+          new maplibregl.LngLatBounds(journeyCoordinates[0], journeyCoordinates[0]),
         );
         map.fitBounds(bounds, {
           padding: compact

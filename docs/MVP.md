@@ -174,7 +174,7 @@ Every provider-derived or manually curated claim that affects user decisions sho
 
 - Source ID.
 - Source URL when available.
-- Retrieved or reviewed timestamp.
+- Retrieved and skill-verified timestamps.
 - Valid month/date range when relevant.
 - Confidence level.
 - Price type: live, sampled, estimated, manual, or unavailable.
