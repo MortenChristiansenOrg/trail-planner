@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "fort-william",
       "field": "guide.terrain",
-      "value": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. The published Fort William walks move through that structure in distinct ways. “Steall Falls and Nevis Gorge” is the shortest listed option at about 2 hours from Upper Glen Nevis car park; “Càrn Mòr Dearg Arête” is the largest commitment at about 10 hours. On West Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. The published Fort William walks move through that structure in distinct ways. “Steall Falls and Nevis Gorge” is the shortest listed option at about 2 hours; “Càrn Mòr Dearg Arête” is the largest commitment at about 10 hours. On West Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "fort-william-authority",
         "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "fort-william",
       "field": "guide.expectations",
-      "value": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. Access around Fort William is route-specific: starts include Glen Nevis visitor centre, North Face car park and Fort William town centre. A West Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Fort William weather, closures and seasonal services against the linked authority. Keep one of the listed Fort William alternatives available when the principal route is unsuitable.",
+      "value": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. Access around Fort William is route-specific. Starts include Glen Nevis visitor centre, North Face car park and Fort William town centre. A West Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Fort William weather, closures and seasonal services against the linked authority. Keep one of the listed Fort William alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "fort-william-authority",
         "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",

@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "thorsmork",
       "field": "guide.terrain",
-      "value": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes. The published Þórsmörk walks move through that structure in distinct ways. “Valahnúkur” is the shortest listed option at about 2 hours from Húsadalur; “Laugavegur to Emstrur” is the largest commitment at about 10 hours. On Southern Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes. The published Þórsmörk walks move through that structure in distinct ways. “Valahnúkur” is the shortest listed option at about 2 hours; “Laugavegur to Emstrur” is the largest commitment at about 10 hours. On Southern Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "thorsmork-authority",
         "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "thorsmork",
       "field": "guide.expectations",
-      "value": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. Access around Þórsmörk is route-specific: starts include Húsadalur, Langidalur hut and Básar hut. A Southern Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Þórsmörk weather, closures and seasonal services against the linked authority. Keep one of the listed Þórsmörk alternatives available when the principal route is unsuitable.",
+      "value": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. Access around Þórsmörk is route-specific. Starts include Húsadalur, Langidalur hut and Básar hut. A Southern Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Þórsmörk weather, closures and seasonal services against the linked authority. Keep one of the listed Þórsmörk alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "thorsmork-authority",
         "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",

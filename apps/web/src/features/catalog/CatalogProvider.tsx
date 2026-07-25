@@ -4,6 +4,7 @@ import {
   type ReactNode,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import type {
@@ -33,21 +34,31 @@ const CatalogContext = createContext<CatalogContextValue | null>(null);
 export function StaticCatalogProvider({ children }: { children: ReactNode }) {
   const [requestedKeys, setRequestedKeys] = useState<string[]>([]);
   const [details, setDetails] = useState<Record<string, CatalogDestinationDetail | null | undefined>>({});
+  const inFlight = useRef(
+    new Map<string, Promise<readonly [string, CatalogDestinationDetail | null]>>(),
+  );
 
   useEffect(() => {
     let cancelled = false;
     const missingKeys = requestedKeys.filter((key) => !(key in details));
     if (!missingKeys.length) return;
-    void Promise.all(
-      missingKeys.map(async (key) => {
+    const pending = missingKeys.map((key) => {
+      const existing = inFlight.current.get(key);
+      if (existing) return existing;
+      const request = (async () => {
         try {
           return [key, await loadStaticCatalogDetail(key)] as const;
         } catch (error) {
           console.error(`Unable to load catalog detail for ${key}`, error);
           return [key, null] as const;
+        } finally {
+          inFlight.current.delete(key);
         }
-      }),
-    ).then((entries) => {
+      })();
+      inFlight.current.set(key, request);
+      return request;
+    });
+    void Promise.all(pending).then((entries) => {
       if (!cancelled) setDetails((current) => ({ ...current, ...Object.fromEntries(entries) }));
     });
     return () => {

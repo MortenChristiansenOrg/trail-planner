@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "picos",
       "field": "guide.terrain",
-      "value": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land. The published Potes walks move through that structure in distinct ways. “Fuente Dé to Áliva” is the shortest listed option at about 4 hours from Fuente Dé upper cable-car station; “Collado Jermoso” is the largest commitment at about 10 hours. On Picos de Europa terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land. The published Potes walks move through that structure in distinct ways. “Fuente Dé to Áliva” and “Pico Jano” are the shortest listed options at about 4 hours; “Collado Jermoso” is the largest commitment at about 10 hours. On Picos de Europa terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "picos-authority",
         "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "picos",
       "field": "guide.expectations",
-      "value": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative. Access around Potes is route-specific: starts include Poncebos, Fuente Dé upper cable-car station and Fuente Dé upper cable-car station. A Picos de Europa point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Potes weather, closures and seasonal services against the linked authority. Keep one of the listed Potes alternatives available when the principal route is unsuitable.",
+      "value": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative. Access around Potes is route-specific. Starts include Poncebos, Fuente Dé upper cable-car station and Dobarganes. A Picos de Europa point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Potes weather, closures and seasonal services against the linked authority. Keep one of the listed Potes alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "picos-authority",
         "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",

@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.terrain",
-      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 3 hours from Patscherkofel upper station; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "innsbruck-authority",
         "url": "https://www.innsbruck.info/en/hiking.html",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.expectations",
-      "value": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific: starts include Hafelekar cable-car station, Patscherkofel upper station and Patscherkofel upper station. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable.",
+      "value": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific. Starts include Hafelekar cable-car station, Patscherkofel upper station and Axamer Lizum. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "innsbruck-authority",
         "url": "https://www.innsbruck.info/en/hiking.html",
@@ -217,8 +217,8 @@
         "name": "Zirbenweg",
         "routeType": "point-to-point",
         "description": "Zirbenweg follows the high pine balcony to Tulfeinalm and the Glungezer lift system.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
+        "difficulty": "Easy",
+        "durationHours": 2.5,
         "durationDays": 1,
         "trailhead": "Patscherkofel upper station",
         "recommendedMonths": [

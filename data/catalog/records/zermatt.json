@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "zermatt",
       "field": "guide.terrain",
-      "value": "High Pennine peaks, moraines and retreating glacier forefields tower above larch woods and flower-rich meadows; trails range from broad panoramic paths to exposed traverses on loose alpine ground. The published Zermatt walks move through that structure in distinct ways. “Gornergrat to Riffelberg” is the shortest listed option at about 2.5 hours from Gornergrat railway station; “Höhbalmen” is the largest commitment at about 7 hours. On Valais Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "High Pennine peaks, moraines and retreating glacier forefields tower above larch woods and flower-rich meadows; trails range from broad panoramic paths to exposed traverses on loose alpine ground. The published Zermatt walks move through that structure in distinct ways. “Gornergrat to Riffelberg” is the shortest listed option at about 2.5 hours; “Höhbalmen” and “Europaweg to Täschalp” share the largest listed commitment at about 7 hours. On Valais Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "zermatt-authority",
         "url": "https://www.zermatt.ch/en/hiking",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "zermatt",
       "field": "guide.expectations",
-      "value": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain. Access around Zermatt is route-specific: starts include Blauherd lift station, Zermatt village and Trockener Steg. A Valais Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zermatt weather, closures and seasonal services against the linked authority. Keep one of the listed Zermatt alternatives available when the principal route is unsuitable.",
+      "value": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain. Access around Zermatt is route-specific. Starts include Blauherd lift station, Zermatt village and Trockener Steg. A Valais Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zermatt weather, closures and seasonal services against the linked authority. Keep one of the listed Zermatt alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "zermatt-authority",
         "url": "https://www.zermatt.ch/en/hiking",

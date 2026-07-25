@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "cairngorms",
       "field": "guide.terrain",
-      "value": "Rounded granite plateaus end abruptly in corrie cliffs and boulder fields, while Scots pine forest, lochs and heather moor create a gentler lower-level landscape with important wildlife habitat. The published Aviemore walks move through that structure in distinct ways. “Ryvoan Pass and Green Lochan” is the shortest listed option at about 4.5 hours from Glenmore visitor centre; “Lairig Ghru to Corrour” is the largest commitment at about 10 hours. On Cairngorms terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Rounded granite plateaus end abruptly in corrie cliffs and boulder fields, while Scots pine forest, lochs and heather moor create a gentler lower-level landscape with important wildlife habitat. The published Aviemore walks move through that structure in distinct ways. “Ryvoan Pass and Green Lochan” is the shortest listed option at about 4.5 hours; “Lairig Ghru to Corrour” is the largest commitment at about 10 hours. On Cairngorms terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "cairngorms-authority",
         "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "cairngorms",
       "field": "guide.expectations",
-      "value": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions. Access around Aviemore is route-specific: starts include Coire Cas car park, Coire Cas car park and Glenmore visitor centre. A Cairngorms point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Aviemore weather, closures and seasonal services against the linked authority. Keep one of the listed Aviemore alternatives available when the principal route is unsuitable.",
+      "value": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions. Access around Aviemore is route-specific. Starts include Coire Cas car park, Glenmore visitor centre and Coylumbridge. A Cairngorms point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Aviemore weather, closures and seasonal services against the linked authority. Keep one of the listed Aviemore alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "cairngorms-authority",
         "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",

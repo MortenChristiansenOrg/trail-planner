@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "pnpm@11.10.0",
   "scripts": {
-    "dev": "convex dev --start 'pnpm catalog:sync && node scripts/catalog-data/start-web-dev.mjs'",
+    "dev": "convex dev --start \"pnpm catalog:sync && node scripts/catalog-data/start-web-dev.mjs\"",
     "dev:web": "pnpm --filter @trail-planner/web dev",
     "convex:dev": "convex dev",
     "build": "pnpm catalog:check && pnpm -r build",

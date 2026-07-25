@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "hemavan",
       "field": "guide.terrain",
-      "value": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt. The published Hemavan walks move through that structure in distinct ways. “Drottningleden” is the shortest listed option at about 5 hours from Laisaliden; “Hemavan to Ammarnäs” is the largest commitment at about 40 hours across 5 days. On Vindelfjällen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt. The published Hemavan walks move through that structure in distinct ways. “Drottningleden” is the shortest listed option at about 5 hours; “Hemavan to Ammarnäs” is the largest commitment at about 40 hours across 5 days. On Vindelfjällen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "hemavan-authority",
         "url": "https://hemavan.nu/en/see-and-do-summer/hiking/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "hemavan",
       "field": "guide.expectations",
-      "value": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. Access around Hemavan is route-specific: starts include Hemavan naturum, Hemavan gondola top station and Laisaliden. A Vindelfjällen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Hemavan weather, closures and seasonal services against the linked authority. Keep one of the listed Hemavan alternatives available when the principal route is unsuitable.",
+      "value": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. Access around Hemavan is route-specific. Starts include Hemavan naturum, Hemavan gondola top station and Laisaliden. A Vindelfjällen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Hemavan weather, closures and seasonal services against the linked authority. Keep one of the listed Hemavan alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "hemavan-authority",
         "url": "https://hemavan.nu/en/see-and-do-summer/hiking/",

@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "romsdalen",
       "field": "guide.terrain",
-      "value": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers. The published Åndalsnes walks move through that structure in distinct ways. “Litlefjellet” is the shortest listed option at about 1.5 hours from Litlefjellet trailhead in Vengedalen; “Romsdalseggen Ridge” is the largest commitment at about 8 hours. On Romsdalen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers. The published Åndalsnes walks move through that structure in distinct ways. “Litlefjellet” is the shortest listed option at about 1.5 hours; “Romsdalseggen Ridge” is the largest commitment at about 8 hours. On Romsdalen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Åndalsnes.",
       "source": {
         "key": "romsdalen-authority",
         "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "romsdalen",
       "field": "guide.expectations",
-      "value": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. Access around Åndalsnes is route-specific: starts include Vengedalen trailhead, Åndalsnes town centre and Litlefjellet trailhead in Vengedalen. A Romsdalen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åndalsnes weather, closures and seasonal services against the linked authority. Keep one of the listed Åndalsnes alternatives available when the principal route is unsuitable.",
+      "value": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. Access around Åndalsnes is route-specific. Starts include Vengedalen trailhead, Åndalsnes town centre and Litlefjellet trailhead in Vengedalen. A Romsdalen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åndalsnes weather, closures and seasonal services against the linked authority. Keep one of the listed Åndalsnes alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "romsdalen-authority",
         "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",

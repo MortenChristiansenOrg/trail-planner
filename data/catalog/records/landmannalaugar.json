@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "landmannalaugar",
       "field": "guide.terrain",
-      "value": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly. The published Landmannalaugar walks move through that structure in distinct ways. “Laugahraun Loop” is the shortest listed option at about 2 hours from Landmannalaugar hut; “Laugavegur to Hrafntinnusker” is the largest commitment at about 7 hours. On Fjallabak Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly. The published Landmannalaugar walks move through that structure in distinct ways. “Laugahraun Loop” is the shortest listed option at about 2 hours; “Laugavegur to Hrafntinnusker” is the largest commitment at about 7 hours. On Fjallabak Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "landmannalaugar-authority",
         "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "landmannalaugar",
       "field": "guide.expectations",
-      "value": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. Access around Landmannalaugar is route-specific: starts include Landmannalaugar hut, Landmannalaugar hut and Landmannalaugar hut. A Fjallabak Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Landmannalaugar weather, closures and seasonal services against the linked authority. Keep one of the listed Landmannalaugar alternatives available when the principal route is unsuitable.",
+      "value": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. Access around Landmannalaugar is route-specific. Every published Landmannalaugar route starts from Landmannalaugar hut. A Fjallabak Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Landmannalaugar weather, closures and seasonal services against the linked authority. Keep one of the listed Landmannalaugar alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "landmannalaugar-authority",
         "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",

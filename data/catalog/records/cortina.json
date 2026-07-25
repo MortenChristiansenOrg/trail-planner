@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "cortina",
       "field": "guide.terrain",
-      "value": "Pale dolomite towers rise above scree fans, larch forest and rolling high pastures; ledges, military paths and compact limestone give the area a distinctive vertical architecture. The published Cortina d’Ampezzo walks move through that structure in distinct ways. “Cinque Torri Circuit” is the shortest listed option at about 3 hours from Bai de Dones; “Croda da Lago Circuit” is the largest commitment at about 7 hours. On Dolomites terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Pale dolomite towers rise above scree fans, larch forest and rolling high pastures; ledges, military paths and compact limestone give the area a distinctive vertical architecture. The published Cortina d’Ampezzo walks move through that structure in distinct ways. “Cinque Torri Circuit” is the shortest listed option at about 3 hours; “Croda da Lago Circuit” is the largest commitment at about 7 hours. On Dolomites terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "cortina-authority",
         "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "cortina",
       "field": "guide.expectations",
-      "value": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes. Access around Cortina d’Ampezzo is route-specific: starts include Rifugio Auronzo, Bai de Dones and Passo Tre Croci. A Dolomites point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Cortina d’Ampezzo weather, closures and seasonal services against the linked authority. Keep one of the listed Cortina d’Ampezzo alternatives available when the principal route is unsuitable.",
+      "value": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes. Access around Cortina d’Ampezzo is route-specific. Starts include Rifugio Auronzo, Bai de Dones and Passo Tre Croci. A Dolomites point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Cortina d’Ampezzo weather, closures and seasonal services against the linked authority. Keep one of the listed Cortina d’Ampezzo alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "cortina-authority",
         "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",

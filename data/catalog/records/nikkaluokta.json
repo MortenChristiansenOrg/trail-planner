@@ -100,7 +100,7 @@
       "domain": "destination-core",
       "subjectKey": "nikkaluokta",
       "field": "guide.terrain",
-      "value": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine. The published Nikkaluokta walks move through that structure in distinct ways. “Nikkaluokta to Kebnekaise Mountain Station” is the shortest listed option at about 7 hours from Nikkaluokta mountain centre; “Kebnekaise Western Route” is the largest commitment at about 14 hours. On Kebnekaise massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine. The published Nikkaluokta walks move through that structure in distinct ways. “Nikkaluokta to Kebnekaise Mountain Station” and “Tarfala Valley” are the shortest listed options at about 7 hours; “Kebnekaise Western Route” is the largest commitment at about 14 hours. On Kebnekaise massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "nikkaluokta-authority",
         "url": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
@@ -115,7 +115,7 @@
       "domain": "destination-core",
       "subjectKey": "nikkaluokta",
       "field": "guide.expectations",
-      "value": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. Access around Nikkaluokta is route-specific: starts include Nikkaluokta mountain centre, Kebnekaise mountain station and Kebnekaise mountain station. A Kebnekaise massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Nikkaluokta weather, closures and seasonal services against the linked authority. Keep one of the listed Nikkaluokta alternatives available when the principal route is unsuitable.",
+      "value": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. Access around Nikkaluokta is route-specific. Starts include Nikkaluokta mountain centre and Kebnekaise mountain station. A Kebnekaise massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Nikkaluokta weather, closures and seasonal services against the linked authority. Keep one of the listed Nikkaluokta alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "nikkaluokta-authority",
         "url": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",

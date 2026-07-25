@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "zakopane",
       "field": "guide.terrain",
-      "value": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests. The published Zakopane walks move through that structure in distinct ways. “Morskie Oko” is the shortest listed option at about 5 hours from Palenica Białczańska; “Orla Perć from Zawrat to Krzyżne” is the largest commitment at about 10 hours. On High Tatras terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests. The published Zakopane walks move through that structure in distinct ways. “Morskie Oko” and “Kasprowy Wierch to Hala Gąsienicowa” are the shortest listed options at about 5 hours; “Orla Perć from Zawrat to Krzyżne” is the largest commitment at about 10 hours. On High Tatras terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "zakopane-authority",
         "url": "https://tpn.gov.pl/zwiedzaj",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "zakopane",
       "field": "guide.expectations",
-      "value": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. Access around Zakopane is route-specific: starts include Palenica Białczańska, Kasprowy Wierch cable-car station and Kuźnice. A High Tatras point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zakopane weather, closures and seasonal services against the linked authority. Keep one of the listed Zakopane alternatives available when the principal route is unsuitable.",
+      "value": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. Access around Zakopane is route-specific. Starts include Palenica Białczańska, Kasprowy Wierch cable-car station and Kuźnice. A High Tatras point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zakopane weather, closures and seasonal services against the linked authority. Keep one of the listed Zakopane alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "zakopane-authority",
         "url": "https://tpn.gov.pl/zwiedzaj",

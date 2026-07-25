@@ -112,6 +112,12 @@ export async function compileCatalog({
   recordOverrides = new Map(),
 } = {}) {
   const expectations = JSON.parse(await readFile(expectationsPath, "utf8"));
+  if (
+    !Number.isSafeInteger(expectations?.minimumVisibleDestinations) ||
+    expectations.minimumVisibleDestinations < 0
+  ) {
+    throw new Error("data/catalog/expectations.json minimumVisibleDestinations must be a non-negative safe integer");
+  }
   const filenames = [...new Set([
     ...(await readdir(recordsDirectory)).filter((filename) => filename.endsWith(".json")),
     ...recordOverrides.keys(),

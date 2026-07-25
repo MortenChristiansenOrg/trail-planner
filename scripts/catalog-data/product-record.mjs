@@ -81,6 +81,9 @@ function durationBand(hike) {
 
 function validateHike(hike, claim, errors) {
   const prefix = `hike ${claim.subjectKey}`;
+  if (typeof claim.retrievedAt !== "string" || !/^\d{4}-\d{2}-\d{2}T/u.test(claim.retrievedAt)) {
+    errors.push(`${prefix} retrievedAt must be an ISO timestamp`);
+  }
   if (!hike || typeof hike !== "object") {
     errors.push(`${prefix} must be an object`);
     return;

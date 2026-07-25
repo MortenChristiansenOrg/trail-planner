@@ -422,18 +422,22 @@ export const synchronize = internalAction({
       expectedCoverage: artifact.expected.coverage,
       artifactHash: artifact.artifactHash,
     });
-    const prunableVersions = await ctx.runQuery(
-      internal.ingest.catalogSync.versionsToPrune,
-      {},
-    );
-    for (const catalogVersion of prunableVersions) {
-      let done = false;
-      while (!done) {
-        ({ done } = await ctx.runMutation(
-          internal.ingest.catalogSync.pruneVersionBatch,
-          { catalogVersion },
-        ));
+    try {
+      const prunableVersions = await ctx.runQuery(
+        internal.ingest.catalogSync.versionsToPrune,
+        {},
+      );
+      for (const catalogVersion of prunableVersions) {
+        let done = false;
+        while (!done) {
+          ({ done } = await ctx.runMutation(
+            internal.ingest.catalogSync.pruneVersionBatch,
+            { catalogVersion },
+          ));
+        }
       }
+    } catch (error) {
+      console.error("Catalog version pruning failed after successful activation", error);
     }
     return { status: "activated", coverage: artifact.expected.coverage, ...activated };
   },

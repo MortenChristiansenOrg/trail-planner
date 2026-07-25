@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "chamonix",
       "field": "guide.terrain",
-      "value": "Enormous granite aiguilles and heavily crevassed glaciers rise above larch forest, alpine pasture and moraine; maintained balcony paths contrast with steep rocky approaches and high-mountain terrain. The published Chamonix walks move through that structure in distinct ways. “Mer de Glace via Montenvers” is the shortest listed option at about 3 hours from Montenvers railway station; “Grand Balcon Sud” is the largest commitment at about 6 hours. On Mont Blanc massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Enormous granite aiguilles and heavily crevassed glaciers rise above larch forest, alpine pasture and moraine; maintained balcony paths contrast with steep rocky approaches and high-mountain terrain. The published Chamonix walks move through that structure in distinct ways. “Mer de Glace via Montenvers” and “Tour du Mont Blanc to Les Houches” are the shortest listed options at about 3 hours; “Grand Balcon Sud” is the largest commitment at about 6 hours. On Mont Blanc massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "chamonix-authority",
         "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "chamonix",
       "field": "guide.expectations",
-      "value": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment. Access around Chamonix is route-specific: starts include La Flégère lift station, Montenvers railway station and Planpraz lift station. A Mont Blanc massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Chamonix weather, closures and seasonal services against the linked authority. Keep one of the listed Chamonix alternatives available when the principal route is unsuitable.",
+      "value": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment. Access around Chamonix is route-specific. Starts include La Flégère lift station, Montenvers railway station and Planpraz lift station. A Mont Blanc massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Chamonix weather, closures and seasonal services against the linked authority. Keep one of the listed Chamonix alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "chamonix-authority",
         "url": "https://en.chamonix.com/activities/hiking/hiking-trails",

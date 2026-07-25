@@ -100,7 +100,7 @@
       "domain": "destination-core",
       "subjectKey": "snowdonia",
       "field": "guide.terrain",
-      "value": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. The published Llanberis walks move through that structure in distinct ways. “Moel Eilio Circuit” is the shortest listed option at about 5 hours from Llanberis; “Glyderau Traverse” is the largest commitment at about 9 hours. On Eryri / Snowdonia terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. The published Llanberis walks move through that structure in distinct ways. “Moel Eilio Circuit” is the shortest listed option at about 5 hours; “Glyderau Traverse” is the largest commitment at about 9 hours. On Eryri / Snowdonia terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "snowdonia-authority",
         "url": "https://snowdonia.gov.wales/visit/walking/",
@@ -115,7 +115,7 @@
       "domain": "destination-core",
       "subjectKey": "snowdonia",
       "field": "guide.expectations",
-      "value": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. Access around Llanberis is route-specific: starts include Llanberis Path gate at Victoria Terrace, Pen-y-Pass and A5 lay-by at Milestone Buttress. A Eryri / Snowdonia point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Llanberis weather, closures and seasonal services against the linked authority. Keep one of the listed Llanberis alternatives available when the principal route is unsuitable.",
+      "value": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. Access around Llanberis is route-specific. Starts include Llanberis Path gate at Victoria Terrace, Pen-y-Pass and A5 lay-by at Milestone Buttress. A Eryri / Snowdonia point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Llanberis weather, closures and seasonal services against the linked authority. Keep one of the listed Llanberis alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "snowdonia-authority",
         "url": "https://snowdonia.gov.wales/visit/walking/",

@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "berchtesgaden",
       "field": "guide.terrain",
-      "value": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves. The published Berchtesgaden walks move through that structure in distinct ways. “Malerwinkel and Königssee” is the shortest listed option at about 1.5 hours from Königssee village; “Watzmannhaus” is the largest commitment at about 7 hours. On Bavarian Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves. The published Berchtesgaden walks move through that structure in distinct ways. “Malerwinkel and Königssee” is the shortest listed option at about 1.5 hours; “Watzmannhaus” is the largest commitment at about 7 hours. On Bavarian Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "berchtesgaden-authority",
         "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "berchtesgaden",
       "field": "guide.expectations",
-      "value": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. Access around Berchtesgaden is route-specific: starts include Königssee village, Hinterbrand car park and Wimbachbrücke. A Bavarian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Berchtesgaden weather, closures and seasonal services against the linked authority. Keep one of the listed Berchtesgaden alternatives available when the principal route is unsuitable.",
+      "value": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. Access around Berchtesgaden is route-specific. Starts include Königssee village, Hinterbrand car park and Wimbachbrücke. A Bavarian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Berchtesgaden weather, closures and seasonal services against the linked authority. Keep one of the listed Berchtesgaden alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "berchtesgaden-authority",
         "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",

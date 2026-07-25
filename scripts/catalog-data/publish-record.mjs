@@ -71,8 +71,16 @@ async function acquireLock(allowRecovery = true) {
       ? Date.parse(owner.acquiredAt)
       : Number.NaN;
     if (allowRecovery && Number.isFinite(acquiredAt) && Date.now() - acquiredAt > staleLockMs) {
-      await unlink(lockOwnerPath);
-      await rmdir(lockPath);
+      try {
+        await unlink(lockOwnerPath);
+        await rmdir(lockPath);
+      } catch (cleanupError) {
+        if (!(cleanupError instanceof Error && "code" in cleanupError && cleanupError.code === "ENOENT")) {
+          throw new Error(`Unable to recover stale catalog publication lock ${lockPath}`, {
+            cause: cleanupError,
+          });
+        }
+      }
       return await acquireLock(false);
     }
     const ownerDescription = Number.isInteger(owner?.pid) && typeof owner?.acquiredAt === "string"

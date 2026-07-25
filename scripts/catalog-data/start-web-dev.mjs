@@ -18,7 +18,7 @@ const convexUrl = localEnvironment.CONVEX_URL;
 if (!convexUrl) throw new Error("CONVEX_URL is missing from the local Convex environment");
 
 const child = spawn(
-  "pnpm",
+  process.platform === "win32" ? "pnpm.cmd" : "pnpm",
   ["--filter", "@trail-planner/web", "exec", "vite"],
   {
     stdio: "inherit",
