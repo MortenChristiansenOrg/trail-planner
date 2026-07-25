@@ -12,10 +12,16 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { useUser } from "@clerk/react";
 import { useConvexAuth, useMutation, useQuery } from "convex/react";
 import { api } from "../../../../../convex/_generated/api";
+import {
+  preferencesAreAnonymous,
+  preferencesBelongToAccount,
+} from "./preferenceOwnership";
 
 export const preferenceStorageKey = "trail-planner:preferences:v1";
+const preferenceOwnerStorageKey = "trail-planner:preferences:owner:v1";
 
 type PreferencesSession = {
   preferences: UserPreferences | null;
@@ -35,7 +41,7 @@ export function PreviewPreferencesProvider({
   const [preferences, setPreferences] = useState(loadLocalPreferences);
 
   const save = async (next: UserPreferences) => {
-    writeLocalPreferences(next);
+    writeAnonymousPreferences(next);
     setPreferences(next);
   };
 
@@ -59,6 +65,8 @@ export function ConfiguredPreferencesProvider({
 }: {
   children: ReactNode;
 }) {
+  const { user, isLoaded: userLoaded } = useUser();
+  const userId = user?.id;
   const { isAuthenticated, isLoading } = useConvexAuth();
   const remote = useQuery(
     api.preferences.current,
@@ -66,54 +74,95 @@ export function ConfiguredPreferencesProvider({
   );
   const upsert = useMutation(api.preferences.upsert);
   const [local, setLocal] = useState(loadLocalPreferences);
-  const [merged, setMerged] = useState(false);
-  const merging = useRef(false);
+  const [localOwnerId, setLocalOwnerId] = useState(loadLocalPreferenceOwner);
+  const [mergedUserId, setMergedUserId] = useState<string | null>(null);
+  const activeUserId = useRef(userId);
+  const mergingUserId = useRef<string | null>(null);
+
+  useEffect(() => {
+    activeUserId.current = userId;
+  }, [userId]);
 
   useEffect(() => {
     if (
       !isAuthenticated ||
+      !userId ||
       remote !== null ||
       !local ||
-      merging.current
+      !preferencesBelongToAccount(localOwnerId, userId) ||
+      mergingUserId.current
     ) {
       return;
     }
-    merging.current = true;
+    if (preferencesAreAnonymous(localOwnerId)) {
+      claimLocalPreferences(userId);
+      setLocalOwnerId(userId);
+    }
+    mergingUserId.current = userId;
     void upsert(local)
-      .then(() => setMerged(true))
+      .then(() => {
+        if (activeUserId.current !== userId) return;
+        clearLocalPreferences();
+        setLocal(null);
+        setLocalOwnerId(null);
+        setMergedUserId(userId);
+      })
       .catch((error: unknown) => {
         console.warn("Unable to merge browser preferences into the account", error);
       })
       .finally(() => {
-        merging.current = false;
+        if (mergingUserId.current === userId) {
+          mergingUserId.current = null;
+        }
       });
-  }, [isAuthenticated, local, remote, upsert]);
+  }, [isAuthenticated, local, localOwnerId, remote, upsert, userId]);
 
   const normalizedRemote = normalizePreferences(remote);
   useEffect(() => {
     const next = normalizePreferences(remote);
-    if (!next) return;
-    writeLocalPreferences(next);
-    setLocal((current) =>
-      JSON.stringify(current) === JSON.stringify(next) ? current : next,
-    );
-  }, [remote]);
+    if (
+      !next ||
+      !userId ||
+      !local ||
+      !preferencesBelongToAccount(localOwnerId, userId)
+    ) {
+      return;
+    }
+    clearLocalPreferences();
+    setLocal(null);
+    setLocalOwnerId(null);
+  }, [local, localOwnerId, remote, userId]);
 
   const save = async (next: UserPreferences) => {
-    writeLocalPreferences(next);
+    if (isAuthenticated && userId) {
+      await upsert(next);
+      return;
+    }
+    writeAnonymousPreferences(next);
+    setLocalOwnerId(null);
     setLocal(next);
-    if (isAuthenticated) await upsert(next);
   };
-  const ready = !isLoading && (!isAuthenticated || remote !== undefined);
+  const localForAccount =
+    userId && preferencesBelongToAccount(localOwnerId, userId)
+      ? local
+      : null;
+  const ready =
+    userLoaded &&
+    !isLoading &&
+    (!isAuthenticated || (Boolean(userId) && remote !== undefined));
 
   return (
     <PreferencesContext
       value={{
-        preferences: isAuthenticated ? normalizedRemote ?? local : local,
+        preferences: isAuthenticated
+          ? normalizedRemote ?? localForAccount
+          : preferencesAreAnonymous(localOwnerId)
+            ? local
+            : null,
         ready,
         save,
         storage: isAuthenticated ? "account" : "anonymous",
-        mergedAnonymousPreferences: merged,
+        mergedAnonymousPreferences: mergedUserId === userId,
       }}
     >
       {children}
@@ -137,8 +186,23 @@ function loadLocalPreferences(): UserPreferences | null {
   }
 }
 
-function writeLocalPreferences(preferences: UserPreferences) {
+function writeAnonymousPreferences(preferences: UserPreferences) {
   window.localStorage.setItem(preferenceStorageKey, JSON.stringify(preferences));
+  window.localStorage.removeItem(preferenceOwnerStorageKey);
+}
+
+function loadLocalPreferenceOwner() {
+  if (typeof window === "undefined") return null;
+  return window.localStorage.getItem(preferenceOwnerStorageKey);
+}
+
+function claimLocalPreferences(userId: string) {
+  window.localStorage.setItem(preferenceOwnerStorageKey, userId);
+}
+
+function clearLocalPreferences() {
+  window.localStorage.removeItem(preferenceStorageKey);
+  window.localStorage.removeItem(preferenceOwnerStorageKey);
 }
 
 function normalizePreferences(value: unknown): UserPreferences | null {

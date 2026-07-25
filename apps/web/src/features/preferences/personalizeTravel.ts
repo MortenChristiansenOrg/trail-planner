@@ -83,7 +83,7 @@ function personalizeEstimate(
   const defaultEnergyDkk = calculateCarCost(
     baselineDistanceKm,
     defaultVehicleProfile,
-  ).totalDkk;
+  ).components.find(({ kind }) => kind === "energy")?.amountDkk ?? 0;
   const catalogFixedDkk = Math.max(
     0,
     estimate.costPerPersonDkk - defaultEnergyDkk,

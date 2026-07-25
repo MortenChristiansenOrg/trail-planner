@@ -61,6 +61,9 @@ describe("personalized travel", () => {
         expect.objectContaining({ kind: "ferries" }),
       ]),
     );
+    expect(expensive.costBreakdown?.components).toContainEqual(
+      expect.objectContaining({ kind: "ferries", amountDkk: 1_280 }),
+    );
   });
 
   test("uses group pricing for a car", () => {

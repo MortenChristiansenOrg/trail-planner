@@ -20,6 +20,9 @@ export function useDrivingRoute(
   preferences: UserPreferences | null,
 ) {
   const origin = preferences?.homeCity;
+  const originLongitude = origin?.coordinates[0];
+  const originLatitude = origin?.coordinates[1];
+  const originName = origin?.name;
   const useCatalogRoute = origin?.key === "aalborg";
   const routeViaSouthernDenmark =
     useCatalogRoute && viaSouthernDenmark;
@@ -32,10 +35,19 @@ export function useDrivingRoute(
   });
 
   useEffect(() => {
-    if (!destination || !origin) return;
+    if (
+      !destination ||
+      originLongitude === undefined ||
+      originLatitude === undefined ||
+      !originName
+    ) return;
     const cached = routeCache.get(key);
     if (cached) {
-      setResult({ key, route: cached });
+      setResult((previous) =>
+        previous.key === key && previous.route === cached
+          ? previous
+          : { key, route: cached },
+      );
       return;
     }
 
@@ -55,12 +67,12 @@ export function useDrivingRoute(
             label: `${part.kind === "ferry" ? "Ferry" : "Drive"}: ${part.origin.name} to ${part.destination.name}`,
             styleMode: part.kind,
           })),
-          label: ferry ? `${ferry.service} · arrive 1h before departure` : `Catalog driving route from ${origin.name}`,
+          label: ferry ? `${ferry.service} · arrive 1h before departure` : `Catalog driving route from ${originName}`,
         };
       })
-      : loadRoadRoute(drivingRoutePoints(origin.coordinates, destination, routeViaSouthernDenmark), controller.signal).then((route): ExploreRoute => ({
-        lines: [{ id: "journey", kind: "journey", coordinates: route.coordinates, label: `OSRM driving route from ${origin.name}`, styleMode: "car" }],
-        label: `OSRM driving route from ${origin.name}`,
+      : loadRoadRoute(drivingRoutePoints([originLongitude, originLatitude], destination, routeViaSouthernDenmark), controller.signal).then((route): ExploreRoute => ({
+        lines: [{ id: "journey", kind: "journey", coordinates: route.coordinates, label: `OSRM driving route from ${originName}`, styleMode: "car" }],
+        label: `OSRM driving route from ${originName}`,
       }));
     void request
       .then((route) => {
@@ -78,7 +90,9 @@ export function useDrivingRoute(
     destination,
     destinationId,
     key,
-    origin,
+    originLatitude,
+    originLongitude,
+    originName,
     routeViaSouthernDenmark,
     useCatalogRoute,
   ]);
