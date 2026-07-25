@@ -361,7 +361,7 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
   const unavailableTrain = details.locator(".detail-travel-list > div").filter({ hasText: "Train + bus" });
   await expect(unavailableTrain).toContainText("Unavailable");
   await expect(unavailableTrain.getByRole("button", { name: "View stages" })).toHaveCount(0);
-  await details.getByRole("button", { name: "Photo credit" }).click();
+  await details.getByText("Photo credit").click();
   await expect(details.getByText("Landmannalaugar.jpeg by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
   await details.getByAltText("Fjallabak Highlands mountain landscape seen from the Landmannalaugar hiking area").evaluate((image) => {
     image.removeAttribute("srcset");
