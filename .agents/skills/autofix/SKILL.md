@@ -21,7 +21,7 @@ Check `git status` and unpushed commits:
 
 - Preserve unrelated user changes and never include them in the autofix commit.
 - If relevant uncommitted changes overlap a finding, evaluate the current working tree and edit carefully without discarding those changes.
-- If commits are unpushed, push them, report that CodeRabbit must review the new state, and stop this run.
+- If pre-existing commits are unpushed, stop and report them. Never publish commits that were not created by this autofix run.
 
 Resolve the current branch’s open PR:
 
@@ -108,12 +108,17 @@ If no valid changes were needed, skip commit and push.
 ## Commit and push
 
 Stage only files changed for accepted CodeRabbit findings and their tests.
+Record that path allowlist, compare it with `git diff --cached --name-only`, and
+stop if the autofix paths include anything unrelated to an accepted finding or
+its validation. Preserve any pre-existing staged paths by committing only the
+allowlisted autofix paths.
 
 Create one consolidated commit:
 
 ```bash
-git commit -m "fix: apply CodeRabbit review fixes"
-git push
+git add -- <autofix-paths>
+git commit --only -m "fix: apply CodeRabbit review fixes" -- <autofix-paths>
+git push origin HEAD
 ```
 
 Do not ask the user to commit or push.

@@ -137,6 +137,9 @@ describe("provider-independent travel totals", () => {
     expect(() => deriveTravelOptionTotals({ ...base, costComponents: [...base.costComponents, { id: "unused", label: "Unused", amount: { amount: 1, currency: "DKK" }, source: "test" }] })).toThrow(/not referenced/);
     expect(() => deriveTravelOptionTotals({ ...base, costComponents: [], outbound: { ...base.outbound, stages: base.outbound.stages.map((stage) => ({ ...stage, costComponentIds: [] })) }, return: { ...base.return, stages: base.return.stages.map((stage) => ({ ...stage, costComponentIds: [] })) } })).toThrow(/explicit cost component/);
     expect(() => deriveTravelOptionTotals({ ...base, reportedLayovers: { outbound: 1.5, return: 0 } })).toThrow(/layovers/);
+    for (const reportedLayovers of [null, false, 0, ""]) {
+      expect(() => deriveTravelOptionTotals({ ...base, reportedLayovers } as unknown as TravelOptionSnapshot)).toThrow(/layovers/);
+    }
   });
 
   it("uses reported aggregate layovers when individual flight stages are not stored", () => {

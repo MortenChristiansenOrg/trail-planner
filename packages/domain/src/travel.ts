@@ -181,11 +181,13 @@ export function deriveTravelOptionTotals(option: TravelOptionSnapshot) {
     const derivedCurrency = option.costComponents[0]?.amount.currency;
     if (option.providerTotals.cost.currency !== derivedCurrency) throw new Error("Provider and derived travel costs must use one currency");
   }
-  if (option.reportedLayovers && (
-    !Number.isInteger(option.reportedLayovers.outbound) ||
-    option.reportedLayovers.outbound < 0 ||
-    !Number.isInteger(option.reportedLayovers.return) ||
-    option.reportedLayovers.return < 0
+  const reportedLayovers = option.reportedLayovers;
+  if (reportedLayovers !== undefined && (
+    !reportedLayovers ||
+    !Number.isInteger(reportedLayovers.outbound) ||
+    reportedLayovers.outbound < 0 ||
+    !Number.isInteger(reportedLayovers.return) ||
+    reportedLayovers.return < 0
   )) throw new Error("Reported travel layovers must be non-negative integers");
   if (!retrievedAtPattern.test(option.retrievedAt) || !hasValidCalendarDate(option.retrievedAt) || !Number.isFinite(Date.parse(option.retrievedAt))) throw new Error("Travel option retrieval time is invalid");
   const countLayovers = (journey: TravelJourney) => journey.stages.filter((stage) => stage.kind === "transfer" && stage.transferType === "layover").length;
