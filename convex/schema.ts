@@ -53,6 +53,11 @@ export default defineSchema({
       consumptionPer100Km: v.number(),
       energyPricePerUnit: v.number(),
       costPerKmOverrideDkk: v.optional(v.number()),
+      // Deprecated storage-only fields retained so existing preference
+      // documents remain valid. New writes replace the vehicle without them.
+      tollsDkk: v.optional(v.number()),
+      ferriesDkk: v.optional(v.number()),
+      parkingDkk: v.optional(v.number()),
       chargingPlan: v.optional(
         v.object({
           name: v.string(),

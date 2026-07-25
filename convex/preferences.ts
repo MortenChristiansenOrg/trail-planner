@@ -167,7 +167,21 @@ export const current = query({
     return {
       version: preferences.version,
       homeCity: preferences.homeCity,
-      vehicle: preferences.vehicle,
+      vehicle: {
+        version: preferences.vehicle.version,
+        powertrain: preferences.vehicle.powertrain,
+        consumptionPer100Km: preferences.vehicle.consumptionPer100Km,
+        energyPricePerUnit: preferences.vehicle.energyPricePerUnit,
+        ...(preferences.vehicle.costPerKmOverrideDkk === undefined
+          ? {}
+          : {
+              costPerKmOverrideDkk:
+                preferences.vehicle.costPerKmOverrideDkk,
+            }),
+        ...(preferences.vehicle.chargingPlan === undefined
+          ? {}
+          : { chargingPlan: preferences.vehicle.chargingPlan }),
+      },
     };
   },
 });
