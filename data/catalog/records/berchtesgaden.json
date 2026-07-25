@@ -26,7 +26,7 @@
       "value": "Germany",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A compact alpine valley around Königssee with well-developed trail and hut access.",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Steep limestone walls, forested approaches and high routes overlooking the lake.",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "berchtesgaden",
       "field": "guide.highlights",
-      "value": "Berchtesgaden combines Königssee, Jenner, Watzmann and a protected national-park landscape with historic huts and lake transport. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Berchtesgaden combines Königssee, Jenner, Watzmann and a protected national-park landscape with historic huts and lake transport. The Berchtesgaden route set makes those qualities concrete: “Malerwinkel and Königssee” and “Jenner Summit” define different headline days, while “Watzmannhaus” offers another scale of outing. “Obersee and Röthbach Waterfall” and “Grünstein” extend the choice beyond one famous objective. Together, these Bavarian Alps walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Berchtesgaden.",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "berchtesgaden",
       "field": "guide.terrain",
-      "value": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves. The published Berchtesgaden walks move through that structure in distinct ways. “Malerwinkel and Königssee” is the shortest listed option at about 1.5 hours from Königssee village; “Watzmannhaus” is the largest commitment at about 7 hours. On Bavarian Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "berchtesgaden",
       "field": "guide.expectations",
-      "value": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. Access around Berchtesgaden is route-specific: starts include Königssee village, Hinterbrand car park and Wimbachbrücke. A Bavarian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Berchtesgaden weather, closures and seasonal services against the linked authority. Keep one of the listed Berchtesgaden alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -138,7 +138,7 @@
       ],
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -184,11 +184,11 @@
         "key": "berchtesgaden-malerwinkel-and-konigssee",
         "name": "Malerwinkel and Königssee",
         "routeType": "loop",
-        "description": "Malerwinkel and Königssee represents a short landscape or viewpoint walk from the Berchtesgaden catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Malerwinkel and Königssee loops through lakeside woodland to Malerwinkel's classic framed view over Königssee.",
         "difficulty": "Easy",
-        "durationHours": 2.5,
+        "durationHours": 1.5,
         "durationDays": 1,
-        "trailhead": "Berchtesgaden area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Königssee village",
         "recommendedMonths": [
           5,
           6,
@@ -200,13 +200,13 @@
       },
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -216,11 +216,11 @@
         "key": "berchtesgaden-jenner-summit",
         "name": "Jenner Summit",
         "routeType": "out-and-back",
-        "description": "Jenner Summit represents a half-day valley, lake or lower-summit route from the Berchtesgaden catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Jenner Summit climbs forest and pasture paths to Jenner; using the cable car changes both time and ascent.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Berchtesgaden area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hinterbrand car park",
         "recommendedMonths": [
           5,
           6,
@@ -232,13 +232,13 @@
       },
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -247,12 +247,12 @@
       "value": {
         "key": "berchtesgaden-watzmannhaus",
         "name": "Watzmannhaus",
-        "routeType": "loop",
-        "description": "Watzmannhaus represents a substantial circuit with varied terrain from the Berchtesgaden catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Watzmannhaus follows the Watzmann approach through forest and alpine pasture to Watzmannhaus beneath the east face.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Berchtesgaden area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Wimbachbrücke",
         "recommendedMonths": [
           5,
           6,
@@ -264,13 +264,13 @@
       },
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -279,12 +279,12 @@
       "value": {
         "key": "berchtesgaden-obersee-and-rothbach-waterfall",
         "name": "Obersee and Röthbach Waterfall",
-        "routeType": "point-to-point",
-        "description": "Obersee and Röthbach Waterfall represents a long ridge, summit or through-route from the Berchtesgaden catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "routeType": "out-and-back",
+        "description": "Obersee and Röthbach Waterfall walks beside Obersee to Fischunkelalm and the lower Röthbach waterfall viewpoint, timed around the Königssee boat.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
         "durationDays": 1,
-        "trailhead": "Berchtesgaden area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Salet boat landing",
         "recommendedMonths": [
           5,
           6,
@@ -296,13 +296,13 @@
       },
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -311,12 +311,12 @@
       "value": {
         "key": "berchtesgaden-grunstein",
         "name": "Grünstein",
-        "routeType": "point-to-point",
-        "description": "Grünstein represents the area's most committing established mountain choice from the Berchtesgaden catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Grünstein ascends wooded slopes to Grünsteinhütte and the compact Grünstein summit above Königssee.",
+        "difficulty": "Moderate",
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Berchtesgaden area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hammerstiel trailhead",
         "recommendedMonths": [
           5,
           6,
@@ -328,7 +328,7 @@
       },
       "source": {
         "key": "berchtesgaden-authority",
-        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "url": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -470,7 +470,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

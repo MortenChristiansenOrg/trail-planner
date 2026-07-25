@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "akureyri",
       "field": "guide.highlights",
-      "value": "Akureyri is a full-service northern base for Súlur, Glerárdalur, Hlíðarfjall and day trips around Eyjafjörður and Tröllaskagi. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Akureyri is a full-service northern base for Súlur, Glerárdalur, Hlíðarfjall and day trips around Eyjafjörður and Tröllaskagi. The Akureyri route set makes those qualities concrete: “Súlur” and “Kjarnaskógur Forest Circuit” define different headline days, while “Hlíðarfjall” offers another scale of outing. “Glerárdalur” and “Kaldbakur” extend the choice beyond one famous objective. Together, these North Iceland walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Akureyri.",
       "source": {
         "key": "akureyri-authority",
         "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "akureyri",
       "field": "guide.terrain",
-      "value": "Long glacial valleys and layered basalt mountains rise from the fjord, with birch plantations, heath and snow-holding corries producing a softer profile than Iceland's central highlands. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Long glacial valleys and layered basalt mountains rise from the fjord, with birch plantations, heath and snow-holding corries producing a softer profile than Iceland's central highlands. The published Akureyri walks move through that structure in distinct ways. “Kjarnaskógur Forest Circuit” is the shortest listed option at about 2 hours from Kjarnaskógur visitor area; “Súlur” is the largest commitment at about 7.5 hours. On North Iceland terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "akureyri-authority",
         "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "akureyri",
       "field": "guide.expectations",
-      "value": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area. Access around Akureyri is route-specific: starts include Súlur trail parking in Glerárdalur, Kjarnaskógur visitor area and Hlíðarfjall ski-area base. A North Iceland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Akureyri weather, closures and seasonal services against the linked authority. Keep one of the listed Akureyri alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "akureyri-authority",
         "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
@@ -181,12 +181,12 @@
       "value": {
         "key": "akureyri-sulur",
         "name": "Súlur",
-        "routeType": "loop",
-        "description": "Súlur represents a short landscape or viewpoint walk from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Súlur climbs the long north ridge above Eyjafjörður to the higher Súlur summit, with steep scree near the top.",
+        "difficulty": "Hard",
+        "durationHours": 7.5,
         "durationDays": 1,
-        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Súlur trail parking in Glerárdalur",
         "recommendedMonths": [
           6,
           7,
@@ -202,7 +202,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -211,12 +211,12 @@
       "value": {
         "key": "akureyri-kjarnaskogur-forest-circuit",
         "name": "Kjarnaskógur Forest Circuit",
-        "routeType": "out-and-back",
-        "description": "Kjarnaskógur Forest Circuit represents a half-day valley, lake or lower-summit route from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "loop",
+        "description": "Kjarnaskógur Forest Circuit uses the marked woodland paths and viewpoints in Akureyri's recreational forest.",
+        "difficulty": "Easy",
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kjarnaskógur visitor area",
         "recommendedMonths": [
           6,
           7,
@@ -232,21 +232,21 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "akureyri-hliarfjall",
+      "subjectKey": "akureyri-hlidarfjall",
       "field": "hike",
       "value": {
-        "key": "akureyri-hliarfjall",
+        "key": "akureyri-hlidarfjall",
         "name": "Hlíðarfjall",
-        "routeType": "loop",
-        "description": "Hlíðarfjall represents a substantial circuit with varied terrain from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Hlíðarfjall ascends open ski slopes and fell ground for a panorama over Akureyri and Eyjafjörður.",
         "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hlíðarfjall ski-area base",
         "recommendedMonths": [
           6,
           7,
@@ -262,7 +262,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -271,12 +271,12 @@
       "value": {
         "key": "akureyri-glerardalur",
         "name": "Glerárdalur",
-        "routeType": "point-to-point",
-        "description": "Glerárdalur represents a long ridge, summit or through-route from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "routeType": "out-and-back",
+        "description": "Glerárdalur follows the Glerá into its long mountain valley, where bridges and side paths allow the turnaround to match conditions.",
+        "difficulty": "Moderate",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Glerárdalur trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -292,7 +292,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -301,12 +301,12 @@
       "value": {
         "key": "akureyri-kaldbakur",
         "name": "Kaldbakur",
-        "routeType": "point-to-point",
-        "description": "Kaldbakur represents the area's most committing established mountain choice from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Kaldbakur climbs Kaldbakur from the coast through heath and persistent snow patches to a broad fjord viewpoint.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Grenivík trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -437,7 +437,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

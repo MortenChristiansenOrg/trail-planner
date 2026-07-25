@@ -26,7 +26,7 @@
       "value": "Iceland",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A seasonal highland-bus trailhead among rhyolite ridges, lava fields and hot springs.",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Colourful volcanic terrain with exposed highland weather and river-crossing logistics on the access roads.",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "landmannalaugar",
       "field": "guide.highlights",
-      "value": "Landmannalaugar is the Laugavegur's northern trailhead and a rare meeting of rhyolite ridges, obsidian lava, geothermal ground and hot springs. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Landmannalaugar is the Laugavegur's northern trailhead and a rare meeting of rhyolite ridges, obsidian lava, geothermal ground and hot springs. The Landmannalaugar route set makes those qualities concrete: “Laugahraun Loop” and “Brennisteinsalda” define different headline days, while “Bláhnúkur” offers another scale of outing. “Suðurnámur” and “Laugavegur to Hrafntinnusker” extend the choice beyond one famous objective. Together, these Fjallabak Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Landmannalaugar.",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "landmannalaugar",
       "field": "guide.terrain",
-      "value": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly. The published Landmannalaugar walks move through that structure in distinct ways. “Laugahraun Loop” is the shortest listed option at about 2 hours from Landmannalaugar hut; “Laugavegur to Hrafntinnusker” is the largest commitment at about 7 hours. On Fjallabak Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "landmannalaugar",
       "field": "guide.expectations",
-      "value": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. Access around Landmannalaugar is route-specific: starts include Landmannalaugar hut, Landmannalaugar hut and Landmannalaugar hut. A Fjallabak Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Landmannalaugar weather, closures and seasonal services against the linked authority. Keep one of the listed Landmannalaugar alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -135,7 +135,7 @@
       ],
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -181,11 +181,11 @@
         "key": "landmannalaugar-laugahraun-loop",
         "name": "Laugahraun Loop",
         "routeType": "loop",
-        "description": "Laugahraun Loop represents a short landscape or viewpoint walk from the Landmannalaugar catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Laugahraun Loop circles the Laugahraun lava field through Grænagil and returns beside the geothermal area.",
         "difficulty": "Easy",
-        "durationHours": 2.5,
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Landmannalaugar area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Landmannalaugar hut",
         "recommendedMonths": [
           7,
           8,
@@ -194,13 +194,13 @@
       },
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -209,12 +209,12 @@
       "value": {
         "key": "landmannalaugar-brennisteinsalda",
         "name": "Brennisteinsalda",
-        "routeType": "out-and-back",
-        "description": "Brennisteinsalda represents a half-day valley, lake or lower-summit route from the Landmannalaugar catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "loop",
+        "description": "Brennisteinsalda climbs the sulphur-coloured Brennisteinsalda ridge and returns through lava and hot-spring valleys.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Landmannalaugar area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Landmannalaugar hut",
         "recommendedMonths": [
           7,
           8,
@@ -223,13 +223,13 @@
       },
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -239,11 +239,11 @@
         "key": "landmannalaugar-blahnukur",
         "name": "Bláhnúkur",
         "routeType": "loop",
-        "description": "Bláhnúkur represents a substantial circuit with varied terrain from the Landmannalaugar catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "description": "Bláhnúkur makes the steep ascent of dark Bláhnúkur before descending into Grænagil.",
+        "difficulty": "Hard",
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Landmannalaugar area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Landmannalaugar hut",
         "recommendedMonths": [
           7,
           8,
@@ -252,27 +252,27 @@
       },
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "landmannalaugar-suurnamur",
+      "subjectKey": "landmannalaugar-sudurnamur",
       "field": "hike",
       "value": {
-        "key": "landmannalaugar-suurnamur",
+        "key": "landmannalaugar-sudurnamur",
         "name": "Suðurnámur",
-        "routeType": "point-to-point",
-        "description": "Suðurnámur represents a long ridge, summit or through-route from the Landmannalaugar catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "loop",
+        "description": "Suðurnámur crosses the long Suðurnámur ridge for broad views of Fjallabak's rhyolite mountains.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Landmannalaugar area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Landmannalaugar hut",
         "recommendedMonths": [
           7,
           8,
@@ -281,13 +281,13 @@
       },
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -297,11 +297,11 @@
         "key": "landmannalaugar-laugavegur-to-hrafntinnusker",
         "name": "Laugavegur to Hrafntinnusker",
         "routeType": "point-to-point",
-        "description": "Laugavegur to Hrafntinnusker represents the area's most committing established mountain choice from the Landmannalaugar catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "description": "Laugavegur to Hrafntinnusker walks the first Laugavegur stage across exposed volcanic uplands to Hrafntinnusker hut.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Landmannalaugar area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Landmannalaugar hut",
         "recommendedMonths": [
           7,
           8,
@@ -310,7 +310,7 @@
       },
       "source": {
         "key": "landmannalaugar-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "url": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -431,7 +431,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {
@@ -452,7 +452,7 @@
       "domain": "travel-transit",
       "status": "partial",
       "reasons": [
-        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+        "No stable year-round public-transit journey to the highland trailhead was verified; access depends on seasonal highland coach operations."
       ]
     },
     {

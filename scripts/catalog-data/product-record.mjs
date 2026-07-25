@@ -19,7 +19,9 @@ export function wordCount(value) {
 }
 
 export function claimsFor(record, domain, field) {
-  return record.claims.filter((claim) => claim.domain === domain && (field === undefined || claim.field === field));
+  return Array.isArray(record?.claims)
+    ? record.claims.filter((claim) => claim?.domain === domain && (field === undefined || claim.field === field))
+    : [];
 }
 
 export function claimFor(record, domain, field) {
@@ -105,7 +107,7 @@ function validateHike(hike, claim, errors) {
 export function assessProductRecord(record) {
   const errors = [];
   const gaps = [];
-  const key = record.destination.key;
+  const key = record?.destination?.key ?? "";
   const aliasesClaim = claimFor(record, "destination-core", "aliases");
   const aliases = aliasesClaim?.value ?? [];
   if (!Array.isArray(aliases) || aliases.some((alias) => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(alias))) errors.push("destination-core.aliases must be kebab-case strings");
@@ -177,7 +179,9 @@ export function assessProductRecord(record) {
       provenance: {
         sourceKey: claim.source.key,
         sourceUrl: claim.source.url,
-        verifiedAt: claim.retrievedAt.slice(0, 10),
+        verifiedAt: typeof claim.retrievedAt === "string"
+          ? claim.retrievedAt.slice(0, 10)
+          : "",
         confidence: claim.confidence,
       },
     })),
@@ -191,7 +195,7 @@ export function assessProductRecord(record) {
 }
 
 export function validateVisibleProductRecord(record) {
-  if (record.destination.visibility !== "visible") return [];
+  if (record?.destination?.visibility !== "visible") return [];
   const assessment = assessProductRecord(record);
   return [
     ...assessment.errors,

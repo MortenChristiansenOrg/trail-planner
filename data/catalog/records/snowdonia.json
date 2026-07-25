@@ -85,7 +85,7 @@
       "domain": "destination-core",
       "subjectKey": "snowdonia",
       "field": "guide.highlights",
-      "value": "Llanberis sits below Yr Wyddfa and within reach of the Glyderau, Tryfan and quieter northern ridges of Eryri National Park. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Llanberis sits below Yr Wyddfa and within reach of the Glyderau, Tryfan and quieter northern ridges of Eryri National Park. The Llanberis route set makes those qualities concrete: “Yr Wyddfa via Llanberis Path” and “Pyg and Miners' Tracks Circuit” define different headline days, while “Tryfan North Ridge” offers another scale of outing. “Glyderau Traverse” and “Moel Eilio Circuit” extend the choice beyond one famous objective. Together, these Eryri / Snowdonia walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
       "source": {
         "key": "snowdonia-authority",
         "url": "https://snowdonia.gov.wales/visit/walking/",
@@ -100,7 +100,7 @@
       "domain": "destination-core",
       "subjectKey": "snowdonia",
       "field": "guide.terrain",
-      "value": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. The published Llanberis walks move through that structure in distinct ways. “Moel Eilio Circuit” is the shortest listed option at about 5 hours from Llanberis; “Glyderau Traverse” is the largest commitment at about 9 hours. On Eryri / Snowdonia terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "snowdonia-authority",
         "url": "https://snowdonia.gov.wales/visit/walking/",
@@ -115,7 +115,7 @@
       "domain": "destination-core",
       "subjectKey": "snowdonia",
       "field": "guide.expectations",
-      "value": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. Access around Llanberis is route-specific: starts include Llanberis Path gate at Victoria Terrace, Pen-y-Pass and A5 lay-by at Milestone Buttress. A Eryri / Snowdonia point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Llanberis weather, closures and seasonal services against the linked authority. Keep one of the listed Llanberis alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "snowdonia-authority",
         "url": "https://snowdonia.gov.wales/visit/walking/",
@@ -155,23 +155,23 @@
       "field": "hero",
       "value": {
         "imageUrl": "/catalog-media/snowdonia.jpg",
-        "assetSha256": "f3c0cb51424e65069eba9853b7ac9646d57728fdb8169925b303361630a44c92",
-        "width": 640,
-        "height": 428,
-        "alt": "Eryri / Snowdonia mountain landscape seen from the Llanberis hiking area",
+        "assetSha256": "44c433bd0fee7428a3766b5182af81f42f951ba63b23b36c9daecfe9c582f728",
+        "width": 4000,
+        "height": 1855,
+        "alt": "Nant Gwynant valley and mountain slopes in Eryri",
         "subject": "destination",
         "kind": "terrain",
-        "creator": "Alan Fryer",
+        "creator": "Takver",
         "license": "CC BY-SA 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-        "attributionText": "Mynyddoedd Eryri - Mountains of Snowdonia - geograph.org.uk - 530480.jpg by Alan Fryer · CC BY-SA 2.0",
-        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "attributionText": "Panorama- Nant Gwynant (21695404928).jpg by Takver · CC BY-SA 2.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
         "verifiedAt": "2026-07-25"
       },
       "source": {
         "key": "snowdonia-commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
         "kind": "open-data"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -186,12 +186,12 @@
       "value": {
         "key": "snowdonia-yr-wyddfa-via-llanberis-path",
         "name": "Yr Wyddfa via Llanberis Path",
-        "routeType": "loop",
-        "description": "Yr Wyddfa via Llanberis Path represents a short landscape or viewpoint walk from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Yr Wyddfa via Llanberis Path makes the longest gradual ascent of Yr Wyddfa from Llanberis, sharing the upper mountain with other routes.",
+        "difficulty": "Hard",
+        "durationHours": 6.5,
         "durationDays": 1,
-        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Llanberis Path gate at Victoria Terrace",
         "recommendedMonths": [
           4,
           5,
@@ -210,7 +210,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -219,12 +219,12 @@
       "value": {
         "key": "snowdonia-pyg-and-miners-tracks-circuit",
         "name": "Pyg and Miners' Tracks Circuit",
-        "routeType": "out-and-back",
-        "description": "Pyg and Miners' Tracks Circuit represents a half-day valley, lake or lower-summit route from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "loop",
+        "description": "Pyg and Miners' Tracks Circuit ascends the Pyg Track to Yr Wyddfa and returns by the Miners' Track around the glacial lakes.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Pen-y-Pass",
         "recommendedMonths": [
           4,
           5,
@@ -243,7 +243,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -252,12 +252,12 @@
       "value": {
         "key": "snowdonia-tryfan-north-ridge",
         "name": "Tryfan North Ridge",
-        "routeType": "loop",
-        "description": "Tryfan North Ridge represents a substantial circuit with varied terrain from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Tryfan North Ridge scrambles Tryfan's North Ridge on continuously hands-on and exposed terrain.",
+        "difficulty": "Expert",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "A5 lay-by at Milestone Buttress",
         "recommendedMonths": [
           4,
           5,
@@ -276,7 +276,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -286,11 +286,11 @@
         "key": "snowdonia-glyderau-traverse",
         "name": "Glyderau Traverse",
         "routeType": "point-to-point",
-        "description": "Glyderau Traverse represents a long ridge, summit or through-route from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "description": "Glyderau Traverse crosses Tryfan and the Glyderau toward Pen-y-Pass, combining scrambling, boulder fields and a transfer.",
+        "difficulty": "Expert",
+        "durationHours": 9,
         "durationDays": 1,
-        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Ogwen Cottage",
         "recommendedMonths": [
           4,
           5,
@@ -309,7 +309,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -318,12 +318,12 @@
       "value": {
         "key": "snowdonia-moel-eilio-circuit",
         "name": "Moel Eilio Circuit",
-        "routeType": "point-to-point",
-        "description": "Moel Eilio Circuit represents the area's most committing established mountain choice from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "loop",
+        "description": "Moel Eilio Circuit circles Moel Eilio, Foel Gron and Foel Goch on a quieter broad ridge above the village.",
+        "difficulty": "Hard",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Llanberis",
         "recommendedMonths": [
           4,
           5,
@@ -458,7 +458,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

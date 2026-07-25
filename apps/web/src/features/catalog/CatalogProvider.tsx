@@ -24,31 +24,42 @@ type CatalogContextValue = {
   destinations: Destination[];
   catalogVersion: string | null;
   ready: boolean;
-  detailKey: string | null;
-  detail: CatalogDestinationDetail | null | undefined;
-  requestDetail: (destinationKey: string | null) => void;
+  details: Record<string, CatalogDestinationDetail | null | undefined>;
+  requestDetail: (destinationKey: string) => void;
 };
 
 const CatalogContext = createContext<CatalogContextValue | null>(null);
 
 export function StaticCatalogProvider({ children }: { children: ReactNode }) {
-  const [detailKey, setDetailKey] = useState<string | null>(null);
-  const [detail, setDetail] = useState<CatalogDestinationDetail | null | undefined>();
+  const [requestedKeys, setRequestedKeys] = useState<string[]>([]);
+  const [details, setDetails] = useState<Record<string, CatalogDestinationDetail | null | undefined>>({});
 
   useEffect(() => {
     let cancelled = false;
-    if (!detailKey) {
-      setDetail(undefined);
-      return;
-    }
-    setDetail(undefined);
-    void loadStaticCatalogDetail(detailKey).then((value) => {
-      if (!cancelled) setDetail(value);
+    const missingKeys = requestedKeys.filter((key) => !(key in details));
+    if (!missingKeys.length) return;
+    void Promise.all(
+      missingKeys.map(async (key) => {
+        try {
+          return [key, await loadStaticCatalogDetail(key)] as const;
+        } catch (error) {
+          console.error(`Unable to load catalog detail for ${key}`, error);
+          return [key, null] as const;
+        }
+      }),
+    ).then((entries) => {
+      if (!cancelled) setDetails((current) => ({ ...current, ...Object.fromEntries(entries) }));
     });
     return () => {
       cancelled = true;
     };
-  }, [detailKey]);
+  }, [details, requestedKeys]);
+
+  const requestDetail = (destinationKey: string) => {
+    setRequestedKeys((current) =>
+      current.includes(destinationKey) ? current : [...current, destinationKey]
+    );
+  };
 
   return (
     <CatalogContext.Provider
@@ -56,9 +67,8 @@ export function StaticCatalogProvider({ children }: { children: ReactNode }) {
         destinations: staticDestinations,
         catalogVersion: staticCatalogVersion,
         ready: true,
-        detailKey,
-        detail,
-        requestDetail: setDetailKey,
+        details,
+        requestDetail,
       }}
     >
       {children}
@@ -67,29 +77,40 @@ export function StaticCatalogProvider({ children }: { children: ReactNode }) {
 }
 
 export function ConvexCatalogProvider({ children }: { children: ReactNode }) {
-  const [detailKey, setDetailKey] = useState<string | null>(null);
+  const [requestedKeys, setRequestedKeys] = useState<string[]>([]);
   const result = usePaginatedQuery(
     api.destinations.listExplore,
     {},
     { initialNumItems: 50 },
   );
-  const detail = useQuery(
-    api.destinations.detailByKey,
-    detailKey ? { destinationKey: detailKey } : "skip",
-  ) as CatalogDestinationDetail | null | undefined;
-  const page = result.results as unknown as CatalogDestinationDigest[];
+  const { loadMore, status } = result;
+  useEffect(() => {
+    if (status === "CanLoadMore") loadMore(50);
+  }, [loadMore, status]);
+  const queriedDetails = useQuery(
+    api.destinations.detailsByKeys,
+    requestedKeys.length ? { destinationKeys: requestedKeys } : "skip",
+  ) as (CatalogDestinationDetail | null)[] | undefined;
+  const details = Object.fromEntries(
+    requestedKeys.map((key, index) => [key, queriedDetails?.[index]]),
+  );
+  const page = result.results as CatalogDestinationDigest[];
   const destinations = page.map(destinationFromDigest);
   const catalogVersion = page[0]?.catalogVersion ?? null;
+  const requestDetail = (destinationKey: string) => {
+    setRequestedKeys((current) =>
+      current.includes(destinationKey) ? current : [...current, destinationKey]
+    );
+  };
 
   return (
     <CatalogContext.Provider
       value={{
         destinations,
         catalogVersion,
-        ready: result.status !== "LoadingFirstPage",
-        detailKey,
-        detail,
-        requestDetail: setDetailKey,
+        ready: status === "Exhausted",
+        details,
+        requestDetail,
       }}
     >
       {children}
@@ -115,6 +136,7 @@ export function useCatalogDestination(
   }, [destinationKey, loadDetail, requestDetail]);
   const destination = baseDestination ??
     catalog.destinations.find((item) => item.id === destinationKey);
-  if (!destination || catalog.detailKey !== destinationKey || !catalog.detail) return destination;
-  return destinationWithDetail(destination, catalog.detail);
+  const detail = destinationKey ? catalog.details[destinationKey] : undefined;
+  if (!destination || !detail) return destination;
+  return destinationWithDetail(destination, detail);
 }

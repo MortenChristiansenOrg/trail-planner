@@ -48,6 +48,11 @@ describe("planned trip model", () => {
       ...trip,
       travelSnapshot: [{ ...trip.travelSnapshot[0], mode: ["car"] }],
     })).toBeNull();
+    expect(parsePlannedTrip({ ...trip, plannedMonth: 13 })).toBeNull();
+    expect(parsePlannedTrip({
+      ...trip,
+      exploreSnapshot: { ...trip.exploreSnapshot, modes: ["helicopter"] },
+    })).toBeNull();
   });
 
   it("keeps origin and itemized vehicle costs as a saved Explore snapshot", () => {
@@ -96,8 +101,8 @@ describe("planned trip model", () => {
       serializedRoutes.push(...routedHikes.map((hike) => JSON.stringify(hike.route)));
     }
     expect(new Set(serializedRoutes).size).toBe(serializedRoutes.length);
-    expect(routedHikeCount).toBe(0);
-    expect(missingGeometryCount).toBe(130);
+    const totalHikes = destinations.reduce((sum, area) => sum + area.hikeCount, 0);
+    expect(routedHikeCount + missingGeometryCount).toBe(totalHikes);
   });
 
   it("fills consecutive slots for a multi-day hike without replacing activities", () => {

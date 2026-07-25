@@ -26,7 +26,7 @@
       "value": "Austria",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "An exceptionally connected city base with mountain routes beginning at the edge of town.",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.highlights",
-      "value": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The Innsbruck route set makes those qualities concrete: “Goetheweg on the Nordkette” and “Zirbenweg” define different headline days, while “Patscherkofel Summit” offers another scale of outing. “Hafelekar to Pfeishütte” and “Nockspitze” extend the choice beyond one famous objective. Together, these Tyrol walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Innsbruck.",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.terrain",
-      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 3 hours from Patscherkofel upper station; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.expectations",
-      "value": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific: starts include Hafelekar cable-car station, Patscherkofel upper station and Patscherkofel upper station. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -138,7 +138,7 @@
       ],
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -183,12 +183,12 @@
       "value": {
         "key": "innsbruck-goetheweg-on-the-nordkette",
         "name": "Goetheweg on the Nordkette",
-        "routeType": "loop",
-        "description": "Goetheweg on the Nordkette represents a short landscape or viewpoint walk from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "point-to-point",
+        "description": "Goetheweg on the Nordkette traverses the exposed Nordkette balcony to Pfeishütte on narrow limestone paths.",
+        "difficulty": "Hard",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hafelekar cable-car station",
         "recommendedMonths": [
           5,
           6,
@@ -200,13 +200,13 @@
       },
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -215,12 +215,12 @@
       "value": {
         "key": "innsbruck-zirbenweg",
         "name": "Zirbenweg",
-        "routeType": "out-and-back",
-        "description": "Zirbenweg represents a half-day valley, lake or lower-summit route from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "point-to-point",
+        "description": "Zirbenweg follows the high pine balcony to Tulfeinalm and the Glungezer lift system.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Patscherkofel upper station",
         "recommendedMonths": [
           5,
           6,
@@ -232,13 +232,13 @@
       },
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -247,12 +247,12 @@
       "value": {
         "key": "innsbruck-patscherkofel-summit",
         "name": "Patscherkofel Summit",
-        "routeType": "loop",
-        "description": "Patscherkofel Summit represents a substantial circuit with varied terrain from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Patscherkofel Summit climbs the broad signed path above the tree line to the Patscherkofel summit.",
         "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Patscherkofel upper station",
         "recommendedMonths": [
           5,
           6,
@@ -264,13 +264,13 @@
       },
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -280,11 +280,11 @@
         "key": "innsbruck-hafelekar-to-pfeishutte",
         "name": "Hafelekar to Pfeishütte",
         "routeType": "point-to-point",
-        "description": "Hafelekar to Pfeishütte represents a long ridge, summit or through-route from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Hafelekar to Pfeishütte uses the Goetheweg and Mandlscharte approach to reach Pfeishütte, with a separate valley descent or return needed.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hafelekar cable-car station",
         "recommendedMonths": [
           5,
           6,
@@ -296,13 +296,13 @@
       },
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -311,12 +311,12 @@
       "value": {
         "key": "innsbruck-nockspitze",
         "name": "Nockspitze",
-        "routeType": "point-to-point",
-        "description": "Nockspitze represents the area's most committing established mountain choice from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Nockspitze ascends the steep south side of Nockspitze for a high viewpoint above the Inn valley.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Axamer Lizum",
         "recommendedMonths": [
           5,
           6,
@@ -328,7 +328,7 @@
       },
       "source": {
         "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "url": "https://www.innsbruck.info/en/hiking.html",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -450,7 +450,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

@@ -26,7 +26,7 @@
       "value": "Norway",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -43,7 +43,7 @@
       ],
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -58,7 +58,7 @@
       "value": "A fjord town with access to long viewpoint hikes, glaciers and plateau terrain.",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -73,7 +73,7 @@
       "value": "Big vertical relief, waterfalls and long days where weather and shuttle timing matter.",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -85,10 +85,10 @@
       "domain": "destination-core",
       "subjectKey": "hardanger",
       "field": "guide.highlights",
-      "value": "Odda links the Sørfjord with Trolltunga, the Queen's Trail, Bondhusdalen and glacier-carved valleys around Folgefonna. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Odda links the Sørfjord with Trolltunga, the Queen's Trail, Bondhusdalen and glacier-carved valleys around Folgefonna. The Odda route set makes those qualities concrete: “Trolltunga” and “HM Queen Sonja's Panoramic Hiking Trail” define different headline days, while “Bondhusvatnet” offers another scale of outing. “Rossnos” and “Buerbreen Viewpoint” extend the choice beyond one famous objective. Together, these Hardanger walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Odda.",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -100,10 +100,10 @@
       "domain": "destination-core",
       "subjectKey": "hardanger",
       "field": "guide.terrain",
-      "value": "Granite shelves, long rock slabs and high plateaus rise above orchard country and narrow fjords, with waterfalls, glacial lakes and ice visible on several approaches. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Granite shelves, long rock slabs and high plateaus rise above orchard country and narrow fjords, with waterfalls, glacial lakes and ice visible on several approaches. The published Odda walks move through that structure in distinct ways. “Bondhusvatnet” is the shortest listed option at about 3 hours from Bondhus trailhead at Sundal; “Trolltunga” is the largest commitment at about 10 hours. On Hardanger terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -115,10 +115,10 @@
       "domain": "destination-core",
       "subjectKey": "hardanger",
       "field": "guide.expectations",
-      "value": "The area offers easy valley walks as well as exceptionally long summit days; trail buses and booked parking help access, but popular objectives require early planning and conservative weather decisions. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The area offers easy valley walks as well as exceptionally long summit days; trail buses and booked parking help access, but popular objectives require early planning and conservative weather decisions. Access around Odda is route-specific: starts include P2 Skjeggedal, Røte trailhead above Kinsarvik and Bondhus trailhead at Sundal. A Hardanger point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Odda weather, closures and seasonal services against the linked authority. Keep one of the listed Odda alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -138,7 +138,7 @@
       ],
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -183,12 +183,12 @@
       "value": {
         "key": "hardanger-trolltunga",
         "name": "Trolltunga",
-        "routeType": "loop",
-        "description": "Trolltunga represents a short landscape or viewpoint walk from the Odda catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Trolltunga makes the long signed ascent across the Hardangervidda edge to Trolltunga; alternative parking and shuttles change the total distance.",
+        "difficulty": "Hard",
+        "durationHours": 10,
         "durationDays": 1,
-        "trailhead": "Odda area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "P2 Skjeggedal",
         "recommendedMonths": [
           6,
           7,
@@ -198,13 +198,13 @@
       },
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -213,12 +213,12 @@
       "value": {
         "key": "hardanger-hm-queen-sonjas-panoramic-hiking-trail",
         "name": "HM Queen Sonja's Panoramic Hiking Trail",
-        "routeType": "out-and-back",
-        "description": "HM Queen Sonja's Panoramic Hiking Trail represents a half-day valley, lake or lower-summit route from the Odda catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "point-to-point",
+        "description": "HM Queen Sonja's Panoramic Hiking Trail traverses the exposed high route to Lofthus with continuous Sørfjord views and a transfer between ends.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Odda area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Røte trailhead above Kinsarvik",
         "recommendedMonths": [
           6,
           7,
@@ -228,13 +228,13 @@
       },
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -243,12 +243,12 @@
       "value": {
         "key": "hardanger-bondhusvatnet",
         "name": "Bondhusvatnet",
-        "routeType": "loop",
-        "description": "Bondhusvatnet represents a substantial circuit with varied terrain from the Odda catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Bondhusvatnet follows the broad historic ice road beside the Bondhuselva to Bondhusvatnet.",
+        "difficulty": "Easy",
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Odda area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Bondhus trailhead at Sundal",
         "recommendedMonths": [
           6,
           7,
@@ -258,13 +258,13 @@
       },
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -273,12 +273,12 @@
       "value": {
         "key": "hardanger-rossnos",
         "name": "Rossnos",
-        "routeType": "point-to-point",
-        "description": "Rossnos represents a long ridge, summit or through-route from the Odda catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Rossnos climbs steeply above Odda to the Rossnos viewpoint over Sørfjorden and Sandvinvatnet.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Odda area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Freim above Odda",
         "recommendedMonths": [
           6,
           7,
@@ -288,13 +288,13 @@
       },
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -303,12 +303,12 @@
       "value": {
         "key": "hardanger-buerbreen-viewpoint",
         "name": "Buerbreen Viewpoint",
-        "routeType": "point-to-point",
-        "description": "Buerbreen Viewpoint represents the area's most committing established mountain choice from the Odda catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Buerbreen Viewpoint follows the marked valley path to the safe public viewpoint below Buerbreen without entering glacier terrain.",
+        "difficulty": "Moderate",
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Odda area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Buer farm trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -318,7 +318,7 @@
       },
       "source": {
         "key": "hardanger-authority",
-        "url": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "url": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -334,9 +334,9 @@
         "mode": "car",
         "available": true,
         "accessNode": "Odda road access",
-        "oneWayHours": 9.783333333333333,
+        "oneWayHours": 9.8,
         "costPerPersonDkk": 1650,
-        "note": "Fjord FSTR Hirtshals–Kristiansand with Fjord Line; includes the recommended 60-minute terminal arrival. The seasonal Fjord FSTR Hirtshals–Kristiansand sailing has the shortest modeled hiking-season total among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation; use a year-round Kristiansand alternative when FSTR is not operating.",
+        "note": "The seasonal Fjord FSTR Hirtshals–Kristiansand sailing is the shortest verified hiking-season option from Denmark; the estimate includes Fjord Line's recommended 60-minute terminal arrival. Use a year-round Kristiansand sailing when FSTR is not operating.",
         "confidence": "high",
         "optionId": "catalog-car-aalborg-odda"
       },
@@ -460,7 +460,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

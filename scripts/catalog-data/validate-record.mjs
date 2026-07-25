@@ -98,7 +98,12 @@ export function validateCatalogRecord(record) {
   for (const claim of claims) {
     if (isObject(claim) && domains.has(claim.domain) && !coverageDomains.has(claim.domain)) errors.push(`coverage is missing claimed domain ${claim.domain}`);
   }
-  if (record?.schemaVersion === 3) errors.push(...validateVisibleProductRecord(record));
+  const hasProductStructure = isObject(record?.destination) &&
+    Array.isArray(record?.claims) &&
+    record.claims.every(isObject);
+  if (record?.schemaVersion === 3 && hasProductStructure) {
+    errors.push(...validateVisibleProductRecord(record));
+  }
   return errors;
 }
 

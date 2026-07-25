@@ -26,7 +26,7 @@
       "value": "Norway",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A compact fjord-and-ridge base with serious mountain days directly above town.",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Sharp ridges, deep valleys, exposed viewpoints and unusually easy access from the rail terminus.",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "romsdalen",
       "field": "guide.highlights",
-      "value": "The Romsdalseggen ridge, Rampestreken and the wall of peaks around the Rauma valley put major viewpoints immediately above Åndalsnes. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "The Romsdalseggen ridge, Rampestreken and the wall of peaks around the Rauma valley put major viewpoints immediately above Åndalsnes. The Åndalsnes route set makes those qualities concrete: “Romsdalseggen Ridge” and “Rampestreken and Nesaksla” define different headline days, while “Litlefjellet” offers another scale of outing. “Bispevatnet” and “Mjølvafjellet” extend the choice beyond one famous objective. Together, these Romsdalen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Åndalsnes.",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "romsdalen",
       "field": "guide.terrain",
-      "value": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers. The published Åndalsnes walks move through that structure in distinct ways. “Litlefjellet” is the shortest listed option at about 1.5 hours from Litlefjellet trailhead in Vengedalen; “Romsdalseggen Ridge” is the largest commitment at about 8 hours. On Romsdalen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "romsdalen",
       "field": "guide.expectations",
-      "value": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. Access around Åndalsnes is route-specific: starts include Vengedalen trailhead, Åndalsnes town centre and Litlefjellet trailhead in Vengedalen. A Romsdalen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åndalsnes weather, closures and seasonal services against the linked authority. Keep one of the listed Åndalsnes alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -136,7 +136,7 @@
       ],
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -181,12 +181,12 @@
       "value": {
         "key": "romsdalen-romsdalseggen-ridge",
         "name": "Romsdalseggen Ridge",
-        "routeType": "loop",
-        "description": "Romsdalseggen Ridge represents a short landscape or viewpoint walk from the Åndalsnes catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "point-to-point",
+        "description": "Romsdalseggen Ridge traverses the exposed Romsdalseggen ridge and descends past Nesaksla to Åndalsnes.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Åndalsnes area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Vengedalen trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -196,13 +196,13 @@
       },
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -212,11 +212,11 @@
         "key": "romsdalen-rampestreken-and-nesaksla",
         "name": "Rampestreken and Nesaksla",
         "routeType": "out-and-back",
-        "description": "Rampestreken and Nesaksla represents a half-day valley, lake or lower-summit route from the Åndalsnes catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Rampestreken and Nesaksla climbs the Romsdalstrappa to Rampestreken and continues to Nesaksla before reversing the route.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Åndalsnes area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Åndalsnes town centre",
         "recommendedMonths": [
           6,
           7,
@@ -226,13 +226,13 @@
       },
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -241,12 +241,12 @@
       "value": {
         "key": "romsdalen-litlefjellet",
         "name": "Litlefjellet",
-        "routeType": "loop",
-        "description": "Litlefjellet represents a substantial circuit with varied terrain from the Åndalsnes catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Litlefjellet makes a short steep ascent to a ledge facing Trollveggen and the Romsdalen valley.",
+        "difficulty": "Easy",
+        "durationHours": 1.5,
         "durationDays": 1,
-        "trailhead": "Åndalsnes area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Litlefjellet trailhead in Vengedalen",
         "recommendedMonths": [
           6,
           7,
@@ -256,13 +256,13 @@
       },
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -271,12 +271,12 @@
       "value": {
         "key": "romsdalen-bispevatnet",
         "name": "Bispevatnet",
-        "routeType": "point-to-point",
-        "description": "Bispevatnet represents a long ridge, summit or through-route from the Åndalsnes catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "routeType": "out-and-back",
+        "description": "Bispevatnet walks into the high basin below Bispen to Bispevatnet.",
+        "difficulty": "Moderate",
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Åndalsnes area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Trollstigen plateau",
         "recommendedMonths": [
           6,
           7,
@@ -286,27 +286,27 @@
       },
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "romsdalen-mjlvafjellet",
+      "subjectKey": "romsdalen-mjolvafjellet",
       "field": "hike",
       "value": {
-        "key": "romsdalen-mjlvafjellet",
+        "key": "romsdalen-mjolvafjellet",
         "name": "Mjølvafjellet",
-        "routeType": "point-to-point",
-        "description": "Mjølvafjellet represents the area's most committing established mountain choice from the Åndalsnes catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Mjølvafjellet climbs rough open mountain terrain to Mjølvafjellet above Isfjorden.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Åndalsnes area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Vengedalen trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -316,7 +316,7 @@
       },
       "source": {
         "key": "romsdalen-authority",
-        "url": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "url": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -332,7 +332,7 @@
         "mode": "car",
         "available": true,
         "accessNode": "Åndalsnes road access",
-        "oneWayHours": 13.783333333333333,
+        "oneWayHours": 13.8,
         "costPerPersonDkk": 1700,
         "note": "SuperSpeed Hirtshals–Larvik with Color Line; includes the recommended 60-minute terminal arrival. Hirtshals–Larvik has the shortest modeled total time among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation.",
         "confidence": "high",
@@ -458,7 +458,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

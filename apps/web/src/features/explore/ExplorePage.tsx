@@ -429,8 +429,10 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
 
 function DestinationDetails({ destination, search, onPlan }: { destination: Destination; search: ExploreSearch; onPlan: () => void }) {
   const [open, setOpen] = useState(false);
+  const catalog = useCatalog();
   const detailedDestination =
     useCatalogDestination(destination.id, open, destination) ?? destination;
+  const detailLoaded = catalog.details[destination.id] !== undefined;
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild><Button variant="outline">View area details</Button></SheetTrigger>
@@ -480,7 +482,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                   </div>
                 </article>
               ))}
-            </div> : open ? <div className="routes-curating"><Route /><div><strong>Loading hike choices</strong><p>The catalog keeps route details outside the initial Explore list and loads them with this sheet.</p></div></div> : null}
+            </div> : open ? <div className="routes-curating"><Route /><div><strong>{detailLoaded ? "No published hike choices" : "Loading hike choices"}</strong><p>{detailLoaded ? "This destination currently has no source-backed hikes in the active catalog." : "The catalog keeps route details outside the initial Explore list and loads them with this sheet."}</p></div></div> : null}
           </section>
           <p className="catalog-source">Catalog version {detailedDestination.catalogVersion.slice(0, 12)} · media verified {detailedDestination.media.verifiedAt}: <a href={detailedDestination.media.sourceUrl} rel="noreferrer" target="_blank">inspect image source</a></p>
         </div>

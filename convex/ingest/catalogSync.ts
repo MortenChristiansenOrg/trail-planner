@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import { catalogDeployment } from "../generated/catalogDeployment";
 import { internal } from "../_generated/api";
-import { internalAction, internalMutation } from "../_generated/server";
+import { internalAction, internalMutation, internalQuery } from "../_generated/server";
 
 const BATCH_SIZE = 25;
 
@@ -178,17 +178,26 @@ export const writeHikes = internalMutation({
         .query("catalogHikes")
         .withIndex("by_version_key", (query) => query.eq("catalogVersion", catalogVersion).eq("hikeKey", hike.key))
         .unique();
-      const { key: hikeKey, geometry: _geometry, ...value } = hike;
+      const { key: hikeKey, ...hikeWithGeometry } = hike;
+      const { geometry, ...value } = hikeWithGeometry;
       const document = { ...value, catalogVersion, destinationKey, hikeKey };
       if (existing) await ctx.db.replace(existing._id, document);
       else await ctx.db.insert("catalogHikes", document);
-      if (hike.geometry) {
-        const geometry = await ctx.db
+      if (geometry) {
+        const existingGeometry = await ctx.db
           .query("catalogGeometries")
           .withIndex("by_version_hike", (query) => query.eq("catalogVersion", catalogVersion).eq("hikeKey", hikeKey))
           .unique();
-        const geometryValue = { catalogVersion, hikeKey, ...hike.geometry };
-        if (geometry) await ctx.db.replace(geometry._id, geometryValue);
+        const geometryValue = {
+          catalogVersion,
+          hikeKey,
+          coordinates: geometry.coordinates as number[][],
+          sourceUrl: geometry.sourceUrl as string,
+          attribution: geometry.attribution as string,
+          retrievedAt: geometry.retrievedAt as string,
+          sourceObjectId: geometry.sourceObjectId as string | undefined,
+        };
+        if (existingGeometry) await ctx.db.replace(existingGeometry._id, geometryValue);
         else await ctx.db.insert("catalogGeometries", geometryValue);
       }
     }
@@ -308,6 +317,55 @@ export const validateAndActivate = internalMutation({
   },
 });
 
+export const versionsToPrune = internalQuery({
+  args: {},
+  handler: async (ctx) => {
+    const versions = await ctx.db.query("catalogVersions").collect();
+    const active = versions.find((version) => version.status === "active");
+    const retained = versions
+      .filter((version) => version.status === "retained")
+      .sort((left, right) =>
+        (right.activatedAt ?? right.createdAt) - (left.activatedAt ?? left.createdAt)
+      );
+    const keep = new Set([
+      active?.catalogVersion,
+      retained[0]?.catalogVersion,
+    ].filter((version): version is string => Boolean(version)));
+    return versions
+      .filter((version) => version.status !== "staging" && !keep.has(version.catalogVersion))
+      .map((version) => version.catalogVersion);
+  },
+});
+
+export const pruneVersionBatch = internalMutation({
+  args: { catalogVersion: v.string() },
+  handler: async (ctx, { catalogVersion }) => {
+    const state = await ctx.db
+      .query("catalogState")
+      .withIndex("by_key", (query) => query.eq("key", "active"))
+      .unique();
+    if (state?.catalogVersion === catalogVersion) {
+      throw new Error("Refusing to prune the active catalog version");
+    }
+    const [destinations, aliases, hikes, geometries, coverage] = await Promise.all([
+      ctx.db.query("catalogDestinations").withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion)).take(BATCH_SIZE),
+      ctx.db.query("catalogDestinationAliases").withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion)).take(BATCH_SIZE),
+      ctx.db.query("catalogHikes").withIndex("by_version_destination", (query) => query.eq("catalogVersion", catalogVersion)).take(BATCH_SIZE),
+      ctx.db.query("catalogGeometries").withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion)).take(BATCH_SIZE),
+      ctx.db.query("catalogCoverage").withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion)).take(BATCH_SIZE),
+    ]);
+    const documents = [...destinations, ...aliases, ...hikes, ...geometries, ...coverage];
+    for (const document of documents) await ctx.db.delete(document._id);
+    if (documents.length) return { done: false };
+    const version = await ctx.db
+      .query("catalogVersions")
+      .withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion))
+      .unique();
+    if (version) await ctx.db.delete(version._id);
+    return { done: true };
+  },
+});
+
 export const synchronize = internalAction({
   args: {},
   handler: async (ctx): Promise<{ status: "unchanged" | "activated"; catalogVersion: string; destinations: number; hikes: number; coverage: number }> => {
@@ -364,6 +422,19 @@ export const synchronize = internalAction({
       expectedCoverage: artifact.expected.coverage,
       artifactHash: artifact.artifactHash,
     });
+    const prunableVersions = await ctx.runQuery(
+      internal.ingest.catalogSync.versionsToPrune,
+      {},
+    );
+    for (const catalogVersion of prunableVersions) {
+      let done = false;
+      while (!done) {
+        ({ done } = await ctx.runMutation(
+          internal.ingest.catalogSync.pruneVersionBatch,
+          { catalogVersion },
+        ));
+      }
+    }
     return { status: "activated", coverage: artifact.expected.coverage, ...activated };
   },
 });

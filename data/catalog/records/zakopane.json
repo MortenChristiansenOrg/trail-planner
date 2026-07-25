@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "zakopane",
       "field": "guide.highlights",
-      "value": "Zakopane is the main Polish gateway to Morskie Oko, Kasprowy Wierch, Giewont and the compact High Tatra ridge system. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Zakopane is the main Polish gateway to Morskie Oko, Kasprowy Wierch, Giewont and the compact High Tatra ridge system. The Zakopane route set makes those qualities concrete: “Morskie Oko” and “Kasprowy Wierch to Hala Gąsienicowa” define different headline days, while “Giewont” offers another scale of outing. “Czerwone Wierchy” and “Orla Perć from Zawrat to Krzyżne” extend the choice beyond one famous objective. Together, these High Tatras walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
       "source": {
         "key": "zakopane-authority",
         "url": "https://tpn.gov.pl/zwiedzaj",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "zakopane",
       "field": "guide.terrain",
-      "value": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests. The published Zakopane walks move through that structure in distinct ways. “Morskie Oko” is the shortest listed option at about 5 hours from Palenica Białczańska; “Orla Perć from Zawrat to Krzyżne” is the largest commitment at about 10 hours. On High Tatras terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "zakopane-authority",
         "url": "https://tpn.gov.pl/zwiedzaj",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "zakopane",
       "field": "guide.expectations",
-      "value": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. Access around Zakopane is route-specific: starts include Palenica Białczańska, Kasprowy Wierch cable-car station and Kuźnice. A High Tatras point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zakopane weather, closures and seasonal services against the linked authority. Keep one of the listed Zakopane alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "zakopane-authority",
         "url": "https://tpn.gov.pl/zwiedzaj",
@@ -181,12 +181,12 @@
       "value": {
         "key": "zakopane-morskie-oko",
         "name": "Morskie Oko",
-        "routeType": "loop",
-        "description": "Morskie Oko represents a short landscape or viewpoint walk from the Zakopane catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Morskie Oko follows the paved mountain road to Morskie Oko beneath the High Tatra peaks.",
+        "difficulty": "Moderate",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Zakopane area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Palenica Białczańska",
         "recommendedMonths": [
           6,
           7,
@@ -202,7 +202,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -211,12 +211,12 @@
       "value": {
         "key": "zakopane-kasprowy-wierch-to-hala-gasienicowa",
         "name": "Kasprowy Wierch to Hala Gąsienicowa",
-        "routeType": "out-and-back",
-        "description": "Kasprowy Wierch to Hala Gąsienicowa represents a half-day valley, lake or lower-summit route from the Zakopane catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "point-to-point",
+        "description": "Kasprowy Wierch to Hala Gąsienicowa descends from the high ridge through Hala Gąsienicowa to Kuźnice.",
+        "difficulty": "Hard",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Zakopane area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kasprowy Wierch cable-car station",
         "recommendedMonths": [
           6,
           7,
@@ -232,7 +232,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -241,12 +241,12 @@
       "value": {
         "key": "zakopane-giewont",
         "name": "Giewont",
-        "routeType": "loop",
-        "description": "Giewont represents a substantial circuit with varied terrain from the Zakopane catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Giewont climbs through Kondratowa to Giewont's chain-assisted summit section.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Zakopane area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kuźnice",
         "recommendedMonths": [
           6,
           7,
@@ -262,7 +262,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -272,11 +272,11 @@
         "key": "zakopane-czerwone-wierchy",
         "name": "Czerwone Wierchy",
         "routeType": "point-to-point",
-        "description": "Czerwone Wierchy represents a long ridge, summit or through-route from the Zakopane catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Czerwone Wierchy traverses the long Czerwone Wierchy ridge and descends to Kuźnice.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Zakopane area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kiry",
         "recommendedMonths": [
           6,
           7,
@@ -292,7 +292,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -302,11 +302,11 @@
         "key": "zakopane-orla-perc-from-zawrat-to-krzyzne",
         "name": "Orla Perć from Zawrat to Krzyżne",
         "routeType": "point-to-point",
-        "description": "Orla Perć from Zawrat to Krzyżne represents the area's most committing established mountain choice from the Zakopane catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Orla Perć from Zawrat to Krzyżne traverses the chain- and ladder-protected Orla Perć ridge to Krzyżne after a separately planned approach.",
         "difficulty": "Expert",
-        "durationHours": 12,
+        "durationHours": 10,
         "durationDays": 1,
-        "trailhead": "Zakopane area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Zawrat pass",
         "recommendedMonths": [
           6,
           7,
@@ -438,7 +438,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

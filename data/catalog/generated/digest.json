@@ -1,9 +1,9 @@
 {
-  "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+  "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
   "destinations": [
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Broad glacial valleys, birch forest and open fell with a reliable trail network but a short snow-free season.",
       "coordinates": [
         18.829,
@@ -13,20 +13,20 @@
       "countryCode": "SE",
       "destinationKey": "abisko",
       "hero": {
-        "alt": "Swedish Lapland mountain landscape seen from the Abisko hiking area",
-        "assetSha256": "5c765c7ecb98bdf89a011f39411afc41f6070352c7c290ae981cf93f732d0075",
-        "attributionText": "Aurora in Abisko near Torneträsk.jpg by Pavel Shyshkouski · CC BY-SA 4.0",
-        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Aurora%20in%20Abisko%20near%20Tornetr%C3%A4sk.jpg",
-        "creator": "Pavel Shyshkouski",
-        "height": 3628,
+        "alt": "Snow-streaked Abisko mountains above birch forest and a fast river",
+        "assetSha256": "e986e872f907b1f12a0a900cb19010b2c90fa20a9ea148588f1debe4fa8e1004",
+        "attributionText": "Abisko mountains.jpg by Mickaël Delcey · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
+        "creator": "Mickaël Delcey",
+        "height": 2592,
         "imageUrl": "/catalog-media/abisko.jpg",
         "kind": "terrain",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aurora%20in%20Abisko%20near%20Tornetr%C3%A4sk.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
         "subject": "destination",
         "verifiedAt": "2026-07-25",
-        "width": 5442
+        "width": 3888
       },
       "hikeCount": 5,
       "lodgings": [
@@ -93,7 +93,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "A fjord-side logistics hub linking gentler geothermal landscapes with steep peninsula mountains.",
       "coordinates": [
         -18.09,
@@ -177,7 +177,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Accessible fell terrain, waterfalls and broad viewpoints supported by unusually strong village logistics.",
       "coordinates": [
         13.081,
@@ -262,7 +262,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Steep limestone walls, forested approaches and high routes overlooking the lake.",
       "coordinates": [
         13,
@@ -306,7 +306,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "berchtesgaden-authority",
-        "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/visitor_information/hiking/index.htm",
+        "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -355,7 +355,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Large-scale upland terrain where navigation, wind and distance matter more than technical ground.",
       "coordinates": [
         -3.829,
@@ -441,7 +441,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Glaciers, balcony paths and high passes, with excellent local transport and busy summer trails.",
       "coordinates": [
         6.87,
@@ -485,7 +485,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "chamonix-authority",
-        "sourceUrl": "https://www.chamonix.com/activities/hiking/hiking-trails",
+        "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -532,7 +532,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Dry granite, clear pools and hard multi-day walking with significant heat and exposure.",
       "coordinates": [
         9.15,
@@ -619,7 +619,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Well-served trailheads, dramatic rock architecture and a mix of ordinary hiking and protected routes.",
       "coordinates": [
         12.135,
@@ -710,7 +710,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Quiet rugged peaks, straightforward local access and fewer transport options than the central Alps.",
       "coordinates": [
         19.123,
@@ -795,7 +795,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Wet, rugged mountains, long ridges and strong public-transport access by Highland standards.",
       "coordinates": [
         -5.105,
@@ -889,7 +889,7 @@
       "aliases": [
         "odda"
       ],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Big vertical relief, waterfalls and long days where weather and shuttle timing matter.",
       "coordinates": [
         6.546,
@@ -933,7 +933,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "hardanger-authority",
-        "sourceUrl": "https://hardangerfjord.com/en/odda/activities/hiking",
+        "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -951,8 +951,8 @@
           "confidence": "high",
           "costPerPersonDkk": 1650,
           "mode": "car",
-          "note": "Fjord FSTR Hirtshals–Kristiansand with Fjord Line; includes the recommended 60-minute terminal arrival. The seasonal Fjord FSTR Hirtshals–Kristiansand sailing has the shortest modeled hiking-season total among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation; use a year-round Kristiansand alternative when FSTR is not operating.",
-          "oneWayHours": 9.783333333333333,
+          "note": "The seasonal Fjord FSTR Hirtshals–Kristiansand sailing is the shortest verified hiking-season option from Denmark; the estimate includes Fjord Line's recommended 60-minute terminal arrival. Use a year-round Kristiansand sailing when FSTR is not operating.",
+          "oneWayHours": 9.8,
           "optionId": "catalog-car-aalborg-odda"
         },
         {
@@ -980,7 +980,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Rounded fells, large protected valleys and a gentle transition from village access to multi-day wilderness.",
       "coordinates": [
         15.086,
@@ -1065,7 +1065,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
       "coordinates": [
         11.404,
@@ -1103,7 +1103,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "innsbruck-authority",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1152,7 +1152,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
       "coordinates": [
         8.809962,
@@ -1196,7 +1196,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "jotunheimen-authority",
-        "sourceUrl": "https://jotunheimen.com/en/activities/hiking/",
+        "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1242,7 +1242,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Rugged white peaks, clear rivers and compact access, with some routes requiring secure scrambling.",
       "coordinates": [
         13.786,
@@ -1286,7 +1286,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "kranjska-gora-authority",
-        "sourceUrl": "https://kranjska-gora.si/en/activities/hiking",
+        "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1333,7 +1333,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Colourful volcanic terrain with exposed highland weather and river-crossing logistics on the access roads.",
       "coordinates": [
         -19.06,
@@ -1371,7 +1371,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "landmannalaugar-authority",
-        "sourceUrl": "https://www.fi.is/en/hiking-trails/trails/landmannalaugar",
+        "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1416,7 +1416,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Granite peaks rising straight from the sea, rapidly changing weather and compact but demanding routes.",
       "coordinates": [
         14.568,
@@ -1454,7 +1454,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "lofoten-authority",
-        "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1501,7 +1501,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Deep green valleys and engineered levadas, with exposed paths and rapidly shifting cloud.",
       "coordinates": [
         -16.969,
@@ -1590,7 +1590,7 @@
       "aliases": [
         "kebnekaise"
       ],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Mountain birch forest opening into broad glacial valleys beneath Sweden’s highest massif.",
       "coordinates": [
         19.01,
@@ -1674,7 +1674,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Dry-looking but weather-prone limestone, shepherd paths and major relief close to the coast.",
       "coordinates": [
         -4.62,
@@ -1761,7 +1761,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Sharp ridges, deep valleys, exposed viewpoints and unusually easy access from the rail terminus.",
       "coordinates": [
         7.687,
@@ -1805,7 +1805,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "romsdalen-authority",
-        "sourceUrl": "https://www.nasjonaleturiststier.no/en/romsdalseggen/",
+        "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1824,7 +1824,7 @@
           "costPerPersonDkk": 1700,
           "mode": "car",
           "note": "SuperSpeed Hirtshals–Larvik with Color Line; includes the recommended 60-minute terminal arrival. Hirtshals–Larvik has the shortest modeled total time among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation.",
-          "oneWayHours": 13.783333333333333,
+          "oneWayHours": 13.8,
           "optionId": "catalog-car-aalborg-andalsnes"
         },
         {
@@ -1852,7 +1852,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Green slopes beneath ice-capped peaks, with marked paths radiating from a visitor centre and campground.",
       "coordinates": [
         -16.966,
@@ -1890,7 +1890,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "skaftafell-authority",
-        "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -1939,7 +1939,7 @@
       "aliases": [
         "eryri"
       ],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Rocky ridges and glacial cwms packed into a compact area, with many routes starting near villages.",
       "coordinates": [
         -4.13,
@@ -1949,20 +1949,20 @@
       "countryCode": "GB",
       "destinationKey": "snowdonia",
       "hero": {
-        "alt": "Eryri / Snowdonia mountain landscape seen from the Llanberis hiking area",
-        "assetSha256": "f3c0cb51424e65069eba9853b7ac9646d57728fdb8169925b303361630a44c92",
-        "attributionText": "Mynyddoedd Eryri - Mountains of Snowdonia - geograph.org.uk - 530480.jpg by Alan Fryer · CC BY-SA 2.0",
-        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
-        "creator": "Alan Fryer",
-        "height": 428,
+        "alt": "Nant Gwynant valley and mountain slopes in Eryri",
+        "assetSha256": "44c433bd0fee7428a3766b5182af81f42f951ba63b23b36c9daecfe9c582f728",
+        "attributionText": "Panorama- Nant Gwynant (21695404928).jpg by Takver · CC BY-SA 2.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
+        "creator": "Takver",
+        "height": 1855,
         "imageUrl": "/catalog-media/snowdonia.jpg",
         "kind": "terrain",
         "license": "CC BY-SA 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
         "subject": "destination",
         "verifiedAt": "2026-07-25",
-        "width": 640
+        "width": 4000
       },
       "hikeCount": 5,
       "lodgings": [
@@ -2027,7 +2027,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Birch-covered ridges, dark volcanic gullies and glacier views, reached by specialist highland buses.",
       "coordinates": [
         -19.482,
@@ -2065,7 +2065,7 @@
       "provenance": {
         "confidence": "high",
         "sourceKey": "thorsmork-authority",
-        "sourceUrl": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "verifiedAt": "2026-07-25"
       },
       "recommendedMonths": [
@@ -2111,7 +2111,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Compact granite mountains with excellent marked trails, crowds on classics and frequent afternoon weather.",
       "coordinates": [
         19.95,
@@ -2196,7 +2196,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+      "catalogVersion": "092a3a52f6f86bdb4c2b32408f75b831d86e948ed87012babd5dffe57ac8f2df",
       "character": "Big glaciated scenery, excellent rail access and expensive but efficient mountain infrastructure.",
       "coordinates": [
         7.748,
@@ -2253,12 +2253,12 @@
       "summary": "A car-free high-alpine base below the Matterhorn with a dense network of marked routes.",
       "travel": [
         {
-          "accessNode": "Zermatt road access",
+          "accessNode": "Täsch transfer terminal",
           "available": true,
           "confidence": "medium",
           "costPerPersonDkk": 2200,
           "mode": "car",
-          "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+          "note": "Cars stop at Täsch because Zermatt is car-free; the estimate includes parking and the final rail transfer to Zermatt.",
           "oneWayHours": 15.7,
           "optionId": "osrm-driving-zermatt--aalborg--legacy"
         },

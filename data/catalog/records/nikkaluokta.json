@@ -85,7 +85,7 @@
       "domain": "destination-core",
       "subjectKey": "nikkaluokta",
       "field": "guide.highlights",
-      "value": "Nikkaluokta is the road end for the approach to Kebnekaise mountain station, Tarfala valley and the western Kungsleden network. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Nikkaluokta is the road end for the approach to Kebnekaise mountain station, Tarfala valley and the western Kungsleden network. The Nikkaluokta route set makes those qualities concrete: “Nikkaluokta to Kebnekaise Mountain Station” and “Kebnekaise Western Route” define different headline days, while “Tarfala Valley” offers another scale of outing. “Vistas Valley” and “Kebnekaise Mountain Station to Singi” extend the choice beyond one famous objective. Together, these Kebnekaise massif walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
       "source": {
         "key": "nikkaluokta-authority",
         "url": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
@@ -100,7 +100,7 @@
       "domain": "destination-core",
       "subjectKey": "nikkaluokta",
       "field": "guide.terrain",
-      "value": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine. The published Nikkaluokta walks move through that structure in distinct ways. “Nikkaluokta to Kebnekaise Mountain Station” is the shortest listed option at about 7 hours from Nikkaluokta mountain centre; “Kebnekaise Western Route” is the largest commitment at about 14 hours. On Kebnekaise massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "nikkaluokta-authority",
         "url": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
@@ -115,7 +115,7 @@
       "domain": "destination-core",
       "subjectKey": "nikkaluokta",
       "field": "guide.expectations",
-      "value": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. Access around Nikkaluokta is route-specific: starts include Nikkaluokta mountain centre, Kebnekaise mountain station and Kebnekaise mountain station. A Kebnekaise massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Nikkaluokta weather, closures and seasonal services against the linked authority. Keep one of the listed Nikkaluokta alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "nikkaluokta-authority",
         "url": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
@@ -182,12 +182,12 @@
       "value": {
         "key": "nikkaluokta-nikkaluokta-to-kebnekaise-mountain-station",
         "name": "Nikkaluokta to Kebnekaise Mountain Station",
-        "routeType": "loop",
-        "description": "Nikkaluokta to Kebnekaise Mountain Station represents a short landscape or viewpoint walk from the Nikkaluokta catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "point-to-point",
+        "description": "Nikkaluokta to Kebnekaise Mountain Station follows the Dag Hammarskjöld trail up Láddjuvággi to Kebnekaise mountain station; the seasonal boat shortens it.",
+        "difficulty": "Moderate",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Nikkaluokta area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Nikkaluokta mountain centre",
         "recommendedMonths": [
           7,
           8,
@@ -202,7 +202,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -212,11 +212,11 @@
         "key": "nikkaluokta-kebnekaise-western-route",
         "name": "Kebnekaise Western Route",
         "routeType": "out-and-back",
-        "description": "Kebnekaise Western Route represents a half-day valley, lake or lower-summit route from the Nikkaluokta catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "description": "Kebnekaise Western Route makes the very long Western Route ascent over Vierranvárri to Sweden's highest summit area.",
+        "difficulty": "Expert",
+        "durationHours": 14,
         "durationDays": 1,
-        "trailhead": "Nikkaluokta area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kebnekaise mountain station",
         "recommendedMonths": [
           7,
           8,
@@ -231,7 +231,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -240,12 +240,12 @@
       "value": {
         "key": "nikkaluokta-tarfala-valley",
         "name": "Tarfala Valley",
-        "routeType": "loop",
-        "description": "Tarfala Valley represents a substantial circuit with varied terrain from the Nikkaluokta catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Tarfala Valley follows the glacial valley to Tarfala research station and mountain hut.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Nikkaluokta area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kebnekaise mountain station",
         "recommendedMonths": [
           7,
           8,
@@ -260,7 +260,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -270,11 +270,11 @@
         "key": "nikkaluokta-vistas-valley",
         "name": "Vistas Valley",
         "routeType": "point-to-point",
-        "description": "Vistas Valley represents a long ridge, summit or through-route from the Nikkaluokta catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Vistas Valley travels east through broad Vistasvagge to Vistas mountain hut as a remote hut stage.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 9,
         "durationDays": 1,
-        "trailhead": "Nikkaluokta area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Nikkaluokta mountain centre",
         "recommendedMonths": [
           7,
           8,
@@ -289,7 +289,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -299,11 +299,11 @@
         "key": "nikkaluokta-kebnekaise-mountain-station-to-singi",
         "name": "Kebnekaise Mountain Station to Singi",
         "routeType": "point-to-point",
-        "description": "Kebnekaise Mountain Station to Singi represents the area's most committing established mountain choice from the Nikkaluokta catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "description": "Kebnekaise Mountain Station to Singi crosses the mountain pass into the Kungsleden corridor at Singi mountain hut.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Nikkaluokta area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kebnekaise mountain station",
         "recommendedMonths": [
           7,
           8,
@@ -434,7 +434,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

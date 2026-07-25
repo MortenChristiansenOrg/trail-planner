@@ -6,7 +6,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import { formatHours, formatMoney, monthNames } from "@/features/catalog/catalog";
-import { useCatalogDestination } from "@/features/catalog/CatalogProvider";
+import { useCatalog, useCatalogDestination } from "@/features/catalog/CatalogProvider";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type TrailLine } from "@/features/maps/TrailMap";
 import { calculateTripCost, getCostItemAmount, getSelectedTravel, parsePlannedTripJson, type PlannedTrip } from "@/features/trips/model";
@@ -40,8 +40,13 @@ function UnavailableShare({ preview = false }: { preview?: boolean }) {
 }
 
 function SharedTripView({ trip }: { trip: PlannedTrip }) {
+  const catalog = useCatalog();
   const destination = useCatalogDestination(trip.destinationId);
-  if (!destination) return <UnavailableShare />;
+  if (!destination) {
+    return catalog.ready
+      ? <UnavailableShare />
+      : <AppShell><main className="not-found-page"><Route /><h1>Opening destination…</h1></main></AppShell>;
+  }
   const costs = calculateTripCost(trip);
   const travel = getSelectedTravel(trip);
   const activities = new Map(trip.days.flatMap((day) => day.activities).map((activity) => [activity.groupId, activity]));

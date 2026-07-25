@@ -51,7 +51,7 @@ import {
   type Hike,
   type TravelMode,
 } from "@/features/catalog/catalog";
-import { useCatalogDestination } from "@/features/catalog/CatalogProvider";
+import { useCatalog, useCatalogDestination } from "@/features/catalog/CatalogProvider";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type MapMarker, type TrailLine } from "@/features/maps/TrailMap";
 import {
@@ -74,6 +74,7 @@ import { useTripStore } from "@/features/trips/TripStore";
 
 export function TripDetailPage({ tripId }: { tripId: string }) {
   const store = useTripStore();
+  const catalog = useCatalog();
   const navigate = useNavigate();
   const [selectedMapItem, setSelectedMapItem] = useState<string>();
   const [shareUrl, setShareUrl] = useState<string>();
@@ -92,7 +93,18 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     );
   }
 
-  if (!destination) return null;
+  if (!destination) {
+    return (
+      <AppShell>
+        <main className="not-found-page">
+          <Route />
+          <h1>{catalog.ready ? "Destination unavailable" : "Loading destination…"}</h1>
+          <p>{catalog.ready ? "This trip references a destination that is no longer in the active catalog." : "Opening the current catalog for this trip."}</p>
+          {catalog.ready ? <Button asChild><Link to="/trips">Back to planned trips</Link></Button> : null}
+        </main>
+      </AppShell>
+    );
+  }
   const costs = calculateTripCost(trip);
   const selectedTravel = getSelectedTravel(trip);
   const activityGroups = new Map(
@@ -417,12 +429,12 @@ function LodgingDialogContent({
   remainingUnplannedNights: number;
 }) {
   const destination = useCatalogDestination(destinationId);
-  if (!destination) return null;
   const [kind, setKind] = useState<LodgingNight["kind"]>(night.kind === "none" ? "tent-free" : night.kind);
   const [name, setName] = useState(night.name === "Not chosen" ? "Wild tent" : night.name);
   const [cost, setCost] = useState(night.costDkk);
-  const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination.lodgings[0]?.id ?? "");
+  const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination?.lodgings[0]?.id ?? "");
   const [confirmOverwrite, setConfirmOverwrite] = useState(false);
+  if (!destination) return null;
   const valid = Number.isFinite(cost) && cost >= 0 && (
     kind !== "known" || destination.lodgings.some((lodging) => lodging.id === knownId)
   );

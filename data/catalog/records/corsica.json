@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "corsica",
       "field": "guide.highlights",
-      "value": "Corte gives access to the Restonica and Tavignano valleys, high glacial lakes and central Corsican sections of the GR20. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Corte gives access to the Restonica and Tavignano valleys, high glacial lakes and central Corsican sections of the GR20. The Corte route set makes those qualities concrete: “Lac de Melo and Lac de Capitello” and “Tavignano Gorge” define different headline days, while “Monte Rotondo” offers another scale of outing. “Lac de Nino” and “Corte to Refuge de la Sega” extend the choice beyond one famous objective. Together, these Corsica walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
       "source": {
         "key": "corsica-authority",
         "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "corsica",
       "field": "guide.terrain",
-      "value": "Coarse granite peaks, slabs and boulder fields rise above pine forest, maquis and clear rock pools; summer heat in the valleys contrasts with exposed, storm-prone high ridges. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Coarse granite peaks, slabs and boulder fields rise above pine forest, maquis and clear rock pools; summer heat in the valleys contrasts with exposed, storm-prone high ridges. The published Corte walks move through that structure in distinct ways. “Lac de Melo and Lac de Capitello” is the shortest listed option at about 6 hours from Grotelle trailhead in Restonica; “Monte Rotondo” is the largest commitment at about 10 hours. On Corsica terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "corsica-authority",
         "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "corsica",
       "field": "guide.expectations",
-      "value": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days. Access around Corte is route-specific: starts include Grotelle trailhead in Restonica, Citadel trailhead in Corte and Restonica valley trailhead. A Corsica point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Corte weather, closures and seasonal services against the linked authority. Keep one of the listed Corte alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "corsica-authority",
         "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
@@ -183,12 +183,12 @@
       "value": {
         "key": "corsica-lac-de-melo-and-lac-de-capitello",
         "name": "Lac de Melo and Lac de Capitello",
-        "routeType": "loop",
-        "description": "Lac de Melo and Lac de Capitello represents a short landscape or viewpoint walk from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Lac de Melo and Lac de Capitello climbs slabs and boulders past Lac de Melo to the higher Lac de Capitello.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Grotelle trailhead in Restonica",
         "recommendedMonths": [
           5,
           6,
@@ -206,7 +206,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -216,11 +216,11 @@
         "key": "corsica-tavignano-gorge",
         "name": "Tavignano Gorge",
         "routeType": "out-and-back",
-        "description": "Tavignano Gorge represents a half-day valley, lake or lower-summit route from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Tavignano Gorge follows the Tavignano gorge to riverside bridges and swimming pools, with the turnaround chosen by time.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Citadel trailhead in Corte",
         "recommendedMonths": [
           5,
           6,
@@ -238,7 +238,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -247,12 +247,12 @@
       "value": {
         "key": "corsica-monte-rotondo",
         "name": "Monte Rotondo",
-        "routeType": "loop",
-        "description": "Monte Rotondo represents a substantial circuit with varied terrain from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Monte Rotondo makes a long high-mountain ascent to Monte Rotondo over rough granite and route-finding terrain.",
+        "difficulty": "Expert",
+        "durationHours": 10,
         "durationDays": 1,
-        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Restonica valley trailhead",
         "recommendedMonths": [
           5,
           6,
@@ -270,7 +270,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -279,12 +279,12 @@
       "value": {
         "key": "corsica-lac-de-nino",
         "name": "Lac de Nino",
-        "routeType": "point-to-point",
-        "description": "Lac de Nino represents a long ridge, summit or through-route from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Lac de Nino crosses forest and open pozzine grassland to Lac de Nino and the upper Tavignano headwaters.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Col de Vergio",
         "recommendedMonths": [
           5,
           6,
@@ -302,7 +302,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -311,12 +311,12 @@
       "value": {
         "key": "corsica-corte-to-refuge-de-la-sega",
         "name": "Corte to Refuge de la Sega",
-        "routeType": "point-to-point",
-        "description": "Corte to Refuge de la Sega represents the area's most committing established mountain choice from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Corte to Refuge de la Sega continues far up the Tavignano valley from Corte to Refuge de la Sega.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Citadel trailhead in Corte",
         "recommendedMonths": [
           5,
           6,
@@ -450,7 +450,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

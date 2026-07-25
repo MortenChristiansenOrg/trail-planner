@@ -43,21 +43,21 @@ export const listExplore = query({
   },
 });
 
-export const detailByKey = query({
-  args: { destinationKey: v.string() },
-  handler: async (ctx, { destinationKey }) => {
-    const state = await activeCatalogVersion(ctx);
-    if (!state) return null;
+async function destinationDetail(
+  ctx: QueryCtx,
+  catalogVersion: string,
+  destinationKey: string,
+) {
     let canonicalKey = destinationKey;
     let destination = await ctx.db
       .query("catalogDestinations")
-      .withIndex("by_version_key", (builder) => builder.eq("catalogVersion", state.catalogVersion).eq("destinationKey", destinationKey))
+      .withIndex("by_version_key", (builder) => builder.eq("catalogVersion", catalogVersion).eq("destinationKey", destinationKey))
       .unique();
     if (!destination) {
       const alias = await ctx.db
         .query("catalogDestinationAliases")
         .withIndex("by_version_alias", (builder) =>
-          builder.eq("catalogVersion", state.catalogVersion).eq("alias", destinationKey)
+          builder.eq("catalogVersion", catalogVersion).eq("alias", destinationKey)
         )
         .unique();
       if (!alias) return null;
@@ -65,14 +65,14 @@ export const detailByKey = query({
       destination = await ctx.db
         .query("catalogDestinations")
         .withIndex("by_version_key", (builder) =>
-          builder.eq("catalogVersion", state.catalogVersion).eq("destinationKey", canonicalKey)
+          builder.eq("catalogVersion", catalogVersion).eq("destinationKey", canonicalKey)
         )
         .unique();
     }
     if (!destination) return null;
     const hikes = await ctx.db
       .query("catalogHikes")
-      .withIndex("by_version_destination", (builder) => builder.eq("catalogVersion", state.catalogVersion).eq("destinationKey", destination.destinationKey))
+      .withIndex("by_version_destination", (builder) => builder.eq("catalogVersion", catalogVersion).eq("destinationKey", destination.destinationKey))
       .collect();
     return {
       destinationKey: destination.destinationKey,
@@ -99,8 +99,30 @@ export const detailByKey = query({
         provenance: hike.provenance,
       })),
       provenance: destination.provenance,
-      catalogVersion: state.catalogVersion,
+      catalogVersion,
     };
+}
+
+export const detailByKey = query({
+  args: { destinationKey: v.string() },
+  handler: async (ctx, { destinationKey }) => {
+    const state = await activeCatalogVersion(ctx);
+    if (!state) return null;
+    return await destinationDetail(ctx, state.catalogVersion, destinationKey);
+  },
+});
+
+export const detailsByKeys = query({
+  args: { destinationKeys: v.array(v.string()) },
+  handler: async (ctx, { destinationKeys }) => {
+    if (destinationKeys.length > 20) throw new Error("At most 20 destination details may be requested");
+    const state = await activeCatalogVersion(ctx);
+    if (!state) return [];
+    return await Promise.all(
+      [...new Set(destinationKeys)].map((key) =>
+        destinationDetail(ctx, state.catalogVersion, key)
+      ),
+    );
   },
 });
 

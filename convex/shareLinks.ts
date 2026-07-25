@@ -77,7 +77,9 @@ export const read = query({
     const trip = await ctx.db.get(link.tripId);
     if (!trip) return null;
     const state = JSON.parse(trip.stateJson) as Record<string, unknown>;
-    const { ownerId: _ownerId, ...sanitized } = state;
+    const sanitized = Object.fromEntries(
+      Object.entries(state).filter(([key]) => key !== "ownerId"),
+    );
     return JSON.stringify(sanitized);
   },
 });

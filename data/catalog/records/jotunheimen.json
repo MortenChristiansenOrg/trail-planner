@@ -26,7 +26,7 @@
       "value": "Norway",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A high-mountain gateway for classic ridge walks and hut-to-hut stages.",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "jotunheimen",
       "field": "guide.highlights",
-      "value": "Gjendesheim sits beside green Gjende and opens directly onto Besseggen, Knutshøe and the eastern Jotunheimen hut network. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Gjendesheim sits beside green Gjende and opens directly onto Besseggen, Knutshøe and the eastern Jotunheimen hut network. The Gjendesheim route set makes those qualities concrete: “Besseggen Ridge” and “Knutshøe Ridge” define different headline days, while “Gjendetunga” offers another scale of outing. “Glittertind from Glitterheim” and “Gjendesheim to Memurubu” extend the choice beyond one famous objective. Together, these Jotunheimen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Gjendesheim.",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "jotunheimen",
       "field": "guide.terrain",
-      "value": "Broad glacial valleys are enclosed by dark, blocky high peaks; trails alternate between lake shores, polished slabs, talus and airy ridge crests above sparse alpine vegetation. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Broad glacial valleys are enclosed by dark, blocky high peaks; trails alternate between lake shores, polished slabs, talus and airy ridge crests above sparse alpine vegetation. The published Gjendesheim walks move through that structure in distinct ways. “Knutshøe Ridge” is the shortest listed option at about 5 hours from Vargebakken; “Glittertind from Glitterheim” is the largest commitment at about 9 hours. On Jotunheimen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "jotunheimen",
       "field": "guide.expectations",
-      "value": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics. Access around Gjendesheim is route-specific: starts include Memurubu boat landing, Vargebakken and Gjendebu. A Jotunheimen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Gjendesheim weather, closures and seasonal services against the linked authority. Keep one of the listed Gjendesheim alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -135,7 +135,7 @@
       ],
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -180,12 +180,12 @@
       "value": {
         "key": "jotunheimen-besseggen-ridge",
         "name": "Besseggen Ridge",
-        "routeType": "loop",
-        "description": "Besseggen Ridge represents a short landscape or viewpoint walk from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "point-to-point",
+        "description": "Besseggen Ridge crosses the airy Besseggen ridge above Gjende and Bessvatnet before descending to Gjendesheim.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Memurubu boat landing",
         "recommendedMonths": [
           7,
           8,
@@ -194,27 +194,27 @@
       },
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "jotunheimen-knutshe-ridge",
+      "subjectKey": "jotunheimen-knutshoe-ridge",
       "field": "hike",
       "value": {
-        "key": "jotunheimen-knutshe-ridge",
+        "key": "jotunheimen-knutshoe-ridge",
         "name": "Knutshøe Ridge",
-        "routeType": "out-and-back",
-        "description": "Knutshøe Ridge represents a half-day valley, lake or lower-summit route from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "loop",
+        "description": "Knutshøe Ridge circles the narrow Knutshøe ridge with short scrambling sections and steep bypasses.",
+        "difficulty": "Hard",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Vargebakken",
         "recommendedMonths": [
           7,
           8,
@@ -223,13 +223,13 @@
       },
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -238,12 +238,12 @@
       "value": {
         "key": "jotunheimen-gjendetunga",
         "name": "Gjendetunga",
-        "routeType": "loop",
-        "description": "Gjendetunga represents a substantial circuit with varied terrain from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Gjendetunga climbs from the west end of Gjende to the Gjendetunga viewpoint above the lake.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Gjendebu",
         "recommendedMonths": [
           7,
           8,
@@ -252,13 +252,13 @@
       },
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -267,12 +267,12 @@
       "value": {
         "key": "jotunheimen-glittertind-from-glitterheim",
         "name": "Glittertind from Glitterheim",
-        "routeType": "point-to-point",
-        "description": "Glittertind from Glitterheim represents a long ridge, summit or through-route from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Glittertind from Glitterheim makes the long ascent from Glitterheim over rocky high ground to Glittertind.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 9,
         "durationDays": 1,
-        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Glitterheim mountain lodge",
         "recommendedMonths": [
           7,
           8,
@@ -281,13 +281,13 @@
       },
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -297,11 +297,11 @@
         "key": "jotunheimen-gjendesheim-to-memurubu",
         "name": "Gjendesheim to Memurubu",
         "routeType": "point-to-point",
-        "description": "Gjendesheim to Memurubu represents the area's most committing established mountain choice from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "description": "Gjendesheim to Memurubu follows the lower marked route beside Gjende to Memurubu as an alternative to the Besseggen ridge.",
+        "difficulty": "Moderate",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Gjendesheim",
         "recommendedMonths": [
           7,
           8,
@@ -310,7 +310,7 @@
       },
       "source": {
         "key": "jotunheimen-authority",
-        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "url": "https://jotunheimen.com/activities/summer/hiking/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -452,7 +452,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

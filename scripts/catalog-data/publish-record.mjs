@@ -47,15 +47,48 @@ const destinationPath = join(outputDir, `${key}.json`);
 const filename = `${key}.json`;
 const overrides = new Map([[filename, record]]);
 const lockPath = join(workDir, ".catalog-publication.lock");
-try {
-  await mkdir(lockPath);
-} catch (error) {
-  if (error instanceof Error && "code" in error && error.code === "EEXIST") {
-    throw new Error(`Another catalog publication holds ${lockPath}`);
+const lockOwnerPath = join(lockPath, "owner.json");
+const staleLockMs = 15 * 60 * 1000;
+
+async function acquireLock(allowRecovery = true) {
+  try {
+    await mkdir(lockPath);
+    await writeFile(lockOwnerPath, `${JSON.stringify({
+      pid: process.pid,
+      acquiredAt: new Date().toISOString(),
+    }, null, 2)}\n`);
+  } catch (error) {
+    if (!(error instanceof Error && "code" in error && error.code === "EEXIST")) {
+      throw error;
+    }
+    let owner;
+    try {
+      owner = JSON.parse(await readFile(lockOwnerPath, "utf8"));
+    } catch {
+      // A lock without readable ownership metadata is never removed automatically.
+    }
+    const acquiredAt = typeof owner?.acquiredAt === "string"
+      ? Date.parse(owner.acquiredAt)
+      : Number.NaN;
+    if (allowRecovery && Number.isFinite(acquiredAt) && Date.now() - acquiredAt > staleLockMs) {
+      await unlink(lockOwnerPath);
+      await rmdir(lockPath);
+      return await acquireLock(false);
+    }
+    const ownerDescription = Number.isInteger(owner?.pid) && typeof owner?.acquiredAt === "string"
+      ? ` by PID ${owner.pid} since ${owner.acquiredAt}`
+      : "";
+    throw new Error(
+      `Another catalog publication holds ${lockPath}${ownerDescription}. ` +
+      `If no publisher is running, remove this lock directory manually.`,
+      { cause: error },
+    );
   }
-  throw error;
 }
+
+await acquireLock();
 let operationError;
+let lockReleaseError;
 try {
   if (dryRun) {
     const deployment = await compileCatalog({ emit: false, recordOverrides: overrides });
@@ -106,12 +139,13 @@ try {
   throw error;
 } finally {
   try {
+    await unlink(lockOwnerPath);
     await rmdir(lockPath);
-  } catch (lockError) {
+  } catch (error) {
+    lockReleaseError = error;
     if (operationError) {
-      console.error(`Failed to release catalog publication lock: ${lockError instanceof Error ? lockError.message : String(lockError)}`);
-    } else {
-      throw lockError;
+      console.error(`Failed to release catalog publication lock: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 }
+if (lockReleaseError) throw lockReleaseError;

@@ -43,7 +43,16 @@ const catalogMedia = v.object({
   subject: v.literal("destination"),
   kind: v.literal("terrain"),
   creator: v.string(),
-  license: v.string(),
+  license: v.union(
+    v.literal("CC BY 2.0"),
+    v.literal("CC BY 3.0"),
+    v.literal("CC BY-SA 2.0"),
+    v.literal("CC BY-SA 2.5"),
+    v.literal("CC BY-SA 3.0"),
+    v.literal("CC BY-SA 4.0"),
+    v.literal("CC0"),
+    v.literal("Public domain"),
+  ),
   licenseUrl: v.string(),
   attributionText: v.string(),
   attributionUrl: v.string(),
@@ -219,7 +228,9 @@ export default defineSchema({
     attribution: v.string(),
     retrievedAt: v.string(),
     sourceObjectId: v.optional(v.string()),
-  }).index("by_version_hike", ["catalogVersion", "hikeKey"]),
+  })
+    .index("by_version_hike", ["catalogVersion", "hikeKey"])
+    .index("by_version", ["catalogVersion"]),
 
   hikes: defineTable({
     destinationId: v.id("destinations"),

@@ -26,7 +26,7 @@
       "value": "Norway",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A sea-level base for short, steep hikes into dramatic coastal mountains.",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Granite peaks rising straight from the sea, rapidly changing weather and compact but demanding routes.",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "lofoten",
       "field": "guide.highlights",
-      "value": "Svolvær gives access to short, steep island summits where fishing villages, white beaches and open Norwegian Sea appear in the same view. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Svolvær gives access to short, steep island summits where fishing villages, white beaches and open Norwegian Sea appear in the same view. The Svolvær route set makes those qualities concrete: “Reinebringen” and “Ryten and Kvalvika Beach” define different headline days, while “Offersøykammen” offers another scale of outing. “Festvågtind” and “Tjeldbergtinden” extend the choice beyond one famous objective. Together, these Lofoten walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Svolvær.",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "lofoten",
       "field": "guide.terrain",
-      "value": "Jagged granite rises almost from sea level; paths cross bog, heather and loose erosion-prone soil before reaching narrow rocky crests, with little height needed for dramatic relief. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Jagged granite rises almost from sea level; paths cross bog, heather and loose erosion-prone soil before reaching narrow rocky crests, with little height needed for dramatic relief. The published Svolvær walks move through that structure in distinct ways. “Reinebringen” is the shortest listed option at about 1.5 hours from Reinebringen stair trailhead; “Ryten and Kvalvika Beach” is the largest commitment at about 6 hours. On Lofoten terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "lofoten",
       "field": "guide.expectations",
-      "value": "Many walks are short in kilometres but sustained in gradient, parking is constrained at famous trailheads, and wet ground or strong coastal wind can transform an otherwise modest outing. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Many walks are short in kilometres but sustained in gradient, parking is constrained at famous trailheads, and wet ground or strong coastal wind can transform an otherwise modest outing. Access around Svolvær is route-specific: starts include Reinebringen stair trailhead, Innersand trailhead near Fredvang and Offersøya roadside trailhead. A Lofoten point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Svolvær weather, closures and seasonal services against the linked authority. Keep one of the listed Svolvær alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -136,7 +136,7 @@
       ],
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -181,12 +181,12 @@
       "value": {
         "key": "lofoten-reinebringen",
         "name": "Reinebringen",
-        "routeType": "loop",
-        "description": "Reinebringen represents a short landscape or viewpoint walk from the Svolvær catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Reinebringen climbs the stone staircase above Reine to the exposed ridge viewpoint.",
+        "difficulty": "Hard",
+        "durationHours": 1.5,
         "durationDays": 1,
-        "trailhead": "Svolvær area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Reinebringen stair trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -196,13 +196,13 @@
       },
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -211,12 +211,12 @@
       "value": {
         "key": "lofoten-ryten-and-kvalvika-beach",
         "name": "Ryten and Kvalvika Beach",
-        "routeType": "out-and-back",
-        "description": "Ryten and Kvalvika Beach represents a half-day valley, lake or lower-summit route from the Svolvær catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "loop",
+        "description": "Ryten and Kvalvika Beach combines the Ryten summit with a descent toward Kvalvika Beach over boggy and rocky ground.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Svolvær area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Innersand trailhead near Fredvang",
         "recommendedMonths": [
           6,
           7,
@@ -226,27 +226,27 @@
       },
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "lofoten-offersykammen",
+      "subjectKey": "lofoten-offersoykammen",
       "field": "hike",
       "value": {
-        "key": "lofoten-offersykammen",
+        "key": "lofoten-offersoykammen",
         "name": "Offersøykammen",
-        "routeType": "loop",
-        "description": "Offersøykammen represents a substantial circuit with varied terrain from the Svolvær catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Offersøykammen climbs a compact but steep ridge for views over Nappstraumen and the western islands.",
         "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "durationHours": 3,
         "durationDays": 1,
-        "trailhead": "Svolvær area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Offersøya roadside trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -256,13 +256,13 @@
       },
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -271,12 +271,12 @@
       "value": {
         "key": "lofoten-festvagtind",
         "name": "Festvågtind",
-        "routeType": "point-to-point",
-        "description": "Festvågtind represents a long ridge, summit or through-route from the Svolvær catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Festvågtind ascends steep slabs and rough ground above Henningsvær to Festvågtind.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Svolvær area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Festvåg trailhead",
         "recommendedMonths": [
           6,
           7,
@@ -286,13 +286,13 @@
       },
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -301,12 +301,12 @@
       "value": {
         "key": "lofoten-tjeldbergtinden",
         "name": "Tjeldbergtinden",
-        "routeType": "point-to-point",
-        "description": "Tjeldbergtinden represents the area's most committing established mountain choice from the Svolvær catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "loop",
+        "description": "Tjeldbergtinden crosses heath and low rocky tops between Tjeldbergtinden's twin viewpoints.",
+        "difficulty": "Moderate",
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Svolvær area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Osan trailhead outside Svolvær",
         "recommendedMonths": [
           6,
           7,
@@ -316,7 +316,7 @@
       },
       "source": {
         "key": "lofoten-authority",
-        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten/",
+        "url": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -438,7 +438,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

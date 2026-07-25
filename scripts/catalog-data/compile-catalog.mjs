@@ -1,10 +1,12 @@
 import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { validateCatalogRecord } from "./validate-record.mjs";
 import { assessProductRecord } from "./product-record.mjs";
 
 const recordsDirectory = resolve("data/catalog/records");
+const expectationsPath = resolve("data/catalog/expectations.json");
 const outputPaths = {
   digest: resolve("data/catalog/generated/digest.json"),
   details: resolve("data/catalog/generated/details.json"),
@@ -109,6 +111,7 @@ export async function compileCatalog({
   emit = true,
   recordOverrides = new Map(),
 } = {}) {
+  const expectations = JSON.parse(await readFile(expectationsPath, "utf8"));
   const filenames = [...new Set([
     ...(await readdir(recordsDirectory)).filter((filename) => filename.endsWith(".json")),
     ...recordOverrides.keys(),
@@ -181,7 +184,9 @@ export async function compileCatalog({
     if (!assessment.ready) failures.push(`${record.destination.key}: visible record is not ready (${[...assessment.errors, ...assessment.gaps].join(", ")})`);
     visible.push({ record, assessment });
   }
-  if (visible.length < 26) failures.push(`expected at least 26 visible destinations, found ${visible.length}`);
+  if (visible.length < expectations.minimumVisibleDestinations) {
+    failures.push(`expected at least ${expectations.minimumVisibleDestinations} visible destinations, found ${visible.length}`);
+  }
   if (failures.length) throw new Error(`Catalog compilation failed:\n${failures.join("\n")}`);
 
   const digest = visible.map(({ record, assessment }) => createDigest(record, assessment, catalogVersion));
@@ -245,7 +250,7 @@ async function runCli() {
   console.log(`${check ? "verified" : "compiled"} catalog ${deployment.catalogVersion} (${deployment.expected.destinations} destinations, ${deployment.expected.hikes} hikes)`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   try {
     await runCli();
   } catch (error) {

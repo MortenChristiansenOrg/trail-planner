@@ -26,7 +26,7 @@
       "value": "Iceland",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A staffed national-park hub for waterfalls, glacier viewpoints and varied day walks.",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Green slopes beneath ice-capped peaks, with marked paths radiating from a visitor centre and campground.",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "skaftafell",
       "field": "guide.highlights",
-      "value": "Skaftafell is a staffed Vatnajökull National Park hub where paths reach Svartifoss, glacier viewpoints, Morsárdalur and high Kristínartindar. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Skaftafell is a staffed Vatnajökull National Park hub where paths reach Svartifoss, glacier viewpoints, Morsárdalur and high Kristínartindar. The Skaftafell route set makes those qualities concrete: “Svartifoss” and “Sjónarnípa” define different headline days, while “Kristínartindar” offers another scale of outing. “Skaftafellsjökull Viewpoint” and “Morsárdalur” extend the choice beyond one famous objective. Together, these Vatnajökull National Park walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Skaftafell.",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "skaftafell",
       "field": "guide.terrain",
-      "value": "Green birch slopes and basalt columns sit beside broad outwash plains, sharp peaks and outlet glaciers; marked trails climb from sheltered woodland onto moraine, heath and rocky ridges. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Green birch slopes and basalt columns sit beside broad outwash plains, sharp peaks and outlet glaciers; marked trails climb from sheltered woodland onto moraine, heath and rocky ridges. The published Skaftafell walks move through that structure in distinct ways. “Skaftafellsjökull Viewpoint” is the shortest listed option at about 1.5 hours from Skaftafell visitor centre; “Kristínartindar” is the largest commitment at about 8 hours. On Vatnajökull National Park terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "skaftafell",
       "field": "guide.expectations",
-      "value": "The visitor centre, campground and signed junctions make short walks straightforward, while longer routes gain serious elevation and exposure; glacier surfaces remain guided technical terrain rather than extensions of the hiking paths. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The visitor centre, campground and signed junctions make short walks straightforward, while longer routes gain serious elevation and exposure; glacier surfaces remain guided technical terrain rather than extensions of the hiking paths. Access around Skaftafell is route-specific: starts include Skaftafell visitor centre, Skaftafell visitor centre and Skaftafell visitor centre. A Vatnajökull National Park point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Skaftafell weather, closures and seasonal services against the linked authority. Keep one of the listed Skaftafell alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -137,7 +137,7 @@
       ],
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -183,11 +183,11 @@
         "key": "skaftafell-svartifoss",
         "name": "Svartifoss",
         "routeType": "loop",
-        "description": "Svartifoss represents a short landscape or viewpoint walk from the Skaftafell catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Svartifoss climbs through birch woodland to the basalt-columned Svartifoss and returns by signed lower paths.",
         "difficulty": "Easy",
-        "durationHours": 2.5,
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Skaftafell area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Skaftafell visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -198,13 +198,13 @@
       },
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -213,12 +213,12 @@
       "value": {
         "key": "skaftafell-sjonarnipa",
         "name": "Sjónarnípa",
-        "routeType": "out-and-back",
-        "description": "Sjónarnípa represents a half-day valley, lake or lower-summit route from the Skaftafell catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "loop",
+        "description": "Sjónarnípa continues above Svartifoss to Sjónarnípa for a safe overlook of Skaftafellsjökull.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 3.5,
         "durationDays": 1,
-        "trailhead": "Skaftafell area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Skaftafell visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -229,13 +229,13 @@
       },
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -245,11 +245,11 @@
         "key": "skaftafell-kristinartindar",
         "name": "Kristínartindar",
         "routeType": "loop",
-        "description": "Kristínartindar represents a substantial circuit with varied terrain from the Skaftafell catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "description": "Kristínartindar makes the long ridge circuit over Kristínartindar between the Skaftafellsjökull and Morsárjökull valleys.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Skaftafell area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Skaftafell visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -260,13 +260,13 @@
       },
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -275,12 +275,12 @@
       "value": {
         "key": "skaftafell-skaftafellsjokull-viewpoint",
         "name": "Skaftafellsjökull Viewpoint",
-        "routeType": "point-to-point",
-        "description": "Skaftafellsjökull Viewpoint represents a long ridge, summit or through-route from the Skaftafell catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "routeType": "out-and-back",
+        "description": "Skaftafellsjökull Viewpoint uses the low marked path to the public Skaftafellsjökull terminus viewpoint.",
+        "difficulty": "Easy",
+        "durationHours": 1.5,
         "durationDays": 1,
-        "trailhead": "Skaftafell area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Skaftafell visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -291,13 +291,13 @@
       },
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -306,12 +306,12 @@
       "value": {
         "key": "skaftafell-morsardalur",
         "name": "Morsárdalur",
-        "routeType": "point-to-point",
-        "description": "Morsárdalur represents the area's most committing established mountain choice from the Skaftafell catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Morsárdalur follows the long Morsárdalur valley route toward the Morsárjökull viewpoint.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Skaftafell area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Skaftafell visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -322,7 +322,7 @@
       },
       "source": {
         "key": "skaftafell-authority",
-        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/hiking",
+        "url": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -443,7 +443,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

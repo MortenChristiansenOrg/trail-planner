@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "fort-william",
       "field": "guide.highlights",
-      "value": "Fort William anchors Ben Nevis, Glen Nevis, Steall Falls and the western end of the West Highland Way beneath Britain's highest mountain. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Fort William anchors Ben Nevis, Glen Nevis, Steall Falls and the western end of the West Highland Way beneath Britain's highest mountain. The Fort William route set makes those qualities concrete: “Ben Nevis Mountain Track” and “Càrn Mòr Dearg Arête” define different headline days, while “Cow Hill Circuit” offers another scale of outing. “Steall Falls and Nevis Gorge” and “West Highland Way from Kinlochleven” extend the choice beyond one famous objective. Together, these West Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
       "source": {
         "key": "fort-william-authority",
         "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "fort-william",
       "field": "guide.terrain",
-      "value": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. The published Fort William walks move through that structure in distinct ways. “Steall Falls and Nevis Gorge” is the shortest listed option at about 2 hours from Upper Glen Nevis car park; “Càrn Mòr Dearg Arête” is the largest commitment at about 10 hours. On West Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "fort-william-authority",
         "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "fort-william",
       "field": "guide.expectations",
-      "value": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. Access around Fort William is route-specific: starts include Glen Nevis visitor centre, North Face car park and Fort William town centre. A West Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Fort William weather, closures and seasonal services against the linked authority. Keep one of the listed Fort William alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "fort-william-authority",
         "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
@@ -182,12 +182,12 @@
       "value": {
         "key": "fort-william-ben-nevis-mountain-track",
         "name": "Ben Nevis Mountain Track",
-        "routeType": "loop",
-        "description": "Ben Nevis Mountain Track represents a short landscape or viewpoint walk from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Ben Nevis Mountain Track uses the Mountain Track for the sustained ascent of Ben Nevis, where the summit plateau demands navigation in cloud.",
+        "difficulty": "Hard",
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Glen Nevis visitor centre",
         "recommendedMonths": [
           5,
           6,
@@ -204,7 +204,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -213,12 +213,12 @@
       "value": {
         "key": "fort-william-carn-mor-dearg-arete",
         "name": "Càrn Mòr Dearg Arête",
-        "routeType": "out-and-back",
-        "description": "Càrn Mòr Dearg Arête represents a half-day valley, lake or lower-summit route from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "routeType": "loop",
+        "description": "Càrn Mòr Dearg Arête climbs Càrn Mòr Dearg before traversing the exposed boulder arête to Ben Nevis.",
+        "difficulty": "Expert",
+        "durationHours": 10,
         "durationDays": 1,
-        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "North Face car park",
         "recommendedMonths": [
           5,
           6,
@@ -235,7 +235,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -245,11 +245,11 @@
         "key": "fort-william-cow-hill-circuit",
         "name": "Cow Hill Circuit",
         "routeType": "loop",
-        "description": "Cow Hill Circuit represents a substantial circuit with varied terrain from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Cow Hill Circuit circles Cow Hill on woodland and open hillside paths directly above town.",
         "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "durationHours": 3.5,
         "durationDays": 1,
-        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Fort William town centre",
         "recommendedMonths": [
           5,
           6,
@@ -266,7 +266,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -275,12 +275,12 @@
       "value": {
         "key": "fort-william-steall-falls-and-nevis-gorge",
         "name": "Steall Falls and Nevis Gorge",
-        "routeType": "point-to-point",
-        "description": "Steall Falls and Nevis Gorge represents a long ridge, summit or through-route from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Hard",
-        "durationHours": 8.5,
+        "routeType": "out-and-back",
+        "description": "Steall Falls and Nevis Gorge passes through Nevis Gorge to the meadow viewpoint below Steall Falls.",
+        "difficulty": "Moderate",
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Upper Glen Nevis car park",
         "recommendedMonths": [
           5,
           6,
@@ -297,7 +297,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -307,11 +307,11 @@
         "key": "fort-william-west-highland-way-from-kinlochleven",
         "name": "West Highland Way from Kinlochleven",
         "routeType": "point-to-point",
-        "description": "West Highland Way from Kinlochleven represents the area's most committing established mountain choice from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "description": "West Highland Way from Kinlochleven walks the final West Highland Way stage over the Lairig Mòr to Fort William.",
+        "difficulty": "Hard",
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kinlochleven",
         "recommendedMonths": [
           5,
           6,
@@ -464,7 +464,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

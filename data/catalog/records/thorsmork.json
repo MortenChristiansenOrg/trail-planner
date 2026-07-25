@@ -26,7 +26,7 @@
       "value": "Iceland",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -41,7 +41,7 @@
       "value": [],
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -56,7 +56,7 @@
       "value": "A sheltered highland valley and major Laugavegur access point between glaciers and braided rivers.",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -71,7 +71,7 @@
       "value": "Birch-covered ridges, dark volcanic gullies and glacier views, reached by specialist highland buses.",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -83,10 +83,10 @@
       "domain": "destination-core",
       "subjectKey": "thorsmork",
       "field": "guide.highlights",
-      "value": "Þórsmörk is a sheltered birch-filled valley between Eyjafjallajökull, Mýrdalsjökull and braided glacial rivers, and a junction for Laugavegur and Fimmvörðuháls. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Þórsmörk is a sheltered birch-filled valley between Eyjafjallajökull, Mýrdalsjökull and braided glacial rivers, and a junction for Laugavegur and Fimmvörðuháls. The Þórsmörk route set makes those qualities concrete: “Valahnúkur” and “Tindfjöll Circle” define different headline days, while “Útigönguhöfði” offers another scale of outing. “Fimmvörðuháls to Magni and Móði” and “Laugavegur to Emstrur” extend the choice beyond one famous objective. Together, these Southern Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Þórsmörk.",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -98,10 +98,10 @@
       "domain": "destination-core",
       "subjectKey": "thorsmork",
       "field": "guide.terrain",
-      "value": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes. The published Þórsmörk walks move through that structure in distinct ways. “Valahnúkur” is the shortest listed option at about 2 hours from Húsadalur; “Laugavegur to Emstrur” is the largest commitment at about 10 hours. On Southern Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -113,10 +113,10 @@
       "domain": "destination-core",
       "subjectKey": "thorsmork",
       "field": "guide.expectations",
-      "value": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. Access around Þórsmörk is route-specific: starts include Húsadalur, Langidalur hut and Básar hut. A Southern Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Þórsmörk weather, closures and seasonal services against the linked authority. Keep one of the listed Þórsmörk alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -136,7 +136,7 @@
       ],
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -182,11 +182,11 @@
         "key": "thorsmork-valahnukur",
         "name": "Valahnúkur",
         "routeType": "loop",
-        "description": "Valahnúkur represents a short landscape or viewpoint walk from the Þórsmörk catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "description": "Valahnúkur climbs the compact Valahnúkur ridge between Húsadalur and Langidalur for glacier and valley views.",
+        "difficulty": "Moderate",
+        "durationHours": 2,
         "durationDays": 1,
-        "trailhead": "Þórsmörk area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Húsadalur",
         "recommendedMonths": [
           6,
           7,
@@ -196,13 +196,13 @@
       },
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -211,12 +211,12 @@
       "value": {
         "key": "thorsmork-tindfjoll-circle",
         "name": "Tindfjöll Circle",
-        "routeType": "out-and-back",
-        "description": "Tindfjöll Circle represents a half-day valley, lake or lower-summit route from the Þórsmörk catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "loop",
+        "description": "Tindfjöll Circle circles the Tindfjöll ridges through birch woods and narrow green gullies.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 4,
         "durationDays": 1,
-        "trailhead": "Þórsmörk area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Langidalur hut",
         "recommendedMonths": [
           6,
           7,
@@ -226,27 +226,27 @@
       },
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "thorsmork-utigonguhofi",
+      "subjectKey": "thorsmork-utigonguhofdi",
       "field": "hike",
       "value": {
-        "key": "thorsmork-utigonguhofi",
+        "key": "thorsmork-utigonguhofdi",
         "name": "Útigönguhöfði",
         "routeType": "loop",
-        "description": "Útigönguhöfði represents a substantial circuit with varied terrain from the Þórsmörk catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "description": "Útigönguhöfði climbs the steep Útigönguhöfði ridge above the Krossá valley and returns through sheltered gullies.",
+        "difficulty": "Hard",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Þórsmörk area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Básar hut",
         "recommendedMonths": [
           6,
           7,
@@ -256,27 +256,27 @@
       },
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
-      "subjectKey": "thorsmork-fimmvoruhals-to-magni-and-moi",
+      "subjectKey": "thorsmork-fimmvorduhals-to-magni-and-modi",
       "field": "hike",
       "value": {
-        "key": "thorsmork-fimmvoruhals-to-magni-and-moi",
+        "key": "thorsmork-fimmvorduhals-to-magni-and-modi",
         "name": "Fimmvörðuháls to Magni and Móði",
-        "routeType": "point-to-point",
-        "description": "Fimmvörðuháls to Magni and Móði represents a long ridge, summit or through-route from the Þórsmörk catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "out-and-back",
+        "description": "Fimmvörðuháls to Magni and Móði follows the Fimmvörðuháls route onto the 2010 volcanic craters Magni and Móði before turning back.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Þórsmörk area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Básar hut",
         "recommendedMonths": [
           6,
           7,
@@ -286,13 +286,13 @@
       },
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -302,11 +302,11 @@
         "key": "thorsmork-laugavegur-to-emstrur",
         "name": "Laugavegur to Emstrur",
         "routeType": "point-to-point",
-        "description": "Laugavegur to Emstrur represents the area's most committing established mountain choice from the Þórsmörk catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "description": "Laugavegur to Emstrur walks the southern Laugavegur stage across rolling highland terrain to Emstrur hut.",
+        "difficulty": "Hard",
+        "durationHours": 10,
         "durationDays": 1,
-        "trailhead": "Þórsmörk area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Langidalur hut",
         "recommendedMonths": [
           6,
           7,
@@ -316,7 +316,7 @@
       },
       "source": {
         "key": "thorsmork-authority",
-        "url": "https://www.fi.is/en/hiking-trails/trails/thorsmork",
+        "url": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
         "kind": "official"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -437,7 +437,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

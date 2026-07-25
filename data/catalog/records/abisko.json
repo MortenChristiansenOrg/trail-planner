@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "abisko",
       "field": "guide.highlights",
-      "value": "Abisko combines a railway-served national-park entrance, the northern Kungsleden trailhead and views across Torneträsk toward the high border mountains. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Abisko combines a railway-served national-park entrance, the northern Kungsleden trailhead and views across Torneträsk toward the high border mountains. The Abisko route set makes those qualities concrete: “Abisko Canyon” and “Abisko to Abiskojaure” define different headline days, while “Njullá Summit” offers another scale of outing. “Kårsavagge” and “Trollsjön from Låktatjåkka” extend the choice beyond one famous objective. Together, these Swedish Lapland walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Abisko.",
       "source": {
         "key": "abisko-authority",
         "url": "https://www.swedishtouristassociation.com/areas/abisko/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "abisko",
       "field": "guide.terrain",
-      "value": "The Abiskojåkka canyon cuts through birch woodland before trails reach open fell, broad U-shaped valleys and higher rocky ground around Njullá and Kårsavagge. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "The Abiskojåkka canyon cuts through birch woodland before trails reach open fell, broad U-shaped valleys and higher rocky ground around Njullá and Kårsavagge. The published Abisko walks move through that structure in distinct ways. “Abisko Canyon” is the shortest listed option at about 1.5 hours from Abisko naturum; “Kårsavagge” is the largest commitment at about 8 hours. On Swedish Lapland terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "abisko-authority",
         "url": "https://www.swedishtouristassociation.com/areas/abisko/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "abisko",
       "field": "guide.expectations",
-      "value": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable. Access around Abisko is route-specific: starts include Abisko naturum, Kungsleden trailhead at Abisko Turiststation and Abisko Turiststation. A Swedish Lapland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Abisko weather, closures and seasonal services against the linked authority. Keep one of the listed Abisko alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "abisko-authority",
         "url": "https://www.swedishtouristassociation.com/areas/abisko/",
@@ -149,23 +149,23 @@
       "field": "hero",
       "value": {
         "imageUrl": "/catalog-media/abisko.jpg",
-        "assetSha256": "5c765c7ecb98bdf89a011f39411afc41f6070352c7c290ae981cf93f732d0075",
-        "width": 5442,
-        "height": 3628,
-        "alt": "Swedish Lapland mountain landscape seen from the Abisko hiking area",
+        "assetSha256": "e986e872f907b1f12a0a900cb19010b2c90fa20a9ea148588f1debe4fa8e1004",
+        "width": 3888,
+        "height": 2592,
+        "alt": "Snow-streaked Abisko mountains above birch forest and a fast river",
         "subject": "destination",
         "kind": "terrain",
-        "creator": "Pavel Shyshkouski",
+        "creator": "Mickaël Delcey",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "attributionText": "Aurora in Abisko near Torneträsk.jpg by Pavel Shyshkouski · CC BY-SA 4.0",
-        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Aurora%20in%20Abisko%20near%20Tornetr%C3%A4sk.jpg",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aurora%20in%20Abisko%20near%20Tornetr%C3%A4sk.jpg",
+        "attributionText": "Abisko mountains.jpg by Mickaël Delcey · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
         "verifiedAt": "2026-07-25"
       },
       "source": {
         "key": "abisko-commons",
-        "url": "https://commons.wikimedia.org/wiki/File:Aurora%20in%20Abisko%20near%20Tornetr%C3%A4sk.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
         "kind": "open-data"
       },
       "retrievedAt": "2026-07-25T20:00:00.000Z",
@@ -181,11 +181,11 @@
         "key": "abisko-abisko-canyon",
         "name": "Abisko Canyon",
         "routeType": "loop",
-        "description": "Abisko Canyon represents a short landscape or viewpoint walk from the Abisko catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Abisko Canyon follows the signed canyon path beside the Abiskojåkka, using footbridges and viewpoints close to the national-park entrance.",
         "difficulty": "Easy",
-        "durationHours": 2.5,
+        "durationHours": 1.5,
         "durationDays": 1,
-        "trailhead": "Abisko area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Abisko naturum",
         "recommendedMonths": [
           7,
           8,
@@ -200,7 +200,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -209,12 +209,12 @@
       "value": {
         "key": "abisko-abisko-to-abiskojaure",
         "name": "Abisko to Abiskojaure",
-        "routeType": "out-and-back",
-        "description": "Abisko to Abiskojaure represents a half-day valley, lake or lower-summit route from the Abisko catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "point-to-point",
+        "description": "Abisko to Abiskojaure covers the opening Kungsleden stage through birch woods and open valley terrain to Abiskojaure mountain hut.",
         "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "durationHours": 7,
         "durationDays": 1,
-        "trailhead": "Abisko area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Kungsleden trailhead at Abisko Turiststation",
         "recommendedMonths": [
           7,
           8,
@@ -229,7 +229,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -238,12 +238,12 @@
       "value": {
         "key": "abisko-njulla-summit",
         "name": "Njullá Summit",
-        "routeType": "loop",
-        "description": "Njullá Summit represents a substantial circuit with varied terrain from the Abisko catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "routeType": "out-and-back",
+        "description": "Njullá Summit climbs from Torneträsk through the birch zone onto exposed fell slopes below the Njullá summit.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Abisko area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Abisko Turiststation",
         "recommendedMonths": [
           7,
           8,
@@ -258,7 +258,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -268,11 +268,11 @@
         "key": "abisko-karsavagge",
         "name": "Kårsavagge",
         "routeType": "point-to-point",
-        "description": "Kårsavagge represents a long ridge, summit or through-route from the Abisko catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Kårsavagge travels deep into the broad Kårsavagge valley toward the STF hut, with a long return or planned hut stay required.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Abisko area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Abisko Östra station",
         "recommendedMonths": [
           7,
           8,
@@ -287,7 +287,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -296,12 +296,12 @@
       "value": {
         "key": "abisko-trollsjon-from-laktatjakka",
         "name": "Trollsjön from Låktatjåkka",
-        "routeType": "point-to-point",
-        "description": "Trollsjön from Låktatjåkka represents the area's most committing established mountain choice from the Abisko catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
+        "routeType": "out-and-back",
+        "description": "Trollsjön from Låktatjåkka crosses rocky ground into Kärkevagge before reaching the clear mountain lake known as Trollsjön.",
+        "difficulty": "Moderate",
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Abisko area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "E10 trailhead near Låktatjåkka station",
         "recommendedMonths": [
           7,
           8,
@@ -452,7 +452,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

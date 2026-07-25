@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "hemavan",
       "field": "guide.highlights",
-      "value": "Hemavan is the southern Kungsleden terminus and a direct gateway to Viterskalet, Syterskalet and the Vindelfjällen nature reserve. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "value": "Hemavan is the southern Kungsleden terminus and a direct gateway to Viterskalet, Syterskalet and the Vindelfjällen nature reserve. The Hemavan route set makes those qualities concrete: “Kungsleden to Viterskalet” and “Kobåset” define different headline days, while “Drottningleden” offers another scale of outing. “Syterskalet” and “Hemavan to Ammarnäs” extend the choice beyond one famous objective. Together, these Vindelfjällen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Hemavan.",
       "source": {
         "key": "hemavan-authority",
         "url": "https://hemavan.nu/en/see-and-do-summer/hiking/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "hemavan",
       "field": "guide.terrain",
-      "value": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "value": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt. The published Hemavan walks move through that structure in distinct ways. “Drottningleden” is the shortest listed option at about 5 hours from Laisaliden; “Hemavan to Ammarnäs” is the largest commitment at about 40 hours across 5 days. On Vindelfjällen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "hemavan-authority",
         "url": "https://hemavan.nu/en/see-and-do-summer/hiking/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "hemavan",
       "field": "guide.expectations",
-      "value": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "value": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. Access around Hemavan is route-specific: starts include Hemavan naturum, Hemavan gondola top station and Laisaliden. A Vindelfjällen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Hemavan weather, closures and seasonal services against the linked authority. Keep one of the listed Hemavan alternatives available when the principal route is unsuitable.",
       "source": {
         "key": "hemavan-authority",
         "url": "https://hemavan.nu/en/see-and-do-summer/hiking/",
@@ -181,12 +181,12 @@
       "value": {
         "key": "hemavan-kungsleden-to-viterskalet",
         "name": "Kungsleden to Viterskalet",
-        "routeType": "loop",
-        "description": "Kungsleden to Viterskalet represents a short landscape or viewpoint walk from the Hemavan catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
+        "routeType": "out-and-back",
+        "description": "Kungsleden to Viterskalet follows the southern Kungsleden through birch forest and into the U-shaped Viterskalet valley.",
+        "difficulty": "Moderate",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Hemavan area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hemavan naturum",
         "recommendedMonths": [
           6,
           7,
@@ -202,7 +202,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -212,11 +212,11 @@
         "key": "hemavan-kobaset",
         "name": "Kobåset",
         "routeType": "out-and-back",
-        "description": "Kobåset represents a half-day valley, lake or lower-summit route from the Hemavan catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
+        "description": "Kobåset climbs into the steep-sided Kobåset hanging valley below Norra Storfjället.",
+        "difficulty": "Hard",
+        "durationHours": 6,
         "durationDays": 1,
-        "trailhead": "Hemavan area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Hemavan gondola top station",
         "recommendedMonths": [
           6,
           7,
@@ -232,7 +232,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -241,12 +241,12 @@
       "value": {
         "key": "hemavan-drottningleden",
         "name": "Drottningleden",
-        "routeType": "loop",
-        "description": "Drottningleden represents a substantial circuit with varied terrain from the Hemavan catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "routeType": "point-to-point",
+        "description": "Drottningleden traverses the signed Drottningleden across open fell to Hemavan and requires transport to one end.",
         "difficulty": "Moderate",
-        "durationHours": 6.5,
+        "durationHours": 5,
         "durationDays": 1,
-        "trailhead": "Hemavan area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Laisaliden",
         "recommendedMonths": [
           6,
           7,
@@ -262,7 +262,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -272,11 +272,11 @@
         "key": "hemavan-syterskalet",
         "name": "Syterskalet",
         "routeType": "point-to-point",
-        "description": "Syterskalet represents a long ridge, summit or through-route from the Hemavan catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "description": "Syterskalet crosses the full Syterskalet valley between Viterskalet and Syter huts as a remote hut-to-hut stage.",
         "difficulty": "Hard",
-        "durationHours": 8.5,
+        "durationHours": 8,
         "durationDays": 1,
-        "trailhead": "Hemavan area; confirm the specific start and any transfer with the linked route authority",
+        "trailhead": "Viterskalet mountain hut",
         "recommendedMonths": [
           6,
           7,
@@ -292,7 +292,7 @@
       "retrievedAt": "2026-07-25T20:00:00.000Z",
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "domain": "hikes",
@@ -302,11 +302,11 @@
         "key": "hemavan-hemavan-to-ammarnas",
         "name": "Hemavan to Ammarnäs",
         "routeType": "point-to-point",
-        "description": "Hemavan to Ammarnäs represents the area's most committing established mountain choice from the Hemavan catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
-        "difficulty": "Expert",
-        "durationHours": 12,
-        "durationDays": 1,
-        "trailhead": "Hemavan area; confirm the specific start and any transfer with the linked route authority",
+        "description": "Hemavan to Ammarnäs covers the five-day southern Kungsleden section through Vindelfjällen to Ammarnäs with four planned overnight stops.",
+        "difficulty": "Hard",
+        "durationHours": 40,
+        "durationDays": 5,
+        "trailhead": "Hemavan naturum",
         "recommendedMonths": [
           6,
           7,
@@ -438,7 +438,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
       ]
     },
     {

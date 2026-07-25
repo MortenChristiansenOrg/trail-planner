@@ -154,6 +154,41 @@ function isTravelOptionSnapshot(value: unknown): value is TravelOptionSnapshot {
   }
 }
 
+function isExploreSearch(value: unknown): value is ExploreSearch {
+  return isRecord(value) &&
+    typeof value.month === "number" &&
+    Number.isInteger(value.month) &&
+    value.month >= 1 &&
+    value.month <= 12 &&
+    typeof value.participants === "number" &&
+    Number.isInteger(value.participants) &&
+    value.participants >= 1 &&
+    typeof value.days === "number" &&
+    Number.isInteger(value.days) &&
+    value.days >= 1 &&
+    typeof value.budget === "number" &&
+    Number.isFinite(value.budget) &&
+    value.budget >= 0 &&
+    Array.isArray(value.modes) &&
+    value.modes.every((mode) => typeof mode === "string" && ["car", "train", "plane"].includes(mode)) &&
+    typeof value.maxLayovers === "number" &&
+    Number.isInteger(value.maxLayovers) &&
+    value.maxLayovers >= 0 &&
+    typeof value.maxDriveHours === "number" &&
+    Number.isFinite(value.maxDriveHours) &&
+    value.maxDriveHours >= 0 &&
+    typeof value.maxFlightDkk === "number" &&
+    Number.isFinite(value.maxFlightDkk) &&
+    value.maxFlightDkk >= 0 &&
+    Array.isArray(value.countries) &&
+    value.countries.every((country) => typeof country === "string") &&
+    typeof value.seasonTolerance === "number" &&
+    Number.isInteger(value.seasonTolerance) &&
+    value.seasonTolerance >= 0 &&
+    (value.selected === undefined || typeof value.selected === "string") &&
+    (value.details === undefined || typeof value.details === "boolean");
+}
+
 export function parsePlannedTrip(value: unknown): PlannedTrip | null {
   if (!isRecord(value)) return null;
   if (
@@ -161,12 +196,15 @@ export function parsePlannedTrip(value: unknown): PlannedTrip | null {
     typeof value.destinationId !== "string" ||
     typeof value.title !== "string" ||
     !isFiniteNumber(value.plannedMonth) ||
+    !Number.isInteger(value.plannedMonth) ||
+    value.plannedMonth < 1 ||
+    value.plannedMonth > 12 ||
     !isFiniteNumber(value.participants) ||
     value.participants < 1 ||
     !isFiniteNumber(value.tripDays) ||
     value.tripDays < 1 ||
     !isFiniteNumber(value.maxBudgetDkk) ||
-    !isRecord(value.exploreSnapshot) ||
+    !isExploreSearch(value.exploreSnapshot) ||
     !Array.isArray(value.travelSnapshot) ||
     !value.travelSnapshot.every(isTravelEstimate) ||
     !Array.isArray(value.days) ||

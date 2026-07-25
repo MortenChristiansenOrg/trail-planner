@@ -26,12 +26,13 @@ const deployArgs = [
   captureCommand,
 ];
 const vercelEnvironment = process.env.VERCEL_ENV;
+await run("pnpm", ["catalog:check"]);
 if (vercelEnvironment === "preview") {
   deployArgs.push("--preview-run", "ingest/catalogSync:synchronize");
 }
 
 await run("pnpm", deployArgs);
-if (vercelEnvironment !== "preview") {
+if (vercelEnvironment === "production") {
   await run("pnpm", ["exec", "convex", "run", "ingest/catalogSync:synchronize", "{}", "--prod"]);
 }
 

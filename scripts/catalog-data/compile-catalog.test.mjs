@@ -41,6 +41,20 @@ describe("catalog compiler", () => {
     );
   });
 
+  test("reports malformed version-three structure without throwing", () => {
+    expect(validateCatalogRecord({ schemaVersion: 3 })).toEqual(
+      expect.arrayContaining([
+        "destination.key must be kebab-case",
+        "claims must contain at least one published claim",
+      ]),
+    );
+    expect(validateCatalogRecord({
+      schemaVersion: 3,
+      destination: { visibility: "visible" },
+      claims: "not-an-array",
+    })).toEqual(expect.arrayContaining(["claims must contain at least one published claim"]));
+  });
+
   test("rejects incomplete guide, media attribution, and geometry provenance", () => {
     const incompleteGuide = structuredClone(abisko);
     incompleteGuide.claims.find((claim) => claim.field === "guide.highlights").value = "Too short.";
