@@ -6,6 +6,36 @@ test.beforeEach(async ({ page }) => {
   await page.reload();
 });
 
+test.describe("central planning entry points", () => {
+  test("starts and reopens a plan from the Explore page", async ({ page }) => {
+    await page.goto("/explore?month=7&selected=innsbruck");
+
+    await page.getByRole("button", { name: "Plan this trip" }).click();
+    await expect(page).toHaveURL(/\/trips\/[^/?]+$/);
+    await expect(page.getByRole("heading", { name: "Innsbruck in July" })).toBeVisible();
+
+    await page.getByRole("link", { name: /Planned trips/ }).first().click();
+    await expect(page.getByRole("heading", { name: "Planned trips" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Innsbruck in July" })).toBeVisible();
+
+    await page.getByRole("link", { name: /Open plan/ }).click();
+    await expect(page).toHaveURL(/\/trips\/[^/?]+$/);
+    await expect(page.getByRole("heading", { name: "Innsbruck in July" })).toBeVisible();
+  });
+
+  test("starts a plan from the destination details", async ({ page }) => {
+    await page.goto("/explore?month=7&selected=innsbruck");
+
+    await page.getByRole("button", { name: "View area details" }).click();
+    const details = page.getByRole("dialog", { name: "Innsbruck" });
+    await expect(details).toBeVisible();
+    await details.getByRole("button", { name: "Plan Innsbruck" }).click();
+
+    await expect(page).toHaveURL(/\/trips\/[^/?]+$/);
+    await expect(page.getByRole("heading", { name: "Innsbruck in July" })).toBeVisible();
+  });
+});
+
 test("core planning flow remains connected", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "The complete mutation flow is covered once on desktop.");
 
