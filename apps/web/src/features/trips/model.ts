@@ -123,22 +123,57 @@ function baseCostItems(travel: TravelEstimate[], participants: number): TripCost
     categoryItem("lodging", "Lodging"),
     categoryItem("fees", "Fees"),
     categoryItem("custom", "Other costs"),
-    ...travel.filter((estimate) => estimate.available).map((estimate): TripCostItem => {
+    ...travel.filter((estimate) => estimate.available).flatMap((estimate): TripCostItem[] => {
       const unitCost = { amount: estimate.costPerPersonDkk, currency: "DKK" as const };
-      return {
+      const modeItem: TripCostItem = {
         id: `cost-travel-${estimate.mode}`,
         label: travelLabels[estimate.mode],
         category: "travel",
         parentItemId: categoryIds.travel,
-        unitCost,
-        chargingScope: "per-person",
+        unitCost: estimate.costBreakdown
+          ? { amount: 0, currency: "DKK" }
+          : unitCost,
+        chargingScope: estimate.pricingBasis ?? "per-person",
         quantity: 1,
-        calculatedCost: calculateScopedCost(unitCost, "per-person", 1, participants),
+        calculatedCost: estimate.costBreakdown
+          ? { amount: 0, currency: "DKK" }
+          : calculateScopedCost(
+              unitCost,
+              estimate.pricingBasis ?? "per-person",
+              1,
+              participants,
+            ),
         source: estimate.note,
         confidence: estimate.confidence,
         priceType: estimate.mode === "plane" ? "sampled" : "estimated",
         travelMode: estimate.mode,
       };
+      if (!estimate.costBreakdown) return [modeItem];
+      return [
+        modeItem,
+        ...estimate.costBreakdown.components.map((component): TripCostItem => {
+          const componentCost = {
+            amount: component.amountDkk,
+            currency: "DKK" as const,
+          };
+          return {
+            id: `cost-travel-${estimate.mode}-${component.kind}`,
+            label: component.label,
+            category: "travel",
+            parentItemId: modeItem.id,
+            unitCost: componentCost,
+            chargingScope: "per-group",
+            quantity: 1,
+            calculatedCost: componentCost,
+            source: component.estimated
+              ? "Vehicle profile estimate"
+              : "User vehicle and trip preference",
+            confidence: component.estimated ? "medium" : "high",
+            priceType: component.estimated ? "estimated" : "manual",
+            travelMode: estimate.mode,
+          };
+        }),
+      ];
     }),
   ];
 }

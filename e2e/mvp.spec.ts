@@ -1,9 +1,87 @@
 import { expect, test } from "@playwright/test";
 
+const defaultPreferences = {
+  version: 1,
+  homeCity: {
+    key: "aalborg",
+    name: "Aalborg",
+    countryCode: "DK",
+    coordinates: [9.9217, 57.0488],
+  },
+  vehicle: {
+    version: 1,
+    powertrain: "ev",
+    consumptionPer100Km: 20,
+    energyPricePerUnit: 2.5,
+    tollsDkk: 0,
+    ferriesDkk: 0,
+    parkingDkk: 0,
+  },
+};
+const preferenceStorageKey = "trail-planner:preferences:v1";
+const defaultVehicleKey = "v1-ev-20-2.5-none-none-0-0-0";
+
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
+  await page.evaluate(
+    ([key, preferences]) =>
+      localStorage.setItem(key, JSON.stringify(preferences)),
+    [preferenceStorageKey, defaultPreferences] as const,
+  );
   await page.reload();
+});
+
+test("first-time visitors choose a mapped home city before Explore", async ({
+  page,
+}) => {
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+
+  await page.getByRole("button", { name: "Explore destinations" }).click();
+  await expect(
+    page.getByText("Choose your home city before exploring."),
+  ).toBeVisible();
+  await page.getByRole("combobox", { name: "Home city" }).click();
+  await page.getByRole("option", { name: "Aarhus" }).click();
+  await page.getByRole("button", { name: "Explore destinations" }).click();
+
+  await expect(page.getByText("From Aarhus")).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        (key) => JSON.parse(localStorage.getItem(key) ?? "null")?.homeCity?.key,
+        preferenceStorageKey,
+      ),
+    )
+    .toBe("aarhus");
+});
+
+test("settings update the origin and itemized vehicle estimate", async ({
+  page,
+}) => {
+  await page.goto("/settings");
+  await page.getByRole("combobox", { name: "Home city" }).click();
+  await page.getByRole("option", { name: "Copenhagen" }).click();
+  await page.getByRole("combobox", { name: "Powertrain" }).click();
+  await page.getByRole("option", { name: "Petrol" }).click();
+  await page.getByRole("spinbutton", { name: "Consumption (litres/100 km)" }).fill("7");
+  await page.getByRole("spinbutton", { name: "Fuel price (DKK/litres)" }).fill("16");
+  await page.getByRole("button", { name: "Save settings" }).click();
+  await expect(page.getByText("Settings saved")).toBeVisible();
+
+  await page.goto("/explore?month=7");
+  await expect(page.getByText("From Copenhagen")).toBeVisible();
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({
+    hasText: "Own car",
+  });
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  const dialog = page.getByRole("dialog", {
+    name: /Drive from Copenhagen|Drive and ferry from Copenhagen/,
+  });
+  await expect(dialog).toContainText("Petrol fuel");
+  await expect(dialog).toContainText("Vehicle profile estimate");
 });
 
 test.describe("central planning entry points", () => {
@@ -113,7 +191,7 @@ test("every available travel mode exposes complete stage details", async ({ page
 
   const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe(`osrm-driving-innsbruck--aalborg--${defaultVehicleKey}`);
   await carChoice.getByRole("button", { name: "Stage details" }).click();
   const carDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
   await expect(carDialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
@@ -137,7 +215,7 @@ test("every available travel mode exposes complete stage details", async ({ page
   routingAvailable = false;
   await page.reload();
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe(`osrm-driving-innsbruck--aalborg--${defaultVehicleKey}`);
 
   await page.goto("/explore?month=7&selected=innsbruck");
   await page.getByRole("button", { name: "View area details" }).click();
@@ -179,7 +257,7 @@ test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async 
 
   const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-aalborg-berchtesgaden");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-berchtesgaden--aalborg--legacy");
   await carChoice.getByRole("button", { name: "Stage details" }).click();
 
   const dialog = page.getByRole("dialog", { name: "Drive from Aalborg to Berchtesgaden" });
@@ -189,8 +267,8 @@ test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async 
   await page.keyboard.press("Escape");
 
   for (const [label, optionId, dialogName] of [
-    ["Train + bus", "catalog-estimate-aalborg-berchtesgaden-train", "Train + bus from Aalborg to Berchtesgaden"],
-    ["Airplane", "catalog-estimate-aalborg-berchtesgaden-plane", "Flight + ground transfer from Aalborg to Berchtesgaden"],
+    ["Train + bus", "catalog-estimate-berchtesgaden-train--aalborg--legacy", "Train + bus from Aalborg to Berchtesgaden"],
+    ["Airplane", "catalog-estimate-berchtesgaden-plane--aalborg--legacy", "Flight + ground transfer from Aalborg to Berchtesgaden"],
   ] as const) {
     const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
     await choice.getByRole("button", { name: label === "Train + bus" ? /Train \+ bus/ : /Airplane/ }).click();

@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/react";
-import { Map, Menu, Route, UserRound } from "lucide-react";
+import { Map, Menu, Route, Settings, UserRound } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -69,6 +69,9 @@ function AppHeader() {
         <Link className={pathname.startsWith("/trips") ? "is-active" : ""} to="/trips">
           <Route /> Planned trips
         </Link>
+        <Link className={pathname.startsWith("/settings") ? "is-active" : ""} to="/settings">
+          <Settings /> Settings
+        </Link>
       </nav>
       <div className="header-actions">
         <AuthControls auth={auth} />
@@ -89,6 +92,9 @@ function AppHeader() {
               </SheetClose>
               <SheetClose asChild>
                 <Link to="/trips"><Route /> Planned trips</Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link to="/settings"><Settings /> Settings</Link>
               </SheetClose>
             </nav>
           </SheetContent>

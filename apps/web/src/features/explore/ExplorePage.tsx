@@ -51,6 +51,11 @@ import {
 import { TrailMap } from "@/features/maps/TrailMap";
 import { useDrivingRoute } from "@/features/maps/useDrivingRoute";
 import { useTripStore } from "@/features/trips/TripStore";
+import { usePreferences } from "@/features/preferences/PreferencesSession";
+import {
+  personalizeDestinations,
+  travelEstimateTotal,
+} from "@/features/preferences/personalizeTravel";
 
 export function ExplorePage({
   search,
@@ -62,14 +67,41 @@ export function ExplorePage({
   const navigate = useNavigate();
   const auth = useAuthSession();
   const tripStore = useTripStore();
-  const results = rankDestinations(destinations, search);
+  const preferenceSession = usePreferences();
+  const preferences = preferenceSession.preferences;
+  const personalizedDestinations = preferences
+    ? personalizeDestinations(destinations, preferences)
+    : [];
+  const results = rankDestinations(personalizedDestinations, search);
   const selectedResult =
     results.find((result) => result.destination.id === search.selected) ?? results[0];
   const drivingRoute = useDrivingRoute(
     selectedResult?.destination.id,
     selectedResult?.destination.coordinates,
     selectedResult?.destination.countryCode !== "NO",
+    preferences,
   );
+
+  if (!preferenceSession.ready) {
+    return <div className="route-loading" role="status">Loading your planning settings…</div>;
+  }
+  if (!preferences) {
+    return (
+      <AppShell fullHeight>
+        <main className="preferences-required">
+          <MapPin />
+          <h1>Choose a home city first</h1>
+          <p>
+            Trail Planner needs a mapped Danish origin before it can rank
+            destinations or draw a route.
+          </p>
+          <Button onClick={() => void navigate({ to: "/" })}>
+            Choose home city <ArrowRight />
+          </Button>
+        </main>
+      </AppShell>
+    );
+  }
 
   const selectDestination = (destinationId: string) => {
     onSearchChange({ ...search, selected: destinationId }, true);
@@ -107,12 +139,12 @@ export function ExplorePage({
         />
         <div className="map-paper-wash" />
 
-        <SearchSummary search={search} resultCount={results.length} onChange={onSearchChange} />
+        <SearchSummary destinations={personalizedDestinations} search={search} resultCount={results.length} onChange={onSearchChange} />
 
         <section className="results-panel" aria-label="Matching destinations">
           <div className="results-panel__header">
             <div>
-              <p className="step-label">From Aalborg</p>
+              <p className="step-label">From {preferences.homeCity.name}</p>
               <h1>{results.length} destinations fit</h1>
             </div>
             <span className="result-sort"><Sparkles /> Best overall</span>
@@ -154,10 +186,12 @@ export function ExplorePage({
 }
 
 function SearchSummary({
+  destinations,
   search,
   resultCount,
   onChange,
 }: {
+  destinations: Destination[];
   search: ExploreSearch;
   resultCount: number;
   onChange: (next: ExploreSearch, replace?: boolean) => void;
@@ -170,16 +204,18 @@ function SearchSummary({
         <span><Clock3 /><strong>{search.days}</strong> days</span>
         <span><Coins /><strong>{formatMoney(search.budget)}</strong></span>
       </div>
-      <FilterSheet search={search} resultCount={resultCount} onChange={onChange} />
+      <FilterSheet destinations={destinations} search={search} resultCount={resultCount} onChange={onChange} />
     </div>
   );
 }
 
 function FilterSheet({
+  destinations,
   search,
   resultCount,
   onChange,
 }: {
+  destinations: Destination[];
   search: ExploreSearch;
   resultCount: number;
   onChange: (next: ExploreSearch, replace?: boolean) => void;
@@ -317,7 +353,7 @@ function DestinationCard({
         <span className="destination-best__label">Best match</span>
         {modeIcon(result.best.mode)}
         <strong>{formatHours(result.best.oneWayHours)}</strong>
-        <small>{formatMoney(result.best.costPerPersonDkk * search.participants)} total</small>
+        <small>{formatMoney(travelEstimateTotal(result.best, search.participants))} total</small>
       </span>
     </button>
   );
@@ -376,7 +412,7 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
       <span>
         <small>{modeLabels[estimate.mode]}</small>
         {estimate.available ? (
-          <><strong>{formatHours(estimate.oneWayHours)}</strong><em>{formatMoney(estimate.costPerPersonDkk * participants)}</em>{estimate.mode === "plane" ? <small className="travel-layovers">{estimate.layovers ?? 0} layover{estimate.layovers === 1 ? "" : "s"}</small> : null}</>
+          <><strong>{formatHours(estimate.oneWayHours)}</strong><em>{formatMoney(travelEstimateTotal(estimate, participants))}</em>{estimate.mode === "plane" ? <small className="travel-layovers">{estimate.layovers ?? 0} layover{estimate.layovers === 1 ? "" : "s"}</small> : null}</>
         ) : <strong>Unavailable</strong>}
       </span>
       <em className="travel-summary__status">{viable ? "Fits your limits" : estimate.available ? "Outside current limits" : "Not available"}</em>
@@ -403,7 +439,7 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(estimate.costPerPersonDkk * search.participants)}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails optionId={estimate.optionId} /> : null}</div>
+                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(travelEstimateTotal(estimate, search.participants))}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails estimate={estimate} optionId={estimate.optionId} /> : null}</div>
                 </div>
               ))}
             </div>

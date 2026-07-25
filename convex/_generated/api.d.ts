@@ -23,6 +23,7 @@ import type * as internal_geo from "../internal/geo.js";
 import type * as internal_provenance from "../internal/provenance.js";
 import type * as internal_readModels from "../internal/readModels.js";
 import type * as internal_scoring from "../internal/scoring.js";
+import type * as preferences from "../preferences.js";
 import type * as providers_amadeus from "../providers/amadeus.js";
 import type * as providers_entur from "../providers/entur.js";
 import type * as providers_exchangeRates from "../providers/exchangeRates.js";
@@ -57,6 +58,7 @@ declare const fullApi: ApiFromModules<{
   "internal/provenance": typeof internal_provenance;
   "internal/readModels": typeof internal_readModels;
   "internal/scoring": typeof internal_scoring;
+  preferences: typeof preferences;
   "providers/amadeus": typeof providers_amadeus;
   "providers/entur": typeof providers_entur;
   "providers/exchangeRates": typeof providers_exchangeRates;

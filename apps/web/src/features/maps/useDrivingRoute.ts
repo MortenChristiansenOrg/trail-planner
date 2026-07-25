@@ -3,21 +3,36 @@ import { getCatalogCarPlan, getCatalogFerryPart } from "@/features/catalog/catal
 import { loadCatalogRouteJourney } from "@/features/maps/catalogRoute";
 import { drivingRoutePoints, loadRoadRoute } from "@/features/maps/drivingRoute";
 import type { TrailLine } from "@/features/maps/TrailMap";
+import {
+  preferenceCacheKey,
+  type UserPreferences,
+} from "@trail-planner/domain";
 
 type ExploreRoute = { lines: TrailLine[]; label: string };
 
 const routeCache = new Map<string, ExploreRoute>();
 const emptyRoute: ExploreRoute = { lines: [], label: "" };
 
-export function useDrivingRoute(destinationId?: string, destination?: [number, number], viaSouthernDenmark = false) {
-  const key = destination ? `${destinationId ?? "unknown"}:${destination.join(",")}:${viaSouthernDenmark}` : "";
+export function useDrivingRoute(
+  destinationId: string | undefined,
+  destination: [number, number] | undefined,
+  viaSouthernDenmark: boolean,
+  preferences: UserPreferences | null,
+) {
+  const origin = preferences?.homeCity;
+  const useCatalogRoute = origin?.key === "aalborg";
+  const routeViaSouthernDenmark =
+    useCatalogRoute && viaSouthernDenmark;
+  const key = destination && preferences
+    ? `${destinationId ?? "unknown"}:${destination.join(",")}:${routeViaSouthernDenmark}:${preferenceCacheKey(preferences)}`
+    : "";
   const [result, setResult] = useState<{ key: string; route: ExploreRoute }>({
     key,
     route: routeCache.get(key) ?? emptyRoute,
   });
 
   useEffect(() => {
-    if (!destination) return;
+    if (!destination || !origin) return;
     const cached = routeCache.get(key);
     if (cached) {
       setResult({ key, route: cached });
@@ -25,7 +40,10 @@ export function useDrivingRoute(destinationId?: string, destination?: [number, n
     }
 
     const controller = new AbortController();
-    const catalogPlan = destinationId ? getCatalogCarPlan(destinationId) : undefined;
+    const catalogPlan =
+      useCatalogRoute && destinationId
+        ? getCatalogCarPlan(destinationId)
+        : undefined;
     const request = catalogPlan && destinationId
       ? loadCatalogRouteJourney(destinationId, "outbound", controller.signal).then((parts): ExploreRoute => {
         const ferry = getCatalogFerryPart(destinationId);
@@ -37,12 +55,12 @@ export function useDrivingRoute(destinationId?: string, destination?: [number, n
             label: `${part.kind === "ferry" ? "Ferry" : "Drive"}: ${part.origin.name} to ${part.destination.name}`,
             styleMode: part.kind,
           })),
-          label: ferry ? `${ferry.service} · arrive 1h before departure` : "Catalog driving route from Aalborg",
+          label: ferry ? `${ferry.service} · arrive 1h before departure` : `Catalog driving route from ${origin.name}`,
         };
       })
-      : loadRoadRoute(drivingRoutePoints(destination, viaSouthernDenmark), controller.signal).then((route): ExploreRoute => ({
-        lines: [{ id: "journey", kind: "journey", coordinates: route.coordinates, label: "OSRM driving route from Aalborg", styleMode: "car" }],
-        label: "OSRM driving route from Aalborg",
+      : loadRoadRoute(drivingRoutePoints(origin.coordinates, destination, routeViaSouthernDenmark), controller.signal).then((route): ExploreRoute => ({
+        lines: [{ id: "journey", kind: "journey", coordinates: route.coordinates, label: `OSRM driving route from ${origin.name}`, styleMode: "car" }],
+        label: `OSRM driving route from ${origin.name}`,
       }));
     void request
       .then((route) => {
@@ -56,7 +74,14 @@ export function useDrivingRoute(destinationId?: string, destination?: [number, n
       });
 
     return () => controller.abort();
-  }, [destination, destinationId, key, viaSouthernDenmark]);
+  }, [
+    destination,
+    destinationId,
+    key,
+    origin,
+    routeViaSouthernDenmark,
+    useCatalogRoute,
+  ]);
 
   return result.key === key ? result.route : emptyRoute;
 }

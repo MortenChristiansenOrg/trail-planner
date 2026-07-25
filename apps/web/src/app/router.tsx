@@ -12,6 +12,7 @@ const ExplorePage = lazy(() => import("@/features/explore/ExplorePage").then((mo
 const TripsPage = lazy(() => import("@/features/trips/TripsPage").then((module) => ({ default: module.TripsPage })));
 const TripDetailPage = lazy(() => import("@/features/trips/TripDetailPage").then((module) => ({ default: module.TripDetailPage })));
 const SharePage = lazy(() => import("@/features/trips/SharePage").then((module) => ({ default: module.SharePage })));
+const SettingsPage = lazy(() => import("@/features/preferences/SettingsPage").then((module) => ({ default: module.SettingsPage })));
 
 function RouteLoading({ children }: { children: ReactNode }) {
   return <Suspense fallback={<div className="route-loading" role="status">Opening the planning map…</div>}>{children}</Suspense>;
@@ -65,12 +66,19 @@ const shareRoute = createRoute({
   },
 });
 
+const settingsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/settings",
+  component: () => <RouteLoading><SettingsPage /></RouteLoading>,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   exploreRoute,
   tripsRoute,
   tripDetailRoute,
   shareRoute,
+  settingsRoute,
 ]);
 
 export const router = createRouter({

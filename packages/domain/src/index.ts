@@ -6,6 +6,7 @@ export * from "./geo";
 export * from "./hike";
 export * from "./lodging";
 export * from "./provenance";
+export * from "./preferences";
 export * from "./readModels";
 export * from "./travel";
 export * from "./trip";

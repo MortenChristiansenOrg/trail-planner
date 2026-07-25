@@ -5,6 +5,11 @@ import {
   getCatalogFerryPart,
 } from "@/features/catalog/catalogTravelData";
 import { getEstimatedTravelOptionId, getRoadDrivingOptionId } from "@/features/catalog/travelOptions";
+import type {
+  CarCostEstimate,
+  HomeCity,
+  VehicleProfile,
+} from "@trail-planner/domain";
 
 export type TravelMode = "car" | "train" | "plane";
 
@@ -18,6 +23,12 @@ export type TravelEstimate = {
   note: string;
   confidence: "high" | "medium" | "low";
   optionId?: string;
+  pricingBasis?: "per-person" | "per-group";
+  origin?: HomeCity;
+  vehicle?: VehicleProfile;
+  distanceKm?: number;
+  costBreakdown?: CarCostEstimate;
+  destinationId?: string;
 };
 
 export type CatalogProvenance = {
@@ -190,8 +201,6 @@ const travel = (
         confidence: "high",
       },
 ];
-
-const withOption = (estimates: TravelEstimate[], mode: TravelMode, optionId: string) => estimates.map((estimate) => estimate.mode === mode ? { ...estimate, optionId } : estimate);
 
 const withTravelOptions = (destination: DestinationSeed): DestinationSeed => ({
   ...destination,
@@ -474,7 +483,7 @@ const catalogSeeds: DestinationSeed[] = [
     recommendedMonths: [5, 6, 7, 8, 9, 10],
     summary: "An exceptionally connected city base with mountain routes beginning at the edge of town.",
     character: "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
-    travel: withOption(travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 0], "Innsbruck"), "car", "osrm-driving-aalborg-innsbruck"),
+    travel: travel([13.5, 1950], [15.8, 1750], [5.5, 1450, 0], "Innsbruck"),
     hikes: [],
     lodgings: [{ id: "pfeishutte", name: "Pfeishütte", kind: "hut", nightlyCostDkk: 680 }],
   },

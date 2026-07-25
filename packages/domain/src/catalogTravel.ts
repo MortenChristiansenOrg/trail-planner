@@ -202,7 +202,9 @@ export function validateCatalogTravelData(
     if (!isCatalogTravelKey(plan.key)) errors.push(`${label} has an invalid key`);
     if (!expectedDestinations.has(plan.destinationKey) || seenDestinations.has(plan.destinationKey)) errors.push(`${label} has an unknown or duplicate destination`);
     seenDestinations.add(plan.destinationKey);
-    if (plan.originKey !== "aalborg") errors.push(`${label} must use Aalborg as the MVP origin`);
+    if (!isCatalogTravelKey(plan.originKey)) {
+      errors.push(`${label} has an invalid normalized origin key`);
+    }
     const modeKeys = Object.keys(plan.modes);
     if (modeKeys.length !== catalogTravelModes.length || catalogTravelModes.some((mode) => !(mode in plan.modes)) || modeKeys.some((mode) => !catalogTravelModes.includes(mode as CatalogTravelMode))) errors.push(`${label} does not explicitly cover every travel mode`);
     for (const mode of catalogTravelModes) {
