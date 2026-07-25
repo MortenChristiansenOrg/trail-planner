@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -421,7 +422,11 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
           </section>
           <p className="catalog-source">Catalog source verified {destination.provenance.verifiedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
         </div>
-        <SheetFooter><Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button></SheetFooter>
+        <SheetFooter>
+          <SheetClose asChild>
+            <Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button>
+          </SheetClose>
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   );
