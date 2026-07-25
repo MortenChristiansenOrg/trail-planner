@@ -37,6 +37,18 @@ type SettingsDraft = Omit<UserPreferences, "homeCity"> & {
 
 export function SettingsPage() {
   const session = usePreferences();
+  if (!session.ready) {
+    return (
+      <div className="route-loading" role="status">
+        Loading your planning settings…
+      </div>
+    );
+  }
+  return <ReadySettingsPage />;
+}
+
+function ReadySettingsPage() {
+  const session = usePreferences();
   const defaults = createDefaultPreferences(defaultHomeCity);
   const initial: SettingsDraft =
     session.preferences ?? { ...defaults, homeCity: null };
@@ -139,7 +151,6 @@ export function SettingsPage() {
                 <CityCombobox
                   id="home-city"
                   invalid={cityInvalid}
-                  key={draft.homeCity?.key ?? "unset"}
                   onChange={(city) => {
                     if (city) {
                       edited.current = true;
