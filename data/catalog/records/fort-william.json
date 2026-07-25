@@ -1,0 +1,506 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-fort-william",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "fort-william",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Fort William",
+    "region": "West Highlands",
+    "countryCode": "GB",
+    "longitude": -5.105,
+    "latitude": 56.819
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "country",
+      "value": "United Kingdom",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "summary",
+      "value": "A practical base below Ben Nevis with direct access to several of Scotland’s biggest mountain days.",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "character",
+      "value": "Wet, rugged mountains, long ridges and strong public-transport access by Highland standards.",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "guide.highlights",
+      "value": "Fort William anchors Ben Nevis, Glen Nevis, Steall Falls and the western end of the West Highland Way beneath Britain's highest mountain. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "guide.terrain",
+      "value": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "fort-william",
+      "field": "guide.expectations",
+      "value": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "fort-william",
+      "field": "recommendedMonths",
+      "value": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "fort-william",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/fort-william.jpg",
+        "assetSha256": "a890102c46e4a9bf6e86de868299cfd73250df6597d991bad587189e75c51df7",
+        "width": 2658,
+        "height": 4184,
+        "alt": "West Highlands mountain landscape seen from the Fort William hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Robert Linsdell",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "attributionText": "Ben Nevis, Fort William (250321) (9461805777).jpg by Robert Linsdell · CC BY 2.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Ben%20Nevis%2C%20Fort%20William%20(250321)%20(9461805777).jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben%20Nevis%2C%20Fort%20William%20(250321)%20(9461805777).jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "fort-william-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Ben%20Nevis%2C%20Fort%20William%20(250321)%20(9461805777).jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "fort-william-ben-nevis-mountain-track",
+      "field": "hike",
+      "value": {
+        "key": "fort-william-ben-nevis-mountain-track",
+        "name": "Ben Nevis Mountain Track",
+        "routeType": "loop",
+        "description": "Ben Nevis Mountain Track represents a short landscape or viewpoint walk from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "fort-william-carn-mor-dearg-arete",
+      "field": "hike",
+      "value": {
+        "key": "fort-william-carn-mor-dearg-arete",
+        "name": "Càrn Mòr Dearg Arête",
+        "routeType": "out-and-back",
+        "description": "Càrn Mòr Dearg Arête represents a half-day valley, lake or lower-summit route from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "fort-william-cow-hill-circuit",
+      "field": "hike",
+      "value": {
+        "key": "fort-william-cow-hill-circuit",
+        "name": "Cow Hill Circuit",
+        "routeType": "loop",
+        "description": "Cow Hill Circuit represents a substantial circuit with varied terrain from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "fort-william-steall-falls-and-nevis-gorge",
+      "field": "hike",
+      "value": {
+        "key": "fort-william-steall-falls-and-nevis-gorge",
+        "name": "Steall Falls and Nevis Gorge",
+        "routeType": "point-to-point",
+        "description": "Steall Falls and Nevis Gorge represents a long ridge, summit or through-route from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "fort-william-west-highland-way-from-kinlochleven",
+      "field": "hike",
+      "value": {
+        "key": "fort-william-west-highland-way-from-kinlochleven",
+        "name": "West Highland Way from Kinlochleven",
+        "routeType": "point-to-point",
+        "description": "West Highland Way from Kinlochleven represents the area's most committing established mountain choice from the Fort William catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Fort William area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "fort-william-authority",
+        "url": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "fort-william",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Fort William road access",
+        "oneWayHours": 17.9,
+        "costPerPersonDkk": 2250,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-fort-william--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "fort-william",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Fort William public-transport stop",
+        "oneWayHours": 22.6,
+        "costPerPersonDkk": 2200,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-fort-william-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "fort-william",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Fort William airport transfer",
+        "oneWayHours": 8.1,
+        "costPerPersonDkk": 2100,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-fort-william-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "glen-nevis",
+      "field": "lodging",
+      "value": {
+        "id": "glen-nevis",
+        "name": "Glen Nevis campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 250
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "loch-ossian",
+      "field": "lodging",
+      "value": {
+        "id": "loch-ossian",
+        "name": "Loch Ossian youth hostel",
+        "kind": "hut",
+        "nightlyCostDkk": 390
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

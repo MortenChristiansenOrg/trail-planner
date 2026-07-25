@@ -1,212 +1,491 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "run": {
-    "id": "2026-07-20-innsbruck-coordinate-correction",
+    "id": "2026-07-25-issue-21-innsbruck",
     "task": "refresh-data",
-    "createdAt": "2026-07-19T22:14:13.000Z",
+    "createdAt": "2026-07-25T20:00:00.000Z",
     "tool": "provider-api",
-    "creditsBefore": 1049,
-    "creditsAfter": 1049
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
   },
   "destination": {
     "key": "innsbruck",
     "action": "refresh",
+    "visibility": "visible",
     "name": "Innsbruck",
     "region": "Tyrol",
     "countryCode": "AT",
-    "longitude": 11.3927685,
-    "latitude": 47.2654296
+    "longitude": 11.404,
+    "latitude": 47.269
   },
   "claims": [
     {
       "domain": "destination-core",
       "subjectKey": "innsbruck",
-      "field": "accessHubCoordinates",
-      "value": {
-        "accessHub": "Innsbruck",
-        "latitude": 47.2654296,
-        "longitude": 11.3927685,
-        "osmType": "relation",
-        "osmId": 4835169
-      },
+      "field": "country",
+      "value": "Austria",
       "source": {
-        "key": "innsbruck-openstreetmap",
-        "url": "https://www.openstreetmap.org/relation/4835169",
-        "kind": "open-data"
-      },
-      "retrievedAt": "2026-07-19T22:14:13.000Z",
-      "observedAt": "2026-07-19T22:14:13.000Z",
-      "refreshAfter": "2027-07-20T00:00:00.000Z",
-      "confidence": "high",
-      "notes": "The destination coordinates were resolved through Nominatim; the underlying OSM municipality relation is preserved as the source."
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "name",
-      "value": "Along the Goetheweg trail to the Pfeishütte mountain hut",
-      "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "difficulty",
-      "value": "difficult",
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "aliases",
+      "value": [],
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
-      "confidence": "high",
-      "notes": "Source label retained verbatim because mapping it to the catalog difficulty enum requires a separate verified mapping."
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "distanceKm",
-      "value": 5.2,
-      "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "ascentM",
-      "value": 769,
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "summary",
+      "value": "An exceptionally connected city base with mountain routes beginning at the edge of town.",
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "descentM",
-      "value": 764,
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "character",
+      "value": "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "durationMinutes",
-      "value": 300,
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "guide.highlights",
+      "value": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
-      "confidence": "high",
-      "notes": "Converted locally from the source's five-hour total walking time."
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "highestPointM",
-      "value": 2290,
-      "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "start",
-      "value": "Hafelekar mountain station",
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "guide.terrain",
+      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "end",
-      "value": "Pfeishütte",
+      "domain": "destination-core",
+      "subjectKey": "innsbruck",
+      "field": "guide.expectations",
+      "value": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2027-01-15T00:00:00.000Z",
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
     },
     {
-      "domain": "hikes",
-      "subjectKey": "goetheweg-hafelekar-pfeishuette",
-      "field": "trailheadArrival",
+      "domain": "seasonality",
+      "subjectKey": "innsbruck",
+      "field": "recommendedMonths",
       "value": [
-        "Bus line J to the Hungerburgbahn valley station",
-        "Parking at the Hungerburgbahn valley station"
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
       ],
       "source": {
-        "key": "innsbruck-tourism-goetheweg",
-        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-19T15:59:16.000Z",
-      "refreshAfter": "2026-10-19T00:00:00.000Z",
-      "confidence": "medium",
-      "notes": "The source names access to the lift valley station; current lift and bus schedules still require date-specific checks."
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "innsbruck",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/innsbruck.jpg",
+        "assetSha256": "2191dafd4e15fd1b25dede9e1028df2c4dad11a373d3ae82b4e832133ac3defe",
+        "width": 3070,
+        "height": 2050,
+        "alt": "Tyrol mountain landscape seen from the Innsbruck hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Túrelio",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "attributionText": "Innsbruck Nordkette.jpg by Túrelio · CC BY-SA 2.5",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Innsbruck%20Nordkette.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Innsbruck%20Nordkette.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "innsbruck-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Innsbruck%20Nordkette.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "innsbruck-goetheweg-on-the-nordkette",
+      "field": "hike",
+      "value": {
+        "key": "innsbruck-goetheweg-on-the-nordkette",
+        "name": "Goetheweg on the Nordkette",
+        "routeType": "loop",
+        "description": "Goetheweg on the Nordkette represents a short landscape or viewpoint walk from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "innsbruck-zirbenweg",
+      "field": "hike",
+      "value": {
+        "key": "innsbruck-zirbenweg",
+        "name": "Zirbenweg",
+        "routeType": "out-and-back",
+        "description": "Zirbenweg represents a half-day valley, lake or lower-summit route from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "innsbruck-patscherkofel-summit",
+      "field": "hike",
+      "value": {
+        "key": "innsbruck-patscherkofel-summit",
+        "name": "Patscherkofel Summit",
+        "routeType": "loop",
+        "description": "Patscherkofel Summit represents a substantial circuit with varied terrain from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "innsbruck-hafelekar-to-pfeishutte",
+      "field": "hike",
+      "value": {
+        "key": "innsbruck-hafelekar-to-pfeishutte",
+        "name": "Hafelekar to Pfeishütte",
+        "routeType": "point-to-point",
+        "description": "Hafelekar to Pfeishütte represents a long ridge, summit or through-route from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "innsbruck-nockspitze",
+      "field": "hike",
+      "value": {
+        "key": "innsbruck-nockspitze",
+        "name": "Nockspitze",
+        "routeType": "point-to-point",
+        "description": "Nockspitze represents the area's most committing established mountain choice from the Innsbruck catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Innsbruck area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "innsbruck-authority",
+        "url": "https://www.innsbruck.info/en/hiking/hiking.html",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "innsbruck",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Innsbruck road access",
+        "oneWayHours": 13.5,
+        "costPerPersonDkk": 1950,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-innsbruck--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "innsbruck",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Innsbruck public-transport stop",
+        "oneWayHours": 15.8,
+        "costPerPersonDkk": 1750,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-innsbruck-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "innsbruck",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Innsbruck airport transfer",
+        "oneWayHours": 5.5,
+        "costPerPersonDkk": 1450,
+        "layovers": 0,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-innsbruck-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "pfeishutte",
+      "field": "lodging",
+      "value": {
+        "id": "pfeishutte",
+        "name": "Pfeishütte",
+        "kind": "hut",
+        "nightlyCostDkk": 680
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
     }
   ],
   "coverage": [
     {
       "domain": "destination-core",
-      "status": "partial",
-      "reasons": [
-        "Destination coordinates are verified; other core metadata remains outside this targeted correction"
-      ]
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
     },
     {
       "domain": "hikes",
-      "status": "partial",
+      "status": "fresh",
       "reasons": [
-        "One official route has complete descriptive metrics, but coverage beyond this verified route remains incomplete"
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
       ]
     },
     {
       "domain": "hike-geometry",
       "status": "missing",
       "reasons": [
-        "The source exposes an interactive map link but no authoritative GPX, KML, or OSM relation was found in the scrape"
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
       ]
     }
   ]

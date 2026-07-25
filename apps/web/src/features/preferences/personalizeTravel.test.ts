@@ -11,6 +11,7 @@ import {
 
 const destination: Destination = {
   id: "test-mountain",
+  aliases: [],
   name: "Test Mountain",
   region: "Test",
   country: "Norway",
@@ -31,7 +32,25 @@ const destination: Destination = {
     },
   ],
   hikes: [],
+  hikeCount: 5,
   lodgings: [],
+  catalogVersion: "test-version",
+  media: {
+    imageUrl: "/catalog-media/test.jpg",
+    assetSha256: "0".repeat(64),
+    width: 1,
+    height: 1,
+    alt: "Test mountain",
+    subject: "destination",
+    kind: "terrain",
+    creator: "Test",
+    license: "CC0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    attributionText: "Test · CC0",
+    attributionUrl: "https://example.com/photo",
+    sourceUrl: "https://example.com/photo",
+    verifiedAt: "2026-07-25",
+  },
   provenance: {
     sourceUrl: "https://example.com",
     verifiedAt: "2026-07-25",

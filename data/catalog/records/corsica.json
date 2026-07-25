@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-corsica",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "corsica",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Corte",
+    "region": "Corsica",
+    "countryCode": "FR",
+    "longitude": 9.15,
+    "latitude": 42.306
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "country",
+      "value": "France",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "summary",
+      "value": "A historic inland base for granite gorges and central sections of the GR20.",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "character",
+      "value": "Dry granite, clear pools and hard multi-day walking with significant heat and exposure.",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "guide.highlights",
+      "value": "Corte gives access to the Restonica and Tavignano valleys, high glacial lakes and central Corsican sections of the GR20. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "guide.terrain",
+      "value": "Coarse granite peaks, slabs and boulder fields rise above pine forest, maquis and clear rock pools; summer heat in the valleys contrasts with exposed, storm-prone high ridges. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "corsica",
+      "field": "guide.expectations",
+      "value": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "corsica",
+      "field": "recommendedMonths",
+      "value": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "corsica",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/corsica.jpg",
+        "assetSha256": "a78584577387d209b329bedd3d8f521d5749652c835dd6cf3a34055ee4ee1101",
+        "width": 1400,
+        "height": 866,
+        "alt": "Corsica mountain landscape seen from the Corte hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "NASA Earth Science and Remote Sensing Unit",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "attributionText": "ISS023-E-13748 - View of Corsica - Massif du Monte Rotondo - Punta Artica - Lac de Calacuccia - Monte Cardo - Corte - Cima San Gavino - Restonica valley - Lombaduccio - Tavignano - Pinerole - Capu di u Facciatu - Cimatella (cropped).jpg by NASA Earth Science and Remote Sensing Unit · Public domain",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:ISS023-E-13748%20-%20View%20of%20Corsica%20-%20Massif%20du%20Monte%20Rotondo%20-%20Punta%20Artica%20-%20Lac%20de%20Calacuccia%20-%20Monte%20Cardo%20-%20Corte%20-%20Cima%20San%20Gavino%20-%20Restonica%20valley%20-%20Lombaduccio%20-%20Tavignano%20-%20Pinerole%20-%20Capu%20di%20u%20Facciatu%20-%20Cimatella%20(cropped).jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ISS023-E-13748%20-%20View%20of%20Corsica%20-%20Massif%20du%20Monte%20Rotondo%20-%20Punta%20Artica%20-%20Lac%20de%20Calacuccia%20-%20Monte%20Cardo%20-%20Corte%20-%20Cima%20San%20Gavino%20-%20Restonica%20valley%20-%20Lombaduccio%20-%20Tavignano%20-%20Pinerole%20-%20Capu%20di%20u%20Facciatu%20-%20Cimatella%20(cropped).jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "corsica-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:ISS023-E-13748%20-%20View%20of%20Corsica%20-%20Massif%20du%20Monte%20Rotondo%20-%20Punta%20Artica%20-%20Lac%20de%20Calacuccia%20-%20Monte%20Cardo%20-%20Corte%20-%20Cima%20San%20Gavino%20-%20Restonica%20valley%20-%20Lombaduccio%20-%20Tavignano%20-%20Pinerole%20-%20Capu%20di%20u%20Facciatu%20-%20Cimatella%20(cropped).jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "corsica-lac-de-melo-and-lac-de-capitello",
+      "field": "hike",
+      "value": {
+        "key": "corsica-lac-de-melo-and-lac-de-capitello",
+        "name": "Lac de Melo and Lac de Capitello",
+        "routeType": "loop",
+        "description": "Lac de Melo and Lac de Capitello represents a short landscape or viewpoint walk from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "corsica-tavignano-gorge",
+      "field": "hike",
+      "value": {
+        "key": "corsica-tavignano-gorge",
+        "name": "Tavignano Gorge",
+        "routeType": "out-and-back",
+        "description": "Tavignano Gorge represents a half-day valley, lake or lower-summit route from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "corsica-monte-rotondo",
+      "field": "hike",
+      "value": {
+        "key": "corsica-monte-rotondo",
+        "name": "Monte Rotondo",
+        "routeType": "loop",
+        "description": "Monte Rotondo represents a substantial circuit with varied terrain from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "corsica-lac-de-nino",
+      "field": "hike",
+      "value": {
+        "key": "corsica-lac-de-nino",
+        "name": "Lac de Nino",
+        "routeType": "point-to-point",
+        "description": "Lac de Nino represents a long ridge, summit or through-route from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "corsica-corte-to-refuge-de-la-sega",
+      "field": "hike",
+      "value": {
+        "key": "corsica-corte-to-refuge-de-la-sega",
+        "name": "Corte to Refuge de la Sega",
+        "routeType": "point-to-point",
+        "description": "Corte to Refuge de la Sega represents the area's most committing established mountain choice from the Corte catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Corte area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "corsica-authority",
+        "url": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "corsica",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Corte road access",
+        "oneWayHours": 24,
+        "costPerPersonDkk": 3200,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-corsica--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "corsica",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Corte public-transport stop",
+        "oneWayHours": 29,
+        "costPerPersonDkk": 2950,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-corsica-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "corsica",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Corte airport transfer",
+        "oneWayHours": 8.4,
+        "costPerPersonDkk": 2250,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-corsica-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "manganu",
+      "field": "lodging",
+      "value": {
+        "id": "manganu",
+        "name": "Refuge de Manganu",
+        "kind": "hut",
+        "nightlyCostDkk": 310
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

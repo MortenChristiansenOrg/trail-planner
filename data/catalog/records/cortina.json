@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-cortina",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "cortina",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Cortina d’Ampezzo",
+    "region": "Dolomites",
+    "countryCode": "IT",
+    "longitude": 12.135,
+    "latitude": 46.54
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "country",
+      "value": "Italy",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "summary",
+      "value": "A central Dolomites base for high passes, rifugi and pale limestone towers.",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "character",
+      "value": "Well-served trailheads, dramatic rock architecture and a mix of ordinary hiking and protected routes.",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "guide.highlights",
+      "value": "Cortina lies among Tofane, Cristallo, Cinque Torri and the Tre Cime landscape, with a dense network of paths and rifugi. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "guide.terrain",
+      "value": "Pale dolomite towers rise above scree fans, larch forest and rolling high pastures; ledges, military paths and compact limestone give the area a distinctive vertical architecture. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cortina",
+      "field": "guide.expectations",
+      "value": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "cortina",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "cortina",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/cortina.jpg",
+        "assetSha256": "b2bafdadbd50c4bb012845198386bc4cef6bf9066df359dee065a3894a321c8a",
+        "width": 13200,
+        "height": 2102,
+        "alt": "Dolomites mountain landscape seen from the Cortina d’Ampezzo hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Tiia Monto",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "Cortina d'Ampezzo - view.jpg by Tiia Monto · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Cortina%20d'Ampezzo%20-%20view.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cortina%20d'Ampezzo%20-%20view.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "cortina-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cortina%20d'Ampezzo%20-%20view.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "cortina-tre-cime-di-lavaredo-circuit",
+      "field": "hike",
+      "value": {
+        "key": "cortina-tre-cime-di-lavaredo-circuit",
+        "name": "Tre Cime di Lavaredo Circuit",
+        "routeType": "loop",
+        "description": "Tre Cime di Lavaredo Circuit represents a short landscape or viewpoint walk from the Cortina d’Ampezzo catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Cortina d’Ampezzo area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "cortina-cinque-torri-circuit",
+      "field": "hike",
+      "value": {
+        "key": "cortina-cinque-torri-circuit",
+        "name": "Cinque Torri Circuit",
+        "routeType": "out-and-back",
+        "description": "Cinque Torri Circuit represents a half-day valley, lake or lower-summit route from the Cortina d’Ampezzo catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Cortina d’Ampezzo area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "cortina-lago-di-sorapis",
+      "field": "hike",
+      "value": {
+        "key": "cortina-lago-di-sorapis",
+        "name": "Lago di Sorapis",
+        "routeType": "loop",
+        "description": "Lago di Sorapis represents a substantial circuit with varied terrain from the Cortina d’Ampezzo catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Cortina d’Ampezzo area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "cortina-croda-da-lago-circuit",
+      "field": "hike",
+      "value": {
+        "key": "cortina-croda-da-lago-circuit",
+        "name": "Croda da Lago Circuit",
+        "routeType": "point-to-point",
+        "description": "Croda da Lago Circuit represents a long ridge, summit or through-route from the Cortina d’Ampezzo catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Cortina d’Ampezzo area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "cortina-lagazuoi-open-air-museum",
+      "field": "hike",
+      "value": {
+        "key": "cortina-lagazuoi-open-air-museum",
+        "name": "Lagazuoi Open-Air Museum",
+        "routeType": "point-to-point",
+        "description": "Lagazuoi Open-Air Museum represents the area's most committing established mountain choice from the Cortina d’Ampezzo catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Cortina d’Ampezzo area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "cortina-authority",
+        "url": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "cortina",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Cortina d’Ampezzo road access",
+        "oneWayHours": 15.1,
+        "costPerPersonDkk": 2200,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-cortina--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "cortina",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Cortina d’Ampezzo public-transport stop",
+        "oneWayHours": 19.2,
+        "costPerPersonDkk": 2050,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-cortina-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "cortina",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Cortina d’Ampezzo airport transfer",
+        "oneWayHours": 7,
+        "costPerPersonDkk": 1750,
+        "layovers": 0,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-cortina-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "locatelli",
+      "field": "lodging",
+      "value": {
+        "id": "locatelli",
+        "name": "Rifugio Locatelli",
+        "kind": "hut",
+        "nightlyCostDkk": 760
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "roc-chetta",
+      "field": "lodging",
+      "value": {
+        "id": "roc-chetta",
+        "name": "Camping Rocchetta",
+        "kind": "camping",
+        "nightlyCostDkk": 250
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

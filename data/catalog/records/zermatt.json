@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-zermatt",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "zermatt",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Zermatt",
+    "region": "Valais Alps",
+    "countryCode": "CH",
+    "longitude": 7.748,
+    "latitude": 46.02
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "country",
+      "value": "Switzerland",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "summary",
+      "value": "A car-free high-alpine base below the Matterhorn with a dense network of marked routes.",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "character",
+      "value": "Big glaciated scenery, excellent rail access and expensive but efficient mountain infrastructure.",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "guide.highlights",
+      "value": "Zermatt's car-free valley frames the Matterhorn and connects walkers to Gornergrat, Sunnegga, glacier viewpoints and the Europaweg. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "guide.terrain",
+      "value": "High Pennine peaks, moraines and retreating glacier forefields tower above larch woods and flower-rich meadows; trails range from broad panoramic paths to exposed traverses on loose alpine ground. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "zermatt",
+      "field": "guide.expectations",
+      "value": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "zermatt",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "zermatt",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/zermatt.jpg",
+        "assetSha256": "afe64d2932c4863560d5dafff3c46b6a5019541ce8c35dd30998b585a9fe1a7d",
+        "width": 10800,
+        "height": 7200,
+        "alt": "Valais Alps mountain landscape seen from the Zermatt hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Roy Egloff",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "CH.VS.Zermatt 2021-10-17 Matterhorn 8726.jpg by Roy Egloff · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt%202021-10-17%20Matterhorn%208726.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt%202021-10-17%20Matterhorn%208726.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "zermatt-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt%202021-10-17%20Matterhorn%208726.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "zermatt-five-lakes-walk",
+      "field": "hike",
+      "value": {
+        "key": "zermatt-five-lakes-walk",
+        "name": "Five Lakes Walk",
+        "routeType": "loop",
+        "description": "Five Lakes Walk represents a short landscape or viewpoint walk from the Zermatt catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Zermatt area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "zermatt-hohbalmen",
+      "field": "hike",
+      "value": {
+        "key": "zermatt-hohbalmen",
+        "name": "Höhbalmen",
+        "routeType": "out-and-back",
+        "description": "Höhbalmen represents a half-day valley, lake or lower-summit route from the Zermatt catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Zermatt area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "zermatt-matterhorn-glacier-trail",
+      "field": "hike",
+      "value": {
+        "key": "zermatt-matterhorn-glacier-trail",
+        "name": "Matterhorn Glacier Trail",
+        "routeType": "loop",
+        "description": "Matterhorn Glacier Trail represents a substantial circuit with varied terrain from the Zermatt catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Zermatt area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "zermatt-gornergrat-to-riffelberg",
+      "field": "hike",
+      "value": {
+        "key": "zermatt-gornergrat-to-riffelberg",
+        "name": "Gornergrat to Riffelberg",
+        "routeType": "point-to-point",
+        "description": "Gornergrat to Riffelberg represents a long ridge, summit or through-route from the Zermatt catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Zermatt area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "zermatt-europaweg-to-taschalp",
+      "field": "hike",
+      "value": {
+        "key": "zermatt-europaweg-to-taschalp",
+        "name": "Europaweg to Täschalp",
+        "routeType": "point-to-point",
+        "description": "Europaweg to Täschalp represents the area's most committing established mountain choice from the Zermatt catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Zermatt area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "zermatt-authority",
+        "url": "https://www.zermatt.ch/en/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "zermatt",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Zermatt road access",
+        "oneWayHours": 15.7,
+        "costPerPersonDkk": 2200,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-zermatt--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "zermatt",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Zermatt public-transport stop",
+        "oneWayHours": 17.6,
+        "costPerPersonDkk": 2100,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-zermatt-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "zermatt",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Zermatt airport transfer",
+        "oneWayHours": 6.8,
+        "costPerPersonDkk": 1900,
+        "layovers": 0,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-zermatt-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "hornli-hut",
+      "field": "lodging",
+      "value": {
+        "id": "hornli-hut",
+        "name": "Hörnlihütte",
+        "kind": "hut",
+        "nightlyCostDkk": 1150
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "taesch-camping",
+      "field": "lodging",
+      "value": {
+        "id": "taesch-camping",
+        "name": "Täsch campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 330
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

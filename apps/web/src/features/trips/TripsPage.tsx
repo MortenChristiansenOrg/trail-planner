@@ -12,7 +12,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { AppShell } from "@/components/layout/AppShell";
-import { destinationById, formatMoney, monthNames } from "@/features/catalog/catalog";
+import { formatMoney, monthNames } from "@/features/catalog/catalog";
+import { useCatalog } from "@/features/catalog/CatalogProvider";
 import { TrailMap } from "@/features/maps/TrailMap";
 import { calculateTripCost } from "@/features/trips/model";
 import { useTripStore } from "@/features/trips/TripStore";
@@ -20,9 +21,10 @@ import { defaultExploreSearch } from "@/features/explore/search";
 
 export function TripsPage() {
   const { trips, remove } = useTripStore();
+  const { destinations } = useCatalog();
   const sorted = trips.toSorted((a, b) => a.plannedMonth - b.plannedMonth || b.updatedAt - a.updatedAt);
   const markers = sorted.flatMap((trip) => {
-    const destination = destinationById.get(trip.destinationId);
+    const destination = destinations.find((item) => item.id === trip.destinationId);
     return destination
       ? [{ id: trip.id, label: trip.title, coordinates: destination.coordinates, badge: String(trip.plannedMonth) }]
       : [];
@@ -44,7 +46,7 @@ export function TripsPage() {
           <div className="trips-layout">
             <section className="trip-card-list" aria-label="Saved trips">
               {sorted.map((trip) => {
-                const destination = destinationById.get(trip.destinationId);
+                const destination = destinations.find((item) => item.id === trip.destinationId);
                 const cost = calculateTripCost(trip);
                 return (
                   <article className="trip-card" key={trip.id}>

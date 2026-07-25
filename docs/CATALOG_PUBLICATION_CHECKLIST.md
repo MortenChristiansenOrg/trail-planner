@@ -28,10 +28,12 @@ The destination skills execute this checklist before publishing a catalog record
 
 ## Publication
 
+- [ ] The shared product conventions and generated coverage report were read before research.
+- [ ] Canonical key, aliases, visibility, and readiness are explicit.
 - [ ] Unsupported observations were discarded and authoritative conflicts were resolved or omitted with reduced coverage.
 - [ ] `pnpm catalog:publish -- --dry-run <temporary-record>` passes before publication.
-- [ ] `pnpm catalog:publish -- <temporary-record>` atomically replaces the published record.
-- [ ] Any checked-in catalog snapshot or seed consuming the record is updated in the same run.
+- [ ] `pnpm catalog:publish -- <temporary-record>` atomically replaces the record and regenerates all artifacts.
+- [ ] `pnpm catalog:check` confirms deterministic output with no drift.
 - [ ] `pnpm test`, `pnpm typecheck`, and relevant catalog browser tests pass after publication.
 - [ ] Raw Firecrawl captures remain in `.catalog-work/` and are not committed.
 - [ ] `pnpm catalog:validate-travel` passes when reusable travel parts or destination trip matrices change.

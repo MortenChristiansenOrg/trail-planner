@@ -1,0 +1,266 @@
+{
+  "catalogVersion": "2ba5a2f6147af26e67deb5daad444216dd1cdf53095bed38b89b6257d38a9a95",
+  "records": [
+    {
+      "canonicalKey": "abisko",
+      "recordKey": "abisko",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "akureyri",
+      "recordKey": "akureyri",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "are",
+      "recordKey": "are",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "berchtesgaden",
+      "recordKey": "berchtesgaden",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "bohinj",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "bovec",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "cairngorms",
+      "recordKey": "cairngorms",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "chamonix",
+      "recordKey": "chamonix",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "corsica",
+      "recordKey": "corsica",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "cortina",
+      "recordKey": "cortina",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "durmitor",
+      "recordKey": "durmitor",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "engelberg",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "fort-william",
+      "recordKey": "fort-william",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "funasdalen",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "garmisch-partenkirchen",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "geilo",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "grindelwald",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "hardanger",
+      "recordKey": "hardanger",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "hemavan",
+      "recordKey": "hemavan",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "hemsedal",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "innsbruck",
+      "recordKey": "innsbruck",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "jorpeland-lysefjord",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "jotunheimen",
+      "recordKey": "jotunheimen",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "keswick",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "kranjska-gora",
+      "recordKey": "kranjska-gora",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "landmannalaugar",
+      "recordKey": "landmannalaugar",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "lofoten",
+      "recordKey": "lofoten",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "madeira",
+      "recordKey": "madeira",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "mayrhofen",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "nikkaluokta",
+      "recordKey": "nikkaluokta",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "oberstdorf",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "oppdal",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "picos",
+      "recordKey": "picos",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "poprad-high-tatras",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "rjukan",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "romsdalen",
+      "recordKey": "romsdalen",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "saas-fee",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "schladming",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "skaftafell",
+      "recordKey": "skaftafell",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "canonicalKey": "snowdonia",
+      "recordKey": "snowdonia",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "solden",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "recordKey": "stryn-loen",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "thorsmork",
+      "recordKey": "thorsmork",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "voss",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "zakopane",
+      "recordKey": "zakopane",
+      "status": "exact-match",
+      "visible": true
+    },
+    {
+      "recordKey": "zell-am-see-kaprun",
+      "status": "intentionally-separate",
+      "visible": false
+    },
+    {
+      "canonicalKey": "zermatt",
+      "recordKey": "zermatt",
+      "status": "exact-match",
+      "visible": true
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { catalogDataDomains, coverageStatuses, sourceKinds } from "../../packages/domain/src/catalogData.ts";
 import { confidenceLevels } from "../../packages/domain/src/provenance.ts";
+import { validateVisibleProductRecord } from "./product-record.mjs";
 
 const domains = new Set(catalogDataDomains);
 const validCoverageStatuses = new Set(coverageStatuses);
@@ -34,7 +35,7 @@ function isNonEmptyString(value) {
 
 export function validateCatalogRecord(record) {
   const errors = [];
-  if (record?.schemaVersion !== 2) errors.push("schemaVersion must be 2");
+  if (![2, 3].includes(record?.schemaVersion)) errors.push("schemaVersion must be 2 or 3");
   if (!isNonEmptyString(record?.run?.id)) errors.push("run.id is required");
   if (!["add-destination", "refresh-data"].includes(record?.run?.task)) errors.push("run.task is invalid");
   if (!validDate(record?.run?.createdAt)) errors.push("run.createdAt must be an ISO date");
@@ -46,6 +47,7 @@ export function validateCatalogRecord(record) {
   if (typeof record?.destination?.countryCode !== "string" || !/^[A-Z]{2}$/.test(record.destination.countryCode)) errors.push("destination.countryCode must be a two-letter uppercase code");
   if (!Number.isFinite(record?.destination?.longitude) || record.destination.longitude < -180 || record.destination.longitude > 180) errors.push("destination.longitude must be between -180 and 180");
   if (!Number.isFinite(record?.destination?.latitude) || record.destination.latitude < -90 || record.destination.latitude > 90) errors.push("destination.latitude must be between -90 and 90");
+  if (record?.schemaVersion === 3 && !["visible", "hidden"].includes(record?.destination?.visibility)) errors.push("destination.visibility must be visible or hidden");
   if (!Array.isArray(record?.claims) || !record.claims.length) errors.push("claims must contain at least one published claim");
   if (!Array.isArray(record?.coverage) || !record.coverage.length) errors.push("coverage must contain at least one domain assessment");
 
@@ -96,6 +98,7 @@ export function validateCatalogRecord(record) {
   for (const claim of claims) {
     if (isObject(claim) && domains.has(claim.domain) && !coverageDomains.has(claim.domain)) errors.push(`coverage is missing claimed domain ${claim.domain}`);
   }
+  if (record?.schemaVersion === 3) errors.push(...validateVisibleProductRecord(record));
   return errors;
 }
 

@@ -13,6 +13,8 @@ Read these before researching:
 
 - `docs/CATALOG_DATA_PIPELINE.md`
 - `docs/CATALOG_PUBLICATION_CHECKLIST.md`
+- `docs/CATALOG_PRODUCT_CONVENTIONS.md`
+- `data/catalog/generated/coverage.json`
 - `data/catalog/record.template.json`
 - `references/firecrawl.md`
 
@@ -21,7 +23,7 @@ Inspect the published destination record, provenance, coverage rows, and queued 
 ## Workflow
 
 1. Select scope.
-   - Target explicit user domains or those marked `missing`, `partial`, or `stale`.
+   - Target explicit user domains or those marked `missing`, `partial`, or `stale`, preserving canonical keys and aliases.
    - Do not refresh fresh unrelated domains “while here.” Small resumable runs suit the Firecrawl free tier.
    - For date-specific routes, schedules, or fares, use the runtime provider path when one exists. Do not replace it with scraped aggregate prose.
 2. Start a bounded run.
@@ -47,10 +49,10 @@ Inspect the published destination record, provenance, coverage rows, and queued 
    - Build the merged record in `.catalog-work/<run-id>/<destination-key>.json` from the existing `data/catalog/records/<destination-key>.json`.
    - Include current verified claims plus coverage for every targeted/claimed domain. Claims have no lifecycle status.
    - Name the temporary file `<destination-key>.json`, run `pnpm catalog:publish -- --dry-run <temporary-path>`, and complete `docs/CATALOG_PUBLICATION_CHECKLIST.md`.
-   - Run `pnpm catalog:publish -- <temporary-path>` only after all checks pass, then update any checked-in snapshot or seed that consumes it.
+   - Run `pnpm catalog:publish -- <temporary-path>` only after all checks pass. The command regenerates every checked-in artifact and fails without leaving a published record plus stale output.
    - Never create a draft, review queue, `needs-review` job, or separate ingestion request.
 7. Report.
-   - State credits used, URLs checked, changes found, conflicts, failed sources, domains still stale/missing, and the recommended next run.
+   - State credits used, URLs checked, changes found, conflicts, failed sources, domains still stale/missing, visibility/readiness, changed coverage, and the resulting `catalogVersion`.
    - Distinguish “Firecrawl could not retrieve the page” from “the information is unavailable.”
 
 ## Refresh priority

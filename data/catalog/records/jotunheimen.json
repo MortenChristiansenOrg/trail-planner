@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-jotunheimen",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "jotunheimen",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Gjendesheim",
+    "region": "Jotunheimen",
+    "countryCode": "NO",
+    "longitude": 8.809962,
+    "latitude": 61.495185
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "country",
+      "value": "Norway",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "summary",
+      "value": "A high-mountain gateway for classic ridge walks and hut-to-hut stages.",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "character",
+      "value": "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "guide.highlights",
+      "value": "Gjendesheim sits beside green Gjende and opens directly onto Besseggen, Knutshøe and the eastern Jotunheimen hut network. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "guide.terrain",
+      "value": "Broad glacial valleys are enclosed by dark, blocky high peaks; trails alternate between lake shores, polished slabs, talus and airy ridge crests above sparse alpine vegetation. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "jotunheimen",
+      "field": "guide.expectations",
+      "value": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "jotunheimen",
+      "field": "recommendedMonths",
+      "value": [
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "jotunheimen",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/jotunheimen.jpg",
+        "assetSha256": "877a0ed767531bc8bf65ecb957e181df652a8437716cb5432b82605713b503ab",
+        "width": 4352,
+        "height": 2448,
+        "alt": "Jotunheimen mountain landscape seen from the Gjendesheim hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Xauxa (Håkan Svensson)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionText": "Gjendesheim seen from Besseggen.jpg by Xauxa (Håkan Svensson) · CC BY-SA 3.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Gjendesheim%20seen%20from%20Besseggen.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gjendesheim%20seen%20from%20Besseggen.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "jotunheimen-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Gjendesheim%20seen%20from%20Besseggen.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "jotunheimen-besseggen-ridge",
+      "field": "hike",
+      "value": {
+        "key": "jotunheimen-besseggen-ridge",
+        "name": "Besseggen Ridge",
+        "routeType": "loop",
+        "description": "Besseggen Ridge represents a short landscape or viewpoint walk from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "jotunheimen-knutshe-ridge",
+      "field": "hike",
+      "value": {
+        "key": "jotunheimen-knutshe-ridge",
+        "name": "Knutshøe Ridge",
+        "routeType": "out-and-back",
+        "description": "Knutshøe Ridge represents a half-day valley, lake or lower-summit route from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "jotunheimen-gjendetunga",
+      "field": "hike",
+      "value": {
+        "key": "jotunheimen-gjendetunga",
+        "name": "Gjendetunga",
+        "routeType": "loop",
+        "description": "Gjendetunga represents a substantial circuit with varied terrain from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "jotunheimen-glittertind-from-glitterheim",
+      "field": "hike",
+      "value": {
+        "key": "jotunheimen-glittertind-from-glitterheim",
+        "name": "Glittertind from Glitterheim",
+        "routeType": "point-to-point",
+        "description": "Glittertind from Glitterheim represents a long ridge, summit or through-route from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "jotunheimen-gjendesheim-to-memurubu",
+      "field": "hike",
+      "value": {
+        "key": "jotunheimen-gjendesheim-to-memurubu",
+        "name": "Gjendesheim to Memurubu",
+        "routeType": "point-to-point",
+        "description": "Gjendesheim to Memurubu represents the area's most committing established mountain choice from the Gjendesheim catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Gjendesheim area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "jotunheimen-authority",
+        "url": "https://jotunheimen.com/en/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "jotunheimen",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Gjendesheim road access",
+        "oneWayHours": 11.083333333333334,
+        "costPerPersonDkk": 1850,
+        "note": "SuperSpeed Hirtshals–Larvik with Color Line; includes the recommended 60-minute terminal arrival. Hirtshals–Larvik has the shortest modeled total time among the verified ferry alternatives from Denmark, including the 60-minute terminal arrival recommendation.",
+        "confidence": "high",
+        "optionId": "catalog-car-aalborg-gjendesheim"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "jotunheimen",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Gjendesheim public-transport stop",
+        "oneWayHours": 20.4,
+        "costPerPersonDkk": 1850,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-jotunheimen-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "jotunheimen",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Gjendesheim airport transfer",
+        "oneWayHours": 8.4,
+        "costPerPersonDkk": 2400,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-jotunheimen-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "gjendesheim-turisthytte",
+      "field": "lodging",
+      "value": {
+        "id": "gjendesheim-turisthytte",
+        "name": "Gjendesheim Turisthytte",
+        "kind": "hut",
+        "nightlyCostDkk": 930
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "memurubu",
+      "field": "lodging",
+      "value": {
+        "id": "memurubu",
+        "name": "Memurubu lodge",
+        "kind": "hut",
+        "nightlyCostDkk": 980
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

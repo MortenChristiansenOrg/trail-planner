@@ -13,6 +13,8 @@ Read these before researching:
 
 - `docs/CATALOG_DATA_PIPELINE.md`
 - `docs/CATALOG_PUBLICATION_CHECKLIST.md`
+- `docs/CATALOG_PRODUCT_CONVENTIONS.md`
+- `data/catalog/generated/coverage.json`
 - `data/catalog/record.template.json`
 - `references/firecrawl.md`
 
@@ -23,7 +25,7 @@ Inspect the existing catalog and `data/catalog/records/` to avoid duplicate keys
 1. Define the candidate.
    - Establish a kebab-case stable key, official/common name, region, country code, and access-hub intent.
    - Reject a duplicate or explain why a separate destination is useful.
-   - Decide which domains are required for this run. Start with `destination-core`, `seasonality`, and `access`; a useful hub may publish with missing hike coverage.
+   - Decide which domains are required for this run. A useful hidden hub may publish with explicit gaps; a visible hub must meet the shared guide, media, hike, and variety rules.
 2. Start a bounded run.
    - Announce skill use and the target domains before network calls.
    - Run the authentication and credit preflight in `references/firecrawl.md`.
@@ -47,10 +49,10 @@ Inspect the existing catalog and `data/catalog/records/` to avoid duplicate keys
    - Build the complete record from `data/catalog/record.template.json` in `.catalog-work/<run-id>/<destination-key>.json`.
    - Name the temporary file `<destination-key>.json`, run `pnpm catalog:publish -- --dry-run <temporary-path>`, and complete `docs/CATALOG_PUBLICATION_CHECKLIST.md`. Fix every failure before publication.
    - Run `pnpm catalog:publish -- <temporary-path>` to atomically replace `data/catalog/records/<destination-key>.json`. A record in this directory is published catalog data.
-   - Update any checked-in catalog snapshot or seed that consumes the destination in the same run. Never leave a separate ingestion or user-review task.
+   - The publication command must regenerate the snapshot, Convex artifact, coverage report, reconciliation report, and catalog version. Never hand-edit generated files or leave a separate ingestion task.
    - Never create `data/catalog/drafts/` or a `needs-review` state.
 7. Report the outcome.
-   - List sources used, Firecrawl credits before/after, coverage by domain, conflicts, and remaining gaps.
+   - List sources used, Firecrawl credits before/after, coverage by domain, conflicts, remaining gaps, visibility/readiness, and the resulting `catalogVersion`.
    - State what was published and recommend the smallest automated refresh for remaining gaps.
 
 ## Source rules by domain

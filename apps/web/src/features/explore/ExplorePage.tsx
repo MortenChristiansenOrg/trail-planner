@@ -1,4 +1,5 @@
 import { useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ArrowRight,
   BusFront,
@@ -30,8 +31,6 @@ import { Slider } from "@/components/ui/slider";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import {
-  countryOptions,
-  destinations,
   formatHours,
   formatMoney,
   monthNames,
@@ -39,6 +38,10 @@ import {
   type TravelEstimate,
   type TravelMode,
 } from "@/features/catalog/catalog";
+import {
+  useCatalog,
+  useCatalogDestination,
+} from "@/features/catalog/CatalogProvider";
 import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import {
@@ -67,10 +70,11 @@ export function ExplorePage({
   const navigate = useNavigate();
   const auth = useAuthSession();
   const tripStore = useTripStore();
+  const catalog = useCatalog();
   const preferenceSession = usePreferences();
   const preferences = preferenceSession.preferences;
   const personalizedDestinations = preferences
-    ? personalizeDestinations(destinations, preferences)
+    ? personalizeDestinations(catalog.destinations, preferences)
     : [];
   const results = rankDestinations(personalizedDestinations, search);
   const selectedResult =
@@ -82,8 +86,8 @@ export function ExplorePage({
     preferences,
   );
 
-  if (!preferenceSession.ready) {
-    return <div className="route-loading" role="status">Loading your planning settings…</div>;
+  if (!preferenceSession.ready || !catalog.ready) {
+    return <div className="route-loading" role="status">Loading catalog and planning settings…</div>;
   }
   if (!preferences) {
     return (
@@ -220,6 +224,9 @@ function FilterSheet({
   resultCount: number;
   onChange: (next: ExploreSearch, replace?: boolean) => void;
 }) {
+  const countryOptions = Array.from(
+    new Map(destinations.map((item) => [item.countryCode, item.country])).entries(),
+  ).map(([code, name]) => ({ code, name }));
   const update = <Key extends keyof ExploreSearch>(key: Key, value: ExploreSearch[Key]) => {
     onChange(reconcileExploreSelection(destinations, { ...search, [key]: value }), true);
   };
@@ -421,21 +428,31 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
 }
 
 function DestinationDetails({ destination, search, onPlan }: { destination: Destination; search: ExploreSearch; onPlan: () => void }) {
+  const [open, setOpen] = useState(false);
+  const detailedDestination =
+    useCatalogDestination(destination.id, open, destination) ?? destination;
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild><Button variant="outline">View area details</Button></SheetTrigger>
       <SheetContent className="destination-sheet paper-sheet sm:max-w-xl" side="right">
         <SheetHeader>
-          <p className="step-label">{destination.region}, {destination.country}</p>
-          <SheetTitle>{destination.name}</SheetTitle>
-          <SheetDescription>{destination.character}</SheetDescription>
+          <p className="step-label">{detailedDestination.region}, {detailedDestination.country}</p>
+          <SheetTitle>{detailedDestination.name}</SheetTitle>
+          <SheetDescription>{detailedDestination.character}</SheetDescription>
         </SheetHeader>
         <div className="destination-sheet__body">
-          <CatalogMediaFigure media={destination.media} sizes="(max-width: 640px) 90vw, 540px" />
+          <CatalogMediaFigure media={detailedDestination.media} sizes="(max-width: 640px) 90vw, 540px" />
+          {detailedDestination.guide ? (
+            <section className="destination-guide">
+              <div><h3>Why go</h3><p>{detailedDestination.guide.highlights}</p></div>
+              <div><h3>Mountains, nature and terrain</h3><p>{detailedDestination.guide.terrain}</p></div>
+              <div><h3>What to expect</h3><p>{detailedDestination.guide.expectations}</p></div>
+            </section>
+          ) : <p className="route-loading" role="status">Loading the source-backed area guide…</p>}
           <section>
             <h3>Available travel</h3>
             <div className="detail-travel-list">
-              {destination.travel.map((estimate) => (
+              {detailedDestination.travel.map((estimate) => (
                 <div key={estimate.mode}>
                   {modeIcon(estimate.mode)}
                   <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
@@ -446,21 +463,30 @@ function DestinationDetails({ destination, search, onPlan }: { destination: Dest
           </section>
           <section>
             <h3>Hikes in the area</h3>
-            {destination.hikes.length ? <div className="route-preview-list">
-              {destination.hikes.map((hike) => (
-                <article className={hike.media ? "has-media" : undefined} key={hike.id}>
-                  {hike.media ? <CatalogMediaFigure media={hike.media} sizes="90px" variant="thumbnail" /> : null}
+            {detailedDestination.hikes.length ? <div className="route-preview-list">
+              {detailedDestination.hikes.map((hike) => (
+                <article key={hike.id}>
                   <Route />
-                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry unavailable"}</small></div>
+                  <div>
+                    <strong>{hike.name}</strong>
+                    <p>{hike.description}</p>
+                    <small>
+                      {hike.difficulty} · {formatHours(hike.durationHours)} · {hike.routeType}
+                      {hike.distanceKm === undefined ? "" : ` · ${hike.distanceKm} km`}
+                      {hike.ascentM === undefined ? "" : ` · ${hike.ascentM} m ascent`}
+                      {hike.route.length ? "" : " · geometry unavailable"}
+                    </small>
+                    <a href={hike.provenance.sourceUrl} rel="noreferrer" target="_blank">Inspect route source</a>
+                  </div>
                 </article>
               ))}
-            </div> : <div className="routes-curating"><Route /><div><strong>Trail geometry unavailable</strong><p>This is a published access and logistics hub, but no route geometry has passed source verification yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
+            </div> : open ? <div className="routes-curating"><Route /><div><strong>Loading hike choices</strong><p>The catalog keeps route details outside the initial Explore list and loads them with this sheet.</p></div></div> : null}
           </section>
-          <p className="catalog-source">Catalog source verified {destination.provenance.verifiedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
+          <p className="catalog-source">Catalog version {detailedDestination.catalogVersion.slice(0, 12)} · media verified {detailedDestination.media.verifiedAt}: <a href={detailedDestination.media.sourceUrl} rel="noreferrer" target="_blank">inspect image source</a></p>
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button>
+            <Button onClick={onPlan}>Plan {detailedDestination.name} <ArrowRight /></Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>

@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-kranjska-gora",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "kranjska-gora",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Kranjska Gora",
+    "region": "Julian Alps",
+    "countryCode": "SI",
+    "longitude": 13.786,
+    "latitude": 46.486
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "country",
+      "value": "Slovenia",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "summary",
+      "value": "A small alpine town for limestone summits, passes and Triglav approaches.",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "character",
+      "value": "Rugged white peaks, clear rivers and compact access, with some routes requiring secure scrambling.",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "guide.highlights",
+      "value": "Kranjska Gora connects the Sava valley, Vršič Pass, Planica and the northern Julian Alps within a compact Slovenian base. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "guide.terrain",
+      "value": "White limestone pinnacles and scree rise above spruce forest, clear rivers and glacial valleys; paths range from valley tracks to steep secured sections and exposed summit rubble. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "kranjska-gora",
+      "field": "guide.expectations",
+      "value": "Regular buses and short transfers reach several starts, but the hardest peaks are not ordinary hiking objectives; visitors who separate signed walks from via ferrata and alpine climbing will find strong variety at every level. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "kranjska-gora",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "kranjska-gora",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/kranjska-gora.jpg",
+        "assetSha256": "b305e0723576fb4b87b5dee03502ceae58b834f46ac88dc34256e30ab8746f0f",
+        "width": 9622,
+        "height": 2450,
+        "alt": "Julian Alps mountain landscape seen from the Kranjska Gora hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Tiia Monto",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "Kranjska Gora panorama2.jpg by Tiia Monto · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Kranjska%20Gora%20panorama2.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kranjska%20Gora%20panorama2.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "kranjska-gora-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Kranjska%20Gora%20panorama2.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "kranjska-gora-slemenova-spica",
+      "field": "hike",
+      "value": {
+        "key": "kranjska-gora-slemenova-spica",
+        "name": "Slemenova Špica",
+        "routeType": "loop",
+        "description": "Slemenova Špica represents a short landscape or viewpoint walk from the Kranjska Gora catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Kranjska Gora area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "kranjska-gora-planica-to-tamar-valley",
+      "field": "hike",
+      "value": {
+        "key": "kranjska-gora-planica-to-tamar-valley",
+        "name": "Planica to Tamar Valley",
+        "routeType": "out-and-back",
+        "description": "Planica to Tamar Valley represents a half-day valley, lake or lower-summit route from the Kranjska Gora catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Kranjska Gora area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "kranjska-gora-martuljek-waterfalls",
+      "field": "hike",
+      "value": {
+        "key": "kranjska-gora-martuljek-waterfalls",
+        "name": "Martuljek Waterfalls",
+        "routeType": "loop",
+        "description": "Martuljek Waterfalls represents a substantial circuit with varied terrain from the Kranjska Gora catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Kranjska Gora area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "kranjska-gora-mala-mojstrovka",
+      "field": "hike",
+      "value": {
+        "key": "kranjska-gora-mala-mojstrovka",
+        "name": "Mala Mojstrovka",
+        "routeType": "point-to-point",
+        "description": "Mala Mojstrovka represents a long ridge, summit or through-route from the Kranjska Gora catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Kranjska Gora area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "kranjska-gora-vrsic-to-prisojnik-viewpoint",
+      "field": "hike",
+      "value": {
+        "key": "kranjska-gora-vrsic-to-prisojnik-viewpoint",
+        "name": "Vršič to Prisojnik Viewpoint",
+        "routeType": "point-to-point",
+        "description": "Vršič to Prisojnik Viewpoint represents the area's most committing established mountain choice from the Kranjska Gora catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Kranjska Gora area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "kranjska-gora-authority",
+        "url": "https://kranjska-gora.si/en/activities/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "kranjska-gora",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Kranjska Gora road access",
+        "oneWayHours": 15.3,
+        "costPerPersonDkk": 2150,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-kranjska-gora--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "kranjska-gora",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Kranjska Gora public-transport stop",
+        "oneWayHours": 19.8,
+        "costPerPersonDkk": 1850,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-kranjska-gora-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "kranjska-gora",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Kranjska Gora airport transfer",
+        "oneWayHours": 6.8,
+        "costPerPersonDkk": 1650,
+        "layovers": 0,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-kranjska-gora-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "triglavski-dom",
+      "field": "lodging",
+      "value": {
+        "id": "triglavski-dom",
+        "name": "Triglavski dom",
+        "kind": "hut",
+        "nightlyCostDkk": 540
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "spik-camping",
+      "field": "lodging",
+      "value": {
+        "id": "spik-camping",
+        "name": "Špik alpine camping",
+        "kind": "camping",
+        "nightlyCostDkk": 210
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

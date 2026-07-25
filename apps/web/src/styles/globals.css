@@ -247,6 +247,10 @@ svg { flex: none; }
 body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { background: rgba(20, 35, 28, .26); }
 .destination-sheet__body section { margin-top: 23px; }
 .destination-sheet__body h3 { margin-bottom: 10px; font-family: Georgia, serif; font-size: 18px; }
+.destination-guide { display: grid; gap: 20px; }
+.destination-guide > div { padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.destination-guide > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.destination-guide p { color: var(--ink-soft); font-size: 12px; line-height: 1.75; }
 .detail-travel-list, .route-preview-list { display: grid; gap: 8px; }
 .detail-travel-list > div { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 11px; border: 1px solid var(--border); border-radius: 9px; background: rgba(255,255,255,.35); }
 .detail-travel-list svg { width: 17px; color: #55705d; }
@@ -261,6 +265,7 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .route-preview-list svg { width: 18px; color: var(--route-red); }
 .route-preview-list p { margin: 3px 0; color: var(--ink-soft); font-size: 11px; line-height: 1.45; }
 .route-preview-list small { color: #7b6b4e; font-size: 10px; }
+.route-preview-list a { display: inline-block; margin-top: 5px; color: var(--primary); font-size: 10px; text-decoration: underline; }
 
 /* Shared page headings */
 .trips-page, .trip-detail-page, .share-page { width: min(1380px, 100%); margin: 0 auto; padding: 48px clamp(22px, 4vw, 62px) 70px; }

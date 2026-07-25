@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-snowdonia",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "snowdonia",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Llanberis",
+    "region": "Eryri / Snowdonia",
+    "countryCode": "GB",
+    "longitude": -4.13,
+    "latitude": 53.119
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "country",
+      "value": "United Kingdom",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "aliases",
+      "value": [
+        "eryri"
+      ],
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "summary",
+      "value": "A walkable mountain village for Yr Wyddfa and the rough ridges of northern Eryri.",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "character",
+      "value": "Rocky ridges and glacial cwms packed into a compact area, with many routes starting near villages.",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "guide.highlights",
+      "value": "Llanberis sits below Yr Wyddfa and within reach of the Glyderau, Tryfan and quieter northern ridges of Eryri National Park. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "guide.terrain",
+      "value": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "snowdonia",
+      "field": "guide.expectations",
+      "value": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "snowdonia",
+      "field": "recommendedMonths",
+      "value": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "snowdonia",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/snowdonia.jpg",
+        "assetSha256": "f3c0cb51424e65069eba9853b7ac9646d57728fdb8169925b303361630a44c92",
+        "width": 640,
+        "height": 428,
+        "alt": "Eryri / Snowdonia mountain landscape seen from the Llanberis hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Alan Fryer",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "attributionText": "Mynyddoedd Eryri - Mountains of Snowdonia - geograph.org.uk - 530480.jpg by Alan Fryer · CC BY-SA 2.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "snowdonia-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mynyddoedd%20Eryri%20-%20Mountains%20of%20Snowdonia%20-%20geograph.org.uk%20-%20530480.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "snowdonia-yr-wyddfa-via-llanberis-path",
+      "field": "hike",
+      "value": {
+        "key": "snowdonia-yr-wyddfa-via-llanberis-path",
+        "name": "Yr Wyddfa via Llanberis Path",
+        "routeType": "loop",
+        "description": "Yr Wyddfa via Llanberis Path represents a short landscape or viewpoint walk from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "snowdonia-pyg-and-miners-tracks-circuit",
+      "field": "hike",
+      "value": {
+        "key": "snowdonia-pyg-and-miners-tracks-circuit",
+        "name": "Pyg and Miners' Tracks Circuit",
+        "routeType": "out-and-back",
+        "description": "Pyg and Miners' Tracks Circuit represents a half-day valley, lake or lower-summit route from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "snowdonia-tryfan-north-ridge",
+      "field": "hike",
+      "value": {
+        "key": "snowdonia-tryfan-north-ridge",
+        "name": "Tryfan North Ridge",
+        "routeType": "loop",
+        "description": "Tryfan North Ridge represents a substantial circuit with varied terrain from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "snowdonia-glyderau-traverse",
+      "field": "hike",
+      "value": {
+        "key": "snowdonia-glyderau-traverse",
+        "name": "Glyderau Traverse",
+        "routeType": "point-to-point",
+        "description": "Glyderau Traverse represents a long ridge, summit or through-route from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "snowdonia-moel-eilio-circuit",
+      "field": "hike",
+      "value": {
+        "key": "snowdonia-moel-eilio-circuit",
+        "name": "Moel Eilio Circuit",
+        "routeType": "point-to-point",
+        "description": "Moel Eilio Circuit represents the area's most committing established mountain choice from the Llanberis catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Llanberis area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "source": {
+        "key": "snowdonia-authority",
+        "url": "https://snowdonia.gov.wales/visit/walking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "snowdonia",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Llanberis road access",
+        "oneWayHours": 14.6,
+        "costPerPersonDkk": 1950,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-snowdonia--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "snowdonia",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Llanberis public-transport stop",
+        "oneWayHours": 18.2,
+        "costPerPersonDkk": 2050,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-snowdonia-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "snowdonia",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Llanberis airport transfer",
+        "oneWayHours": 7.1,
+        "costPerPersonDkk": 1950,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-snowdonia-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "llyn-gwynant",
+      "field": "lodging",
+      "value": {
+        "id": "llyn-gwynant",
+        "name": "Llyn Gwynant campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 230
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

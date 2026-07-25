@@ -25,6 +25,49 @@ const provenanceClaim = v.object({
   refreshPolicy: v.optional(v.string()),
 });
 
+const catalogConfidence = v.union(v.literal("low"), v.literal("medium"), v.literal("high"));
+const catalogProvenance = v.object({
+  sourceKey: v.string(),
+  sourceUrl: v.string(),
+  verifiedAt: v.string(),
+  confidence: catalogConfidence,
+});
+const catalogMedia = v.object({
+  imageUrl: v.string(),
+  // Optional only for retained pre-versioning rollback documents.
+  // Every current generated artifact requires and writes this digest.
+  assetSha256: v.optional(v.string()),
+  width: v.number(),
+  height: v.number(),
+  alt: v.string(),
+  subject: v.literal("destination"),
+  kind: v.literal("terrain"),
+  creator: v.string(),
+  license: v.string(),
+  licenseUrl: v.string(),
+  attributionText: v.string(),
+  attributionUrl: v.string(),
+  sourceUrl: v.string(),
+  verifiedAt: v.string(),
+});
+const catalogTravelEstimate = v.object({
+  mode: v.union(v.literal("car"), v.literal("train"), v.literal("plane")),
+  available: v.boolean(),
+  accessNode: v.string(),
+  oneWayHours: v.number(),
+  costPerPersonDkk: v.number(),
+  layovers: v.optional(v.number()),
+  note: v.string(),
+  confidence: catalogConfidence,
+  optionId: v.optional(v.string()),
+});
+const catalogLodging = v.object({
+  id: v.string(),
+  name: v.string(),
+  kind: v.union(v.literal("hut"), v.literal("camping")),
+  nightlyCostDkk: v.number(),
+});
+
 export default defineSchema({
   users: defineTable({
     clerkUserId: v.string(),
@@ -80,6 +123,103 @@ export default defineSchema({
     .index("by_country_visibility", ["countryCode", "visibility"])
     .index("by_region_visibility", ["region", "visibility"])
     .index("by_visibility", ["visibility"]),
+
+  catalogVersions: defineTable({
+    catalogVersion: v.string(),
+    artifactHash: v.optional(v.string()),
+    status: v.union(v.literal("staging"), v.literal("active"), v.literal("retained")),
+    expectedDestinations: v.number(),
+    expectedHikes: v.number(),
+    expectedCoverage: v.optional(v.number()),
+    createdAt: v.number(),
+    validatedAt: v.optional(v.number()),
+    activatedAt: v.optional(v.number()),
+  }).index("by_version", ["catalogVersion"]),
+
+  catalogState: defineTable({
+    key: v.literal("active"),
+    catalogVersion: v.string(),
+    updatedAt: v.number(),
+  }).index("by_key", ["key"]),
+
+  catalogDestinations: defineTable({
+    catalogVersion: v.string(),
+    destinationKey: v.string(),
+    aliases: v.array(v.string()),
+    name: v.string(),
+    region: v.string(),
+    country: v.string(),
+    countryCode: v.string(),
+    longitude: v.number(),
+    latitude: v.number(),
+    recommendedMonths: v.array(v.number()),
+    summary: v.string(),
+    character: v.string(),
+    guideHighlights: v.string(),
+    guideTerrain: v.string(),
+    guideExpectations: v.string(),
+    hero: catalogMedia,
+    hikeCount: v.number(),
+    travel: v.array(catalogTravelEstimate),
+    lodgings: v.array(catalogLodging),
+    provenance: v.array(catalogProvenance),
+  })
+    .index("by_version_key", ["catalogVersion", "destinationKey"])
+    .index("by_version", ["catalogVersion"]),
+
+  catalogDestinationAliases: defineTable({
+    catalogVersion: v.string(),
+    alias: v.string(),
+    destinationKey: v.string(),
+  })
+    .index("by_version_alias", ["catalogVersion", "alias"])
+    .index("by_version", ["catalogVersion"]),
+
+  catalogCoverage: defineTable({
+    catalogVersion: v.string(),
+    destinationKey: v.string(),
+    visible: v.boolean(),
+    ready: v.boolean(),
+    guideWords: v.number(),
+    hikeCount: v.number(),
+    difficultyCount: v.number(),
+    durationBandCount: v.number(),
+    hasHero: v.boolean(),
+    gaps: v.array(v.string()),
+  })
+    .index("by_version_key", ["catalogVersion", "destinationKey"])
+    .index("by_version", ["catalogVersion"]),
+
+  catalogHikes: defineTable({
+    catalogVersion: v.string(),
+    destinationKey: v.string(),
+    hikeKey: v.string(),
+    name: v.string(),
+    routeType: v.union(v.literal("out-and-back"), v.literal("loop"), v.literal("point-to-point"), v.literal("multi-day")),
+    description: v.string(),
+    difficulty: v.union(v.literal("Easy"), v.literal("Moderate"), v.literal("Hard"), v.literal("Expert")),
+    durationHours: v.number(),
+    durationDays: v.number(),
+    distanceKm: v.optional(v.number()),
+    ascentM: v.optional(v.number()),
+    descentM: v.optional(v.number()),
+    trailhead: v.string(),
+    recommendedMonths: v.optional(v.array(v.number())),
+    accessCaveat: v.optional(v.string()),
+    provenance: catalogProvenance,
+  })
+    .index("by_version_destination", ["catalogVersion", "destinationKey"])
+    .index("by_version_key", ["catalogVersion", "hikeKey"]),
+
+  catalogGeometries: defineTable({
+    catalogVersion: v.string(),
+    hikeKey: v.string(),
+    coordinates: v.array(v.array(v.number())),
+    sourceUrl: v.string(),
+    attribution: v.string(),
+    retrievedAt: v.string(),
+    sourceObjectId: v.optional(v.string()),
+  }).index("by_version_hike", ["catalogVersion", "hikeKey"]),
 
   hikes: defineTable({
     destinationId: v.id("destinations"),

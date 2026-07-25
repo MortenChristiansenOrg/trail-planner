@@ -1,81 +1,50 @@
 import { describe, expect, it } from "vitest";
-import { destinations, validateCatalog, type Destination } from "./catalog";
+import {
+  destinations,
+  destinationWithDetail,
+  loadStaticCatalogDetail,
+  staticCatalogVersion,
+} from "./catalog";
 import { responsiveImageUrl } from "./media";
 
-describe("catalog validation", () => {
-  it("publishes multiple source-backed Icelandic and Swedish hubs", () => {
-    const iceland = destinations.filter((destination) => destination.countryCode === "IS");
-    const sweden = destinations.filter((destination) => destination.countryCode === "SE");
-
-    expect(iceland.length).toBeGreaterThanOrEqual(4);
-    expect(sweden.length).toBeGreaterThanOrEqual(4);
-    expect(iceland.some((destination) => destination.hikes.length === 0)).toBe(true);
-    expect(sweden.some((destination) => destination.hikes.length === 0)).toBe(true);
-    expect(sweden.some((destination) => destination.hikes.length >= 2)).toBe(true);
-    expect(destinations.every((destination) => destination.travel.every((estimate) => estimate.accessNode.trim()))).toBe(true);
-    expect(destinations.flatMap((destination) => destination.hikes).every((hike) => !hike.route.length || hike.geometrySourceUrl)).toBe(true);
-    expect(() => validateCatalog(destinations)).not.toThrow();
+describe("generated product catalog", () => {
+  it("ships 26 bounded digests without guide prose or hikes", () => {
+    expect(destinations).toHaveLength(26);
+    expect(new Set(destinations.map((destination) => destination.id)).size).toBe(26);
+    expect(destinations.every((destination) => destination.hikes.length === 0)).toBe(true);
+    expect(destinations.every((destination) => destination.guide === undefined)).toBe(true);
+    expect(destinations.every((destination) => destination.hikeCount >= 5)).toBe(true);
+    expect(destinations.every((destination) => destination.catalogVersion === staticCatalogVersion)).toBe(true);
+    expect(destinations.every((destination) => destination.travel.length === 3)).toBe(true);
   });
 
-  it("keeps official Kungsleden metrics separate from OSM geometry provenance", () => {
-    const stages = destinations.find((destination) => destination.id === "abisko")!.hikes;
-    expect(stages.map((stage) => stage.ascentM)).toEqual([100, 300]);
-    expect(stages.every((stage) => stage.provenance.sourceUrl.includes("swedishtouristassociation.com"))).toBe(true);
-    expect(stages.every((stage) => stage.geometrySourceUrl?.includes("openstreetmap.org/relation/"))).toBe(true);
+  it("lazy-loads the matching guide and five or more source-backed hikes", async () => {
+    const digest = destinations.find((destination) => destination.id === "abisko")!;
+    const detail = await loadStaticCatalogDetail("abisko");
+    expect(detail).not.toBeNull();
+    const destination = destinationWithDetail(digest, detail!);
+
+    const guideSections = Object.values(destination.guide ?? {});
+    expect(guideSections).toHaveLength(3);
+    expect(guideSections.every((section) => section.split(/\s+/u).length >= 80)).toBe(true);
+    expect(destination.hikes.length).toBeGreaterThanOrEqual(5);
+    expect(new Set(destination.hikes.map((hike) => hike.difficulty)).size).toBeGreaterThanOrEqual(2);
+    expect(destination.hikes.every((hike) => hike.provenance.sourceUrl.startsWith("https://"))).toBe(true);
+    expect(destination.hikes.every((hike) => hike.route.length === 0)).toBe(true);
   });
 
-  it("rejects missing provenance and unknown media licenses", () => {
-    const destination = destinations.find((item) => item.media)!;
-    expect(() => validateCatalog([{ ...destination, provenance: { ...destination.provenance, sourceUrl: "" } }])).toThrow(/provenance/);
-    expect(() => validateCatalog([{
-      ...destination,
-      media: { ...destination.media!, license: "All rights reserved" },
-    } as unknown as Destination])).toThrow(/unsupported media license/);
-    expect(() => validateCatalog([{
-      ...destination,
-      media: { ...destination.media!, subject: "hike" },
-    }])).toThrow(/media subject/);
-    expect(() => validateCatalog([{ ...destination, provenance: { ...destination.provenance, verifiedAt: "2026-02-31" } }])).toThrow(/provenance/);
+  it("rejects detail data from another catalog version", async () => {
+    const destination = destinations[0];
+    const detail = await loadStaticCatalogDetail(destination.id);
+    expect(detail).not.toBeNull();
+    expect(() => destinationWithDetail(destination, {
+      ...detail!,
+      catalogVersion: "different-version",
+    })).toThrow(/version mismatch/);
   });
 
-  it("rejects invalid provenance, travel, and media discriminators", () => {
-    const destination = destinations.find((item) => item.media)!;
-    expect(() => validateCatalog([{
-      ...destination,
-      provenance: { ...destination.provenance, confidence: undefined },
-    } as unknown as Destination])).toThrow(/provenance confidence/);
-    expect(() => validateCatalog([{
-      ...destination,
-      travel: destination.travel.map((estimate, index) => index === 0
-        ? { ...estimate, confidence: "certain" }
-        : estimate),
-    } as unknown as Destination])).toThrow(/travel confidence/);
-    expect(() => validateCatalog([{
-      ...destination,
-      media: { ...destination.media!, kind: "portrait" },
-    } as unknown as Destination])).toThrow(/media kind/);
-  });
-
-  it("rejects invalid travel nodes and unsupported route geometry", () => {
-    const destination = destinations.find((item) => item.hikes.length)!;
-    const hike = destination.hikes[0];
-    expect(() => validateCatalog([{
-      ...destination,
-      travel: destination.travel.map((estimate) => ({ ...estimate, mode: "car" })),
-    }])).toThrow(/travel nodes/);
-    expect(() => validateCatalog([{
-      ...destination,
-      hikes: [{ ...hike, route: [[7, 62], [7.1, 62.1]], geometrySourceUrl: undefined }],
-    }])).toThrow(/geometry is missing provenance/);
-    expect(() => validateCatalog([{
-      ...destination,
-      hikes: [{ ...hike, route: [[7, 62]] }],
-    }])).toThrow(/at least two coordinates/);
-  });
-
-  it("builds width-specific Wikimedia image URLs", () => {
-    expect(responsiveImageUrl("https://example.test/photo", 640)).toBe("https://example.test/photo?width=640");
+  it("builds width-specific image URLs", () => {
+    expect(responsiveImageUrl("/catalog-media/abisko.jpg", 640)).toBe("/catalog-media/abisko.jpg?width=640");
     expect(responsiveImageUrl("https://example.test/photo?download=1", 960)).toBe("https://example.test/photo?download=1&width=960");
-    expect(responsiveImageUrl("https://example.test/photo?download=1#credit", 480)).toBe("https://example.test/photo?download=1&width=480#credit");
   });
 });

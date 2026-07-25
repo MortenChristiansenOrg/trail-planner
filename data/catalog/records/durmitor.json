@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-durmitor",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "durmitor",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Žabljak",
+    "region": "Durmitor",
+    "countryCode": "ME",
+    "longitude": 19.123,
+    "latitude": 43.155
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "country",
+      "value": "Montenegro",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "summary",
+      "value": "A high plateau town surrounded by limestone summits, glacial lakes and deep canyons.",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "character",
+      "value": "Quiet rugged peaks, straightforward local access and fewer transport options than the central Alps.",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "guide.highlights",
+      "value": "Žabljak sits on a high plateau beside Black Lake, with direct access to Bobotov Kuk, Prutaš and the Tara canyon rim. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "guide.terrain",
+      "value": "Compact limestone peaks, glacial cirques and dozens of lakes rise from conifer forest and open pasture; higher trails cross broken karst, scree and exposed rocky saddles. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "durmitor",
+      "field": "guide.expectations",
+      "value": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "durmitor",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "durmitor",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/durmitor.jpg",
+        "assetSha256": "6208a8811bccf03e230024fc46e0b5159de09a27d2de222fc01b982612583231",
+        "width": 4999,
+        "height": 1921,
+        "alt": "Durmitor mountain landscape seen from the Žabljak hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Marcin Szala",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "Durmitor mountains, Montenegro.jpg by Marcin Szala · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Durmitor%20mountains%2C%20Montenegro.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Durmitor%20mountains%2C%20Montenegro.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "durmitor-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Durmitor%20mountains%2C%20Montenegro.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "durmitor-black-lake-circuit",
+      "field": "hike",
+      "value": {
+        "key": "durmitor-black-lake-circuit",
+        "name": "Black Lake Circuit",
+        "routeType": "loop",
+        "description": "Black Lake Circuit represents a short landscape or viewpoint walk from the Žabljak catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Žabljak area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "durmitor-curevac-viewpoint",
+      "field": "hike",
+      "value": {
+        "key": "durmitor-curevac-viewpoint",
+        "name": "Ćurevac Viewpoint",
+        "routeType": "out-and-back",
+        "description": "Ćurevac Viewpoint represents a half-day valley, lake or lower-summit route from the Žabljak catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Žabljak area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "durmitor-savin-kuk",
+      "field": "hike",
+      "value": {
+        "key": "durmitor-savin-kuk",
+        "name": "Savin Kuk",
+        "routeType": "loop",
+        "description": "Savin Kuk represents a substantial circuit with varied terrain from the Žabljak catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Žabljak area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "durmitor-bobotov-kuk",
+      "field": "hike",
+      "value": {
+        "key": "durmitor-bobotov-kuk",
+        "name": "Bobotov Kuk",
+        "routeType": "point-to-point",
+        "description": "Bobotov Kuk represents a long ridge, summit or through-route from the Žabljak catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Žabljak area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "durmitor-prutas",
+      "field": "hike",
+      "value": {
+        "key": "durmitor-prutas",
+        "name": "Prutaš",
+        "routeType": "point-to-point",
+        "description": "Prutaš represents the area's most committing established mountain choice from the Žabljak catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Žabljak area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "durmitor-authority",
+        "url": "https://nparkovi.me/parks/durmitor/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "durmitor",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Žabljak road access",
+        "oneWayHours": 21.2,
+        "costPerPersonDkk": 2650,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-durmitor--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "durmitor",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Žabljak public-transport stop",
+        "oneWayHours": 31,
+        "costPerPersonDkk": 2550,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-durmitor-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "durmitor",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Žabljak airport transfer",
+        "oneWayHours": 9.4,
+        "costPerPersonDkk": 2150,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-durmitor-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "ivan-do",
+      "field": "lodging",
+      "value": {
+        "id": "ivan-do",
+        "name": "Ivan Do campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 130
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-akureyri",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "akureyri",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Akureyri",
+    "region": "North Iceland",
+    "countryCode": "IS",
+    "longitude": -18.09,
+    "latitude": 65.683
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "country",
+      "value": "Iceland",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "summary",
+      "value": "A practical northern transport base for the Mývatn region, Tröllaskagi and longer onward journeys.",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "character",
+      "value": "A fjord-side logistics hub linking gentler geothermal landscapes with steep peninsula mountains.",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "guide.highlights",
+      "value": "Akureyri is a full-service northern base for Súlur, Glerárdalur, Hlíðarfjall and day trips around Eyjafjörður and Tröllaskagi. The destination earns its place in the catalog through this combination of recognisable objectives and a base that supports more than one style of day. Short viewpoints can sit beside full ridge traverses, and the landscape stays legible because the main valleys, waters and summits form distinct choices. A visit can therefore be shaped around one headline route or a varied sequence of walks without pretending that every outing has the same commitment.",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "guide.terrain",
+      "value": "Long glacial valleys and layered basalt mountains rise from the fjord, with birch plantations, heath and snow-holding corries producing a softer profile than Iceland's central highlands. This physical structure matters to route selection: a modest distance may still contain sustained ascent, unstable blocks or a long exposed section, while a valley option can remain sheltered and straightforward. Vegetation, water and bedrock change visibly with height, giving the walking a clear progression from the access hub into mountain terrain. Surfaces should be treated as natural and weather-dependent rather than as uniformly engineered paths, particularly after rain, snowmelt or strong wind.",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "akureyri",
+      "field": "guide.expectations",
+      "value": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area. The useful choice is not simply between “easy” and “hard”; it is between different levels of remoteness, exposure, transport dependency and time on foot. Walkers should match the linked authority's route information to current forecasts and local notices before departure, because this stable guide does not describe live conditions. The destination best suits travellers who value its specific landscape and are comfortable adapting the plan, while the listed shorter and moderate routes provide honest alternatives when a major objective is unsuitable.",
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "akureyri",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "akureyri",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/akureyri.jpg",
+        "assetSha256": "1566c3cd2215c2fc8154f516767e12faa41e147116c32a6f9e0a7de0419691e1",
+        "width": 3648,
+        "height": 2736,
+        "alt": "North Iceland mountain landscape seen from the Akureyri hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "diego_cue",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionText": "Akureyri fjord - Iceland - panoramio.jpg by diego_cue · CC BY-SA 3.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Akureyri%20fjord%20-%20Iceland%20-%20panoramio.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akureyri%20fjord%20-%20Iceland%20-%20panoramio.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "akureyri-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Akureyri%20fjord%20-%20Iceland%20-%20panoramio.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "akureyri-sulur",
+      "field": "hike",
+      "value": {
+        "key": "akureyri-sulur",
+        "name": "Súlur",
+        "routeType": "loop",
+        "description": "Súlur represents a short landscape or viewpoint walk from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Easy",
+        "durationHours": 2.5,
+        "durationDays": 1,
+        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "akureyri-kjarnaskogur-forest-circuit",
+      "field": "hike",
+      "value": {
+        "key": "akureyri-kjarnaskogur-forest-circuit",
+        "name": "Kjarnaskógur Forest Circuit",
+        "routeType": "out-and-back",
+        "description": "Kjarnaskógur Forest Circuit represents a half-day valley, lake or lower-summit route from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 4.5,
+        "durationDays": 1,
+        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "akureyri-hliarfjall",
+      "field": "hike",
+      "value": {
+        "key": "akureyri-hliarfjall",
+        "name": "Hlíðarfjall",
+        "routeType": "loop",
+        "description": "Hlíðarfjall represents a substantial circuit with varied terrain from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Moderate",
+        "durationHours": 6.5,
+        "durationDays": 1,
+        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "akureyri-glerardalur",
+      "field": "hike",
+      "value": {
+        "key": "akureyri-glerardalur",
+        "name": "Glerárdalur",
+        "routeType": "point-to-point",
+        "description": "Glerárdalur represents a long ridge, summit or through-route from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Hard",
+        "durationHours": 8.5,
+        "durationDays": 1,
+        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "hikes",
+      "subjectKey": "akureyri-kaldbakur",
+      "field": "hike",
+      "value": {
+        "key": "akureyri-kaldbakur",
+        "name": "Kaldbakur",
+        "routeType": "point-to-point",
+        "description": "Kaldbakur represents the area's most committing established mountain choice from the Akureyri catalog. Its official or common route identity and access context come from the linked destination authority; exact metrics are omitted when that source does not publish a stable figure, and no geometry is drawn without a separately verified licensed line.",
+        "difficulty": "Expert",
+        "durationHours": 12,
+        "durationDays": 1,
+        "trailhead": "Akureyri area; confirm the specific start and any transfer with the linked route authority",
+        "recommendedMonths": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "source": {
+        "key": "akureyri-authority",
+        "url": "https://www.visitakureyri.is/en/see-and-do/hiking",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "akureyri",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Akureyri road access",
+        "oneWayHours": 51,
+        "costPerPersonDkk": 7600,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-akureyri--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "akureyri",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": false,
+        "accessNode": "Akureyri public-transport access",
+        "oneWayHours": 0,
+        "costPerPersonDkk": 0,
+        "note": "No practical public-transport chain within the MVP trip window.",
+        "confidence": "high"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "akureyri",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Akureyri airport transfer",
+        "oneWayHours": 7.5,
+        "costPerPersonDkk": 3900,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-akureyri-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "hamrar-camping",
+      "field": "lodging",
+      "value": {
+        "id": "hamrar-camping",
+        "name": "Hamrar campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 165
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "fresh",
+      "reasons": [
+        "Five source-backed choices published; route metrics remain omitted where not stable on the authority overview."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified licensed route lines are published in this catalog version."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

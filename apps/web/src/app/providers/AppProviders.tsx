@@ -12,6 +12,10 @@ import {
   PreviewPreferencesProvider,
 } from "@/features/preferences/PreferencesSession";
 import { ConvexTripStoreProvider, TripStoreProvider } from "@/features/trips/TripStore";
+import {
+  ConvexCatalogProvider,
+  StaticCatalogProvider,
+} from "@/features/catalog/CatalogProvider";
 
 const clerkPublishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as
   | string
@@ -26,7 +30,9 @@ export function AppProviders({ children }: { children: ReactNode }) {
     return (
       <PreviewAuthSession>
         <PreviewPreferencesProvider>
-          <TripStoreProvider>{children}</TripStoreProvider>
+          <StaticCatalogProvider>
+            <TripStoreProvider>{children}</TripStoreProvider>
+          </StaticCatalogProvider>
         </PreviewPreferencesProvider>
       </PreviewAuthSession>
     );
@@ -37,7 +43,9 @@ export function AppProviders({ children }: { children: ReactNode }) {
       <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
         <ConfiguredAuthSession>
           <ConfiguredPreferencesProvider>
-            <ConvexTripStoreProvider>{children}</ConvexTripStoreProvider>
+            <ConvexCatalogProvider>
+              <ConvexTripStoreProvider>{children}</ConvexTripStoreProvider>
+            </ConvexCatalogProvider>
           </ConfiguredPreferencesProvider>
         </ConfiguredAuthSession>
       </ConvexProviderWithClerk>

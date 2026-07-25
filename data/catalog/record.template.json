@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "run": {
     "id": "YYYY-MM-DD-destination-task",
     "task": "refresh-data",
@@ -11,6 +11,7 @@
   "destination": {
     "key": "destination-key",
     "action": "refresh",
+    "visibility": "hidden",
     "name": "Destination name",
     "region": "Region",
     "countryCode": "DK",

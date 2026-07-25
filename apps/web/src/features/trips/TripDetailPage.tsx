@@ -22,7 +22,7 @@ import {
   Trash2,
   UsersRound,
 } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -45,13 +45,13 @@ import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
 import { travelEstimateTotal } from "@/features/preferences/personalizeTravel";
 import { loadTravelOption } from "@/features/catalog/travelOptionLoader";
 import {
-  destinationById,
   formatHours,
   formatMoney,
   monthNames,
   type Hike,
   type TravelMode,
 } from "@/features/catalog/catalog";
+import { useCatalogDestination } from "@/features/catalog/CatalogProvider";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type MapMarker, type TrailLine } from "@/features/maps/TrailMap";
 import {
@@ -79,6 +79,7 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
   const [shareUrl, setShareUrl] = useState<string>();
   const [shareCopyStatus, setShareCopyStatus] = useState<"copied" | "manual">();
   const trip = store.trips.find((item) => item.id === tripId);
+  const destination = useCatalogDestination(trip?.destinationId);
   const tripRef = useRef(trip);
   const travelRequestRef = useRef(0);
   tripRef.current = trip;
@@ -91,7 +92,6 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     );
   }
 
-  const destination = destinationById.get(trip.destinationId);
   if (!destination) return null;
   const costs = calculateTripCost(trip);
   const selectedTravel = getSelectedTravel(trip);
@@ -338,6 +338,13 @@ function AddHikeDialog({
   const [customDuration, setCustomDuration] = useState(1);
   const selected = destinationHikes.find((hike) => hike.id === hikeId);
 
+  useEffect(() => {
+    if (!selected && destinationHikes[0]) {
+      setHikeId(destinationHikes[0].id);
+      setDuration(Math.min(destinationHikes[0].durationDays, maxDuration));
+    }
+  }, [destinationHikes, maxDuration, selected]);
+
   return (
     <Dialog>
       <DialogTrigger asChild><Button className="add-day-button" size="sm" variant="ghost"><Plus /> Add hike to day {day}</Button></DialogTrigger>
@@ -347,7 +354,7 @@ function AddHikeDialog({
           <TabsList className="w-full"><TabsTrigger disabled={!destinationHikes.length} value="known">{destinationHikes.length ? "Area routes" : "No catalog routes"}</TabsTrigger><TabsTrigger value="custom">Your own hike</TabsTrigger></TabsList>
           <TabsContent className="dialog-form" value="known">
             <label><span>Hike</span><select value={hikeId} onChange={(event) => { const next = destinationHikes.find((item) => item.id === event.target.value); setHikeId(event.target.value); setDuration(Math.min(next?.durationDays ?? 1, maxDuration)); }}>{destinationHikes.map((hike) => <option key={hike.id} value={hike.id}>{hike.name}</option>)}</select></label>
-            {selected ? <div className="hike-choice-summary"><Mountain /><div><strong>{selected.distanceKm} km · {selected.ascentM} m ascent · {selected.difficulty}</strong><p>{selected.description}</p>{!selected.route.length ? <small>Route geometry is unavailable; this adds the verified hike details without drawing an invented map line.</small> : null}</div></div> : null}
+            {selected ? <div className="hike-choice-summary"><Mountain /><div><strong>{selected.difficulty} · {formatHours(selected.durationHours)}{selected.distanceKm === undefined ? "" : ` · ${selected.distanceKm} km`}{selected.ascentM === undefined ? "" : ` · ${selected.ascentM} m ascent`}</strong><p>{selected.description}</p>{!selected.route.length ? <small>Route geometry is unavailable; this adds the verified hike details without drawing an invented map line.</small> : null}</div></div> : null}
             <label><span>Use duration</span><select value={duration} onChange={(event) => setDuration(Number(event.target.value))}>{Array.from({ length: maxDuration }, (_, index) => index + 1).map((value) => <option key={value} value={value}>{value} day{value === 1 ? "" : "s"}</option>)}</select><small>Overrides the catalog duration for this plan.</small></label>
             <DialogFooter><DialogClose asChild><Button disabled={!selected} onClick={() => selected && onAdd({ kind: "catalog-hike", hikeId: selected.id, name: selected.name, description: selected.description, durationDays: duration })}>Add to itinerary</Button></DialogClose></DialogFooter>
           </TabsContent>
@@ -409,7 +416,8 @@ function LodgingDialogContent({
   plannedOtherNights: number;
   remainingUnplannedNights: number;
 }) {
-  const destination = destinationById.get(destinationId)!;
+  const destination = useCatalogDestination(destinationId);
+  if (!destination) return null;
   const [kind, setKind] = useState<LodgingNight["kind"]>(night.kind === "none" ? "tent-free" : night.kind);
   const [name, setName] = useState(night.name === "Not chosen" ? "Wild tent" : night.name);
   const [cost, setCost] = useState(night.costDkk);
