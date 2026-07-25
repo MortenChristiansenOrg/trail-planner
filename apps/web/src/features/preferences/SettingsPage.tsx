@@ -1,8 +1,7 @@
 import {
   createDefaultPreferences,
-  danishCities,
+  defaultHomeCity,
   energyUnit,
-  getDanishCity,
   type Powertrain,
   type UserPreferences,
 } from "@trail-planner/domain";
@@ -13,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import {
   Field,
   FieldDescription,
+  FieldError,
   FieldGroup,
   FieldLabel,
   FieldLegend,
@@ -28,13 +28,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePreferences } from "@/features/preferences/PreferencesSession";
+import { CityCombobox } from "@/features/preferences/CityCombobox";
 
 export function SettingsPage() {
   const session = usePreferences();
   const initial =
     session.preferences ??
-    createDefaultPreferences(danishCities[0]);
+    createDefaultPreferences(defaultHomeCity);
   const [draft, setDraft] = useState<UserPreferences>(initial);
+  const [cityInvalid, setCityInvalid] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState(false);
   const edited = useRef(false);
@@ -60,13 +62,11 @@ export function SettingsPage() {
 
   const submit = async (event: FormEvent) => {
     event.preventDefault();
-    const city = getDanishCity(draft.homeCity.key);
-    if (!city) return;
+    if (cityInvalid) return;
     setSaved(false);
     setSaveError(false);
     const next = {
       ...draft,
-      homeCity: city,
       vehicle: {
         ...draft.vehicle,
         version: (session.preferences?.vehicle.version ?? 0) + 1,
@@ -118,42 +118,39 @@ export function SettingsPage() {
           <FieldSet>
             <FieldLegend>Home location</FieldLegend>
             <FieldDescription>
-              Choose from a deliberately bounded set of mapped Danish cities.
-              Exact street addresses are not collected.
+              Search the comprehensive official Danish city catalog. Exact
+              street addresses are not collected.
             </FieldDescription>
             <FieldGroup>
-              <Field>
+              <Field data-invalid={cityInvalid}>
                 <FieldLabel htmlFor="home-city">
                   <MapPin /> Home city
                 </FieldLabel>
-                <Select
-                  value={draft.homeCity.key}
-                  onValueChange={(key) => {
-                    const city = getDanishCity(key);
+                <CityCombobox
+                  id="home-city"
+                  invalid={cityInvalid}
+                  key={draft.homeCity.key}
+                  onChange={(city) => {
                     if (city) {
                       edited.current = true;
+                      setCityInvalid(false);
                       setSaved(false);
                       setSaveError(false);
                       setDraft((current) => ({
                         ...current,
                         homeCity: city,
                       }));
+                    } else {
+                      edited.current = true;
+                      setCityInvalid(true);
+                      setSaved(false);
                     }
                   }}
-                >
-                  <SelectTrigger className="w-full" id="home-city">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      {danishCities.map((city) => (
-                        <SelectItem key={city.key} value={city.key}>
-                          {city.name}
-                        </SelectItem>
-                      ))}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+                  value={draft.homeCity}
+                />
+                {cityInvalid ? (
+                  <FieldError>Select a city from the search results.</FieldError>
+                ) : null}
               </Field>
             </FieldGroup>
           </FieldSet>
@@ -161,8 +158,8 @@ export function SettingsPage() {
           <FieldSet>
             <FieldLegend>Default vehicle</FieldLegend>
             <FieldDescription>
-              Estimates use one vehicle profile for now. Values marked as
-              estimates can be replaced with your own assumptions.
+              Estimates cover vehicle energy or fuel only. Add tolls, parking,
+              and other trip-specific charges as custom trip expenses.
             </FieldDescription>
             <FieldGroup className="settings-field-grid">
               <Field>
@@ -285,19 +282,6 @@ export function SettingsPage() {
                   />
                 </>
               ) : null}
-            </FieldGroup>
-          </FieldSet>
-
-          <FieldSet>
-            <FieldLegend>Per-trip driving additions</FieldLegend>
-            <FieldDescription>
-              These group-level return-trip amounts are shown separately from
-              energy or fuel.
-            </FieldDescription>
-            <FieldGroup className="settings-field-grid settings-cost-grid">
-              <NumberField id="tolls" label="Tolls and road charges (DKK)" min={0} onChange={(tollsDkk) => updateVehicle({ tollsDkk })} step={1} value={draft.vehicle.tollsDkk} />
-              <NumberField id="ferries" label="Ferry crossings (DKK)" min={0} onChange={(ferriesDkk) => updateVehicle({ ferriesDkk })} step={1} value={draft.vehicle.ferriesDkk} />
-              <NumberField id="parking" label="Parking (DKK)" min={0} onChange={(parkingDkk) => updateVehicle({ parkingDkk })} step={1} value={draft.vehicle.parkingDkk} />
             </FieldGroup>
           </FieldSet>
 

@@ -1,7 +1,6 @@
 import {
   createDefaultPreferences,
-  danishCities,
-  getDanishCity,
+  type HomeCity,
 } from "@trail-planner/domain";
 import { useNavigate } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, Coins, MapPin, UsersRound } from "lucide-react";
@@ -26,6 +25,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { formatMoney, monthNames } from "@/features/catalog/catalog";
 import { defaultExploreSearch, toSearchParams } from "@/features/explore/search";
 import { TrailMap } from "@/features/maps/TrailMap";
+import { CityCombobox } from "@/features/preferences/CityCombobox";
 import { usePreferences } from "@/features/preferences/PreferencesSession";
 
 export function LandingPage() {
@@ -39,16 +39,14 @@ export function LandingPage() {
 function LandingPlanner() {
   const navigate = useNavigate();
   const preferences = usePreferences();
-  const [homeCityKey, setHomeCityKey] = useState(
-    preferences.preferences?.homeCity.key ?? "",
+  const [homeCity, setHomeCity] = useState<HomeCity | null>(
+    preferences.preferences?.homeCity ?? null,
   );
   const [month, setMonth] = useState(defaultExploreSearch.month);
   const [participants, setParticipants] = useState(defaultExploreSearch.participants);
   const [days, setDays] = useState(defaultExploreSearch.days);
   const [budget, setBudget] = useState(defaultExploreSearch.budget);
   const [cityMissing, setCityMissing] = useState(false);
-  const homeCity = getDanishCity(homeCityKey);
-
   const startExploring = async () => {
     if (!homeCity) {
       setCityMissing(true);
@@ -94,30 +92,15 @@ function LandingPlanner() {
           <FieldGroup className="planner-fields">
             <Field className="planner-city-field" data-invalid={cityMissing}>
               <FieldLabel htmlFor="landing-home-city"><MapPin /> Home city</FieldLabel>
-              <Select
-                value={homeCityKey}
-                onValueChange={(value) => {
-                  setHomeCityKey(value);
+              <CityCombobox
+                id="landing-home-city"
+                invalid={cityMissing}
+                onChange={(city) => {
+                  setHomeCity(city);
                   setCityMissing(false);
                 }}
-              >
-                <SelectTrigger
-                  aria-invalid={cityMissing}
-                  className="w-full"
-                  id="landing-home-city"
-                >
-                  <SelectValue placeholder="Choose a Danish city" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    {danishCities.map((city) => (
-                      <SelectItem key={city.key} value={city.key}>
-                        {city.name}
-                      </SelectItem>
-                    ))}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+                value={homeCity}
+              />
               {cityMissing ? (
                 <FieldError>Choose your home city before exploring.</FieldError>
               ) : null}

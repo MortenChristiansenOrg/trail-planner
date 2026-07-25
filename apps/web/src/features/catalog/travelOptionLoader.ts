@@ -92,7 +92,7 @@ async function loadPersonalizedTravelOption(
     return option;
   }
 
-  if (estimate.origin.key === "aalborg" && getCatalogCarPlan(destination.id)) {
+  if (estimate.origin.name === "Aalborg" && getCatalogCarPlan(destination.id)) {
     return loadCatalogDrivingOption(destination.id, optionId, estimate);
   }
   const points = drivingRoutePoints(

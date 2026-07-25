@@ -14,18 +14,12 @@ describe("vehicle preferences", () => {
       consumptionPer100Km: 20,
       energyPricePerUnit: 3,
       chargingPlan: { name: "Home charging", pricePerKwh: 2 },
-      tollsDkk: 100,
-      ferriesDkk: 300,
-      parkingDkk: 50,
     });
 
-    expect(estimate.totalDkk).toBe(850);
-    expect(estimate.pricePerKmDkk).toBe(0.85);
+    expect(estimate.totalDkk).toBe(400);
+    expect(estimate.pricePerKmDkk).toBe(0.4);
     expect(estimate.components).toEqual([
       expect.objectContaining({ kind: "energy", amountDkk: 400 }),
-      expect.objectContaining({ kind: "tolls", amountDkk: 100 }),
-      expect.objectContaining({ kind: "ferries", amountDkk: 300 }),
-      expect.objectContaining({ kind: "parking", amountDkk: 50 }),
     ]);
     expect(estimate.assumptions).toContain("2 DKK/kWh via Home charging");
   });
@@ -36,9 +30,6 @@ describe("vehicle preferences", () => {
       powertrain: "petrol",
       consumptionPer100Km: 6,
       energyPricePerUnit: 15,
-      tollsDkk: 0,
-      ferriesDkk: 0,
-      parkingDkk: 0,
     });
     const overridden = calculateCarCost(500, {
       version: 3,
@@ -46,9 +37,6 @@ describe("vehicle preferences", () => {
       consumptionPer100Km: 5,
       energyPricePerUnit: 14,
       costPerKmOverrideDkk: 1.25,
-      tollsDkk: 0,
-      ferriesDkk: 0,
-      parkingDkk: 0,
     });
 
     expect(petrol.totalDkk).toBe(450);
@@ -61,9 +49,6 @@ describe("vehicle preferences", () => {
       powertrain: "petrol" as const,
       consumptionPer100Km: 6,
       energyPricePerUnit: 15,
-      tollsDkk: 0,
-      ferriesDkk: 0,
-      parkingDkk: 0,
     };
     const stalePlan = {
       ...petrol,

@@ -23,7 +23,7 @@ export function useDrivingRoute(
   const originLongitude = origin?.coordinates[0];
   const originLatitude = origin?.coordinates[1];
   const originName = origin?.name;
-  const useCatalogRoute = origin?.key === "aalborg";
+  const useCatalogRoute = origin?.name === "Aalborg";
   const routeViaSouthernDenmark =
     useCatalogRoute && viaSouthernDenmark;
   const key = destination && preferences

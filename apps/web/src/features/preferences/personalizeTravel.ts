@@ -1,6 +1,5 @@
 import {
   calculateCarCost,
-  defaultVehicleProfile,
   vehicleProfileKey,
   type UserPreferences,
 } from "@trail-planner/domain";
@@ -76,28 +75,12 @@ function personalizeEstimate(
   );
   const baselineDistanceKm = baselineOneWayDistanceKm * 2;
   const ratio = originDistanceRatio(
+    origin.name,
     origin.coordinates,
     destination.coordinates,
   );
   const distanceKm = baselineDistanceKm * ratio;
-  const defaultEnergyDkk = calculateCarCost(
-    baselineDistanceKm,
-    defaultVehicleProfile,
-  ).components.find(({ kind }) => kind === "energy")?.amountDkk ?? 0;
-  const catalogFixedDkk = Math.max(
-    0,
-    estimate.costPerPersonDkk - defaultEnergyDkk,
-  );
-  const vehicle = {
-    ...preferences.vehicle,
-    tollsDkk:
-      preferences.vehicle.tollsDkk +
-      (destination.countryCode === "NO" ? 0 : catalogFixedDkk),
-    ferriesDkk:
-      preferences.vehicle.ferriesDkk +
-      (destination.countryCode === "NO" ? catalogFixedDkk : 0),
-  };
-  const costBreakdown = calculateCarCost(distanceKm, vehicle);
+  const costBreakdown = calculateCarCost(distanceKm, preferences.vehicle);
 
   return {
     ...estimate,
@@ -120,9 +103,11 @@ function personalizeEstimate(
 }
 
 function originDistanceRatio(
+  originName: string,
   origin: [number, number],
   destination: [number, number],
 ) {
+  if (originName === "Aalborg") return 1;
   const baseline = haversineKm(aalborgCoordinates, destination);
   if (!baseline) return 1;
   return Math.min(1.75, Math.max(0.45, haversineKm(origin, destination) / baseline));

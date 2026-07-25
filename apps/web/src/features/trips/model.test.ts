@@ -48,7 +48,7 @@ describe("planned trip model", () => {
 
     expect(car.origin?.name).toBe("Aarhus");
     expect(car.vehicle).toEqual(preferences.vehicle);
-    expect(car.costBreakdown?.components).toHaveLength(4);
+    expect(car.costBreakdown?.components).toHaveLength(1);
     expect(
       cost.categories
         .find(({ item }) => item.category === "travel")
@@ -57,9 +57,6 @@ describe("planned trip model", () => {
       expect.arrayContaining([
         "Own car return estimate",
         "Charging",
-        "Tolls and road charges",
-        "Ferry crossings",
-        "Parking",
       ]),
     );
     expect(cost.travelCost).toBe(car.costPerPersonDkk);

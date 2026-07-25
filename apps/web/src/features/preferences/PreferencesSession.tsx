@@ -1,7 +1,7 @@
 import {
-  createDefaultPreferences,
   getDanishCity,
   powertrains,
+  type HomeCity,
   type UserPreferences,
 } from "@trail-planner/domain";
 import {
@@ -208,11 +208,7 @@ function clearLocalPreferences() {
 function normalizePreferences(value: unknown): UserPreferences | null {
   if (!value || typeof value !== "object") return null;
   const candidate = value as Partial<UserPreferences>;
-  const storedCity = candidate.homeCity;
-  const city =
-    storedCity && typeof storedCity.key === "string"
-      ? getDanishCity(storedCity.key)
-      : undefined;
+  const city = normalizeHomeCity(candidate.homeCity);
   const vehicle = candidate.vehicle;
   if (
     !city ||
@@ -221,9 +217,6 @@ function normalizePreferences(value: unknown): UserPreferences | null {
     !positive(vehicle.version) ||
     !positive(vehicle.consumptionPer100Km) ||
     !nonNegative(vehicle.energyPricePerUnit) ||
-    !nonNegative(vehicle.tollsDkk) ||
-    !nonNegative(vehicle.ferriesDkk) ||
-    !nonNegative(vehicle.parkingDkk) ||
     !optionalNonNegative(vehicle.costPerKmOverrideDkk) ||
     !optionalNonNegative(vehicle.chargingPlan?.pricePerKwh)
   ) {
@@ -247,18 +240,51 @@ function normalizePreferences(value: unknown): UserPreferences | null {
               pricePerKwh: vehicle.chargingPlan.pricePerKwh,
             }
           : undefined,
-      tollsDkk: vehicle.tollsDkk,
-      ferriesDkk: vehicle.ferriesDkk,
-      parkingDkk: vehicle.parkingDkk,
     },
   };
 }
 
-export function preferencesForCity(cityKey: string) {
-  const city = getDanishCity(cityKey);
-  return city ? createDefaultPreferences(city) : null;
+function normalizeHomeCity(value: unknown): HomeCity | null {
+  if (!value || typeof value !== "object") return null;
+  const city = value as Partial<HomeCity>;
+  const legacyCity =
+    typeof city.key === "string" ? getDanishCity(city.key) : undefined;
+  if (legacyCity) return legacyCity;
+  if (
+    typeof city.key !== "string" ||
+    typeof city.name !== "string" ||
+    city.countryCode !== "DK" ||
+    !Array.isArray(city.coordinates) ||
+    city.coordinates.length !== 2 ||
+    !city.coordinates.every(Number.isFinite) ||
+    !officialPlaceId.test(city.key)
+  ) {
+    return null;
+  }
+  const [longitude, latitude] = city.coordinates;
+  if (
+    !city.name.trim() ||
+    longitude < 8 ||
+    longitude > 15.2 ||
+    latitude < 54.5 ||
+    latitude > 57.8
+  ) {
+    return null;
+  }
+  return {
+    key: city.key,
+    name: city.name.trim(),
+    countryCode: "DK",
+    municipality:
+      typeof city.municipality === "string"
+        ? city.municipality.trim() || undefined
+        : undefined,
+    coordinates: [longitude, latitude],
+  };
 }
 
+const officialPlaceId =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const positive = (value: unknown): value is number =>
   typeof value === "number" && Number.isFinite(value) && value > 0;
 const nonNegative = (value: unknown): value is number =>

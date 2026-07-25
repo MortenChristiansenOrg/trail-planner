@@ -5,6 +5,7 @@ export type HomeCity = {
   key: string;
   name: string;
   countryCode: "DK";
+  municipality?: string;
   coordinates: [longitude: number, latitude: number];
 };
 
@@ -20,9 +21,6 @@ export type VehicleProfile = {
   energyPricePerUnit: number;
   costPerKmOverrideDkk?: number;
   chargingPlan?: ChargingPlan;
-  tollsDkk: number;
-  ferriesDkk: number;
-  parkingDkk: number;
 };
 
 export type UserPreferences = {
@@ -32,7 +30,7 @@ export type UserPreferences = {
 };
 
 export type CarCostComponent = {
-  kind: "energy" | "tolls" | "ferries" | "parking";
+  kind: "energy";
   label: string;
   amountDkk: number;
   estimated: boolean;
@@ -46,7 +44,7 @@ export type CarCostEstimate = {
   assumptions: string[];
 };
 
-export const danishCities: readonly HomeCity[] = [
+const legacyDanishCities: readonly HomeCity[] = [
   { key: "aalborg", name: "Aalborg", countryCode: "DK", coordinates: [9.9217, 57.0488] },
   { key: "aarhus", name: "Aarhus", countryCode: "DK", coordinates: [10.2039, 56.1629] },
   { key: "copenhagen", name: "Copenhagen", countryCode: "DK", coordinates: [12.5683, 55.6761] },
@@ -70,14 +68,13 @@ export const defaultVehicleProfile: VehicleProfile = {
   powertrain: "ev",
   consumptionPer100Km: 20,
   energyPricePerUnit: 2.5,
-  tollsDkk: 0,
-  ferriesDkk: 0,
-  parkingDkk: 0,
 };
 
 export function getDanishCity(key: string) {
-  return danishCities.find((city) => city.key === key);
+  return legacyDanishCities.find((city) => city.key === key);
 }
+
+export const defaultHomeCity = legacyDanishCities[0];
 
 export function createDefaultPreferences(homeCity: HomeCity): UserPreferences {
   return {
@@ -103,9 +100,6 @@ export function vehicleProfileKey(vehicle: VehicleProfile) {
     vehicle.energyPricePerUnit,
     chargingPrice,
     override,
-    vehicle.tollsDkk,
-    vehicle.ferriesDkk,
-    vehicle.parkingDkk,
   ].join("-");
 }
 
@@ -122,9 +116,6 @@ export function calculateCarCost(
   requireNonNegative(distanceKm, "distance");
   requirePositive(vehicle.consumptionPer100Km, "consumption");
   requireNonNegative(vehicle.energyPricePerUnit, "energy price");
-  requireNonNegative(vehicle.tollsDkk, "tolls");
-  requireNonNegative(vehicle.ferriesDkk, "ferries");
-  requireNonNegative(vehicle.parkingDkk, "parking");
   if (vehicle.costPerKmOverrideDkk !== undefined) {
     requireNonNegative(vehicle.costPerKmOverrideDkk, "cost-per-kilometre override");
   }
@@ -152,9 +143,6 @@ export function calculateCarCost(
       amountDkk: roundMoney(energyAmount),
       estimated: vehicle.costPerKmOverrideDkk === undefined,
     },
-    { kind: "tolls", label: "Tolls and road charges", amountDkk: roundMoney(vehicle.tollsDkk), estimated: false },
-    { kind: "ferries", label: "Ferry crossings", amountDkk: roundMoney(vehicle.ferriesDkk), estimated: false },
-    { kind: "parking", label: "Parking", amountDkk: roundMoney(vehicle.parkingDkk), estimated: false },
   ];
   const totalDkk = roundMoney(
     components.reduce((total, component) => total + component.amountDkk, 0),

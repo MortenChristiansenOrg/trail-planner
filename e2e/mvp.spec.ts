@@ -13,13 +13,10 @@ const defaultPreferences = {
     powertrain: "ev",
     consumptionPer100Km: 20,
     energyPricePerUnit: 2.5,
-    tollsDkk: 0,
-    ferriesDkk: 0,
-    parkingDkk: 0,
   },
 };
 const preferenceStorageKey = "trail-planner:preferences:v1";
-const defaultVehicleKey = "v1-ev-20-2.5-none-none-0-0-0";
+const defaultVehicleKey = "v1-ev-20-2.5-none-none";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
@@ -42,27 +39,31 @@ test("first-time visitors choose a mapped home city before Explore", async ({
   await expect(
     page.getByText("Choose your home city before exploring."),
   ).toBeVisible();
-  await page.getByRole("combobox", { name: "Home city" }).click();
-  await page.getByRole("option", { name: "Aarhus" }).click();
+  const citySearch = page.getByRole("combobox", { name: "Home city" });
+  await citySearch.click();
+  await expect(page.getByRole("option")).toHaveCount(0);
+  await citySearch.fill("Aar");
+  await page.getByRole("option", { name: /Aarhus/ }).first().click();
   await page.getByRole("button", { name: "Explore destinations" }).click();
 
   await expect(page.getByText("From Aarhus")).toBeVisible();
   await expect
     .poll(() =>
       page.evaluate(
-        (key) => JSON.parse(localStorage.getItem(key) ?? "null")?.homeCity?.key,
+        (key) => JSON.parse(localStorage.getItem(key) ?? "null")?.homeCity?.name,
         preferenceStorageKey,
       ),
     )
-    .toBe("aarhus");
+    .toBe("Aarhus");
 });
 
 test("settings update the origin and itemized vehicle estimate", async ({
   page,
 }) => {
   await page.goto("/settings");
-  await page.getByRole("combobox", { name: "Home city" }).click();
-  await page.getByRole("option", { name: "Copenhagen" }).click();
+  const citySearch = page.getByRole("combobox", { name: "Home city" });
+  await citySearch.fill("Køben");
+  await page.getByRole("option", { name: /København/ }).first().click();
   await page.getByRole("combobox", { name: "Powertrain" }).click();
   await page.getByRole("option", { name: "Petrol" }).click();
   await page.getByRole("spinbutton", { name: "Consumption (litres/100 km)" }).fill("7");
@@ -71,14 +72,14 @@ test("settings update the origin and itemized vehicle estimate", async ({
   await expect(page.getByText("Settings saved")).toBeVisible();
 
   await page.goto("/explore?month=7");
-  await expect(page.getByText("From Copenhagen")).toBeVisible();
+  await expect(page.getByText("From København")).toBeVisible();
   await page.getByRole("button", { name: "View area details" }).click();
   const carEstimate = page.locator(".detail-travel-list > div").filter({
     hasText: "Own car",
   });
   await carEstimate.getByRole("button", { name: "View stages" }).click();
   const dialog = page.getByRole("dialog", {
-    name: /Drive from Copenhagen|Drive and ferry from Copenhagen/,
+    name: /Drive from København|Drive and ferry from København/,
   });
   await expect(dialog).toContainText("Petrol fuel");
   await expect(dialog).toContainText("Vehicle profile estimate");
@@ -185,7 +186,7 @@ test("every available travel mode exposes complete stage details", async ({ page
       })
     : route.abort());
 
-  await page.goto("/explore?month=7&maxLayovers=1");
+  await page.goto("/explore?month=7&maxLayovers=1&selected=innsbruck");
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await page.getByRole("button", { name: "Plan this trip" }).click();
 
@@ -404,7 +405,7 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "The complete budget mutation flow is covered once on desktop.");
 
-  await page.goto("/explore?month=7&participants=2");
+  await page.goto("/explore?month=7&participants=2&selected=innsbruck");
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: /Airplane/ }).click();
 
@@ -512,7 +513,22 @@ test("full-height pages fill the viewport without the optional preview ribbon", 
 test("feedback fixes remain visible and interactive", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed interaction and layout checks run once on desktop.");
 
-  await page.goto("/explore");
+  await page.route("https://router.project-osrm.org/**", (route) =>
+    route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 1_300_000,
+          duration: 48_600,
+          geometry: {
+            coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]],
+          },
+        }],
+      }),
+    }),
+  );
+  await page.goto("/explore?selected=innsbruck");
   await expect(page.getByText("Numbers show overall fit rank; 1 is the strongest match.")).toBeVisible();
   await expect(page.getByText("Selected month is in the area’s recommended hiking season.")).toBeVisible();
   await expect(page.getByText("Best match").first()).toBeVisible();

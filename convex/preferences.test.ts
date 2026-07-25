@@ -17,9 +17,6 @@ const aalborgPreferences = {
     powertrain: "ev" as const,
     consumptionPer100Km: 20,
     energyPricePerUnit: 2.5,
-    tollsDkk: 0,
-    ferriesDkk: 0,
-    parkingDkk: 0,
   },
 };
 
@@ -79,7 +76,26 @@ describe("preference authorization", () => {
           coordinates: [9.9, 57],
         },
       }),
-    ).rejects.toThrow("supported Danish city catalog");
+    ).rejects.toThrow("official Danish city catalog");
+  });
+
+  test("accepts a source-backed city outside the legacy shortlist", async () => {
+    const t = convexTest(schema, modules);
+    const user = t.withIdentity({ subject: "clerk-user" });
+    const preferences = {
+      ...aalborgPreferences,
+      homeCity: {
+        key: "12337669-a143-6b98-e053-d480220a5a3f",
+        name: "Aalborg",
+        countryCode: "DK" as const,
+        municipality: "Aalborg",
+        coordinates: [9.90549995, 57.03189109] as [number, number],
+      },
+    };
+
+    await expect(
+      user.mutation(api.preferences.upsert, preferences),
+    ).resolves.toEqual(preferences);
   });
 
   test("rejects invalid charging-plan combinations", async () => {

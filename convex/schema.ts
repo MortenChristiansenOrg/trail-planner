@@ -40,6 +40,7 @@ export default defineSchema({
       key: v.string(),
       name: v.string(),
       countryCode: v.literal("DK"),
+      municipality: v.optional(v.string()),
       coordinates: v.array(v.number()),
     }),
     vehicle: v.object({
@@ -58,9 +59,6 @@ export default defineSchema({
           pricePerKwh: v.number(),
         }),
       ),
-      tollsDkk: v.number(),
-      ferriesDkk: v.number(),
-      parkingDkk: v.number(),
     }),
     createdAt: v.number(),
     updatedAt: v.number(),
