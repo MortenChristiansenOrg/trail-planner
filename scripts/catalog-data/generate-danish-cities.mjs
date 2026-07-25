@@ -27,11 +27,20 @@ try {
 }
 
 if (!Array.isArray(places) || places.length < 7_000) {
-  throw new Error(`Expected a comprehensive city catalog, received ${places.length}`);
+  throw new Error(
+    `Expected a comprehensive city catalog, received ${
+      Array.isArray(places) ? places.length : "a non-array response"
+    }`,
+  );
 }
 
-const cities = places.map((place) => {
+const cities = places.map((place, index) => {
+  if (place === null || typeof place !== "object" || Array.isArray(place)) {
+    throw new Error(`Invalid city record at index ${index}`);
+  }
+
   const coordinates = place.visueltcenter;
+  const municipalities = place.kommuner;
   if (
     typeof place.id !== "string" ||
     typeof place.primærtnavn !== "string" ||
@@ -41,11 +50,26 @@ const cities = places.map((place) => {
   ) {
     throw new Error(`Invalid city record ${place.id ?? "without id"}`);
   }
+  if (
+    municipalities !== undefined &&
+    (!Array.isArray(municipalities) ||
+      municipalities.some(
+        (municipality) =>
+          municipality === null ||
+          typeof municipality !== "object" ||
+          Array.isArray(municipality) ||
+          typeof municipality.navn !== "string",
+      ))
+  ) {
+    throw new Error(`Invalid municipalities for city ${place.id}`);
+  }
 
   return {
     key: place.id,
     name: place.primærtnavn,
-    municipality: place.kommuner?.map(({ navn }) => navn).join(" / ") || undefined,
+    municipality:
+      municipalities?.map((municipality) => municipality.navn).join(" / ") ||
+      undefined,
     coordinates,
   };
 }).toSorted((a, b) =>

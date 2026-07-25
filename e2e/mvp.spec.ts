@@ -35,6 +35,17 @@ test("first-time visitors choose a mapped home city before Explore", async ({
   await page.evaluate(() => localStorage.clear());
   await page.reload();
 
+  await page.goto("/settings");
+  await expect(page.getByRole("combobox", { name: "Home city" })).toHaveValue("");
+  await page.getByRole("button", { name: "Save settings" }).click();
+  await expect(
+    page.getByText("Select a city from the search results."),
+  ).toBeVisible();
+  await expect
+    .poll(() => page.evaluate((key) => localStorage.getItem(key), preferenceStorageKey))
+    .toBeNull();
+
+  await page.goto("/");
   await page.getByRole("button", { name: "Explore destinations" }).click();
   await expect(
     page.getByText("Choose your home city before exploring."),

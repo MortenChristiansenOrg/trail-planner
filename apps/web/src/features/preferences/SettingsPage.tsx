@@ -2,6 +2,7 @@ import {
   createDefaultPreferences,
   defaultHomeCity,
   energyUnit,
+  type HomeCity,
   type Powertrain,
   type UserPreferences,
 } from "@trail-planner/domain";
@@ -30,12 +31,16 @@ import {
 import { usePreferences } from "@/features/preferences/PreferencesSession";
 import { CityCombobox } from "@/features/preferences/CityCombobox";
 
+type SettingsDraft = Omit<UserPreferences, "homeCity"> & {
+  homeCity: HomeCity | null;
+};
+
 export function SettingsPage() {
   const session = usePreferences();
-  const initial =
-    session.preferences ??
-    createDefaultPreferences(defaultHomeCity);
-  const [draft, setDraft] = useState<UserPreferences>(initial);
+  const defaults = createDefaultPreferences(defaultHomeCity);
+  const initial: SettingsDraft =
+    session.preferences ?? { ...defaults, homeCity: null };
+  const [draft, setDraft] = useState<SettingsDraft>(initial);
   const [cityInvalid, setCityInvalid] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState(false);
@@ -62,11 +67,16 @@ export function SettingsPage() {
 
   const submit = async (event: FormEvent) => {
     event.preventDefault();
-    if (cityInvalid) return;
+    const homeCity = draft.homeCity;
+    if (cityInvalid || !homeCity) {
+      setCityInvalid(true);
+      return;
+    }
     setSaved(false);
     setSaveError(false);
-    const next = {
+    const next: UserPreferences = {
       ...draft,
+      homeCity,
       vehicle: {
         ...draft.vehicle,
         version: (session.preferences?.vehicle.version ?? 0) + 1,
@@ -129,7 +139,7 @@ export function SettingsPage() {
                 <CityCombobox
                   id="home-city"
                   invalid={cityInvalid}
-                  key={draft.homeCity.key}
+                  key={draft.homeCity?.key ?? "unset"}
                   onChange={(city) => {
                     if (city) {
                       edited.current = true;
@@ -144,6 +154,10 @@ export function SettingsPage() {
                       edited.current = true;
                       setCityInvalid(true);
                       setSaved(false);
+                      setDraft((current) => ({
+                        ...current,
+                        homeCity: null,
+                      }));
                     }
                   }}
                   value={draft.homeCity}
