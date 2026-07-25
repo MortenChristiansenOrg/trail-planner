@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { loadTravelOption } from "@/features/catalog/travelOptionLoader";
 import { TrailMap, type MapMarker, type TrailLine } from "@/features/maps/TrailMap";
+import type { TravelEstimate } from "@/features/catalog/catalog";
 
 const kindLabels: Record<TravelLegKind, string> = {
   walk: "Walk",
@@ -19,7 +20,17 @@ const kindLabels: Record<TravelLegKind, string> = {
   transfer: "Wait / transfer",
 };
 
-export function TravelOptionDetails({ option, optionId, label = "View stages" }: { option?: TravelOptionSnapshot; optionId?: string; label?: string }) {
+export function TravelOptionDetails({
+  estimate,
+  option,
+  optionId,
+  label = "View stages",
+}: {
+  estimate?: TravelEstimate;
+  option?: TravelOptionSnapshot;
+  optionId?: string;
+  label?: string;
+}) {
   const [loaded, setLoaded] = useState<{ optionId: string; option: TravelOptionSnapshot }>();
   const [loading, setLoading] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -36,7 +47,7 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
     const requestId = ++requestRef.current;
     setLoading(true);
     setLoadFailed(false);
-    void loadTravelOption(requestedOptionId).then((next) => {
+    void loadTravelOption(requestedOptionId, estimate).then((next) => {
       if (requestRef.current !== requestId) return;
       const valid = isValidTravelOption(next);
       setLoading(false);
@@ -50,7 +61,7 @@ export function TravelOptionDetails({ option, optionId, label = "View stages" }:
     return () => {
       if (requestRef.current === requestId) requestRef.current += 1;
     };
-  }, [loadedValid, open, optionId, optionValid]);
+  }, [estimate, loadedValid, open, optionId, optionValid]);
   const changeOpen = (nextOpen: boolean) => {
     setOpen(nextOpen);
     if (nextOpen) return;

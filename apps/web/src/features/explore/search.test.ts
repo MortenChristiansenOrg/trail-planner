@@ -137,4 +137,43 @@ describe("explore search", () => {
     expect(resultsForOne.map((result) => result.destination.id)).toEqual(["fast-expensive", "cheap-slow"]);
     expect(resultsForFour.map((result) => result.destination.id)).toEqual(["cheap-slow", "fast-expensive"]);
   });
+
+  it("chooses the best option using group and per-person totals", () => {
+    const destination = {
+      ...destinations[0],
+      recommendedMonths: [7],
+      travel: [
+        {
+          mode: "car" as const,
+          available: true,
+          accessNode: "Test origin",
+          oneWayHours: 4,
+          costPerPersonDkk: 1_500,
+          pricingBasis: "per-group" as const,
+          note: "Group-priced car",
+          confidence: "high" as const,
+        },
+        {
+          mode: "train" as const,
+          available: true,
+          accessNode: "Test station",
+          oneWayHours: 4,
+          costPerPersonDkk: 500,
+          pricingBasis: "per-person" as const,
+          note: "Per-person train",
+          confidence: "high" as const,
+        },
+      ],
+    };
+
+    const [result] = rankDestinations([destination], {
+      ...defaultExploreSearch,
+      participants: 4,
+      budget: 10_000,
+      month: 7,
+      seasonTolerance: 0,
+    });
+
+    expect(result.best.mode).toBe("car");
+  });
 });

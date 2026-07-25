@@ -1,4 +1,5 @@
 import type { Destination, TravelEstimate, TravelMode } from "@/features/catalog/catalog";
+import { travelEstimateTotal } from "@/features/preferences/personalizeTravel";
 
 export type ExploreSearch = {
   month: number;
@@ -87,7 +88,7 @@ export function estimateFits(estimate: TravelEstimate, search: ExploreSearch) {
   }
 
   const travelDays = Math.max(2, Math.ceil((estimate.oneWayHours * 2) / 12));
-  const totalTransport = estimate.costPerPersonDkk * search.participants;
+  const totalTransport = travelEstimateTotal(estimate, search.participants);
   return travelDays < search.days && totalTransport <= search.budget;
 }
 
@@ -115,15 +116,19 @@ export function rankDestinations(destinations: Destination[], search: ExploreSea
     if (!viable.length) continue;
 
     const best = viable.reduce((current, candidate) => {
-      const currentScore = current.costPerPersonDkk / 100 + current.oneWayHours * 2;
-      const candidateScore = candidate.costPerPersonDkk / 100 + candidate.oneWayHours * 2;
+      const currentScore =
+        travelEstimateTotal(current, search.participants) / 100 +
+        current.oneWayHours * 2;
+      const candidateScore =
+        travelEstimateTotal(candidate, search.participants) / 100 +
+        candidate.oneWayHours * 2;
       return candidateScore < currentScore ? candidate : current;
     });
     const score =
       100 -
       seasonDistance * 18 -
       best.oneWayHours * 0.9 -
-      (best.costPerPersonDkk * search.participants * 25) / search.budget;
+      (travelEstimateTotal(best, search.participants) * 25) / search.budget;
 
     results.push({ destination, viable, best, seasonDistance, score });
   }

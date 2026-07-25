@@ -84,6 +84,18 @@ describe("catalog travel data", () => {
     ]));
   });
 
+  it("rejects trip plans for origins outside the source-backed catalog", () => {
+    const invalidPlans = structuredClone(planFile);
+    invalidPlans.plans[0].originKey = "unpublished-origin";
+    invalidPlans.plans[0].modes.car = {
+      status: "details-unavailable",
+      reason: "No complete itinerary.",
+    };
+
+    expect(validateCatalogTravelData(partFile, invalidPlans, ["norway"]))
+      .toContain("plans[0] must use Aalborg as the catalog origin");
+  });
+
   it("rejects non-boolean reverse flags and impossible source dates", () => {
     const invalidParts = structuredClone(partFile) as unknown as CatalogTravelPartFile;
     invalidParts.parts[0].source.retrievedAt = "2026-02-31T00:00:00.000Z";

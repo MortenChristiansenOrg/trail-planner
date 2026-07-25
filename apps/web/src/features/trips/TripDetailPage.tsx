@@ -42,6 +42,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
+import { travelEstimateTotal } from "@/features/preferences/personalizeTravel";
 import { loadTravelOption } from "@/features/catalog/travelOptionLoader";
 import {
   destinationById,
@@ -123,7 +124,9 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     const estimate = trip.travelSnapshot.find((item) => item.mode === mode);
     let option: TravelOptionSnapshot | undefined;
     try {
-      option = estimate?.optionId ? await loadTravelOption(estimate.optionId) : undefined;
+      option = estimate?.optionId
+        ? await loadTravelOption(estimate.optionId, estimate)
+        : undefined;
     } catch {
       option = undefined;
     }
@@ -193,10 +196,10 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       type="button"
                     >
                       <span className="travel-choice__icon">{modeIcon(estimate.mode)}</span>
-                      <span><small>{modeLabels[estimate.mode]}{estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(estimate.costPerPersonDkk * trip.participants)} total` : estimate.note}</em></span>
+                      <span><small>{modeLabels[estimate.mode]}{estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}</small><strong>{estimate.available ? formatHours(estimate.oneWayHours) : "Unavailable"}</strong><em>{estimate.available ? `${formatMoney(travelEstimateTotal(estimate, trip.participants))} total` : estimate.note}</em></span>
                       {trip.selectedTravelMode === estimate.mode ? <Check className="selected-check" /> : null}
                     </button>
-                    {estimate.available && (estimate.optionId || (trip.selectedTravelMode === estimate.mode && trip.selectedTravelOption)) ? <TravelOptionDetails label="Stage details" option={trip.selectedTravelMode === estimate.mode ? trip.selectedTravelOption : undefined} optionId={estimate.optionId} /> : null}
+                    {estimate.available && (estimate.optionId || (trip.selectedTravelMode === estimate.mode && trip.selectedTravelOption)) ? <TravelOptionDetails estimate={estimate} label="Stage details" option={trip.selectedTravelMode === estimate.mode ? trip.selectedTravelOption : undefined} optionId={estimate.optionId} /> : null}
                   </div>
                 ))}
               </div>

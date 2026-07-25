@@ -2,6 +2,11 @@ import { describe, expect, it } from "vitest";
 import { destinations } from "@/features/catalog/catalog";
 import { defaultExploreSearch } from "@/features/explore/search";
 import {
+  createDefaultPreferences,
+  getDanishCity,
+} from "@trail-planner/domain";
+import { personalizeDestinations } from "@/features/preferences/personalizeTravel";
+import {
   addActivity,
   addCustomCost,
   applyLodgingChoice,
@@ -26,6 +31,37 @@ function makeTrip() {
 }
 
 describe("planned trip model", () => {
+  it("keeps origin and itemized vehicle costs as a saved Explore snapshot", () => {
+    const preferences = createDefaultPreferences(getDanishCity("aarhus")!);
+    const personalized = personalizeDestinations(
+      [destination],
+      preferences,
+    )[0];
+    const trip = createTrip({
+      destinationId: personalized.id,
+      destinationName: personalized.name,
+      search: defaultExploreSearch,
+      travel: personalized.travel,
+    });
+    const car = trip.travelSnapshot.find(({ mode }) => mode === "car")!;
+    const cost = calculateTripCost({ ...trip, selectedTravelMode: "car" });
+
+    expect(car.origin?.name).toBe("Aarhus");
+    expect(car.vehicle).toEqual(preferences.vehicle);
+    expect(car.costBreakdown?.components).toHaveLength(1);
+    expect(
+      cost.categories
+        .find(({ item }) => item.category === "travel")
+        ?.children.map(({ label }) => label),
+    ).toEqual(
+      expect.arrayContaining([
+        "Own car return estimate",
+        "Charging",
+      ]),
+    );
+    expect(cost.travelCost).toBe(car.costPerPersonDkk);
+  });
+
   it("publishes only distinct, source-backed route geometry", () => {
     let routedHikeCount = 0;
     const serializedRoutes: string[] = [];

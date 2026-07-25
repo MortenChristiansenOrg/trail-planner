@@ -70,9 +70,13 @@ export async function loadRoadRoute(points: [number, number][], signal?: AbortSi
   return result;
 }
 
-export function drivingRoutePoints(destination: [number, number], viaSouthernDenmark: boolean) {
+export function drivingRoutePoints(
+  origin: [number, number],
+  destination: [number, number],
+  viaSouthernDenmark: boolean,
+) {
   return [
-    aalborgCoordinates,
+    origin,
     ...(viaSouthernDenmark ? [southernDenmarkCoordinates] : []),
     destination,
   ];

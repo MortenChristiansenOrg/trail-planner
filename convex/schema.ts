@@ -33,6 +33,42 @@ export default defineSchema({
     updatedAt: v.number(),
   }).index("by_clerk_user_id", ["clerkUserId"]),
 
+  userPreferences: defineTable({
+    ownerId: v.id("users"),
+    version: v.number(),
+    homeCity: v.object({
+      key: v.string(),
+      name: v.string(),
+      countryCode: v.literal("DK"),
+      municipality: v.optional(v.string()),
+      coordinates: v.array(v.number()),
+    }),
+    vehicle: v.object({
+      version: v.number(),
+      powertrain: v.union(
+        v.literal("petrol"),
+        v.literal("diesel"),
+        v.literal("ev"),
+      ),
+      consumptionPer100Km: v.number(),
+      energyPricePerUnit: v.number(),
+      costPerKmOverrideDkk: v.optional(v.number()),
+      // Deprecated storage-only fields retained so existing preference
+      // documents remain valid. New writes replace the vehicle without them.
+      tollsDkk: v.optional(v.number()),
+      ferriesDkk: v.optional(v.number()),
+      parkingDkk: v.optional(v.number()),
+      chargingPlan: v.optional(
+        v.object({
+          name: v.string(),
+          pricePerKwh: v.number(),
+        }),
+      ),
+    }),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  }).index("by_owner", ["ownerId"]),
+
   destinations: defineTable({
     name: v.string(),
     countryCode: v.string(),
@@ -58,15 +94,17 @@ export default defineSchema({
   travelEstimates: defineTable({
     destinationId: v.id("destinations"),
     originKey: v.string(),
+    vehicleProfileKey: v.string(),
     month: v.string(),
     mode: v.string(),
     available: v.boolean(),
     durationHours: v.optional(v.number()),
     costPerPerson: v.optional(money),
     provenance: v.array(provenanceClaim),
-  }).index("by_destination_origin_month_mode", [
+  }).index("by_destination_origin_vehicle_month_mode", [
     "destinationId",
     "originKey",
+    "vehicleProfileKey",
     "month",
     "mode",
   ]),

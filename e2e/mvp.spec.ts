@@ -1,9 +1,99 @@
 import { expect, test } from "@playwright/test";
 
+const defaultPreferences = {
+  version: 1,
+  homeCity: {
+    key: "aalborg",
+    name: "Aalborg",
+    countryCode: "DK",
+    coordinates: [9.9217, 57.0488],
+  },
+  vehicle: {
+    version: 1,
+    powertrain: "ev",
+    consumptionPer100Km: 20,
+    energyPricePerUnit: 2.5,
+  },
+};
+const preferenceStorageKey = "trail-planner:preferences:v1";
+const defaultVehicleKey = "v1-ev-20-2.5-none-none";
+
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() => localStorage.clear());
+  await page.evaluate(
+    ([key, preferences]) =>
+      localStorage.setItem(key, JSON.stringify(preferences)),
+    [preferenceStorageKey, defaultPreferences] as const,
+  );
   await page.reload();
+});
+
+test("first-time visitors choose a mapped home city before Explore", async ({
+  page,
+}) => {
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+
+  await page.goto("/settings");
+  await expect(page.getByRole("combobox", { name: "Home city" })).toHaveValue("");
+  await page.getByRole("button", { name: "Save settings" }).click();
+  await expect(
+    page.getByText("Select a city from the search results."),
+  ).toBeVisible();
+  await expect
+    .poll(() => page.evaluate((key) => localStorage.getItem(key), preferenceStorageKey))
+    .toBeNull();
+
+  await page.goto("/");
+  await page.getByRole("button", { name: "Explore destinations" }).click();
+  await expect(
+    page.getByText("Choose your home city before exploring."),
+  ).toBeVisible();
+  const citySearch = page.getByRole("combobox", { name: "Home city" });
+  await citySearch.click();
+  await expect(page.getByRole("option")).toHaveCount(0);
+  await citySearch.fill("Aar");
+  await page.getByRole("option", { name: /Aarhus/ }).first().click();
+  await page.getByRole("button", { name: "Explore destinations" }).click();
+
+  await expect(page.getByText("From Aarhus")).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        (key) => JSON.parse(localStorage.getItem(key) ?? "null")?.homeCity?.name,
+        preferenceStorageKey,
+      ),
+    )
+    .toBe("Aarhus");
+});
+
+test("settings update the origin and itemized vehicle estimate", async ({
+  page,
+}) => {
+  await page.goto("/settings");
+  const citySearch = page.getByRole("combobox", { name: "Home city" });
+  await citySearch.fill("Køben");
+  await page.getByRole("option", { name: /København/ }).first().click();
+  await page.getByRole("combobox", { name: "Powertrain" }).click();
+  await page.getByRole("option", { name: "Petrol" }).click();
+  await page.getByRole("spinbutton", { name: "Consumption (litres/100 km)" }).fill("7");
+  await page.getByRole("spinbutton", { name: "Fuel price (DKK/litres)" }).fill("16");
+  await page.getByRole("button", { name: "Save settings" }).click();
+  await expect(page.getByText("Settings saved")).toBeVisible();
+
+  await page.goto("/explore?month=7");
+  await expect(page.getByText("From København")).toBeVisible();
+  await page.getByRole("button", { name: "View area details" }).click();
+  const carEstimate = page.locator(".detail-travel-list > div").filter({
+    hasText: "Own car",
+  });
+  await carEstimate.getByRole("button", { name: "View stages" }).click();
+  const dialog = page.getByRole("dialog", {
+    name: /Drive from København|Drive and ferry from København/,
+  });
+  await expect(dialog).toContainText("Petrol fuel");
+  await expect(dialog).toContainText("Vehicle profile estimate");
 });
 
 test.describe("central planning entry points", () => {
@@ -107,13 +197,13 @@ test("every available travel mode exposes complete stage details", async ({ page
       })
     : route.abort());
 
-  await page.goto("/explore?month=7&maxLayovers=1");
+  await page.goto("/explore?month=7&maxLayovers=1&selected=innsbruck");
   await expect(page.locator('.explore-map[data-line-count="1"]')).toBeVisible({ timeout: 15_000 });
   await page.getByRole("button", { name: "Plan this trip" }).click();
 
   const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe(`osrm-driving-innsbruck--aalborg--${defaultVehicleKey}`);
   await carChoice.getByRole("button", { name: "Stage details" }).click();
   const carDialog = page.getByRole("dialog", { name: "Drive from Aalborg to Innsbruck" });
   await expect(carDialog.locator('.map-frame[data-line-count="2"]')).toBeVisible({ timeout: 15_000 });
@@ -137,7 +227,7 @@ test("every available travel mode exposes complete stage details", async ({ page
   routingAvailable = false;
   await page.reload();
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe("osrm-driving-aalborg-innsbruck");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.selectedTravelOption?.id)).toBe(`osrm-driving-innsbruck--aalborg--${defaultVehicleKey}`);
 
   await page.goto("/explore?month=7&selected=innsbruck");
   await page.getByRole("button", { name: "View area details" }).click();
@@ -179,7 +269,7 @@ test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async 
 
   const carChoice = page.locator(".travel-choice-wrap").filter({ hasText: "Own car" });
   await carChoice.getByRole("button", { name: /Own car/ }).click();
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-aalborg-berchtesgaden");
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]")[0]?.travelSnapshot?.find((estimate: { mode: string }) => estimate.mode === "car")?.optionId)).toBe("osrm-driving-berchtesgaden--aalborg--legacy");
   await carChoice.getByRole("button", { name: "Stage details" }).click();
 
   const dialog = page.getByRole("dialog", { name: "Drive from Aalborg to Berchtesgaden" });
@@ -189,8 +279,8 @@ test("Berchtesgaden travel details survive a legacy saved-trip snapshot", async 
   await page.keyboard.press("Escape");
 
   for (const [label, optionId, dialogName] of [
-    ["Train + bus", "catalog-estimate-aalborg-berchtesgaden-train", "Train + bus from Aalborg to Berchtesgaden"],
-    ["Airplane", "catalog-estimate-aalborg-berchtesgaden-plane", "Flight + ground transfer from Aalborg to Berchtesgaden"],
+    ["Train + bus", "catalog-estimate-berchtesgaden-train--aalborg--legacy", "Train + bus from Aalborg to Berchtesgaden"],
+    ["Airplane", "catalog-estimate-berchtesgaden-plane--aalborg--legacy", "Flight + ground transfer from Aalborg to Berchtesgaden"],
   ] as const) {
     const choice = page.locator(".travel-choice-wrap").filter({ hasText: label });
     await choice.getByRole("button", { name: label === "Train + bus" ? /Train \+ bus/ : /Airplane/ }).click();
@@ -326,7 +416,7 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "The complete budget mutation flow is covered once on desktop.");
 
-  await page.goto("/explore?month=7&participants=2");
+  await page.goto("/explore?month=7&participants=2&selected=innsbruck");
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: /Airplane/ }).click();
 
@@ -434,7 +524,22 @@ test("full-height pages fill the viewport without the optional preview ribbon", 
 test("feedback fixes remain visible and interactive", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed interaction and layout checks run once on desktop.");
 
-  await page.goto("/explore");
+  await page.route("https://router.project-osrm.org/**", (route) =>
+    route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        code: "Ok",
+        routes: [{
+          distance: 1_300_000,
+          duration: 48_600,
+          geometry: {
+            coordinates: [[9.922, 57.048], [9.535, 55.711], [11.404, 47.269]],
+          },
+        }],
+      }),
+    }),
+  );
+  await page.goto("/explore?selected=innsbruck");
   await expect(page.getByText("Numbers show overall fit rank; 1 is the strongest match.")).toBeVisible();
   await expect(page.getByText("Selected month is in the area’s recommended hiking season.")).toBeVisible();
   await expect(page.getByText("Best match").first()).toBeVisible();
