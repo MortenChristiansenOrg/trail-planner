@@ -34,8 +34,9 @@ const CatalogContext = createContext<CatalogContextValue | null>(null);
 export function StaticCatalogProvider({ children }: { children: ReactNode }) {
   const [requestedKeys, setRequestedKeys] = useState<string[]>([]);
   const [details, setDetails] = useState<Record<string, CatalogDestinationDetail | null | undefined>>({});
+  const failedKeys = useRef(new Set<string>());
   const inFlight = useRef(
-    new Map<string, Promise<readonly [string, CatalogDestinationDetail | null]>>(),
+    new Map<string, Promise<readonly [string, CatalogDestinationDetail | null | undefined]>>(),
   );
 
   useEffect(() => {
@@ -47,10 +48,13 @@ export function StaticCatalogProvider({ children }: { children: ReactNode }) {
       if (existing) return existing;
       const request = (async () => {
         try {
-          return [key, await loadStaticCatalogDetail(key)] as const;
+          const detail = await loadStaticCatalogDetail(key);
+          failedKeys.current.delete(key);
+          return [key, detail] as const;
         } catch (error) {
           console.error(`Unable to load catalog detail for ${key}`, error);
-          return [key, null] as const;
+          failedKeys.current.add(key);
+          return [key, undefined] as const;
         } finally {
           inFlight.current.delete(key);
         }
@@ -58,15 +62,26 @@ export function StaticCatalogProvider({ children }: { children: ReactNode }) {
       inFlight.current.set(key, request);
       return request;
     });
-    void Promise.all(pending).then((entries) => {
-      if (!cancelled) setDetails((current) => ({ ...current, ...Object.fromEntries(entries) }));
-    });
+    for (const request of pending) {
+      void request.then(([key, detail]) => {
+        if (!cancelled && detail !== undefined) {
+          setDetails((current) => ({ ...current, [key]: detail }));
+        }
+      });
+    }
     return () => {
       cancelled = true;
     };
   }, [details, requestedKeys]);
 
   const requestDetail = (destinationKey: string) => {
+    if (failedKeys.current.delete(destinationKey)) {
+      setRequestedKeys((current) => [
+        ...current.filter((key) => key !== destinationKey),
+        destinationKey,
+      ]);
+      return;
+    }
     setRequestedKeys((current) =>
       current.includes(destinationKey) ? current : [...current, destinationKey]
     );
@@ -101,9 +116,9 @@ export function ConvexCatalogProvider({ children }: { children: ReactNode }) {
   const queriedDetails = useQuery(
     api.destinations.detailsByKeys,
     requestedKeys.length ? { destinationKeys: requestedKeys } : "skip",
-  ) as (CatalogDestinationDetail | null)[] | undefined;
+  ) as { requestedKey: string; detail: CatalogDestinationDetail | null }[] | undefined;
   const details = Object.fromEntries(
-    requestedKeys.map((key, index) => [key, queriedDetails?.[index]]),
+    queriedDetails?.map(({ requestedKey, detail }) => [requestedKey, detail]) ?? [],
   );
   const page = result.results as CatalogDestinationDigest[];
   const destinations = page.map(destinationFromDigest);

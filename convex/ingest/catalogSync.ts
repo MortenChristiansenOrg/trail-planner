@@ -4,6 +4,7 @@ import { internal } from "../_generated/api";
 import { internalAction, internalMutation, internalQuery } from "../_generated/server";
 
 const BATCH_SIZE = 25;
+const STALE_STAGING_VERSION_MS = 15 * 60 * 1000;
 
 function stable(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(stable);
@@ -331,8 +332,13 @@ export const versionsToPrune = internalQuery({
       active?.catalogVersion,
       retained[0]?.catalogVersion,
     ].filter((version): version is string => Boolean(version)));
+    const now = Date.now();
     return versions
-      .filter((version) => version.status !== "staging" && !keep.has(version.catalogVersion))
+      .filter((version) =>
+        !keep.has(version.catalogVersion) &&
+        (version.status !== "staging" ||
+          now - version.createdAt > STALE_STAGING_VERSION_MS)
+      )
       .map((version) => version.catalogVersion);
   },
 });
@@ -340,6 +346,18 @@ export const versionsToPrune = internalQuery({
 export const pruneVersionBatch = internalMutation({
   args: { catalogVersion: v.string() },
   handler: async (ctx, { catalogVersion }) => {
+    const version = await ctx.db
+      .query("catalogVersions")
+      .withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion))
+      .unique();
+    if (!version) return { done: true };
+    if (
+      version.status === "active" ||
+      (version.status === "staging" &&
+        Date.now() - version.createdAt <= STALE_STAGING_VERSION_MS)
+    ) {
+      return { done: true };
+    }
     const state = await ctx.db
       .query("catalogState")
       .withIndex("by_key", (query) => query.eq("key", "active"))
@@ -357,11 +375,11 @@ export const pruneVersionBatch = internalMutation({
     const documents = [...destinations, ...aliases, ...hikes, ...geometries, ...coverage];
     for (const document of documents) await ctx.db.delete(document._id);
     if (documents.length) return { done: false };
-    const version = await ctx.db
+    const remainingVersion = await ctx.db
       .query("catalogVersions")
       .withIndex("by_version", (query) => query.eq("catalogVersion", catalogVersion))
       .unique();
-    if (version) await ctx.db.delete(version._id);
+    if (remainingVersion) await ctx.db.delete(remainingVersion._id);
     return { done: true };
   },
 });

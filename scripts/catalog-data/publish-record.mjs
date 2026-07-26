@@ -1,4 +1,5 @@
-import { mkdir, readFile, realpath, rename, rmdir, unlink, writeFile } from "node:fs/promises";
+import { randomUUID } from "node:crypto";
+import { mkdir, readFile, realpath, rename, rm, rmdir, stat, unlink, writeFile } from "node:fs/promises";
 import { basename, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { compileCatalog } from "./compile-catalog.mjs";
 import { validateCatalogRecord } from "./validate-record.mjs";
@@ -48,38 +49,138 @@ const filename = `${key}.json`;
 const overrides = new Map([[filename, record]]);
 const lockPath = join(workDir, ".catalog-publication.lock");
 const lockOwnerPath = join(lockPath, "owner.json");
+const lockRecoveryPath = join(lockPath, "recovery.json");
 const staleLockMs = 15 * 60 * 1000;
+const lockToken = `${process.pid}-${randomUUID()}`;
+
+function buildLockOwner() {
+  return {
+    pid: process.pid,
+    token: lockToken,
+    acquiredAt: new Date().toISOString(),
+  };
+}
+
+function errorHasCode(error, code) {
+  return error instanceof Error && "code" in error && error.code === code;
+}
+
+async function readLockMetadata(path) {
+  try {
+    return JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return undefined;
+  }
+}
+
+async function pathExists(path) {
+  try {
+    await stat(path);
+    return true;
+  } catch (error) {
+    if (errorHasCode(error, "ENOENT")) return false;
+    throw error;
+  }
+}
+
+function processIsRunning(pid) {
+  if (!Number.isInteger(pid) || pid <= 0) return true;
+  try {
+    process.kill(pid, 0);
+    return true;
+  } catch (error) {
+    return !errorHasCode(error, "ESRCH");
+  }
+}
 
 async function acquireLock(allowRecovery = true) {
   try {
     await mkdir(lockPath);
-    await writeFile(lockOwnerPath, `${JSON.stringify({
-      pid: process.pid,
-      acquiredAt: new Date().toISOString(),
-    }, null, 2)}\n`);
-  } catch (error) {
-    if (!(error instanceof Error && "code" in error && error.code === "EEXIST")) {
+    try {
+      await writeFile(lockOwnerPath, `${JSON.stringify(buildLockOwner(), null, 2)}\n`, {
+        flag: "wx",
+      });
+    } catch (error) {
+      await rmdir(lockPath).catch(() => {});
       throw error;
     }
-    let owner;
-    try {
-      owner = JSON.parse(await readFile(lockOwnerPath, "utf8"));
-    } catch {
-      // A lock without readable ownership metadata is never removed automatically.
-    }
+  } catch (error) {
+    if (!errorHasCode(error, "EEXIST")) throw error;
+    const owner = await readLockMetadata(lockOwnerPath);
     const acquiredAt = typeof owner?.acquiredAt === "string"
       ? Date.parse(owner.acquiredAt)
       : Number.NaN;
-    if (allowRecovery && Number.isFinite(acquiredAt) && Date.now() - acquiredAt > staleLockMs) {
+    const recoverable = allowRecovery &&
+      typeof owner?.token === "string" &&
+      Number.isFinite(acquiredAt) &&
+      Date.now() - acquiredAt > staleLockMs &&
+      !processIsRunning(owner.pid);
+    if (recoverable) {
+      const recovery = {
+        ownerToken: owner.token,
+        recoveryToken: lockToken,
+        pid: process.pid,
+        startedAt: new Date().toISOString(),
+      };
       try {
-        await unlink(lockOwnerPath);
-        await rmdir(lockPath);
+        await writeFile(
+          lockRecoveryPath,
+          `${JSON.stringify(recovery, null, 2)}\n`,
+          { flag: "wx" },
+        );
       } catch (cleanupError) {
-        if (!(cleanupError instanceof Error && "code" in cleanupError && cleanupError.code === "ENOENT")) {
-          throw new Error(`Unable to recover stale catalog publication lock ${lockPath}`, {
-            cause: cleanupError,
+        const existingClaim = errorHasCode(cleanupError, "EEXIST")
+          ? await readLockMetadata(lockRecoveryPath)
+          : undefined;
+        const claimStartedAt = typeof existingClaim?.startedAt === "string"
+          ? Date.parse(existingClaim.startedAt)
+          : Number.NaN;
+        const claimAbandoned = Number.isFinite(claimStartedAt) &&
+          Date.now() - claimStartedAt > staleLockMs &&
+          !processIsRunning(existingClaim?.pid);
+        if (!claimAbandoned) {
+          throw new Error(
+            `Unable to claim stale catalog publication lock ${lockPath}. ` +
+            `If no publisher is running, remove this lock directory manually.`,
+            { cause: cleanupError },
+          );
+        }
+        await writeFile(
+          lockRecoveryPath,
+          `${JSON.stringify(recovery, null, 2)}\n`,
+        );
+      }
+      try {
+        const currentOwner = await readLockMetadata(lockOwnerPath);
+        const currentRecovery = await readLockMetadata(lockRecoveryPath);
+        const currentAcquiredAt = typeof currentOwner?.acquiredAt === "string"
+          ? Date.parse(currentOwner.acquiredAt)
+          : Number.NaN;
+        if (
+          currentOwner?.token !== owner.token ||
+          currentRecovery?.recoveryToken !== lockToken ||
+          !Number.isFinite(currentAcquiredAt) ||
+          Date.now() - currentAcquiredAt <= staleLockMs ||
+          processIsRunning(currentOwner.pid)
+        ) {
+          throw new Error("Catalog publication lock ownership changed during recovery", {
+            cause: error,
           });
         }
+        await rm(lockPath, {
+          recursive: true,
+          force: true,
+          maxRetries: 3,
+          retryDelay: 50,
+        });
+      } catch (cleanupError) {
+        const claim = await readLockMetadata(lockRecoveryPath);
+        if (claim?.recoveryToken === lockToken) {
+          await unlink(lockRecoveryPath).catch(() => {});
+        }
+        throw new Error(`Unable to recover stale catalog publication lock ${lockPath}`, {
+          cause: cleanupError,
+        });
       }
       return await acquireLock(false);
     }
@@ -91,6 +192,38 @@ async function acquireLock(allowRecovery = true) {
       `If no publisher is running, remove this lock directory manually.`,
       { cause: error },
     );
+  }
+}
+
+async function releaseLock() {
+  const owner = await readLockMetadata(lockOwnerPath);
+  if (owner === undefined && !(await pathExists(lockPath))) return;
+  if (owner?.token !== lockToken) {
+    throw new Error("Catalog publication lock ownership changed before release");
+  }
+  try {
+    await unlink(lockOwnerPath);
+  } catch (error) {
+    if (errorHasCode(error, "ENOENT") && !(await pathExists(lockPath))) return;
+    throw error;
+  }
+  try {
+    await rmdir(lockPath);
+  } catch (error) {
+    if (errorHasCode(error, "ENOENT")) {
+      // A stale-lock recovery that already verified this owner completed first.
+      return;
+    }
+    if (errorHasCode(error, "ENOTEMPTY") || errorHasCode(error, "EEXIST")) {
+      const recovery = await readLockMetadata(lockRecoveryPath);
+      if (recovery?.ownerToken === lockToken) return;
+      await writeFile(
+        lockOwnerPath,
+        `${JSON.stringify(buildLockOwner(), null, 2)}\n`,
+        { flag: "wx" },
+      ).catch(() => {});
+    }
+    throw error;
   }
 }
 
@@ -147,8 +280,7 @@ try {
   throw error;
 } finally {
   try {
-    await unlink(lockOwnerPath);
-    await rmdir(lockPath);
+    await releaseLock();
   } catch (error) {
     lockReleaseError = error;
     if (operationError) {

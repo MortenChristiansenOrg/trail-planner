@@ -28,6 +28,18 @@ describe("versioned catalog synchronization", () => {
     expect(detail?.destinationKey).toBe("hardanger");
     expect(detail?.hikes).toHaveLength(5);
     expect(detail?.guide.highlights.split(/\s+/u).length).toBeGreaterThanOrEqual(80);
+    const keyedDetails = await t.query(api.destinations.detailsByKeys, {
+      destinationKeys: ["odda", "abisko", "odda"],
+    });
+    expect(keyedDetails).toHaveLength(2);
+    expect(keyedDetails.map(({ requestedKey }) => requestedKey)).toEqual([
+      "odda",
+      "abisko",
+    ]);
+    expect(keyedDetails.map(({ detail: item }) => item?.destinationKey)).toEqual([
+      "hardanger",
+      "abisko",
+    ]);
     const coverage = await t.run((ctx) =>
       ctx.db
         .query("catalogCoverage")
@@ -64,5 +76,54 @@ describe("versioned catalog synchronization", () => {
     });
     expect(list.catalogVersion).toBe(active.catalogVersion);
     expect(list.page).toHaveLength(26);
+  });
+
+  test("prunes abandoned staging versions only after the staleness window", async () => {
+    const t = convexTest(schema, modules);
+    await t.action(internal.ingest.catalogSync.synchronize, {});
+    const now = Date.now();
+    await t.run(async (ctx) => {
+      for (const [catalogVersion, createdAt] of [
+        ["recent-staging", now],
+        ["abandoned-staging", now - 16 * 60 * 1000],
+      ] as const) {
+        await ctx.db.insert("catalogVersions", {
+          catalogVersion,
+          artifactHash: catalogVersion,
+          status: "staging",
+          expectedDestinations: 1,
+          expectedHikes: 1,
+          expectedCoverage: 1,
+          createdAt,
+        });
+      }
+    });
+
+    const prunable = await t.query(
+      internal.ingest.catalogSync.versionsToPrune,
+      {},
+    );
+
+    expect(prunable).toContain("abandoned-staging");
+    expect(prunable).not.toContain("recent-staging");
+
+    await t.mutation(internal.ingest.catalogSync.pruneVersionBatch, {
+      catalogVersion: "recent-staging",
+    });
+    await t.mutation(internal.ingest.catalogSync.pruneVersionBatch, {
+      catalogVersion: "abandoned-staging",
+    });
+    const remainingStagingVersions = await t.run((ctx) =>
+      ctx.db
+        .query("catalogVersions")
+        .collect()
+        .then((versions) =>
+          versions
+            .filter((version) => version.status === "staging")
+            .map((version) => version.catalogVersion)
+        )
+    );
+    expect(remainingStagingVersions).toContain("recent-staging");
+    expect(remainingStagingVersions).not.toContain("abandoned-staging");
   });
 });

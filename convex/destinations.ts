@@ -120,7 +120,10 @@ export const detailsByKeys = query({
     if (!state) return [];
     return await Promise.all(
       [...new Set(destinationKeys)].map((key) =>
-        destinationDetail(ctx, state.catalogVersion, key)
+        destinationDetail(ctx, state.catalogVersion, key).then((detail) => ({
+          requestedKey: key,
+          detail,
+        }))
       ),
     );
   },
