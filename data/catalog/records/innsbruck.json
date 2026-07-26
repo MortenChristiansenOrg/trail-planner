@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
   "run": {
-    "id": "2026-07-25-issue-21-innsbruck",
+    "id": "2026-07-26-innsbruck-hike-metrics",
     "task": "refresh-data",
-    "createdAt": "2026-07-25T20:00:00.000Z",
-    "tool": "provider-api",
+    "createdAt": "2026-07-26T12:00:00.000Z",
+    "tool": "firecrawl-cli",
     "creditsBefore": 1023,
-    "creditsAfter": 1023
+    "creditsAfter": 1013
   },
   "destination": {
     "key": "innsbruck",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "innsbruck",
       "field": "guide.terrain",
-      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Goetheweg on the Nordkette”, “Hafelekar to Pfeishütte” and “Nockspitze” share the largest listed commitment at about 5 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "source": {
         "key": "innsbruck-authority",
         "url": "https://www.innsbruck.info/en/hiking.html",
@@ -196,17 +196,21 @@
           8,
           9,
           10
-        ]
+        ],
+        "distanceKm": 5.2,
+        "ascentM": 769,
+        "descentM": 764
       },
       "source": {
-        "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking.html",
+        "key": "innsbruck-goetheweg-on-the-nordkette-route",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
+      "retrievedAt": "2026-07-26T12:00:00.000Z",
+      "observedAt": "2026-07-26T12:00:00.000Z",
+      "refreshAfter": "2027-07-26T12:00:00.000Z",
+      "confidence": "high",
+      "notes": "Distance, ascent, descent, and duration checked against the official Innsbruck route page."
     },
     {
       "domain": "hikes",
@@ -228,17 +232,21 @@
           8,
           9,
           10
-        ]
+        ],
+        "distanceKm": 7,
+        "ascentM": 200,
+        "descentM": 100
       },
       "source": {
-        "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking.html",
+        "key": "innsbruck-zirbenweg-route",
+        "url": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
+      "retrievedAt": "2026-07-26T12:00:00.000Z",
+      "observedAt": "2026-07-26T12:00:00.000Z",
+      "refreshAfter": "2027-07-26T12:00:00.000Z",
+      "confidence": "high",
+      "notes": "Distance, ascent, descent, and duration checked against the official Innsbruck route page."
     },
     {
       "domain": "hikes",
@@ -250,7 +258,7 @@
         "routeType": "out-and-back",
         "description": "Patscherkofel Summit climbs the broad signed path above the tree line to the Patscherkofel summit.",
         "difficulty": "Moderate",
-        "durationHours": 4,
+        "durationHours": 2.25,
         "durationDays": 1,
         "trailhead": "Patscherkofel upper station",
         "recommendedMonths": [
@@ -260,17 +268,21 @@
           8,
           9,
           10
-        ]
+        ],
+        "distanceKm": 6,
+        "ascentM": 280,
+        "descentM": 280
       },
       "source": {
-        "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking.html",
+        "key": "innsbruck-patscherkofel-summit-route",
+        "url": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
+      "retrievedAt": "2026-07-26T12:00:00.000Z",
+      "observedAt": "2026-07-26T12:00:00.000Z",
+      "refreshAfter": "2027-07-26T12:00:00.000Z",
+      "confidence": "high",
+      "notes": "Distance, ascent, descent, and duration checked against the official Innsbruck route page."
     },
     {
       "domain": "hikes",
@@ -292,17 +304,21 @@
           8,
           9,
           10
-        ]
+        ],
+        "distanceKm": 5.2,
+        "ascentM": 769,
+        "descentM": 764
       },
       "source": {
-        "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking.html",
+        "key": "innsbruck-hafelekar-to-pfeishutte-route",
+        "url": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
+      "retrievedAt": "2026-07-26T12:00:00.000Z",
+      "observedAt": "2026-07-26T12:00:00.000Z",
+      "refreshAfter": "2027-07-26T12:00:00.000Z",
+      "confidence": "high",
+      "notes": "Distance, ascent, descent, and duration checked against the official Innsbruck route page."
     },
     {
       "domain": "hikes",
@@ -314,7 +330,7 @@
         "routeType": "out-and-back",
         "description": "Nockspitze ascends the steep south side of Nockspitze for a high viewpoint above the Inn valley.",
         "difficulty": "Hard",
-        "durationHours": 6,
+        "durationHours": 5,
         "durationDays": 1,
         "trailhead": "Axamer Lizum",
         "recommendedMonths": [
@@ -324,17 +340,21 @@
           8,
           9,
           10
-        ]
+        ],
+        "distanceKm": 9.4,
+        "ascentM": 886,
+        "descentM": 886
       },
       "source": {
-        "key": "innsbruck-authority",
-        "url": "https://www.innsbruck.info/en/hiking.html",
+        "key": "innsbruck-nockspitze-route",
+        "url": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
         "kind": "official"
       },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
+      "retrievedAt": "2026-07-26T12:00:00.000Z",
+      "observedAt": "2026-07-26T12:00:00.000Z",
+      "refreshAfter": "2027-07-26T12:00:00.000Z",
+      "confidence": "high",
+      "notes": "The authority publishes 886 m uphill for the Axamer Lizum route; descent uses the same 886 m because this catalog entry returns over the same out-and-back route."
     },
     {
       "domain": "travel-road",
@@ -450,7 +470,7 @@
       "domain": "hikes",
       "status": "fresh",
       "reasons": [
-        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
+        "Five named choices published with official distance, ascent, descent, duration, route topology, trailhead, and route-specific provenance."
       ]
     },
     {

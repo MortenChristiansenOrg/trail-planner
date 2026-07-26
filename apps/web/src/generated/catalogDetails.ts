@@ -152,7 +152,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "akureyri": {
     "destinationKey": "akureyri",
@@ -309,7 +309,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "are": {
     "destinationKey": "are",
@@ -466,7 +466,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "berchtesgaden": {
     "destinationKey": "berchtesgaden",
@@ -633,7 +633,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "cairngorms": {
     "destinationKey": "cairngorms",
@@ -795,7 +795,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "chamonix": {
     "destinationKey": "chamonix",
@@ -952,7 +952,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "corsica": {
     "destinationKey": "corsica",
@@ -1119,7 +1119,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "cortina": {
     "destinationKey": "cortina",
@@ -1276,7 +1276,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "durmitor": {
     "destinationKey": "durmitor",
@@ -1433,7 +1433,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "fort-william": {
     "destinationKey": "fort-william",
@@ -1595,7 +1595,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "hardanger": {
     "destinationKey": "hardanger",
@@ -1752,7 +1752,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "hemavan": {
     "destinationKey": "hemavan",
@@ -1909,13 +1909,13 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "innsbruck": {
     "destinationKey": "innsbruck",
     "guide": {
       "highlights": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The Innsbruck route set makes those qualities concrete: “Goetheweg on the Nordkette” and “Zirbenweg” define different headline days, while “Patscherkofel Summit” offers another scale of outing. “Hafelekar to Pfeishütte” and “Nockspitze” extend the choice beyond one famous objective. Together, these Tyrol walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Innsbruck.",
-      "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Goetheweg on the Nordkette”, “Hafelekar to Pfeishütte” and “Nockspitze” share the largest listed commitment at about 5 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
       "expectations": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific. Starts include Hafelekar cable-car station, Patscherkofel upper station and Axamer Lizum. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable."
     },
     "hero": {
@@ -1952,11 +1952,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
           9,
           10
         ],
+        "distanceKm": 5.2,
+        "ascentM": 769,
+        "descentM": 764,
         "provenance": {
-          "sourceKey": "innsbruck-authority",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
+          "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+          "verifiedAt": "2026-07-26",
+          "confidence": "high"
         }
       },
       {
@@ -1976,11 +1979,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
           9,
           10
         ],
+        "distanceKm": 7,
+        "ascentM": 200,
+        "descentM": 100,
         "provenance": {
-          "sourceKey": "innsbruck-authority",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
+          "sourceKey": "innsbruck-zirbenweg-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
+          "verifiedAt": "2026-07-26",
+          "confidence": "high"
         }
       },
       {
@@ -1989,7 +1995,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "routeType": "out-and-back",
         "description": "Patscherkofel Summit climbs the broad signed path above the tree line to the Patscherkofel summit.",
         "difficulty": "Moderate",
-        "durationHours": 4,
+        "durationHours": 2.25,
         "durationDays": 1,
         "trailhead": "Patscherkofel upper station",
         "recommendedMonths": [
@@ -2000,11 +2006,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
           9,
           10
         ],
+        "distanceKm": 6,
+        "ascentM": 280,
+        "descentM": 280,
         "provenance": {
-          "sourceKey": "innsbruck-authority",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
+          "sourceKey": "innsbruck-patscherkofel-summit-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
+          "verifiedAt": "2026-07-26",
+          "confidence": "high"
         }
       },
       {
@@ -2024,11 +2033,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
           9,
           10
         ],
+        "distanceKm": 5.2,
+        "ascentM": 769,
+        "descentM": 764,
         "provenance": {
-          "sourceKey": "innsbruck-authority",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
+          "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+          "verifiedAt": "2026-07-26",
+          "confidence": "high"
         }
       },
       {
@@ -2037,7 +2049,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "routeType": "out-and-back",
         "description": "Nockspitze ascends the steep south side of Nockspitze for a high viewpoint above the Inn valley.",
         "difficulty": "Hard",
-        "durationHours": 6,
+        "durationHours": 5,
         "durationDays": 1,
         "trailhead": "Axamer Lizum",
         "recommendedMonths": [
@@ -2048,11 +2060,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
           9,
           10
         ],
+        "distanceKm": 9.4,
+        "ascentM": 886,
+        "descentM": 886,
         "provenance": {
-          "sourceKey": "innsbruck-authority",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
+          "sourceKey": "innsbruck-nockspitze-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
+          "verifiedAt": "2026-07-26",
+          "confidence": "high"
         }
       }
     ],
@@ -2070,13 +2085,43 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       },
       {
+        "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "verifiedAt": "2026-07-26",
+        "confidence": "high"
+      },
+      {
+        "sourceKey": "innsbruck-zirbenweg-route",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
+        "verifiedAt": "2026-07-26",
+        "confidence": "high"
+      },
+      {
+        "sourceKey": "innsbruck-patscherkofel-summit-route",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
+        "verifiedAt": "2026-07-26",
+        "confidence": "high"
+      },
+      {
+        "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+        "verifiedAt": "2026-07-26",
+        "confidence": "high"
+      },
+      {
+        "sourceKey": "innsbruck-nockspitze-route",
+        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
+        "verifiedAt": "2026-07-26",
+        "confidence": "high"
+      },
+      {
         "sourceKey": "legacy-planning-model",
         "sourceUrl": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
         "verifiedAt": "2026-07-25",
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "jotunheimen": {
     "destinationKey": "jotunheimen",
@@ -2228,7 +2273,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "kranjska-gora": {
     "destinationKey": "kranjska-gora",
@@ -2385,7 +2430,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "landmannalaugar": {
     "destinationKey": "landmannalaugar",
@@ -2537,7 +2582,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "lofoten": {
     "destinationKey": "lofoten",
@@ -2694,7 +2739,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "madeira": {
     "destinationKey": "madeira",
@@ -2866,7 +2911,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "nikkaluokta": {
     "destinationKey": "nikkaluokta",
@@ -3018,7 +3063,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "picos": {
     "destinationKey": "picos",
@@ -3185,7 +3230,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "romsdalen": {
     "destinationKey": "romsdalen",
@@ -3342,7 +3387,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "skaftafell": {
     "destinationKey": "skaftafell",
@@ -3504,7 +3549,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "snowdonia": {
     "destinationKey": "snowdonia",
@@ -3676,7 +3721,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "thorsmork": {
     "destinationKey": "thorsmork",
@@ -3833,7 +3878,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "zakopane": {
     "destinationKey": "zakopane",
@@ -3990,7 +4035,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   },
   "zermatt": {
     "destinationKey": "zermatt",
@@ -4147,6 +4192,6 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff"
+    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
   }
 };

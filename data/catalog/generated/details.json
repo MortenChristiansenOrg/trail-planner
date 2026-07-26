@@ -1,8 +1,8 @@
 {
-  "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+  "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
   "details": {
     "abisko": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "abisko",
       "guide": {
         "expectations": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable. Access around Abisko is route-specific. Starts include Abisko naturum, Kungsleden trailhead at Abisko Turiststation and Abisko Turiststation. A Swedish Lapland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Abisko weather, closures and seasonal services against the linked authority. Keep one of the listed Abisko alternatives available when the principal route is unsuitable.",
@@ -154,7 +154,7 @@
       ]
     },
     "akureyri": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "akureyri",
       "guide": {
         "expectations": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area. Access around Akureyri is route-specific. Starts include Súlur trail parking in Glerárdalur, Kjarnaskógur visitor area and Hlíðarfjall ski-area base. A North Iceland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Akureyri weather, closures and seasonal services against the linked authority. Keep one of the listed Akureyri alternatives available when the principal route is unsuitable.",
@@ -311,7 +311,7 @@
       ]
     },
     "are": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "are",
       "guide": {
         "expectations": "Waymarked routes and lift access suit mixed experience levels, but wind and cloud can close uplifts or make the broad summit hard to navigate; the town is lively and convenient rather than remote, with quieter trails reached by bus or short drive. Access around Åre is route-specific. Starts include Åre square via the summit trail, Fjällgården and Fröå Gruva. A Jämtland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åre weather, closures and seasonal services against the linked authority. Keep one of the listed Åre alternatives available when the principal route is unsuitable.",
@@ -468,7 +468,7 @@
       ]
     },
     "berchtesgaden": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "berchtesgaden",
       "guide": {
         "expectations": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. Access around Berchtesgaden is route-specific. Starts include Königssee village, Hinterbrand car park and Wimbachbrücke. A Bavarian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Berchtesgaden weather, closures and seasonal services against the linked authority. Keep one of the listed Berchtesgaden alternatives available when the principal route is unsuitable.",
@@ -635,7 +635,7 @@
       ]
     },
     "cairngorms": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "cairngorms",
       "guide": {
         "expectations": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions. Access around Aviemore is route-specific. Starts include Coire Cas car park, Glenmore visitor centre and Coylumbridge. A Cairngorms point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Aviemore weather, closures and seasonal services against the linked authority. Keep one of the listed Aviemore alternatives available when the principal route is unsuitable.",
@@ -797,7 +797,7 @@
       ]
     },
     "chamonix": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "chamonix",
       "guide": {
         "expectations": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment. Access around Chamonix is route-specific. Starts include La Flégère lift station, Montenvers railway station and Planpraz lift station. A Mont Blanc massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Chamonix weather, closures and seasonal services against the linked authority. Keep one of the listed Chamonix alternatives available when the principal route is unsuitable.",
@@ -954,7 +954,7 @@
       ]
     },
     "corsica": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "corsica",
       "guide": {
         "expectations": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days. Access around Corte is route-specific. Starts include Grotelle trailhead in Restonica, Citadel trailhead in Corte and Restonica valley trailhead. A Corsica point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Corte weather, closures and seasonal services against the linked authority. Keep one of the listed Corte alternatives available when the principal route is unsuitable.",
@@ -1121,7 +1121,7 @@
       ]
     },
     "cortina": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "cortina",
       "guide": {
         "expectations": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes. Access around Cortina d’Ampezzo is route-specific. Starts include Rifugio Auronzo, Bai de Dones and Passo Tre Croci. A Dolomites point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Cortina d’Ampezzo weather, closures and seasonal services against the linked authority. Keep one of the listed Cortina d’Ampezzo alternatives available when the principal route is unsuitable.",
@@ -1278,7 +1278,7 @@
       ]
     },
     "durmitor": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "durmitor",
       "guide": {
         "expectations": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency. Access around Žabljak is route-specific. Starts include Black Lake national-park entrance, Ćurevac access road trailhead and Savin Kuk ski-area base. A Durmitor point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Žabljak weather, closures and seasonal services against the linked authority. Keep one of the listed Žabljak alternatives available when the principal route is unsuitable.",
@@ -1435,7 +1435,7 @@
       ]
     },
     "fort-william": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "fort-william",
       "guide": {
         "expectations": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. Access around Fort William is route-specific. Starts include Glen Nevis visitor centre, North Face car park and Fort William town centre. A West Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Fort William weather, closures and seasonal services against the linked authority. Keep one of the listed Fort William alternatives available when the principal route is unsuitable.",
@@ -1597,7 +1597,7 @@
       ]
     },
     "hardanger": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "hardanger",
       "guide": {
         "expectations": "The area offers easy valley walks as well as exceptionally long summit days; trail buses and booked parking help access, but popular objectives require early planning and conservative weather decisions. Access around Odda is route-specific. Starts include P2 Skjeggedal, Røte trailhead above Kinsarvik and Bondhus trailhead at Sundal. A Hardanger point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Odda weather, closures and seasonal services against the linked authority. Keep one of the listed Odda alternatives available when the principal route is unsuitable.",
@@ -1754,7 +1754,7 @@
       ]
     },
     "hemavan": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "hemavan",
       "guide": {
         "expectations": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. Access around Hemavan is route-specific. Starts include Hemavan naturum, Hemavan gondola top station and Laisaliden. A Vindelfjällen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Hemavan weather, closures and seasonal services against the linked authority. Keep one of the listed Hemavan alternatives available when the principal route is unsuitable.",
@@ -1911,12 +1911,12 @@
       ]
     },
     "innsbruck": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "innsbruck",
       "guide": {
         "expectations": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific. Starts include Hafelekar cable-car station, Patscherkofel upper station and Axamer Lizum. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable.",
         "highlights": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The Innsbruck route set makes those qualities concrete: “Goetheweg on the Nordkette” and “Zirbenweg” define different headline days, while “Patscherkofel Summit” offers another scale of outing. “Hafelekar to Pfeishütte” and “Nockspitze” extend the choice beyond one famous objective. Together, these Tyrol walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Innsbruck.",
-        "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Nockspitze” is the largest commitment at about 6 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice."
+        "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Goetheweg on the Nordkette”, “Hafelekar to Pfeishütte” and “Nockspitze” share the largest listed commitment at about 5 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice."
       },
       "hero": {
         "alt": "Tyrol mountain landscape seen from the Innsbruck hiking area",
@@ -1936,17 +1936,20 @@
       },
       "hikes": [
         {
+          "ascentM": 769,
+          "descentM": 764,
           "description": "Goetheweg on the Nordkette traverses the exposed Nordkette balcony to Pfeishütte on narrow limestone paths.",
           "difficulty": "Hard",
+          "distanceKm": 5.2,
           "durationDays": 1,
           "durationHours": 5,
           "key": "innsbruck-goetheweg-on-the-nordkette",
           "name": "Goetheweg on the Nordkette",
           "provenance": {
-            "confidence": "medium",
-            "sourceKey": "innsbruck-authority",
-            "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-            "verifiedAt": "2026-07-25"
+            "confidence": "high",
+            "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
+            "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+            "verifiedAt": "2026-07-26"
           },
           "recommendedMonths": [
             5,
@@ -1960,17 +1963,20 @@
           "trailhead": "Hafelekar cable-car station"
         },
         {
+          "ascentM": 200,
+          "descentM": 100,
           "description": "Zirbenweg follows the high pine balcony to Tulfeinalm and the Glungezer lift system.",
           "difficulty": "Easy",
+          "distanceKm": 7,
           "durationDays": 1,
           "durationHours": 2.5,
           "key": "innsbruck-zirbenweg",
           "name": "Zirbenweg",
           "provenance": {
-            "confidence": "medium",
-            "sourceKey": "innsbruck-authority",
-            "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-            "verifiedAt": "2026-07-25"
+            "confidence": "high",
+            "sourceKey": "innsbruck-zirbenweg-route",
+            "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
+            "verifiedAt": "2026-07-26"
           },
           "recommendedMonths": [
             5,
@@ -1984,17 +1990,20 @@
           "trailhead": "Patscherkofel upper station"
         },
         {
+          "ascentM": 280,
+          "descentM": 280,
           "description": "Patscherkofel Summit climbs the broad signed path above the tree line to the Patscherkofel summit.",
           "difficulty": "Moderate",
+          "distanceKm": 6,
           "durationDays": 1,
-          "durationHours": 4,
+          "durationHours": 2.25,
           "key": "innsbruck-patscherkofel-summit",
           "name": "Patscherkofel Summit",
           "provenance": {
-            "confidence": "medium",
-            "sourceKey": "innsbruck-authority",
-            "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-            "verifiedAt": "2026-07-25"
+            "confidence": "high",
+            "sourceKey": "innsbruck-patscherkofel-summit-route",
+            "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
+            "verifiedAt": "2026-07-26"
           },
           "recommendedMonths": [
             5,
@@ -2008,17 +2017,20 @@
           "trailhead": "Patscherkofel upper station"
         },
         {
+          "ascentM": 769,
+          "descentM": 764,
           "description": "Hafelekar to Pfeishütte uses the Goetheweg and Mandlscharte approach to reach Pfeishütte, with a separate valley descent or return needed.",
           "difficulty": "Hard",
+          "distanceKm": 5.2,
           "durationDays": 1,
           "durationHours": 5,
           "key": "innsbruck-hafelekar-to-pfeishutte",
           "name": "Hafelekar to Pfeishütte",
           "provenance": {
-            "confidence": "medium",
-            "sourceKey": "innsbruck-authority",
-            "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-            "verifiedAt": "2026-07-25"
+            "confidence": "high",
+            "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
+            "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+            "verifiedAt": "2026-07-26"
           },
           "recommendedMonths": [
             5,
@@ -2032,17 +2044,20 @@
           "trailhead": "Hafelekar cable-car station"
         },
         {
+          "ascentM": 886,
+          "descentM": 886,
           "description": "Nockspitze ascends the steep south side of Nockspitze for a high viewpoint above the Inn valley.",
           "difficulty": "Hard",
+          "distanceKm": 9.4,
           "durationDays": 1,
-          "durationHours": 6,
+          "durationHours": 5,
           "key": "innsbruck-nockspitze",
           "name": "Nockspitze",
           "provenance": {
-            "confidence": "medium",
-            "sourceKey": "innsbruck-authority",
-            "sourceUrl": "https://www.innsbruck.info/en/hiking.html",
-            "verifiedAt": "2026-07-25"
+            "confidence": "high",
+            "sourceKey": "innsbruck-nockspitze-route",
+            "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
+            "verifiedAt": "2026-07-26"
           },
           "recommendedMonths": [
             5,
@@ -2070,6 +2085,36 @@
           "verifiedAt": "2026-07-25"
         },
         {
+          "confidence": "high",
+          "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+          "verifiedAt": "2026-07-26"
+        },
+        {
+          "confidence": "high",
+          "sourceKey": "innsbruck-zirbenweg-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
+          "verifiedAt": "2026-07-26"
+        },
+        {
+          "confidence": "high",
+          "sourceKey": "innsbruck-patscherkofel-summit-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
+          "verifiedAt": "2026-07-26"
+        },
+        {
+          "confidence": "high",
+          "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
+          "verifiedAt": "2026-07-26"
+        },
+        {
+          "confidence": "high",
+          "sourceKey": "innsbruck-nockspitze-route",
+          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
+          "verifiedAt": "2026-07-26"
+        },
+        {
           "confidence": "medium",
           "sourceKey": "legacy-planning-model",
           "sourceUrl": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
@@ -2078,7 +2123,7 @@
       ]
     },
     "jotunheimen": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "jotunheimen",
       "guide": {
         "expectations": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics. Access around Gjendesheim is route-specific. Starts include Memurubu boat landing, Vargebakken and Gjendebu. A Jotunheimen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Gjendesheim weather, closures and seasonal services against the linked authority. Keep one of the listed Gjendesheim alternatives available when the principal route is unsuitable.",
@@ -2230,7 +2275,7 @@
       ]
     },
     "kranjska-gora": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "kranjska-gora",
       "guide": {
         "expectations": "Regular buses and short transfers reach several starts, but the hardest peaks are not ordinary hiking objectives; visitors who separate signed walks from via ferrata and alpine climbing will find strong variety at every level. Access around Kranjska Gora is route-specific. Starts include Vršič Pass, Planica Nordic Centre and Gozd Martuljek. A Julian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Kranjska Gora weather, closures and seasonal services against the linked authority. Keep one of the listed Kranjska Gora alternatives available when the principal route is unsuitable.",
@@ -2387,7 +2432,7 @@
       ]
     },
     "landmannalaugar": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "landmannalaugar",
       "guide": {
         "expectations": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. Access around Landmannalaugar is route-specific. Every published Landmannalaugar route starts from Landmannalaugar hut. A Fjallabak Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Landmannalaugar weather, closures and seasonal services against the linked authority. Keep one of the listed Landmannalaugar alternatives available when the principal route is unsuitable.",
@@ -2539,7 +2584,7 @@
       ]
     },
     "lofoten": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "lofoten",
       "guide": {
         "expectations": "Many walks are short in kilometres but sustained in gradient, parking is constrained at famous trailheads, and wet ground or strong coastal wind can transform an otherwise modest outing. Access around Svolvær is route-specific. Starts include Reinebringen stair trailhead, Innersand trailhead near Fredvang and Offersøya roadside trailhead. A Lofoten point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Svolvær weather, closures and seasonal services against the linked authority. Keep one of the listed Svolvær alternatives available when the principal route is unsuitable.",
@@ -2696,7 +2741,7 @@
       ]
     },
     "madeira": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "madeira",
       "guide": {
         "expectations": "Routes can be walked year-round in principle but cloud, wind, rain and official closures vary by elevation; transfers are often needed for point-to-point trails and exposed levada edges will not suit every walker. Access around Curral das Freiras is route-specific. Starts include Pico do Areeiro (PR1 east trailhead), Achada do Teixeira and Queimadas Forest Park. A Madeira point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Curral das Freiras weather, closures and seasonal services against the linked authority. Keep one of the listed Curral das Freiras alternatives available when the principal route is unsuitable.",
@@ -2868,7 +2913,7 @@
       ]
     },
     "nikkaluokta": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "nikkaluokta",
       "guide": {
         "expectations": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. Access around Nikkaluokta is route-specific. Starts include Nikkaluokta mountain centre and Kebnekaise mountain station. A Kebnekaise massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Nikkaluokta weather, closures and seasonal services against the linked authority. Keep one of the listed Nikkaluokta alternatives available when the principal route is unsuitable.",
@@ -3020,7 +3065,7 @@
       ]
     },
     "picos": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "picos",
       "guide": {
         "expectations": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative. Access around Potes is route-specific. Starts include Poncebos, Fuente Dé upper cable-car station and Dobarganes. A Picos de Europa point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Potes weather, closures and seasonal services against the linked authority. Keep one of the listed Potes alternatives available when the principal route is unsuitable.",
@@ -3187,7 +3232,7 @@
       ]
     },
     "romsdalen": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "romsdalen",
       "guide": {
         "expectations": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. Access around Åndalsnes is route-specific. Starts include Vengedalen trailhead, Åndalsnes town centre and Litlefjellet trailhead in Vengedalen. A Romsdalen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åndalsnes weather, closures and seasonal services against the linked authority. Keep one of the listed Åndalsnes alternatives available when the principal route is unsuitable.",
@@ -3344,7 +3389,7 @@
       ]
     },
     "skaftafell": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "skaftafell",
       "guide": {
         "expectations": "The visitor centre, campground and signed junctions make short walks straightforward, while longer routes gain serious elevation and exposure; glacier surfaces remain guided technical terrain rather than extensions of the hiking paths. Access around Skaftafell is route-specific. Every published Skaftafell route starts from Skaftafell visitor centre. A Vatnajökull National Park point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Skaftafell weather, closures and seasonal services against the linked authority. Keep one of the listed Skaftafell alternatives available when the principal route is unsuitable.",
@@ -3506,7 +3551,7 @@
       ]
     },
     "snowdonia": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "snowdonia",
       "guide": {
         "expectations": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. Access around Llanberis is route-specific. Starts include Llanberis Path gate at Victoria Terrace, Pen-y-Pass and A5 lay-by at Milestone Buttress. A Eryri / Snowdonia point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Llanberis weather, closures and seasonal services against the linked authority. Keep one of the listed Llanberis alternatives available when the principal route is unsuitable.",
@@ -3678,7 +3723,7 @@
       ]
     },
     "thorsmork": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "thorsmork",
       "guide": {
         "expectations": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. Access around Þórsmörk is route-specific. Starts include Húsadalur, Langidalur hut and Básar hut. A Southern Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Þórsmörk weather, closures and seasonal services against the linked authority. Keep one of the listed Þórsmörk alternatives available when the principal route is unsuitable.",
@@ -3835,7 +3880,7 @@
       ]
     },
     "zakopane": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "zakopane",
       "guide": {
         "expectations": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. Access around Zakopane is route-specific. Starts include Palenica Białczańska, Kasprowy Wierch cable-car station and Kuźnice. A High Tatras point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zakopane weather, closures and seasonal services against the linked authority. Keep one of the listed Zakopane alternatives available when the principal route is unsuitable.",
@@ -3992,7 +4037,7 @@
       ]
     },
     "zermatt": {
-      "catalogVersion": "9cb7904c5f9305167e9de14cb95f1952c761f0908b368e25e9bc72446b6418ff",
+      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
       "destinationKey": "zermatt",
       "guide": {
         "expectations": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain. Access around Zermatt is route-specific. Starts include Blauherd lift station, Zermatt village and Trockener Steg. A Valais Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zermatt weather, closures and seasonal services against the linked authority. Keep one of the listed Zermatt alternatives available when the principal route is unsuitable.",

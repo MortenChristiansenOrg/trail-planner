@@ -1,5 +1,4 @@
 import { useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
 import {
   ArrowRight,
   BusFront,
@@ -19,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -30,6 +28,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
+import { DestinationDetailsSheet } from "@/features/catalog/DestinationDetailsSheet";
 import {
   formatHours,
   formatMoney,
@@ -38,11 +37,7 @@ import {
   type TravelEstimate,
   type TravelMode,
 } from "@/features/catalog/catalog";
-import {
-  useCatalog,
-  useCatalogDestination,
-} from "@/features/catalog/CatalogProvider";
-import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
+import { useCatalog } from "@/features/catalog/CatalogProvider";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import {
   modeLabels,
@@ -405,7 +400,11 @@ function SelectedDestinationCard({
       </div>
       {drivingRouteLabel ? <p className="journey-map-key"><Route /> Map route: {drivingRouteLabel}</p> : null}
       <div className="selected-destination__actions">
-        <DestinationDetails destination={destination} search={search} onPlan={onPlan} />
+        <DestinationDetailsSheet
+          destination={destination}
+          onPlan={onPlan}
+          participants={search.participants}
+        />
         <Button onClick={onPlan}>Plan this trip <ArrowRight /></Button>
       </div>
     </article>
@@ -424,75 +423,6 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
       </span>
       <em className="travel-summary__status">{viable ? "Fits your limits" : estimate.available ? "Outside current limits" : "Not available"}</em>
     </div>
-  );
-}
-
-function DestinationDetails({ destination, search, onPlan }: { destination: Destination; search: ExploreSearch; onPlan: () => void }) {
-  const [open, setOpen] = useState(false);
-  const catalog = useCatalog();
-  const detailedDestination =
-    useCatalogDestination(destination.id, open, destination) ?? destination;
-  const detailLoaded = catalog.details[destination.id] !== undefined;
-  return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild><Button variant="outline">View area details</Button></SheetTrigger>
-      <SheetContent className="destination-sheet paper-sheet sm:max-w-xl" side="right">
-        <SheetHeader>
-          <p className="step-label">{detailedDestination.region}, {detailedDestination.country}</p>
-          <SheetTitle>{detailedDestination.name}</SheetTitle>
-          <SheetDescription>{detailedDestination.character}</SheetDescription>
-        </SheetHeader>
-        <div className="destination-sheet__body">
-          <CatalogMediaFigure media={detailedDestination.media} sizes="(max-width: 640px) 90vw, 540px" />
-          {detailedDestination.guide ? (
-            <section className="destination-guide">
-              <div><h3>Why go</h3><p>{detailedDestination.guide.highlights}</p></div>
-              <div><h3>Mountains, nature and terrain</h3><p>{detailedDestination.guide.terrain}</p></div>
-              <div><h3>What to expect</h3><p>{detailedDestination.guide.expectations}</p></div>
-            </section>
-          ) : <p className="route-loading" role="status">Loading the source-backed area guide…</p>}
-          <section>
-            <h3>Available travel</h3>
-            <div className="detail-travel-list">
-              {detailedDestination.travel.map((estimate) => (
-                <div key={estimate.mode}>
-                  {modeIcon(estimate.mode)}
-                  <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(travelEstimateTotal(estimate, search.participants))}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails estimate={estimate} optionId={estimate.optionId} /> : null}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-          <section>
-            <h3>Hikes in the area</h3>
-            {detailedDestination.hikes.length ? <div className="route-preview-list">
-              {detailedDestination.hikes.map((hike) => (
-                <article key={hike.id}>
-                  <Route />
-                  <div>
-                    <strong>{hike.name}</strong>
-                    <p>{hike.description}</p>
-                    <small>
-                      {hike.difficulty} · {formatHours(hike.durationHours)} · {hike.routeType}
-                      {hike.distanceKm === undefined ? "" : ` · ${hike.distanceKm} km`}
-                      {hike.ascentM === undefined ? "" : ` · ${hike.ascentM} m ascent`}
-                      {hike.route.length ? "" : " · geometry unavailable"}
-                    </small>
-                    <a href={hike.provenance.sourceUrl} rel="noreferrer" target="_blank">Inspect route source</a>
-                  </div>
-                </article>
-              ))}
-            </div> : open ? <div className="routes-curating"><Route /><div><strong>{detailLoaded ? "No published hike choices" : "Loading hike choices"}</strong><p>{detailLoaded ? "This destination currently has no source-backed hikes in the active catalog." : "The catalog keeps route details outside the initial Explore list and loads them with this sheet."}</p></div></div> : null}
-          </section>
-          <p className="catalog-source">Catalog version {detailedDestination.catalogVersion.slice(0, 12)} · media verified {detailedDestination.media.verifiedAt}: <a href={detailedDestination.media.sourceUrl} rel="noreferrer" target="_blank">inspect image source</a></p>
-        </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button onClick={onPlan}>Plan {detailedDestination.name} <ArrowRight /></Button>
-          </SheetClose>
-        </SheetFooter>
-      </SheetContent>
-    </Sheet>
   );
 }
 

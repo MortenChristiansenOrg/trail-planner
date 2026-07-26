@@ -7,7 +7,7 @@ export function CatalogMediaFigure({
   media,
   loading = "lazy",
   sizes = "(max-width: 800px) 100vw, 560px",
-  showAttribution = true,
+  showAttribution,
   variant = "hero",
 }: {
   media?: CatalogMedia;
@@ -17,6 +17,7 @@ export function CatalogMediaFigure({
   variant?: "hero" | "thumbnail";
 }) {
   const [failedUrl, setFailedUrl] = useState<string>();
+  const attributionVisible = showAttribution ?? variant === "hero";
   if (!media || failedUrl === media.imageUrl) {
     return (
       <figure aria-label="Terrain image not yet available" className={`catalog-media catalog-media--${variant} catalog-media--fallback`} role="img">
@@ -40,7 +41,7 @@ export function CatalogMediaFigure({
         srcSet={`${responsiveImageUrl(media.imageUrl, 480)} 480w, ${responsiveImageUrl(media.imageUrl, 960)} 960w, ${responsiveImageUrl(media.imageUrl, 1440)} 1440w`}
         width={media.width}
       />
-      {showAttribution ? <details className="catalog-media__credit">
+      {attributionVisible ? <details className="catalog-media__credit">
         <summary><Image aria-hidden="true" /> Photo credit</summary>
         <span>{media.attributionText}</span>
         <span><a href={media.sourceUrl} rel="noreferrer" target="_blank">Source</a> · <a href={media.attributionUrl} rel="noreferrer" target="_blank">{media.license}</a></span>
