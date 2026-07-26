@@ -24,7 +24,7 @@ The compiler recognizes these schema-version 3 claims:
 | `destination-core` | `guide.highlights`, `guide.terrain`, `guide.expectations` | Ordered original guide paragraphs |
 | `seasonality` | `recommendedMonths` | Stable authority-backed hiking months |
 | `media` | `hero` | Approved destination terrain image and full attribution |
-| `hikes` | `hike` | One complete hike object per unique `subjectKey` |
+| `hikes` | `hike` | Optional verified route object per unique `subjectKey` |
 | `hike-geometry` | `geometry` | Optional verified line and source metadata |
 | travel domains | `estimate` | Existing planning estimate for each transport mode |
 | `lodging` | `lodging` | Optional planning example |
@@ -37,19 +37,19 @@ never copied into the record.
 
 A visible destination requires:
 
-- three guide sections of at least 80 words and at least 260 words in total;
+- three concise, non-empty guide sections supported by destination sources;
 - one destination-specific hero with storage URL, original dimensions, alt
   text, creator, allowlisted license and license URL, attribution, Commons or
   official source page, and an ISO calendar verification date (`YYYY-MM-DD`);
-- at least five hikes with unique stable keys, name, original description,
-  route type, difficulty, duration, trailhead/access context, and provenance;
-- at least two difficulty levels and two duration bands;
 - exactly one car, transit, and flight planning estimate.
 
-Distance, ascent, descent, and geometry are omitted when the authority does not
-publish them. Missing geometry is honest coverage, not a readiness failure.
-Geometry requires a verified official/maintainer download, OSM hiking relation,
-or other compatible licensed line, including attribution and retrieval data.
+Hikes are optional and do not affect destination visibility. The active catalog
+currently publishes no hikes: unsupported route records were removed in PR #22.
+The complete local OpenStreetMap processing, topology, elevation, provenance,
+licensing, artifact-injection, and representative-route import is tracked by
+[GitHub issue #23](https://github.com/MortenChristiansenOrg/trail-planner/issues/23).
+Until that work lands, destination publication must leave hike and geometry
+coverage missing rather than creating prose-only route records.
 
 ## Publication and deployment
 

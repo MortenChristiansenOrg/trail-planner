@@ -11,14 +11,14 @@ describe("versioned catalog synchronization", () => {
     const first = await t.action(internal.ingest.catalogSync.synchronize, {});
     const second = await t.action(internal.ingest.catalogSync.synchronize, {});
 
-    expect(first).toMatchObject({ status: "activated", destinations: 26, hikes: 130, coverage: 47 });
+    expect(first).toMatchObject({ status: "activated", destinations: 26, hikes: 0, coverage: 47 });
     expect(second).toEqual({ ...first, status: "unchanged" });
 
     const list = await t.query(api.destinations.listExplore, {
       paginationOpts: { numItems: 50, cursor: null },
     });
     expect(list.page).toHaveLength(26);
-    expect(list.page.every((destination) => destination.hikeCount >= 5)).toBe(true);
+    expect(list.page.every((destination) => destination.hikeCount === 0)).toBe(true);
     expect(list.page.every((destination) => !("guide" in destination))).toBe(true);
     expect(list.page.every((destination) => destination.provenance.sourceUrl.startsWith("https://"))).toBe(true);
 
@@ -26,8 +26,8 @@ describe("versioned catalog synchronization", () => {
       destinationKey: "odda",
     });
     expect(detail?.destinationKey).toBe("hardanger");
-    expect(detail?.hikes).toHaveLength(5);
-    expect(detail?.guide.highlights.split(/\s+/u).length).toBeGreaterThanOrEqual(80);
+    expect(detail?.hikes).toEqual([]);
+    expect(detail?.guide.highlights.trim().length).toBeGreaterThan(0);
     const keyedDetails = await t.query(api.destinations.detailsByKeys, {
       destinationKeys: ["odda", "abisko", "odda"],
     });

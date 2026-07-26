@@ -1,6 +1,18 @@
 # Trail Planner Data Source Research
 
 See [CATALOG_PUBLICATION_CHECKLIST.md](CATALOG_PUBLICATION_CHECKLIST.md) for the skill-executed publication gate covering provenance, route geometry, lodging, and licensed media.
+
+## Current route-data decision
+
+The catalog currently publishes no hikes. OpenStreetMap is the selected
+canonical open route and geometry source; Waymarked Trails is inspiration and a
+manual validation reference only, and none of its code may be used. The
+complete local-processing and environment-injection design plus the Besseggen,
+Trolltunga, and Ben Nevis representative imports are tracked in
+[GitHub issue #23](https://github.com/MortenChristiansenOrg/trail-planner/issues/23).
+That issue supersedes older route experiments and implementation assumptions
+below when they conflict.
+
 See [CATALOG_DATA_PIPELINE.md](CATALOG_DATA_PIPELINE.md) for the claims, coverage, queue, caching, and agent-skill architecture.
 
 This document lists the external information Trail Planner needs in order to prove the product vision in `VISION.md`. It is written as an experiment reference: for each data type, we should test whether candidate sources provide enough coverage, accuracy, cost visibility, legal clarity, and operational reliability before relying on them in the product.

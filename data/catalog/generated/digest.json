@@ -1,9 +1,9 @@
 {
-  "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+  "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
   "destinations": [
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Broad glacial valleys, birch forest and open fell with a reliable trail network but a short snow-free season.",
       "coordinates": [
         18.829,
@@ -28,7 +28,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3888
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "abiskojaure",
@@ -93,7 +93,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "A fjord-side logistics hub linking gentler geothermal landscapes with steep peninsula mountains.",
       "coordinates": [
         -18.09,
@@ -118,7 +118,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3648
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "hamrar-camping",
@@ -177,7 +177,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Accessible fell terrain, waterfalls and broad viewpoints supported by unusually strong village logistics.",
       "coordinates": [
         13.081,
@@ -202,7 +202,7 @@
         "verifiedAt": "2026-07-25",
         "width": 5184
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "are-camping",
@@ -262,7 +262,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Steep limestone walls, forested approaches and high routes overlooking the lake.",
       "coordinates": [
         13,
@@ -287,7 +287,7 @@
         "verifiedAt": "2026-07-25",
         "width": 1600
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "watzmannhaus",
@@ -355,7 +355,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Large-scale upland terrain where navigation, wind and distance matter more than technical ground.",
       "coordinates": [
         -3.829,
@@ -380,7 +380,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2000
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "glenmore",
@@ -441,7 +441,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Glaciers, balcony paths and high passes, with excellent local transport and busy summer trails.",
       "coordinates": [
         6.87,
@@ -466,7 +466,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3008
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "refuge-lac-blanc",
@@ -532,7 +532,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Dry granite, clear pools and hard multi-day walking with significant heat and exposure.",
       "coordinates": [
         9.15,
@@ -557,7 +557,7 @@
         "verifiedAt": "2026-07-25",
         "width": 1400
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "manganu",
@@ -619,7 +619,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Well-served trailheads, dramatic rock architecture and a mix of ordinary hiking and protected routes.",
       "coordinates": [
         12.135,
@@ -644,7 +644,7 @@
         "verifiedAt": "2026-07-25",
         "width": 13200
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "locatelli",
@@ -710,7 +710,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Quiet rugged peaks, straightforward local access and fewer transport options than the central Alps.",
       "coordinates": [
         19.123,
@@ -735,7 +735,7 @@
         "verifiedAt": "2026-07-25",
         "width": 4999
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "ivan-do",
@@ -795,7 +795,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Wet, rugged mountains, long ridges and strong public-transport access by Highland standards.",
       "coordinates": [
         -5.105,
@@ -820,7 +820,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2658
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "glen-nevis",
@@ -889,7 +889,7 @@
       "aliases": [
         "odda"
       ],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Big vertical relief, waterfalls and long days where weather and shuttle timing matter.",
       "coordinates": [
         6.546,
@@ -914,7 +914,7 @@
         "verifiedAt": "2026-07-25",
         "width": 1542
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "odda-camping",
@@ -980,7 +980,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Rounded fells, large protected valleys and a gentle transition from village access to multi-day wilderness.",
       "coordinates": [
         15.086,
@@ -1005,7 +1005,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3888
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "hemavan-fjallcenter",
@@ -1065,7 +1065,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "A practical blend of urban transport, cable-car access and long limestone or alpine ridge days.",
       "coordinates": [
         11.404,
@@ -1090,7 +1090,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3070
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "pfeishutte",
@@ -1152,7 +1152,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Open alpine plateaus, turquoise lakes and rugged ridges, with the Gjende boat shaping several route days.",
       "coordinates": [
         8.809962,
@@ -1177,7 +1177,7 @@
         "verifiedAt": "2026-07-25",
         "width": 4352
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "gjendesheim-turisthytte",
@@ -1242,7 +1242,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Rugged white peaks, clear rivers and compact access, with some routes requiring secure scrambling.",
       "coordinates": [
         13.786,
@@ -1267,7 +1267,7 @@
         "verifiedAt": "2026-07-25",
         "width": 9622
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "triglavski-dom",
@@ -1333,7 +1333,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Colourful volcanic terrain with exposed highland weather and river-crossing logistics on the access roads.",
       "coordinates": [
         -19.06,
@@ -1358,7 +1358,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2979
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "landmannalaugar-hut",
@@ -1416,7 +1416,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Granite peaks rising straight from the sea, rapidly changing weather and compact but demanding routes.",
       "coordinates": [
         14.568,
@@ -1441,7 +1441,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2048
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "svolvaer-camping",
@@ -1501,7 +1501,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Deep green valleys and engineered levadas, with exposed paths and rapidly shifting cloud.",
       "coordinates": [
         -16.969,
@@ -1526,7 +1526,7 @@
         "verifiedAt": "2026-07-25",
         "width": 1365
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "pico-camp",
@@ -1590,7 +1590,7 @@
       "aliases": [
         "kebnekaise"
       ],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Mountain birch forest opening into broad glacial valleys beneath Sweden’s highest massif.",
       "coordinates": [
         19.01,
@@ -1615,7 +1615,7 @@
         "verifiedAt": "2026-07-25",
         "width": 3777
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "nikkaluokta-sarri",
@@ -1674,7 +1674,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Dry-looking but weather-prone limestone, shepherd paths and major relief close to the coast.",
       "coordinates": [
         -4.62,
@@ -1699,7 +1699,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2896
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "aliva",
@@ -1761,7 +1761,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Sharp ridges, deep valleys, exposed viewpoints and unusually easy access from the rail terminus.",
       "coordinates": [
         7.687,
@@ -1786,7 +1786,7 @@
         "verifiedAt": "2026-07-25",
         "width": 6800
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "andalsnes-camping",
@@ -1852,7 +1852,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Green slopes beneath ice-capped peaks, with marked paths radiating from a visitor centre and campground.",
       "coordinates": [
         -16.966,
@@ -1877,7 +1877,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2527
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "skaftafell-camping",
@@ -1939,7 +1939,7 @@
       "aliases": [
         "eryri"
       ],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Rocky ridges and glacial cwms packed into a compact area, with many routes starting near villages.",
       "coordinates": [
         -4.13,
@@ -1964,7 +1964,7 @@
         "verifiedAt": "2026-07-25",
         "width": 4000
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "llyn-gwynant",
@@ -2027,7 +2027,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Birch-covered ridges, dark volcanic gullies and glacier views, reached by specialist highland buses.",
       "coordinates": [
         -19.482,
@@ -2052,7 +2052,7 @@
         "verifiedAt": "2026-07-25",
         "width": 4608
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "basar-hut",
@@ -2111,7 +2111,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Compact granite mountains with excellent marked trails, crowds on classics and frequent afternoon weather.",
       "coordinates": [
         19.95,
@@ -2136,7 +2136,7 @@
         "verifiedAt": "2026-07-25",
         "width": 2381
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "murowaniec",
@@ -2196,7 +2196,7 @@
     },
     {
       "aliases": [],
-      "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264",
+      "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
       "character": "Big glaciated scenery, excellent rail access and expensive but efficient mountain infrastructure.",
       "coordinates": [
         7.748,
@@ -2221,7 +2221,7 @@
         "verifiedAt": "2026-07-25",
         "width": 10800
       },
-      "hikeCount": 5,
+      "hikeCount": 0,
       "lodgings": [
         {
           "id": "hornli-hut",

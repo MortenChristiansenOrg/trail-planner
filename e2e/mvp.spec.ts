@@ -143,17 +143,17 @@ test("core planning flow remains connected", async ({ page }, testInfo) => {
   const destinationDetails = page.getByRole("dialog", { name: "Innsbruck" });
   await expect(destinationDetails.getByRole("heading", { name: "Why go" })).toBeVisible();
   await expect(destinationDetails.getByRole("heading", { name: "Hikes in the area" })).toBeVisible();
-  await expect(destinationDetails.locator(".route-preview-list").filter({ hasText: "Goetheweg on the Nordkette" })).toContainText("5.2 km");
+  await expect(destinationDetails.getByText("No published hike choices")).toBeVisible();
+  await expect(destinationDetails.getByText("This destination currently has no source-backed hikes in the active catalog.")).toBeVisible();
   await page.keyboard.press("Escape");
   await page.getByRole("button", { name: /Airplane/ }).click();
   await expect(page.getByText("2.900 kr.", { exact: false }).first()).toBeVisible();
 
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
   const hikePicker = page.getByRole("dialog", { name: "Add a hike" });
-  await expect(hikePicker.locator("option").first()).toHaveText(/5\.2 km · Point to point/);
-  await expect(hikePicker.locator(".hike-choice-summary")).toContainText("769 m");
-  await expect(hikePicker.locator(".hike-choice-summary")).toContainText("764 m");
-  await page.getByRole("tab", { name: "Your own hike" }).click();
+  await expect(hikePicker.getByText("No catalog routes are published for this hub yet. Add a personal route name to continue planning.")).toBeVisible();
+  await expect(hikePicker.getByRole("tab", { name: "No catalog routes" })).toBeDisabled();
+  await expect(hikePicker.getByRole("tab", { name: "Your own hike" })).toHaveAttribute("data-state", "active");
   await page.getByRole("textbox", { name: "Hike name" }).fill("Local ridge exploration");
   await page.getByRole("button", { name: "Add custom hike" }).click();
   await expect(page.getByText("Local ridge exploration").first()).toBeVisible();
@@ -408,11 +408,11 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
 
   await page.goto('/explore?month=7&maxLayovers=2&countries=%5B%22SE%22%5D&selected=abisko');
   await page.getByRole("button", { name: "View area details" }).click();
-  const publishedHike = page.locator(".route-preview-list article").filter({ hasText: "Abisko to Abiskojaure" });
-  await expect(publishedHike).toContainText("Point to point");
-  await expect(publishedHike).toContainText("Distance not published");
-  await expect(publishedHike).not.toContainText("geometry unavailable");
-  await expect(publishedHike.getByRole("link", { name: "Inspect route source" })).toHaveCount(0);
+  const abiskoDetails = page.locator(".destination-sheet");
+  await expect(abiskoDetails.getByText("No published hike choices")).toBeVisible();
+  await expect(abiskoDetails.getByText("This destination currently has no source-backed hikes in the active catalog.")).toBeVisible();
+  await expect(abiskoDetails.locator(".route-preview-list article")).toHaveCount(0);
+  await expect(abiskoDetails.getByRole("link", { name: "Inspect route source" })).toHaveCount(0);
 });
 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
@@ -579,20 +579,16 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await page.goto('/explore?month=7&maxLayovers=2&countries=%5B%22SE%22%5D&selected=abisko');
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
-  await page.getByRole("button", { name: "Add to itinerary" }).click();
+  await page.getByRole("textbox", { name: "Hike name" }).fill("Abisko valley walk");
+  await page.getByRole("button", { name: "Add custom hike" }).click();
   await page.getByRole("button", { name: "Add hike to day 3" }).click();
-  await page.getByRole("dialog", { name: "Add a hike" }).locator("select").first().selectOption("abisko-abisko-to-abiskojaure");
-  await page.getByRole("button", { name: "Add to itinerary" }).click();
+  await page.getByRole("textbox", { name: "Hike name" }).fill("Northern trail exploration");
+  await page.getByRole("button", { name: "Add custom hike" }).click();
 
-  await page.locator(".activity-row__select").filter({ hasText: "Abisko to Abiskojaure" }).click();
-  await expect(page.locator(".activity-row.is-selected")).toContainText("Abisko to Abiskojaure");
-  await expect(page.locator(".map-legend")).toContainText("Selected hike · route geometry unavailable");
-  await page.getByRole("button", { name: "View details for Abisko to Abiskojaure" }).click();
-  const hikeDetails = page.getByRole("dialog", { name: "Abisko to Abiskojaure" });
-  await expect(hikeDetails).toContainText("Point to point");
-  await expect(hikeDetails).toContainText("Distance not published");
-  await expect(hikeDetails).toContainText("Kungsleden trailhead at Abisko Turiststation");
-  await page.keyboard.press("Escape");
+  await page.locator(".activity-row__select").filter({ hasText: "Abisko valley walk" }).click();
+  await expect(page.locator(".activity-row.is-selected")).toContainText("Abisko valley walk");
+  await expect(page.locator(".map-legend")).toContainText("Selected personal hike · no catalog geometry");
+  await expect(page.getByRole("button", { name: "View details for Abisko valley walk" })).toHaveCount(0);
 
   const dateInput = page.getByLabel("Trip start date");
   await dateInput.fill("2026-07-26");

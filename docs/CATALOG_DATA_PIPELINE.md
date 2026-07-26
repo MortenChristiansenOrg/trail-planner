@@ -47,6 +47,15 @@ The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enri
 
 “Unavailable” requires evidence that the option is not practical under the stated assumptions. An unsuccessful search is `missing`, not `unavailable`. Partial data is useful and is still published data: a destination hub may publish without hikes, a hike may publish without geometry only when the UI explicitly says geometry is missing, and aggregate travel estimates may remain visible without invented stages.
 
+The current catalog deliberately contains no published hikes. Broad destination
+pages are not sufficient route evidence, and route-count or variety quotas must
+not influence publication. The production OpenStreetMap route pipeline and the
+first representative imports are specified in
+[GitHub issue #23](https://github.com/MortenChristiansenOrg/trail-planner/issues/23).
+That issue supersedes older route-import assumptions in this document. Heavy
+OSM processing will run locally; checked-in, content-addressed artifacts will be
+validated in CI and synchronized unchanged into preview and production.
+
 ## Agent skills
 
 `$add-trail-destinations` researches a new hub, establishes the stable key and core provenance, verifies useful domain claims, assesses coverage, validates the complete record, and publishes it under `data/catalog/records/`. It does not invent hikes or ask the user to review data.

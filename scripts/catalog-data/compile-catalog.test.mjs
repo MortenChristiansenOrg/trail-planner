@@ -14,7 +14,7 @@ describe("catalog compiler", () => {
     const second = await compileCatalog({ check: true });
 
     expect(second.catalogVersion).toBe(first.catalogVersion);
-    expect(first.expected).toEqual({ destinations: 26, hikes: 130, coverage: 47 });
+    expect(first.expected).toEqual({ destinations: 26, hikes: 0, coverage: 47 });
   });
 
   test("accepts useful hidden records without exposing incomplete content", () => {
@@ -32,13 +32,11 @@ describe("catalog compiler", () => {
     expect(catalogVersionForRecords([abisko, partial])).not.toBe(catalogVersionForRecords([abisko]));
   });
 
-  test("rejects an incomplete visible record", () => {
+  test("accepts a visible destination without hikes", () => {
     const incomplete = structuredClone(abisko);
     incomplete.claims = incomplete.claims.filter((claim) => !(claim.domain === "hikes" && claim.field === "hike"));
 
-    expect(validateCatalogRecord(incomplete)).toEqual(
-      expect.arrayContaining([expect.stringMatching(/visible destination is not ready: hikes/)]),
-    );
+    expect(validateCatalogRecord(incomplete)).toEqual([]);
   });
 
   test("reports malformed version-three structure without throwing", () => {
@@ -57,7 +55,7 @@ describe("catalog compiler", () => {
 
   test("rejects incomplete guide, media attribution, and geometry provenance", () => {
     const incompleteGuide = structuredClone(abisko);
-    incompleteGuide.claims.find((claim) => claim.field === "guide.highlights").value = "Too short.";
+    incompleteGuide.claims.find((claim) => claim.field === "guide.highlights").value = "";
     expect(validateCatalogRecord(incompleteGuide)).toEqual(
       expect.arrayContaining([expect.stringMatching(/guide\.highlights/)]),
     );
@@ -69,6 +67,35 @@ describe("catalog compiler", () => {
     );
 
     const unsourcedGeometry = structuredClone(abisko);
+    unsourcedGeometry.claims.push({
+      domain: "hikes",
+      subjectKey: "test-route",
+      field: "hike",
+      value: {
+        key: "test-route",
+        name: "Test route",
+        routeType: "point-to-point",
+        description: "A test route.",
+        difficulty: "Moderate",
+        durationHours: 2,
+        durationDays: 1,
+        trailhead: "Test start",
+        geometry: {
+          coordinates: [[18.78, 68.35], [18.8, 68.36]],
+        },
+      },
+      source: {
+        key: "test-route-source",
+        url: "https://example.com/test-route",
+        kind: "official",
+      },
+      retrievedAt: "2026-07-26T00:00:00.000Z",
+      observedAt: "2026-07-26T00:00:00.000Z",
+      refreshAfter: "2027-07-26T00:00:00.000Z",
+      confidence: "high",
+    });
+    unsourcedGeometry.coverage.find((coverage) => coverage.domain === "hikes").status = "fresh";
+    unsourcedGeometry.coverage.find((coverage) => coverage.domain === "hikes").reasons = ["Test route"];
     unsourcedGeometry.claims.find((claim) => claim.field === "hike").value.geometry = {
       coordinates: [[18.78, 68.35], [18.8, 68.36]],
     };

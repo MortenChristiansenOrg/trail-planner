@@ -24,6 +24,7 @@ Inspect the published destination record, provenance, coverage rows, and queued 
 
 1. Select scope.
    - Target explicit user domains or those marked `missing`, `partial`, or `stale`, preserving canonical keys and aliases.
+   - Do not publish or refresh hike or geometry claims until the complete local OSM pipeline in GitHub issue #23 is implemented. Keep both domains missing.
    - Do not refresh fresh unrelated domains “while here.” Small resumable runs suit the Firecrawl free tier.
    - For date-specific routes, schedules, or fares, use the runtime provider path when one exists. Do not replace it with scraped aggregate prose.
 2. Start a bounded run.
@@ -57,6 +58,6 @@ Inspect the published destination record, provenance, coverage rows, and queued 
 
 ## Refresh priority
 
-Prioritize imminent safety/access restrictions and seasonal operators, then stale travel/lodging prices, then hike metadata/media. Stable core coordinates and geometry need refresh only after a source change, correction, or validation failure.
+Prioritize imminent safety/access restrictions and seasonal operators, then stale travel/lodging prices and media. Hike and geometry work is reserved for the local OSM pipeline in GitHub issue #23.
 
 Stop without changing the published record when source terms block reuse, the credit cap would be exceeded, identity is ambiguous, or verified replacement geometry cannot safely supersede current geometry. Ask the user only for product-scope decisions, never to inspect or approve source data.

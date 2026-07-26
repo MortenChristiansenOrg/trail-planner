@@ -13,12 +13,12 @@ describe("generated product catalog", () => {
     expect(new Set(destinations.map((destination) => destination.id)).size).toBe(26);
     expect(destinations.every((destination) => destination.hikes.length === 0)).toBe(true);
     expect(destinations.every((destination) => destination.guide === undefined)).toBe(true);
-    expect(destinations.every((destination) => destination.hikeCount >= 5)).toBe(true);
+    expect(destinations.every((destination) => destination.hikeCount === 0)).toBe(true);
     expect(destinations.every((destination) => destination.catalogVersion === staticCatalogVersion)).toBe(true);
     expect(destinations.every((destination) => destination.travel.length === 3)).toBe(true);
   });
 
-  it("lazy-loads the matching guide and five or more source-backed hikes", async () => {
+  it("lazy-loads the matching guide without inventing hikes", async () => {
     const digest = destinations.find((destination) => destination.id === "abisko")!;
     const detail = await loadStaticCatalogDetail("abisko");
     expect(detail).not.toBeNull();
@@ -26,11 +26,9 @@ describe("generated product catalog", () => {
 
     const guideSections = Object.values(destination.guide ?? {});
     expect(guideSections).toHaveLength(3);
-    expect(guideSections.every((section) => section.split(/\s+/u).length >= 80)).toBe(true);
-    expect(destination.hikes.length).toBeGreaterThanOrEqual(5);
-    expect(new Set(destination.hikes.map((hike) => hike.difficulty)).size).toBeGreaterThanOrEqual(2);
-    expect(destination.hikes.every((hike) => hike.provenance.sourceUrl.startsWith("https://"))).toBe(true);
-    expect(destination.hikes.every((hike) => hike.route.length === 0)).toBe(true);
+    expect(guideSections.every((section) => section.trim().length > 0)).toBe(true);
+    expect(destination.hikes).toEqual([]);
+    expect(destination.hikeCount).toBe(0);
   });
 
   it("rejects detail data from another catalog version", async () => {

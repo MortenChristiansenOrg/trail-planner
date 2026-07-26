@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "picos",
       "field": "guide.highlights",
-      "value": "Potes opens the eastern and central Picos de Europa, including Fuente Dé, the Cares gorge and routes toward high limestone refuges. The Potes route set makes those qualities concrete: “Ruta del Cares” and “Fuente Dé to Áliva” define different headline days, while “Horcados Rojos” offers another scale of outing. “Pico Jano” and “Collado Jermoso” extend the choice beyond one famous objective. Together, these Picos de Europa walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
+      "value": "Potes opens the eastern and central Picos de Europa, including Fuente Dé, the Cares gorge and routes toward high limestone refuges.",
       "source": {
         "key": "picos-authority",
         "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "picos",
       "field": "guide.terrain",
-      "value": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land. The published Potes walks move through that structure in distinct ways. “Fuente Dé to Áliva” and “Pico Jano” are the shortest listed options at about 4 hours; “Collado Jermoso” is the largest commitment at about 10 hours. On Picos de Europa terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land.",
       "source": {
         "key": "picos-authority",
         "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "picos",
       "field": "guide.expectations",
-      "value": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative. Access around Potes is route-specific. Starts include Poncebos, Fuente Dé upper cable-car station and Dobarganes. A Picos de Europa point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Potes weather, closures and seasonal services against the linked authority. Keep one of the listed Potes alternatives available when the principal route is unsuitable.",
+      "value": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative.",
       "source": {
         "key": "picos-authority",
         "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
@@ -175,166 +175,6 @@
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "picos-ruta-del-cares",
-      "field": "hike",
-      "value": {
-        "key": "picos-ruta-del-cares",
-        "name": "Ruta del Cares",
-        "routeType": "out-and-back",
-        "description": "Ruta del Cares follows the engineered Cares gorge path to Caín and returns above steep unguarded drops.",
-        "difficulty": "Moderate",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Poncebos",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ]
-      },
-      "source": {
-        "key": "picos-authority",
-        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "picos-fuente-de-to-aliva",
-      "field": "hike",
-      "value": {
-        "key": "picos-fuente-de-to-aliva",
-        "name": "Fuente Dé to Áliva",
-        "routeType": "point-to-point",
-        "description": "Fuente Dé to Áliva descends broad tracks through the Áliva pastures toward Espinama.",
-        "difficulty": "Easy",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Fuente Dé upper cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ]
-      },
-      "source": {
-        "key": "picos-authority",
-        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "picos-horcados-rojos",
-      "field": "hike",
-      "value": {
-        "key": "picos-horcados-rojos",
-        "name": "Horcados Rojos",
-        "routeType": "out-and-back",
-        "description": "Horcados Rojos crosses the limestone plateau and climbs steeply to the Horcados Rojos pass.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Fuente Dé upper cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ]
-      },
-      "source": {
-        "key": "picos-authority",
-        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "picos-pico-jano",
-      "field": "hike",
-      "value": {
-        "key": "picos-pico-jano",
-        "name": "Pico Jano",
-        "routeType": "loop",
-        "description": "Pico Jano uses old tracks and open slopes to the Pico Jano viewpoint above the Liébana valley.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Dobarganes",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ]
-      },
-      "source": {
-        "key": "picos-authority",
-        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "picos-collado-jermoso",
-      "field": "hike",
-      "value": {
-        "key": "picos-collado-jermoso",
-        "name": "Collado Jermoso",
-        "routeType": "point-to-point",
-        "description": "Collado Jermoso makes the sustained ascent through Asotín and exposed high limestone to Refugio Collado Jermoso.",
-        "difficulty": "Expert",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Cordiñanes",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ]
-      },
-      "source": {
-        "key": "picos-authority",
-        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
     },
     {
       "domain": "travel-road",
@@ -448,16 +288,16 @@
     },
     {
       "domain": "hikes",
-      "status": "fresh",
+      "status": "missing",
       "reasons": [
-        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
       ]
     },
     {
       "domain": "hike-geometry",
       "status": "missing",
       "reasons": [
-        "No verified licensed route lines are published in this catalog version."
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
       ]
     },
     {

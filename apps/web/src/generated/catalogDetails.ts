@@ -5,9 +5,9 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
   "abisko": {
     "destinationKey": "abisko",
     "guide": {
-      "highlights": "Abisko combines a railway-served national-park entrance, the northern Kungsleden trailhead and views across Torneträsk toward the high border mountains. The Abisko route set makes those qualities concrete: “Abisko Canyon” and “Abisko to Abiskojaure” define different headline days, while “Njullá Summit” offers another scale of outing. “Kårsavagge” and “Trollsjön from Låktatjåkka” extend the choice beyond one famous objective. Together, these Swedish Lapland walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Abisko.",
-      "terrain": "The Abiskojåkka canyon cuts through birch woodland before trails reach open fell, broad U-shaped valleys and higher rocky ground around Njullá and Kårsavagge. The published Abisko walks move through that structure in distinct ways. “Abisko Canyon” is the shortest listed option at about 1.5 hours; “Kårsavagge” is the largest commitment at about 8 hours. On Swedish Lapland terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Abisko.",
-      "expectations": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable. Access around Abisko is route-specific. Starts include Abisko naturum, Kungsleden trailhead at Abisko Turiststation and Abisko Turiststation. A Swedish Lapland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Abisko weather, closures and seasonal services against the linked authority. Keep one of the listed Abisko alternatives available when the principal route is unsuitable."
+      "highlights": "Abisko combines a railway-served national-park entrance, the northern Kungsleden trailhead and views across Torneträsk toward the high border mountains.",
+      "terrain": "The Abiskojåkka canyon cuts through birch woodland before trails reach open fell, broad U-shaped valleys and higher rocky ground around Njullá and Kårsavagge.",
+      "expectations": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable."
     },
     "hero": {
       "imageUrl": "/catalog-media/abisko.jpg",
@@ -25,113 +25,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "abisko-abisko-canyon",
-        "name": "Abisko Canyon",
-        "routeType": "loop",
-        "description": "Abisko Canyon follows the signed canyon path beside the Abiskojåkka, using footbridges and viewpoints close to the national-park entrance.",
-        "difficulty": "Easy",
-        "durationHours": 1.5,
-        "durationDays": 1,
-        "trailhead": "Abisko naturum",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "abisko-authority",
-          "sourceUrl": "https://www.swedishtouristassociation.com/areas/abisko/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "abisko-abisko-to-abiskojaure",
-        "name": "Abisko to Abiskojaure",
-        "routeType": "point-to-point",
-        "description": "Abisko to Abiskojaure covers the opening Kungsleden stage through birch woods and open valley terrain to Abiskojaure mountain hut.",
-        "difficulty": "Moderate",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Kungsleden trailhead at Abisko Turiststation",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "abisko-authority",
-          "sourceUrl": "https://www.swedishtouristassociation.com/areas/abisko/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "abisko-njulla-summit",
-        "name": "Njullá Summit",
-        "routeType": "out-and-back",
-        "description": "Njullá Summit climbs from Torneträsk through the birch zone onto exposed fell slopes below the Njullá summit.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Abisko Turiststation",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "abisko-authority",
-          "sourceUrl": "https://www.swedishtouristassociation.com/areas/abisko/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "abisko-karsavagge",
-        "name": "Kårsavagge",
-        "routeType": "point-to-point",
-        "description": "Kårsavagge travels deep into the broad Kårsavagge valley toward the STF hut, with a long return or planned hut stay required.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Abisko Östra station",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "abisko-authority",
-          "sourceUrl": "https://www.swedishtouristassociation.com/areas/abisko/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "abisko-trollsjon-from-laktatjakka",
-        "name": "Trollsjön from Låktatjåkka",
-        "routeType": "out-and-back",
-        "description": "Trollsjön from Låktatjåkka crosses rocky ground into Kärkevagge before reaching the clear mountain lake known as Trollsjön.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "E10 trailhead near Låktatjåkka station",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "abisko-authority",
-          "sourceUrl": "https://www.swedishtouristassociation.com/areas/abisko/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "abisko-authority",
@@ -152,14 +46,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "akureyri": {
     "destinationKey": "akureyri",
     "guide": {
-      "highlights": "Akureyri is a full-service northern base for Súlur, Glerárdalur, Hlíðarfjall and day trips around Eyjafjörður and Tröllaskagi. The Akureyri route set makes those qualities concrete: “Súlur” and “Kjarnaskógur Forest Circuit” define different headline days, while “Hlíðarfjall” offers another scale of outing. “Glerárdalur” and “Kaldbakur” extend the choice beyond one famous objective. Together, these North Iceland walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Akureyri.",
-      "terrain": "Long glacial valleys and layered basalt mountains rise from the fjord, with birch plantations, heath and snow-holding corries producing a softer profile than Iceland's central highlands. The published Akureyri walks move through that structure in distinct ways. “Kjarnaskógur Forest Circuit” is the shortest listed option at about 2 hours; “Súlur” is the largest commitment at about 7.5 hours. On North Iceland terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area. Access around Akureyri is route-specific. Starts include Súlur trail parking in Glerárdalur, Kjarnaskógur visitor area and Hlíðarfjall ski-area base. A North Iceland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Akureyri weather, closures and seasonal services against the linked authority. Keep one of the listed Akureyri alternatives available when the principal route is unsuitable."
+      "highlights": "Akureyri is a full-service northern base for Súlur, Glerárdalur, Hlíðarfjall and day trips around Eyjafjörður and Tröllaskagi.",
+      "terrain": "Long glacial valleys and layered basalt mountains rise from the fjord, with birch plantations, heath and snow-holding corries producing a softer profile than Iceland's central highlands.",
+      "expectations": "Town paths and forest circuits are accessible, while outer objectives require a car or bus and more navigation; the hub suits travellers who value restaurants and transport alongside mountain days, though the finest routes are spread over a broad area."
     },
     "hero": {
       "imageUrl": "/catalog-media/akureyri.jpg",
@@ -177,118 +71,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akureyri%20fjord%20-%20Iceland%20-%20panoramio.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "akureyri-sulur",
-        "name": "Súlur",
-        "routeType": "out-and-back",
-        "description": "Súlur climbs the long north ridge above Eyjafjörður to the higher Súlur summit, with steep scree near the top.",
-        "difficulty": "Hard",
-        "durationHours": 7.5,
-        "durationDays": 1,
-        "trailhead": "Súlur trail parking in Glerárdalur",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "akureyri-authority",
-          "sourceUrl": "https://www.visitakureyri.is/en/see-and-do/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "akureyri-kjarnaskogur-forest-circuit",
-        "name": "Kjarnaskógur Forest Circuit",
-        "routeType": "loop",
-        "description": "Kjarnaskógur Forest Circuit uses the marked woodland paths and viewpoints in Akureyri's recreational forest.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Kjarnaskógur visitor area",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "akureyri-authority",
-          "sourceUrl": "https://www.visitakureyri.is/en/see-and-do/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "akureyri-hlidarfjall",
-        "name": "Hlíðarfjall",
-        "routeType": "out-and-back",
-        "description": "Hlíðarfjall ascends open ski slopes and fell ground for a panorama over Akureyri and Eyjafjörður.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Hlíðarfjall ski-area base",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "akureyri-authority",
-          "sourceUrl": "https://www.visitakureyri.is/en/see-and-do/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "akureyri-glerardalur",
-        "name": "Glerárdalur",
-        "routeType": "out-and-back",
-        "description": "Glerárdalur follows the Glerá into its long mountain valley, where bridges and side paths allow the turnaround to match conditions.",
-        "difficulty": "Moderate",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Glerárdalur trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "akureyri-authority",
-          "sourceUrl": "https://www.visitakureyri.is/en/see-and-do/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "akureyri-kaldbakur",
-        "name": "Kaldbakur",
-        "routeType": "out-and-back",
-        "description": "Kaldbakur climbs Kaldbakur from the coast through heath and persistent snow patches to a broad fjord viewpoint.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Grenivík trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "akureyri-authority",
-          "sourceUrl": "https://www.visitakureyri.is/en/see-and-do/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "akureyri-authority",
@@ -309,14 +92,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "are": {
     "destinationKey": "are",
     "guide": {
-      "highlights": "Åre combines a railway station, lifts and services with trails over Åreskutan, around Totthummeln and into quieter Jämtland fell country. The Åre route set makes those qualities concrete: “Åreskutan Summit” and “Totthummeln” define different headline days, while “Fröå Gruvleden” offers another scale of outing. “Blanktjärnsrundan” and “St Olavsleden to Tännforsen” extend the choice beyond one famous objective. Together, these Jämtland walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Åre.",
-      "terrain": "The isolated Åreskutan massif rises above lake, spruce and birch forest into open heath and rocky summit ground, while waterfalls and old mining paths add lower-level variety. The published Åre walks move through that structure in distinct ways. “Totthummeln” is the shortest listed option at about 2 hours; “Åreskutan Summit” and “St Olavsleden to Tännforsen” share the largest listed commitment at about 6 hours. On Jämtland terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Waymarked routes and lift access suit mixed experience levels, but wind and cloud can close uplifts or make the broad summit hard to navigate; the town is lively and convenient rather than remote, with quieter trails reached by bus or short drive. Access around Åre is route-specific. Starts include Åre square via the summit trail, Fjällgården and Fröå Gruva. A Jämtland point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åre weather, closures and seasonal services against the linked authority. Keep one of the listed Åre alternatives available when the principal route is unsuitable."
+      "highlights": "Åre combines a railway station, lifts and services with trails over Åreskutan, around Totthummeln and into quieter Jämtland fell country.",
+      "terrain": "The isolated Åreskutan massif rises above lake, spruce and birch forest into open heath and rocky summit ground, while waterfalls and old mining paths add lower-level variety.",
+      "expectations": "Waymarked routes and lift access suit mixed experience levels, but wind and cloud can close uplifts or make the broad summit hard to navigate; the town is lively and convenient rather than remote, with quieter trails reached by bus or short drive."
     },
     "hero": {
       "imageUrl": "/catalog-media/are.jpg",
@@ -334,118 +117,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%85re%2C%20Sweden%20(Unsplash).jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "are-areskutan-summit",
-        "name": "Åreskutan Summit",
-        "routeType": "out-and-back",
-        "description": "Åreskutan Summit makes the full ascent of Åreskutan from the village; lift-assisted variants are materially shorter.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Åre square via the summit trail",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "are-authority",
-          "sourceUrl": "https://aresweden.com/en/hiking-in-are/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "are-totthummeln",
-        "name": "Totthummeln",
-        "routeType": "loop",
-        "description": "Totthummeln circles the compact Totthummeln ridge on signed forest and fell paths above Åre.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Fjällgården",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "are-authority",
-          "sourceUrl": "https://aresweden.com/en/hiking-in-are/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "are-froa-gruvleden",
-        "name": "Fröå Gruvleden",
-        "routeType": "loop",
-        "description": "Fröå Gruvleden links the historic copper-mine settlement with woodland, marsh boardwalk and views toward Åreskutan.",
-        "difficulty": "Easy",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Fröå Gruva",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "are-authority",
-          "sourceUrl": "https://aresweden.com/en/hiking-in-are/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "are-blanktjarnsrundan",
-        "name": "Blanktjärnsrundan",
-        "routeType": "loop",
-        "description": "Blanktjärnsrundan circles through protected forest and open ground to the turquoise Blanktjärnarna lakes.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Vålådalen mountain station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "are-authority",
-          "sourceUrl": "https://aresweden.com/en/hiking-in-are/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "are-st-olavsleden-to-tannforsen",
-        "name": "St Olavsleden to Tännforsen",
-        "routeType": "point-to-point",
-        "description": "St Olavsleden to Tännforsen uses a signed section of the St Olavsleden pilgrim route toward the Tännforsen area and needs a return transfer.",
-        "difficulty": "Moderate",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Åre old church",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "are-authority",
-          "sourceUrl": "https://aresweden.com/en/hiking-in-are/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "are-authority",
@@ -466,14 +138,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "berchtesgaden": {
     "destinationKey": "berchtesgaden",
     "guide": {
-      "highlights": "Berchtesgaden combines Königssee, Jenner, Watzmann and a protected national-park landscape with historic huts and lake transport. The Berchtesgaden route set makes those qualities concrete: “Malerwinkel and Königssee” and “Jenner Summit” define different headline days, while “Watzmannhaus” offers another scale of outing. “Obersee and Röthbach Waterfall” and “Grünstein” extend the choice beyond one famous objective. Together, these Bavarian Alps walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Berchtesgaden.",
-      "terrain": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves. The published Berchtesgaden walks move through that structure in distinct ways. “Malerwinkel and Königssee” is the shortest listed option at about 1.5 hours; “Watzmannhaus” is the largest commitment at about 7 hours. On Bavarian Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition. Access around Berchtesgaden is route-specific. Starts include Königssee village, Hinterbrand car park and Wimbachbrücke. A Bavarian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Berchtesgaden weather, closures and seasonal services against the linked authority. Keep one of the listed Berchtesgaden alternatives available when the principal route is unsuitable."
+      "highlights": "Berchtesgaden combines Königssee, Jenner, Watzmann and a protected national-park landscape with historic huts and lake transport.",
+      "terrain": "Steep Northern Limestone Alps surround a deep fjord-like lake; forested lower slopes give way to karst, scree and long rock walls, while alpine pastures occupy gentler shelves.",
+      "expectations": "Boats and buses unlock several trailheads but create timetable dependencies, and upper routes can be exposed or technically demanding; easier lake and meadow walks make the destination useful for parties with varied ambition."
     },
     "hero": {
       "imageUrl": "/catalog-media/berchtesgaden.jpg",
@@ -491,128 +163,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Berchtesgaden%20Alps%2010km.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "berchtesgaden-malerwinkel-and-konigssee",
-        "name": "Malerwinkel and Königssee",
-        "routeType": "loop",
-        "description": "Malerwinkel and Königssee loops through lakeside woodland to Malerwinkel's classic framed view over Königssee.",
-        "difficulty": "Easy",
-        "durationHours": 1.5,
-        "durationDays": 1,
-        "trailhead": "Königssee village",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "berchtesgaden-authority",
-          "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "berchtesgaden-jenner-summit",
-        "name": "Jenner Summit",
-        "routeType": "out-and-back",
-        "description": "Jenner Summit climbs forest and pasture paths to Jenner; using the cable car changes both time and ascent.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Hinterbrand car park",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "berchtesgaden-authority",
-          "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "berchtesgaden-watzmannhaus",
-        "name": "Watzmannhaus",
-        "routeType": "out-and-back",
-        "description": "Watzmannhaus follows the Watzmann approach through forest and alpine pasture to Watzmannhaus beneath the east face.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Wimbachbrücke",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "berchtesgaden-authority",
-          "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "berchtesgaden-obersee-and-rothbach-waterfall",
-        "name": "Obersee and Röthbach Waterfall",
-        "routeType": "out-and-back",
-        "description": "Obersee and Röthbach Waterfall walks beside Obersee to Fischunkelalm and the lower Röthbach waterfall viewpoint, timed around the Königssee boat.",
-        "difficulty": "Moderate",
-        "durationHours": 4.5,
-        "durationDays": 1,
-        "trailhead": "Salet boat landing",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "berchtesgaden-authority",
-          "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "berchtesgaden-grunstein",
-        "name": "Grünstein",
-        "routeType": "out-and-back",
-        "description": "Grünstein ascends wooded slopes to Grünsteinhütte and the compact Grünstein summit above Königssee.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Hammerstiel trailhead",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "berchtesgaden-authority",
-          "sourceUrl": "https://www.nationalpark-berchtesgaden.bayern.de/english/adventure/tips/hike/index.htm",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "berchtesgaden-authority",
@@ -633,14 +184,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "cairngorms": {
     "destinationKey": "cairngorms",
     "guide": {
-      "highlights": "Aviemore provides a practical edge-of-park base for Rothiemurchus forest, the Northern Corries and journeys onto the Cairngorm plateau. The Aviemore route set makes those qualities concrete: “Cairn Gorm from Coire Cas” and “Northern Corries Circuit” define different headline days, while “Meall a' Bhuachaille” offers another scale of outing. “Ryvoan Pass and Green Lochan” and “Lairig Ghru to Corrour” extend the choice beyond one famous objective. Together, these Cairngorms walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Rounded granite plateaus end abruptly in corrie cliffs and boulder fields, while Scots pine forest, lochs and heather moor create a gentler lower-level landscape with important wildlife habitat. The published Aviemore walks move through that structure in distinct ways. “Ryvoan Pass and Green Lochan” is the shortest listed option at about 4.5 hours; “Lairig Ghru to Corrour” is the largest commitment at about 10 hours. On Cairngorms terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions. Access around Aviemore is route-specific. Starts include Coire Cas car park, Glenmore visitor centre and Coylumbridge. A Cairngorms point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Aviemore weather, closures and seasonal services against the linked authority. Keep one of the listed Aviemore alternatives available when the principal route is unsuitable."
+      "highlights": "Aviemore provides a practical edge-of-park base for Rothiemurchus forest, the Northern Corries and journeys onto the Cairngorm plateau.",
+      "terrain": "Rounded granite plateaus end abruptly in corrie cliffs and boulder fields, while Scots pine forest, lochs and heather moor create a gentler lower-level landscape with important wildlife habitat.",
+      "expectations": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions."
     },
     "hero": {
       "imageUrl": "/catalog-media/cairngorms.jpg",
@@ -658,123 +209,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cairngorms%20National%20Park%2C%20Scotland.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "cairngorms-cairn-gorm-from-coire-cas",
-        "name": "Cairn Gorm from Coire Cas",
-        "routeType": "out-and-back",
-        "description": "Cairn Gorm from Coire Cas climbs the maintained Fiacaill a' Choire Chais path onto the exposed plateau and Cairn Gorm summit.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Coire Cas car park",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cairngorms-authority",
-          "sourceUrl": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cairngorms-northern-corries-circuit",
-        "name": "Northern Corries Circuit",
-        "routeType": "loop",
-        "description": "Northern Corries Circuit circles Coire an t-Sneachda and Coire an Lochain over rough plateau ground where navigation is serious in cloud.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Coire Cas car park",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cairngorms-authority",
-          "sourceUrl": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cairngorms-meall-a-bhuachaille",
-        "name": "Meall a' Bhuachaille",
-        "routeType": "out-and-back",
-        "description": "Meall a' Bhuachaille passes Ryvoan bothy before climbing Meall a' Bhuachaille for views across Rothiemurchus.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Glenmore visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cairngorms-authority",
-          "sourceUrl": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cairngorms-ryvoan-pass-and-green-lochan",
-        "name": "Ryvoan Pass and Green Lochan",
-        "routeType": "loop",
-        "description": "Ryvoan Pass and Green Lochan uses forest tracks through Ryvoan Pass and returns by An Lochan Uaine, the Green Lochan.",
-        "difficulty": "Easy",
-        "durationHours": 4.5,
-        "durationDays": 1,
-        "trailhead": "Glenmore visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cairngorms-authority",
-          "sourceUrl": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cairngorms-lairig-ghru-to-corrour",
-        "name": "Lairig Ghru to Corrour",
-        "routeType": "point-to-point",
-        "description": "Lairig Ghru to Corrour crosses the remote Lairig Ghru through the central massif to Corrour bothy and requires a separately planned exit.",
-        "difficulty": "Hard",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Coylumbridge",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cairngorms-authority",
-          "sourceUrl": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "cairngorms-authority",
@@ -795,14 +230,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "chamonix": {
     "destinationKey": "chamonix",
     "guide": {
-      "highlights": "Chamonix faces the Mont Blanc massif and gives walkers lift-assisted access to Lac Blanc, the Grand Balcons and close views of the Mer de Glace. The Chamonix route set makes those qualities concrete: “Lac Blanc from La Flégère” and “Grand Balcon Nord” define different headline days, while “Grand Balcon Sud” offers another scale of outing. “Mer de Glace via Montenvers” and “Tour du Mont Blanc to Les Houches” extend the choice beyond one famous objective. Together, these Mont Blanc massif walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Enormous granite aiguilles and heavily crevassed glaciers rise above larch forest, alpine pasture and moraine; maintained balcony paths contrast with steep rocky approaches and high-mountain terrain. The published Chamonix walks move through that structure in distinct ways. “Mer de Glace via Montenvers” and “Tour du Mont Blanc to Les Houches” are the shortest listed options at about 3 hours; “Grand Balcon Sud” is the largest commitment at about 6 hours. On Mont Blanc massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment. Access around Chamonix is route-specific. Starts include La Flégère lift station, Montenvers railway station and Planpraz lift station. A Mont Blanc massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Chamonix weather, closures and seasonal services against the linked authority. Keep one of the listed Chamonix alternatives available when the principal route is unsuitable."
+      "highlights": "Chamonix faces the Mont Blanc massif and gives walkers lift-assisted access to Lac Blanc, the Grand Balcons and close views of the Mer de Glace.",
+      "terrain": "Enormous granite aiguilles and heavily crevassed glaciers rise above larch forest, alpine pasture and moraine; maintained balcony paths contrast with steep rocky approaches and high-mountain terrain.",
+      "expectations": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment."
     },
     "hero": {
       "imageUrl": "/catalog-media/chamonix.jpg",
@@ -820,118 +255,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mont%20Blanc%20du%20Tacul%20depuis%20l'Aiguille%20du%20Midi.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "chamonix-lac-blanc-from-la-flegere",
-        "name": "Lac Blanc from La Flégère",
-        "routeType": "out-and-back",
-        "description": "Lac Blanc from La Flégère climbs to the Cheserys lakes and Lac Blanc opposite the Mont Blanc massif.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "La Flégère lift station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "chamonix-authority",
-          "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "chamonix-grand-balcon-nord",
-        "name": "Grand Balcon Nord",
-        "routeType": "point-to-point",
-        "description": "Grand Balcon Nord traverses the north balcony above Chamonix to Plan de l'Aiguille, linking the mountain railway and cable car.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Montenvers railway station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "chamonix-authority",
-          "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "chamonix-grand-balcon-sud",
-        "name": "Grand Balcon Sud",
-        "routeType": "point-to-point",
-        "description": "Grand Balcon Sud follows the south-facing balcony between Planpraz and La Flégère with sustained Mont Blanc views.",
-        "difficulty": "Moderate",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Planpraz lift station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "chamonix-authority",
-          "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "chamonix-mer-de-glace-via-montenvers",
-        "name": "Mer de Glace via Montenvers",
-        "routeType": "out-and-back",
-        "description": "Mer de Glace via Montenvers descends the signed viewpoint paths around Montenvers for views of the Mer de Glace without entering the glacier.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Montenvers railway station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "chamonix-authority",
-          "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "chamonix-tour-du-mont-blanc-to-les-houches",
-        "name": "Tour du Mont Blanc to Les Houches",
-        "routeType": "point-to-point",
-        "description": "Tour du Mont Blanc to Les Houches uses the valley section of the Tour du Mont Blanc route to Les Houches rather than a high alpine stage.",
-        "difficulty": "Easy",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Chamonix town centre",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "chamonix-authority",
-          "sourceUrl": "https://en.chamonix.com/activities/hiking/hiking-trails",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "chamonix-authority",
@@ -952,14 +276,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "corsica": {
     "destinationKey": "corsica",
     "guide": {
-      "highlights": "Corte gives access to the Restonica and Tavignano valleys, high glacial lakes and central Corsican sections of the GR20. The Corte route set makes those qualities concrete: “Lac de Melo and Lac de Capitello” and “Tavignano Gorge” define different headline days, while “Monte Rotondo” offers another scale of outing. “Lac de Nino” and “Corte to Refuge de la Sega” extend the choice beyond one famous objective. Together, these Corsica walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Coarse granite peaks, slabs and boulder fields rise above pine forest, maquis and clear rock pools; summer heat in the valleys contrasts with exposed, storm-prone high ridges. The published Corte walks move through that structure in distinct ways. “Lac de Melo and Lac de Capitello” and “Tavignano Gorge” are the shortest listed options at about 6 hours; “Monte Rotondo” is the largest commitment at about 10 hours. On Corsica terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days. Access around Corte is route-specific. Starts include Grotelle trailhead in Restonica, Citadel trailhead in Corte and Restonica valley trailhead. A Corsica point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Corte weather, closures and seasonal services against the linked authority. Keep one of the listed Corte alternatives available when the principal route is unsuitable."
+      "highlights": "Corte gives access to the Restonica and Tavignano valleys, high glacial lakes and central Corsican sections of the GR20.",
+      "terrain": "Coarse granite peaks, slabs and boulder fields rise above pine forest, maquis and clear rock pools; summer heat in the valleys contrasts with exposed, storm-prone high ridges.",
+      "expectations": "Trailheads are dispersed and parking pressure is significant in Restonica, while mountain refuges support longer journeys; strong walkers gain the most, though river-valley outings provide worthwhile lower-level days."
     },
     "hero": {
       "imageUrl": "/catalog-media/corsica.jpg",
@@ -977,128 +301,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:ISS023-E-13748%20-%20View%20of%20Corsica%20-%20Massif%20du%20Monte%20Rotondo%20-%20Punta%20Artica%20-%20Lac%20de%20Calacuccia%20-%20Monte%20Cardo%20-%20Corte%20-%20Cima%20San%20Gavino%20-%20Restonica%20valley%20-%20Lombaduccio%20-%20Tavignano%20-%20Pinerole%20-%20Capu%20di%20u%20Facciatu%20-%20Cimatella%20(cropped).jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "corsica-lac-de-melo-and-lac-de-capitello",
-        "name": "Lac de Melo and Lac de Capitello",
-        "routeType": "out-and-back",
-        "description": "Lac de Melo and Lac de Capitello climbs slabs and boulders past Lac de Melo to the higher Lac de Capitello.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Grotelle trailhead in Restonica",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "corsica-authority",
-          "sourceUrl": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "corsica-tavignano-gorge",
-        "name": "Tavignano Gorge",
-        "routeType": "out-and-back",
-        "description": "Tavignano Gorge follows the Tavignano gorge to riverside bridges and swimming pools, with the turnaround chosen by time.",
-        "difficulty": "Moderate",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Citadel trailhead in Corte",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "corsica-authority",
-          "sourceUrl": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "corsica-monte-rotondo",
-        "name": "Monte Rotondo",
-        "routeType": "out-and-back",
-        "description": "Monte Rotondo makes a long high-mountain ascent to Monte Rotondo over rough granite and route-finding terrain.",
-        "difficulty": "Expert",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Restonica valley trailhead",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "corsica-authority",
-          "sourceUrl": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "corsica-lac-de-nino",
-        "name": "Lac de Nino",
-        "routeType": "out-and-back",
-        "description": "Lac de Nino crosses forest and open pozzine grassland to Lac de Nino and the upper Tavignano headwaters.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Col de Vergio",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "corsica-authority",
-          "sourceUrl": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "corsica-corte-to-refuge-de-la-sega",
-        "name": "Corte to Refuge de la Sega",
-        "routeType": "out-and-back",
-        "description": "Corte to Refuge de la Sega continues far up the Tavignano valley from Corte to Refuge de la Sega.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Citadel trailhead in Corte",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "corsica-authority",
-          "sourceUrl": "https://www.pnr.corsica/activites-de-pleine-nature/randonnee/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "corsica-authority",
@@ -1119,14 +322,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "cortina": {
     "destinationKey": "cortina",
     "guide": {
-      "highlights": "Cortina lies among Tofane, Cristallo, Cinque Torri and the Tre Cime landscape, with a dense network of paths and rifugi. The Cortina d’Ampezzo route set makes those qualities concrete: “Tre Cime di Lavaredo Circuit” and “Cinque Torri Circuit” define different headline days, while “Lago di Sorapis” offers another scale of outing. “Croda da Lago Circuit” and “Lagazuoi Open-Air Museum” extend the choice beyond one famous objective. Together, these Dolomites walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Pale dolomite towers rise above scree fans, larch forest and rolling high pastures; ledges, military paths and compact limestone give the area a distinctive vertical architecture. The published Cortina d’Ampezzo walks move through that structure in distinct ways. “Cinque Torri Circuit” is the shortest listed option at about 3 hours; “Croda da Lago Circuit” is the largest commitment at about 7 hours. On Dolomites terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes. Access around Cortina d’Ampezzo is route-specific. Starts include Rifugio Auronzo, Bai de Dones and Passo Tre Croci. A Dolomites point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Cortina d’Ampezzo weather, closures and seasonal services against the linked authority. Keep one of the listed Cortina d’Ampezzo alternatives available when the principal route is unsuitable."
+      "highlights": "Cortina lies among Tofane, Cristallo, Cinque Torri and the Tre Cime landscape, with a dense network of paths and rifugi.",
+      "terrain": "Pale dolomite towers rise above scree fans, larch forest and rolling high pastures; ledges, military paths and compact limestone give the area a distinctive vertical architecture.",
+      "expectations": "Buses and lifts reduce some approaches, yet famous circuits are busy and afternoon storms can make exposed paths uncomfortable; walkers can choose easy lake and meadow outings without committing to protected climbing routes."
     },
     "hero": {
       "imageUrl": "/catalog-media/cortina.jpg",
@@ -1144,118 +347,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cortina%20d'Ampezzo%20-%20view.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "cortina-tre-cime-di-lavaredo-circuit",
-        "name": "Tre Cime di Lavaredo Circuit",
-        "routeType": "loop",
-        "description": "Tre Cime di Lavaredo Circuit circles the Tre Cime beneath their north faces via Lavaredo and Locatelli refuges.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Rifugio Auronzo",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cortina-authority",
-          "sourceUrl": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cortina-cinque-torri-circuit",
-        "name": "Cinque Torri Circuit",
-        "routeType": "loop",
-        "description": "Cinque Torri Circuit links the Cinque Torri rock towers, rifugi and First World War positions on signed paths.",
-        "difficulty": "Easy",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Bai de Dones",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cortina-authority",
-          "sourceUrl": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cortina-lago-di-sorapis",
-        "name": "Lago di Sorapis",
-        "routeType": "out-and-back",
-        "description": "Lago di Sorapis crosses exposed ledges and forest paths to the turquoise Lago di Sorapis.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Passo Tre Croci",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cortina-authority",
-          "sourceUrl": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cortina-croda-da-lago-circuit",
-        "name": "Croda da Lago Circuit",
-        "routeType": "loop",
-        "description": "Croda da Lago Circuit circles Croda da Lago via Lago Federa, high Forcella Ambrizzola and rifugio paths.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Ponte de Ru Curto",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cortina-authority",
-          "sourceUrl": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "cortina-lagazuoi-open-air-museum",
-        "name": "Lagazuoi Open-Air Museum",
-        "routeType": "point-to-point",
-        "description": "Lagazuoi Open-Air Museum climbs through the Lagazuoi wartime tunnel system and descends from the summit station; a headlamp is essential.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Passo Falzarego",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "cortina-authority",
-          "sourceUrl": "https://www.dolomiti.org/en/cortina/activities/summer/trekking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "cortina-authority",
@@ -1276,14 +368,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "durmitor": {
     "destinationKey": "durmitor",
     "guide": {
-      "highlights": "Žabljak sits on a high plateau beside Black Lake, with direct access to Bobotov Kuk, Prutaš and the Tara canyon rim. The Žabljak route set makes those qualities concrete: “Black Lake Circuit” and “Ćurevac Viewpoint” define different headline days, while “Savin Kuk” offers another scale of outing. “Bobotov Kuk” and “Prutaš” extend the choice beyond one famous objective. Together, these Durmitor walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Žabljak.",
-      "terrain": "Compact limestone peaks, glacial cirques and dozens of lakes rise from conifer forest and open pasture; higher trails cross broken karst, scree and exposed rocky saddles. The published Žabljak walks move through that structure in distinct ways. “Black Lake Circuit” and “Ćurevac Viewpoint” are the shortest listed options at about 2 hours; “Bobotov Kuk” is the largest commitment at about 8 hours. On Durmitor terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency. Access around Žabljak is route-specific. Starts include Black Lake national-park entrance, Ćurevac access road trailhead and Savin Kuk ski-area base. A Durmitor point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Žabljak weather, closures and seasonal services against the linked authority. Keep one of the listed Žabljak alternatives available when the principal route is unsuitable."
+      "highlights": "Žabljak sits on a high plateau beside Black Lake, with direct access to Bobotov Kuk, Prutaš and the Tara canyon rim.",
+      "terrain": "Compact limestone peaks, glacial cirques and dozens of lakes rise from conifer forest and open pasture; higher trails cross broken karst, scree and exposed rocky saddles.",
+      "expectations": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency."
     },
     "hero": {
       "imageUrl": "/catalog-media/durmitor.jpg",
@@ -1301,118 +393,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Durmitor%20mountains%2C%20Montenegro.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "durmitor-black-lake-circuit",
-        "name": "Black Lake Circuit",
-        "routeType": "loop",
-        "description": "Black Lake Circuit circles Veliko and Malo Crno jezero on forest paths beneath Međed.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Black Lake national-park entrance",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "durmitor-authority",
-          "sourceUrl": "https://nparkovi.me/parks/durmitor/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "durmitor-curevac-viewpoint",
-        "name": "Ćurevac Viewpoint",
-        "routeType": "out-and-back",
-        "description": "Ćurevac Viewpoint walks a short limestone ridge to the Tara canyon viewpoint.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Ćurevac access road trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "durmitor-authority",
-          "sourceUrl": "https://nparkovi.me/parks/durmitor/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "durmitor-savin-kuk",
-        "name": "Savin Kuk",
-        "routeType": "out-and-back",
-        "description": "Savin Kuk ascends pasture and broken limestone to Savin Kuk without relying on the seasonal chairlift.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Savin Kuk ski-area base",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "durmitor-authority",
-          "sourceUrl": "https://nparkovi.me/parks/durmitor/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "durmitor-bobotov-kuk",
-        "name": "Bobotov Kuk",
-        "routeType": "out-and-back",
-        "description": "Bobotov Kuk crosses exposed saddles and steep rocky ground to Durmitor's highest summit, Bobotov Kuk.",
-        "difficulty": "Expert",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Sedlo pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "durmitor-authority",
-          "sourceUrl": "https://nparkovi.me/parks/durmitor/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "durmitor-prutas",
-        "name": "Prutaš",
-        "routeType": "loop",
-        "description": "Prutaš climbs the layered western slopes of Prutaš and returns through the Škrčka Lakes basin.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Dobri Do trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "durmitor-authority",
-          "sourceUrl": "https://nparkovi.me/parks/durmitor/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "durmitor-authority",
@@ -1433,14 +414,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "fort-william": {
     "destinationKey": "fort-william",
     "guide": {
-      "highlights": "Fort William anchors Ben Nevis, Glen Nevis, Steall Falls and the western end of the West Highland Way beneath Britain's highest mountain. The Fort William route set makes those qualities concrete: “Ben Nevis Mountain Track” and “Càrn Mòr Dearg Arête” define different headline days, while “Cow Hill Circuit” offers another scale of outing. “Steall Falls and Nevis Gorge” and “West Highland Way from Kinlochleven” extend the choice beyond one famous objective. Together, these West Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands. The published Fort William walks move through that structure in distinct ways. “Steall Falls and Nevis Gorge” is the shortest listed option at about 2 hours; “Càrn Mòr Dearg Arête” is the largest commitment at about 10 hours. On West Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience. Access around Fort William is route-specific. Starts include Glen Nevis visitor centre, North Face car park and Fort William town centre. A West Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Fort William weather, closures and seasonal services against the linked authority. Keep one of the listed Fort William alternatives available when the principal route is unsuitable."
+      "highlights": "Fort William anchors Ben Nevis, Glen Nevis, Steall Falls and the western end of the West Highland Way beneath Britain's highest mountain.",
+      "terrain": "Ancient volcanic and metamorphic mountains create corries, broken ridges and steep glens; lower routes pass oak and birch woodland before rough stone paths enter treeless, often wet uplands.",
+      "expectations": "The town has strong transport and equipment services, but summit routes can move from calm valley weather into cloud, wind and cold, and harder ridges demand navigation and scrambling experience."
     },
     "hero": {
       "imageUrl": "/catalog-media/fort-william.jpg",
@@ -1458,123 +439,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben%20Nevis%2C%20Fort%20William%20(250321)%20(9461805777).jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "fort-william-ben-nevis-mountain-track",
-        "name": "Ben Nevis Mountain Track",
-        "routeType": "out-and-back",
-        "description": "Ben Nevis Mountain Track uses the Mountain Track for the sustained ascent of Ben Nevis, where the summit plateau demands navigation in cloud.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Glen Nevis visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "fort-william-authority",
-          "sourceUrl": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "fort-william-carn-mor-dearg-arete",
-        "name": "Càrn Mòr Dearg Arête",
-        "routeType": "loop",
-        "description": "Càrn Mòr Dearg Arête climbs Càrn Mòr Dearg before traversing the exposed boulder arête to Ben Nevis.",
-        "difficulty": "Expert",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "North Face car park",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "fort-william-authority",
-          "sourceUrl": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "fort-william-cow-hill-circuit",
-        "name": "Cow Hill Circuit",
-        "routeType": "loop",
-        "description": "Cow Hill Circuit circles Cow Hill on woodland and open hillside paths directly above town.",
-        "difficulty": "Moderate",
-        "durationHours": 3.5,
-        "durationDays": 1,
-        "trailhead": "Fort William town centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "fort-william-authority",
-          "sourceUrl": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "fort-william-steall-falls-and-nevis-gorge",
-        "name": "Steall Falls and Nevis Gorge",
-        "routeType": "out-and-back",
-        "description": "Steall Falls and Nevis Gorge passes through Nevis Gorge to the meadow viewpoint below Steall Falls.",
-        "difficulty": "Moderate",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Upper Glen Nevis car park",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "fort-william-authority",
-          "sourceUrl": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "fort-william-west-highland-way-from-kinlochleven",
-        "name": "West Highland Way from Kinlochleven",
-        "routeType": "point-to-point",
-        "description": "West Highland Way from Kinlochleven walks the final West Highland Way stage over the Lairig Mòr to Fort William.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Kinlochleven",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "fort-william-authority",
-          "sourceUrl": "https://www.outdoorhighlands.co.uk/fort-william-walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "fort-william-authority",
@@ -1595,14 +460,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "hardanger": {
     "destinationKey": "hardanger",
     "guide": {
-      "highlights": "Odda links the Sørfjord with Trolltunga, the Queen's Trail, Bondhusdalen and glacier-carved valleys around Folgefonna. The Odda route set makes those qualities concrete: “Trolltunga” and “HM Queen Sonja's Panoramic Hiking Trail” define different headline days, while “Bondhusvatnet” offers another scale of outing. “Rossnos” and “Buerbreen Viewpoint” extend the choice beyond one famous objective. Together, these Hardanger walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Odda.",
-      "terrain": "Granite shelves, long rock slabs and high plateaus rise above orchard country and narrow fjords, with waterfalls, glacial lakes and ice visible on several approaches. The published Odda walks move through that structure in distinct ways. “Bondhusvatnet” and “Buerbreen Viewpoint” are the shortest listed options at about 3 hours; “Trolltunga” is the largest commitment at about 10 hours. On Hardanger terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The area offers easy valley walks as well as exceptionally long summit days; trail buses and booked parking help access, but popular objectives require early planning and conservative weather decisions. Access around Odda is route-specific. Starts include P2 Skjeggedal, Røte trailhead above Kinsarvik and Bondhus trailhead at Sundal. A Hardanger point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Odda weather, closures and seasonal services against the linked authority. Keep one of the listed Odda alternatives available when the principal route is unsuitable."
+      "highlights": "Odda links the Sørfjord with Trolltunga, the Queen's Trail, Bondhusdalen and glacier-carved valleys around Folgefonna.",
+      "terrain": "Granite shelves, long rock slabs and high plateaus rise above orchard country and narrow fjords, with waterfalls, glacial lakes and ice visible on several approaches.",
+      "expectations": "The area offers easy valley walks as well as exceptionally long summit days; trail buses and booked parking help access, but popular objectives require early planning and conservative weather decisions."
     },
     "hero": {
       "imageUrl": "/catalog-media/hardanger.jpg",
@@ -1620,118 +485,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Louis%20Gurlitt%2C%20Odda%20ved%20S%C3%B8rfjorden%20i%20Hardanger%20Morgenbelysning%2C%201836%2C%20KMS8224%2C%20Statens%20Museum%20for%20Kunst.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "hardanger-trolltunga",
-        "name": "Trolltunga",
-        "routeType": "out-and-back",
-        "description": "Trolltunga makes the long signed ascent across the Hardangervidda edge to Trolltunga; alternative parking and shuttles change the total distance.",
-        "difficulty": "Hard",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "P2 Skjeggedal",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hardanger-authority",
-          "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hardanger-hm-queen-sonjas-panoramic-hiking-trail",
-        "name": "HM Queen Sonja's Panoramic Hiking Trail",
-        "routeType": "point-to-point",
-        "description": "HM Queen Sonja's Panoramic Hiking Trail traverses the exposed high route to Lofthus with continuous Sørfjord views and a transfer between ends.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Røte trailhead above Kinsarvik",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hardanger-authority",
-          "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hardanger-bondhusvatnet",
-        "name": "Bondhusvatnet",
-        "routeType": "out-and-back",
-        "description": "Bondhusvatnet follows the broad historic ice road beside the Bondhuselva to Bondhusvatnet.",
-        "difficulty": "Easy",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Bondhus trailhead at Sundal",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hardanger-authority",
-          "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hardanger-rossnos",
-        "name": "Rossnos",
-        "routeType": "out-and-back",
-        "description": "Rossnos climbs steeply above Odda to the Rossnos viewpoint over Sørfjorden and Sandvinvatnet.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Freim above Odda",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hardanger-authority",
-          "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hardanger-buerbreen-viewpoint",
-        "name": "Buerbreen Viewpoint",
-        "routeType": "out-and-back",
-        "description": "Buerbreen Viewpoint follows the marked valley path to the safe public viewpoint below Buerbreen without entering glacier terrain.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Buer farm trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hardanger-authority",
-          "sourceUrl": "https://hardangerfjord.com/en/ullensvang/artikler/hiking-in-hardanger",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "hardanger-authority",
@@ -1752,14 +506,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "hemavan": {
     "destinationKey": "hemavan",
     "guide": {
-      "highlights": "Hemavan is the southern Kungsleden terminus and a direct gateway to Viterskalet, Syterskalet and the Vindelfjällen nature reserve. The Hemavan route set makes those qualities concrete: “Kungsleden to Viterskalet” and “Kobåset” define different headline days, while “Drottningleden” offers another scale of outing. “Syterskalet” and “Hemavan to Ammarnäs” extend the choice beyond one famous objective. Together, these Vindelfjällen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Hemavan.",
-      "terrain": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt. The published Hemavan walks move through that structure in distinct ways. “Drottningleden” is the shortest listed option at about 5 hours; “Hemavan to Ammarnäs” is the largest commitment at about 40 hours across 5 days. On Vindelfjällen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement. Access around Hemavan is route-specific. Starts include Hemavan naturum, Hemavan gondola top station and Laisaliden. A Vindelfjällen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Hemavan weather, closures and seasonal services against the linked authority. Keep one of the listed Hemavan alternatives available when the principal route is unsuitable."
+      "highlights": "Hemavan is the southern Kungsleden terminus and a direct gateway to Viterskalet, Syterskalet and the Vindelfjällen nature reserve.",
+      "terrain": "Rounded fells surround a striking U-shaped valley, with birch woodland, wetlands, open heath and higher quartzite and schist ridges; gradients are generally progressive rather than abrupt.",
+      "expectations": "The trail starts in the village and a lift can shorten some approaches, while STF huts support multi-day travel; broad terrain is welcoming for newer trekkers but still remote, exposed and dependent on sound river and weather judgement."
     },
     "hero": {
       "imageUrl": "/catalog-media/hemavan.jpg",
@@ -1777,118 +531,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mountain%20wall%2C%20Kobaset%2C%20Hemavan.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "hemavan-kungsleden-to-viterskalet",
-        "name": "Kungsleden to Viterskalet",
-        "routeType": "out-and-back",
-        "description": "Kungsleden to Viterskalet follows the southern Kungsleden through birch forest and into the U-shaped Viterskalet valley.",
-        "difficulty": "Moderate",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Hemavan naturum",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hemavan-authority",
-          "sourceUrl": "https://hemavan.nu/en/see-and-do-summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hemavan-kobaset",
-        "name": "Kobåset",
-        "routeType": "out-and-back",
-        "description": "Kobåset climbs into the steep-sided Kobåset hanging valley below Norra Storfjället.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Hemavan gondola top station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hemavan-authority",
-          "sourceUrl": "https://hemavan.nu/en/see-and-do-summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hemavan-drottningleden",
-        "name": "Drottningleden",
-        "routeType": "point-to-point",
-        "description": "Drottningleden traverses the signed Drottningleden across open fell to Hemavan and requires transport to one end.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Laisaliden",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hemavan-authority",
-          "sourceUrl": "https://hemavan.nu/en/see-and-do-summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hemavan-syterskalet",
-        "name": "Syterskalet",
-        "routeType": "point-to-point",
-        "description": "Syterskalet crosses the full Syterskalet valley between Viterskalet and Syter huts as a remote hut-to-hut stage.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Viterskalet mountain hut",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hemavan-authority",
-          "sourceUrl": "https://hemavan.nu/en/see-and-do-summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "hemavan-hemavan-to-ammarnas",
-        "name": "Hemavan to Ammarnäs",
-        "routeType": "point-to-point",
-        "description": "Hemavan to Ammarnäs covers the five-day southern Kungsleden section through Vindelfjällen to Ammarnäs with four planned overnight stops.",
-        "difficulty": "Hard",
-        "durationHours": 40,
-        "durationDays": 5,
-        "trailhead": "Hemavan naturum",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "hemavan-authority",
-          "sourceUrl": "https://hemavan.nu/en/see-and-do-summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "hemavan-authority",
@@ -1909,14 +552,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "innsbruck": {
     "destinationKey": "innsbruck",
     "guide": {
-      "highlights": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base. The Innsbruck route set makes those qualities concrete: “Goetheweg on the Nordkette” and “Zirbenweg” define different headline days, while “Patscherkofel Summit” offers another scale of outing. “Hafelekar to Pfeishütte” and “Nockspitze” extend the choice beyond one famous objective. Together, these Tyrol walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Innsbruck.",
-      "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces. The published Innsbruck walks move through that structure in distinct ways. “Zirbenweg” is the shortest listed option at about 2.5 hours; “Goetheweg on the Nordkette”, “Hafelekar to Pfeishütte” and “Nockspitze” share the largest listed commitment at about 5 hours. On Tyrol terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical. Access around Innsbruck is route-specific. Starts include Hafelekar cable-car station, Patscherkofel upper station and Axamer Lizum. A Tyrol point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Innsbruck weather, closures and seasonal services against the linked authority. Keep one of the listed Innsbruck alternatives available when the principal route is unsuitable."
+      "highlights": "Innsbruck places the Nordkette, Patscherkofel and Stubai approaches around a fully connected Alpine city, allowing mountain days without changing base.",
+      "terrain": "Bright limestone crags north of the Inn contrast with rounded crystalline terrain to the south; forest roads, dwarf-pine belts, balcony paths and rocky summit ridges cover a wide range of surfaces.",
+      "expectations": "Cable cars and public transport create flexible one-way hikes, although operating hours and rapid altitude gain need planning; the hub suits mixed groups because urban recovery days and serious ridges are equally practical."
     },
     "hero": {
       "imageUrl": "/catalog-media/innsbruck.jpg",
@@ -1934,143 +577,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Innsbruck%20Nordkette.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "innsbruck-goetheweg-on-the-nordkette",
-        "name": "Goetheweg on the Nordkette",
-        "routeType": "point-to-point",
-        "description": "Goetheweg on the Nordkette traverses the exposed Nordkette balcony to Pfeishütte on narrow limestone paths.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Hafelekar cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "distanceKm": 5.2,
-        "ascentM": 769,
-        "descentM": 764,
-        "provenance": {
-          "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-          "verifiedAt": "2026-07-26",
-          "confidence": "high"
-        }
-      },
-      {
-        "key": "innsbruck-zirbenweg",
-        "name": "Zirbenweg",
-        "routeType": "point-to-point",
-        "description": "Zirbenweg follows the high pine balcony to Tulfeinalm and the Glungezer lift system.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
-        "durationDays": 1,
-        "trailhead": "Patscherkofel upper station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "distanceKm": 7,
-        "ascentM": 200,
-        "descentM": 100,
-        "provenance": {
-          "sourceKey": "innsbruck-zirbenweg-route",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
-          "verifiedAt": "2026-07-26",
-          "confidence": "high"
-        }
-      },
-      {
-        "key": "innsbruck-patscherkofel-summit",
-        "name": "Patscherkofel Summit",
-        "routeType": "out-and-back",
-        "description": "Patscherkofel Summit climbs the broad signed path above the tree line to the Patscherkofel summit.",
-        "difficulty": "Moderate",
-        "durationHours": 2.25,
-        "durationDays": 1,
-        "trailhead": "Patscherkofel upper station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "distanceKm": 6,
-        "ascentM": 280,
-        "descentM": 280,
-        "provenance": {
-          "sourceKey": "innsbruck-patscherkofel-summit-route",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
-          "verifiedAt": "2026-07-26",
-          "confidence": "high"
-        }
-      },
-      {
-        "key": "innsbruck-hafelekar-to-pfeishutte",
-        "name": "Hafelekar to Pfeishütte",
-        "routeType": "point-to-point",
-        "description": "Hafelekar to Pfeishütte uses the Goetheweg and Mandlscharte approach to reach Pfeishütte, with a separate valley descent or return needed.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Hafelekar cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "distanceKm": 5.2,
-        "ascentM": 769,
-        "descentM": 764,
-        "provenance": {
-          "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-          "verifiedAt": "2026-07-26",
-          "confidence": "high"
-        }
-      },
-      {
-        "key": "innsbruck-nockspitze",
-        "name": "Nockspitze",
-        "routeType": "out-and-back",
-        "description": "Nockspitze ascends the steep south side of Nockspitze for a high viewpoint above the Inn valley.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Axamer Lizum",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "distanceKm": 9.4,
-        "ascentM": 886,
-        "descentM": 886,
-        "provenance": {
-          "sourceKey": "innsbruck-nockspitze-route",
-          "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
-          "verifiedAt": "2026-07-26",
-          "confidence": "high"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "innsbruck-authority",
@@ -2085,50 +592,20 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       },
       {
-        "sourceKey": "innsbruck-goetheweg-on-the-nordkette-route",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-        "verifiedAt": "2026-07-26",
-        "confidence": "high"
-      },
-      {
-        "sourceKey": "innsbruck-zirbenweg-route",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/the-zirbenweg-trail.html",
-        "verifiedAt": "2026-07-26",
-        "confidence": "high"
-      },
-      {
-        "sourceKey": "innsbruck-patscherkofel-summit-route",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/patscherkofel-summit.html",
-        "verifiedAt": "2026-07-26",
-        "confidence": "high"
-      },
-      {
-        "sourceKey": "innsbruck-hafelekar-to-pfeishutte-route",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/along-the-goetheweg-trail-to-thepfeishuette-mountain-hut.html",
-        "verifiedAt": "2026-07-26",
-        "confidence": "high"
-      },
-      {
-        "sourceKey": "innsbruck-nockspitze-route",
-        "sourceUrl": "https://www.innsbruck.info/en/hiking/m/axamer-lizum-to-halsl-and-then-on-to-saile-nockspitze.html",
-        "verifiedAt": "2026-07-26",
-        "confidence": "high"
-      },
-      {
         "sourceKey": "legacy-planning-model",
         "sourceUrl": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
         "verifiedAt": "2026-07-25",
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "jotunheimen": {
     "destinationKey": "jotunheimen",
     "guide": {
-      "highlights": "Gjendesheim sits beside green Gjende and opens directly onto Besseggen, Knutshøe and the eastern Jotunheimen hut network. The Gjendesheim route set makes those qualities concrete: “Besseggen Ridge” and “Knutshøe Ridge” define different headline days, while “Gjendetunga” offers another scale of outing. “Glittertind from Glitterheim” and “Gjendesheim to Memurubu” extend the choice beyond one famous objective. Together, these Jotunheimen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Gjendesheim.",
-      "terrain": "Broad glacial valleys are enclosed by dark, blocky high peaks; trails alternate between lake shores, polished slabs, talus and airy ridge crests above sparse alpine vegetation. The published Gjendesheim walks move through that structure in distinct ways. “Knutshøe Ridge” is the shortest listed option at about 5 hours; “Glittertind from Glitterheim” is the largest commitment at about 9 hours. On Jotunheimen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics. Access around Gjendesheim is route-specific. Starts include Memurubu boat landing, Vargebakken and Gjendebu. A Jotunheimen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Gjendesheim weather, closures and seasonal services against the linked authority. Keep one of the listed Gjendesheim alternatives available when the principal route is unsuitable."
+      "highlights": "Gjendesheim sits beside green Gjende and opens directly onto Besseggen, Knutshøe and the eastern Jotunheimen hut network.",
+      "terrain": "Broad glacial valleys are enclosed by dark, blocky high peaks; trails alternate between lake shores, polished slabs, talus and airy ridge crests above sparse alpine vegetation.",
+      "expectations": "The lodge and seasonal boat simplify point-to-point days, while snow patches, strong wind and long distances make route choice and turnaround discipline important even on marked classics."
     },
     "hero": {
       "imageUrl": "/catalog-media/jotunheimen.jpg",
@@ -2146,113 +623,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gjendesheim%20seen%20from%20Besseggen.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "jotunheimen-besseggen-ridge",
-        "name": "Besseggen Ridge",
-        "routeType": "point-to-point",
-        "description": "Besseggen Ridge crosses the airy Besseggen ridge above Gjende and Bessvatnet before descending to Gjendesheim.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Memurubu boat landing",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "jotunheimen-authority",
-          "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "jotunheimen-knutshoe-ridge",
-        "name": "Knutshøe Ridge",
-        "routeType": "loop",
-        "description": "Knutshøe Ridge circles the narrow Knutshøe ridge with short scrambling sections and steep bypasses.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Vargebakken",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "jotunheimen-authority",
-          "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "jotunheimen-gjendetunga",
-        "name": "Gjendetunga",
-        "routeType": "out-and-back",
-        "description": "Gjendetunga climbs from the west end of Gjende to the Gjendetunga viewpoint above the lake.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Gjendebu",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "jotunheimen-authority",
-          "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "jotunheimen-glittertind-from-glitterheim",
-        "name": "Glittertind from Glitterheim",
-        "routeType": "out-and-back",
-        "description": "Glittertind from Glitterheim makes the long ascent from Glitterheim over rocky high ground to Glittertind.",
-        "difficulty": "Hard",
-        "durationHours": 9,
-        "durationDays": 1,
-        "trailhead": "Glitterheim mountain lodge",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "jotunheimen-authority",
-          "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "jotunheimen-gjendesheim-to-memurubu",
-        "name": "Gjendesheim to Memurubu",
-        "routeType": "point-to-point",
-        "description": "Gjendesheim to Memurubu follows the lower marked route beside Gjende to Memurubu as an alternative to the Besseggen ridge.",
-        "difficulty": "Moderate",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Gjendesheim",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "jotunheimen-authority",
-          "sourceUrl": "https://jotunheimen.com/activities/summer/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "jotunheimen-authority",
@@ -2273,14 +644,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "kranjska-gora": {
     "destinationKey": "kranjska-gora",
     "guide": {
-      "highlights": "Kranjska Gora connects the Sava valley, Vršič Pass, Planica and the northern Julian Alps within a compact Slovenian base. The Kranjska Gora route set makes those qualities concrete: “Slemenova Špica” and “Planica to Tamar Valley” define different headline days, while “Martuljek Waterfalls” offers another scale of outing. “Mala Mojstrovka” and “Vršič to Prisojnik Viewpoint” extend the choice beyond one famous objective. Together, these Julian Alps walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "White limestone pinnacles and scree rise above spruce forest, clear rivers and glacial valleys; paths range from valley tracks to steep secured sections and exposed summit rubble. The published Kranjska Gora walks move through that structure in distinct ways. “Planica to Tamar Valley” and “Vršič to Prisojnik Viewpoint” are the shortest listed options at about 3 hours; “Slemenova Špica”, “Martuljek Waterfalls” and “Mala Mojstrovka” share the largest listed commitment at about 4 hours. On Julian Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Regular buses and short transfers reach several starts, but the hardest peaks are not ordinary hiking objectives; visitors who separate signed walks from via ferrata and alpine climbing will find strong variety at every level. Access around Kranjska Gora is route-specific. Starts include Vršič Pass, Planica Nordic Centre and Gozd Martuljek. A Julian Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Kranjska Gora weather, closures and seasonal services against the linked authority. Keep one of the listed Kranjska Gora alternatives available when the principal route is unsuitable."
+      "highlights": "Kranjska Gora connects the Sava valley, Vršič Pass, Planica and the northern Julian Alps within a compact Slovenian base.",
+      "terrain": "White limestone pinnacles and scree rise above spruce forest, clear rivers and glacial valleys; paths range from valley tracks to steep secured sections and exposed summit rubble.",
+      "expectations": "Regular buses and short transfers reach several starts, but the hardest peaks are not ordinary hiking objectives; visitors who separate signed walks from via ferrata and alpine climbing will find strong variety at every level."
     },
     "hero": {
       "imageUrl": "/catalog-media/kranjska-gora.jpg",
@@ -2298,118 +669,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kranjska%20Gora%20panorama2.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "kranjska-gora-slemenova-spica",
-        "name": "Slemenova Špica",
-        "routeType": "out-and-back",
-        "description": "Slemenova Špica crosses larch-dotted slopes to the panoramic Slemenova Špica viewpoint.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Vršič Pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "kranjska-gora-authority",
-          "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "kranjska-gora-planica-to-tamar-valley",
-        "name": "Planica to Tamar Valley",
-        "routeType": "out-and-back",
-        "description": "Planica to Tamar Valley follows the broad glacial valley track to the Tamar mountain hut.",
-        "difficulty": "Easy",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Planica Nordic Centre",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "kranjska-gora-authority",
-          "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "kranjska-gora-martuljek-waterfalls",
-        "name": "Martuljek Waterfalls",
-        "routeType": "out-and-back",
-        "description": "Martuljek Waterfalls climbs forest paths to viewpoints for the lower and upper Martuljek waterfalls.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Gozd Martuljek",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "kranjska-gora-authority",
-          "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "kranjska-gora-mala-mojstrovka",
-        "name": "Mala Mojstrovka",
-        "routeType": "out-and-back",
-        "description": "Mala Mojstrovka ascends steep scree and exposed rocky ground to Mala Mojstrovka; secured variants are not ordinary hiking routes.",
-        "difficulty": "Hard",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Vršič Pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "kranjska-gora-authority",
-          "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "kranjska-gora-vrsic-to-prisojnik-viewpoint",
-        "name": "Vršič to Prisojnik Viewpoint",
-        "routeType": "out-and-back",
-        "description": "Vršič to Prisojnik Viewpoint uses the signed path toward the Prisojnik front for a viewpoint without continuing onto the protected summit routes.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Vršič Pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "kranjska-gora-authority",
-          "sourceUrl": "https://kranjska-gora.si/en/activities/category/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "kranjska-gora-authority",
@@ -2430,14 +690,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "landmannalaugar": {
     "destinationKey": "landmannalaugar",
     "guide": {
-      "highlights": "Landmannalaugar is the Laugavegur's northern trailhead and a rare meeting of rhyolite ridges, obsidian lava, geothermal ground and hot springs. The Landmannalaugar route set makes those qualities concrete: “Laugahraun Loop” and “Brennisteinsalda” define different headline days, while “Bláhnúkur” offers another scale of outing. “Suðurnámur” and “Laugavegur to Hrafntinnusker” extend the choice beyond one famous objective. Together, these Fjallabak Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Landmannalaugar.",
-      "terrain": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly. The published Landmannalaugar walks move through that structure in distinct ways. “Laugahraun Loop” is the shortest listed option at about 2 hours; “Laugavegur to Hrafntinnusker” is the largest commitment at about 7 hours. On Fjallabak Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures. Access around Landmannalaugar is route-specific. Every published Landmannalaugar route starts from Landmannalaugar hut. A Fjallabak Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Landmannalaugar weather, closures and seasonal services against the linked authority. Keep one of the listed Landmannalaugar alternatives available when the principal route is unsuitable."
+      "highlights": "Landmannalaugar is the Laugavegur's northern trailhead and a rare meeting of rhyolite ridges, obsidian lava, geothermal ground and hot springs.",
+      "terrain": "Multicoloured volcanic slopes alternate with black lava, sandy flats and moss-lined gullies; trails are largely treeless and the soft mineral soil shows erosion clearly.",
+      "expectations": "The hut and seasonal buses make day walks possible without a private vehicle, but highland roads, river crossings and exposed weather complicate access; even short loops require windproof clothing and respect for closures."
     },
     "hero": {
       "imageUrl": "/catalog-media/landmannalaugar.jpg",
@@ -2455,113 +715,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Landmannalaugar.jpeg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "landmannalaugar-laugahraun-loop",
-        "name": "Laugahraun Loop",
-        "routeType": "loop",
-        "description": "Laugahraun Loop circles the Laugahraun lava field through Grænagil and returns beside the geothermal area.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Landmannalaugar hut",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "landmannalaugar-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "landmannalaugar-brennisteinsalda",
-        "name": "Brennisteinsalda",
-        "routeType": "loop",
-        "description": "Brennisteinsalda climbs the sulphur-coloured Brennisteinsalda ridge and returns through lava and hot-spring valleys.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Landmannalaugar hut",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "landmannalaugar-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "landmannalaugar-blahnukur",
-        "name": "Bláhnúkur",
-        "routeType": "loop",
-        "description": "Bláhnúkur makes the steep ascent of dark Bláhnúkur before descending into Grænagil.",
-        "difficulty": "Hard",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Landmannalaugar hut",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "landmannalaugar-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "landmannalaugar-sudurnamur",
-        "name": "Suðurnámur",
-        "routeType": "loop",
-        "description": "Suðurnámur crosses the long Suðurnámur ridge for broad views of Fjallabak's rhyolite mountains.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Landmannalaugar hut",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "landmannalaugar-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "landmannalaugar-laugavegur-to-hrafntinnusker",
-        "name": "Laugavegur to Hrafntinnusker",
-        "routeType": "point-to-point",
-        "description": "Laugavegur to Hrafntinnusker walks the first Laugavegur stage across exposed volcanic uplands to Hrafntinnusker hut.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Landmannalaugar hut",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "landmannalaugar-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/landmannalaugar",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "landmannalaugar-authority",
@@ -2582,14 +736,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "lofoten": {
     "destinationKey": "lofoten",
     "guide": {
-      "highlights": "Svolvær gives access to short, steep island summits where fishing villages, white beaches and open Norwegian Sea appear in the same view. The Svolvær route set makes those qualities concrete: “Reinebringen” and “Ryten and Kvalvika Beach” define different headline days, while “Offersøykammen” offers another scale of outing. “Festvågtind” and “Tjeldbergtinden” extend the choice beyond one famous objective. Together, these Lofoten walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Svolvær.",
-      "terrain": "Jagged granite rises almost from sea level; paths cross bog, heather and loose erosion-prone soil before reaching narrow rocky crests, with little height needed for dramatic relief. The published Svolvær walks move through that structure in distinct ways. “Reinebringen” is the shortest listed option at about 1.5 hours; “Ryten and Kvalvika Beach” is the largest commitment at about 6 hours. On Lofoten terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Many walks are short in kilometres but sustained in gradient, parking is constrained at famous trailheads, and wet ground or strong coastal wind can transform an otherwise modest outing. Access around Svolvær is route-specific. Starts include Reinebringen stair trailhead, Innersand trailhead near Fredvang and Offersøya roadside trailhead. A Lofoten point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Svolvær weather, closures and seasonal services against the linked authority. Keep one of the listed Svolvær alternatives available when the principal route is unsuitable."
+      "highlights": "Svolvær gives access to short, steep island summits where fishing villages, white beaches and open Norwegian Sea appear in the same view.",
+      "terrain": "Jagged granite rises almost from sea level; paths cross bog, heather and loose erosion-prone soil before reaching narrow rocky crests, with little height needed for dramatic relief.",
+      "expectations": "Many walks are short in kilometres but sustained in gradient, parking is constrained at famous trailheads, and wet ground or strong coastal wind can transform an otherwise modest outing."
     },
     "hero": {
       "imageUrl": "/catalog-media/lofoten.jpg",
@@ -2607,118 +761,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sakris%C3%B8y%20village%20and%20mountains%20Lofoten%20Norway.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "lofoten-reinebringen",
-        "name": "Reinebringen",
-        "routeType": "out-and-back",
-        "description": "Reinebringen climbs the stone staircase above Reine to the exposed ridge viewpoint.",
-        "difficulty": "Hard",
-        "durationHours": 1.5,
-        "durationDays": 1,
-        "trailhead": "Reinebringen stair trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "lofoten-authority",
-          "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "lofoten-ryten-and-kvalvika-beach",
-        "name": "Ryten and Kvalvika Beach",
-        "routeType": "loop",
-        "description": "Ryten and Kvalvika Beach combines the Ryten summit with a descent toward Kvalvika Beach over boggy and rocky ground.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Innersand trailhead near Fredvang",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "lofoten-authority",
-          "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "lofoten-offersoykammen",
-        "name": "Offersøykammen",
-        "routeType": "out-and-back",
-        "description": "Offersøykammen climbs a compact but steep ridge for views over Nappstraumen and the western islands.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Offersøya roadside trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "lofoten-authority",
-          "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "lofoten-festvagtind",
-        "name": "Festvågtind",
-        "routeType": "out-and-back",
-        "description": "Festvågtind ascends steep slabs and rough ground above Henningsvær to Festvågtind.",
-        "difficulty": "Hard",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Festvåg trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "lofoten-authority",
-          "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "lofoten-tjeldbergtinden",
-        "name": "Tjeldbergtinden",
-        "routeType": "loop",
-        "description": "Tjeldbergtinden crosses heath and low rocky tops between Tjeldbergtinden's twin viewpoints.",
-        "difficulty": "Moderate",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Osan trailhead outside Svolvær",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "lofoten-authority",
-          "sourceUrl": "https://visitlofoten.com/en/topic/hiking-in-lofoten-6/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "lofoten-authority",
@@ -2739,14 +782,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "madeira": {
     "destinationKey": "madeira",
     "guide": {
-      "highlights": "Curral das Freiras sits inside Madeira's central volcanic mountains, near Pico Ruivo, Pico do Areeiro and an island-wide network of levadas. The Curral das Freiras route set makes those qualities concrete: “PR1 Pico do Areeiro to Pico Ruivo” and “PR1.2 Achada do Teixeira to Pico Ruivo” define different headline days, while “PR9 Caldeirão Verde” offers another scale of outing. “PR8 Ponta de São Lourenço” and “PR6 Levada das 25 Fontes” extend the choice beyond one famous objective. Together, these Madeira walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Knife-edged basalt ridges, deeply incised valleys and laurel forest create abrupt changes in vegetation and exposure; engineered water channels, tunnels and stone steps define many trail surfaces. The published Curral das Freiras walks move through that structure in distinct ways. “PR1.2 Achada do Teixeira to Pico Ruivo” and “PR6 Levada das 25 Fontes” are the shortest listed options at about 3 hours; “PR1 Pico do Areeiro to Pico Ruivo” is the largest commitment at about 7 hours. On Madeira terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Routes can be walked year-round in principle but cloud, wind, rain and official closures vary by elevation; transfers are often needed for point-to-point trails and exposed levada edges will not suit every walker. Access around Curral das Freiras is route-specific. Starts include Pico do Areeiro (PR1 east trailhead), Achada do Teixeira and Queimadas Forest Park. A Madeira point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Curral das Freiras weather, closures and seasonal services against the linked authority. Keep one of the listed Curral das Freiras alternatives available when the principal route is unsuitable."
+      "highlights": "Curral das Freiras sits inside Madeira's central volcanic mountains, near Pico Ruivo, Pico do Areeiro and an island-wide network of levadas.",
+      "terrain": "Knife-edged basalt ridges, deeply incised valleys and laurel forest create abrupt changes in vegetation and exposure; engineered water channels, tunnels and stone steps define many trail surfaces.",
+      "expectations": "Routes can be walked year-round in principle but cloud, wind, rain and official closures vary by elevation; transfers are often needed for point-to-point trails and exposed levada edges will not suit every walker."
     },
     "hero": {
       "imageUrl": "/catalog-media/madeira.jpg",
@@ -2764,133 +807,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pico%20Ruivo%20-%20Ilha%20da%20Madeira%20-%20Portugal%20(52207068746).jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "madeira-pr1-pico-do-areeiro-to-pico-ruivo",
-        "name": "PR1 Pico do Areeiro to Pico Ruivo",
-        "routeType": "point-to-point",
-        "description": "PR1 Pico do Areeiro to Pico Ruivo traverses tunnels, stairways and exposed central-massif ridges to Pico Ruivo and Achada do Teixeira.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Pico do Areeiro (PR1 east trailhead)",
-        "recommendedMonths": [
-          3,
-          4,
-          5,
-          6,
-          9,
-          10,
-          11
-        ],
-        "provenance": {
-          "sourceKey": "madeira-authority",
-          "sourceUrl": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "madeira-pr12-achada-do-teixeira-to-pico-ruivo",
-        "name": "PR1.2 Achada do Teixeira to Pico Ruivo",
-        "routeType": "out-and-back",
-        "description": "PR1.2 Achada do Teixeira to Pico Ruivo uses the shortest official walking approach to Pico Ruivo, still gaining an exposed high summit.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Achada do Teixeira",
-        "recommendedMonths": [
-          3,
-          4,
-          5,
-          6,
-          9,
-          10,
-          11
-        ],
-        "provenance": {
-          "sourceKey": "madeira-authority",
-          "sourceUrl": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "madeira-pr9-caldeirao-verde",
-        "name": "PR9 Caldeirão Verde",
-        "routeType": "out-and-back",
-        "description": "PR9 Caldeirão Verde follows the Caldeirão Verde levada through laurel forest and several dark tunnels.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Queimadas Forest Park",
-        "recommendedMonths": [
-          3,
-          4,
-          5,
-          6,
-          9,
-          10,
-          11
-        ],
-        "provenance": {
-          "sourceKey": "madeira-authority",
-          "sourceUrl": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "madeira-pr8-ponta-de-sao-lourenco",
-        "name": "PR8 Ponta de São Lourenço",
-        "routeType": "out-and-back",
-        "description": "PR8 Ponta de São Lourenço crosses the dry, windy São Lourenço peninsula to Casa do Sardinha and the final viewpoint.",
-        "difficulty": "Moderate",
-        "durationHours": 3.5,
-        "durationDays": 1,
-        "trailhead": "Baía d'Abra",
-        "recommendedMonths": [
-          3,
-          4,
-          5,
-          6,
-          9,
-          10,
-          11
-        ],
-        "provenance": {
-          "sourceKey": "madeira-authority",
-          "sourceUrl": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "madeira-pr6-levada-das-25-fontes",
-        "name": "PR6 Levada das 25 Fontes",
-        "routeType": "loop",
-        "description": "PR6 Levada das 25 Fontes links the signed levada paths to Risco waterfall and the 25 Fontes pool.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Rabaçal",
-        "recommendedMonths": [
-          3,
-          4,
-          5,
-          6,
-          9,
-          10,
-          11
-        ],
-        "provenance": {
-          "sourceKey": "madeira-authority",
-          "sourceUrl": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "madeira-authority",
@@ -2911,14 +828,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "nikkaluokta": {
     "destinationKey": "nikkaluokta",
     "guide": {
-      "highlights": "Nikkaluokta is the road end for the approach to Kebnekaise mountain station, Tarfala valley and the western Kungsleden network. The Nikkaluokta route set makes those qualities concrete: “Nikkaluokta to Kebnekaise Mountain Station” and “Kebnekaise Western Route” define different headline days, while “Tarfala Valley” offers another scale of outing. “Vistas Valley” and “Kebnekaise Mountain Station to Singi” extend the choice beyond one famous objective. Together, these Kebnekaise massif walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine. The published Nikkaluokta walks move through that structure in distinct ways. “Nikkaluokta to Kebnekaise Mountain Station” and “Tarfala Valley” are the shortest listed options at about 7 hours; “Kebnekaise Western Route” is the largest commitment at about 14 hours. On Kebnekaise massif terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel. Access around Nikkaluokta is route-specific. Starts include Nikkaluokta mountain centre and Kebnekaise mountain station. A Kebnekaise massif point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Nikkaluokta weather, closures and seasonal services against the linked authority. Keep one of the listed Nikkaluokta alternatives available when the principal route is unsuitable."
+      "highlights": "Nikkaluokta is the road end for the approach to Kebnekaise mountain station, Tarfala valley and the western Kungsleden network.",
+      "terrain": "Mountain birch and wetlands give way to wide glacial valleys, moraines and the dark, high Kebnekaise massif; most journeys begin with a long, gentle approach before becoming rocky and alpine.",
+      "expectations": "A seasonal bus and boat can simplify access, but distances are large and the summit is a serious full day with rapidly changing conditions; the area best suits walkers ready for hut-based or self-supported travel."
     },
     "hero": {
       "imageUrl": "/catalog-media/nikkaluokta.jpg",
@@ -2936,113 +853,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kebnekaise.JPEG",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "nikkaluokta-nikkaluokta-to-kebnekaise-mountain-station",
-        "name": "Nikkaluokta to Kebnekaise Mountain Station",
-        "routeType": "point-to-point",
-        "description": "Nikkaluokta to Kebnekaise Mountain Station follows the Dag Hammarskjöld trail up Láddjuvággi to Kebnekaise mountain station; the seasonal boat shortens it.",
-        "difficulty": "Moderate",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Nikkaluokta mountain centre",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "nikkaluokta-authority",
-          "sourceUrl": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "nikkaluokta-kebnekaise-western-route",
-        "name": "Kebnekaise Western Route",
-        "routeType": "out-and-back",
-        "description": "Kebnekaise Western Route makes the very long Western Route ascent over Vierranvárri to Sweden's highest summit area.",
-        "difficulty": "Expert",
-        "durationHours": 14,
-        "durationDays": 1,
-        "trailhead": "Kebnekaise mountain station",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "nikkaluokta-authority",
-          "sourceUrl": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "nikkaluokta-tarfala-valley",
-        "name": "Tarfala Valley",
-        "routeType": "out-and-back",
-        "description": "Tarfala Valley follows the glacial valley to Tarfala research station and mountain hut.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Kebnekaise mountain station",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "nikkaluokta-authority",
-          "sourceUrl": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "nikkaluokta-vistas-valley",
-        "name": "Vistas Valley",
-        "routeType": "point-to-point",
-        "description": "Vistas Valley travels east through broad Vistasvagge to Vistas mountain hut as a remote hut stage.",
-        "difficulty": "Hard",
-        "durationHours": 9,
-        "durationDays": 1,
-        "trailhead": "Nikkaluokta mountain centre",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "nikkaluokta-authority",
-          "sourceUrl": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "nikkaluokta-kebnekaise-mountain-station-to-singi",
-        "name": "Kebnekaise Mountain Station to Singi",
-        "routeType": "point-to-point",
-        "description": "Kebnekaise Mountain Station to Singi crosses the mountain pass into the Kungsleden corridor at Singi mountain hut.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Kebnekaise mountain station",
-        "recommendedMonths": [
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "nikkaluokta-authority",
-          "sourceUrl": "https://nikkaluokta.com/en/what-to-do/summer-activities/mountain-hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "nikkaluokta-authority",
@@ -3063,14 +874,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "picos": {
     "destinationKey": "picos",
     "guide": {
-      "highlights": "Potes opens the eastern and central Picos de Europa, including Fuente Dé, the Cares gorge and routes toward high limestone refuges. The Potes route set makes those qualities concrete: “Ruta del Cares” and “Fuente Dé to Áliva” define different headline days, while “Horcados Rojos” offers another scale of outing. “Pico Jano” and “Collado Jermoso” extend the choice beyond one famous objective. Together, these Picos de Europa walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land. The published Potes walks move through that structure in distinct ways. “Fuente Dé to Áliva” and “Pico Jano” are the shortest listed options at about 4 hours; “Collado Jermoso” is the largest commitment at about 10 hours. On Picos de Europa terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative. Access around Potes is route-specific. Starts include Poncebos, Fuente Dé upper cable-car station and Dobarganes. A Picos de Europa point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Potes weather, closures and seasonal services against the linked authority. Keep one of the listed Potes alternatives available when the principal route is unsuitable."
+      "highlights": "Potes opens the eastern and central Picos de Europa, including Fuente Dé, the Cares gorge and routes toward high limestone refuges.",
+      "terrain": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land.",
+      "expectations": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative."
     },
     "hero": {
       "imageUrl": "/catalog-media/picos.jpg",
@@ -3088,128 +899,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Picos%20de%20europa.JPG",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "picos-ruta-del-cares",
-        "name": "Ruta del Cares",
-        "routeType": "out-and-back",
-        "description": "Ruta del Cares follows the engineered Cares gorge path to Caín and returns above steep unguarded drops.",
-        "difficulty": "Moderate",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Poncebos",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "picos-authority",
-          "sourceUrl": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "picos-fuente-de-to-aliva",
-        "name": "Fuente Dé to Áliva",
-        "routeType": "point-to-point",
-        "description": "Fuente Dé to Áliva descends broad tracks through the Áliva pastures toward Espinama.",
-        "difficulty": "Easy",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Fuente Dé upper cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "picos-authority",
-          "sourceUrl": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "picos-horcados-rojos",
-        "name": "Horcados Rojos",
-        "routeType": "out-and-back",
-        "description": "Horcados Rojos crosses the limestone plateau and climbs steeply to the Horcados Rojos pass.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Fuente Dé upper cable-car station",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "picos-authority",
-          "sourceUrl": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "picos-pico-jano",
-        "name": "Pico Jano",
-        "routeType": "loop",
-        "description": "Pico Jano uses old tracks and open slopes to the Pico Jano viewpoint above the Liébana valley.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Dobarganes",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "picos-authority",
-          "sourceUrl": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "picos-collado-jermoso",
-        "name": "Collado Jermoso",
-        "routeType": "point-to-point",
-        "description": "Collado Jermoso makes the sustained ascent through Asotín and exposed high limestone to Refugio Collado Jermoso.",
-        "difficulty": "Expert",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Cordiñanes",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "picos-authority",
-          "sourceUrl": "https://parquenacionalpicoseuropa.es/visita/rutas/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "picos-authority",
@@ -3230,14 +920,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "romsdalen": {
     "destinationKey": "romsdalen",
     "guide": {
-      "highlights": "The Romsdalseggen ridge, Rampestreken and the wall of peaks around the Rauma valley put major viewpoints immediately above Åndalsnes. The Åndalsnes route set makes those qualities concrete: “Romsdalseggen Ridge” and “Rampestreken and Nesaksla” define different headline days, while “Litlefjellet” offers another scale of outing. “Bispevatnet” and “Mjølvafjellet” extend the choice beyond one famous objective. Together, these Romsdalen walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Åndalsnes.",
-      "terrain": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers. The published Åndalsnes walks move through that structure in distinct ways. “Litlefjellet” is the shortest listed option at about 1.5 hours; “Romsdalseggen Ridge” is the largest commitment at about 8 hours. On Romsdalen terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Åndalsnes.",
-      "expectations": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock. Access around Åndalsnes is route-specific. Starts include Vengedalen trailhead, Åndalsnes town centre and Litlefjellet trailhead in Vengedalen. A Romsdalen point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Åndalsnes weather, closures and seasonal services against the linked authority. Keep one of the listed Åndalsnes alternatives available when the principal route is unsuitable."
+      "highlights": "The Romsdalseggen ridge, Rampestreken and the wall of peaks around the Rauma valley put major viewpoints immediately above Åndalsnes.",
+      "terrain": "A narrow fjord valley rises abruptly into gneiss ridges, hanging valleys and boulder-strewn cols, while lower paths pass birch woodland and rivers.",
+      "expectations": "Rail access into town is unusually useful for a Norwegian mountain base, but the signature ridge is exposed, committing and sensitive to cloud, wind and wet rock."
     },
     "hero": {
       "imageUrl": "/catalog-media/romsdalen.jpg",
@@ -3255,118 +945,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:View%20to%20Romsdalen%20from%20Litlefjellet%2C%202013%20June.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "romsdalen-romsdalseggen-ridge",
-        "name": "Romsdalseggen Ridge",
-        "routeType": "point-to-point",
-        "description": "Romsdalseggen Ridge traverses the exposed Romsdalseggen ridge and descends past Nesaksla to Åndalsnes.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Vengedalen trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "romsdalen-authority",
-          "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "romsdalen-rampestreken-and-nesaksla",
-        "name": "Rampestreken and Nesaksla",
-        "routeType": "out-and-back",
-        "description": "Rampestreken and Nesaksla climbs the Romsdalstrappa to Rampestreken and continues to Nesaksla before reversing the route.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Åndalsnes town centre",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "romsdalen-authority",
-          "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "romsdalen-litlefjellet",
-        "name": "Litlefjellet",
-        "routeType": "out-and-back",
-        "description": "Litlefjellet makes a short steep ascent to a ledge facing Trollveggen and the Romsdalen valley.",
-        "difficulty": "Easy",
-        "durationHours": 1.5,
-        "durationDays": 1,
-        "trailhead": "Litlefjellet trailhead in Vengedalen",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "romsdalen-authority",
-          "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "romsdalen-bispevatnet",
-        "name": "Bispevatnet",
-        "routeType": "out-and-back",
-        "description": "Bispevatnet walks into the high basin below Bispen to Bispevatnet.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Trollstigen plateau",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "romsdalen-authority",
-          "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "romsdalen-mjolvafjellet",
-        "name": "Mjølvafjellet",
-        "routeType": "out-and-back",
-        "description": "Mjølvafjellet climbs rough open mountain terrain to Mjølvafjellet above Isfjorden.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Vengedalen trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "romsdalen-authority",
-          "sourceUrl": "https://www.visitnorway.com/places-to-go/fjord-norway/northwest/hiking-the-romsdalseggen-ridge/?lang=primary",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "romsdalen-authority",
@@ -3387,14 +966,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "high"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "skaftafell": {
     "destinationKey": "skaftafell",
     "guide": {
-      "highlights": "Skaftafell is a staffed Vatnajökull National Park hub where paths reach Svartifoss, glacier viewpoints, Morsárdalur and high Kristínartindar. The Skaftafell route set makes those qualities concrete: “Svartifoss” and “Sjónarnípa” define different headline days, while “Kristínartindar” offers another scale of outing. “Skaftafellsjökull Viewpoint” and “Morsárdalur” extend the choice beyond one famous objective. Together, these Vatnajökull National Park walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Skaftafell.",
-      "terrain": "Green birch slopes and basalt columns sit beside broad outwash plains, sharp peaks and outlet glaciers; marked trails climb from sheltered woodland onto moraine, heath and rocky ridges. The published Skaftafell walks move through that structure in distinct ways. “Skaftafellsjökull Viewpoint” is the shortest listed option at about 1.5 hours; “Kristínartindar” is the largest commitment at about 8 hours. On Vatnajökull National Park terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "The visitor centre, campground and signed junctions make short walks straightforward, while longer routes gain serious elevation and exposure; glacier surfaces remain guided technical terrain rather than extensions of the hiking paths. Access around Skaftafell is route-specific. Every published Skaftafell route starts from Skaftafell visitor centre. A Vatnajökull National Park point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Skaftafell weather, closures and seasonal services against the linked authority. Keep one of the listed Skaftafell alternatives available when the principal route is unsuitable."
+      "highlights": "Skaftafell is a staffed Vatnajökull National Park hub where paths reach Svartifoss, glacier viewpoints, Morsárdalur and high Kristínartindar.",
+      "terrain": "Green birch slopes and basalt columns sit beside broad outwash plains, sharp peaks and outlet glaciers; marked trails climb from sheltered woodland onto moraine, heath and rocky ridges.",
+      "expectations": "The visitor centre, campground and signed junctions make short walks straightforward, while longer routes gain serious elevation and exposure; glacier surfaces remain guided technical terrain rather than extensions of the hiking paths."
     },
     "hero": {
       "imageUrl": "/catalog-media/skaftafell.jpg",
@@ -3412,123 +991,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skaftafell%20glacierIceland%201.JPG",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "skaftafell-svartifoss",
-        "name": "Svartifoss",
-        "routeType": "loop",
-        "description": "Svartifoss climbs through birch woodland to the basalt-columned Svartifoss and returns by signed lower paths.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Skaftafell visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "skaftafell-authority",
-          "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "skaftafell-sjonarnipa",
-        "name": "Sjónarnípa",
-        "routeType": "loop",
-        "description": "Sjónarnípa continues above Svartifoss to Sjónarnípa for a safe overlook of Skaftafellsjökull.",
-        "difficulty": "Moderate",
-        "durationHours": 3.5,
-        "durationDays": 1,
-        "trailhead": "Skaftafell visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "skaftafell-authority",
-          "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "skaftafell-kristinartindar",
-        "name": "Kristínartindar",
-        "routeType": "loop",
-        "description": "Kristínartindar makes the long ridge circuit over Kristínartindar between the Skaftafellsjökull and Morsárjökull valleys.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Skaftafell visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "skaftafell-authority",
-          "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "skaftafell-skaftafellsjokull-viewpoint",
-        "name": "Skaftafellsjökull Viewpoint",
-        "routeType": "out-and-back",
-        "description": "Skaftafellsjökull Viewpoint uses the low marked path to the public Skaftafellsjökull terminus viewpoint.",
-        "difficulty": "Easy",
-        "durationHours": 1.5,
-        "durationDays": 1,
-        "trailhead": "Skaftafell visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "skaftafell-authority",
-          "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "skaftafell-morsardalur",
-        "name": "Morsárdalur",
-        "routeType": "out-and-back",
-        "description": "Morsárdalur follows the long Morsárdalur valley route toward the Morsárjökull viewpoint.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Skaftafell visitor centre",
-        "recommendedMonths": [
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "skaftafell-authority",
-          "sourceUrl": "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "skaftafell-authority",
@@ -3549,14 +1012,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "snowdonia": {
     "destinationKey": "snowdonia",
     "guide": {
-      "highlights": "Llanberis sits below Yr Wyddfa and within reach of the Glyderau, Tryfan and quieter northern ridges of Eryri National Park. The Llanberis route set makes those qualities concrete: “Yr Wyddfa via Llanberis Path” and “Pyg and Miners' Tracks Circuit” define different headline days, while “Tryfan North Ridge” offers another scale of outing. “Glyderau Traverse” and “Moel Eilio Circuit” extend the choice beyond one famous objective. Together, these Eryri / Snowdonia walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day. The published Llanberis walks move through that structure in distinct ways. “Moel Eilio Circuit” is the shortest listed option at about 5 hours; “Glyderau Traverse” is the largest commitment at about 9 hours. On Eryri / Snowdonia terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud. Access around Llanberis is route-specific. Starts include Llanberis Path gate at Victoria Terrace, Pen-y-Pass and A5 lay-by at Milestone Buttress. A Eryri / Snowdonia point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Llanberis weather, closures and seasonal services against the linked authority. Keep one of the listed Llanberis alternatives available when the principal route is unsuitable."
+      "highlights": "Llanberis sits below Yr Wyddfa and within reach of the Glyderau, Tryfan and quieter northern ridges of Eryri National Park.",
+      "terrain": "Glaciated cwms, slate, volcanic rock and sharp ridges are packed into a small area, with rough stone pitching, boggy moor and hands-on scrambling often appearing on the same day.",
+      "expectations": "Bus and rail links are useful and paths are numerous, but the busiest summit lines crowd quickly; alternatives reward experienced walkers who can handle complex junctions, exposure and rapidly lowering cloud."
     },
     "hero": {
       "imageUrl": "/catalog-media/snowdonia.jpg",
@@ -3574,133 +1037,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panorama-_Nant_Gwynant_(21695404928).jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "snowdonia-yr-wyddfa-via-llanberis-path",
-        "name": "Yr Wyddfa via Llanberis Path",
-        "routeType": "out-and-back",
-        "description": "Yr Wyddfa via Llanberis Path makes the longest gradual ascent of Yr Wyddfa from Llanberis, sharing the upper mountain with other routes.",
-        "difficulty": "Hard",
-        "durationHours": 6.5,
-        "durationDays": 1,
-        "trailhead": "Llanberis Path gate at Victoria Terrace",
-        "recommendedMonths": [
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "snowdonia-authority",
-          "sourceUrl": "https://snowdonia.gov.wales/visit/walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "snowdonia-pyg-and-miners-tracks-circuit",
-        "name": "Pyg and Miners' Tracks Circuit",
-        "routeType": "loop",
-        "description": "Pyg and Miners' Tracks Circuit ascends the Pyg Track to Yr Wyddfa and returns by the Miners' Track around the glacial lakes.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Pen-y-Pass",
-        "recommendedMonths": [
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "snowdonia-authority",
-          "sourceUrl": "https://snowdonia.gov.wales/visit/walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "snowdonia-tryfan-north-ridge",
-        "name": "Tryfan North Ridge",
-        "routeType": "out-and-back",
-        "description": "Tryfan North Ridge scrambles Tryfan's North Ridge on continuously hands-on and exposed terrain.",
-        "difficulty": "Expert",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "A5 lay-by at Milestone Buttress",
-        "recommendedMonths": [
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "snowdonia-authority",
-          "sourceUrl": "https://snowdonia.gov.wales/visit/walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "snowdonia-glyderau-traverse",
-        "name": "Glyderau Traverse",
-        "routeType": "point-to-point",
-        "description": "Glyderau Traverse crosses Tryfan and the Glyderau toward Pen-y-Pass, combining scrambling, boulder fields and a transfer.",
-        "difficulty": "Expert",
-        "durationHours": 9,
-        "durationDays": 1,
-        "trailhead": "Ogwen Cottage",
-        "recommendedMonths": [
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "snowdonia-authority",
-          "sourceUrl": "https://snowdonia.gov.wales/visit/walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "snowdonia-moel-eilio-circuit",
-        "name": "Moel Eilio Circuit",
-        "routeType": "loop",
-        "description": "Moel Eilio Circuit circles Moel Eilio, Foel Gron and Foel Goch on a quieter broad ridge above the village.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Llanberis",
-        "recommendedMonths": [
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "provenance": {
-          "sourceKey": "snowdonia-authority",
-          "sourceUrl": "https://snowdonia.gov.wales/visit/walking/",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "snowdonia-authority",
@@ -3721,14 +1058,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "thorsmork": {
     "destinationKey": "thorsmork",
     "guide": {
-      "highlights": "Þórsmörk is a sheltered birch-filled valley between Eyjafjallajökull, Mýrdalsjökull and braided glacial rivers, and a junction for Laugavegur and Fimmvörðuháls. The Þórsmörk route set makes those qualities concrete: “Valahnúkur” and “Tindfjöll Circle” define different headline days, while “Útigönguhöfði” offers another scale of outing. “Fimmvörðuháls to Magni and Móði” and “Laugavegur to Emstrur” extend the choice beyond one famous objective. Together, these Southern Highlands walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Þórsmörk.",
-      "terrain": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes. The published Þórsmörk walks move through that structure in distinct ways. “Valahnúkur” is the shortest listed option at about 2 hours; “Laugavegur to Emstrur” is the largest commitment at about 10 hours. On Southern Highlands terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes. Access around Þórsmörk is route-specific. Starts include Húsadalur, Langidalur hut and Básar hut. A Southern Highlands point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Þórsmörk weather, closures and seasonal services against the linked authority. Keep one of the listed Þórsmörk alternatives available when the principal route is unsuitable."
+      "highlights": "Þórsmörk is a sheltered birch-filled valley between Eyjafjallajökull, Mýrdalsjökull and braided glacial rivers, and a junction for Laugavegur and Fimmvörðuháls.",
+      "terrain": "Dark tuff ridges, green gullies and glacier viewpoints create intricate terrain at modest elevation; paths climb through scrub before reaching narrow crests and volcanic passes.",
+      "expectations": "Specialist highland buses are the normal access because unbridged rivers make ordinary driving inappropriate, and route choices depend on bridge locations and water levels; once there, a dense path network offers both compact loops and demanding through-hikes."
     },
     "hero": {
       "imageUrl": "/catalog-media/thorsmork.jpg",
@@ -3746,118 +1083,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Landscape%20of%20%C3%9E%C3%B3rsm%C3%B6rk%20-%202013.08%20-%20panoramio.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "thorsmork-valahnukur",
-        "name": "Valahnúkur",
-        "routeType": "loop",
-        "description": "Valahnúkur climbs the compact Valahnúkur ridge between Húsadalur and Langidalur for glacier and valley views.",
-        "difficulty": "Moderate",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Húsadalur",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "thorsmork-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "thorsmork-tindfjoll-circle",
-        "name": "Tindfjöll Circle",
-        "routeType": "loop",
-        "description": "Tindfjöll Circle circles the Tindfjöll ridges through birch woods and narrow green gullies.",
-        "difficulty": "Moderate",
-        "durationHours": 4,
-        "durationDays": 1,
-        "trailhead": "Langidalur hut",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "thorsmork-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "thorsmork-utigonguhofdi",
-        "name": "Útigönguhöfði",
-        "routeType": "loop",
-        "description": "Útigönguhöfði climbs the steep Útigönguhöfði ridge above the Krossá valley and returns through sheltered gullies.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Básar hut",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "thorsmork-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "thorsmork-fimmvorduhals-to-magni-and-modi",
-        "name": "Fimmvörðuháls to Magni and Móði",
-        "routeType": "out-and-back",
-        "description": "Fimmvörðuháls to Magni and Móði follows the Fimmvörðuháls route onto the 2010 volcanic craters Magni and Móði before turning back.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Básar hut",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "thorsmork-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "thorsmork-laugavegur-to-emstrur",
-        "name": "Laugavegur to Emstrur",
-        "routeType": "point-to-point",
-        "description": "Laugavegur to Emstrur walks the southern Laugavegur stage across rolling highland terrain to Emstrur hut.",
-        "difficulty": "Hard",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Langidalur hut",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "thorsmork-authority",
-          "sourceUrl": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "thorsmork-authority",
@@ -3878,14 +1104,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "zakopane": {
     "destinationKey": "zakopane",
     "guide": {
-      "highlights": "Zakopane is the main Polish gateway to Morskie Oko, Kasprowy Wierch, Giewont and the compact High Tatra ridge system. The Zakopane route set makes those qualities concrete: “Morskie Oko” and “Kasprowy Wierch to Hala Gąsienicowa” define different headline days, while “Giewont” offers another scale of outing. “Czerwone Wierchy” and “Orla Perć from Zawrat to Krzyżne” extend the choice beyond one famous objective. Together, these High Tatras walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable.",
-      "terrain": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests. The published Zakopane walks move through that structure in distinct ways. “Morskie Oko” and “Kasprowy Wierch to Hala Gąsienicowa” are the shortest listed options at about 5 hours; “Orla Perć from Zawrat to Krzyżne” is the largest commitment at about 10 hours. On High Tatras terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers. Access around Zakopane is route-specific. Starts include Palenica Białczańska, Kasprowy Wierch cable-car station and Kuźnice. A High Tatras point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zakopane weather, closures and seasonal services against the linked authority. Keep one of the listed Zakopane alternatives available when the principal route is unsuitable."
+      "highlights": "Zakopane is the main Polish gateway to Morskie Oko, Kasprowy Wierch, Giewont and the compact High Tatra ridge system.",
+      "terrain": "Granite peaks and glacial lakes sit above spruce forest and limestone foothills; stone-paved valley routes lead toward increasingly steep chains, gullies and narrow exposed crests.",
+      "expectations": "Minibuses and a cable car make access efficient but popular trails can be intensely crowded, park rules are strict, and thunderstorms develop quickly; easier lake walks coexist with routes intended only for confident mountain walkers."
     },
     "hero": {
       "imageUrl": "/catalog-media/zakopane.jpg",
@@ -3903,118 +1129,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zakopane%2C%20view%20from%20the%20Giewont%20mountain%20northwards.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "zakopane-morskie-oko",
-        "name": "Morskie Oko",
-        "routeType": "out-and-back",
-        "description": "Morskie Oko follows the paved mountain road to Morskie Oko beneath the High Tatra peaks.",
-        "difficulty": "Moderate",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Palenica Białczańska",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zakopane-authority",
-          "sourceUrl": "https://tpn.gov.pl/zwiedzaj",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zakopane-kasprowy-wierch-to-hala-gasienicowa",
-        "name": "Kasprowy Wierch to Hala Gąsienicowa",
-        "routeType": "point-to-point",
-        "description": "Kasprowy Wierch to Hala Gąsienicowa descends from the high ridge through Hala Gąsienicowa to Kuźnice.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Kasprowy Wierch cable-car station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zakopane-authority",
-          "sourceUrl": "https://tpn.gov.pl/zwiedzaj",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zakopane-giewont",
-        "name": "Giewont",
-        "routeType": "out-and-back",
-        "description": "Giewont climbs through Kondratowa to Giewont's chain-assisted summit section.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Kuźnice",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zakopane-authority",
-          "sourceUrl": "https://tpn.gov.pl/zwiedzaj",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zakopane-czerwone-wierchy",
-        "name": "Czerwone Wierchy",
-        "routeType": "point-to-point",
-        "description": "Czerwone Wierchy traverses the long Czerwone Wierchy ridge and descends to Kuźnice.",
-        "difficulty": "Hard",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Kiry",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zakopane-authority",
-          "sourceUrl": "https://tpn.gov.pl/zwiedzaj",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zakopane-orla-perc-from-zawrat-to-krzyzne",
-        "name": "Orla Perć from Zawrat to Krzyżne",
-        "routeType": "point-to-point",
-        "description": "Orla Perć from Zawrat to Krzyżne traverses the chain- and ladder-protected Orla Perć ridge to Krzyżne after a separately planned approach.",
-        "difficulty": "Expert",
-        "durationHours": 10,
-        "durationDays": 1,
-        "trailhead": "Zawrat pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zakopane-authority",
-          "sourceUrl": "https://tpn.gov.pl/zwiedzaj",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "zakopane-authority",
@@ -4035,14 +1150,14 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   },
   "zermatt": {
     "destinationKey": "zermatt",
     "guide": {
-      "highlights": "Zermatt's car-free valley frames the Matterhorn and connects walkers to Gornergrat, Sunnegga, glacier viewpoints and the Europaweg. The Zermatt route set makes those qualities concrete: “Five Lakes Walk” and “Höhbalmen” define different headline days, while “Matterhorn Glacier Trail” offers another scale of outing. “Gornergrat to Riffelberg” and “Europaweg to Täschalp” extend the choice beyond one famous objective. Together, these Valais Alps walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Zermatt.",
-      "terrain": "High Pennine peaks, moraines and retreating glacier forefields tower above larch woods and flower-rich meadows; trails range from broad panoramic paths to exposed traverses on loose alpine ground. The published Zermatt walks move through that structure in distinct ways. “Gornergrat to Riffelberg” is the shortest listed option at about 2.5 hours; “Höhbalmen” and “Europaweg to Täschalp” share the largest listed commitment at about 7 hours. On Valais Alps terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
-      "expectations": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain. Access around Zermatt is route-specific. Starts include Blauherd lift station, Zermatt village and Trockener Steg. A Valais Alps point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Zermatt weather, closures and seasonal services against the linked authority. Keep one of the listed Zermatt alternatives available when the principal route is unsuitable."
+      "highlights": "Zermatt's car-free valley frames the Matterhorn and connects walkers to Gornergrat, Sunnegga, glacier viewpoints and the Europaweg.",
+      "terrain": "High Pennine peaks, moraines and retreating glacier forefields tower above larch woods and flower-rich meadows; trails range from broad panoramic paths to exposed traverses on loose alpine ground.",
+      "expectations": "Mountain railways spread hikers across several levels and make shorter scenic days possible, while altitude, expensive logistics and crowded viewpoints are real trade-offs; high routes require secure weather and comfort on exposed terrain."
     },
     "hero": {
       "imageUrl": "/catalog-media/zermatt.jpg",
@@ -4060,118 +1175,7 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:CH.VS.Zermatt%202021-10-17%20Matterhorn%208726.jpg",
       "verifiedAt": "2026-07-25"
     },
-    "hikes": [
-      {
-        "key": "zermatt-five-lakes-walk",
-        "name": "Five Lakes Walk",
-        "routeType": "loop",
-        "description": "Five Lakes Walk links Stellisee, Grindjisee, Grünsee, Moosjisee and Leisee beneath the Matterhorn.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Blauherd lift station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zermatt-authority",
-          "sourceUrl": "https://www.zermatt.ch/en/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zermatt-hohbalmen",
-        "name": "Höhbalmen",
-        "routeType": "loop",
-        "description": "Höhbalmen climbs through larch forest to the Höhbalmen balcony and returns through the Zmutt valley.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Zermatt village",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zermatt-authority",
-          "sourceUrl": "https://www.zermatt.ch/en/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zermatt-matterhorn-glacier-trail",
-        "name": "Matterhorn Glacier Trail",
-        "routeType": "point-to-point",
-        "description": "Matterhorn Glacier Trail crosses moraine and polished rock on the signed glacier-forefield trail to Schwarzsee.",
-        "difficulty": "Moderate",
-        "durationHours": 3,
-        "durationDays": 1,
-        "trailhead": "Trockener Steg",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zermatt-authority",
-          "sourceUrl": "https://www.zermatt.ch/en/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zermatt-gornergrat-to-riffelberg",
-        "name": "Gornergrat to Riffelberg",
-        "routeType": "point-to-point",
-        "description": "Gornergrat to Riffelberg descends the panoramic path past Rotenboden to Riffelberg, returning by mountain railway.",
-        "difficulty": "Easy",
-        "durationHours": 2.5,
-        "durationDays": 1,
-        "trailhead": "Gornergrat railway station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zermatt-authority",
-          "sourceUrl": "https://www.zermatt.ch/en/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      },
-      {
-        "key": "zermatt-europaweg-to-taschalp",
-        "name": "Europaweg to Täschalp",
-        "routeType": "point-to-point",
-        "description": "Europaweg to Täschalp uses the high Europaweg toward Täschalp on exposed slopes and needs a return transfer.",
-        "difficulty": "Hard",
-        "durationHours": 7,
-        "durationDays": 1,
-        "trailhead": "Sunnegga lift station",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ],
-        "provenance": {
-          "sourceKey": "zermatt-authority",
-          "sourceUrl": "https://www.zermatt.ch/en/hiking",
-          "verifiedAt": "2026-07-25",
-          "confidence": "medium"
-        }
-      }
-    ],
+    "hikes": [],
     "provenance": [
       {
         "sourceKey": "zermatt-authority",
@@ -4192,6 +1196,6 @@ export const catalogDetails: Record<string, CatalogDestinationDetail> = {
         "confidence": "medium"
       }
     ],
-    "catalogVersion": "c4e589fd9bf1e12d447766e767522fd2a06b7ac17688f90c20aaf03dcf98a264"
+    "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2"
   }
 };

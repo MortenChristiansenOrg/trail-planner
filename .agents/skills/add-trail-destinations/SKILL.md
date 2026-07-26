@@ -25,7 +25,7 @@ Inspect the existing catalog and `data/catalog/records/` to avoid duplicate keys
 1. Define the candidate.
    - Establish a kebab-case stable key, official/common name, region, country code, and access-hub intent.
    - Reject a duplicate or explain why a separate destination is useful.
-   - Decide which domains are required for this run. A useful hidden hub may publish with explicit gaps; a visible hub must meet the shared guide, media, hike, and variety rules.
+   - Decide which domains are required for this run. A useful hidden hub may publish with explicit gaps; a visible hub must meet the shared guide, media, and travel rules. Hikes are never required for visibility.
 2. Start a bounded run.
    - Announce skill use and the target domains before network calls.
    - Run the authentication and credit preflight in `references/firecrawl.md`.
@@ -59,7 +59,7 @@ Inspect the existing catalog and `data/catalog/records/` to avoid duplicate keys
 
 - Core coordinates/name: OSM or official geographic authority; preserve object/source URL.
 - Season and access: park/trail authority and local transport/operator pages.
-- Hikes: official route metadata plus OSM relation or licensed GPX for geometry. A prose description is not geometry.
+- Hikes: do not publish hike or geometry claims until the complete local OSM pipeline in GitHub issue #23 is implemented. Mark both domains missing; prose or a broad route page is not a route record.
 - Lodging: official hut/campsite/operator pages. Prices are indicative with short expiry.
 - Travel: provider APIs for routes/schedules/fares. Firecrawl only fills official local-service and transfer caveats.
 - Media: Wikimedia Commons/API or clearly licensed official media with creator, license, dimensions, attribution, and source page.

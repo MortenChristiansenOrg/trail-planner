@@ -83,7 +83,7 @@
       "domain": "destination-core",
       "subjectKey": "durmitor",
       "field": "guide.highlights",
-      "value": "Žabljak sits on a high plateau beside Black Lake, with direct access to Bobotov Kuk, Prutaš and the Tara canyon rim. The Žabljak route set makes those qualities concrete: “Black Lake Circuit” and “Ćurevac Viewpoint” define different headline days, while “Savin Kuk” offers another scale of outing. “Bobotov Kuk” and “Prutaš” extend the choice beyond one famous objective. Together, these Durmitor walks let a stay combine viewpoints, valleys and higher ground without treating every route as interchangeable. Current forecasts, access notices and seasonal transport still need checking with the linked authority before leaving for Žabljak.",
+      "value": "Žabljak sits on a high plateau beside Black Lake, with direct access to Bobotov Kuk, Prutaš and the Tara canyon rim.",
       "source": {
         "key": "durmitor-authority",
         "url": "https://nparkovi.me/parks/durmitor/",
@@ -98,7 +98,7 @@
       "domain": "destination-core",
       "subjectKey": "durmitor",
       "field": "guide.terrain",
-      "value": "Compact limestone peaks, glacial cirques and dozens of lakes rise from conifer forest and open pasture; higher trails cross broken karst, scree and exposed rocky saddles. The published Žabljak walks move through that structure in distinct ways. “Black Lake Circuit” and “Ćurevac Viewpoint” are the shortest listed options at about 2 hours; “Bobotov Kuk” is the largest commitment at about 8 hours. On Durmitor terrain, surface, exposure and ascent matter more than distance alone, so each route's description and difficulty should guide the choice.",
+      "value": "Compact limestone peaks, glacial cirques and dozens of lakes rise from conifer forest and open pasture; higher trails cross broken karst, scree and exposed rocky saddles.",
       "source": {
         "key": "durmitor-authority",
         "url": "https://nparkovi.me/parks/durmitor/",
@@ -113,7 +113,7 @@
       "domain": "destination-core",
       "subjectKey": "durmitor",
       "field": "guide.expectations",
-      "value": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency. Access around Žabljak is route-specific. Starts include Black Lake national-park entrance, Ćurevac access road trailhead and Savin Kuk ski-area base. A Durmitor point-to-point walk needs transport at both ends, while an out-and-back still requires a firm turnaround time. These durations are planning estimates for the named routes, not live guarantees; check Žabljak weather, closures and seasonal services against the linked authority. Keep one of the listed Žabljak alternatives available when the principal route is unsuitable.",
+      "value": "Road access to several starts is simple in season and visitor numbers are lower than in the central Alps, but signs can be inconsistent and services thin away from town; long summit routes need stable weather and self-sufficiency.",
       "source": {
         "key": "durmitor-authority",
         "url": "https://nparkovi.me/parks/durmitor/",
@@ -173,156 +173,6 @@
       "observedAt": "2026-07-25T20:00:00.000Z",
       "refreshAfter": "2027-07-25T20:00:00.000Z",
       "confidence": "high"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "durmitor-black-lake-circuit",
-      "field": "hike",
-      "value": {
-        "key": "durmitor-black-lake-circuit",
-        "name": "Black Lake Circuit",
-        "routeType": "loop",
-        "description": "Black Lake Circuit circles Veliko and Malo Crno jezero on forest paths beneath Međed.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Black Lake national-park entrance",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ]
-      },
-      "source": {
-        "key": "durmitor-authority",
-        "url": "https://nparkovi.me/parks/durmitor/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "durmitor-curevac-viewpoint",
-      "field": "hike",
-      "value": {
-        "key": "durmitor-curevac-viewpoint",
-        "name": "Ćurevac Viewpoint",
-        "routeType": "out-and-back",
-        "description": "Ćurevac Viewpoint walks a short limestone ridge to the Tara canyon viewpoint.",
-        "difficulty": "Easy",
-        "durationHours": 2,
-        "durationDays": 1,
-        "trailhead": "Ćurevac access road trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ]
-      },
-      "source": {
-        "key": "durmitor-authority",
-        "url": "https://nparkovi.me/parks/durmitor/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "durmitor-savin-kuk",
-      "field": "hike",
-      "value": {
-        "key": "durmitor-savin-kuk",
-        "name": "Savin Kuk",
-        "routeType": "out-and-back",
-        "description": "Savin Kuk ascends pasture and broken limestone to Savin Kuk without relying on the seasonal chairlift.",
-        "difficulty": "Hard",
-        "durationHours": 5,
-        "durationDays": 1,
-        "trailhead": "Savin Kuk ski-area base",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ]
-      },
-      "source": {
-        "key": "durmitor-authority",
-        "url": "https://nparkovi.me/parks/durmitor/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "durmitor-bobotov-kuk",
-      "field": "hike",
-      "value": {
-        "key": "durmitor-bobotov-kuk",
-        "name": "Bobotov Kuk",
-        "routeType": "out-and-back",
-        "description": "Bobotov Kuk crosses exposed saddles and steep rocky ground to Durmitor's highest summit, Bobotov Kuk.",
-        "difficulty": "Expert",
-        "durationHours": 8,
-        "durationDays": 1,
-        "trailhead": "Sedlo pass",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ]
-      },
-      "source": {
-        "key": "durmitor-authority",
-        "url": "https://nparkovi.me/parks/durmitor/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
-    },
-    {
-      "domain": "hikes",
-      "subjectKey": "durmitor-prutas",
-      "field": "hike",
-      "value": {
-        "key": "durmitor-prutas",
-        "name": "Prutaš",
-        "routeType": "loop",
-        "description": "Prutaš climbs the layered western slopes of Prutaš and returns through the Škrčka Lakes basin.",
-        "difficulty": "Hard",
-        "durationHours": 6,
-        "durationDays": 1,
-        "trailhead": "Dobri Do trailhead",
-        "recommendedMonths": [
-          6,
-          7,
-          8,
-          9
-        ]
-      },
-      "source": {
-        "key": "durmitor-authority",
-        "url": "https://nparkovi.me/parks/durmitor/",
-        "kind": "official"
-      },
-      "retrievedAt": "2026-07-25T20:00:00.000Z",
-      "observedAt": "2026-07-25T20:00:00.000Z",
-      "refreshAfter": "2027-07-25T20:00:00.000Z",
-      "confidence": "medium"
     },
     {
       "domain": "travel-road",
@@ -436,16 +286,16 @@
     },
     {
       "domain": "hikes",
-      "status": "fresh",
+      "status": "missing",
       "reasons": [
-        "Five named choices published with route-specific duration, difficulty, topology, trailhead and official-source provenance."
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
       ]
     },
     {
       "domain": "hike-geometry",
       "status": "missing",
       "reasons": [
-        "No verified licensed route lines are published in this catalog version."
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
       ]
     },
     {

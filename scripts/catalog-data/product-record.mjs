@@ -126,10 +126,11 @@ export function assessProductRecord(record) {
   const guide = Object.fromEntries(guideFields.map((field) => [field.slice("guide.".length), claimFor(record, "destination-core", field)?.value]));
   const sectionWords = guideFields.map((field) => wordCount(claimFor(record, "destination-core", field)?.value));
   const guideWords = sectionWords.reduce((sum, count) => sum + count, 0);
-  for (const [index, count] of sectionWords.entries()) {
-    if (count < 80) gaps.push(`${guideFields[index]} (${count}/80 words)`);
+  for (const field of guideFields) {
+    if (!nonEmpty(claimFor(record, "destination-core", field)?.value)) {
+      gaps.push(field);
+    }
   }
-  if (guideWords < 260) gaps.push(`guide total (${guideWords}/260 words)`);
 
   const hero = claimFor(record, "media", "hero")?.value;
   const heroErrors = [];
@@ -144,12 +145,9 @@ export function assessProductRecord(record) {
     hikeKeys.add(claim.subjectKey);
     validateHike(claim.value, claim, hikeErrors);
   }
-  if (hikeClaims.length < 5) gaps.push(`hikes (${hikeClaims.length}/5)`);
   gaps.push(...hikeErrors);
   const difficultyCount = new Set(hikeClaims.map((claim) => claim.value?.difficulty).filter(Boolean)).size;
   const durationBandCount = new Set(hikeClaims.map((claim) => durationBand(claim.value ?? {}))).size;
-  if (difficultyCount < 2) gaps.push("hike difficulty variety");
-  if (durationBandCount < 2) gaps.push("hike duration variety");
 
   const recommendedMonths = claimFor(record, "seasonality", "recommendedMonths")?.value;
   if (!validMonthList(recommendedMonths)) gaps.push("recommendedMonths");
