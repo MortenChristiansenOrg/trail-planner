@@ -41,7 +41,9 @@ export function StaticCatalogProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    const missingKeys = requestedKeys.filter((key) => !(key in details));
+    const missingKeys = requestedKeys.filter(
+      (key) => !(key in details) && !failedKeys.current.has(key),
+    );
     if (!missingKeys.length) return;
     const pending = missingKeys.map((key) => {
       const existing = inFlight.current.get(key);
