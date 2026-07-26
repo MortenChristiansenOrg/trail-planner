@@ -27,7 +27,7 @@ Status values:
 
 | Area | Sources | Status | Done / Total | Notes |
 | --- | --- | --- | ---: | --- |
-| Route geometry and trail inventory | Overpass, Geofabrik, Waymarked Trails, User GPX, AllTrails, official route pages | done | 6 / 6 | Overpass and GPX are usable; Waymarked/AllTrails/official pages are evidence/manual inputs. |
+| Route geometry and trail inventory | OSM regional extracts, bounded Overpass verification, official route pages | done | 6 / 6 | Implementation specified. Catalog hikes were removed; the complete clean-room local OSM pipeline and representative imports are tracked in GitHub issue #23. Waymarked Trails is inspiration only and no project code may be used. |
 | Elevation and terrain | OpenTopography, Copernicus DEM, AWS Terrain Tiles, MapTiler elevation | done | 4 / 4 | AWS Terrain Tiles worked live; MapTiler blocked by key; DEM sources need production cache decisions. |
 | Maps and geocoding | MapLibre, MapTiler Cloud, OpenMapTiles, Nominatim, Photon | done | 5 / 5 | MapLibre viable; Photon/Nominatim viable with limits; hosted/self-host map choices remain product decisions. |
 | Road routing | openrouteservice, GraphHopper, Valhalla, OSRM | done | 4 / 4 | OSRM public demo worked; ORS/GraphHopper blocked by keys; Valhalla self-host path documented. |

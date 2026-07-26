@@ -11,7 +11,6 @@ import {
   CircleDollarSign,
   Clock3,
   MapPin,
-  Mountain,
   Pencil,
   Plane,
   Plus,
@@ -22,7 +21,7 @@ import {
   Trash2,
   UsersRound,
 } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -41,17 +40,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
+import { DestinationDetailsSheet } from "@/features/catalog/DestinationDetailsSheet";
+import {
+  formatHikeOption,
+  HikeDetails,
+  HikeDetailsDialog,
+  HikeRouteIcon,
+} from "@/features/catalog/HikeDetails";
 import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
 import { travelEstimateTotal } from "@/features/preferences/personalizeTravel";
 import { loadTravelOption } from "@/features/catalog/travelOptionLoader";
 import {
-  destinationById,
   formatHours,
   formatMoney,
   monthNames,
   type Hike,
   type TravelMode,
 } from "@/features/catalog/catalog";
+import { useCatalog, useCatalogDestination } from "@/features/catalog/CatalogProvider";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type MapMarker, type TrailLine } from "@/features/maps/TrailMap";
 import {
@@ -74,11 +80,13 @@ import { useTripStore } from "@/features/trips/TripStore";
 
 export function TripDetailPage({ tripId }: { tripId: string }) {
   const store = useTripStore();
+  const catalog = useCatalog();
   const navigate = useNavigate();
   const [selectedMapItem, setSelectedMapItem] = useState<string>();
   const [shareUrl, setShareUrl] = useState<string>();
   const [shareCopyStatus, setShareCopyStatus] = useState<"copied" | "manual">();
   const trip = store.trips.find((item) => item.id === tripId);
+  const destination = useCatalogDestination(trip?.destinationId);
   const tripRef = useRef(trip);
   const travelRequestRef = useRef(0);
   tripRef.current = trip;
@@ -91,8 +99,18 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
     );
   }
 
-  const destination = destinationById.get(trip.destinationId);
-  if (!destination) return null;
+  if (!destination) {
+    return (
+      <AppShell>
+        <main className="not-found-page">
+          <Route />
+          <h1>{catalog.ready ? "Destination unavailable" : "Loading destination…"}</h1>
+          <p>{catalog.ready ? "This trip references a destination that is no longer in the active catalog." : "Opening the current catalog for this trip."}</p>
+          {catalog.ready ? <Button asChild><Link to="/trips">Back to planned trips</Link></Button> : null}
+        </main>
+      </AppShell>
+    );
+  }
   const costs = calculateTripCost(trip);
   const selectedTravel = getSelectedTravel(trip);
   const activityGroups = new Map(
@@ -174,6 +192,11 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
             </div>
           </div>
           <div className="trip-share-actions">
+            <DestinationDetailsSheet
+              destination={destination}
+              participants={trip.participants}
+              triggerLabel="View destination details"
+            />
             <Button onClick={createShare} variant="outline"><Share2 /> {shareCopyStatus === "copied" ? "Share link copied" : trip.shareToken ? "Copy share link" : "Create share link"}</Button>
             <DiscardTripDialog destinationName={destination.name} onDiscard={discardTrip} onReturn={returnToExplore} tripTitle={trip.title} />
             {shareCopyStatus === "manual" && shareUrl ? (
@@ -225,15 +248,21 @@ export function TripDetailPage({ tripId }: { tripId: string }) {
                       <div className="day-card__label"><strong>Day {day.day}</strong><span>{day.calendarDate ? formatDate(day.calendarDate) : "Date open"}</span></div>
                       <div className="day-card__content">
                         {day.day === 1 ? <TravelDayBlock direction="Journey to the trailhead" travel={selectedTravel} /> : null}
-                        {day.activities.map((activity) => (
-                          <div className={`activity-row${selectedMapItem === activity.groupId ? " is-selected" : ""}`} key={activity.id}>
-                            <button className="activity-row__select" onClick={() => setSelectedMapItem(activity.groupId)} type="button">
-                              <span className="trail-letter">{activity.letter}</span>
-                              <span><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></span>
-                            </button>
-                            <Button aria-label={`Remove ${activity.name}`} onClick={() => save(removeActivityGroup(trip, activity.groupId))} size="icon" variant="ghost"><Trash2 /></Button>
-                          </div>
-                        ))}
+                        {day.activities.map((activity) => {
+                          const hike = destination.hikes.find((item) => item.id === activity.hikeId);
+                          return (
+                            <div className={`activity-row${selectedMapItem === activity.groupId ? " is-selected" : ""}`} key={activity.id}>
+                              <button className="activity-row__select" onClick={() => setSelectedMapItem(activity.groupId)} type="button">
+                                <span className="trail-letter">{activity.letter}</span>
+                                <span><strong>{activity.name}</strong><small>{activity.durationDays > 1 ? `Part ${activity.segment} of ${activity.durationDays}` : activity.description}</small></span>
+                              </button>
+                              <span className="activity-row__actions">
+                                {hike ? <HikeDetailsDialog hike={hike} /> : null}
+                                <Button aria-label={`Remove ${activity.name}`} onClick={() => save(removeActivityGroup(trip, activity.groupId))} size="icon" variant="ghost"><Trash2 /></Button>
+                              </span>
+                            </div>
+                          );
+                        })}
                         {day.day === trip.tripDays ? <TravelDayBlock direction="Journey home" travel={selectedTravel} /> : null}
                         <AddHikeDialog day={day.day} destinationHikes={destination.hikes} maxDuration={trip.tripDays - day.day + 1} onAdd={(activity) => save(addActivity(trip, day.day, activity))} />
                       </div>
@@ -338,6 +367,13 @@ function AddHikeDialog({
   const [customDuration, setCustomDuration] = useState(1);
   const selected = destinationHikes.find((hike) => hike.id === hikeId);
 
+  useEffect(() => {
+    if (!selected && destinationHikes[0]) {
+      setHikeId(destinationHikes[0].id);
+      setDuration(Math.min(destinationHikes[0].durationDays, maxDuration));
+    }
+  }, [destinationHikes, maxDuration, selected]);
+
   return (
     <Dialog>
       <DialogTrigger asChild><Button className="add-day-button" size="sm" variant="ghost"><Plus /> Add hike to day {day}</Button></DialogTrigger>
@@ -346,8 +382,8 @@ function AddHikeDialog({
         <Tabs defaultValue={destinationHikes.length ? "known" : "custom"}>
           <TabsList className="w-full"><TabsTrigger disabled={!destinationHikes.length} value="known">{destinationHikes.length ? "Area routes" : "No catalog routes"}</TabsTrigger><TabsTrigger value="custom">Your own hike</TabsTrigger></TabsList>
           <TabsContent className="dialog-form" value="known">
-            <label><span>Hike</span><select value={hikeId} onChange={(event) => { const next = destinationHikes.find((item) => item.id === event.target.value); setHikeId(event.target.value); setDuration(Math.min(next?.durationDays ?? 1, maxDuration)); }}>{destinationHikes.map((hike) => <option key={hike.id} value={hike.id}>{hike.name}</option>)}</select></label>
-            {selected ? <div className="hike-choice-summary"><Mountain /><div><strong>{selected.distanceKm} km · {selected.ascentM} m ascent · {selected.difficulty}</strong><p>{selected.description}</p>{!selected.route.length ? <small>Route geometry is unavailable; this adds the verified hike details without drawing an invented map line.</small> : null}</div></div> : null}
+            <label><span>Hike</span><select value={hikeId} onChange={(event) => { const next = destinationHikes.find((item) => item.id === event.target.value); setHikeId(event.target.value); setDuration(Math.min(next?.durationDays ?? 1, maxDuration)); }}>{destinationHikes.map((hike) => <option key={hike.id} value={hike.id}>{formatHikeOption(hike)}</option>)}</select></label>
+            {selected ? <div className="hike-choice-summary"><HikeRouteIcon routeType={selected.routeType} /><HikeDetails hike={selected} /></div> : null}
             <label><span>Use duration</span><select value={duration} onChange={(event) => setDuration(Number(event.target.value))}>{Array.from({ length: maxDuration }, (_, index) => index + 1).map((value) => <option key={value} value={value}>{value} day{value === 1 ? "" : "s"}</option>)}</select><small>Overrides the catalog duration for this plan.</small></label>
             <DialogFooter><DialogClose asChild><Button disabled={!selected} onClick={() => selected && onAdd({ kind: "catalog-hike", hikeId: selected.id, name: selected.name, description: selected.description, durationDays: duration })}>Add to itinerary</Button></DialogClose></DialogFooter>
           </TabsContent>
@@ -409,12 +445,13 @@ function LodgingDialogContent({
   plannedOtherNights: number;
   remainingUnplannedNights: number;
 }) {
-  const destination = destinationById.get(destinationId)!;
+  const destination = useCatalogDestination(destinationId);
   const [kind, setKind] = useState<LodgingNight["kind"]>(night.kind === "none" ? "tent-free" : night.kind);
   const [name, setName] = useState(night.name === "Not chosen" ? "Wild tent" : night.name);
   const [cost, setCost] = useState(night.costDkk);
-  const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination.lodgings[0]?.id ?? "");
+  const [knownId, setKnownId] = useState(night.knownLodgingId ?? destination?.lodgings[0]?.id ?? "");
   const [confirmOverwrite, setConfirmOverwrite] = useState(false);
+  if (!destination) return null;
   const valid = Number.isFinite(cost) && cost >= 0 && (
     kind !== "known" || destination.lodgings.some((lodging) => lodging.id === knownId)
   );

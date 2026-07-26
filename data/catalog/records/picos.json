@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-picos",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "picos",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Potes",
+    "region": "Picos de Europa",
+    "countryCode": "ES",
+    "longitude": -4.62,
+    "latitude": 43.154
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "country",
+      "value": "Spain",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "summary",
+      "value": "A stone-built valley base below steep limestone massifs and deep gorges.",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "character",
+      "value": "Dry-looking but weather-prone limestone, shepherd paths and major relief close to the coast.",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "guide.highlights",
+      "value": "Potes opens the eastern and central Picos de Europa, including Fuente Dé, the Cares gorge and routes toward high limestone refuges.",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "guide.terrain",
+      "value": "Deep gorges and green Atlantic valleys cut into pale karst massifs; rough limestone, sinkholes and loose scree dominate above beech and oak woodland and high grazing land.",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "picos",
+      "field": "guide.expectations",
+      "value": "The cable car can remove a major climb but weather changes sharply between valley and plateau, water is scarce on karst and navigation can be confusing in cloud; low gorge walks offer a less committing alternative.",
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "picos",
+      "field": "recommendedMonths",
+      "value": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source": {
+        "key": "picos-authority",
+        "url": "https://parquenacionalpicoseuropa.es/visita/rutas/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "picos",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/picos.jpg",
+        "assetSha256": "550ce0a26544f8450984334292333e1342c2ded9f4c01f205cf4f9ea312b1d6e",
+        "width": 2896,
+        "height": 1944,
+        "alt": "Picos de Europa mountain landscape seen from the Potes hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Jorgeboco",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionText": "Picos de europa.JPG by Jorgeboco · CC BY-SA 3.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Picos%20de%20europa.JPG",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Picos%20de%20europa.JPG",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "picos-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Picos%20de%20europa.JPG",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "picos",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Potes road access",
+        "oneWayHours": 20.7,
+        "costPerPersonDkk": 2600,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-picos--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "picos",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Potes public-transport stop",
+        "oneWayHours": 27.5,
+        "costPerPersonDkk": 2450,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-picos-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "picos",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Potes airport transfer",
+        "oneWayHours": 8.2,
+        "costPerPersonDkk": 1950,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-picos-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "aliva",
+      "field": "lodging",
+      "value": {
+        "id": "aliva",
+        "name": "Refugio de Áliva",
+        "kind": "hut",
+        "nightlyCostDkk": 430
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

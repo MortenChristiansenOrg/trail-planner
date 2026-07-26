@@ -57,7 +57,7 @@ test("first-time visitors choose a mapped home city before Explore", async ({
   await page.getByRole("option", { name: /Aarhus/ }).first().click();
   await page.getByRole("button", { name: "Explore destinations" }).click();
 
-  await expect(page.getByText("From Aarhus")).toBeVisible();
+  await expect(page.getByText("From Aarhus", { exact: true })).toBeVisible();
   await expect
     .poll(() =>
       page.evaluate(
@@ -138,10 +138,22 @@ test("core planning flow remains connected", async ({ page }, testInfo) => {
   await page.locator(".results-list").getByRole("button", { name: /Innsbruck/ }).click();
   await page.getByRole("button", { name: /Plan this trip/ }).click();
   await expect(page.getByRole("heading", { name: "Choose how to travel" })).toBeVisible();
+  await expect(page.locator(".trip-detail-heading").getByText("Photo credit")).toHaveCount(0);
+  await page.getByRole("button", { name: "View destination details" }).click();
+  const destinationDetails = page.getByRole("dialog", { name: "Innsbruck" });
+  await expect(destinationDetails.getByRole("heading", { name: "Why go" })).toBeVisible();
+  await expect(destinationDetails.getByRole("heading", { name: "Hikes in the area" })).toBeVisible();
+  await expect(destinationDetails.getByText("No published hike choices")).toBeVisible();
+  await expect(destinationDetails.getByText("This destination currently has no source-backed hikes in the active catalog.")).toBeVisible();
+  await page.keyboard.press("Escape");
   await page.getByRole("button", { name: /Airplane/ }).click();
   await expect(page.getByText("2.900 kr.", { exact: false }).first()).toBeVisible();
 
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
+  const hikePicker = page.getByRole("dialog", { name: "Add a hike" });
+  await expect(hikePicker.getByText("No catalog routes are published for this hub yet. Add a personal route name to continue planning.")).toBeVisible();
+  await expect(hikePicker.getByRole("tab", { name: "No catalog routes" })).toBeDisabled();
+  await expect(hikePicker.getByRole("tab", { name: "Your own hike" })).toHaveAttribute("data-state", "active");
   await page.getByRole("textbox", { name: "Hike name" }).fill("Local ridge exploration");
   await page.getByRole("button", { name: "Add custom hike" }).click();
   await expect(page.getByText("Local ridge exploration").first()).toBeVisible();
@@ -348,40 +360,29 @@ test("Norway selections use the catalog ferry route and expose the arrival buffe
 test("Nordic hub media, attribution, and missing-route states are inspectable", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile", "Detailed catalog behavior is covered once on desktop.");
 
-  await page.route("https://commons.wikimedia.org/**", (route) => route.fulfill({
-    contentType: "image/svg+xml",
-    body: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"/>',
-  }));
-
   await page.goto('/explore?month=7&maxLayovers=2&countries=%5B%22IS%22%5D');
   await page.locator(".results-list").getByRole("button", { name: /Landmannalaugar/ }).click();
-  const photo = page.getByAltText("Rhyolite mountains and the Laugavegur trail at Landmannalaugar").first();
+  const photo = page.getByAltText("Fjallabak Highlands mountain landscape seen from the Landmannalaugar hiking area").first();
   await expect(photo).toHaveAttribute("loading", "lazy");
   await expect(photo).toHaveAttribute("srcset", /480w.*960w.*1440w/);
+  await expect(photo).toHaveAttribute("src", /^\/catalog-media\/landmannalaugar\.jpg\?width=960$/);
+  await expect(page.locator(".selected-destination").getByText("Photo credit")).toHaveCount(0);
   await page.getByRole("button", { name: "View area details" }).click();
   const details = page.locator(".destination-sheet");
-  await expect(details.getByText("Trail geometry unavailable")).toBeVisible();
+  await expect(details.getByText(/geometry unavailable/)).toHaveCount(0);
+  await expect(details.getByRole("link", { name: "Inspect route source" })).toHaveCount(0);
   const unavailableTrain = details.locator(".detail-travel-list > div").filter({ hasText: "Train + bus" });
   await expect(unavailableTrain).toContainText("Unavailable");
   await expect(unavailableTrain.getByRole("button", { name: "View stages" })).toHaveCount(0);
   await details.getByText("Photo credit").click();
-  await expect(details.getByText("Landmannalaugar by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
-  await details.getByAltText("Rhyolite mountains and the Laugavegur trail at Landmannalaugar").evaluate((image) => {
+  await expect(details.getByText("Landmannalaugar.jpeg by Andreas Tille · CC BY-SA 4.0")).toBeVisible();
+  await details.getByAltText("Fjallabak Highlands mountain landscape seen from the Landmannalaugar hiking area").evaluate((image) => {
     image.removeAttribute("srcset");
     image.setAttribute("src", "http://127.0.0.1:1/unavailable-catalog-image.jpg");
   });
   await expect(details.getByRole("img", { name: "Terrain image not yet available" })).toBeVisible();
-
-  await page.keyboard.press("Escape");
-  await page.locator(".results-list").getByRole("button", { name: /Þórsmörk/ }).click();
-  await page.getByRole("button", { name: "View area details" }).click();
-  await expect(page.getByRole("img", { name: "Terrain image not yet available" })).toBeVisible();
   await page.keyboard.press("Escape");
   await page.getByRole("button", { name: "Plan this trip" }).click();
-  await page.getByRole("button", { name: "Add hike to day 2" }).click();
-  await expect(page.getByRole("tab", { name: "Your own hike" })).toHaveAttribute("data-state", "active");
-  await expect(page.getByRole("tab", { name: "No catalog routes" })).toBeDisabled();
-  await page.keyboard.press("Escape");
 
   await page.evaluate(() => {
     const trips = JSON.parse(localStorage.getItem("trail-planner:mvp-trips:v1") ?? "[]");
@@ -407,10 +408,11 @@ test("Nordic hub media, attribution, and missing-route states are inspectable", 
 
   await page.goto('/explore?month=7&maxLayovers=2&countries=%5B%22SE%22%5D&selected=abisko');
   await page.getByRole("button", { name: "View area details" }).click();
-  const hikeMedia = page.locator(".route-preview-list article.has-media").filter({ hasText: "Kungsleden: Abisko to Abiskojaure" });
-  await hikeMedia.getByText("Photo credit").click();
-  await expect(hikeMedia.getByText("Kungsleden trail by Shyguy24x7 · CC BY-SA 3.0")).toBeVisible();
-  await expect(hikeMedia).not.toContainText(/route geometry unavailable/i);
+  const abiskoDetails = page.locator(".destination-sheet");
+  await expect(abiskoDetails.getByText("No published hike choices")).toBeVisible();
+  await expect(abiskoDetails.getByText("This destination currently has no source-backed hikes in the active catalog.")).toBeVisible();
+  await expect(abiskoDetails.locator(".route-preview-list article")).toHaveCount(0);
+  await expect(abiskoDetails.getByRole("link", { name: "Inspect route source" })).toHaveCount(0);
 });
 
 test("trip costs can be overridden, reset, and shared per person", async ({ page }, testInfo) => {
@@ -577,15 +579,16 @@ test("feedback fixes remain visible and interactive", async ({ page }, testInfo)
   await page.goto('/explore?month=7&maxLayovers=2&countries=%5B%22SE%22%5D&selected=abisko');
   await page.getByRole("button", { name: "Plan this trip" }).click();
   await page.getByRole("button", { name: "Add hike to day 2" }).click();
-  await page.getByRole("button", { name: "Add to itinerary" }).click();
+  await page.getByRole("textbox", { name: "Hike name" }).fill("Abisko valley walk");
+  await page.getByRole("button", { name: "Add custom hike" }).click();
   await page.getByRole("button", { name: "Add hike to day 3" }).click();
-  await page.getByRole("dialog", { name: "Add a hike" }).locator("select").first().selectOption("kungsleden-abiskojaure-alesjaure");
-  await page.getByRole("button", { name: "Add to itinerary" }).click();
+  await page.getByRole("textbox", { name: "Hike name" }).fill("Northern trail exploration");
+  await page.getByRole("button", { name: "Add custom hike" }).click();
 
-  await page.locator(".activity-row__select").filter({ hasText: "Abiskojaure to Alesjaure" }).click();
-  await expect(page.locator(".map-legend")).toContainText("B · Kungsleden: Abiskojaure to Alesjaure");
-  await expect(page.locator(".map-legend")).toContainText("source-backed route");
-  await expect(page.locator(".activity-row.is-selected")).toContainText("Abiskojaure to Alesjaure");
+  await page.locator(".activity-row__select").filter({ hasText: "Abisko valley walk" }).click();
+  await expect(page.locator(".activity-row.is-selected")).toContainText("Abisko valley walk");
+  await expect(page.locator(".map-legend")).toContainText("Selected personal hike · no catalog geometry");
+  await expect(page.getByRole("button", { name: "View details for Abisko valley walk" })).toHaveCount(0);
 
   const dateInput = page.getByLabel("Trip start date");
   await dateInput.fill("2026-07-26");

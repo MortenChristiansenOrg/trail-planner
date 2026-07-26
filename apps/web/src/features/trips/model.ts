@@ -1,6 +1,7 @@
 import {
   calculateCostTree,
   calculateScopedCost,
+  deriveTravelOptionTotals,
   effectiveCost,
   updateCostOverride,
   type CostCategory,
@@ -78,6 +79,181 @@ export type NewTripInput = {
   search: ExploreSearch;
   travel: TravelEstimate[];
 };
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function isTravelEstimate(value: unknown): value is TravelEstimate {
+  if (!isRecord(value)) return false;
+  return (
+    typeof value.mode === "string" &&
+    ["car", "train", "plane"].includes(value.mode) &&
+    typeof value.available === "boolean" &&
+    typeof value.accessNode === "string" &&
+    isFiniteNumber(value.oneWayHours) &&
+    isFiniteNumber(value.costPerPersonDkk) &&
+    typeof value.note === "string" &&
+    typeof value.confidence === "string" &&
+    ["low", "medium", "high"].includes(value.confidence) &&
+    (value.optionId === undefined || typeof value.optionId === "string")
+  );
+}
+
+function isPlannedActivity(value: unknown): value is PlannedActivity {
+  if (!isRecord(value)) return false;
+  return (
+    typeof value.id === "string" &&
+    typeof value.groupId === "string" &&
+    (value.kind === "catalog-hike" || value.kind === "custom-hike") &&
+    (value.hikeId === undefined || typeof value.hikeId === "string") &&
+    typeof value.name === "string" &&
+    typeof value.description === "string" &&
+    typeof value.letter === "string" &&
+    isFiniteNumber(value.segment) &&
+    isFiniteNumber(value.durationDays)
+  );
+}
+
+function isTripDay(value: unknown): value is TripDay {
+  return isRecord(value) &&
+    isFiniteNumber(value.day) &&
+    (value.calendarDate === undefined || typeof value.calendarDate === "string") &&
+    Array.isArray(value.activities) &&
+    value.activities.every(isPlannedActivity);
+}
+
+function isLodgingNight(value: unknown): value is LodgingNight {
+  return isRecord(value) &&
+    isFiniteNumber(value.afterDay) &&
+    typeof value.kind === "string" &&
+    ["none", "tent-free", "tent-camping", "known", "other"].includes(value.kind) &&
+    typeof value.name === "string" &&
+    isFiniteNumber(value.costDkk) &&
+    (value.knownLodgingId === undefined || typeof value.knownLodgingId === "string");
+}
+
+function isCustomCost(value: unknown): value is CustomCost {
+  return isRecord(value) &&
+    typeof value.id === "string" &&
+    typeof value.label === "string" &&
+    isFiniteNumber(value.amountDkk);
+}
+
+function isTravelOptionSnapshot(value: unknown): value is TravelOptionSnapshot {
+  if (!isRecord(value)) return false;
+  try {
+    deriveTravelOptionTotals(value as unknown as TravelOptionSnapshot);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function isExploreSearch(value: unknown): value is ExploreSearch {
+  return isRecord(value) &&
+    typeof value.month === "number" &&
+    Number.isInteger(value.month) &&
+    value.month >= 1 &&
+    value.month <= 12 &&
+    typeof value.participants === "number" &&
+    Number.isInteger(value.participants) &&
+    value.participants >= 1 &&
+    typeof value.days === "number" &&
+    Number.isInteger(value.days) &&
+    value.days >= 1 &&
+    typeof value.budget === "number" &&
+    Number.isFinite(value.budget) &&
+    value.budget >= 0 &&
+    Array.isArray(value.modes) &&
+    value.modes.every((mode) => typeof mode === "string" && ["car", "train", "plane"].includes(mode)) &&
+    typeof value.maxLayovers === "number" &&
+    Number.isInteger(value.maxLayovers) &&
+    value.maxLayovers >= 0 &&
+    typeof value.maxDriveHours === "number" &&
+    Number.isFinite(value.maxDriveHours) &&
+    value.maxDriveHours >= 0 &&
+    typeof value.maxFlightDkk === "number" &&
+    Number.isFinite(value.maxFlightDkk) &&
+    value.maxFlightDkk >= 0 &&
+    Array.isArray(value.countries) &&
+    value.countries.every((country) => typeof country === "string") &&
+    typeof value.seasonTolerance === "number" &&
+    Number.isInteger(value.seasonTolerance) &&
+    value.seasonTolerance >= 0 &&
+    (value.selected === undefined || typeof value.selected === "string") &&
+    (value.details === undefined || typeof value.details === "boolean");
+}
+
+export function parsePlannedTrip(value: unknown): PlannedTrip | null {
+  if (!isRecord(value)) return null;
+  if (
+    typeof value.id !== "string" ||
+    typeof value.destinationId !== "string" ||
+    typeof value.title !== "string" ||
+    !isFiniteNumber(value.plannedMonth) ||
+    !Number.isInteger(value.plannedMonth) ||
+    value.plannedMonth < 1 ||
+    value.plannedMonth > 12 ||
+    !isFiniteNumber(value.participants) ||
+    value.participants < 1 ||
+    !isFiniteNumber(value.tripDays) ||
+    value.tripDays < 1 ||
+    !isFiniteNumber(value.maxBudgetDkk) ||
+    !isExploreSearch(value.exploreSnapshot) ||
+    !Array.isArray(value.travelSnapshot) ||
+    !value.travelSnapshot.every(isTravelEstimate) ||
+    !Array.isArray(value.days) ||
+    !value.days.every(isTripDay) ||
+    !Array.isArray(value.nights) ||
+    !value.nights.every(isLodgingNight) ||
+    !Array.isArray(value.customCosts) ||
+    !value.customCosts.every(isCustomCost) ||
+    (value.costItems !== undefined && (
+      !Array.isArray(value.costItems) ||
+      !value.costItems.every(isRecord)
+    )) ||
+    !isFiniteNumber(value.createdAt) ||
+    !isFiniteNumber(value.updatedAt) ||
+    (value.selectedTravelMode !== undefined && (
+      typeof value.selectedTravelMode !== "string" ||
+      !["car", "train", "plane"].includes(value.selectedTravelMode)
+    )) ||
+    (value.selectedTravelOption !== undefined && !isTravelOptionSnapshot(value.selectedTravelOption)) ||
+    (value.startDate !== undefined && typeof value.startDate !== "string") ||
+    (value.shareToken !== undefined && typeof value.shareToken !== "string")
+  ) {
+    return null;
+  }
+  const trip = value as unknown as PlannedTrip;
+  return value.costItems === undefined ? { ...trip, costItems: [] } : trip;
+}
+
+export function parsePlannedTripJson(stateJson: string): PlannedTrip | null {
+  try {
+    return parsePlannedTrip(JSON.parse(stateJson) as unknown);
+  } catch {
+    return null;
+  }
+}
+
+export function parsePlannedTripsJson(stateJson: string): PlannedTrip[] {
+  try {
+    const value = JSON.parse(stateJson) as unknown;
+    return Array.isArray(value)
+      ? value.flatMap((trip) => {
+          const parsed = parsePlannedTrip(trip);
+          return parsed ? [parsed] : [];
+        })
+      : [];
+  } catch {
+    return [];
+  }
+}
 
 const id = (prefix: string) =>
   `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;

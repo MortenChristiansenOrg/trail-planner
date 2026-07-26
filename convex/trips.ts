@@ -88,7 +88,7 @@ export const createState = mutation({
 export const updateState = mutation({
   args: { tripId: v.id("trips"), stateJson: v.string() },
   handler: async (ctx, args) => {
-    const trip = await ownedTrip(ctx, args.tripId);
+    await ownedTrip(ctx, args.tripId);
     const parsed = JSON.parse(args.stateJson) as Record<string, unknown>;
     if (parsed.id !== args.tripId || !Array.isArray(parsed.days) || !Array.isArray(parsed.nights)) {
       throw new Error("Invalid trip state");

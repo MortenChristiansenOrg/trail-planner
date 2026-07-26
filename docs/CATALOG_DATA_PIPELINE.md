@@ -10,7 +10,17 @@ Trail Planner separates live provider data from slower, judgment-heavy catalog c
 4. The skill cross-checks material observations and discards unsupported ones before they reach the catalog.
 5. Every published field-level claim carries its source URL, retrieval time, confidence, and expiry. Raw page captures remain temporary.
 6. Coverage is recomputed per domain as `missing`, `partial`, `fresh`, `stale`, or `unavailable`.
-7. The validated record atomically replaces `data/catalog/records/<destination-key>.json`; derived snapshots or seeds are updated in the same run. Publication never fills gaps with plausible values.
+7. The validated record atomically replaces `data/catalog/records/<destination-key>.json`; the publication command compiles the Explore digest, lazy details, coverage/reconciliation reports, Convex deployment artifact, and content-addressed version in the same run. Publication never fills gaps with plausible values.
+
+Publication validates the complete candidate version before replacing canonical
+source. Source records are never served directly: builds require
+`pnpm catalog:check`, and Convex synchronization stages and validates the
+compiled version before atomically changing the active version pointer.
+
+Visible product-field conventions and readiness rules live in
+`docs/CATALOG_PRODUCT_CONVENTIONS.md`. Source-backed records may remain hidden
+and partial, but only records passing the whole-catalog product gate can enter
+Explore.
 
 Reusable route stages are normalized separately in `data/catalog/travel-parts.json`. Destination mode matrices in `data/catalog/trip-plans.json` reference those stable part keys in both directions, so a ferry or road leg can be reused without copying operator facts into each trip. Every destination matrix explicitly contains car, train/bus, and airplane states. A mode without a complete provider itinerary is `details-unavailable` with a UI-ready reason instead of an absent or partly invented trip.
 
@@ -36,6 +46,15 @@ The schema foundations are `sourceRegistry`, `dataClaims`, `dataCoverage`, `enri
 | Media | Wikimedia Commons API and licensed official media | Verify relevance, alt text, license, and attribution | Refresh on removal/license change |
 
 “Unavailable” requires evidence that the option is not practical under the stated assumptions. An unsuccessful search is `missing`, not `unavailable`. Partial data is useful and is still published data: a destination hub may publish without hikes, a hike may publish without geometry only when the UI explicitly says geometry is missing, and aggregate travel estimates may remain visible without invented stages.
+
+The current catalog deliberately contains no published hikes. Broad destination
+pages are not sufficient route evidence, and route-count or variety quotas must
+not influence publication. The production OpenStreetMap route pipeline and the
+first representative imports are specified in
+[GitHub issue #23](https://github.com/MortenChristiansenOrg/trail-planner/issues/23).
+That issue supersedes older route-import assumptions in this document. Heavy
+OSM processing will run locally; checked-in, content-addressed artifacts will be
+validated in CI and synchronized unchanged into preview and production.
 
 ## Agent skills
 

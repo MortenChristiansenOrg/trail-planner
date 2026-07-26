@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { destinations } from "@/features/catalog/catalog";
+import {
+  destinationWithDetail,
+  destinations,
+  loadStaticCatalogDetail,
+} from "@/features/catalog/catalog";
 import { defaultExploreSearch } from "@/features/explore/search";
 import {
   createDefaultPreferences,
@@ -13,6 +17,8 @@ import {
   applyStartDate,
   calculateTripCost,
   createTrip,
+  parsePlannedTrip,
+  parsePlannedTripJson,
   removeActivityGroup,
   setLodgingNight,
   setTripCostOverride,
@@ -31,6 +37,24 @@ function makeTrip() {
 }
 
 describe("planned trip model", () => {
+  it("rejects malformed persisted trip state", () => {
+    expect(parsePlannedTrip(null)).toBeNull();
+    expect(parsePlannedTrip({ id: "partial" })).toBeNull();
+    expect(parsePlannedTripJson("{not-json")).toBeNull();
+    const trip = makeTrip();
+    expect(parsePlannedTrip(trip)).toBe(trip);
+    expect(parsePlannedTrip({ ...trip, selectedTravelOption: {} })).toBeNull();
+    expect(parsePlannedTrip({
+      ...trip,
+      travelSnapshot: [{ ...trip.travelSnapshot[0], mode: ["car"] }],
+    })).toBeNull();
+    expect(parsePlannedTrip({ ...trip, plannedMonth: 13 })).toBeNull();
+    expect(parsePlannedTrip({
+      ...trip,
+      exploreSnapshot: { ...trip.exploreSnapshot, modes: ["helicopter"] },
+    })).toBeNull();
+  });
+
   it("keeps origin and itemized vehicle costs as a saved Explore snapshot", () => {
     const preferences = createDefaultPreferences(getDanishCity("aarhus")!);
     const personalized = personalizeDestinations(
@@ -62,17 +86,23 @@ describe("planned trip model", () => {
     expect(cost.travelCost).toBe(car.costPerPersonDkk);
   });
 
-  it("publishes only distinct, source-backed route geometry", () => {
+  it("publishes only distinct, source-backed route geometry and marks missing geometry", async () => {
     let routedHikeCount = 0;
+    let missingGeometryCount = 0;
     const serializedRoutes: string[] = [];
     for (const area of destinations) {
-      const routedHikes = area.hikes.filter((hike) => hike.route.length);
+      const detail = await loadStaticCatalogDetail(area.id);
+      expect(detail).not.toBeNull();
+      const hikes = destinationWithDetail(area, detail!).hikes;
+      const routedHikes = hikes.filter((hike) => hike.route.length);
       routedHikeCount += routedHikes.length;
+      missingGeometryCount += hikes.length - routedHikes.length;
       expect(routedHikes.every((hike) => Boolean(hike.geometrySourceUrl))).toBe(true);
       serializedRoutes.push(...routedHikes.map((hike) => JSON.stringify(hike.route)));
     }
     expect(new Set(serializedRoutes).size).toBe(serializedRoutes.length);
-    expect(routedHikeCount).toBeGreaterThan(0);
+    const totalHikes = destinations.reduce((sum, area) => sum + area.hikeCount, 0);
+    expect(routedHikeCount + missingGeometryCount).toBe(totalHikes);
   });
 
   it("fills consecutive slots for a multi-day hike without replacing activities", () => {

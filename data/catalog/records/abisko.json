@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-abisko",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "abisko",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Abisko",
+    "region": "Swedish Lapland",
+    "countryCode": "SE",
+    "longitude": 18.829,
+    "latitude": 68.35
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "country",
+      "value": "Sweden",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "summary",
+      "value": "A rail-accessible Arctic trailhead for valleys, high viewpoints and Kungsleden stages.",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "character",
+      "value": "Broad glacial valleys, birch forest and open fell with a reliable trail network but a short snow-free season.",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "guide.highlights",
+      "value": "Abisko combines a railway-served national-park entrance, the northern Kungsleden trailhead and views across Torneträsk toward the high border mountains.",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "guide.terrain",
+      "value": "The Abiskojåkka canyon cuts through birch woodland before trails reach open fell, broad U-shaped valleys and higher rocky ground around Njullá and Kårsavagge.",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "abisko",
+      "field": "guide.expectations",
+      "value": "Waymarking and STF huts support accessible first steps into Lapland, yet distances quickly become large and conditions above the tree line remain exposed, remote and changeable.",
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "abisko",
+      "field": "recommendedMonths",
+      "value": [
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "abisko-authority",
+        "url": "https://www.swedishtouristassociation.com/areas/abisko/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "abisko",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/abisko.jpg",
+        "assetSha256": "e986e872f907b1f12a0a900cb19010b2c90fa20a9ea148588f1debe4fa8e1004",
+        "width": 3888,
+        "height": 2592,
+        "alt": "Snow-streaked Abisko mountains above birch forest and a fast river",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Mickaël Delcey",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "Abisko mountains.jpg by Mickaël Delcey · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "abisko-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Abisko_mountains.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "abisko",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Abisko road access",
+        "oneWayHours": 22.5,
+        "costPerPersonDkk": 2550,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-abisko--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "abisko",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Abisko public-transport stop",
+        "oneWayHours": 25.5,
+        "costPerPersonDkk": 1950,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-abisko-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "abisko",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Abisko airport transfer",
+        "oneWayHours": 8.7,
+        "costPerPersonDkk": 2850,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-abisko-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "abiskojaure",
+      "field": "lodging",
+      "value": {
+        "id": "abiskojaure",
+        "name": "Abiskojaure mountain hut",
+        "kind": "hut",
+        "nightlyCostDkk": 610
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "abisko-camping",
+      "field": "lodging",
+      "value": {
+        "id": "abisko-camping",
+        "name": "Abisko STF camping",
+        "kind": "camping",
+        "nightlyCostDkk": 210
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

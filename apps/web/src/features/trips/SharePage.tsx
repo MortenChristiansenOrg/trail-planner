@@ -5,10 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
 import { useAuthSession } from "@/features/auth/AuthSession";
-import { destinationById, formatHours, formatMoney, monthNames } from "@/features/catalog/catalog";
+import { formatHours, formatMoney, monthNames } from "@/features/catalog/catalog";
+import { useCatalog, useCatalogDestination } from "@/features/catalog/CatalogProvider";
 import { modeLabels } from "@/features/explore/search";
 import { TrailMap, type TrailLine } from "@/features/maps/TrailMap";
-import { calculateTripCost, getCostItemAmount, getSelectedTravel, type PlannedTrip } from "@/features/trips/model";
+import { calculateTripCost, getCostItemAmount, getSelectedTravel, parsePlannedTripJson, type PlannedTrip } from "@/features/trips/model";
 import { useTripStore } from "@/features/trips/TripStore";
 
 export function SharePage({ token }: { token: string }) {
@@ -20,7 +21,8 @@ function ConfiguredSharePage({ token }: { token: string }) {
   const state = useQuery(api.shareLinks.read, { token });
   if (state === undefined) return <AppShell><main className="not-found-page"><Route /><h1>Opening shared plan…</h1></main></AppShell>;
   if (!state) return <UnavailableShare />;
-  return <SharedTripView trip={JSON.parse(state) as PlannedTrip} />;
+  const trip = parsePlannedTripJson(state);
+  return trip ? <SharedTripView trip={trip} /> : <UnavailableShare />;
 }
 
 function PreviewSharePage({ token }: { token: string }) {
@@ -38,8 +40,13 @@ function UnavailableShare({ preview = false }: { preview?: boolean }) {
 }
 
 function SharedTripView({ trip }: { trip: PlannedTrip }) {
-  const destination = destinationById.get(trip.destinationId);
-  if (!destination) return <UnavailableShare />;
+  const catalog = useCatalog();
+  const destination = useCatalogDestination(trip.destinationId);
+  if (!destination) {
+    return catalog.ready
+      ? <UnavailableShare />
+      : <AppShell><main className="not-found-page"><Route /><h1>Opening destination…</h1></main></AppShell>;
+  }
   const costs = calculateTripCost(trip);
   const travel = getSelectedTravel(trip);
   const activities = new Map(trip.days.flatMap((day) => day.activities).map((activity) => [activity.groupId, activity]));

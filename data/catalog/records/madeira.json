@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-madeira",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "madeira",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Curral das Freiras",
+    "region": "Madeira",
+    "countryCode": "PT",
+    "longitude": -16.969,
+    "latitude": 32.72
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "country",
+      "value": "Portugal",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "summary",
+      "value": "A volcanic mountain base for steep paths, cloud-forest traverses and high ridges.",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "character",
+      "value": "Deep green valleys and engineered levadas, with exposed paths and rapidly shifting cloud.",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "guide.highlights",
+      "value": "Curral das Freiras sits inside Madeira's central volcanic mountains, near Pico Ruivo, Pico do Areeiro and an island-wide network of levadas.",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "guide.terrain",
+      "value": "Knife-edged basalt ridges, deeply incised valleys and laurel forest create abrupt changes in vegetation and exposure; engineered water channels, tunnels and stone steps define many trail surfaces.",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "madeira",
+      "field": "guide.expectations",
+      "value": "Routes can be walked year-round in principle but cloud, wind, rain and official closures vary by elevation; transfers are often needed for point-to-point trails and exposed levada edges will not suit every walker.",
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "madeira",
+      "field": "recommendedMonths",
+      "value": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "source": {
+        "key": "madeira-authority",
+        "url": "https://visitmadeira.com/en/what-to-do/nature-seekers/activities/hiking/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "madeira",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/madeira.jpg",
+        "assetSha256": "473fb32fc7fca6ecabde2024285a38be418964cafe1d9d81019afb9c828b26ea",
+        "width": 1365,
+        "height": 2048,
+        "alt": "Madeira mountain landscape seen from the Curral das Freiras hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Vitor Oliveira",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "attributionText": "Pico Ruivo - Ilha da Madeira - Portugal (52207068746).jpg by Vitor Oliveira · CC BY-SA 2.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Pico%20Ruivo%20-%20Ilha%20da%20Madeira%20-%20Portugal%20(52207068746).jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pico%20Ruivo%20-%20Ilha%20da%20Madeira%20-%20Portugal%20(52207068746).jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "madeira-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Pico%20Ruivo%20-%20Ilha%20da%20Madeira%20-%20Portugal%20(52207068746).jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "madeira",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Curral das Freiras road access",
+        "oneWayHours": 39,
+        "costPerPersonDkk": 4200,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-madeira--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "madeira",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": false,
+        "accessNode": "Curral das Freiras public-transport access",
+        "oneWayHours": 0,
+        "costPerPersonDkk": 0,
+        "note": "No practical public-transport chain within the MVP trip window.",
+        "confidence": "high"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "madeira",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Curral das Freiras airport transfer",
+        "oneWayHours": 8.6,
+        "costPerPersonDkk": 2450,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-madeira-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "pico-camp",
+      "field": "lodging",
+      "value": {
+        "id": "pico-camp",
+        "name": "Central mountain campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 140
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "No stable rail or through public-transit itinerary from Denmark to the island trailhead was verified; flight and local road transfer remain the supported planning modes."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

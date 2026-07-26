@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-cairngorms",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "cairngorms",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Aviemore",
+    "region": "Cairngorms",
+    "countryCode": "GB",
+    "longitude": -3.829,
+    "latitude": 57.195
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "country",
+      "value": "United Kingdom",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "summary",
+      "value": "A rail-connected base for broad plateaus, corries and long mountain traverses.",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "character",
+      "value": "Large-scale upland terrain where navigation, wind and distance matter more than technical ground.",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "guide.highlights",
+      "value": "Aviemore provides a practical edge-of-park base for Rothiemurchus forest, the Northern Corries and journeys onto the Cairngorm plateau.",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "guide.terrain",
+      "value": "Rounded granite plateaus end abruptly in corrie cliffs and boulder fields, while Scots pine forest, lochs and heather moor create a gentler lower-level landscape with important wildlife habitat.",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "cairngorms",
+      "field": "guide.expectations",
+      "value": "There is unusual breadth from signed woodland circuits to long plateau crossings; the high ground is serious in poor visibility and fierce wind, so easy access should not be confused with easy conditions.",
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "cairngorms",
+      "field": "recommendedMonths",
+      "value": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "cairngorms-authority",
+        "url": "https://www.cairngorms.co.uk/discover-explore/things-to-do/walking-trails/",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "cairngorms",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/cairngorms.jpg",
+        "assetSha256": "c86242ae751807fb7de5b827dee0c11aefbdf2f1c2f14b7791113a56211a69bd",
+        "width": 2000,
+        "height": 1500,
+        "alt": "Cairngorms mountain landscape seen from the Aviemore hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Thomas Andy Branson",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionText": "Cairngorms National Park, Scotland.jpg by Thomas Andy Branson · CC BY-SA 4.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Cairngorms%20National%20Park%2C%20Scotland.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cairngorms%20National%20Park%2C%20Scotland.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "cairngorms-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Cairngorms%20National%20Park%2C%20Scotland.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "cairngorms",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Aviemore road access",
+        "oneWayHours": 18.8,
+        "costPerPersonDkk": 2300,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-cairngorms--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "cairngorms",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Aviemore public-transport stop",
+        "oneWayHours": 21.4,
+        "costPerPersonDkk": 2150,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-cairngorms-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "cairngorms",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Aviemore airport transfer",
+        "oneWayHours": 7.8,
+        "costPerPersonDkk": 2050,
+        "layovers": 1,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-cairngorms-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "glenmore",
+      "field": "lodging",
+      "value": {
+        "id": "glenmore",
+        "name": "Glenmore campsite",
+        "kind": "camping",
+        "nightlyCostDkk": 240
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}

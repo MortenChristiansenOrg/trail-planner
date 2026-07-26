@@ -247,6 +247,10 @@ svg { flex: none; }
 body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { background: rgba(20, 35, 28, .26); }
 .destination-sheet__body section { margin-top: 23px; }
 .destination-sheet__body h3 { margin-bottom: 10px; font-family: Georgia, serif; font-size: 18px; }
+.destination-guide { display: grid; gap: 20px; }
+.destination-guide > div { padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.destination-guide > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.destination-guide p { color: var(--ink-soft); font-size: 12px; line-height: 1.75; }
 .detail-travel-list, .route-preview-list { display: grid; gap: 8px; }
 .detail-travel-list > div { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 11px; border: 1px solid var(--border); border-radius: 9px; background: rgba(255,255,255,.35); }
 .detail-travel-list svg { width: 17px; color: #55705d; }
@@ -258,9 +262,19 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .detail-travel-actions button svg { width: 12px; }
 .route-preview-list article { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 12px; border-left: 2px solid rgba(181, 72, 49, .45); background: rgba(232, 232, 211, .45); }
 .route-preview-list article.has-media { grid-template-columns: 92px 30px minmax(0, 1fr); }
-.route-preview-list svg { width: 18px; color: var(--route-red); }
-.route-preview-list p { margin: 3px 0; color: var(--ink-soft); font-size: 11px; line-height: 1.45; }
-.route-preview-list small { color: #7b6b4e; font-size: 10px; }
+.route-preview-list article > svg { width: 18px; color: var(--route-red); }
+.hike-details { display: grid; gap: 7px; min-width: 0; }
+.hike-details > strong { font-size: 14px; }
+.hike-details > p { color: var(--ink-soft); font-size: 11px; line-height: 1.45; }
+.hike-stats { display: flex; flex-wrap: wrap; gap: 5px 12px; color: #7b6b4e; font-size: 10px; font-weight: 650; }
+.hike-stats span { display: inline-flex; align-items: center; gap: 4px; }
+.hike-stats svg { width: 12px; height: 12px; color: var(--route-red); }
+.hike-access { display: grid; gap: 5px; color: var(--ink-soft); font-size: 10px; line-height: 1.4; }
+.hike-access > span { display: grid; grid-template-columns: 15px minmax(0, 1fr); align-items: start; gap: 4px; }
+.hike-access > span > svg { width: 12px; height: 12px; margin-top: 2px; color: var(--primary); }
+.hike-access > span > span { display: grid; }
+.hike-access small { color: #7b6b4e; font-size: 8px; font-weight: 750; text-transform: uppercase; }
+.hike-access > p { padding: 7px 9px; border-radius: 7px; background: rgba(255,255,255,.42); }
 
 /* Shared page headings */
 .trips-page, .trip-detail-page, .share-page { width: min(1380px, 100%); margin: 0 auto; padding: 48px clamp(22px, 4vw, 62px) 70px; }
@@ -407,8 +421,9 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .activity-row.is-selected { border-color: rgba(181, 72, 49, .62); box-shadow: inset 3px 0 0 var(--route-red); }
 .activity-row__select { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; gap: 8px; min-width: 0; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
 .trail-letter { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--route-red); color: white; font-family: Georgia, serif; font-size: 12px; font-weight: 700; }
-.activity-row > button:last-child { width: 27px; height: 27px; }
-.activity-row > button:last-child svg { width: 13px; }
+.activity-row__actions { display: flex; align-items: center; gap: 2px; }
+.activity-row__actions button { width: 27px; height: 27px; }
+.activity-row__actions button svg { width: 13px; }
 .add-day-button { justify-self: start; height: 28px; color: var(--ink-soft); font-size: 10px; }
 .night-row { position: relative; display: grid; grid-template-columns: 82px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 58px; padding: 6px 9px 6px 0; }
 .night-line { position: absolute; left: 41px; top: 0; bottom: 0; width: 1px; background: repeating-linear-gradient(to bottom, rgba(77, 96, 76, .45) 0 3px, transparent 3px 6px); }
@@ -468,9 +483,13 @@ body:has(.destination-sheet[data-state="open"]) [data-slot="sheet-overlay"] { ba
 .dialog-form label { display: grid; gap: 5px; color: var(--ink-soft); font-size: 11px; font-weight: 650; }
 .dialog-form label > small { font-size: 9px; font-weight: 400; }
 .hike-choice-summary { display: grid; grid-template-columns: 30px 1fr; gap: 8px; padding: 11px; border-radius: 9px; background: #ecebd9; }
-.hike-choice-summary svg { width: 18px; color: var(--route-red); }
-.hike-choice-summary strong { font-size: 11px; }
-.hike-choice-summary p { margin-top: 3px; color: var(--ink-soft); font-size: 10px; line-height: 1.45; }
+.hike-choice-summary > svg { width: 18px; color: var(--route-red); }
+.hike-choice-summary .hike-details > p { font-size: 10px; }
+.hike-choice-summary .hike-stats, .hike-choice-summary .hike-access { font-size: 9px; }
+.hike-details-dialog { max-width: 620px; }
+.hike-details-dialog .hike-details { gap: 12px; }
+.hike-details-dialog .hike-details > p { font-size: 12px; line-height: 1.6; }
+.hike-details-dialog .hike-stats { padding: 11px; border-radius: 9px; background: #ecebd9; font-size: 11px; }
 .lodging-options { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
 .lodging-options button { position: relative; display: grid; grid-template-columns: 28px 1fr 14px; align-items: center; gap: 7px; padding: 10px; border: 1px solid var(--border); border-radius: 9px; background: rgba(255,255,255,.35); color: inherit; text-align: left; cursor: pointer; }
 .lodging-options button.is-active { border-color: rgba(48, 85, 65, .45); background: #edf0dc; }

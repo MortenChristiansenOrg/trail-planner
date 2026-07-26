@@ -1,0 +1,625 @@
+{
+  "catalogVersion": "e45f9d1adb446f28e1037aa338e939e60e5d5ad7f5abb96c70c9bee9d62d71c2",
+  "destinations": [
+    {
+      "destinationKey": "bohinj",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "bovec",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "engelberg",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "funasdalen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "garmisch-partenkirchen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "geilo",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "grindelwald",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: missing",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "hemsedal",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "jorpeland-lysefjord",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: missing",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "keswick",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: missing",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "mayrhofen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "oberstdorf",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "oppdal",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "poprad-high-tatras",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: missing",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "rjukan",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: missing",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "saas-fee",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "schladming",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "solden",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "stryn-loen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "voss",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "zell-am-see-kaprun",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [
+        "seasonality: partial",
+        "access: partial",
+        "hikes: missing",
+        "hike-geometry: missing"
+      ],
+      "guideWords": 0,
+      "hasHero": false,
+      "hikeCount": 0,
+      "ready": false,
+      "visible": false
+    },
+    {
+      "destinationKey": "abisko",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 68,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "akureyri",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 83,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "are",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 89,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "berchtesgaden",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 76,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "cairngorms",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 79,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "chamonix",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 80,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "corsica",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 74,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "cortina",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 79,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "durmitor",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 85,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "fort-william",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 80,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "hardanger",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 70,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "hemavan",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 82,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "innsbruck",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 84,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "jotunheimen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 70,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "kranjska-gora",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 81,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "landmannalaugar",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 77,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "lofoten",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 78,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "madeira",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 81,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "nikkaluokta",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 84,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "picos",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 84,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "romsdalen",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 68,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "skaftafell",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 78,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "snowdonia",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 80,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "thorsmork",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 82,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "zakopane",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 79,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    },
+    {
+      "destinationKey": "zermatt",
+      "difficultyCount": 0,
+      "durationBandCount": 0,
+      "gaps": [],
+      "guideWords": 78,
+      "hasHero": true,
+      "hikeCount": 0,
+      "ready": true,
+      "visible": true
+    }
+  ]
+}

@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -29,9 +28,8 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { AppShell } from "@/components/layout/AppShell";
 import { CatalogMediaFigure } from "@/features/catalog/CatalogMediaFigure";
+import { DestinationDetailsSheet } from "@/features/catalog/DestinationDetailsSheet";
 import {
-  countryOptions,
-  destinations,
   formatHours,
   formatMoney,
   monthNames,
@@ -39,7 +37,7 @@ import {
   type TravelEstimate,
   type TravelMode,
 } from "@/features/catalog/catalog";
-import { TravelOptionDetails } from "@/features/catalog/TravelOptionDetails";
+import { useCatalog } from "@/features/catalog/CatalogProvider";
 import { useAuthSession } from "@/features/auth/AuthSession";
 import {
   modeLabels,
@@ -67,10 +65,11 @@ export function ExplorePage({
   const navigate = useNavigate();
   const auth = useAuthSession();
   const tripStore = useTripStore();
+  const catalog = useCatalog();
   const preferenceSession = usePreferences();
   const preferences = preferenceSession.preferences;
   const personalizedDestinations = preferences
-    ? personalizeDestinations(destinations, preferences)
+    ? personalizeDestinations(catalog.destinations, preferences)
     : [];
   const results = rankDestinations(personalizedDestinations, search);
   const selectedResult =
@@ -82,8 +81,8 @@ export function ExplorePage({
     preferences,
   );
 
-  if (!preferenceSession.ready) {
-    return <div className="route-loading" role="status">Loading your planning settings…</div>;
+  if (!preferenceSession.ready || !catalog.ready) {
+    return <div className="route-loading" role="status">Loading catalog and planning settings…</div>;
   }
   if (!preferences) {
     return (
@@ -220,6 +219,9 @@ function FilterSheet({
   resultCount: number;
   onChange: (next: ExploreSearch, replace?: boolean) => void;
 }) {
+  const countryOptions = Array.from(
+    new Map(destinations.map((item) => [item.countryCode, item.country])).entries(),
+  ).map(([code, name]) => ({ code, name }));
   const update = <Key extends keyof ExploreSearch>(key: Key, value: ExploreSearch[Key]) => {
     onChange(reconcileExploreSelection(destinations, { ...search, [key]: value }), true);
   };
@@ -398,7 +400,11 @@ function SelectedDestinationCard({
       </div>
       {drivingRouteLabel ? <p className="journey-map-key"><Route /> Map route: {drivingRouteLabel}</p> : null}
       <div className="selected-destination__actions">
-        <DestinationDetails destination={destination} search={search} onPlan={onPlan} />
+        <DestinationDetailsSheet
+          destination={destination}
+          onPlan={onPlan}
+          participants={search.participants}
+        />
         <Button onClick={onPlan}>Plan this trip <ArrowRight /></Button>
       </div>
     </article>
@@ -417,54 +423,6 @@ function TravelSummary({ estimate, participants, viable }: { estimate: TravelEst
       </span>
       <em className="travel-summary__status">{viable ? "Fits your limits" : estimate.available ? "Outside current limits" : "Not available"}</em>
     </div>
-  );
-}
-
-function DestinationDetails({ destination, search, onPlan }: { destination: Destination; search: ExploreSearch; onPlan: () => void }) {
-  return (
-    <Sheet>
-      <SheetTrigger asChild><Button variant="outline">View area details</Button></SheetTrigger>
-      <SheetContent className="destination-sheet paper-sheet sm:max-w-xl" side="right">
-        <SheetHeader>
-          <p className="step-label">{destination.region}, {destination.country}</p>
-          <SheetTitle>{destination.name}</SheetTitle>
-          <SheetDescription>{destination.character}</SheetDescription>
-        </SheetHeader>
-        <div className="destination-sheet__body">
-          <CatalogMediaFigure media={destination.media} sizes="(max-width: 640px) 90vw, 540px" />
-          <section>
-            <h3>Available travel</h3>
-            <div className="detail-travel-list">
-              {destination.travel.map((estimate) => (
-                <div key={estimate.mode}>
-                  {modeIcon(estimate.mode)}
-                  <span><strong>{modeLabels[estimate.mode]}</strong><small>{estimate.note}</small></span>
-                  <div className="detail-travel-actions"><span>{estimate.available ? `${formatHours(estimate.oneWayHours)} · ${formatMoney(travelEstimateTotal(estimate, search.participants))}${estimate.mode === "plane" ? ` · ${estimate.layovers ?? 0} layover${estimate.layovers === 1 ? "" : "s"}` : ""}` : "Unavailable"}</span>{estimate.available && estimate.optionId ? <TravelOptionDetails estimate={estimate} optionId={estimate.optionId} /> : null}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-          <section>
-            <h3>Hikes in the area</h3>
-            {destination.hikes.length ? <div className="route-preview-list">
-              {destination.hikes.map((hike) => (
-                <article className={hike.media ? "has-media" : undefined} key={hike.id}>
-                  {hike.media ? <CatalogMediaFigure media={hike.media} sizes="90px" variant="thumbnail" /> : null}
-                  <Route />
-                  <div><strong>{hike.name}</strong><p>{hike.description}</p><small>{hike.durationDays} day · {hike.distanceKm} km · {hike.ascentM} m ascent · {hike.difficulty}{hike.route.length ? "" : " · route geometry unavailable"}</small></div>
-                </article>
-              ))}
-            </div> : <div className="routes-curating"><Route /><div><strong>Trail geometry unavailable</strong><p>This is a published access and logistics hub, but no route geometry has passed source verification yet. You can still plan travel, lodging, and personal hikes.</p></div></div>}
-          </section>
-          <p className="catalog-source">Catalog source verified {destination.provenance.verifiedAt}: <a href={destination.provenance.sourceUrl} rel="noreferrer" target="_blank">inspect source</a></p>
-        </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button onClick={onPlan}>Plan {destination.name} <ArrowRight /></Button>
-          </SheetClose>
-        </SheetFooter>
-      </SheetContent>
-    </Sheet>
   );
 }
 

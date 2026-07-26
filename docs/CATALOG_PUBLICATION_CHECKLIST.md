@@ -13,10 +13,9 @@ The destination skills execute this checklist before publishing a catalog record
 
 ## Hike and geometry
 
-- [ ] Route name, duration, distance, ascent, and difficulty are supported by an official route source.
-- [ ] Geometry comes from an official download, an OSM relation, or a verified licensed GPX; never generate a plausible route.
-- [ ] Corrections retain source URL, run ID, verification time, and a description of the change in Git history.
-- [ ] Missing geometry is represented as missing coverage. The destination hub may still publish without hikes.
+- [ ] Hike and geometry coverage remain `missing`; the active catalog publishes no hikes until the complete pipeline in GitHub issue #23 is implemented.
+- [ ] Destination visibility never depends on a route count, difficulty variety, duration variety, or prose length quota.
+- [ ] No route name, description, duration, distance, ascent, difficulty, trailhead, route type, or geometry is inferred to make a record appear complete.
 
 ## Media
 
@@ -28,10 +27,12 @@ The destination skills execute this checklist before publishing a catalog record
 
 ## Publication
 
+- [ ] The shared product conventions and generated coverage report were read before research.
+- [ ] Canonical key, aliases, visibility, and readiness are explicit.
 - [ ] Unsupported observations were discarded and authoritative conflicts were resolved or omitted with reduced coverage.
 - [ ] `pnpm catalog:publish -- --dry-run <temporary-record>` passes before publication.
-- [ ] `pnpm catalog:publish -- <temporary-record>` atomically replaces the published record.
-- [ ] Any checked-in catalog snapshot or seed consuming the record is updated in the same run.
+- [ ] `pnpm catalog:publish -- <temporary-record>` atomically replaces the record and regenerates all artifacts.
+- [ ] `pnpm catalog:check` confirms deterministic output with no drift.
 - [ ] `pnpm test`, `pnpm typecheck`, and relevant catalog browser tests pass after publication.
 - [ ] Raw Firecrawl captures remain in `.catalog-work/` and are not committed.
 - [ ] `pnpm catalog:validate-travel` passes when reusable travel parts or destination trip matrices change.

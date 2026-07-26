@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 3,
+  "run": {
+    "id": "2026-07-25-issue-21-chamonix",
+    "task": "add-destination",
+    "createdAt": "2026-07-25T20:00:00.000Z",
+    "tool": "provider-api",
+    "creditsBefore": 1023,
+    "creditsAfter": 1023
+  },
+  "destination": {
+    "key": "chamonix",
+    "action": "add",
+    "visibility": "visible",
+    "name": "Chamonix",
+    "region": "Mont Blanc massif",
+    "countryCode": "FR",
+    "longitude": 6.87,
+    "latitude": 45.923
+  },
+  "claims": [
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "country",
+      "value": "France",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "aliases",
+      "value": [],
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "summary",
+      "value": "A dense alpine hub with lifts, trains and trails reaching every side of the valley.",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "character",
+      "value": "Glaciers, balcony paths and high passes, with excellent local transport and busy summer trails.",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "guide.highlights",
+      "value": "Chamonix faces the Mont Blanc massif and gives walkers lift-assisted access to Lac Blanc, the Grand Balcons and close views of the Mer de Glace.",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "guide.terrain",
+      "value": "Enormous granite aiguilles and heavily crevassed glaciers rise above larch forest, alpine pasture and moraine; maintained balcony paths contrast with steep rocky approaches and high-mountain terrain.",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "destination-core",
+      "subjectKey": "chamonix",
+      "field": "guide.expectations",
+      "value": "Transport and lifts make ambitious scenery accessible, but queues, altitude and lift timetables shape the day; ordinary hiking routes remain separate from glacier travel and alpinism requiring specialist equipment.",
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "seasonality",
+      "subjectKey": "chamonix",
+      "field": "recommendedMonths",
+      "value": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source": {
+        "key": "chamonix-authority",
+        "url": "https://en.chamonix.com/activities/hiking/hiking-trails",
+        "kind": "official"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "media",
+      "subjectKey": "chamonix",
+      "field": "hero",
+      "value": {
+        "imageUrl": "/catalog-media/chamonix.jpg",
+        "assetSha256": "0ee12568d31df76d5ff64f042aa33d820e73e63c919298c13e9718dcbb4077b8",
+        "width": 3008,
+        "height": 2000,
+        "alt": "Mont Blanc massif mountain landscape seen from the Chamonix hiking area",
+        "subject": "destination",
+        "kind": "terrain",
+        "creator": "Alexandre Buisse",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionText": "Mont Blanc du Tacul depuis l'Aiguille du Midi.jpg by Alexandre Buisse · CC BY-SA 3.0",
+        "attributionUrl": "https://commons.wikimedia.org/wiki/File:Mont%20Blanc%20du%20Tacul%20depuis%20l'Aiguille%20du%20Midi.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mont%20Blanc%20du%20Tacul%20depuis%20l'Aiguille%20du%20Midi.jpg",
+        "verifiedAt": "2026-07-25"
+      },
+      "source": {
+        "key": "chamonix-commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Mont%20Blanc%20du%20Tacul%20depuis%20l'Aiguille%20du%20Midi.jpg",
+        "kind": "open-data"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "high"
+    },
+    {
+      "domain": "travel-road",
+      "subjectKey": "chamonix",
+      "field": "estimate",
+      "value": {
+        "mode": "car",
+        "available": true,
+        "accessNode": "Chamonix road access",
+        "oneWayHours": 14.2,
+        "costPerPersonDkk": 2050,
+        "note": "One-way drive time with estimated return costs, including road charges and crossings where relevant.",
+        "confidence": "medium",
+        "optionId": "osrm-driving-chamonix--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-transit",
+      "subjectKey": "chamonix",
+      "field": "estimate",
+      "value": {
+        "mode": "train",
+        "available": true,
+        "accessNode": "Chamonix public-transport stop",
+        "oneWayHours": 18.3,
+        "costPerPersonDkk": 1950,
+        "note": "One-way rail and bus time with estimated return costs; local reservations may be required.",
+        "confidence": "medium",
+        "optionId": "catalog-estimate-chamonix-train--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "medium"
+    },
+    {
+      "domain": "travel-flight",
+      "subjectKey": "chamonix",
+      "field": "estimate",
+      "value": {
+        "mode": "plane",
+        "available": true,
+        "accessNode": "Chamonix airport transfer",
+        "oneWayHours": 6.2,
+        "costPerPersonDkk": 1650,
+        "layovers": 0,
+        "note": "One-way journey time with estimated return airfare and ground transfers; not a live fare.",
+        "confidence": "low",
+        "optionId": "catalog-estimate-chamonix-plane--aalborg--legacy"
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "refuge-lac-blanc",
+      "field": "lodging",
+      "value": {
+        "id": "refuge-lac-blanc",
+        "name": "Refuge du Lac Blanc",
+        "kind": "hut",
+        "nightlyCostDkk": 720
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    },
+    {
+      "domain": "lodging",
+      "subjectKey": "mer-de-glace-camp",
+      "field": "lodging",
+      "value": {
+        "id": "mer-de-glace-camp",
+        "name": "Les Arolles camping",
+        "kind": "camping",
+        "nightlyCostDkk": 260
+      },
+      "source": {
+        "key": "legacy-planning-model",
+        "url": "https://github.com/MortenChristiansenOrg/trail-planner/blob/master/docs/CATALOG_DATA_PIPELINE.md",
+        "kind": "manual"
+      },
+      "retrievedAt": "2026-07-25T20:00:00.000Z",
+      "observedAt": "2026-07-25T20:00:00.000Z",
+      "refreshAfter": "2027-07-25T20:00:00.000Z",
+      "confidence": "low"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "destination-core",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "seasonality",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "media",
+      "status": "fresh",
+      "reasons": []
+    },
+    {
+      "domain": "hikes",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking routes are published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "hike-geometry",
+      "status": "missing",
+      "reasons": [
+        "No verified hiking geometry is published. The production OSM route pipeline is tracked in GitHub issue #23."
+      ]
+    },
+    {
+      "domain": "travel-road",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-transit",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "travel-flight",
+      "status": "partial",
+      "reasons": [
+        "Planning estimate retained from the prior catalog; runtime providers may refine it."
+      ]
+    },
+    {
+      "domain": "lodging",
+      "status": "partial",
+      "reasons": [
+        "Existing planning examples retained; current availability and prices require runtime verification."
+      ]
+    }
+  ]
+}
